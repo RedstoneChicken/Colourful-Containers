@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/RedstoneChicken/Colourful-Containers">
-    <img src="pack_icon.png" alt="Logo" width="200" height="200">
+    <img src="https://api.mcpedl.com/storage/submissions/73928/102/ccv3mcpedl_1-520x245.png" alt="Logo" height="200">
     
   </a>
 
