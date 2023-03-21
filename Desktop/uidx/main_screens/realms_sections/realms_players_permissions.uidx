@@ -1,0 +1,285 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "realms_permissions_dx",
+
+  "member_type_panel": {
+    "type": "panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -2, 4 ],
+    "size": [ 8, 7 ],
+    "$hover_text_texture": "textures/uidx/hover_text/text_panel",
+    "$option_label": "",
+    "controls": [
+      {
+        "option_dropdown_permissions@settings_common_dx.option_dropdown_base": {
+          "$option_dropdown_type": "realms_permissions_dx.permission_dropdown_content",
+          "size": [ 8, 7 ],
+          "$dropdown_texture_default": "realms_permissions_dx.permission_icon_default",
+          "$dropdown_texture_hover": "realms_permissions_dx.permission_icon_hover",
+          "$dropdown_texture_pressed": "realms_permissions_dx.permission_icon_pressed",
+          "$dropdown_texture_locked": "realms_permissions_dx.permission_icon_locked",
+
+          "$dropdown_content": "permissions.permission_level_dropdown_content",
+          "$dropdown_area": "friends_panel",
+          "$dropdown_name": "player_permissions_dropdown",
+          "$dropdown_icon_image_texture_binding": "#collection_permission_level_dropdown_icon_texture",
+          "$anchor_dropdown_content_from": "top_right",
+          "$anchor_dropdown_content_to": "top_right",
+          "$icon_binding_type_override": "collection",
+          "$icon_binding_collection_name_override": "$collection_binding_name",
+          "$button_type_panel": "permissions.permission_level_dropdown_state_content",
+          "$options_dropdown_toggle_label_binding": "#player_permissions_dropdown_toggle_label",
+          "$options_dropdown_toggle_label_binding_type": "collection",
+          "$options_dropdown_toggle_label_binding_collection_name": "$collection_binding_name",
+          "$toggle_binding_type": "collection",
+          "$toggle_grid_collection_name": "$collection_binding_name",
+          "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
+          "$content_label_visible": false,
+          "$is_world_settings": true,
+          "$show_option_label": false,
+          "$dropdown_icon_image_size": [ 10, 10 ],
+          "$dropdown_scroll_content_size": [ 200, 200 ],
+          "$content_size": [ 200, 200 ],
+          "$option_dropdown_size": [ 200, 200 ],
+          "bindings": [
+            {
+              "binding_name": "#permission_collection_dropdown_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_binding_name"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "permission_icon_default": {
+    "type": "panel",
+    "$is_hover_icon": false,
+    "controls": [
+      /* Default Texures */
+      {
+        "visitor_icon_default@realms_permissions_dx.visitor_icon_default": {
+          "ignored": "($is_hover_icon)",
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "($dropdown_icon_image_texture_binding = 'textures/ui/permissions_visitor_hand')",
+              "binding_collection_name": "$icon_binding_collection_name_override",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "user_icon_default@realms_java_dx.user_icon_default": {
+          "ignored": "($is_hover_icon)",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "($dropdown_icon_image_texture_binding = 'textures/ui/permissions_member_star')",
+              "binding_collection_name": "$icon_binding_collection_name_override",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "op_icon_default@realms_java_dx.op_icon_default": {
+          "ignored": "($is_hover_icon)",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "($dropdown_icon_image_texture_binding = 'textures/ui/permissions_op_crown')",
+              "binding_collection_name": "$icon_binding_collection_name_override",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      /* Hover Texures */
+      {
+        "visitor_icon_hover@realms_permissions_dx.visitor_icon_hover": {
+          "ignored": "(not $is_hover_icon)",
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "($dropdown_icon_image_texture_binding = 'textures/ui/permissions_visitor_hand')",
+              "binding_collection_name": "$icon_binding_collection_name_override",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "user_icon_hover@realms_java_dx.user_icon_hover": {
+          "ignored": "(not $is_hover_icon)",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "($dropdown_icon_image_texture_binding = 'textures/ui/permissions_member_star')",
+              "binding_collection_name": "$icon_binding_collection_name_override",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "op_icon_hover@realms_java_dx.op_icon_hover": {
+          "ignored": "(not $is_hover_icon)",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "($dropdown_icon_image_texture_binding = 'textures/ui/permissions_op_crown')",
+              "binding_collection_name": "$icon_binding_collection_name_override",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      /* Hover Text Panels */
+      {
+        "visitor_text@common_dx.hover_text_panel": {
+          "ignored": "(not $is_hover_icon)",
+          "$hover_panel_text": "permissions.level.visitor",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "($dropdown_icon_image_texture_binding = 'textures/ui/permissions_visitor_hand')",
+              "binding_collection_name": "$icon_binding_collection_name_override",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "user_text@common_dx.hover_text_panel": {
+          "ignored": "(not $is_hover_icon)",
+          "$hover_panel_text": "permissions.level.member",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "($dropdown_icon_image_texture_binding = 'textures/ui/permissions_member_star')",
+              "binding_collection_name": "$icon_binding_collection_name_override",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "operator_text@common_dx.hover_text_panel": {
+          "ignored": "(not $is_hover_icon)",
+          "$hover_panel_text": "permissions.level.operator",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "($dropdown_icon_image_texture_binding = 'textures/ui/permissions_op_crown')",
+              "binding_collection_name": "$icon_binding_collection_name_override",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "permission_icon_hover@realms_permissions_dx.permission_icon_default": {
+    "$is_hover_icon": true
+  },
+
+  "permission_icon_pressed@realms_permissions_dx.permission_icon_default": {
+    "$is_hover_icon": true
+  },
+
+  "permission_icon_locked@realms_permissions_dx.permission_icon_default": {
+    "$is_hover_icon": false,
+    "propagate_alpha": true,
+    "alpha": 0.25
+  },
+
+  "permission_dropdown_content@common.dropdown_no_scrollpanel": {
+    "$dropdown_content_controls": [
+      {
+        "background@java_gui_common.text_input_java": {
+          "layer": 1,
+          "size": [ 16, "100%c+4px" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [ 12, 0 ],
+          "controls": [
+            {
+              "content@settings_common.option_radio_dropdown_group": {
+                "size": [ 16, "100%c" ],
+                "offset": [ 2, 0 ],
+                "layer": 1,
+                "$radio_buttons": [
+                  // VISITOR //
+                  {
+                    "permission_level_radio_visitor@permissions.permission_level_radio": {
+                      "size": [ 12, 12 ],
+                      "$radio_label_text": "",
+                      "$toggle_state_binding_name": "#permission_level_radio_visitor",
+                      "$permissions_visuals_normal": "realms_permissions_dx.visitor_icon_default",
+                      "$permissions_visuals_hover": "realms_permissions_dx.visitor_icon_hover"
+                    }
+                  },
+                  // MEMBER //
+                  {
+                    "permission_level_radio_member@permissions.permission_level_radio": {
+                      "size": [ 12, 12 ],
+                      "$radio_label_text": "",
+                      "$toggle_state_binding_name": "#permission_level_radio_member",
+                      "$permissions_visuals_normal": "realms_java_dx.user_icon_default",
+                      "$permissions_visuals_hover": "realms_java_dx.user_icon_hover"
+                    }
+                  },
+                  // OPERATOR //
+                  {
+                    "permission_level_radio_operator@permissions.permission_level_radio": {
+                      "size": [ 12, 12 ],
+                      "$radio_label_text": "",
+                      "$toggle_state_binding_name": "#permission_level_radio_operator",
+                      "$permissions_visuals_normal": "realms_java_dx.op_icon_default",
+                      "$permissions_visuals_hover": "realms_java_dx.op_icon_hover"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "visitor_icon_default": {
+    "type": "panel",
+    "size": [ 8, 7 ],
+    "controls": [
+      { "cross_player_icon_default@realms_java_dx.cross_player_icon_default": { "layer": 2 } },
+      { "user_icon_default@realms_java_dx.user_icon_default": { "layer": 1 } }
+    ]
+  },
+
+  "visitor_icon_hover": {
+    "type": "panel",
+    "size": [ 8, 7 ],
+    "controls": [
+      { "cross_player_icon_hover@realms_java_dx.cross_player_icon_hover": { "layer": 2 } },
+      { "user_icon_hover@realms_java_dx.user_icon_hover": { "layer": 1 } }
+    ]
+  }
+}

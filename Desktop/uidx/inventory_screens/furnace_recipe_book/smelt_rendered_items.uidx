@@ -1,0 +1,242 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "cris_furnace_rb_rendered_items",
+
+  "item_renderer": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [ 16, 16 ],
+    "$number_aux_index": 65536,
+    "$number_data": 0,
+    "property_bag": {
+      "#item_id_aux": "($object_item_id * $number_aux_index + $number_data)"
+    }
+  },
+
+  /*//// Fuel ////*/
+
+  "item_renderer_control": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "$renderer_icon": "cris_furnace_rb_rendered_items.item_renderer",
+    "controls": [
+      { "renderer@$renderer_icon": { "layer": 3 } }
+    ]
+  },
+  
+  "fuel_01@cris_furnace_rb_rendered_items.item_renderer_control": { "$renderer_icon": "cris_furnace_rb_rendered_items.item_42_output_icon" },
+  "fuel_02@cris_furnace_rb_rendered_items.item_renderer_control": { "$renderer_icon": "cris_furnace_rb_rendered_items.item_49_output_icon" },
+  "fuel_03@cris_furnace_rb_rendered_items.item_renderer_control": { "$renderer_icon": "cris_furnace_rb_rendered_items.lava_bucket_icon" },
+  "fuel_04@cris_furnace_rb_rendered_items.item_renderer_control": { "$object_item_id": 5 }, //  Oak Plank - ID: 5
+  "fuel_05@cris_furnace_rb_rendered_items.item_renderer_control": { "$object_item_id": 17 }, //  Oak Log - ID: 17
+  "fuel_06@cris_furnace_rb_rendered_items.item_renderer_control": { "$object_item_id": 424 },  //  Blaze Rod - ID: 424
+
+  /*//// Tabs ////*/
+
+  /* Main Furnace */
+  "lava_bucket_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 364 }, //  Lava Bucket - ID: 364
+
+  /* Blast Furnace */
+  "iron_shovel_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 297 }, //  Iron Shovel - ID: 297
+  "gold_leggings_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 354 }, //  Gold Leggings - ID: 354
+
+  /*//// Food ////*/
+
+  /* Page 1 */
+
+  "item_01_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 263 }, //  Cooked Porkchop - ID: 263
+  "item_01_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 262 }, //  Raw Porkchop - ID: 262
+
+  "item_02_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 281 }, //  Baked Potato - ID: 281
+  "item_02_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 280 }, //  Potato - ID: 280
+
+  "item_03_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 270 }, //  Dried Kelp - ID: 270
+  "item_03_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 383 }, //  Kelp - ID: 383
+
+  "item_04_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 557 }, //  Cooked Mutton - ID: 557
+  "item_04_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 556 }, //  Raw Mutton - ID: 556
+
+  "item_05_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 276 }, //  Cooked Chicken - ID: 276
+  "item_05_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 275 }, //  Raw Chicken - ID: 
+
+  "item_06_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 289 }, //  Cooked Rabbit - ID: 289
+  "item_06_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 288 }, //  Raw Rabbit - ID: 288
+
+  "item_07_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 274 }, //  Cooked Beef - ID: 274
+  "item_07_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 273 }, //  Raw Beef - ID: 273
+
+  "item_08_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 269 }, //  Cooked Salmon - ID: 269
+  "item_08_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 265 }, //  Raw Salmon - ID: 265
+
+  "item_09_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 268 }, //  Cooked Cod - ID: 268
+  "item_09_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 264 }, //  Raw Cod - ID: 264
+
+  /*//// Stones ////*/
+
+  /* Page 1 */
+
+  "item_10_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 24, "$number_data": 3 }, //  Smooth Sandstone - ID: 24 + Data: 3
+  "item_10_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 24 }, //  Sandstone - ID: 24
+
+  "item_11_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -377 }, //  Smooth Basalt - ID: -377
+  "item_11_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -234 }, //  Basalt - ID: -234
+
+  "item_12_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 155, "$number_data": 3 }, //  Smooth Quartz - ID: 155 + Data: 3
+  "item_12_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 155 }, //  Quartz Block - ID: 155
+
+  "item_13_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -280 }, //  Blackstone Brick Cracked - ID: -280
+  "item_13_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -274 }, //  Blackstone Brick - ID: -274
+
+  "item_14_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -378 }, //  Deepslate - ID: -378
+  "item_14_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -379 }, //  Cobbled Deepslate - ID: -379
+
+  "item_15_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 232 }, //  Brown Glazed Terracotta - ID: 232
+  "item_15_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 12 }, //  Brown Terracotta - ID: 159 + Data: 12
+
+  "item_16_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 172 }, // Terracotta - ID: 172
+  "item_16_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 82 }, //  Clay Block - ID: 82
+
+  "item_17_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 19 }, //  Sponge - ID: 19
+  "item_17_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 19, "$number_data": 1 }, //  Wet Sponge - ID: 1
+
+  "item_18_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 228 }, //  Light Gray Glazed Terracotta - ID: 228
+  "item_18_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 8 }, //  Light Gray Terracotta - ID: 159 + Data: 8
+
+  "item_19_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 233 }, //  Green Glazed Terracotta - ID: 233
+  "item_19_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 13 }, //  Green Terracotta - ID: 159 + Data: 13
+
+  "item_20_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 179, "$number_data": 3 }, //  Smooth Red Sandstone - ID: 179 + Data: 3
+  "item_20_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 179 }, //  Red Sandstone - ID: 179
+
+  "item_21_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 223 }, //  Light Blue Glazed Terracotta - ID: 223
+  "item_21_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 3 }, //  Light Blue Terracotta - ID: 159 + Data: 3
+
+  "item_22_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 224 }, //  Yellow Glazed Terracotta - ID: 224
+  "item_22_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 4 }, //  Yellow Terracotta - ID: 159 + Data: 4
+
+  "item_23_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 226 }, //  Pink Glazed Terracotta - ID: 226
+  "item_23_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 6 }, //  Pink Terracotta - ID: 159 + Data: 6
+
+  "item_24_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 231 }, //  Blue Glazed Terracotta - ID: 231
+  "item_24_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 11 }, //  Blue Terracotta - ID: 159 + Data: 11
+
+  "item_25_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 20 }, //  Glass - ID: 20
+  "item_25_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 12 }, //  Sand - ID: 12
+
+  "item_26_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 219 }, //  Purple Glazed Terracotta - ID: 219
+  "item_26_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 10 }, //  Purple Terracotta - ID: 159 + Data: 10
+
+  "item_27_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -183 }, //  Smooth Stone - ID: -183
+  "item_27_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 1 }, //  Stone - ID: 1
+
+  "item_28_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 222 }, //  Magenta Glazed Terracotta - ID: 222
+  "item_28_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 2 }, //  Magenta Terracotta - ID: 159 + Data: 2
+
+  "item_29_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -410 }, //  Deepslate Brick Cracked - ID: -410
+  "item_29_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -391 }, //  Deepslate Brick - ID: -391
+
+  /* Page 2 */
+
+  "item_30_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 1 }, //  Stone - ID: 1
+  "item_30_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 4 }, //  Cobblestone - ID: 4
+
+  "item_31_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -303 }, //  Cracked Nether Brick - ID: -303
+  "item_31_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 112 }, //  Nether Brick - ID: 112
+
+  "item_32_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 225 }, //  Lime Glazed Terracotta - ID: 225
+  "item_32_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 5 }, //  Lime Terracotta - ID: 159 + Data: 5
+
+  "item_33_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -409 }, //  Deepslate Tile Cracked - ID: -409
+  "item_33_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -387 }, //  Deepslate Tile - ID: -387
+
+  "item_34_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 220 }, //  White Glazed Terracotta - ID: 220
+  "item_34_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 0 }, //  White Terracotta - ID: 159 + Data: 0
+
+  "item_35_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 229 }, //  Cyan Glazed Terracotta - ID: 229
+  "item_35_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 9 }, //  Cyan Terracotta - ID: 159 + Data: 9
+
+  "item_36_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 234 }, //  Red Glazed Terracotta - ID: 234
+  "item_36_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 14 }, //  Red Terracotta - ID: 159 + Data: 14
+
+  "item_37_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 374 }, //  Redstone (Dust) - ID: 374
+  "item_37_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 73 }, //  Redstone Ore - ID: 73
+  "item_37_alt_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -403 }, //  Deepslate Redstone Ore - ID: -403
+
+  "item_38_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 227 }, //  Gray Glazed Terracotta - ID: 227
+  "item_38_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 7 }, //  Gray Terracotta - ID: 159 + Data: 7
+
+  "item_39_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 235 }, //  Black Glazed Terracotta - ID: 235
+  "item_39_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 15 }, //  Black Terracotta - ID: 159 + Data: 15
+
+  "item_40_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 98, "$number_data": 2 }, //  Stone Brick Cracked - ID: 98 + Data: 2
+  "item_40_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 98 }, //  Stone Brick - ID: 98
+
+  "item_41_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 221 }, //  Orange Glazed Terracotta - ID: 221
+  "item_41_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 159, "$number_data": 1 }, //  Orange Terracotta - ID: 159 + Data: 1
+
+  /*//// Items ////*/
+
+  /* Page 1 */
+
+  "item_42_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 303 }, //  Coal - ID: 303
+  "item_42_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 16 }, //  Coal Ore - ID: 16
+
+  "item_43_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 530 }, //  Quartz - ID: 530
+  "item_43_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 153 }, //  Nether Quartz Ore - ID: 153
+
+  "item_44_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 306 }, //  Iron Ingot - ID: 306
+  "item_44_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 511 }, //  Raw Iron - ID: 511
+  "item_44_alt_0_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 15 }, //  Iron Ore - ID: 15
+  "item_44_alt_1_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -401 }, //  Deepslate Iron Ore - ID: -401
+
+  "item_45_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 529 }, //  Nether Brick - ID: 529
+  "item_45_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 87 }, //  Netherrack - ID: 87
+
+  "item_46_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 307 }, //  Gold Ingot - ID: 307
+  "item_46_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 512 }, //  Raw Gold - ID: 512
+  "item_46_alt_0_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 14 }, //  Gold Ore - ID: 14
+  "item_46_alt_1_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -402 }, //  Deepslate Gold Ore - ID: -402
+
+  "item_47_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 426 }, //  Gold Nugget - ID: 426
+  "item_47_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 353 }, //  Golden Chestplate - ID: 353
+  "item_47_alt_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 324 }, //  Golden Pickaxe - ID: 324
+
+  "item_48_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 518 }, //  Emerald - ID: 518
+  "item_48_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 129 }, //  Emerald Ore - ID: 129
+  "item_48_alt_1_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -407 }, //  Deepslate Emerald Ore - ID: -407
+
+  "item_49_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 304 }, //  Charcoal - ID: 304
+  "item_49_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 17 }, //  Oak Log - ID: 17
+
+  "item_50_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 575 }, //  Iron Nugget - ID: 575
+  "item_50_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 345 }, //  Iron Chestplate - ID: 345
+  "item_50_alt_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 298 }, //  Iron Pickaxe - ID: 298
+
+  "item_51_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 305 }, //  Diamond - ID: 305
+  "item_51_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -405 }, //  Deepslate Diamond Ore - ID: -405
+  "item_51_alt_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 56 }, //  Diamond Ore - ID: 56
+
+  "item_52_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 415 }, //  Lapis Lazuli - ID: 415
+  "item_52_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 21 }, //  Lapis Ore - ID: -21
+  "item_52_alt_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -400 }, //  Deepslate Lapis Ore - ID: -400
+
+  "item_53_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 619 }, //  Netherite Scraps - ID: 619
+  "item_53_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -271 }, //  Ancient Debris - ID: -271
+
+  "item_54_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 384 }, //  Brick - ID: 384
+  "item_54_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 385 }, //  Clay - ID: 385
+
+  "item_55_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 406 }, //  Lime dye - ID: 406
+  "item_55_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -156 }, //  Sea Pickle - ID: -156
+
+  "item_56_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 510 }, //  Copper Ingot - ID: 510
+  "item_56_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 513 }, //  Raw Copper - ID: 513
+  "item_56_alt_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": -311 }, //  Copper Ore - ID: -311
+
+  "item_57_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 398 }, //  Green dye - ID: 398
+  "item_57_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 81 }, //  Cactus - ID: 81
+
+  "item_58_output_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 565 }, //  Popped Chorus Fruit - ID: 565
+  "item_58_input_icon@cris_furnace_rb_rendered_items.item_renderer": { "$object_item_id": 564 } //  Chorus Fruit - ID: 564
+}

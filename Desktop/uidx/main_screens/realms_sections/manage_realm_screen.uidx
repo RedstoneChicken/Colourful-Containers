@@ -1,0 +1,482 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "manage_realm_dx",
+
+  /*//// Realm Settings ////*/
+
+  "realms_settings_panel_content": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 16 ],
+    "size": [ 200, "100%c" ],
+    "controls": [
+      {
+        "panel_0": {
+          "type": "panel",
+          "size": [ 200, 22 ],
+          "controls": [
+            {
+              "title_label@settings_dx.options_label": {
+                "layer": 2,
+                "offset": [ 0, 0 ],
+                "text": "howtoplay.realms.header.2"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ 200, 35 ],
+          "controls": [
+            {
+              "close_realm_button@common_buttons_dx.main_button_100": {
+                "size": [ 100, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$button_text": "realmsSettingsScreen.closeRealmButton",
+                "$pressed_button_name": "menu_close_realm",
+                "bindings": [
+                  {
+                    "binding_name": "#close_realm_button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "open_realm_button@common_buttons_dx.main_button_100": {
+                "size": [ 100, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$button_text": "realmsSettingsScreen.openRealmButton",
+                "$pressed_button_name": "menu_open_realm",
+                "bindings": [
+                  {
+                    "binding_name": "#open_realm_button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ 200, 50 ],
+          "controls": [
+            {
+              "option_text_edit_0@settings_common_dx.option_text_edit": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_label": "realmsSettingsScreen.realmNameLabel",
+                "$option_binding_name": "#realm_name",
+                "$option_enabled_binding_name": "#realm_name_enabled",
+                "$option_place_holder_text": "realmsSettingsScreen.realmNameEditPlaceholder",
+                "$text_box_name": "realm_name_text_box"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_3": {
+          "type": "panel",
+          "size": [ 200, 62 ],
+          "controls": [
+            {
+              "option_text_edit_1@settings_common_dx.option_text_edit": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_label": "feed.clubdescription", // this localization string was not updated, for simplicity
+                "$option_binding_name": "#realm_description",
+                "$option_enabled_binding_name": "#realm_name_enabled",
+                "$option_place_holder_text": "realmsSettingsScreen.realmDescriptionEditPlaceholder",
+                "$text_box_name": "realm_description_text_box",
+                "$allow_data_binding": true,
+                "$max_text_edit_length": 499,
+                "bindings": [
+                  {
+                    "binding_name": "#realm_description_enabled",
+                    "binding_name_override": "#enabled"
+                  },
+                  {
+                    "binding_name": "#realm_description_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_5": {
+          "type": "panel",
+          "size": [ 200, 20 ],
+          "controls": [
+            {
+              "main_done_button@manage_realm_dx.main_done_button": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Subscription ////*/
+
+  "subscription_panel_content": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 16 ],
+    "size": [ 200, "100%c" ],
+    "controls": [
+      {
+        "panel_0": {
+          "type": "panel",
+          "size": [ 200, 23 ],
+          "controls": [
+            {
+              "title_label@settings_dx.options_label": {
+                "layer": 2,
+                "offset": [ 0, 0 ],
+                "text": "realmsSettingsScreen.subscriptionSectionTitle"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ 200, 39 ],
+          "controls": [
+            {
+              "size_label@settings_dx.options_label": {
+                "layer": 2,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "color": [ 0.625, 0.625, 0.625 ],
+                "shadow": false,
+                "offset": [ 0, 0 ],
+                "text": "realmsSettingsScreen.playerCountLabel"
+              }
+            },
+            {
+              "size_value_label@settings_dx.options_label": {
+                "layer": 2,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "shadow": false,
+                "offset": [ 0, 13 ],
+                "text": "#item_name",
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#realm_player_count",
+                    "binding_name_override": "#item_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ 200, 60 ],
+          "controls": [
+            {
+              "duration_label@settings_dx.options_label": {
+                "layer": 2,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "color": [ 0.625, 0.625, 0.625 ],
+                "shadow": false,
+                "offset": [ 0, 0 ],
+                "text": "realmsSettingsScreen.realmDurationLabel"
+              }
+            },
+            {
+              "duration_value_label@settings_dx.options_label": {
+                "layer": 2,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "shadow": false,
+                "offset": [ 0, 13 ],
+                "text": "#item_name",
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#realm_duration_label",
+                    "binding_name_override": "#item_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_3": {
+          "type": "panel",
+          "size": [ 200, 26 ],
+          "visible": "($realms_plus_on)",
+          "ignored": "(not $is_pregame)",
+          "controls": [
+            {
+              "manage_subscriptions_button@common_buttons_dx.main_button_200": {
+                "size": [ 200, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$button_text": "realmsSettingsScreen.manageSubscriptionsButton",
+                "$pressed_button_name": "menu_realms_manage_subscriptions"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_4": {
+          "type": "panel",
+          "size": [ 200, 26 ],
+          "bindings": [
+            {
+              "binding_name": "#delete_realm_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "delete_realm_button@common_buttons_dx.main_button_200": {
+                "size": [ 200, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$button_text": "realmsSettingsScreen.deleteRealmButton",
+                "$pressed_button_name": "menu_realms_delete_realm"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_done": {
+          "type": "panel",
+          "size": [ 200, 20 ],
+          "controls": [
+            {
+              "main_done_button@manage_realm_dx.main_done_button": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Button Tab ////*/
+
+  "button_tab@common_toggles_dx.main_button_toggle": {
+    "$unchecked_control": "common_buttons_dx.200_default",
+    "$unchecked_hover_control": "common_buttons_dx.200_hover",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+
+    "size": [ 200, 20 ],
+    "$toggle_name": "manage_realms_buttons"
+  },
+
+  "realm_settings_button@manage_realm_dx.button_tab": {
+    "$button_text": "howtoplay.realms.header.2",
+    "$tab_view_binding_name": "realms_settings_button_toggle",
+    "$toggle_group_forced_index": 100
+  },
+
+  "players_button@manage_realm_dx.button_tab": {
+    "$button_text": "realmsSettingsScreen.playersSectionTitle",
+    "$tab_view_binding_name": "players_button_toggle",
+    "$toggle_group_forced_index": 100
+  },
+
+  "subscription_button@manage_realm_dx.button_tab": {
+    "$button_text": "realmsSettingsScreen.subscriptionSectionTitle",
+    "$tab_view_binding_name": "subscription_button_toggle",
+    "$toggle_group_forced_index": 100
+  },
+
+  "main_done_button@manage_realm_dx.button_tab": {
+    "$button_text": "gui.back",
+    "$is_back_button": true,
+    "$tab_view_binding_name": "main_button_toggle",
+    "$toggle_name": "$back_screen_toggle_name",
+    "$toggle_group_forced_index": 0
+  },
+
+  "main_panel": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 19 ],
+    "size": [ 202, 190 ],
+    "controls": [
+      {
+        "header": {
+          "type": "panel",
+          "size": [ 202, 27 ],
+          "controls": [
+            {
+              "title_label@settings_dx.base_label": {
+                "text": "realmsSlotsScreen.editRealm",
+                "offset": [ 0, 0 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_0": {
+          "type": "panel",
+          "size": [ 202, 24 ],
+          "controls": [
+            { "realm_settings_button@manage_realm_dx.realm_settings_button": { } }
+          ]
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ 202, 24 ],
+          "controls": [
+            { "players_button@manage_realm_dx.players_button": { } }
+          ]
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ 202, 24 ],
+          "controls": [
+            { "subscription_button@manage_realm_dx.subscription_button": { } }
+          ]
+        }
+      },
+      {
+        "panel_3": {
+          "type": "panel",
+          "size": [ 202, 20 ],
+          "controls": [
+            { 
+              "back_button@common_buttons_dx.main_button_200": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "button.menu_exit",
+                "$button_text": "gui.done"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "$back_screen_toggle_name": "manage_realms_buttons",
+    "controls": [
+      { 
+        "main_panel@manage_realm_dx.main_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "realms_settings_button_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "players_button_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "subscription_button_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "realms_settings_panel_content@manage_realm_dx.realms_settings_panel_content": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "realms_settings_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "players_panel@realms_players_dx.players_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "players_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "subscription_panel_content@manage_realm_dx.subscription_panel_content": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "subscription_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { 
+        "bg@java_gui_common.options_background": {
+          "layer": -9,
+          "ignored": "(not $is_pregame)"
+        }
+      },
+      {
+        "main_bg_panel": {
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      }
+    ]
+  }
+}

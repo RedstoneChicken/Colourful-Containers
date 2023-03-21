@@ -1,0 +1,71 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "furnace_fuel_dx",
+
+  /*//// Fuel animation ////*/
+  
+  "fuel_items": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "clips_children": true,
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ 18, 108 ],
+          "offset": "@furnace_fuel_dx.cycle_01",
+          "controls": [
+            { "fuel_01@cris_furnace_rb_rendered_items.fuel_01": { } },
+            { "fuel_02@cris_furnace_rb_rendered_items.fuel_02": { } },
+            { "fuel_03@cris_furnace_rb_rendered_items.fuel_03": { } },
+            { "fuel_04@cris_furnace_rb_rendered_items.fuel_04": { } },
+            { "fuel_05@cris_furnace_rb_rendered_items.fuel_05": { } }, 
+            { "fuel_06@cris_furnace_rb_rendered_items.fuel_06": { } } 
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Item Cycle Offset Animation ////*/
+
+  "offset_base": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 1,
+    "next": "$next_frame", 
+    "from": "$uv_frame",
+    "to": "$uv_frame"
+  },    
+
+  "cycle_01@furnace_fuel_dx.offset_base": { "$uv_frame": [ 0, 0   ], "$next_frame": "@furnace_fuel_dx.cycle_02" },
+  "cycle_02@furnace_fuel_dx.offset_base": { "$uv_frame": [ 0, -18 ], "$next_frame": "@furnace_fuel_dx.cycle_03" },
+  "cycle_03@furnace_fuel_dx.offset_base": { "$uv_frame": [ 0, -36 ], "$next_frame": "@furnace_fuel_dx.cycle_04" },
+  "cycle_04@furnace_fuel_dx.offset_base": { "$uv_frame": [ 0, -54 ], "$next_frame": "@furnace_fuel_dx.cycle_05" },
+  "cycle_05@furnace_fuel_dx.offset_base": { "$uv_frame": [ 0, -72 ], "$next_frame": "@furnace_fuel_dx.cycle_06" },
+  "cycle_06@furnace_fuel_dx.offset_base": { "$uv_frame": [ 0, -90 ], "$next_frame": "@furnace_fuel_dx.cycle_01" },
+
+  /*//// Fuel Panel ////*/
+
+  "cell_image_fuel_overlay": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "layer": 2,
+    "controls": [
+      { "fuel_items@furnace_fuel_dx.fuel_items": { } },
+      { "cell_red_slot@java_gui_common.cell_furnace_slot": { "layer": 2 } },
+      { "cell_red_slot_overlay@java_gui_common.cell_red_slot_overlay": { "layer": 4 } }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "item_0_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

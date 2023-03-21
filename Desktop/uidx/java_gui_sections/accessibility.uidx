@@ -1,0 +1,34 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "accessibility_java_dx",
+
+  "accessibility_default": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/accessibility",
+    "$accessibility_uv|default": [ 0, 0 ],
+    "$accessibility_uv_size|default": [ 0, 0 ],
+    "uv": "$accessibility_uv",
+    "uv_size": "$accessibility_uv_size",
+    "size": [ 20, 20 ],
+    "variables": [
+      { "requires": "($accessibility_resolution = '1x')",  "$accessibility_uv_size": [ 20, 20 ] },
+      { "requires": "($accessibility_resolution = '2x')",  "$accessibility_uv_size": [ 40, 40 ] },
+      { "requires": "($accessibility_resolution = '4x')",  "$accessibility_uv_size": [ 80, 80 ] },
+      { "requires": "($accessibility_resolution = '8x')",  "$accessibility_uv_size": [ 160, 160 ] },
+      { "requires": "($accessibility_resolution = '16x')", "$accessibility_uv_size": [ 320,	320 ] },
+      { "requires": "($accessibility_resolution = '32x')", "$accessibility_uv_size": [ 640,	640 ] }
+    ]
+  },
+
+  "accessibility_hover@accessibility_java_dx.accessibility_default": {
+    "variables": [
+      { "requires": "($accessibility_resolution = '1x')",  "$accessibility_uv": [ 0, 20  ], "$accessibility_uv_size": [ 20, 20 ] },
+      { "requires": "($accessibility_resolution = '2x')",  "$accessibility_uv": [ 0, 40  ], "$accessibility_uv_size": [ 40, 40 ] },
+      { "requires": "($accessibility_resolution = '4x')",  "$accessibility_uv": [ 0, 80  ], "$accessibility_uv_size": [ 80, 80 ] },
+      { "requires": "($accessibility_resolution = '8x')",  "$accessibility_uv": [ 0, 160 ], "$accessibility_uv_size": [ 160, 160 ] },
+      { "requires": "($accessibility_resolution = '16x')", "$accessibility_uv": [ 0, 320 ], "$accessibility_uv_size": [ 320,	320 ] },
+      { "requires": "($accessibility_resolution = '32x')", "$accessibility_uv": [ 0, 640 ], "$accessibility_uv_size": [ 640,	640 ] }
+    ]
+  }
+}

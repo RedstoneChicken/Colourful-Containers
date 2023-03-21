@@ -1,0 +1,481 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "cris_furnace_rb_toggle_items",
+
+  /*//// Base Panels ////*/
+
+  "cell_image_recipe_hover@recipe_book_java_dx.cell_image_recipe": {
+    "size": [ 25, 25 ],
+    "controls": [
+      { "hover_text_panel@common_dx.hover_text_panel": { } }
+    ]
+  },
+
+  "items_tab": {
+    "type": "panel",
+    "size": [ 25, 25 ],
+    "$item_renderer_item": "common.empty_panel",
+    "controls": [
+      { "item_renderer@$item_renderer_item": { "offset": [ -1, -1 ], "layer": 6 } },
+      {
+        "items_tab@common_toggles_dx.toggle_panel": {
+          "layer": 1,
+          "$unchecked_control": "recipe_book_java_dx.cell_image_recipe",
+          "$unchecked_hover_control": "cris_furnace_rb_toggle_items.cell_image_recipe_hover",
+          "$checked_control": "recipe_book_java_dx.cell_image_recipe",
+          "$checked_hover_control": "cris_furnace_rb_toggle_items.cell_image_recipe_hover",
+          "size": [ 25, 25 ],
+          "$tab_content_size": [ 25, 25 ],
+          "$toggle_focus_enabled": false,
+          "$radio_toggle_group": true,
+          "$toggle_name": "items_toggle",
+          "$tab_view_binding_name": "$item_view",
+          "$toggle_binding_type": "global"
+        }
+      }
+    ]
+  },
+
+  /*//// Toggles ////*/
+
+  "filter_off_hover": {
+    "type": "panel",
+    "size": [ 27, 16 ],
+    "$hover_panel_text": "realmsInvitationScreen.undo",
+    "controls": [
+      { "hover_text_panel@common_dx.hover_text_panel": {} },
+      { "filter_off_button_hover@recipe_book_java_dx.smelting_filter_off_button_hover": { } }
+    ]
+  },
+
+  "item_0@cris_furnace_rb_toggle_items.items_tab": {
+    "size": [ 27, 16 ],
+    "$toggle_default_state": true,
+    "$item_view": "item_0_toggle",
+    "$toggle_group_forced_index": 0,
+    "controls": [
+      {
+        "items_tab@common_toggles_dx.toggle_panel": {
+          "$unchecked_control": "recipe_book_java_dx.smelting_filter_on_button_default",
+          "$unchecked_hover_control": "recipe_book_java_dx.smelting_filter_on_button_hover",
+          "$checked_control": "recipe_book_java_dx.smelting_filter_off_button_default",
+          "$checked_hover_control": "cris_furnace_rb_toggle_items.filter_off_hover",
+          "size": [ 25, 25 ],
+          "$tab_content_size": [ 25, 25 ],
+          "$toggle_focus_enabled": false,
+          "$radio_toggle_group": true,
+          "$toggle_name": "items_toggle",
+          "$tab_view_binding_name": "$item_view",
+          "$toggle_binding_type": "global"
+        }
+      }
+    ]
+  },
+
+  "item_1@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.porkchop_cooked.name",
+    "$item_view": "($tab_mode + '_item_1_toggle')",
+    "$toggle_group_forced_index": 1,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_01_output_icon"
+  },
+
+  "item_2@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.baked_potato.name",
+    "$item_view": "($tab_mode + '_item_2_toggle')",
+    "$toggle_group_forced_index": 2,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_02_output_icon"
+  },
+
+  "item_3@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.dried_kelp.name",
+    "$item_view": "($tab_mode + '_item_3_toggle')",
+    "$toggle_group_forced_index": 3,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_03_output_icon"
+  },
+
+  "item_4@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.muttonCooked.name",
+    "$item_view": "($tab_mode + '_item_4_toggle')",
+    "$toggle_group_forced_index": 4,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_04_output_icon"
+  },
+
+  "item_5@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.cooked_chicken.name",
+    "$item_view": "($tab_mode + '_item_5_toggle')",
+    "$toggle_group_forced_index": 5,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_05_output_icon"
+  },
+
+  "item_6@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.cooked_rabbit.name",
+    "$item_view": "($tab_mode + '_item_6_toggle')",
+    "$toggle_group_forced_index": 6,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_06_output_icon"
+  },
+
+  "item_7@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.cooked_beef.name",
+    "$item_view": "($tab_mode + '_item_7_toggle')",
+    "$toggle_group_forced_index": 7,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_07_output_icon"
+  },
+
+  "item_8@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.cooked_salmon.name",
+    "$item_view": "($tab_mode + '_item_8_toggle')",
+    "$toggle_group_forced_index": 8,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_08_output_icon"
+  },
+
+  "item_9@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.cooked_fish.name",
+    "$item_view": "($tab_mode + '_item_9_toggle')",
+    "$toggle_group_forced_index": 9,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_09_output_icon"
+  },
+
+  "item_10@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.sandstone.smooth.name",
+    "$item_view": "($tab_mode + '_item_10_toggle')",
+    "$toggle_group_forced_index": 10,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_10_output_icon"
+  },
+
+  "item_11@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.smooth_basalt.name",
+    "$item_view": "($tab_mode + '_item_11_toggle')",
+    "$toggle_group_forced_index": 11,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_11_output_icon"
+  },
+
+  "item_12@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.quartz_block.smooth.name",
+    "$item_view": "($tab_mode + '_item_12_toggle')",
+    "$toggle_group_forced_index": 12,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_12_output_icon"
+  },
+
+  "item_13@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.cracked_polished_blackstone_bricks.name",
+    "$item_view": "($tab_mode + '_item_13_toggle')",
+    "$toggle_group_forced_index": 13,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_13_output_icon"
+  },
+
+  "item_14@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.deepslate.name",
+    "$item_view": "($tab_mode + '_item_14_toggle')",
+    "$toggle_group_forced_index": 14,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_14_output_icon"
+  },
+
+  "item_15@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.brown.name",
+    "$item_view": "($tab_mode + '_item_15_toggle')",
+    "$toggle_group_forced_index": 15,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_15_output_icon"
+  },
+
+  "item_16@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.hardened_clay.name",
+    "$item_view": "($tab_mode + '_item_16_toggle')",
+    "$toggle_group_forced_index": 16,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_16_output_icon"
+  },
+
+  "item_17@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.sponge.dry.name",
+    "$item_view": "($tab_mode + '_item_17_toggle')",
+    "$toggle_group_forced_index": 17,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_17_output_icon"
+  },
+
+  "item_18@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.silver.name",
+    "$item_view": "($tab_mode + '_item_18_toggle')",
+    "$toggle_group_forced_index": 18,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_18_output_icon"
+  },
+
+  "item_19@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.green.name",
+    "$item_view": "($tab_mode + '_item_19_toggle')",
+    "$toggle_group_forced_index": 19,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_19_output_icon"
+  },
+
+  "item_20@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.red_sandstone.smooth.name",
+    "$item_view": "($tab_mode + '_item_20_toggle')",
+    "$toggle_group_forced_index": 20,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_20_output_icon"
+  },
+
+  "item_21@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.light_blue.name",
+    "$item_view": "($tab_mode + '_item_21_toggle')",
+    "$toggle_group_forced_index": 21,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_21_output_icon"
+  },
+
+  "item_22@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.yellow.name",
+    "$item_view": "($tab_mode + '_item_22_toggle')",
+    "$toggle_group_forced_index": 22,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_22_output_icon"
+  },
+
+  "item_23@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.pink.name",
+    "$item_view": "($tab_mode + '_item_23_toggle')",
+    "$toggle_group_forced_index": 23,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_23_output_icon"
+  },
+
+  "item_24@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.light_blue.name",
+    "$item_view": "($tab_mode + '_item_24_toggle')",
+    "$toggle_group_forced_index": 24,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_24_output_icon"
+  },
+
+  "item_25@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glass.name",
+    "$item_view": "($tab_mode + '_item_25_toggle')",
+    "$toggle_group_forced_index": 25,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_25_output_icon"
+  },
+
+  "item_26@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.purple.name",
+    "$item_view": "($tab_mode + '_item_26_toggle')",
+    "$toggle_group_forced_index": 26,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_26_output_icon"
+  },
+
+  "item_27@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.smooth_stone.name",
+    "$item_view": "($tab_mode + '_item_27_toggle')",
+    "$toggle_group_forced_index": 27,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_27_output_icon"
+  },
+
+  "item_28@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.magenta.name",
+    "$item_view": "($tab_mode + '_item_28_toggle')",
+    "$toggle_group_forced_index": 28,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_28_output_icon"
+  },
+
+  "item_29@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.cracked_deepslate_bricks.name",
+    "$item_view": "($tab_mode + '_item_29_toggle')",
+    "$toggle_group_forced_index": 29,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_29_output_icon"
+  },
+
+  "item_30@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.stone.stone.name",
+    "$item_view": "($tab_mode + '_item_30_toggle')",
+    "$toggle_group_forced_index": 30,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_30_output_icon"
+  },
+
+  "item_31@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.cracked_nether_bricks.name",
+    "$item_view": "($tab_mode + '_item_31_toggle')",
+    "$toggle_group_forced_index": 31,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_31_output_icon"
+  },
+
+  "item_32@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.lime.name",
+    "$item_view": "($tab_mode + '_item_32_toggle')",
+    "$toggle_group_forced_index": 32,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_32_output_icon"
+  },
+
+  "item_33@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.cracked_deepslate_tiles.name",
+    "$item_view": "($tab_mode + '_item_33_toggle')",
+    "$toggle_group_forced_index": 33,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_33_output_icon"
+  },
+
+  "item_34@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.white.name",
+    "$item_view": "($tab_mode + '_item_34_toggle')",
+    "$toggle_group_forced_index": 34,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_34_output_icon"
+  },
+
+  "item_35@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.cyan.name",
+    "$item_view": "($tab_mode + '_item_35_toggle')",
+    "$toggle_group_forced_index": 35,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_35_output_icon"
+  },
+
+  "item_36@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.red.name",
+    "$item_view": "($tab_mode + '_item_36_toggle')",
+    "$toggle_group_forced_index": 36,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_36_output_icon"
+  },
+
+  "item_37@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.redstone_wire.name",
+    "$item_view": "($tab_mode + '_item_37_toggle')",
+    "$toggle_group_forced_index": 37,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_37_output_icon"
+  },
+
+  "item_38@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.gray.name",
+    "$item_view": "($tab_mode + '_item_38_toggle')",
+    "$toggle_group_forced_index": 38,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_38_output_icon"
+  },
+
+  "item_39@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.black.name",
+    "$item_view": "($tab_mode + '_item_39_toggle')",
+    "$toggle_group_forced_index": 39,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_39_output_icon"
+  },
+
+  "item_40@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.stonebrick.cracked.name",
+    "$item_view": "($tab_mode + '_item_40_toggle')",
+    "$toggle_group_forced_index": 40,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_40_output_icon"
+  },
+
+  "item_41@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "tile.glazedTerracotta.orange.name",
+    "$item_view": "($tab_mode + '_item_41_toggle')",
+    "$toggle_group_forced_index": 41,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_41_output_icon"
+  },
+
+  "item_42@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.coal.name",
+    "$item_view": "($tab_mode + '_item_42_toggle')",
+    "$toggle_group_forced_index": 42,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_42_output_icon"
+  },
+
+  "item_43@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.quartz.name",
+    "$item_view": "($tab_mode + '_item_43_toggle')",
+    "$toggle_group_forced_index": 43,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_43_output_icon"
+  },
+
+  "item_44@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.iron_ingot.name",
+    "$item_view": "($tab_mode + '_item_44_toggle')",
+    "$toggle_group_forced_index": 44,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_44_output_icon"
+  },
+
+  "item_45@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.netherbrick.name",
+    "$item_view": "($tab_mode + '_item_45_toggle')",
+    "$toggle_group_forced_index": 45,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_45_output_icon"
+  },
+
+  "item_46@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.gold_ingot.name",
+    "$item_view": "($tab_mode + '_item_46_toggle')",
+    "$toggle_group_forced_index": 46,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_46_output_icon"
+  },
+
+  "item_47@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.gold_nugget.name",
+    "$item_view": "($tab_mode + '_item_47_toggle')",
+    "$toggle_group_forced_index": 47,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_47_output_icon"
+  },
+
+  "item_48@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.emerald.name",
+    "$item_view": "($tab_mode + '_item_48_toggle')",
+    "$toggle_group_forced_index": 48,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_48_output_icon"
+  },
+
+  "item_49@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.charcoal.name",
+    "$item_view": "($tab_mode + '_item_49_toggle')",
+    "$toggle_group_forced_index": 49,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_49_output_icon"
+  },
+  
+  "item_50@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.iron_nugget.name",
+    "$item_view": "($tab_mode + '_item_50_toggle')",
+    "$toggle_group_forced_index": 50,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_50_output_icon"
+  },
+  
+  "item_51@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.diamond.name",
+    "$item_view": "($tab_mode + '_item_51_toggle')",
+    "$toggle_group_forced_index": 51,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_51_output_icon"
+  },
+  
+  "item_52@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.dye.blue.name",
+    "$item_view": "($tab_mode + '_item_52_toggle')",
+    "$toggle_group_forced_index": 52,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_52_output_icon"
+  },
+  
+  "item_53@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.netherite_scrap.name",
+    "$item_view": "($tab_mode + '_item_53_toggle')",
+    "$toggle_group_forced_index": 53,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_53_output_icon"
+  },
+  
+  "item_54@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.brick.name",
+    "$item_view": "($tab_mode + '_item_54_toggle')",
+    "$toggle_group_forced_index": 54,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_54_output_icon"
+  },
+  
+  "item_55@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.dye.lime.name",
+    "$item_view": "($tab_mode + '_item_55_toggle')",
+    "$toggle_group_forced_index": 55,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_55_output_icon"
+  },
+  
+  "item_56@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.copper_ingot.name",
+    "$item_view": "($tab_mode + '_item_56_toggle')",
+    "$toggle_group_forced_index": 56,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_56_output_icon"
+  },
+  
+  "item_57@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.dye.green.name",
+    "$item_view": "($tab_mode + '_item_57_toggle')",
+    "$toggle_group_forced_index": 57,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_57_output_icon"
+  },
+  
+  "item_58@cris_furnace_rb_toggle_items.items_tab": {
+    "$hover_panel_text": "item.chorus_fruit_popped.name",
+    "$item_view": "($tab_mode + '_item_58_toggle')",
+    "$toggle_group_forced_index": 58,
+    "$item_renderer_item": "cris_furnace_rb_rendered_items.item_58_output_icon"
+  }
+}

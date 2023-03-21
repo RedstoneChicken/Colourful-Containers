@@ -1,0 +1,352 @@
+{
+  "namespace": "persona_emotes_dx",
+
+  /*//// Top Panel ////*/
+
+  "emote_top_panel_content": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "layer": 20,
+    "bindings": [
+      {
+        "binding_name": "#is_emote_offer_list_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "leave_option_panel": {
+          "type": "panel",
+          "size": [ "100%", 18 ],
+          "controls": [
+            {
+              "leave@main_profile_dx.base_button": {
+                "size": [ "100%-4px", 16 ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "$pressed_button_name": "button.try_exiting",
+                "$base_text": "gui.back"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "none_piece_option_panel": {
+          "type": "panel",
+          "size": [ "100%", 18 ],
+          "bindings": [
+            {
+              "binding_name": "#is_none_emote_option_enabled",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "none_piece_option_button@main_profile_dx.base_button": {
+                "size": [ "100%-4px", 16 ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "$pressed_button_name": "button.remove_emote",
+                "$base_text": "#none_option_text",
+                "$button_text_binding_type": "global"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  ////*/ Emotes Section (Scroll) /*////
+
+  "emotes_section": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "bindings": [
+      {
+        "binding_name": "#is_emotes_section_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "emotes_slot_grid@persona.emotes_slot_grid": {
+          "size": [ "100%", "100%c" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "grid_item_template": "persona_emotes_dx.emote_slot_grid_item"
+        }
+      }
+    ]
+  },
+
+  "emote_slot_grid_item@persona_create_dx.persona_subcategory_button": {
+    "$content_label_image_binding_type": "collection",
+    "$content_label_image_collection_name": "$subcategory_collection_name",
+    "$content_label_binding_name": "#persona_emote_slot_name",
+    "$content_image_binding_name": "#persona_emote_image_name",
+    "$content_label_image_file_system_binding_type": "collection",
+    "$content_image_binding_system": "#persona_emote_image_file_system",
+    "$content_image_is_dynamic": true,
+
+    "$pressed_button_name": "button.emote_slot_selected",
+    "$hover_button_name": "button.emote_slot_button_hovered",
+    "$button_content": "persona.emotes_slot_button_content"
+  },
+
+  "emote_offer_section_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "bindings": [
+      {
+        "binding_name": "#is_emote_offer_list_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "emote_offer_grid@persona.persona_piece_offer_grid": {
+          "$max_size_centered_x_panel": [ "100%", "100%" ],
+          "$pressed_button_function": "button.select_emote",
+          "$piece_grid_dimension_binding": "#emote_offer_count",
+          "$persona_piece_prefix": "emote",
+          "$persona_piece_collection_name": "emote_collection",
+          "$piece_grid_visible_binding_type": "global",
+          "$piece_grid_visible_binding_name": "#is_emote_offer_list_visible",
+          "$button_content": "persona.piece_offer_button_content",
+          "size": [ "100% - 8px", "100%c" ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Emote Info Panel (Bottom) ////*/
+
+  "offer_emote_info_panel": {
+    "type": "panel",
+    "$info_panel_prefix": "piece_offer",
+    "controls": [
+      { 
+        "title_label@main_profile_dx.base_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 5, 3 ],
+          "text": "#right_panel_title",
+          "font_scale_factor": 1.0,
+          "bindings": [
+            {
+              "binding_name": "#right_panel_title"
+            }
+          ]
+        }
+      },
+      { 
+        "rarity_label@main_profile_dx.base_label": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -5, 3 ],
+          "text": "#right_panel_title_rarity",
+          "font_scale_factor": 1.0,
+          "bindings": [
+            {
+              "binding_name": "#right_panel_title_rarity"
+            }
+          ]
+        }
+      },
+      { 
+        "info_label@main_profile_dx.base_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 5, 16 ],
+          "size": [ "100%-10px", "default" ],
+          "$base_text": "#right_panel_description",
+          "font_scale_factor": 1.0
+        }
+      },
+      {
+        "purchase_buttons_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%-8px", 16 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 4, -4 ],
+          "bindings": [
+            {
+              "binding_name": "#is_purchasable",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "offer_coin_purchase_button@main_profile_dx.base_button": {
+                "size": [ "33%", 16 ],
+                "$pressed_button_name": "button.coin_purchase",
+                "$label_control": "persona_create_dx.balance_label"
+              }
+            },
+            {
+              "padding": {
+                "type": "panel",
+                "size": [ 4, "100%" ]
+              }
+            },
+            {
+              "offer_real_money_purchase_button@main_profile_dx.base_button": {
+                "size": [ "fill", 16 ],
+                "$pressed_button_name": "button.real_money_purchase",
+                "$label_control": "persona_create_dx.real_currency_label",
+                "bindings": [
+                  {
+                    "binding_name": "#is_currency_purchase_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "padding": {
+                "type": "panel",
+                "size": [ 4, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#is_currency_purchase_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "play_again@main_profile_dx.base_button": {
+                "size": [ "33%", 16 ],
+                "$pressed_button_name": "button.play_emote_again",
+                "$base_text": "dr.emotes.play_again",
+                "bindings": [
+                  {
+                    "binding_name": "#is_play_again_button_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "emote_buttons_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%-8px", 16 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 4, -4 ],
+          "bindings": [
+            {
+              "binding_name": "(not #is_purchasable)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "collect_achievement_button@main_profile_dx.base_button": {
+                "size": [ "33%-4px", 16 ],
+                "$pressed_button_name": "button.collect_achievement",
+                "$base_text": "dr.collect_achievement_item",
+                "bindings": [
+                  {
+                    "binding_name": "#can_collect_achievement_award",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_0_alt": {
+                "type": "panel",
+                "size": [ 4, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#can_collect_achievement_award",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "equip_button@main_profile_dx.base_button": {
+                "size": [ "33%-4px", 16 ],
+                "$pressed_button_name": "button.equip_piece",
+                "$base_text": "dr.equip_piece",
+                "bindings": [
+                  {
+                    "binding_name": "#is_offer_owned",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_0": {
+                "type": "panel",
+                "size": [ 4, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#is_offer_owned",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "view_achievement_button@main_profile_dx.base_button": {
+                "size": [ "fill", 16 ],
+                "$pressed_button_name": "button.view_achievement",
+                "$base_text": "store.view_achievement",
+                "bindings": [
+                  {
+                    "binding_name": "#is_achievement_award",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_2": {
+                "type": "panel",
+                "size": [ 4, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#is_achievement_award",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "play_again@main_profile_dx.base_button": {
+                "size": [ "33%-4px", 16 ],
+                "$pressed_button_name": "button.play_emote_again",
+                "$base_text": "dr.emotes.play_again",
+                "bindings": [
+                  {
+                    "binding_name": "#is_play_again_button_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#is_right_info_piece_offer_panel_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  }
+}

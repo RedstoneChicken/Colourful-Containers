@@ -1,0 +1,11 @@
+{
+  "screen": {
+    "$is_popup_dialog_in_game": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "force_render_below": false,
+    "$screen_content": "pack_settings_dx.main_screen_content",
+    "$screen_bg_content": "pack_settings_dx.main_screen_bg_content"
+  }
+}

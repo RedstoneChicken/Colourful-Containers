@@ -1,0 +1,113 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "tab_button_java_dx",
+
+  "tab_button_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/tab_button",
+    "size": [ "100%", "100%" ],
+    "$tab_button_uv|default": [ 0, 0 ],
+    "$tab_button_uv_size|default": [ 0, 0 ],
+    "uv": "$tab_button_uv",
+    "uv_size": "$tab_button_uv_size"
+  },
+
+  /*//// Tab Front Default ////*/
+
+  "tab_front_default_left@tab_button_java_dx.tab_button_base": {
+    "size": [ 122, 24 ],
+    "variables": [
+      { "requires": "($tab_button_resolution = '256x')",  "$tab_button_uv": [ 0, 0 ], "$tab_button_uv_size": [ 122, 24 ] },
+      { "requires": "($tab_button_resolution = '512x')",  "$tab_button_uv": [ 0, 0 ], "$tab_button_uv_size": [ 244, 48 ] },
+      { "requires": "($tab_button_resolution = '1024x')", "$tab_button_uv": [ 0, 0 ], "$tab_button_uv_size": [ 488, 96 ] },
+      { "requires": "($tab_button_resolution = '2048x')", "$tab_button_uv": [ 0, 0 ], "$tab_button_uv_size": [ 976, 192 ] },
+      { "requires": "($tab_button_resolution = '4096x')", "$tab_button_uv": [ 0, 0 ], "$tab_button_uv_size": [ 1952, 384 ] },
+      { "requires": "($tab_button_resolution = '8192x')", "$tab_button_uv": [ 0, 0 ], "$tab_button_uv_size": [ 3904, 768 ] }
+    ]
+  },
+
+  "tab_front_default_right@tab_button_java_dx.tab_button_base": {
+    "size": [ 2, 24 ],
+    "variables": [
+      { "requires": "($tab_button_resolution = '256x')",  "$tab_button_uv": [ 128, 0 ],  "$tab_button_uv_size": [ 2, 24 ] },
+      { "requires": "($tab_button_resolution = '512x')",  "$tab_button_uv": [ 256, 0 ],  "$tab_button_uv_size": [ 4, 48 ] },
+      { "requires": "($tab_button_resolution = '1024x')", "$tab_button_uv": [ 512, 0 ],  "$tab_button_uv_size": [ 8, 96 ] },
+      { "requires": "($tab_button_resolution = '2048x')", "$tab_button_uv": [ 1024, 0 ], "$tab_button_uv_size": [ 16, 192 ] },
+      { "requires": "($tab_button_resolution = '4096x')", "$tab_button_uv": [ 2048, 0 ], "$tab_button_uv_size": [ 32, 384 ] },
+      { "requires": "($tab_button_resolution = '8192x')", "$tab_button_uv": [ 4096, 0 ], "$tab_button_uv_size": [ 64, 768 ] }
+    ]
+  },
+
+  /*//// Tab Front Hover ////*/
+
+  "tab_front_hover_left@tab_button_java_dx.tab_front_default_left": {
+    "variables": [
+      { "requires": "($tab_button_resolution = '256x')",  "$tab_button_uv": [ 0, 24 ],  "$tab_button_uv_size": [ 122, 24 ] },
+      { "requires": "($tab_button_resolution = '512x')",  "$tab_button_uv": [ 0, 48 ],  "$tab_button_uv_size": [ 244, 48 ] },
+      { "requires": "($tab_button_resolution = '1024x')", "$tab_button_uv": [ 0, 96 ],  "$tab_button_uv_size": [ 488, 96 ] },
+      { "requires": "($tab_button_resolution = '2048x')", "$tab_button_uv": [ 0, 192 ], "$tab_button_uv_size": [ 976, 192 ] },
+      { "requires": "($tab_button_resolution = '4096x')", "$tab_button_uv": [ 0, 384 ], "$tab_button_uv_size": [ 1952, 384 ] },
+      { "requires": "($tab_button_resolution = '8192x')", "$tab_button_uv": [ 0, 768 ], "$tab_button_uv_size": [ 3904, 768 ] }
+    ]
+  },
+
+  "tab_front_hover_right@tab_button_java_dx.tab_front_default_right": {
+    "variables": [
+      { "requires": "($tab_button_resolution = '256x')",  "$tab_button_uv": [ 128,  24 ],  "$tab_button_uv_size": [ 2, 24 ] },
+      { "requires": "($tab_button_resolution = '512x')",  "$tab_button_uv": [ 256,  48 ],  "$tab_button_uv_size": [ 4, 48 ] },
+      { "requires": "($tab_button_resolution = '1024x')", "$tab_button_uv": [ 512,  96 ],  "$tab_button_uv_size": [ 8, 96 ] },
+      { "requires": "($tab_button_resolution = '2048x')", "$tab_button_uv": [ 1024, 192 ], "$tab_button_uv_size": [ 16, 192 ] },
+      { "requires": "($tab_button_resolution = '4096x')", "$tab_button_uv": [ 2048, 384 ], "$tab_button_uv_size": [ 32, 384 ] },
+      { "requires": "($tab_button_resolution = '8192x')", "$tab_button_uv": [ 4096, 768 ], "$tab_button_uv_size": [ 64, 768 ] }
+    ]
+  },
+
+  /*//// Tab Back Default ////*/
+
+  "tab_back_default_left@tab_button_java_dx.tab_front_default_left": {
+    "variables": [
+      { "requires": "($tab_button_resolution = '256x')",  "$tab_button_uv": [ 0, 48 ],   "$tab_button_uv_size": [ 122, 24 ] },
+      { "requires": "($tab_button_resolution = '512x')",  "$tab_button_uv": [ 0, 96 ],   "$tab_button_uv_size": [ 244, 48 ] },
+      { "requires": "($tab_button_resolution = '1024x')", "$tab_button_uv": [ 0, 192 ],  "$tab_button_uv_size": [ 488, 96 ] },
+      { "requires": "($tab_button_resolution = '2048x')", "$tab_button_uv": [ 0, 384 ],  "$tab_button_uv_size": [ 976, 192 ] },
+      { "requires": "($tab_button_resolution = '4096x')", "$tab_button_uv": [ 0, 768 ],  "$tab_button_uv_size": [ 1952, 384 ] },
+      { "requires": "($tab_button_resolution = '8192x')", "$tab_button_uv": [ 0, 1536 ], "$tab_button_uv_size": [ 3904, 768 ] }
+    ]
+  },
+
+  "tab_back_default_right@tab_button_java_dx.tab_front_default_right": {
+    "variables": [
+      { "requires": "($tab_button_resolution = '256x')",  "$tab_button_uv": [ 128,  48 ],   "$tab_button_uv_size": [ 2, 24 ] },
+      { "requires": "($tab_button_resolution = '512x')",  "$tab_button_uv": [ 256,  96 ],   "$tab_button_uv_size": [ 4, 48 ] },
+      { "requires": "($tab_button_resolution = '1024x')", "$tab_button_uv": [ 512,  192 ],  "$tab_button_uv_size": [ 8, 96 ] },
+      { "requires": "($tab_button_resolution = '2048x')", "$tab_button_uv": [ 1024, 384 ],  "$tab_button_uv_size": [ 16, 192 ] },
+      { "requires": "($tab_button_resolution = '4096x')", "$tab_button_uv": [ 2048, 768 ],  "$tab_button_uv_size": [ 32, 384 ] },
+      { "requires": "($tab_button_resolution = '8192x')", "$tab_button_uv": [ 4096, 1536 ], "$tab_button_uv_size": [ 64, 768 ] }
+    ]
+  },
+
+  /*//// Tab Back Hover ////*/
+
+  "tab_back_hover_left@tab_button_java_dx.tab_front_default_left": {
+    "variables": [
+      { "requires": "($tab_button_resolution = '256x')",  "$tab_button_uv": [ 0, 72 ],   "$tab_button_uv_size": [ 122, 24 ] },
+      { "requires": "($tab_button_resolution = '512x')",  "$tab_button_uv": [ 0, 144 ],  "$tab_button_uv_size": [ 244, 48 ] },
+      { "requires": "($tab_button_resolution = '1024x')", "$tab_button_uv": [ 0, 288 ],  "$tab_button_uv_size": [ 488, 96 ] },
+      { "requires": "($tab_button_resolution = '2048x')", "$tab_button_uv": [ 0, 576 ],  "$tab_button_uv_size": [ 976, 192 ] },
+      { "requires": "($tab_button_resolution = '4096x')", "$tab_button_uv": [ 0, 1152 ], "$tab_button_uv_size": [ 1952, 384 ] },
+      { "requires": "($tab_button_resolution = '8192x')", "$tab_button_uv": [ 0, 2304 ], "$tab_button_uv_size": [ 3904, 768 ] }
+    ]
+  },
+
+  "tab_back_hover_right@tab_button_java_dx.tab_front_default_right": {
+    "variables": [
+      { "requires": "($tab_button_resolution = '256x')",  "$tab_button_uv": [ 128,  72 ],   "$tab_button_uv_size": [ 2, 24 ] },
+      { "requires": "($tab_button_resolution = '512x')",  "$tab_button_uv": [ 256,  144 ],  "$tab_button_uv_size": [ 4, 48 ] },
+      { "requires": "($tab_button_resolution = '1024x')", "$tab_button_uv": [ 512,  288 ],  "$tab_button_uv_size": [ 8, 96 ] },
+      { "requires": "($tab_button_resolution = '2048x')", "$tab_button_uv": [ 1024, 576 ],  "$tab_button_uv_size": [ 16, 192 ] },
+      { "requires": "($tab_button_resolution = '4096x')", "$tab_button_uv": [ 2048, 1152 ], "$tab_button_uv_size": [ 32, 384 ] },
+      { "requires": "($tab_button_resolution = '8192x')", "$tab_button_uv": [ 4096, 2304 ], "$tab_button_uv_size": [ 64, 768 ] }
+    ]
+  }
+}

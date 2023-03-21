@@ -1,0 +1,1222 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+    "namespace": "create_world_dx",
+
+    /*//// Tabs ////*/
+
+    "tab_panel_template": {
+      "type": "panel",
+      "size": [ 124, 22 ],
+      "$is_checked": false,
+      "controls": [
+        {
+          "button_label@common_dx.global_label": {
+            "layer": 2,
+            "shadow": true,
+            "size": [ "default", 10 ],
+            "anchor_from": "top_middle",
+            "anchor_to": "top_middle",
+            "offset": "$tab_label_offset",
+            "max_size": "$button_label_max_size",
+            "$button_label_max_size|default": [ "100%+2px", 10 ],
+            "color": "$text_color",
+            "text": "$button_text",
+            "controls": [
+              {
+                "text_s": {
+                  "type": "image",
+                  "ignored": "(not $is_checked)",
+                  "size": [ "100%", 1 ],
+                  "anchor_from": "top_left",
+                  "anchor_to": "top_left",
+                  "offset": [ 0, 15 ],
+                  "texture": "textures/uidx/global/color_base"
+                }
+              }
+            ]
+          }
+        },
+        { 
+          "left_texture@$left_button_texture": {
+            "layer": 1,
+            "anchor_from": "top_left",
+            "anchor_to": "top_left"
+          }
+        },
+        { 
+          "right_texture@$right_button_texture": {
+            "layer": 1,
+            "anchor_from": "top_right",
+            "anchor_to": "top_right"
+          }
+        }
+      ]
+    },
+
+    "tab_front_default@create_world_dx.tab_panel_template": {
+      "$is_checked": true,
+      "$tab_label_offset": [ 0, 7 ],
+      "$text_color": "$main_menu_button_default_color",
+      "$left_button_texture": "tab_button_java_dx.tab_front_default_left",
+      "$right_button_texture": "tab_button_java_dx.tab_front_default_right"
+    },
+
+    "tab_front_hover@create_world_dx.tab_panel_template": {
+      "$is_checked": true,
+      "$tab_label_offset": [ 0, 7 ],
+      "$text_color": "$main_menu_button_hover_color",
+      "$left_button_texture": "tab_button_java_dx.tab_front_hover_left",
+      "$right_button_texture": "tab_button_java_dx.tab_front_hover_right"
+    },
+
+    "tab_back_default@create_world_dx.tab_panel_template": {
+      "$tab_label_offset": [ 0, 9 ],
+      "$text_color": "$main_menu_button_default_color",
+      "$left_button_texture": "tab_button_java_dx.tab_back_default_left",
+      "$right_button_texture": "tab_button_java_dx.tab_back_default_right"
+    },
+
+    "tab_back_hover@create_world_dx.tab_panel_template": {
+      "$tab_label_offset": [ 0, 9 ],
+      "$text_color": "$main_menu_button_hover_color",
+      "$left_button_texture": "tab_button_java_dx.tab_back_hover_left",
+      "$right_button_texture": "tab_button_java_dx.tab_back_hover_right"
+    },
+
+    "top_tab@common_toggles_dx.toggle_panel": {
+      "size": [ 124, 22 ],
+      "layer": 10,
+      "$sound_volume|default": 0.0,
+      "$sound_pitch|default": 0.0,
+      "$unchecked_control": "create_world_dx.tab_back_default",
+      "$unchecked_hover_control": "create_world_dx.tab_back_hover",
+      "$checked_control": "create_world_dx.tab_front_default",
+      "$checked_hover_control": "create_world_dx.tab_front_hover",
+      "$toggle_name": "navigation_tab"
+    },
+
+    "game_tab@create_world_dx.top_tab": {
+      "$button_text": "options.category.game",
+      "$tab_view_binding_name": "game_options_navigation_tab_toggle",
+      "$toggle_group_forced_index": 0
+    },
+
+    "world_tab@create_world_dx.top_tab": {
+      "$button_text": "selectWorld.world",
+      "$tab_view_binding_name": "world_options_navigation_tab_toggle",
+      "$toggle_group_forced_index": 1
+    },
+
+    "more_tab@create_world_dx.top_tab": {
+      "$button_text": "More...",
+      "$tab_view_binding_name": "more_options_navigation_tab_toggle",
+      "$toggle_group_forced_index": 2
+    },
+
+    /*//// Dropdown Toggles ////*/
+  
+    "world_type_option": {
+      "type": "panel",
+      "size": [ 150, 20 ],
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "$option_label": "createWorldScreen.worldType",
+      "$option_enabled_binding_name": "#world_type_dropdown_enabled",
+      "controls": [/*
+        {
+          "flat_world_type_toggle@settings_common_dx.dropdown_radio_150": {
+            "$toggle_state_binding_name": "#world_type_radio_flat",
+            "$radio_label_text": "generator.old",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_type_radio_old",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "infinite_world_type_toggle@settings_common_dx.dropdown_radio_150": {
+            "$toggle_state_binding_name": "#world_type_radio_infinite",
+            "$radio_label_text": "generator.flat",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_type_radio_flat",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "old_world_type_toggle@settings_common_dx.dropdown_radio_150": {
+            "$toggle_state_binding_name": "#world_type_radio_old",
+            "$radio_label_text": "generator.infinite",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_type_radio_infinite",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        } */
+        {
+          "flat_world_type_toggle@settings_common_dx.dropdown_radio_150": {
+            "$toggle_state_binding_name": "#world_type_radio_flat",
+            "$radio_label_text": "generator.infinite",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_type_radio_infinite",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "infinite_world_type_toggle@settings_common_dx.dropdown_radio_150": {
+            "$toggle_state_binding_name": "#world_type_radio_infinite",
+            "$radio_label_text": "generator.flat",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_type_radio_flat",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        }
+      ]
+    },
+  
+    "gamemode_option": {
+      "type": "panel",
+      "size": [ 210, 20 ],
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "$option_label": "selectWorld.gameMode",
+      "ignored": "(not $is_world_create)",
+      "$option_enabled_binding_name": "#world_game_mode_dropdown_enabled",
+      "controls": [
+        {
+          "world_survival_mode_toggle@settings_common_dx.dropdown_radio_210": {
+            "$toggle_state_binding_name": "#world_game_mode_radio_survival",
+            "$radio_label_text": "createWorldScreen.gameMode.creative",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_game_mode_radio_creative",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "world_creative_mode_toggle@settings_common_dx.dropdown_radio_210": {
+            "$toggle_state_binding_name": "#world_game_mode_radio_creative",
+            "$radio_label_text": "createWorldScreen.gameMode.survival",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_game_mode_radio_survival",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        }
+      ]
+    },
+  
+    "edit_gamemode_option": {
+      "type": "panel",
+      "size": [ 150, 20 ],
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "$option_label": "selectWorld.gameMode",
+      "ignored": "$is_world_create",
+      "$option_enabled_binding_name": "#world_game_mode_dropdown_enabled",
+      "controls": [
+        {
+          "world_survival_mode_toggle@settings_common_dx.dropdown_radio_150": {
+            "$toggle_state_binding_name": "#world_game_mode_radio_survival",
+            "$radio_label_text": "createWorldScreen.gameMode.adventure",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_game_mode_radio_adventure",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "world_creative_mode_toggle@settings_common_dx.dropdown_radio_150": {
+            "$toggle_state_binding_name": "#world_game_mode_radio_creative",
+            "$radio_label_text": "createWorldScreen.gameMode.survival",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_game_mode_radio_survival",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "world_adventure_mode_toggle@settings_common_dx.dropdown_radio_150": {
+            "$toggle_state_binding_name": "#world_game_mode_radio_adventure",
+            "$radio_label_text": "createWorldScreen.gameMode.creative",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_game_mode_radio_creative",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        }
+      ]
+    },
+  
+    "difficulty_option": {
+      "type": "panel",
+      "size": [ 210, 20 ],
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "$option_label": "options.difficulty",
+      "$option_enabled_binding_name": "#world_difficulty_dropdown_enabled",
+      "controls": [
+        {
+          "peaceful@settings_common_dx.dropdown_radio_210": {
+            "$toggle_state_binding_name": "#world_difficulty_radio_peaceful",
+            "$radio_label_text": "options.difficulty.hard",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_difficulty_radio_hard",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "easy@settings_common_dx.dropdown_radio_210": {
+            "$toggle_state_binding_name": "#world_difficulty_radio_easy",
+            "$radio_label_text": "options.difficulty.peaceful",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_difficulty_radio_peaceful",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "normal@settings_common_dx.dropdown_radio_210": {
+            "$toggle_state_binding_name": "#world_difficulty_radio_normal",
+            "$radio_label_text": "options.difficulty.easy",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_difficulty_radio_easy",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "hard@settings_common_dx.dropdown_radio_210": {
+            "$toggle_state_binding_name": "#world_difficulty_radio_hard",
+            "$radio_label_text": "options.difficulty.normal",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_difficulty_radio_normal",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    /*//// Button Tab ////*/
+
+    "button_tab@common_toggles_dx.main_button_toggle": {
+      "$unchecked_control": "common_buttons_dx.150_default",
+      "$unchecked_hover_control": "common_buttons_dx.150_hover",
+
+      "size": [ 150, 20 ],
+      "$toggle_name": "world_navigation_tab"
+    },
+
+    /* Main and More */
+
+    "more_world_options_button@create_world_dx.button_tab": {
+      "$button_text": "selectWorld.moreWorldOptions",
+      "$tab_view_binding_name": "more_world_options_button_toggle",
+      "$toggle_group_forced_index": 100
+    },
+
+    "gamerules_button@create_world_dx.button_tab": {
+      "size": [ 150, 20 ],
+      "visible": "#always_day_enabled",
+      "$button_text": "selectWorld.gameRules",
+      "$tab_view_binding_name": "gamerule_button_toggle",
+      "$toggle_group_forced_index": 101
+    },
+
+    "resource_packs_button@create_world_dx.button_tab": {
+      "size": [ 74, 20 ],
+      "$unchecked_control": "common_buttons_dx.74_default",
+      "$unchecked_hover_control": "common_buttons_dx.74_hover",
+
+      "$button_text": "selectWorld.resourcePack",
+      "$tab_view_binding_name": "resource_packs_button_toggle",
+      "$toggle_group_forced_index": 102
+    },
+
+    "behavior_packs_button@create_world_dx.button_tab": {
+      "size": [ 74, 20 ],
+      "$unchecked_control": "common_buttons_dx.74_default",
+      "$unchecked_hover_control": "common_buttons_dx.74_hover",
+
+      "$button_text": "selectWorld.behaviorPack",
+      "$tab_view_binding_name": "behavior_packs_button_toggle",
+      "$toggle_group_forced_index": 103
+    },
+
+    "more_world_options_done_button@create_world_dx.button_tab": {
+      "$button_text": "gui.done",
+      "$is_back_button": true,
+      "$tab_view_binding_name": "more_world_options_done_button_toggle",
+      "$toggle_group_forced_index": 0
+    },
+
+    /* More, Cheats and Advanced */
+
+    "button_tab_more@create_world_dx.button_tab": {
+      "$toggle_name": "more_navigation_tab"
+    },
+
+    "world_advanced_button@create_world_dx.button_tab_more": {
+      "$button_text": "createWorldScreen.advanced",
+      "$tab_view_binding_name": "world_advanced_button_toggle",
+      "$toggle_group_forced_index": 100
+    },
+
+    "world_experiments_button@create_world_dx.button_tab_more": {
+      "$button_text": "createWorldScreen.experimentalgameplay",
+      "$tab_view_binding_name": "world_experiments_button_toggle",
+      "$toggle_group_forced_index": 101
+    },
+
+    "more_done_button@create_world_dx.button_tab_more": {
+      "$button_text": "gui.done",
+      "$is_back_button": true,
+      "$tab_view_binding_name": "more_done_button_toggle",
+      "$toggle_group_forced_index": 0
+    },
+
+    /* Advanced, Resources and behavior */
+
+    "button_tab_advanced@create_world_dx.button_tab": {
+      "$toggle_name": "advanced_navigation_tab"
+    },
+
+    "advanced_done_button@create_world_dx.button_tab_advanced": {
+      "$button_text": "gui.done",
+      "$is_back_button": true,
+      "$tab_view_binding_name": "advanced_done_button_toggle",
+      "$toggle_group_forced_index": 100
+    },
+
+    /*//// Panels ////*/
+    
+    "title_label@settings_dx.base_label": {
+      "text": "selectWorld.create",
+      "offset": [ 0, 19 ]
+    },
+
+    "more_panel_content": {
+      "type": "panel",
+      "anchor_from": "top_middle",
+      "anchor_to": "top_middle",
+      "offset": [ 0, "12.0833333%" ],
+      "size": [ 210, 159 ],
+      "controls": [
+        {
+          "gamerules_button@create_world_dx.gamerules_button": {
+            "$unchecked_control": "common_buttons_dx.210_default",
+            "$unchecked_hover_control": "common_buttons_dx.210_hover",
+            "size": [ 210, 20 ],
+
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 0, 13 ]
+          }
+        },
+        {
+          "world_experiments_button@create_world_dx.world_experiments_button": {
+            "$unchecked_control": "common_buttons_dx.210_default",
+            "$unchecked_hover_control": "common_buttons_dx.210_hover",
+            "size": [ 210, 20 ],
+
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 0, 41 ]
+          }
+        },
+        {
+          "resource_packs_button@create_world_dx.resource_packs_button": {
+            "$button_text": "menu.resourcepacks",
+            "$unchecked_control": "common_buttons_dx.210_default",
+            "$unchecked_hover_control": "common_buttons_dx.210_hover",
+            "size": [ 210, 20 ],
+
+            "offset": [ 0, 69 ],
+            "anchor_from": "top_right",
+            "anchor_to": "top_right"
+          }
+        },
+        {
+          "behavior_packs_button@create_world_dx.behavior_packs_button": {
+            "$button_text": "menu.behaviors",
+            "$unchecked_control": "common_buttons_dx.210_default",
+            "$unchecked_hover_control": "common_buttons_dx.210_hover",
+            "size": [ 210, 20 ],
+            
+            "offset": [ 0, 97 ],
+            "anchor_from": "top_right",
+            "anchor_to": "top_right"
+          }
+        }
+      ]
+    },
+
+    "world_panel_content": {
+      "type": "panel",
+      "anchor_from": "top_middle",
+      "anchor_to": "top_middle",
+      "offset": [ 0, "12.0833333%" ],
+      "size": [ 310, 148 ],
+      "controls": [
+        {
+          "world_type_option@create_world_dx.world_type_option": {
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 0, 6 ]
+          }
+        },
+        {
+          "seed_picker_button@common_buttons_dx.main_button_150": {
+            "anchor_from": "top_right",
+            "anchor_to": "top_right",
+            "offset": [ 0, 6 ],
+            "$button_text": "seedPicker.title",
+            "$pressed_button_name": "choose_ugc_level_seed"
+          }
+        },
+        {
+          "level_seed_selector@settings_common_dx.option_text_edit": {
+            "size": [ 310, 35 ],
+            "$label_color": [ 1.0, 1.0, 1.0 ],
+            "$label_offset": [ 0, -1 ],
+            "$with_button": false,
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 0, 34 ],
+            "$button_content": "java_gui_common.arrow_right_icon",
+            "$enabled": "$is_seeds_enabled",
+            "$option_label": "selectWorld.enterSeed",
+            "$option_place_holder_text": "selectWorld.seedInfo",
+            "$place_holder_text_color": [ 0.33, 0.33, 0.33 ],
+            "$option_binding_name": "#world_seed",
+            "$option_enabled_binding_name": "#world_seed_enabled",
+            "$text_box_name": "world_seed_text_box",
+            "$pressed_button_name": "choose_ugc_level_seed",
+            "$button_tts_header": "accessibility.settings.chooseSeed"
+          }
+        },
+        {
+          "starting_map_toggle@settings_common_dx.option_toggle_alt": {
+            "$option_toggle_alt_label_shadow": true,
+            "size": [ 310, 20 ],
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 0, 81 ],
+            "ignored": "$education_edition",
+            "$option_label": "createWorldScreen.startWithMap",
+            "$option_binding_name": "#start_with_map",
+            "$option_enabled_binding_name": "#start_with_map_enabled",
+            "$toggle_name": "start_with_map"
+          }
+        },
+        {
+          "bonus_chest_toggle@settings_common_dx.option_toggle_alt": {
+            "$option_toggle_alt_label_shadow": true,
+            "size": [ 310, 20 ],
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 0, 105 ],
+            "ignored": "$education_edition",
+            "$option_label": "createWorldScreen.bonusChest",
+            "$option_binding_name": "#bonus_chest",
+            "$option_enabled_binding_name": "#bonus_chest_enabled",
+            "$toggle_name": "bonus_chest"
+          }
+        },
+        {
+          "unlock_template_options_button@common_buttons_dx.main_button_310": {
+            "size": [ 310, 20 ],
+            "anchor_from": "top_middle",
+            "anchor_to": "top_middle",
+            "offset": [ 0, 130 ],
+            "$button_text": "options.unlockTemplateWorldOptions.initiate",
+            "$pressed_button_name": "unlock_templated_world_options",
+            "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+            "bindings": [
+              {
+                "binding_name": "#is_world_template_locked",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    "game_panel_content": {
+      "type": "panel",
+      "anchor_from": "top_middle",
+      "anchor_to": "top_middle",
+      "offset": [ 0, "12.0833333%" ],
+      "size": [ 210, 148 ],
+      "controls": [
+        {
+          "option_text_edit_0@settings_common_dx.option_text_edit": {
+            "$label_color": [ 1.0, 1.0, 1.0 ],
+            "$label_offset": [ 0, -1 ],
+            "offset": [ 0, 1 ],
+            "size": [ 210, 35 ],
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "$option_label": "selectWorld.enterName",
+            "$option_place_holder_text": "createWorldScreen.defaultName",
+            "$place_holder_text_color": [ 1.0, 1.0, 1.0 ],
+            "$option_binding_name": "#world_name",
+            "$option_enabled_binding_name": "#world_name_enabled",
+            "$text_box_name": "world_name_text_box",
+            "$allow_data_binding": false
+          }
+        },
+        { 
+          "gamemode_option@create_world_dx.gamemode_option": {
+            "offset": [ 0, 44 ]
+          }
+        },
+        { 
+          "difficulty_option@create_world_dx.difficulty_option": {
+            "offset": [ 0, 72 ]
+          }
+        },
+        {
+          "allow_cheats_toggle@settings_common_dx.option_toggle_210": {
+            "size": [ 210, 20 ],
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 0, 100 ],
+            "$colon_needed": false,
+            "$option_label": "selectWorld.allowCommands",
+            "$option_binding_name": "#allow_cheats",
+            "$option_enabled_binding_name": "#allow_cheats_enabled",
+            "$toggle_name": "allow_cheats",
+            "$toggle_binding_condition": "always_when_visible"
+          }
+        },
+        {
+          "world_advanced_button@create_world_dx.world_advanced_button": {
+            "$unchecked_control": "common_buttons_dx.210_default",
+            "$unchecked_hover_control": "common_buttons_dx.210_hover",
+            "size": [ 210, 20 ],
+
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 0, 128 ]
+          }
+        }
+      ]
+    },
+
+    "main_screen_panel": {
+      "type": "panel",
+      "size": [ "100%", "100%" ],
+      "controls": [
+        {
+          "main_content_stack_panel": {
+            "type": "stack_panel",
+            "size": [ "100%", "100%" ],
+            "orientation": "vertical",
+            "controls": [
+              {
+                "top_safezone_vertical_buffer": {
+                  "type": "panel",
+                  "size": "$top_vertical_safezone_size",
+                  "controls": [
+                    {
+                      "tabs_bg": {
+                        "type": "image",
+                        "layer": -4,
+                        "texture": "textures/uidx/global/color_base",
+                        "color": [ 0.0, 0.0, 0.0 ],
+                        "anchor_from": "top_middle",
+                        "anchor_to": "top_middle",
+                        "size": [ "100%", "100%" ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "header": {
+                  "type": "panel",
+                  "size": [ "100%", 22 ],
+                  "controls": [
+                    {
+                      "tabs_panel": {
+                        "type": "stack_panel",
+                        "orientation": "horizontal",
+                        "anchor_from": "top_middle",
+                        "anchor_to": "top_middle",
+                        "size": [ "100%c", 22 ],
+                        "controls": [
+                          { "game_tab@create_world_dx.game_tab": { } },
+                          { "world_tab@create_world_dx.world_tab": { } },
+                          { "more_tab@create_world_dx.more_tab": { } }
+                        ]
+                      }
+                    },
+                    {
+                      "tabs_bg": {
+                        "type": "image",
+                        "layer": -4,
+                        "texture": "textures/uidx/global/color_base",
+                        "color": [ 0.0, 0.0, 0.0 ],
+                        "anchor_from": "top_middle",
+                        "anchor_to": "top_middle",
+                        "size": [ "100%", "100%" ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "middle": {
+                  "type": "panel",
+                  "size": [ "100%", "fill" ],
+                  "controls": [
+                    { 
+                      "header_separator@java_gui_common.header_separator": {
+                        "anchor_from": "top_left",
+                        "anchor_to": "top_left",
+                        "size": [ "100%", 2 ],
+                        "layer": 2
+                      }
+                    },
+                    { 
+                      "footer_separator@java_gui_common.footer_separator": {
+                        "anchor_from": "bottom_left",
+                        "anchor_to": "bottom_left",
+                        "size": [ "100%", 2 ],
+                        "layer": 2
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "footer": {
+                  "type": "panel",
+                  "size": [ "100%", 36 ],
+                  "controls": [
+                    { "bottom_panel_content@create_world_dx.bottom_panel_content": { "layer": 2 } }
+                  ]
+                }
+              },
+              {
+                "bottom_safezone_vertical_buffer": {
+                  "type": "panel",
+                  "size": "$bottom_vertical_safezone_size"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "panels_stack_panel": {
+            "type": "stack_panel",
+            "size": [ "100%", "100%" ],
+            "orientation": "vertical",
+            "layer": 2,
+            "controls": [
+              {
+                "top_safezone_vertical_buffer": {
+                  "type": "panel",
+                  "size": "$top_vertical_safezone_size"
+                }
+              },
+              {
+                "middle": {
+                  "type": "panel",
+                  "size": [ "100%", "fill" ],
+                  "controls": [
+                    { 
+                      "game_panel_content@create_world_dx.game_panel_content": {
+                        "bindings": [
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "game_options_navigation_tab_toggle",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                          }
+                        ]
+                      }
+                    },
+                    { 
+                      "world_panel_content@create_world_dx.world_panel_content": {
+                        "bindings": [
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "world_options_navigation_tab_toggle",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                          }
+                        ]
+                      }
+                    },
+                    { 
+                      "more_panel_content@create_world_dx.more_panel_content": {
+                        "bindings": [
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "more_options_navigation_tab_toggle",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "bottom_safezone_vertical_buffer": {
+                  "type": "panel",
+                  "size": "$bottom_vertical_safezone_size"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    "bottom_panel_content": {
+      "type": "panel",
+      "size": [ 310, 20 ],
+      "anchor_from": "bottom_middle",
+      "anchor_to": "bottom_middle",
+      "offset": [ 0, -8 ],
+      "controls": [
+        {
+          "play_on_realms_button@common_buttons_dx.black_button": {
+            "anchor_from": "bottom_left",
+            "anchor_to": "bottom_left",
+            "size": [ 20, 20 ],
+            "offset": [ -20, 0 ],
+            "$pressed_button_name": "play_world_on_realm_button",
+            "$button_content": "java_gui_common.realms_icon",
+            "variables": [
+              {
+                "requires": "(not $is_world_edit)",
+                "$button_text": "createWorldScreen.createOnRealms",
+                "$pressed_button_name": "create_world_on_realm_button"
+              }
+            ],          
+            "bindings": [
+              {
+                "binding_name": "#create_on_realm_visible",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "create_or_play_button@common_buttons_dx.main_button_150": {
+            "anchor_from": "bottom_left",
+            "anchor_to": "bottom_left",
+            "size": [ 150, 20 ],
+            "$button_text": "menu.play",
+            "$pressed_button_name": "play_world_button",
+            "variables": {
+              "requires": "(not $is_world_edit)",
+              "$button_text": "createWorldScreen.create",
+              "$pressed_button_name": "create_world_button"
+            }
+          }
+        },
+        {
+          "cancel_button@common_buttons_dx.main_button_150": {
+            "anchor_from": "bottom_right",
+            "anchor_to": "bottom_right",
+            "size": [ 150, 20 ],
+            "$pressed_button_name": "button.menu_exit",
+            "$button_text": "gui.cancel",
+            "ignored": "$is_edit_screen"
+          }
+        },
+        {
+          "save_button@common_buttons_dx.main_button_150": {
+            "anchor_from": "bottom_right",
+            "anchor_to": "bottom_right",
+            "size": [ 150, 20 ],
+            "$pressed_button_name": "button.menu_exit",
+            "$button_text": "addExternalServerScreen.saveButtonLabel",
+            "ignored": "(not $is_edit_screen)"
+          }
+        }
+      ]
+    },
+
+    /*//// Screen ////*/
+    
+    "main_panel": {
+      "type": "panel",
+      "$is_edit_screen|default": false,
+      "controls": [
+        {
+          "main": {
+            "type": "panel",
+            "ignored": "$is_edit_screen",
+            "controls": [
+              {
+                "main_control@create_world_dx.main_screen_panel": {
+                  "bindings": [
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "gamerule_button_toggle",
+                      "source_property_name": "(not #toggle_state)",
+                      "target_property_name": "#visible"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "world_advanced_button_toggle",
+                      "source_property_name": "(not #toggle_state)",
+                      "target_property_name": "#visible"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "world_experiments_button_toggle",
+                      "source_property_name": "(not #toggle_state)",
+                      "target_property_name": "#visible"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "resource_packs_button_toggle",
+                      "source_property_name": "(not #toggle_state)",
+                      "target_property_name": "#visible"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "behavior_packs_button_toggle",
+                      "source_property_name": "(not #toggle_state)",
+                      "target_property_name": "#visible"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    "center_screen": {
+      "type": "panel",
+      "$is_edit_screen|default": false,
+      "controls": [
+        {
+          "edit": {
+            "type": "panel",
+            "ignored": "(not $is_edit_screen)",
+            "controls": [
+              {
+                "edit_control@edit_world_dx.edit_screen_panel": {
+                  "bindings": [
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "gamerule_button_toggle",
+                      "source_property_name": "(not #toggle_state)",
+                      "target_property_name": "#visible"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "world_advanced_button_toggle",
+                      "source_property_name": "(not #toggle_state)",
+                      "target_property_name": "#visible"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "world_experiments_button_toggle",
+                      "source_property_name": "(not #toggle_state)",
+                      "target_property_name": "#visible"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "resource_packs_button_toggle",
+                      "source_property_name": "(not #toggle_state)",
+                      "target_property_name": "#visible"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "behavior_packs_button_toggle",
+                      "source_property_name": "(not #toggle_state)",
+                      "target_property_name": "#visible"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+  
+    "full_screen": {
+      "type": "panel",
+      "$is_edit_screen|default": false,
+      "controls": [
+        { "main_panel@create_world_dx.main_panel": { } },
+        {
+          "gamerule@gamerule_dx.gamerule_screen_panel": {
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "gamerule_button_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "world_advanced@world_advanced_dx.world_advanced_screen_panel": {
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "world_advanced_button_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "world_experiments@world_experiments_dx.world_experiments_screen_panel": {
+            "ignored": "($is_edit_screen)",
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "world_experiments_button_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "world_resource_packs@world_resource_packs_dx.world_resource_pack_screen_panel": {
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "resource_packs_button_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "world_behavior_packs@world_behavior_packs_dx.world_behavior_pack_screen_panel": {
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "behavior_packs_button_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "main_bg_panel": {
+            "type": "panel",
+            "size": [ "100%", "100%" ],
+            "layer": -10,
+            "controls":[
+              {
+                "main_bg_panel": {
+                  "ignored": "(not $is_pregame)",
+                  "type": "image",
+                  "layer": -12,
+                  "texture": "textures/uidx/global/color_base",
+                  "color": [ 0.0, 0.0, 0.0 ],
+                  "fill": true
+                }
+              },
+              { 
+                "bg_world@java_gui_common.screen_background": {
+                  "layer": -9,
+                  "ignored": "$is_pregame"
+                }
+              },
+              {
+                "main": {
+                  "type": "panel",
+                  "ignored": "($is_edit_screen)",
+                  "controls": [
+                    { 
+                      "bg@java_gui_common.options_background": {
+                        "layer": -9,
+                        "ignored": "(not $is_pregame)",
+                        "bindings": [
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "gamerule_button_toggle",
+                            "source_property_name": "(#toggle_state)",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "world_advanced_button_toggle",
+                            "source_property_name": "(#toggle_state)",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "world_experiments_button_toggle",
+                            "source_property_name": "(#toggle_state)",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "resource_packs_button_toggle",
+                            "source_property_name": "(#toggle_state)",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "behavior_packs_button_toggle",
+                            "source_property_name": "(#toggle_state)",
+                            "target_property_name": "#visible"
+                          }
+                        ]
+                      }
+                    },
+                    { 
+                      "bg_main@java_gui_common.light_dirt_background": {
+                        "layer": -9,
+                        "ignored": "(not $is_pregame)",
+                        "bindings": [
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "gamerule_button_toggle",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "world_advanced_button_toggle",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "world_experiments_button_toggle",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "resource_packs_button_toggle",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "behavior_packs_button_toggle",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#visible"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "edit": {
+                  "type": "panel",
+                  "ignored": "(not $is_edit_screen)",
+                  "controls": [
+                    { 
+                      "bg@java_gui_common.options_background": {
+                        "layer": -9,
+                        "ignored": "(not $is_pregame)",
+                        "bindings": [
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "gamerule_button_toggle",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "world_advanced_button_toggle",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "world_experiments_button_toggle",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "resource_packs_button_toggle",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_control_name": "behavior_packs_button_toggle",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#visible"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }

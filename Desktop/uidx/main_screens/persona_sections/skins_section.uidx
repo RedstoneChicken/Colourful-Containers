@@ -1,0 +1,636 @@
+{
+  "namespace": "persona_skins_dx",
+
+  /*//// Top Panel ////*/
+
+  "skins_top_panel_content": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "layer": 20,
+    "bindings": [
+      {
+        "binding_name": "#is_skin_picker_section_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "leave_option_panel": {
+          "type": "panel",
+          "size": [ "100%", 18 ],
+          "controls": [
+            {
+              "leave@main_profile_dx.base_button": {
+                "size": [ "100%-4px", 16 ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "$pressed_button_name": "button.try_exiting",
+                "$base_text": "gui.back"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Skins Content Section (Scroll) ////*/
+
+  "classic_skins_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "$category_collection_prefix": "persona_skin_pack_category",
+    "$category_collection_name": "persona_skin_pack_category_collection",
+    //"collection_name": "$category_collection_name",
+    "$content_label_binding_name": "#persona_skin_pack_category_name",
+    "bindings": [
+      {
+        "binding_name": "#is_classic_skin_section_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "classic_skins_stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "controls": [
+            {
+              "owned_selected@persona_panel_content.unchecked_button": {
+                "$pressed_button_name": "button.owned_category_selected",
+                //"collection_index": 0,
+                "$content_label_binding_name": "dr.classic_skins.owned",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "owned_un_selected",
+                    "source_property_name": "(not #visible)",
+                    "target_property_name": "#visible",
+                    "resolve_sibling_scope": true
+                  }
+                ]
+              }
+            },
+            {
+              "owned_un_selected@persona_panel_content.checked_button": {
+                "$pressed_button_name": "button.owned_category_unselected",
+                //"collection_index": 0,
+                "$content_label_binding_name": "dr.classic_skins.owned",
+                "bindings": [
+                  {
+                    "binding_name": "#owned_packs_selected",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "owned_skin_packs@persona.persona_owned_skin_pack_grid_panel": {
+                "controls": [
+                  {
+                    "default_skin@common.empty_panel": {
+                      "size": [ "100% - 4px", 60 ],
+                      "bindings": [
+                        {
+                          "binding_name": "#is_default_skins_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        { 
+                          "title_label@main_profile_dx.base_label": {
+                            "font_scale_factor": 0.9,
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "offset": [ 4, 1 ],
+                            "text": "dr.classic_skins.custom_skin_section_title",
+                            "size": [ "100%-10px", 30 ]
+                          }
+                        },
+                        {
+                          "default_skins_grid": {
+                            "type": "grid",
+                            "size": [ 32, 50 ],
+                            "offset": [ 4, 0 ],
+                            "anchor_to": "bottom_left",
+                            "anchor_from": "bottom_left",
+            
+                            "$persona_default_skin_binding_type|default": "collection",
+                            "$persona_default_skin_collection_prefix|default": "persona_default_skin",
+                            "$persona_default_skin_collection_name|default": "persona_default_skin_collection",
+            
+                            "$default_skin_dimension_binding": "#default_skin_dimensions",
+                            "grid_dimension_binding": "$default_skin_dimension_binding",
+                            "grid_item_template": "persona_skins_dx.default_skin_button",
+                            "collection_name": "$persona_default_skin_collection_name",
+            
+                            "bindings": [
+                              {
+                                "binding_name": "$default_skin_dimension_binding"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  { 
+                    "owned_packs_grid@persona.persona_skin_pack_grid": {
+                      "grid_item_template": "persona_skins_dx.persona_skin_pack_panel"
+                    }
+                  }
+                ],
+                "size": [ "100%-8px", "100%c" ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "owned_un_selected",
+                    "source_property_name": "#visible",
+                    "target_property_name": "#visible",
+                    "resolve_sibling_scope": true
+                  }
+                ]
+              }
+            },
+            {
+              "purchasable_selected@persona_panel_content.unchecked_button": {
+                "$pressed_button_name": "button.purchasable_category_selected",
+                //"collection_index": 1,
+                "$content_label_binding_name": "dr.classic_skins.purchasable",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "purchasable_un_selected",
+                    "source_property_name": "(not #visible)",
+                    "target_property_name": "#visible",
+                    "resolve_sibling_scope": true
+                  }
+                ]
+              }
+            },
+            {
+              "purchasable_un_selected@persona_panel_content.checked_button": {
+                "$pressed_button_name": "button.purchasable_category_unselected",
+                //"collection_index": 1,
+                "$content_label_binding_name": "dr.classic_skins.purchasable",
+                "bindings": [
+                  {
+                    "binding_name": "#purchasable_packs_selected",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "purchasable_skin_packs@persona.persona_purchasable_skin_pack_grid_panel": {
+                "controls": [
+                  { 
+                    "purchasable_packs_grid@persona.persona_skin_pack_grid": {
+                      "grid_item_template": "persona_skins_dx.persona_skin_pack_panel"
+                    }
+                  }
+                ],
+                "size": [ "100%-8px", "100%c" ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "purchasable_un_selected",
+                    "source_property_name": "#visible",
+                    "target_property_name": "#visible",
+                    "resolve_sibling_scope": true
+                  }
+                ]
+              }
+            },
+            {
+              "realms_plus_enabler@common.empty_panel": {
+                //"ignored": "(not $is_persona_features_enabled)",
+                "size": [ "100%", "100%c" ],
+                //"collection_index": 2,
+                "bindings": [
+                  {
+                    "binding_name": "#is_realms_plus_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "realms_plus_selected@persona_panel_content.unchecked_button": {
+                      "$pressed_button_name": "button.realms_plus_category_selected",
+                      "$content_label_binding_name": "dr.classic_skins.realms_plus",
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "realms_plus_un_selected",
+                          "source_property_name": "(not #visible)",
+                          "target_property_name": "#visible",
+                          "resolve_sibling_scope": true
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "realms_plus_un_selected@persona_panel_content.checked_button": {
+                      "$pressed_button_name": "button.realms_plus_category_unselected",
+                      "$content_label_binding_name": "dr.classic_skins.realms_plus",
+                      "bindings": [
+                        {
+                          "binding_name": "#realms_plus_packs_selected",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "realms_plus_skin_packs@persona.persona_purchasable_skin_pack_grid_panel": {
+                "controls": [
+                  { 
+                    "purchasable_packs_grid@persona.persona_skin_pack_grid": {
+                      "grid_item_template": "persona_skins_dx.persona_skin_pack_panel"
+                    }
+                  }
+                ],
+                //"ignored": "(not $is_persona_features_enabled)",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "realms_plus_un_selected",
+                    "source_property_name": "#visible",
+                    "target_property_name": "#visible",
+                    "resolve_sibling_scope": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "default_skin_button@persona.skin_doll_button": {
+    "anchor_to": "bottom_left",
+    "anchor_from": "bottom_left",
+    "$content_size": [ 32, 50 ],
+    "max_size": [ 32, 50 ],
+    "size": [ 32, 50 ],
+    "$paper_doll_offset": [ 0, -9 ],
+    "$is_background_visible": false,
+    "$primary_collection_name": "$persona_default_skin_collection_name",
+    "$primary_collection_prefix": "$persona_default_skin_collection_prefix",
+    "$persona_dummy_skin_pack_collection_name": "foobar_collection",
+    "$persona_dummy_skin_pack_collection_prefix": "foobar",
+    "$secondary_collection_name": "$persona_dummy_skin_pack_collection_name",
+    "$secondary_collection_prefix": "$persona_dummy_skin_pack_collection_prefix",
+    "$pressed_button_name": "button.default_skin_selected"
+  },
+
+  "persona_skin_pack_panel": {
+    "type": "panel",
+    //"orientation": "vertical",
+    "size": [ "100%-10px", 60 ],
+    "controls": [
+      { 
+        "title_label@main_profile_dx.base_label": {
+          "font_scale_factor": 0.9,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 4, 1 ],
+          "text": "#pack_title",
+          "size": [ "100%-10px", 30 ],
+          "bindings": [
+            {
+              "binding_type": "$persona_skin_pack_binding_type",
+              "binding_collection_name": "$persona_skin_pack_collection_name",
+              "binding_name": "#pack_title"
+            }
+          ]
+        }
+      },
+      {
+        "skins_grid": {
+          "type": "grid",
+          "size": [ 120, 50 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+
+          "$persona_skin_binding_type|default": "collection",
+          "$persona_skin_collection_prefix|default": "persona_skin",
+          "$persona_skin_collection_name|default": "persona_skin_collection",
+
+          "$pack_dimension_binding": "#pack_dimensions",
+          "grid_dimension_binding": "$pack_dimension_binding",
+          "grid_item_template": "persona.persona_skin_button_for_pack_view",
+          "collection_name": "$persona_skin_collection_name",
+
+          "bindings": [
+            {
+              "binding_name": "$pack_dimension_binding"
+            }
+          ]
+        }
+      },
+      {
+        "expand_view_panel": {
+          "type": "panel",
+          "size": [ 152, 50 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "controls": [
+            {
+              "expand_view_button@main_profile_dx.base_button": {
+                "$font_scale_factor": 1.0,
+                "size": [ 32, 50 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "$pressed_alpha": "$dressing_room_panel_alpha",
+                "$default_button_alpha": "$dressing_room_panel_alpha",
+                "$pressed_button_name": "button.expand_skin_pack",
+                "$base_text": "+",
+                "bindings": [
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "$persona_skin_pack_collection_name",
+                    "binding_collection_prefix": "$persona_skin_pack_collection_prefix"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Feature Skins Items ////*/
+
+  "featured_skins_panel": {
+    "type": "panel",
+    "size": [ "100%", 64 ],
+    "$info_panel_prefix": "classic_skin_featured",
+    "$right_side_dialog_visible_binding": "('#is_right_info_' + $info_panel_prefix +'_panel_visible')",
+    "$pressed_button_function": "('button.' + $info_panel_prefix)",
+    "$persona_piece_collection_name": "persona_featured_skin_pack_collection",
+    "bindings": [
+      {
+        "binding_name": "$right_side_dialog_visible_binding",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "title_label@main_profile_dx.base_label": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 5 ],
+          "text": "dr.classic_skins.right_side.featured_title",
+          "font_scale_factor": 1.0
+        }
+      },
+      {
+        "category_featured_offer_grid@persona.persona_piece_offer_grid": {
+          "grid_item_template": "persona_skins_dx.featured_skin_pack_button_panel",
+          "size": [ 144, 40 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "grid_rescaling_type": "none",
+          "clip_state_change_event": "",
+          "offset": [ 0, -5 ],
+          "grid_dimensions": [ 2, 1 ],
+          "maximum_grid_items": 2
+        }
+      }
+    ]
+  },
+
+  "featured_skin_pack_button_panel": {
+    "type": "panel",
+    "size": [ 72, 40 ],
+    "controls": [
+      {
+        "button@common.button": {
+          "size": [ 68, 40 ],
+          "$pressed_button_name": "button.featured_skin_pack_pressed",
+          "$featured_skin_pack_collection_name": "persona_featured_skin_pack_collection",
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "$featured_skin_pack_collection_name",
+              "binding_collection_prefix": "persona_featured_skin_pack"
+            }
+          ],
+          "controls": [
+            { "featured_content@persona.featured_skin_pack_button_content_panel": { "layer": 10, "size": [ 60, 32 ] } },
+            {
+              "hover@main_profile_dx.bg_image_base": {
+                "color": [ 0.21, 0.21, 0.21 ],
+                "layer": 9,
+                "size": [ "100%", "100%" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Skins Info Panel (Bottom) ////*/
+
+  "skin_pack_info_panel": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_name": "#is_right_panel_classic_skin_pack_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "title_label@main_profile_dx.base_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 5, 3 ],
+          "text": "#right_panel_title",
+          "font_scale_factor": 1.0,
+          "bindings": [
+            {
+              "binding_name": "#right_panel_title"
+            }
+          ]
+        }
+      },
+      { 
+        "author_label@main_profile_dx.base_label": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -5, 3 ],
+          "text": "#skin_pack_author",
+          "font_scale_factor": 1.0,
+          "bindings": [
+            {
+              "binding_name": "#skin_pack_author"
+            }
+          ]
+        }
+      },
+      { 
+        "content_pack@persona.right_panel_classic_skin_pack": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 5, 16 ],
+          "size": [ "100%-10px", 48 ]
+        }
+      },
+      {
+        "purchase_buttons_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%-8px", 16 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 4, -4 ],
+          "controls": [
+            {
+              "equip_button@main_profile_dx.base_button": {
+                "size": [ "50%-2px", 16 ],
+                "$pressed_button_name": "button.equip_skin",
+                "$base_text": "dr.equip_piece",
+                "bindings": [
+                  {
+                    "binding_name": "#is_skin_equip_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_0": {
+                "type": "panel",
+                "size": [ 4, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#is_skin_equip_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "offer_coin_purchase_button@main_profile_dx.base_button": {
+                "size": [ "33%", 16 ],
+                "$pressed_button_name": "button.coin_purchase",
+                "$label_control": "persona_create_dx.balance_label",
+                "bindings": [
+                  {
+                    "binding_name": "#is_purchasable",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_1": {
+                "type": "panel",
+                "size": [ 4, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#is_purchasable",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "offer_real_money_purchase_button@main_profile_dx.base_button": {
+                "size": [ "33%", 16 ],
+                "$pressed_button_name": "button.real_money_purchase",
+                "$base_text": "#purchase_with_currency_button_text",
+                "bindings": [
+                  {
+                    "binding_name": "#currency_purchase_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "padding": {
+                "type": "panel",
+                "size": [ 4, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#currency_purchase_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "see_pack_in_store@main_profile_dx.base_button": {
+                "size": [ "fill", 16 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 5, -5 ],
+                "$pressed_button_name": "button.see_pack_in_store",
+                "$base_text": "dr.classic_skins.see_pack_in_store"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "custom_skin_panel": {
+    "type": "panel",
+    "$ignore_choose_skin": false,
+    "controls": [ 
+      { 
+        "info_label@main_profile_dx.base_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 5, 3 ],
+          "size": [ "100%-10px", "default" ],
+          "$base_text": "#right_panel_description",
+          "font_scale_factor": 0.8,
+          "bindings": [
+            {
+              "binding_name": "#right_panel_description"
+            }
+          ]
+        }
+      },
+      {
+        "buttons_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%-8px", 16 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 4, -4 ],
+          "controls": [
+            {
+              "select_custom_skin@main_profile_dx.base_button": {
+                "size": [ "100%", 16 ],
+                "$pressed_button_name": "button.choose_custom_skin",
+                "$base_text": "dr.classic_skins.choose_custom_skin"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#is_right_panel_classic_custom_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  }
+}

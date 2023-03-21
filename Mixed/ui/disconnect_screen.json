@@ -1,0 +1,33 @@
+/*File modified by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "disconnect_screen": {
+    "$is_popup_dialog_in_game": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "$screen_content": "disconnect_dx.disconnect_screen_content",
+    "$button_layout": "disconnect_dx.ok_button",
+    "$screen_bg_content": "disconnect_dx.disconnect_screen_bg"
+  },
+
+  "realms_disconnect_screen": {
+    "$is_popup_dialog_in_game": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "$screen_content": "disconnect_dx.disconnect_screen_content",
+    "$button_layout": "disconnect_dx.realms_disconnect_button_panel",
+    "$screen_bg_content": "disconnect_dx.disconnect_screen_bg"
+  },
+
+  "realms_warning_screen": {
+    "$is_popup_dialog_in_game": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "$screen_content": "disconnect_dx.disconnect_screen_content",
+    "$button_layout": "disconnect_dx.realms_warning_button_panel",
+    "$screen_bg_content": "disconnect_dx.disconnect_screen_bg"
+  }
+}

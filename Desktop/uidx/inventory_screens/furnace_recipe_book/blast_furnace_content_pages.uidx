@@ -1,0 +1,124 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "cris_blast_furnace_rb_conent_pages",
+
+  "stacked_row": {
+    "type": "stack_panel",
+    "size": [ 125, 25 ],
+    "orientation": "horizontal"
+  },
+
+  /*//// All Pages ////*/
+
+  "all_page_1": {
+    "type": "stack_panel",
+    "size": [ 125, 100 ],
+    "controls": [
+      {
+        "row_1@cris_blast_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_37@cris_furnace_rb_toggle_items.item_37": {} },
+            { "item_42@cris_furnace_rb_toggle_items.item_42": {} },
+            { "item_43@cris_furnace_rb_toggle_items.item_43": {} },
+            { "item_44@cris_furnace_rb_toggle_items.item_44": {} },
+            { "item_45@cris_furnace_rb_toggle_items.item_45": {} }
+          ]
+        }
+      },
+      {
+        "row_2@cris_blast_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_46@cris_furnace_rb_toggle_items.item_46": {} },
+            { "item_47@cris_furnace_rb_toggle_items.item_47": {} },
+            { "item_48@cris_furnace_rb_toggle_items.item_48": {} },
+            { "item_49@cris_furnace_rb_toggle_items.item_49": {} },
+            { "item_50@cris_furnace_rb_toggle_items.item_50": {} }
+          ]
+        }
+      },
+      {
+        "row_3@cris_blast_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_51@cris_furnace_rb_toggle_items.item_51": {} },
+            { "item_52@cris_furnace_rb_toggle_items.item_52": {} },
+            { "item_53@cris_furnace_rb_toggle_items.item_53": {} },
+            { "item_54@cris_furnace_rb_toggle_items.item_54": {} },
+            { "item_55@cris_furnace_rb_toggle_items.item_55": {} }
+          ]
+        }
+      },
+      {
+        "row_4@cris_blast_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_56@cris_furnace_rb_toggle_items.item_56": {} },
+            { "item_57@cris_furnace_rb_toggle_items.item_57": {} },
+            { "item_58@cris_furnace_rb_toggle_items.item_58": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Stone Pages ////*/
+
+  "stone_page_1@cris_blast_furnace_rb_conent_pages.all_page_1": {
+    "controls": [
+      {
+        "row_1@cris_blast_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_37@cris_furnace_rb_toggle_items.item_37": { "$toggle_group_forced_index": 95 } }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Materials Pages ////*/
+
+  "materials_page_1@cris_blast_furnace_rb_conent_pages.all_page_1": {
+    "controls": [
+      {
+        "row_1@cris_blast_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_42@cris_furnace_rb_toggle_items.item_42": { "$toggle_group_forced_index": 100 } },
+            { "item_43@cris_furnace_rb_toggle_items.item_43": { "$toggle_group_forced_index": 101 } },
+            { "item_44@cris_furnace_rb_toggle_items.item_44": { "$toggle_group_forced_index": 102 } },
+            { "item_45@cris_furnace_rb_toggle_items.item_45": { "$toggle_group_forced_index": 103 } },
+            { "item_46@cris_furnace_rb_toggle_items.item_46": { "$toggle_group_forced_index": 104 } }
+          ]
+        }
+      },
+      {
+        "row_2@cris_blast_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_47@cris_furnace_rb_toggle_items.item_47": { "$toggle_group_forced_index": 105 } },
+            { "item_48@cris_furnace_rb_toggle_items.item_48": { "$toggle_group_forced_index": 106 } },
+            { "item_49@cris_furnace_rb_toggle_items.item_49": { "$toggle_group_forced_index": 107 } },
+            { "item_50@cris_furnace_rb_toggle_items.item_50": { "$toggle_group_forced_index": 108 } },
+            { "item_51@cris_furnace_rb_toggle_items.item_51": { "$toggle_group_forced_index": 109 } }
+          ]
+        }
+      },
+      {
+        "row_3@cris_blast_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_52@cris_furnace_rb_toggle_items.item_52": { "$toggle_group_forced_index": 110 } },
+            { "item_53@cris_furnace_rb_toggle_items.item_53": { "$toggle_group_forced_index": 111 } },
+            { "item_54@cris_furnace_rb_toggle_items.item_54": { "$toggle_group_forced_index": 112 } },
+            { "item_55@cris_furnace_rb_toggle_items.item_55": { "$toggle_group_forced_index": 113 } },
+            { "item_56@cris_furnace_rb_toggle_items.item_56": { "$toggle_group_forced_index": 114 } }
+          ]
+        }
+      },
+      {
+        "row_4@cris_blast_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_57@cris_furnace_rb_toggle_items.item_57": { "$toggle_group_forced_index": 115 } },
+            { "item_58@cris_furnace_rb_toggle_items.item_58": { "$toggle_group_forced_index": 116 } }
+          ]
+        }
+      }
+    ]
+  }
+}

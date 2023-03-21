@@ -1,0 +1,69 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "cris_smoker_rb_conent_pages",
+
+  "stacked_row": {
+    "type": "stack_panel",
+    "size": [ 125, 25 ],
+    "orientation": "horizontal"
+  },
+
+  /*//// All Pages ////*/
+
+  "all_page_1": {
+    "type": "stack_panel",
+    "size": [ 125, 100 ],
+    "controls": [
+      {
+        "row_1@cris_smoker_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_1@cris_furnace_rb_toggle_items.item_1": {} },
+            { "item_2@cris_furnace_rb_toggle_items.item_2": {} },
+            { "item_3@cris_furnace_rb_toggle_items.item_3": {} },
+            { "item_4@cris_furnace_rb_toggle_items.item_4": {} },
+            { "item_5@cris_furnace_rb_toggle_items.item_5": {} }
+          ]
+        }
+      },
+      {
+        "row_2@cris_smoker_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_6@cris_furnace_rb_toggle_items.item_6": {} },
+            { "item_7@cris_furnace_rb_toggle_items.item_7": {} },
+            { "item_8@cris_furnace_rb_toggle_items.item_8": {} },
+            { "item_9@cris_furnace_rb_toggle_items.item_9": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Food Pages ////*/
+  
+  "food_page_1@cris_smoker_rb_conent_pages.all_page_1": {
+    "controls": [
+      {
+        "row_1@cris_smoker_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_1@cris_furnace_rb_toggle_items.item_1": { "$toggle_group_forced_index": 59 } },
+            { "item_2@cris_furnace_rb_toggle_items.item_2": { "$toggle_group_forced_index": 60 } },
+            { "item_3@cris_furnace_rb_toggle_items.item_3": { "$toggle_group_forced_index": 61 } },
+            { "item_4@cris_furnace_rb_toggle_items.item_4": { "$toggle_group_forced_index": 62 } },
+            { "item_5@cris_furnace_rb_toggle_items.item_5": { "$toggle_group_forced_index": 63 } }
+          ]
+        }
+      },
+      {
+        "row_2@cris_smoker_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_6@cris_furnace_rb_toggle_items.item_6": { "$toggle_group_forced_index": 64 } },
+            { "item_7@cris_furnace_rb_toggle_items.item_7": { "$toggle_group_forced_index": 65 } },
+            { "item_8@cris_furnace_rb_toggle_items.item_8": { "$toggle_group_forced_index": 66 } },
+            { "item_9@cris_furnace_rb_toggle_items.item_9": { "$toggle_group_forced_index": 67 } }
+          ]
+        }
+      }
+    ]
+  }
+}

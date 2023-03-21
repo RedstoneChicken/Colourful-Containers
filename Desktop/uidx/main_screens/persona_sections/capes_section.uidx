@@ -1,0 +1,66 @@
+{
+  "namespace": "persona_capes_dx",
+
+  /*//// Top Panel ////*/
+
+  "cape_top_panel_content": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "layer": 20,
+    "bindings": [
+      {
+        "binding_name": "#is_cape_selection_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "none_piece_option_panel": {
+          "type": "panel",
+          "size": [ "100%", 18 ],
+          "bindings": [
+            {
+              "binding_name": "#is_none_option_enabled",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "none_piece_option_button@main_profile_dx.base_button": {
+                "size": [ "100%-4px", 16 ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "$pressed_button_name": "button.none_piece_option",
+                "$base_text": "dr.none_button_text",
+                "$button_text_binding_type": "global"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  ////*/ Cape Section (Scroll) /*////
+
+  "cape_panel": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "bindings": [
+      {
+        "binding_name": "#is_cape_selection_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "grid@persona.cape_grid_panel": {
+          "size": [ "100%", "100%c" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ]
+        }
+      }
+    ]
+  }
+}

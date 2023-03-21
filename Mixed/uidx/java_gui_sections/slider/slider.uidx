@@ -1,0 +1,90 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "slider_java_dx",
+
+  "slider_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/slider",
+    "size": [ "100%", "100%" ],
+    "$slider_uv|default": [ 0, 0 ],
+    "$slider_uv_size|default": [ 0, 0 ],
+    "uv": "$slider_uv",
+    "uv_size": "$slider_uv_size"
+  },
+
+  /*//// Main Button 8 (For Slider Box) ////*/
+
+  /* Default */
+
+  "slider_box_left_default@slider_java_dx.slider_base": {
+    "size": [ 4, 20 ],
+    "variables": [
+      { "requires": "($slider_resolution = '256x')",  "$slider_uv": [ 0, 40   ], "$slider_uv_size": [ 4, 20 ] },
+      { "requires": "($slider_resolution = '512x')",  "$slider_uv": [ 0, 80   ], "$slider_uv_size": [ 8, 40 ] },
+      { "requires": "($slider_resolution = '1024x')", "$slider_uv": [ 0, 160  ], "$slider_uv_size": [ 16, 80 ] },
+      { "requires": "($slider_resolution = '2048x')", "$slider_uv": [ 0, 320  ], "$slider_uv_size": [ 32, 160 ] },
+      { "requires": "($slider_resolution = '4096x')", "$slider_uv": [ 0, 640  ], "$slider_uv_size": [ 64, 320 ] },
+      { "requires": "($slider_resolution = '8192x')", "$slider_uv": [ 0, 1280 ], "$slider_uv_size": [ 128, 640 ] }
+    ]
+  },
+
+  "slider_box_right_default@slider_java_dx.slider_box_left_default": {
+    "variables": [
+      { "requires": "($slider_resolution = '256x')",  "$slider_uv": [ 196,  40   ], "$slider_uv_size": [ 4, 20 ] },
+      { "requires": "($slider_resolution = '512x')",  "$slider_uv": [ 392,  80   ], "$slider_uv_size": [ 8, 40 ] },
+      { "requires": "($slider_resolution = '1024x')", "$slider_uv": [ 784,  160  ], "$slider_uv_size": [ 16, 80 ] },
+      { "requires": "($slider_resolution = '2048x')", "$slider_uv": [ 1568, 320  ], "$slider_uv_size": [ 32, 160 ] },
+      { "requires": "($slider_resolution = '4096x')", "$slider_uv": [ 3136, 640  ], "$slider_uv_size": [ 64, 320 ] },
+      { "requires": "($slider_resolution = '8192x')", "$slider_uv": [ 6272, 1280 ], "$slider_uv_size": [ 128, 640 ] }
+    ]
+  },
+
+  /* Hover */
+
+  "slider_box_left_hover@slider_java_dx.slider_box_left_default": {
+    "variables": [
+      { "requires": "($slider_resolution = '256x')",  "$slider_uv": [ 0, 60   ], "$slider_uv_size": [ 4, 20 ] },
+      { "requires": "($slider_resolution = '512x')",  "$slider_uv": [ 0, 120  ], "$slider_uv_size": [ 8, 40 ] },
+      { "requires": "($slider_resolution = '1024x')", "$slider_uv": [ 0, 240  ], "$slider_uv_size": [ 16, 80 ] },
+      { "requires": "($slider_resolution = '2048x')", "$slider_uv": [ 0, 480  ], "$slider_uv_size": [ 32, 160 ] },
+      { "requires": "($slider_resolution = '4096x')", "$slider_uv": [ 0, 960  ], "$slider_uv_size": [ 64, 320 ] },
+      { "requires": "($slider_resolution = '8192x')", "$slider_uv": [ 0, 1920 ], "$slider_uv_size": [ 128, 640 ] }
+    ]
+  },
+
+  "slider_box_right_hover@slider_java_dx.slider_box_left_default": {
+    "variables": [
+      { "requires": "($slider_resolution = '256x')",  "$slider_uv": [ 196,  60   ], "$slider_uv_size": [ 4, 20 ] },
+      { "requires": "($slider_resolution = '512x')",  "$slider_uv": [ 392,  120  ], "$slider_uv_size": [ 8, 40 ] },
+      { "requires": "($slider_resolution = '1024x')", "$slider_uv": [ 784,  240  ], "$slider_uv_size": [ 16, 80 ] },
+      { "requires": "($slider_resolution = '2048x')", "$slider_uv": [ 1568, 480  ], "$slider_uv_size": [ 32, 160 ] },
+      { "requires": "($slider_resolution = '4096x')", "$slider_uv": [ 3136, 960  ], "$slider_uv_size": [ 64, 320 ] },
+      { "requires": "($slider_resolution = '8192x')", "$slider_uv": [ 6272, 1920 ], "$slider_uv_size": [ 128, 640 ] }
+    ]
+  },
+  
+  /* Locked */
+
+  "slider_box_left_locked@slider_java_dx.slider_box_left_default": {
+    "variables": [
+      { "requires": "($slider_resolution = '256x')",  "$slider_uv": [ 0, 0 ], "$slider_uv_size": [ 4, 20 ] },
+      { "requires": "($slider_resolution = '512x')",  "$slider_uv": [ 0, 0 ], "$slider_uv_size": [ 8, 40 ] },
+      { "requires": "($slider_resolution = '1024x')", "$slider_uv": [ 0, 0 ], "$slider_uv_size": [ 16, 80 ] },
+      { "requires": "($slider_resolution = '2048x')", "$slider_uv": [ 0, 0 ], "$slider_uv_size": [ 32, 160 ] },
+      { "requires": "($slider_resolution = '4096x')", "$slider_uv": [ 0, 0 ], "$slider_uv_size": [ 64, 320 ] },
+      { "requires": "($slider_resolution = '8192x')", "$slider_uv": [ 0, 0 ], "$slider_uv_size": [ 128, 640 ] }
+    ]
+  },
+
+  "slider_box_right_locked@slider_java_dx.slider_box_left_default": {
+    "variables": [
+      { "requires": "($slider_resolution = '256x')",  "$slider_uv": [ 196,  0 ], "$slider_uv_size": [ 4, 20 ] },
+      { "requires": "($slider_resolution = '512x')",  "$slider_uv": [ 392,  0 ], "$slider_uv_size": [ 8, 40 ] },
+      { "requires": "($slider_resolution = '1024x')", "$slider_uv": [ 784,  0 ], "$slider_uv_size": [ 16, 80 ] },
+      { "requires": "($slider_resolution = '2048x')", "$slider_uv": [ 1568, 0 ], "$slider_uv_size": [ 32, 160 ] },
+      { "requires": "($slider_resolution = '4096x')", "$slider_uv": [ 3136, 0 ], "$slider_uv_size": [ 64, 320 ] },
+      { "requires": "($slider_resolution = '8192x')", "$slider_uv": [ 6272, 0 ], "$slider_uv_size": [ 128, 640 ] }
+    ]
+  }
+}

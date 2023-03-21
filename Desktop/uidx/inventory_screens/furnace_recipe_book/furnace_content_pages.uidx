@@ -1,0 +1,322 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "cris_furnace_rb_conent_pages",
+
+  "stacked_row": {
+    "type": "stack_panel",
+    "size": [ 125, 25 ],
+    "orientation": "horizontal"
+  },
+
+  /*//// All Pages ////*/
+
+  "all_page_1": {
+    "type": "stack_panel",
+    "size": [ 125, 100 ],
+    "controls": [
+      {
+        "row_1@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_1@cris_furnace_rb_toggle_items.item_1": {} },
+            { "item_2@cris_furnace_rb_toggle_items.item_2": {} },
+            { "item_3@cris_furnace_rb_toggle_items.item_3": {} },
+            { "item_4@cris_furnace_rb_toggle_items.item_4": {} },
+            { "item_5@cris_furnace_rb_toggle_items.item_5": {} }
+          ]
+        }
+      },
+      {
+        "row_2@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_6@cris_furnace_rb_toggle_items.item_6": {} },
+            { "item_7@cris_furnace_rb_toggle_items.item_7": {} },
+            { "item_8@cris_furnace_rb_toggle_items.item_8": {} },
+            { "item_9@cris_furnace_rb_toggle_items.item_9": {} },
+            { "item_10@cris_furnace_rb_toggle_items.item_10": {} }
+          ]
+        }
+      },
+      {
+        "row_3@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_11@cris_furnace_rb_toggle_items.item_11": {} },
+            { "item_12@cris_furnace_rb_toggle_items.item_12": {} },
+            { "item_13@cris_furnace_rb_toggle_items.item_13": {} },
+            { "item_14@cris_furnace_rb_toggle_items.item_14": {} },
+            { "item_15@cris_furnace_rb_toggle_items.item_15": {} }
+          ]
+        }
+      },
+      {
+        "row_4@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_16@cris_furnace_rb_toggle_items.item_16": {} },
+            { "item_17@cris_furnace_rb_toggle_items.item_17": {} },
+            { "item_18@cris_furnace_rb_toggle_items.item_18": {} },
+            { "item_19@cris_furnace_rb_toggle_items.item_19": {} },
+            { "item_20@cris_furnace_rb_toggle_items.item_20": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "all_page_2@cris_furnace_rb_conent_pages.all_page_1": {
+    "controls": [
+      {
+        "row_1@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_21@cris_furnace_rb_toggle_items.item_21": {} },
+            { "item_22@cris_furnace_rb_toggle_items.item_22": {} },
+            { "item_23@cris_furnace_rb_toggle_items.item_23": {} },
+            { "item_24@cris_furnace_rb_toggle_items.item_24": {} },
+            { "item_25@cris_furnace_rb_toggle_items.item_25": {} }
+          ]
+        }
+      },
+      {
+        "row_2@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_26@cris_furnace_rb_toggle_items.item_26": {} },
+            { "item_27@cris_furnace_rb_toggle_items.item_27": {} },
+            { "item_28@cris_furnace_rb_toggle_items.item_28": {} },
+            { "item_29@cris_furnace_rb_toggle_items.item_29": {} },
+            { "item_30@cris_furnace_rb_toggle_items.item_30": {} }
+          ]
+        }
+      },
+      {
+        "row_3@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_31@cris_furnace_rb_toggle_items.item_31": {} },
+            { "item_32@cris_furnace_rb_toggle_items.item_32": {} },
+            { "item_33@cris_furnace_rb_toggle_items.item_33": {} },
+            { "item_34@cris_furnace_rb_toggle_items.item_34": {} },
+            { "item_35@cris_furnace_rb_toggle_items.item_35": {} }
+          ]
+        }
+      },
+      {
+        "row_4@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_36@cris_furnace_rb_toggle_items.item_36": {} },
+            { "item_37@cris_furnace_rb_toggle_items.item_37": {} },
+            { "item_38@cris_furnace_rb_toggle_items.item_38": {} },
+            { "item_39@cris_furnace_rb_toggle_items.item_39": {} },
+            { "item_40@cris_furnace_rb_toggle_items.item_40": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "all_page_3@cris_furnace_rb_conent_pages.all_page_1": {
+    "controls": [
+      {
+        "row_1@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_41@cris_furnace_rb_toggle_items.item_41": {} },
+            { "item_42@cris_furnace_rb_toggle_items.item_42": {} },
+            { "item_43@cris_furnace_rb_toggle_items.item_43": {} },
+            { "item_44@cris_furnace_rb_toggle_items.item_44": {} },
+            { "item_45@cris_furnace_rb_toggle_items.item_45": {} }
+          ]
+        }
+      },
+      {
+        "row_2@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_46@cris_furnace_rb_toggle_items.item_46": {} },
+            { "item_47@cris_furnace_rb_toggle_items.item_47": {} },
+            { "item_48@cris_furnace_rb_toggle_items.item_48": {} },
+            { "item_49@cris_furnace_rb_toggle_items.item_49": {} },
+            { "item_50@cris_furnace_rb_toggle_items.item_50": {} }
+          ]
+        }
+      },
+      {
+        "row_3@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_51@cris_furnace_rb_toggle_items.item_51": {} },
+            { "item_52@cris_furnace_rb_toggle_items.item_52": {} },
+            { "item_53@cris_furnace_rb_toggle_items.item_53": {} },
+            { "item_54@cris_furnace_rb_toggle_items.item_54": {} },
+            { "item_55@cris_furnace_rb_toggle_items.item_55": {} }
+          ]
+        }
+      },
+      {
+        "row_4@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_56@cris_furnace_rb_toggle_items.item_56": {} },
+            { "item_57@cris_furnace_rb_toggle_items.item_57": {} },
+            { "item_58@cris_furnace_rb_toggle_items.item_58": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Food Pages ////*/
+  
+  "food_page_1@cris_furnace_rb_conent_pages.all_page_1": {
+    "controls": [
+      {
+        "row_1@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_1@cris_furnace_rb_toggle_items.item_1": { "$toggle_group_forced_index": 59 } },
+            { "item_2@cris_furnace_rb_toggle_items.item_2": { "$toggle_group_forced_index": 60 } },
+            { "item_3@cris_furnace_rb_toggle_items.item_3": { "$toggle_group_forced_index": 61 } },
+            { "item_4@cris_furnace_rb_toggle_items.item_4": { "$toggle_group_forced_index": 62 } },
+            { "item_5@cris_furnace_rb_toggle_items.item_5": { "$toggle_group_forced_index": 63 } }
+          ]
+        }
+      },
+      {
+        "row_2@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_6@cris_furnace_rb_toggle_items.item_6": { "$toggle_group_forced_index": 64 } },
+            { "item_7@cris_furnace_rb_toggle_items.item_7": { "$toggle_group_forced_index": 65 } },
+            { "item_8@cris_furnace_rb_toggle_items.item_8": { "$toggle_group_forced_index": 66 } },
+            { "item_9@cris_furnace_rb_toggle_items.item_9": { "$toggle_group_forced_index": 67 } }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Stone Pages ////*/
+
+  "stone_page_1@cris_furnace_rb_conent_pages.all_page_1": {
+    "controls": [
+      {
+        "row_1@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_10@cris_furnace_rb_toggle_items.item_10": { "$toggle_group_forced_index": 68 } },
+            { "item_11@cris_furnace_rb_toggle_items.item_11": { "$toggle_group_forced_index": 69 } },
+            { "item_12@cris_furnace_rb_toggle_items.item_12": { "$toggle_group_forced_index": 70 } },
+            { "item_13@cris_furnace_rb_toggle_items.item_13": { "$toggle_group_forced_index": 71 } },
+            { "item_14@cris_furnace_rb_toggle_items.item_14": { "$toggle_group_forced_index": 72 } }
+          ]
+        }
+      },
+      {
+        "row_2@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_15@cris_furnace_rb_toggle_items.item_15": { "$toggle_group_forced_index": 73 } },
+            { "item_16@cris_furnace_rb_toggle_items.item_16": { "$toggle_group_forced_index": 74 } },
+            { "item_17@cris_furnace_rb_toggle_items.item_17": { "$toggle_group_forced_index": 75 } },
+            { "item_18@cris_furnace_rb_toggle_items.item_18": { "$toggle_group_forced_index": 76 } },
+            { "item_19@cris_furnace_rb_toggle_items.item_19": { "$toggle_group_forced_index": 77 } }
+          ]
+        }
+      },
+      {
+        "row_3@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_20@cris_furnace_rb_toggle_items.item_20": { "$toggle_group_forced_index": 78 } },
+            { "item_21@cris_furnace_rb_toggle_items.item_21": { "$toggle_group_forced_index": 79 } },
+            { "item_22@cris_furnace_rb_toggle_items.item_22": { "$toggle_group_forced_index": 80 } },
+            { "item_23@cris_furnace_rb_toggle_items.item_23": { "$toggle_group_forced_index": 81 } },
+            { "item_24@cris_furnace_rb_toggle_items.item_24": { "$toggle_group_forced_index": 82 } }
+          ]
+        }
+      },
+      {
+        "row_4@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_25@cris_furnace_rb_toggle_items.item_25": { "$toggle_group_forced_index": 83 } },
+            { "item_26@cris_furnace_rb_toggle_items.item_26": { "$toggle_group_forced_index": 84 } },
+            { "item_27@cris_furnace_rb_toggle_items.item_27": { "$toggle_group_forced_index": 85 } },
+            { "item_28@cris_furnace_rb_toggle_items.item_28": { "$toggle_group_forced_index": 86 } },
+            { "item_29@cris_furnace_rb_toggle_items.item_29": { "$toggle_group_forced_index": 87 } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "stone_page_2@cris_furnace_rb_conent_pages.all_page_1": {
+    "controls": [
+      {
+        "row_1@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_30@cris_furnace_rb_toggle_items.item_30": { "$toggle_group_forced_index": 88 } },
+            { "item_31@cris_furnace_rb_toggle_items.item_31": { "$toggle_group_forced_index": 89 } },
+            { "item_32@cris_furnace_rb_toggle_items.item_32": { "$toggle_group_forced_index": 90 } },
+            { "item_33@cris_furnace_rb_toggle_items.item_33": { "$toggle_group_forced_index": 91 } },
+            { "item_34@cris_furnace_rb_toggle_items.item_34": { "$toggle_group_forced_index": 92 } }
+          ]
+        }
+      },
+      {
+        "row_2@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_35@cris_furnace_rb_toggle_items.item_35": { "$toggle_group_forced_index": 93 } },
+            { "item_36@cris_furnace_rb_toggle_items.item_36": { "$toggle_group_forced_index": 94 } },
+            { "item_37@cris_furnace_rb_toggle_items.item_37": { "$toggle_group_forced_index": 95 } },
+            { "item_38@cris_furnace_rb_toggle_items.item_38": { "$toggle_group_forced_index": 96 } },
+            { "item_39@cris_furnace_rb_toggle_items.item_39": { "$toggle_group_forced_index": 97 } }
+          ]
+        }
+      },
+      {
+        "row_3@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_40@cris_furnace_rb_toggle_items.item_40": { "$toggle_group_forced_index": 98 } },
+            { "item_41@cris_furnace_rb_toggle_items.item_41": { "$toggle_group_forced_index": 99 } }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Materials Pages ////*/
+
+  "materials_page_1@cris_furnace_rb_conent_pages.all_page_1": {
+    "controls": [
+      {
+        "row_1@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_42@cris_furnace_rb_toggle_items.item_42": { "$toggle_group_forced_index": 100 } },
+            { "item_43@cris_furnace_rb_toggle_items.item_43": { "$toggle_group_forced_index": 101 } },
+            { "item_44@cris_furnace_rb_toggle_items.item_44": { "$toggle_group_forced_index": 102 } },
+            { "item_45@cris_furnace_rb_toggle_items.item_45": { "$toggle_group_forced_index": 103 } },
+            { "item_46@cris_furnace_rb_toggle_items.item_46": { "$toggle_group_forced_index": 104 } }
+          ]
+        }
+      },
+      {
+        "row_2@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_47@cris_furnace_rb_toggle_items.item_47": { "$toggle_group_forced_index": 105 } },
+            { "item_48@cris_furnace_rb_toggle_items.item_48": { "$toggle_group_forced_index": 106 } },
+            { "item_49@cris_furnace_rb_toggle_items.item_49": { "$toggle_group_forced_index": 107 } },
+            { "item_50@cris_furnace_rb_toggle_items.item_50": { "$toggle_group_forced_index": 108 } },
+            { "item_51@cris_furnace_rb_toggle_items.item_51": { "$toggle_group_forced_index": 109 } }
+          ]
+        }
+      },
+      {
+        "row_3@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_52@cris_furnace_rb_toggle_items.item_52": { "$toggle_group_forced_index": 110 } },
+            { "item_53@cris_furnace_rb_toggle_items.item_53": { "$toggle_group_forced_index": 111 } },
+            { "item_54@cris_furnace_rb_toggle_items.item_54": { "$toggle_group_forced_index": 112 } },
+            { "item_55@cris_furnace_rb_toggle_items.item_55": { "$toggle_group_forced_index": 113 } },
+            { "item_56@cris_furnace_rb_toggle_items.item_56": { "$toggle_group_forced_index": 114 } }
+          ]
+        }
+      },
+      {
+        "row_4@cris_furnace_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_57@cris_furnace_rb_toggle_items.item_57": { "$toggle_group_forced_index": 115 } },
+            { "item_58@cris_furnace_rb_toggle_items.item_58": { "$toggle_group_forced_index": 116 } }
+          ]
+        }
+      }
+    ]
+  }
+}

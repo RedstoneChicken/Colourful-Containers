@@ -1,0 +1,182 @@
+{
+  "namespace": "pack_settings_dx",
+
+  "pack_settings_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "top_panel": {
+          "type": "panel",
+          "size": [ 1, 4 ]
+        }
+      },
+      {
+        "content_tiering_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "bindings": [
+            {
+              "binding_name": "#has_content_tiering",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "panel_1": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "controls": [
+                  {
+                    "content_tier_slider@settings_common_dx.option_slider_310": {
+                      "$slider_content": "pack_settings_dx.content_tiering_text_panel",
+                      "$option_label": "#content_tier_label",
+                      "$slider_name": "content_tier_slider",
+                      "$slider_value_binding_name": "#content_tier_value",
+                      "$option_enabled_binding_name": "#has_content_tiering",
+                      "$default_focus_precedence": 1,
+                      "$slider_select_on_hover": true,
+                      "$slider_tts_text_value": "#content_tier_slider_text_value",
+                      "$slider_steps_binding_name": "#content_tier_steps",
+                      "$label_bindings": [ { "binding_name": "#content_tier_label" } ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_2": {
+                "type": "panel",
+                "size": [ 310, "100%c+2px" ],
+                "bindings": [
+                  {
+                    "binding_name": "(not #content_tier_supported)",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "incompatible_label@settings_dx.base_label": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "text": "#incompatible_reason",
+                      "color": "$error_text_color",
+                      "size": [ "100%-8px", "default" ],
+                      "bindings": [
+                        {
+                          "binding_name": "#incompatible_reason"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "settings_category_panel": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "bindings": [
+            {
+              "binding_name": "#has_content_tiering",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "object_name": {
+                "type": "image",
+                "texture": "textures/uidx/global/color_base",
+                "layer": 5,
+                "size": [ "100%-20px", 1 ],
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            }
+          ]
+        }
+      },
+      { "generated_form@server_form_dx.generated_contents": { } }
+    ]
+  },
+
+  "content_tiering_text_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "content_tier_label_panel@common_slider_dx.slider_content": {
+          "bindings": [
+            {
+              "binding_name": "#content_tier_supported",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "unsupported_content_tier_label@common_dx.global_label": {
+          "shadow": true,
+          "text": "#content_tier_label",
+          "color": "$error_text_color",
+          "layer": 6,
+          "localize": false,
+          "bindings": [
+            {
+              "binding_name": "#content_tier_label"
+            },
+            {
+              "binding_name": "(not #content_tier_supported)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "pack_settings_label@settings_dx.base_label": {
+    "text": "#pack_settings_title",
+    "offset": [ 0, 4 ],
+    "bindings": [
+      {
+        "binding_name": "#pack_settings_title",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "confirm_button@common_buttons_dx.main_button_200": {
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "gui.confirm",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -9 ]
+  },
+
+  "main_screen_bg_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "main@common_menus_dx.java_edition_menu_panel_template": {
+          "$scroll_view_port_size": [ 324, "100%" ],
+          "$top_content": "pack_settings_dx.pack_settings_label",
+          "$bottom_content": "pack_settings_dx.confirm_button",
+          "$scrolling_content": "pack_settings_dx.pack_settings_stack_panel"
+        }
+      },
+      { "bg@java_gui_common.options_background": { "layer": -3 } }
+    ]
+  },
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+    ]
+  }
+}

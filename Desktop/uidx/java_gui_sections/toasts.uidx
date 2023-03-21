@@ -1,0 +1,175 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "toasts_java_dx",
+
+  "toasts_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/toasts",
+    "$toasts_uv|default": [ 0, 0 ],
+    "$toasts_uv_size|default": [ 0, 0 ],
+    "uv": "$toasts_uv",
+    "uv_size": "$toasts_uv_size"
+  },
+
+  "advancement_toast@toasts_java_dx.toasts_base": {
+    "size": [ 160, 32 ],
+    "variables": [
+      { "requires": "($toasts_resolution = '256x')",  "$toasts_uv_size": [ 160, 32 ] },
+      { "requires": "($toasts_resolution = '512x')",  "$toasts_uv_size": [ 320, 64 ] },
+      { "requires": "($toasts_resolution = '1024x')", "$toasts_uv_size": [ 640, 128 ] },
+      { "requires": "($toasts_resolution = '2048x')", "$toasts_uv_size": [ 1280,	256 ] },
+      { "requires": "($toasts_resolution = '4096x')", "$toasts_uv_size": [ 2560,	512 ] },
+      { "requires": "($toasts_resolution = '8192x')", "$toasts_uv_size": [ 5120,	1024 ] }
+    ]
+  },
+
+  "recipe_toast@toasts_java_dx.toasts_base": {
+    "size": [ 160, 32 ],
+    "variables": [
+      { "requires": "($toasts_resolution = '256x')",  "$toasts_uv": [ 0, 32 ],   "$toasts_uv_size": [ 160, 32 ] },
+      { "requires": "($toasts_resolution = '512x')",  "$toasts_uv": [ 0, 64 ],   "$toasts_uv_size": [ 320, 64 ] },
+      { "requires": "($toasts_resolution = '1024x')", "$toasts_uv": [ 0, 128 ],  "$toasts_uv_size": [ 640, 128 ] },
+      { "requires": "($toasts_resolution = '2048x')", "$toasts_uv": [ 0, 256 ],  "$toasts_uv_size": [ 1280, 256 ] },
+      { "requires": "($toasts_resolution = '4096x')", "$toasts_uv": [ 0, 512 ],  "$toasts_uv_size": [ 2560, 512 ] },
+      { "requires": "($toasts_resolution = '8192x')", "$toasts_uv": [ 0, 1024 ], "$toasts_uv_size": [ 5120, 1024 ] }
+    ]
+  },
+
+  "notification_toast@toasts_java_dx.toasts_base": {
+    "size": [ 160, 32 ],
+    "variables": [
+      { "requires": "($toasts_resolution = '256x')",  "$toasts_uv": [ 0, 64 ],   "$toasts_uv_size": [ 160, 32 ] },
+      { "requires": "($toasts_resolution = '512x')",  "$toasts_uv": [ 0, 128 ],  "$toasts_uv_size": [ 320, 64 ] },
+      { "requires": "($toasts_resolution = '1024x')", "$toasts_uv": [ 0, 256 ],  "$toasts_uv_size": [ 640, 128 ] },
+      { "requires": "($toasts_resolution = '2048x')", "$toasts_uv": [ 0, 512 ],  "$toasts_uv_size": [ 1280, 256 ] },
+      { "requires": "($toasts_resolution = '4096x')", "$toasts_uv": [ 0, 1024 ], "$toasts_uv_size": [ 2560, 512 ] },
+      { "requires": "($toasts_resolution = '8192x')", "$toasts_uv": [ 0, 2048 ], "$toasts_uv_size": [ 5120, 1024 ] }
+    ]
+  },
+
+  "help_toast@toasts_java_dx.toasts_base": {
+    "size": [ 160, 32 ],
+    "variables": [
+      { "requires": "($toasts_resolution = '256x')",  "$toasts_uv": [ 0, 96 ],   "$toasts_uv_size": [ 160, 32 ] },
+      { "requires": "($toasts_resolution = '512x')",  "$toasts_uv": [ 0, 192 ],  "$toasts_uv_size": [ 320, 64 ] },
+      { "requires": "($toasts_resolution = '1024x')", "$toasts_uv": [ 0, 384 ],  "$toasts_uv_size": [ 640, 128 ] },
+      { "requires": "($toasts_resolution = '2048x')", "$toasts_uv": [ 0, 768 ],  "$toasts_uv_size": [ 1280, 256 ] },
+      { "requires": "($toasts_resolution = '4096x')", "$toasts_uv": [ 0, 1536 ], "$toasts_uv_size": [ 2560, 512 ] },
+      { "requires": "($toasts_resolution = '8192x')", "$toasts_uv": [ 0, 3072 ], "$toasts_uv_size": [ 5120, 1024 ] }
+    ]
+  },
+
+  ////*/ Advancement /*////
+
+  "advancement_middle_bg@toasts_java_dx.toasts_base": {
+    "size": [ 160, 5 ],
+    "variables": [
+      { "requires": "($toasts_resolution = '256x')",  "$toasts_uv": [ 0, 16 ], "$toasts_uv_size": [ 160, 5 ] },
+      { "requires": "($toasts_resolution = '512x')",  "$toasts_uv": [ 0, 32 ], "$toasts_uv_size": [ 320, 10 ] },
+      { "requires": "($toasts_resolution = '1024x')", "$toasts_uv": [ 0, 64 ], "$toasts_uv_size": [ 640, 20 ] },
+      { "requires": "($toasts_resolution = '2048x')", "$toasts_uv": [ 0, 128 ], "$toasts_uv_size": [ 1280, 40 ] },
+      { "requires": "($toasts_resolution = '4096x')", "$toasts_uv": [ 0, 256 ], "$toasts_uv_size": [ 2560, 80 ] },
+      { "requires": "($toasts_resolution = '8192x')", "$toasts_uv": [ 0, 512 ], "$toasts_uv_size": [ 5120, 160 ] }
+    ]
+  },
+
+  "advancement_toast_bg": {
+    "type": "stack_panel",
+    "min_size": [ 160, 32 ],
+    "size": [ 160, "100%" ],
+    "controls": [
+      {
+        "top@toasts_java_dx.toasts_base": {
+          "size": [ 160, 28 ],
+          "variables": [
+            { "requires": "($toasts_resolution = '256x')",  "$toasts_uv_size": [ 160, 28 ] },
+            { "requires": "($toasts_resolution = '512x')",  "$toasts_uv_size": [ 320, 56 ] },
+            { "requires": "($toasts_resolution = '1024x')", "$toasts_uv_size": [ 640, 112 ] },
+            { "requires": "($toasts_resolution = '2048x')", "$toasts_uv_size": [ 1280, 224 ] },
+            { "requires": "($toasts_resolution = '4096x')", "$toasts_uv_size": [ 2560, 448 ] },
+            { "requires": "($toasts_resolution = '8192x')", "$toasts_uv_size": [ 5120, 896 ] }
+          ]
+        }
+      },
+      {
+        "middle": {
+          "type": "stack_panel",
+          "size": [ 160, "fill" ],
+          "clips_children": true,
+          "controls": [
+            {
+              "stack": {
+                "type": "stack_panel",
+                "size": [ 160, "100%c" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  { "000@toasts_java_dx.advancement_middle_bg": { } },
+                  { "001@toasts_java_dx.advancement_middle_bg": { } },
+                  { "002@toasts_java_dx.advancement_middle_bg": { } },
+                  { "003@toasts_java_dx.advancement_middle_bg": { } },
+                  { "004@toasts_java_dx.advancement_middle_bg": { } },
+                  { "005@toasts_java_dx.advancement_middle_bg": { } },
+                  { "006@toasts_java_dx.advancement_middle_bg": { } },
+                  { "007@toasts_java_dx.advancement_middle_bg": { } },
+                  { "008@toasts_java_dx.advancement_middle_bg": { } },
+                  { "009@toasts_java_dx.advancement_middle_bg": { } },
+                  { "010@toasts_java_dx.advancement_middle_bg": { } },
+                  { "011@toasts_java_dx.advancement_middle_bg": { } },
+                  { "012@toasts_java_dx.advancement_middle_bg": { } },
+                  { "013@toasts_java_dx.advancement_middle_bg": { } },
+                  { "014@toasts_java_dx.advancement_middle_bg": { } },
+                  { "015@toasts_java_dx.advancement_middle_bg": { } },
+                  { "016@toasts_java_dx.advancement_middle_bg": { } },
+                  { "017@toasts_java_dx.advancement_middle_bg": { } },
+                  { "018@toasts_java_dx.advancement_middle_bg": { } },
+                  { "019@toasts_java_dx.advancement_middle_bg": { } },
+                  { "020@toasts_java_dx.advancement_middle_bg": { } },
+                  { "021@toasts_java_dx.advancement_middle_bg": { } },
+                  { "022@toasts_java_dx.advancement_middle_bg": { } },
+                  { "023@toasts_java_dx.advancement_middle_bg": { } },
+                  { "024@toasts_java_dx.advancement_middle_bg": { } },
+                  { "025@toasts_java_dx.advancement_middle_bg": { } },
+                  { "026@toasts_java_dx.advancement_middle_bg": { } },
+                  { "027@toasts_java_dx.advancement_middle_bg": { } },
+                  { "028@toasts_java_dx.advancement_middle_bg": { } },
+                  { "029@toasts_java_dx.advancement_middle_bg": { } },
+                  { "030@toasts_java_dx.advancement_middle_bg": { } },
+                  { "031@toasts_java_dx.advancement_middle_bg": { } },
+                  { "032@toasts_java_dx.advancement_middle_bg": { } },
+                  { "033@toasts_java_dx.advancement_middle_bg": { } },
+                  { "034@toasts_java_dx.advancement_middle_bg": { } },
+                  { "035@toasts_java_dx.advancement_middle_bg": { } },
+                  { "036@toasts_java_dx.advancement_middle_bg": { } },
+                  { "037@toasts_java_dx.advancement_middle_bg": { } },
+                  { "038@toasts_java_dx.advancement_middle_bg": { } },
+                  { "039@toasts_java_dx.advancement_middle_bg": { } }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bottom@toasts_java_dx.toasts_base": {
+          "size": [ 160, 4 ],
+          "variables": [
+            { "requires": "($toasts_resolution = '256x')",  "$toasts_uv": [ 0, 28 ],  "$toasts_uv_size": [ 160, 4 ] },
+            { "requires": "($toasts_resolution = '512x')",  "$toasts_uv": [ 0, 56 ],  "$toasts_uv_size": [ 320, 8 ] },
+            { "requires": "($toasts_resolution = '1024x')", "$toasts_uv": [ 0, 112 ], "$toasts_uv_size": [ 640, 16 ] },
+            { "requires": "($toasts_resolution = '2048x')", "$toasts_uv": [ 0, 224 ], "$toasts_uv_size": [ 1280, 32 ] },
+            { "requires": "($toasts_resolution = '4096x')", "$toasts_uv": [ 0, 448 ], "$toasts_uv_size": [ 2560, 64 ] },
+            { "requires": "($toasts_resolution = '8192x')", "$toasts_uv": [ 0, 896 ], "$toasts_uv_size": [ 5120, 128 ] }
+          ]
+        }
+      }
+    ]
+  }
+
+  ////*/ Recipe /*////
+
+  ////*/ Notifiction /*////
+
+  ////*/ Help /*////
+}

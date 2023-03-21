@@ -1,0 +1,78 @@
+{
+  "namespace": "main_button_70_java_dx",
+
+  /*//// Main Button 70 ////*/
+
+  /* Default */
+
+  "main_button_left_default@widgets_java_dx.widgets_base": {
+    "size": [ 35, 20 ],
+    "variables": [
+      { "requires": "($widgets_resolution = '256x')",  "$widgets_uv": [ 0, 66 ],   "$widgets_uv_size": [ 35, 20 ] },
+      { "requires": "($widgets_resolution = '512x')",  "$widgets_uv": [ 0, 132 ],  "$widgets_uv_size": [ 70, 40 ] },
+      { "requires": "($widgets_resolution = '1024x')", "$widgets_uv": [ 0, 264 ],  "$widgets_uv_size": [ 140, 80 ] },
+      { "requires": "($widgets_resolution = '2048x')", "$widgets_uv": [ 0, 528 ],  "$widgets_uv_size": [ 280, 160 ] },
+      { "requires": "($widgets_resolution = '4096x')", "$widgets_uv": [ 0, 1056 ], "$widgets_uv_size": [ 560, 320 ] },
+      { "requires": "($widgets_resolution = '8192x')", "$widgets_uv": [ 0, 2112 ], "$widgets_uv_size": [ 1120, 640 ] }
+    ]
+  },
+
+  "main_button_right_default@main_button_70_java_dx.main_button_left_default": {
+    "variables": [
+      { "requires": "($widgets_resolution = '256x')",  "$widgets_uv": [ 165, 66 ],    "$widgets_uv_size": [ 35, 20 ] },
+      { "requires": "($widgets_resolution = '512x')",  "$widgets_uv": [ 330, 132 ],   "$widgets_uv_size": [ 70, 40 ] },
+      { "requires": "($widgets_resolution = '1024x')", "$widgets_uv": [ 660, 264 ],   "$widgets_uv_size": [ 140, 80 ] },
+      { "requires": "($widgets_resolution = '2048x')", "$widgets_uv": [ 1320, 528 ],  "$widgets_uv_size": [ 280, 160 ] },
+      { "requires": "($widgets_resolution = '4096x')", "$widgets_uv": [ 2640, 1056 ], "$widgets_uv_size": [ 560, 320 ] },
+      { "requires": "($widgets_resolution = '8192x')", "$widgets_uv": [ 5280, 2112 ], "$widgets_uv_size": [ 1120, 640 ] }
+    ]
+  },
+
+  /* Hover */
+
+  "main_button_left_hover@main_button_70_java_dx.main_button_left_default": {
+    "variables": [
+      { "requires": "($widgets_resolution = '256x')",  "$widgets_uv": [ 0, 86 ],   "$widgets_uv_size": [ 35, 20 ] },
+      { "requires": "($widgets_resolution = '512x')",  "$widgets_uv": [ 0, 172 ],  "$widgets_uv_size": [ 70, 40 ] },
+      { "requires": "($widgets_resolution = '1024x')", "$widgets_uv": [ 0, 344 ],  "$widgets_uv_size": [ 140, 80 ] },
+      { "requires": "($widgets_resolution = '2048x')", "$widgets_uv": [ 0, 688 ],  "$widgets_uv_size": [ 280, 160 ] },
+      { "requires": "($widgets_resolution = '4096x')", "$widgets_uv": [ 0, 1376 ], "$widgets_uv_size": [ 560, 320 ] },
+      { "requires": "($widgets_resolution = '8192x')", "$widgets_uv": [ 0, 2752 ], "$widgets_uv_size": [ 1120, 640 ] }
+    ]
+  },
+
+  "main_button_right_hover@main_button_70_java_dx.main_button_left_default": {
+    "variables": [
+      { "requires": "($widgets_resolution = '256x')",  "$widgets_uv": [ 165, 86 ],    "$widgets_uv_size": [ 35, 20 ] },
+      { "requires": "($widgets_resolution = '512x')",  "$widgets_uv": [ 330, 172 ],   "$widgets_uv_size": [ 70, 40 ] },
+      { "requires": "($widgets_resolution = '1024x')", "$widgets_uv": [ 660, 344 ],   "$widgets_uv_size": [ 140, 80 ] },
+      { "requires": "($widgets_resolution = '2048x')", "$widgets_uv": [ 1320, 688 ],  "$widgets_uv_size": [ 280, 160 ] },
+      { "requires": "($widgets_resolution = '4096x')", "$widgets_uv": [ 2640, 1376 ], "$widgets_uv_size": [ 560, 320 ] },
+      { "requires": "($widgets_resolution = '8192x')", "$widgets_uv": [ 5280, 2752 ], "$widgets_uv_size": [ 1120, 640 ] }
+    ]
+  },
+  
+  /* Locked */
+
+  "main_button_left_locked@main_button_70_java_dx.main_button_left_default": {
+    "variables": [
+      { "requires": "($widgets_resolution = '256x')",  "$widgets_uv": [ 0, 46 ],   "$widgets_uv_size": [ 35, 20 ] },
+      { "requires": "($widgets_resolution = '512x')",  "$widgets_uv": [ 0, 92 ],   "$widgets_uv_size": [ 70, 40 ] },
+      { "requires": "($widgets_resolution = '1024x')", "$widgets_uv": [ 0, 184 ],  "$widgets_uv_size": [ 140, 80 ] },
+      { "requires": "($widgets_resolution = '2048x')", "$widgets_uv": [ 0, 368 ],  "$widgets_uv_size": [ 280, 160 ] },
+      { "requires": "($widgets_resolution = '4096x')", "$widgets_uv": [ 0, 736 ],  "$widgets_uv_size": [ 560, 320 ] },
+      { "requires": "($widgets_resolution = '8192x')", "$widgets_uv": [ 0, 1472 ], "$widgets_uv_size": [ 1120, 640 ] }
+    ]
+  },
+
+  "main_button_right_locked@main_button_70_java_dx.main_button_left_default": {
+    "variables": [
+      { "requires": "($widgets_resolution = '256x')",  "$widgets_uv": [ 165, 46 ],    "$widgets_uv_size": [ 35, 20 ] },
+      { "requires": "($widgets_resolution = '512x')",  "$widgets_uv": [ 330, 92 ],    "$widgets_uv_size": [ 70, 40 ] },
+      { "requires": "($widgets_resolution = '1024x')", "$widgets_uv": [ 660, 184 ],   "$widgets_uv_size": [ 140, 80 ] },
+      { "requires": "($widgets_resolution = '2048x')", "$widgets_uv": [ 1320, 368 ],  "$widgets_uv_size": [ 280, 160 ] },
+      { "requires": "($widgets_resolution = '4096x')", "$widgets_uv": [ 2640, 736 ],  "$widgets_uv_size": [ 560, 320 ] },
+      { "requires": "($widgets_resolution = '8192x')", "$widgets_uv": [ 5280, 1472 ], "$widgets_uv_size": [ 1120, 640 ] }
+    ]
+  }
+}

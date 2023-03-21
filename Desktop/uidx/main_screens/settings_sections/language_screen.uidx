@@ -1,0 +1,184 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "language_dx",
+
+  /*//// Lang Button ////*/
+  
+  "lang_button_base": {
+    "type": "panel",
+    "size": [ 220, 18 ],
+    "$radio_label_bindings|default": [],
+    "$is_pressed|default": false,
+    "$is_hover|default": false,
+    "controls": [
+      {
+        "hover_image": {
+          "type": "image",
+          "layer": 2,
+          "visible": "$is_hover",
+          "texture": "textures/ui/square_image_border_white",
+          "size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "pressed_image": {
+          "type": "image",
+          "layer": 1,
+          "visible": "$is_pressed",
+          "texture": "textures/uidx/menus/text_input_java",
+          "size": [ 220, 18 ]
+        }
+      },
+      {
+        "button_label@common_buttons_dx.button_label": {
+          "offset": [ 0, 2 ],
+          "layer": 3,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text": "$radio_label_text",
+          "bindings": "$radio_label_bindings"
+        }
+      }
+    ]
+  },
+
+  "lang_button_default@language_dx.lang_button_base": {
+    "$text_color": "$main_menu_button_default_color"
+  },
+
+  "lang_button_hover@language_dx.lang_button_base": {
+    "$text_color": "$main_menu_button_hover_color",
+    "$is_hover": true
+  },
+
+  "lang_button_pressed@language_dx.lang_button_base": {
+    "$text_color": "$main_menu_button_preesed_color",
+    "$is_pressed": true
+  },
+
+  "lang_button_locked@language_dx.lang_button_base": {
+    "$text_color": "$main_menu_button_locked_color"
+  },
+  
+  "language_grid_item@general_section.language_grid_item": {
+    "controls": [
+      { 
+        "lang_button_core@settings_common.radio_with_label_core": {
+          "$unchecked_control": "language_dx.lang_button_default",
+          "$checked_control": "language_dx.lang_button_pressed",
+          "$unchecked_hover_control": "language_dx.lang_button_hover",
+          "$checked_hover_control": "language_dx.lang_button_pressed",
+          "$unchecked_locked_control": "language_dx.lang_button_locked",
+          "$unchecked_locked_hover_control": "language_dx.lang_button_locked",
+          "$checked_locked_control": "language_dx.lang_button_locked",
+          "$checked_locked_hover_control": "language_dx.lang_button_locked",
+          "size": [ 220, "100%c" ]
+        }
+      }
+    ]
+  },
+
+  /*//// Stack panels ////*/
+
+  "language_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ "100%", 2 ]
+        }
+      },
+      {
+        "language_list_grid": {
+          "type": "grid",
+          "size": [ "100%", "100%c" ],
+          "grid_item_template": "language_dx.language_grid_item",
+          "grid_dimension_binding": "#language_grid_dimension",
+          "collection_name": "languages",
+          "bindings": [
+            {
+              "binding_name": "#language_grid_dimension",
+              "binding_condition": "visible"
+            }
+          ]
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ "100%", 2 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+
+  "language_label@settings_dx.base_label": {
+    "text": "options.language",
+    "offset": [ 0, 15 ]
+  },
+
+  "language_bottom_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "warning_label_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", 9 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 4 ],
+          "controls": [
+            {
+              "label_0@common_dx.global_label": {
+                "color": [ 0.75, 0.75, 0.75 ],
+                "layer": 2,
+                "text": " (",
+                "size": [ "default", 9 ]
+              }
+            },
+            {
+              "language_warning_label@settings_dx.base_label": {
+                "text": "options.languageWarning",
+                "size": [ "default", 9 ],
+                "layer": 2,
+                "color": "$main_menu_button_locked_color"
+              }
+            },
+            {
+              "label_1@common_dx.global_label": {
+                "color": [ 0.75, 0.75, 0.75 ],
+                "layer": 2,
+                "text": ") ",
+                "size": [ "default", 9 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "null_navigation_tab@settings_dx.null_navigation_tab": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -18 ],
+          "layer": 4
+        }
+      }
+    ]
+  },
+
+  "language_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
+    "$top_content": "language_dx.language_label",
+    "$bottom_content": "language_dx.language_bottom_content",
+  
+    "$scrolling_content": "language_dx.language_section",
+    "$bottom_content_size": [ "100%", 61 ]
+  }
+}

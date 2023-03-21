@@ -1,0 +1,11 @@
+{
+  "manifest_validation_screen": {
+    "$is_popup_dialog_in_game": false,
+    "force_render_below": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "$screen_content": "manifest_validation_dx.manifest_validation_screen_center",
+    "$screen_bg_content": "manifest_validation_dx.manifest_validation_screen_content"
+  }
+}

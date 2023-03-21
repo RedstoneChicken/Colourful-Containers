@@ -1,0 +1,38 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "inventory_buttons_dx",
+
+  /*//// Main Inventory Buttons Panel ////*/
+
+  "main_inventory_buttons_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "close_button@common_buttons_dx.black_button": {
+          "ignored": "(not $touch)",
+          "$pressed_button_name": "button.menu_exit",
+          "$button_content": "inventory_buttons_dx.close_icon",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ 24, 4 ],
+          "size": [ 20, 20 ],
+          "bindings": [
+            {
+              "binding_name": "#close_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { "top_type_toggles@common_touch_dx.top_type_toggles": { "ignored": "(not $touch)" } }
+    ]
+  },
+  
+  "close_icon": {
+    "type": "image",
+    "layer": 3,
+    "size": [ 16, 16 ],
+    "texture": "textures/uidx/icons/close"
+  }
+}

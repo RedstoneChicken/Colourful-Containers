@@ -1,0 +1,280 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "progress_dialog_dx",
+
+  "three_buttons_panel": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "controls": [
+      {
+        "left@common_buttons_dx.main_button_150": {
+          "$button_content": "common_dialogs_dx.button_label_dialog",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "$pressed_button_name": "$top_button_press",
+          "$button_text": "$top_button_text"
+        }
+      },
+      {
+        "middle@common_buttons_dx.main_button_150": {
+          "$button_content": "common_dialogs_dx.button_label_dialog",
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "offset": [ 0, 24 ],
+          "$pressed_button_name": "$bottom_button_press",
+          "$button_text": "$bottom_button_text"
+        }
+      },
+      {
+        "right@common_buttons_dx.main_button_150": {
+          "$button_content": "common_dialogs_dx.button_label_dialog",
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "$pressed_button_name": "$middle_button_press",
+          "$button_text": "$middle_button_text"
+        }
+      }
+    ]
+  },
+
+  "two_buttons_panel": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "controls": [
+      {
+        "left@common_buttons_dx.main_button_150": {
+          "$button_content": "common_dialogs_dx.button_label_dialog",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "$pressed_button_name": "$middle_button_press",
+          "$button_text": "$middle_button_text"
+        }
+      },
+      {
+        "right@common_buttons_dx.main_button_150": {
+          "$button_content": "common_dialogs_dx.button_label_dialog",
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "$pressed_button_name": "$bottom_button_press",
+          "$button_text": "$bottom_button_text"
+        }
+      }
+    ]
+  },
+
+  "simple_popup_dialog_base@progress.simple_popup_dialog_base": {
+    "size": [ "100%", "100%" ],
+    "max_size": [ "100%", "100%" ],
+    "min_size": [ "100%", "100%" ],
+    "controls": [
+      { "main_bg@java_gui_common.options_background": { "layer": 440 } },
+      {
+        "main_content": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "offset": [ 0, 5 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 450,
+          "controls": [
+            {
+              "title_panel": {
+                "type": "panel",
+                "size": [ "100%", 10 ],
+                "controls": [
+                  { 
+                    "title_text@common_dx.global_label": {
+                      "text_alignment": "center",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "color": "$loading_text_color",
+                      "size": [ "default", 10 ],
+                      "max_size": [ "100% - 20px", 10 ],
+                      "shadow": true,
+                      "text": "$title_text"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "padding_0": {
+                "type": "panel",
+                "size": [ "100%", 9 ]
+              }
+            },
+            {
+              "text_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c" ],
+                "controls": [
+                  { 
+                    "description_text_0@common_dx.global_label": {
+                      "line_padding": -0.9999,
+                      "text_alignment": "center",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "size": [ "default", "default" ],
+                      "max_size": [ "100% - 54px", "default" ],
+                      "color": "$body_text_color",
+                      "text": "$description_text",
+                      "shadow": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "second_text_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c" ],
+                "ignored": "(not $has_second_line)",
+                "controls": [
+                  { 
+                    "description_text_1@common_dx.global_label": {
+                      "line_padding": -0.9999,
+                      "text_alignment": "center",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "size": [ "default", "default" ],
+                      "max_size": [ "100% - 54px", "default" ],
+                      "color": "$body_text_color",
+                      "text": "$description_text2",
+                      "shadow": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "padding": {
+                "type": "panel",
+                "size": [ "100%", 9 ]
+              }
+            },
+            {
+              "button_panel": {
+                "type": "panel",
+                "size": [ "100%", 20 ],
+                "$button_layout|default": "common.empty_panel",
+                "controls": [
+                  { "button_layout@$button_layout": {} }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "add_on_only@progress_dialog_dx.simple_popup_dialog_base": {
+    "$title_text": "progressScreen.dialog.title.onlyBehavior",
+    "$description_text": "progressScreen.dialog.message.onlyBehavior",
+
+    "$button_layout": "progress_dialog_dx.two_buttons_panel",
+    "$middle_button_press": "button.join_and_download_all",
+    "$middle_button_text": "#join_and_download",
+    "$bottom_button_press": "button.leave",
+    "$bottom_button_text": "progressScreen.dialog.button.leave"
+  },
+
+  "add_on_confirmation@progress_dialog_dx.simple_popup_dialog_base": {
+    "$title_text": "progressScreen.dialog.title.scriptConfirm",
+    "$description_text": "progressScreen.dialog.message.scriptConfirm",
+
+    "$button_layout": "progress_dialog_dx.two_buttons_panel",
+    "$middle_button_press": "button.join",
+    "$middle_button_text": "#join_and_download",
+    "$bottom_button_press": "button.leave",
+    "$bottom_button_text": "progressScreen.dialog.button.leave"
+  },
+
+  "add_on_with_optional_texture_pack@progress_dialog_dx.simple_popup_dialog_base": {
+    "$title_text": "progressScreen.dialog.title.behaviorAndResourcePack",
+    "$description_text": "progressScreen.dialog.message.behaviorAndResourcePack",
+
+    "$button_layout": "progress_dialog_dx.three_buttons_panel",
+    "$top_button_press": "button.join_and_download_all",
+    "$top_button_text": "#join_and_download_everything",
+    "$middle_button_press": "button.join_and_download_needed",
+    "$middle_button_text": "#join_and_download_only_add_on",
+    "$bottom_button_press": "button.leave",
+    "$bottom_button_text": "progressScreen.dialog.button.leave"
+  },
+
+  "add_on_with_texture_pack@progress_dialog_dx.simple_popup_dialog_base": {
+    "$title_text": "progressScreen.dialog.title.behaviorAndResourcePack",
+    "$description_text": "progressScreen.dialog.message.behaviorAndResourcePack",
+
+    "$button_layout": "progress_dialog_dx.two_buttons_panel",
+    "$middle_button_press": "button.join_and_download_all",
+    "$middle_button_text": "#join_and_download",
+    "$bottom_button_press": "button.leave",
+    "$bottom_button_text": "progressScreen.dialog.button.leave"
+  },
+
+  "texture_pack_optional@progress_dialog_dx.simple_popup_dialog_base": {
+    "$title_text": "progressScreen.dialog.title.resourcePack",
+    "$description_text": "progressScreen.dialog.message.resourcePackOptional",
+
+    "$button_layout": "progress_dialog_dx.two_buttons_panel",
+    "$middle_button_press": "button.join_and_download_all",
+    "$middle_button_text": "#join_and_download",
+    "$bottom_button_press": "button.join",
+    "$bottom_button_text": "progressScreen.dialog.button.join"
+  },
+
+  "texture_pack_required@progress_dialog_dx.simple_popup_dialog_base": {
+    "$title_text": "progressScreen.dialog.title.resourcePack",
+    "$description_text": "progressScreen.dialog.message.resourcePackRequired",
+
+    "$button_layout": "progress_dialog_dx.two_buttons_panel",
+    "$middle_button_press": "button.join_and_download_all",
+    "$middle_button_text": "#join_and_download",
+    "$bottom_button_press": "button.leave",
+    "$bottom_button_text": "progressScreen.dialog.button.leave"
+  },
+
+  "texture_pack_raytracing_optional@progress_dialog_dx.simple_popup_dialog_base": {
+    "$title_text": "progressScreen.dialog.title.resourcePack",
+    "$description_text": "progressScreen.dialog.message.resourcePackOptional.rayTracing.line1",
+    "$description_text2": "progressScreen.dialog.message.resourcePackOptional.rayTracing.line2",
+    "$has_second_line": true,
+
+    "$button_layout": "progress_dialog_dx.two_buttons_panel",
+    "$middle_button_press": "button.join_and_download_all",
+    "$middle_button_text": "#join_and_download",
+    "$bottom_button_press": "button.join",
+    "$bottom_button_text": "progressScreen.dialog.button.join"
+  },
+
+  "texture_pack_raytracing_required@progress_dialog_dx.simple_popup_dialog_base": {
+    "$title_text": "progressScreen.dialog.title.resourcePack",
+    "$description_text": "progressScreen.dialog.message.resourcePackRequired.rayTracing.line1",
+    "$description_text2": "progressScreen.dialog.message.resourcePackRequired.rayTracing.line2",
+    "$has_second_line": true,
+
+    "$button_layout": "progress_dialog_dx.two_buttons_panel",
+    "$middle_button_press": "button.join_and_download_all",
+    "$middle_button_text": "#join_and_download",
+    "$bottom_button_press": "button.leave",
+    "$bottom_button_text": "progressScreen.dialog.button.leave"
+  },
+
+  "popup_dialog_factory": {
+    "type": "factory",
+    "control_ids": {
+      "test": "dialog@progress.popup_dialog_base",
+      "add_on_only": "add_on_only@progress_dialog_dx.add_on_only",
+      "add_on_confirmation": "add_on_only@progress_dialog_dx.add_on_confirmation",
+      "add_on_with_optional_texture_pack": "add_on_only@progress_dialog_dx.add_on_with_optional_texture_pack",
+      "add_on_with_texture_pack": "add_on_only@progress_dialog_dx.add_on_with_texture_pack",
+      "texture_pack_optional": "add_on_only@progress_dialog_dx.texture_pack_optional",
+      "texture_pack_required": "add_on_only@progress_dialog_dx.texture_pack_required",
+      "texture_pack_raytracing_optional": "add_on_only@progress_dialog_dx.texture_pack_raytracing_optional",
+      "texture_pack_raytracing_required": "add_on_only@progress_dialog_dx.texture_pack_raytracing_required"
+    }
+  }
+}

@@ -1,0 +1,583 @@
+{
+  "namespace": "manifest_validation_dx",
+
+  "clipboard_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/uidx/icons/clipboard"
+  },
+
+  "reflesh_icon": {
+    "type": "image",
+    "size": [ 12, 12 ],
+    "texture": "textures/uidx/icons/reset"
+  },
+
+  "delete_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/uidx/icons/pack_delete"
+  },
+
+  "text_label@common_dx.global_label": {
+    "shadow": true,
+    "color": "$main_header_text_color",
+    "size": [ "default", "default" ],
+    "layer": 10,
+    "text": "$text_label",
+    "bindings": [
+      {
+        "binding_name": "$text_label",
+        "binding_condition": "visible"
+      }
+    ]
+  },
+
+  "error_pack_content_layout@java_gui_common.text_input_java": {
+    "layer": 6,
+    "size": [ "100%", "100%c+4px" ],
+    "controls": [
+      {
+        "error_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%-4px", "100%c" ],
+          "controls": [
+            {
+              "header_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%cm" ],
+                "layer": 10,
+                "controls": [
+                  {
+                    "error_type_panel@common_dx.global_label": {
+                      "shadow": true,
+                      "size": [ "100%-20px", "default" ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 0, 3 ],
+                      "text": "#error_type_label",
+                      "color": "$main_header_text_color",
+                      "bindings": [
+                        {
+                          "binding_collection_name": "pack_errors",
+                          "binding_name": "#error_type_label",
+                          "binding_type": "collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "clipboard_button@common_buttons_dx.black_button": {
+                      "size": [ 16, 16 ],
+                      "layer": 7,
+                      "$pressed_button_name": "button.copy_to_clipboard",
+                      "$button_content": "manifest_validation_dx.clipboard_icon",
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [ 0, 0 ],
+                      "bindings": [
+                        {
+                          "binding_name": "#has_errors_or_warnings",
+                          "binding_name_override": "#visible"
+                        },
+                        {
+                          "binding_collection_name": "pack_errors",
+                          "binding_type": "collection_details"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "categorie_panel_1": {
+                "type": "panel",
+                "size": [ "100%", 3 ],
+                "bindings": [
+                  {
+                    "binding_name": "#has_errors_or_warnings",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "object_name": {
+                      "type": "image",
+                      "texture": "textures/uidx/global/color_base",
+                      "layer": 5,
+                      "size": [ "100%-20px", 1 ],
+                      "offset": [ 0, 1 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "text_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c+6px" ],
+                "layer": 10,
+                "controls": [
+                  {
+                    "error_text_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", "100%cm" ],
+                      "offset": [ 0, 3 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "bindings": [
+                        {
+                          "binding_name": "#has_errors_or_warnings",
+                          "binding_name_override": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "error_text@common_dx.global_label": {
+                            "shadow": true,
+                            "size": [ 30, 10 ],
+                            "text": "manifestvalidation.issue",
+                            "color": "$main_header_text_color"
+                          }
+                        },
+                        {
+                          "space": {
+                            "type": "panel",
+                            "size": [ 4, 10 ]
+                          }
+                        },
+                        {
+                          "offset": {
+                            "type": "panel",
+                            "size": [ "fill", "100%c" ],
+                            "controls": [
+                              {
+                                "error_label@common_dx.global_label": {
+                                  "shadow": true,
+                                  "color": "$main_header_text_color",
+                                  "size": [ "100% - 8px", "default" ],
+                                  "offset": [ 0, 0 ],
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left",
+                                  "text": "#error_content_label",
+                                  "bindings": [
+                                    {
+                                      "binding_collection_name": "pack_errors",
+                                      "binding_name": "#error_content_label",
+                                      "binding_type": "collection"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "pack_info_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "top_panel": {
+          "type": "panel",
+          "size": [ 1, 4 ]
+        }
+      },
+      {
+        "pack_secondary_info@java_gui_common.text_input_java": {
+          "size": [ "100%", "100%c+4px" ],
+          "controls": [
+            {
+              "main_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ "100%-4px", "100%c" ],
+                "controls": [
+                  {
+                    "header": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", 32 ],
+                      "controls": [
+                        {
+                          "icon@manifest_validation.icon_image": {
+                            "layer": 1,
+                            "size": [ 32, 32 ]
+                          }
+                        },
+                        {
+                          "padding_0": {
+                            "type": "panel",
+                            "size": [ 2, 32 ]
+                          }
+                        },
+                        {
+                          "text_panel": {
+                            "type": "panel",
+                            "size": [ "fill", 32 ],
+                            "controls": [
+                              {
+                                "title@manifest_validation_dx.text_label": {
+                                  "layer": 1,
+                                  "size": [ "100%", 10 ],
+                                  "$text_label": "#pack_header_title",
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left"
+                                }
+                              },
+                              {
+                                "description@manifest_validation_dx.text_label": {
+                                  "layer": 1,
+                                  "size": [ "100%", 20 ],
+                                  "$text_label": "#pack_header_description",
+                                  "color": [ 0.5, 0.5, 0.5 ],
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left",
+                                  "offset": [ 0, 11 ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "padding_1": {
+                            "type": "panel",
+                            "size": [ 2, 32 ]
+                          }
+                        },
+                        {
+                          "right_buttons": {
+                            "type": "panel",
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "size": [ 16, 32 ],
+                            "controls": [
+                              {
+                                "refresh_button@common_buttons_dx.black_button": {
+                                  "size": [ 16, 16 ],
+                                  "layer": 7,
+                                  "$pressed_button_name": "button.refresh_manifest",
+                                  "$button_content": "manifest_validation_dx.reflesh_icon",
+                                  "anchor_from": "top_right",
+                                  "anchor_to": "top_right",
+                                  "offset": [ 0, 0 ],
+                                  "bindings": [
+                                    {
+                                      "binding_name": "(not #is_working)",
+                                      "binding_name_override": "#enabled"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "delete_button@common_buttons_dx.black_button": {
+                                  "size": [ 16, 16 ],
+                                  "layer": 7,
+                                  "$pressed_button_name": "button.delete_manifest",
+                                  "$button_content": "manifest_validation_dx.delete_icon",
+                                  "anchor_from": "bottom_right",
+                                  "anchor_to": "bottom_right",
+                                  "offset": [ 0, 0 ],
+                                  "bindings": [
+                                    {
+                                      "binding_name": "(not #is_working)",
+                                      "binding_name_override": "#enabled"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "categorie_panel_1": {
+                      "type": "panel",
+                      "size": [ "100%", 3 ],
+                      "controls": [
+                        {
+                          "object_name": {
+                            "type": "image",
+                            "texture": "textures/uidx/global/color_base",
+                            "layer": 5,
+                            "size": [ "100%-20px", 1 ],
+                            "offset": [ 0, 1 ],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "pack_id_panel": {
+                      "type": "panel",
+                      "size": [ "100%", 16 ],
+                      "layer": 10,
+                      "controls": [
+                        {
+                          "title_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%", 10 ],
+                            "offset": [ 0, 3 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "controls": [
+                              {
+                                "title_text@common_dx.global_label": {
+                                  "shadow": true,
+                                  "size": [ "default", 10 ],
+                                  "text": "manifestvalidation.packid",
+                                  "color": "$main_header_text_color"
+                                }
+                              },
+                              {
+                                "space": {
+                                  "type": "panel",
+                                  "size": [ 4, 10 ]
+                                }
+                              },
+                              {
+                                "offset": {
+                                  "type": "panel",
+                                  "size": [ "fill", 10 ],
+                                  "controls": [
+                                    {
+                                      "title@manifest_validation_dx.text_label": {
+                                        "anchor_from": "top_left",
+                                        "anchor_to": "top_left",
+                                        "layer": 1,
+                                        "size": [ "default", 10 ],
+                                        "$text_label": "#pack_id"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "categorie_panel_2": {
+                      "type": "panel",
+                      "size": [ "100%", 3 ],
+                      "controls": [
+                        {
+                          "object_name": {
+                            "type": "image",
+                            "texture": "textures/uidx/global/color_base",
+                            "layer": 5,
+                            "size": [ "100%-20px", 1 ],
+                            "offset": [ 0, 1 ],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "pack_version_panel": {
+                      "type": "panel",
+                      "size": [ "100%", 16 ],
+                      "offset": [ 0, 3 ],
+                      "layer": 10,
+                      "controls": [
+                        {
+                          "title_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%", 10 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "controls": [
+                              {
+                                "version_text@common_dx.global_label": {
+                                  "shadow": true,
+                                  "size": [ "default", 10 ],
+                                  "text": "manifestvalidation.packversion",
+                                  "color": "$main_header_text_color"
+                                }
+                              },
+                              {
+                                "space": {
+                                  "type": "panel",
+                                  "size": [ 4, 10 ]
+                                }
+                              },
+                              {
+                                "offset": {
+                                  "type": "panel",
+                                  "size": [ "fill", 10 ],
+                                  "controls": [
+                                    {
+                                      "version@manifest_validation_dx.text_label": {
+                                        "anchor_from": "top_left",
+                                        "anchor_to": "top_left",
+                                        "layer": 1,
+                                        "size": [ "default", 10 ],
+                                        "$text_label": "#pack_version"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "categorie_panel_3": {
+                      "type": "panel",
+                      "size": [ "100%", 3 ],
+                      "controls": [
+                        {
+                          "object_name": {
+                            "type": "image",
+                            "texture": "textures/uidx/global/color_base",
+                            "layer": 5,
+                            "size": [ "100%-20px", 1 ],
+                            "offset": [ 0, 1 ],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path_panel": {
+                      "type": "panel",
+                      "size": [ "100%", "100%c+6px" ],
+                      "layer": 10,
+                      "controls": [
+                        {
+                          "title_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%", "100%cm" ],
+                            "offset": [ 0, 3 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "controls": [
+                              {
+                                "path_text@common_dx.global_label": {
+                                  "shadow": true,
+                                  "size": [ "default", 10 ],
+                                  "text": "manifestvalidation.filelocation",
+                                  "color": "$main_header_text_color"
+                                }
+                              },
+                              {
+                                "space": {
+                                  "type": "panel",
+                                  "size": [ 4, 10 ]
+                                }
+                              },
+                              {
+                                "offset": {
+                                  "type": "panel",
+                                  "size": [ "fill", "100%c" ],
+                                  "controls": [
+                                    {
+                                      "path@manifest_validation_dx.text_label": {
+                                        "anchor_from": "top_left",
+                                        "anchor_to": "top_left",
+                                        "size": [ "100%-4px", "default" ],
+                                        "$text_label": "#pack_path"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "error_list_categorie_label@controls_dx.categories_text_panel": {
+          "$categorie_text": "manifestvalidation.errorlist",
+          "$categorie_color|default": [ 1.0, 1.0, 0.33 ],
+          "$categorie_text_offset": [ 0, 8 ],
+          "size": [ "100%", 28 ]
+        }
+      },
+      {
+        "error@manifest_validation.error_content_grid": {
+          "factory": {
+            "name": "pack_error_factory",
+            "control_name": "manifest_validation_dx.error_pack_content_layout"
+          }
+        }
+      },
+      {
+        "end_panel": {
+          "type": "panel",
+          "size": [ 1, 4 ]
+        }
+      }
+    ]
+  },
+  
+  "pack_info_label@settings_dx.base_label": {
+    "text": "manifestvalidation.title",
+    "offset": [ 0, 4 ]
+  },
+
+  "confirm_button@common_buttons_dx.main_button_200": {
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "gui.confirm",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -9 ]
+  },
+
+  "manifest_validation_screen_center": {
+    "type": "panel",
+    "controls": [
+      { "bg@java_gui_common.options_background": { "layer": -3 } }
+    ]
+  },
+
+  "manifest_validation_screen_content@common_menus_dx.java_edition_menu_panel_template": {
+    "$scroll_view_port_size": [ 324, "100%" ],
+    "$top_content": "manifest_validation_dx.pack_info_label",
+    "$bottom_content": "manifest_validation_dx.confirm_button",
+    "$scrolling_content": "manifest_validation_dx.pack_info_stack_panel"
+  }
+}

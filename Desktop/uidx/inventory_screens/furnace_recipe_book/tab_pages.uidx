@@ -1,0 +1,47 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "crisxolt_furnace_tab_pages",
+
+  /*//// Pages ////*/
+
+  "page_1@recipe_book_dx.recipe_book_panel_content": {
+    "$ignore_prev_button": true,
+    "$number_left": "1",
+    "$panel_content": "$panel_content_1",
+    "$next_button_view_binding_name": "($tab_page + '_page_2_button_toggle')",
+    "$next_toggle_name": "($tab_page + '_page_1_2_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_2_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_2@recipe_book_dx.recipe_book_panel_content": {
+    "$number_left": "2",
+    "$panel_content": "$panel_content_2",
+    "$prev_button_view_binding_name": "($tab_page + '_page_1_button_toggle')",
+    "$next_button_view_binding_name": "($tab_page + '_page_3_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_1_2_tabs')",
+    "$next_toggle_name": "($tab_page + '_page_2_3_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_3_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_3@recipe_book_dx.recipe_book_panel_content": {
+    "$number_left": "3",
+    "$panel_content": "$panel_content_3",
+    "$prev_button_view_binding_name": "($tab_page + '_page_2_button_toggle')",
+    "$prev_toggle_name": "($tab_page + '_page_2_3_tabs')"
+  }
+}
