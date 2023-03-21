@@ -2,6 +2,8 @@
 {
   /*  Alphabetical order please (in each group) :)  */
   "ui_defs": [
+    ////////*/ Animated UI /*////////
+    "uidx/animated_ui/colorful_containers_common.uidx",
     ////////*/ Common /*////////
     "uidx/common_sections/ui_common.uidx",
     "uidx/common_sections/ui_template_dialogs.uidx",

@@ -3,9 +3,9 @@
     "variables": [
       {
         "requires": "$desktop_screen",
-        "$screen_content": "trade2_new_dx.center_screen",
-        "$screen_center_content": "trade2_new_dx.no_safezone_center_screen",
-        "$screen_bg_content": "trade2_new_dx.full_screen",
+        "$screen_content": "trade2_dx.center_screen",
+        "$screen_center_content": "trade2_dx.no_safezone_center_screen",
+        "$screen_bg_content": "trade2_dx.full_screen",
         "$gamepad_cursor": true
       },
       {

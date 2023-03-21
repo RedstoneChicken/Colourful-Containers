@@ -3,5 +3,7 @@
 {
   "namespace": "dropper_java_dx",
 
-  "dialog_bg_dropper@dispenser_java_dx.dialog_bg_dispenser": { }
+
+  "dialog_bg_dropper@dispenser_java_dx.dialog_bg_dispenser": { "texture": "assets/uidx/textures/gui/container/dropper" }
+
 }

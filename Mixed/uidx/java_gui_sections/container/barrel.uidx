@@ -5,5 +5,6 @@
 
   /*////// Base //////*/
 
-  "dialog_bg_barrel@generic_54_java_dx.dialog_bg_chest_small": { }
+  "dialog_bg_barrel@generic_54_java_dx.dialog_bg_chest_small": { "$chest_texture": "assets/uidx/textures/gui/container/barrel" }
+
 }

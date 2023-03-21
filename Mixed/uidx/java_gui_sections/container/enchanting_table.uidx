@@ -25,6 +25,9 @@
       { "requires": "($enchanting_table_resolution = '2048x')", "$enchanting_table_uv_size": [ 1408, 1328 ] },
       { "requires": "($enchanting_table_resolution = '4096x')", "$enchanting_table_uv_size": [ 2816, 2656 ] },
       { "requires": "($enchanting_table_resolution = '8192x')", "$enchanting_table_uv_size": [ 5632, 5312 ] }
+    ],
+    "controls": [
+      { "enchant@anm_colorful_gui_common.enchant": { } }
     ]
   },
 

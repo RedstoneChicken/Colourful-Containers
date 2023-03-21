@@ -1,0 +1,122 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "anm_colorful_gui_common",
+
+  ////*/ Base /*////
+
+  "anim_uv_base": {
+    "anim_type": "uv",
+    "next": "$next_frame", 
+    "from": "$uv_frame",
+    "to": "$uv_frame",
+    "duration": 0.1
+  },
+
+  ////*/ Ender Eye /*////
+
+  "ender_eye": {
+    "type": "image",
+    "layer": 2,
+    "texture": "textures/animated_ui/colorful_containers/ender_eye",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 83, 6 ],
+    "size": [ 10, 10 ],
+    "uv_size": [ 10, 10 ],
+    "uv": "@anm_colorful_gui_common.ender_eye_00",
+    "disable_anim_fast_forward": true
+  },
+  
+  "ender_eye_00@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*00=0 */ [ 0, 0  ], "$next_frame": "@anm_colorful_gui_common.ender_eye_01", "duration": 2.00 },
+  "ender_eye_01@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*01=3 */ [ 0, 30 ], "$next_frame": "@anm_colorful_gui_common.ender_eye_02", "duration": 0.20 },
+  "ender_eye_02@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*02=4 */ [ 0, 40 ], "$next_frame": "@anm_colorful_gui_common.ender_eye_03" },
+  "ender_eye_03@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*03=3 */ [ 0, 30 ], "$next_frame": "@anm_colorful_gui_common.ender_eye_04", "duration": 0.20 },
+  "ender_eye_04@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*04=0 */ [ 0, 0  ], "$next_frame": "@anm_colorful_gui_common.ender_eye_05", "duration": 0.10 },
+  "ender_eye_05@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*05=5 */ [ 0, 50 ], "$next_frame": "@anm_colorful_gui_common.ender_eye_06", "duration": 0.20 },
+  "ender_eye_06@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*06=6 */ [ 0, 60 ], "$next_frame": "@anm_colorful_gui_common.ender_eye_07" },
+  "ender_eye_07@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*07=7 */ [ 0, 70 ], "$next_frame": "@anm_colorful_gui_common.ender_eye_08", "duration": 0.20 },
+  "ender_eye_08@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*08=2 */ [ 0, 20 ], "$next_frame": "@anm_colorful_gui_common.ender_eye_09", "duration": 0.20 },
+  "ender_eye_09@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*09=10*/ [ 0, 10 ], "$next_frame": "@anm_colorful_gui_common.ender_eye_10", "duration": 0.20 },
+  "ender_eye_10@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*10=0 */ [ 0, 0  ], "$next_frame": "@anm_colorful_gui_common.ender_eye_11", "duration": 12.0 },
+  "ender_eye_11@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*11=8 */ [ 0, 80 ], "$next_frame": "@anm_colorful_gui_common.ender_eye_00", "duration": 2.00 },
+
+  ////*/ Compass /*////
+
+  "compass": {
+    "type": "image",
+    "layer": 2,
+    "texture": "textures/animated_ui/colorful_containers/compass",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -7, 6 ],
+    "size": [ 21, 21 ],
+    "uv_size": [ 21, 21 ],
+    "uv": "@anm_colorful_gui_common.compass_00",
+    "disable_anim_fast_forward": true
+  },
+  
+  "compass_00@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*00=0 */ [ 0, 0.0 ], "$next_frame": "@anm_colorful_gui_common.compass_01", "duration": 5.0 }, // The original duration was 20.0 (optfine duration value 200)
+  "compass_01@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*01=1 */ [ 0, 21  ], "$next_frame": "@anm_colorful_gui_common.compass_02" },
+  "compass_02@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*02=2 */ [ 0, 42  ], "$next_frame": "@anm_colorful_gui_common.compass_03", "duration": 0.2 },
+  "compass_03@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*03=3 */ [ 0, 63  ], "$next_frame": "@anm_colorful_gui_common.compass_04", "duration": 0.3 },
+  "compass_04@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*04=2 */ [ 0, 42  ], "$next_frame": "@anm_colorful_gui_common.compass_05", "duration": 0.2 },
+  "compass_05@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*05=1 */ [ 0, 21  ], "$next_frame": "@anm_colorful_gui_common.compass_06" },
+  "compass_06@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*06=0 */ [ 0, 0.0 ], "$next_frame": "@anm_colorful_gui_common.compass_07" },
+  "compass_07@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*07=7 */ [ 0, 147 ], "$next_frame": "@anm_colorful_gui_common.compass_08" },
+  "compass_08@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*08=8 */ [ 0, 168 ], "$next_frame": "@anm_colorful_gui_common.compass_09" },
+  "compass_09@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*09=9 */ [ 0, 189 ], "$next_frame": "@anm_colorful_gui_common.compass_10" },
+  "compass_10@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*10=10*/ [ 0, 210 ], "$next_frame": "@anm_colorful_gui_common.compass_11", "duration": 0.2 },
+  "compass_11@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*11=9 */ [ 0, 189 ], "$next_frame": "@anm_colorful_gui_common.compass_12" },
+  "compass_12@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*12=8 */ [ 0, 168 ], "$next_frame": "@anm_colorful_gui_common.compass_13" },
+  "compass_13@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*13=7 */ [ 0, 147 ], "$next_frame": "@anm_colorful_gui_common.compass_14" },
+  "compass_14@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*14=0 */ [ 0, 0.0 ], "$next_frame": "@anm_colorful_gui_common.compass_15" },
+  "compass_15@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*15=1 */ [ 0, 21  ], "$next_frame": "@anm_colorful_gui_common.compass_16" },
+  "compass_16@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*16=2 */ [ 0, 42  ], "$next_frame": "@anm_colorful_gui_common.compass_17" },
+  "compass_17@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*17=3 */ [ 0, 63  ], "$next_frame": "@anm_colorful_gui_common.compass_18" },
+  "compass_18@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*18=4 */ [ 0, 84  ], "$next_frame": "@anm_colorful_gui_common.compass_19" },
+  "compass_19@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*19=5 */ [ 0, 105 ], "$next_frame": "@anm_colorful_gui_common.compass_20", "duration": 0.2 },
+  "compass_20@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*20=6 */ [ 0, 126 ], "$next_frame": "@anm_colorful_gui_common.compass_21", "duration": 0.3 },
+  "compass_21@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*21=5 */ [ 0, 105 ], "$next_frame": "@anm_colorful_gui_common.compass_22", "duration": 0.2 },
+  "compass_22@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*22=4 */ [ 0, 84  ], "$next_frame": "@anm_colorful_gui_common.compass_23" },
+  "compass_23@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*23=3 */ [ 0, 63  ], "$next_frame": "@anm_colorful_gui_common.compass_24" },
+  "compass_24@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*24=2 */ [ 0, 42  ], "$next_frame": "@anm_colorful_gui_common.compass_25" },
+  "compass_25@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*25=1 */ [ 0, 21  ], "$next_frame": "@anm_colorful_gui_common.compass_26" },
+  "compass_26@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*26=0 */ [ 0, 0.0 ], "$next_frame": "@anm_colorful_gui_common.compass_27" },
+  "compass_27@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*27=7 */ [ 0, 147 ], "$next_frame": "@anm_colorful_gui_common.compass_28" },
+  "compass_28@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*28=8 */ [ 0, 168 ], "$next_frame": "@anm_colorful_gui_common.compass_29" },
+  "compass_29@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*29=9 */ [ 0, 189 ], "$next_frame": "@anm_colorful_gui_common.compass_30" },
+  "compass_30@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*30=10*/ [ 0, 210 ], "$next_frame": "@anm_colorful_gui_common.compass_31", "duration": 0.2 },
+  "compass_31@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*31=9 */ [ 0, 189 ], "$next_frame": "@anm_colorful_gui_common.compass_32" },
+  "compass_32@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*32=8 */ [ 0, 168 ], "$next_frame": "@anm_colorful_gui_common.compass_33" },
+  "compass_33@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*33=7 */ [ 0, 147 ], "$next_frame": "@anm_colorful_gui_common.compass_34" },
+  "compass_34@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*34=0 */ [ 0, 0.0 ], "$next_frame": "@anm_colorful_gui_common.compass_35" },
+  "compass_35@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*35=1 */ [ 0, 21  ], "$next_frame": "@anm_colorful_gui_common.compass_36" },
+  "compass_36@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*36=2 */ [ 0, 42  ], "$next_frame": "@anm_colorful_gui_common.compass_37", "duration": 0.2 },
+  "compass_37@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*37=1 */ [ 0, 21  ], "$next_frame": "@anm_colorful_gui_common.compass_38" },
+  "compass_38@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*38=0 */ [ 0, 0.0 ], "$next_frame": "@anm_colorful_gui_common.compass_39", "duration": 0.2 },
+  "compass_39@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*39=7 */ [ 0, 147 ], "$next_frame": "@anm_colorful_gui_common.compass_00", "duration": 0.2 },
+
+  ////*/ Enchant /*////
+
+  "enchant": {
+    "type": "image",
+    "layer": 2,
+    "texture": "textures/animated_ui/colorful_containers/enchant",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 15, 47 ],
+    "size": [ 16, 16 ],
+    "uv_size": [ 16, 16 ],
+    "uv": "@anm_colorful_gui_common.enchant_00",
+    "disable_anim_fast_forward": true
+  },
+  
+  "enchant_00@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*00=0*/ [ 0, 0  ], "$next_frame": "@anm_colorful_gui_common.enchant_01", "duration": 0.20 },
+  "enchant_01@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*01=1*/ [ 0, 16 ], "$next_frame": "@anm_colorful_gui_common.enchant_02", "duration": 0.20 },
+  "enchant_02@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*02=2*/ [ 0, 32 ], "$next_frame": "@anm_colorful_gui_common.enchant_03", "duration": 0.20 },
+  "enchant_03@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*03=3*/ [ 0, 48 ], "$next_frame": "@anm_colorful_gui_common.enchant_04", "duration": 0.20 },
+  "enchant_04@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*04=4*/ [ 0, 64 ], "$next_frame": "@anm_colorful_gui_common.enchant_05", "duration": 0.20 },
+  "enchant_05@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*05=5*/ [ 0, 80 ], "$next_frame": "@anm_colorful_gui_common.enchant_06", "duration": 0.20 },
+  "enchant_06@anm_colorful_gui_common.anim_uv_base": { "$uv_frame": /*06=6*/ [ 0, 96 ], "$next_frame": "@anm_colorful_gui_common.enchant_00", "duration": 0.20 }
+}

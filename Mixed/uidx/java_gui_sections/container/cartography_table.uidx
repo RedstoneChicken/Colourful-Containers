@@ -25,6 +25,9 @@
       { "requires": "($cartography_table_resolution = '2048x')", "$cartography_table_uv_size": [ 1408, 1328 ] },
       { "requires": "($cartography_table_resolution = '4096x')", "$cartography_table_uv_size": [ 2816, 2656 ] },
       { "requires": "($cartography_table_resolution = '8192x')", "$cartography_table_uv_size": [ 5632, 5312 ] }
+    ],
+        "controls": [
+      { "compass@anm_colorful_gui_common.compass": { } }
     ]
   },
 
