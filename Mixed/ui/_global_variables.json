@@ -83,11 +83,11 @@
   //////// Container ////////
   
   "$ignore_flying_item": true,
-  "$vdx_inventory_title_text_color": [ 0.3, 0.3, 0.3 ],
-  "$vdx_container_title_text_color": [ 1, 1, 1 ],
-  "$vdx_2x2_crafting_title_text_color": [ 0.3, 0.3, 0.3 ],
-  "$vdx_3x3_crafting_title_text_color": [ 1, 1, 1 ],
-  "$vdx_recipe_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_inventory_title_text_color": [ 1.0, 1.0, 1.0 ],
+  "$vdx_container_title_text_color": [ 1.0, 1.0, 1.0 ],
+  "$vdx_2x2_crafting_title_text_color": [ 1.0, 1.0, 1.0 ],
+  "$vdx_3x3_crafting_title_text_color": [ 1.0, 1.0, 1.0 ],
+  "$vdx_recipe_title_text_color": [ 1.0, 1.0, 1.0 ],
 
   "$custom_durability_bar": true,
 
