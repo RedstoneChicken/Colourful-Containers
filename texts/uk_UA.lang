@@ -1,0 +1,167 @@
+﻿map.position=Block: %s %s %s
+
+##  Start
+menu.play=Грати у гру ##
+menu.options=Параметри…
+menu.quit=Вийти з гри
+menu.store=Minecraft Маркетплейс
+
+##  Accessibility Settings
+options.darknessEffectModifier=Пульсація темряви
+options.darknessEffectModifier.message=Керує тим, наскільки пульсує ефект темряви, коли вам його дає боронитель або скалковий крикун.
+
+##  Controls Settings
+options.mouse_settings=Налаштування миші…
+options.mouse_settings.title=Налаштування миші
+controls.keybinds=Призначення клавіш…
+controls.keybinds.title=Призначення клавіш
+
+options.joystick_settings=Налаштування Joystick…
+options.joystick_settings.title=Налаштування Joystick
+
+##  Video Settings
+options.graphics.fancy.tooltip=«Красива» графіка збалансовує продуктивність і якість для більшості пристроїв. Погода, хмари та частинки можуть не з’являтися за прозорими блоками або водою.
+options.graphics.fast.tooltip=«Швидка» графіка зменшує кількість видимого дощу та снігу. Ефекти прозорості вимкнені для різних блоків, наприклад, для листя.
+
+options.vsync=VSync
+
+options.renderClouds=Хмари
+
+options.maxFramerate=Частота кадрів
+
+options.renderDistance=Промальовка
+options.renderDistanceFormat=%s чанків
+options.renderDistanceRecommendedFormat=%s чанків
+
+options.showautosaveicon=Інд-р автозберігання
+
+##  Packs
+pack.available.title=§lДоступні
+pack.selected.title=§lОбрані
+
+resourcePack.title=Вибір пакетів ресурсів
+behaviorPack.title=Вибір пакетів поведінки
+
+selectWorld.resourcePack=Ресурсів
+selectWorld.behaviorPack=Поведінки
+
+pack.resources.dropInfo=Перетягніть файли в каталог папки "resource_packs", щоб додати пакети
+pack.behavior.dropInfo=Перетягніть файли в каталог папки "behavior_packs", щоб додати пакети
+
+## Structure Editor
+
+structure_block.position=Відносна позиція
+structure_block.size=Розмір структури
+structure_block.integrity_and_seed=Цілісність структури та зерно
+structure_block.detect_size=Виявити розмір і положення структури:
+
+structure_block.mode_info.save=Режим збереження — запис у файл
+structure_block.mode_info.load=Режим завантаження — завантаження з файлу
+structure_block.mode_info.corner=Кутовий режим — маркер розташування та розміру
+structure_block.exportTo=Експортувати у файл:
+
+structure_block.mode.export=Експорт
+
+structure_block.button.detect_size=ВИЯВИТИ
+structure_block.button.save=ЗБЕРЕГТИ
+structure_block.button.load=ІМПОРТ
+structure_block.button.structureExport=MCS
+structure_block.button.3dExport=3D OBJ
+
+##  Recipe Book
+gui.recipebook.search_hint=§oПошук…
+gui.recipebook.toggleRecipes.all=Показати всі
+gui.recipebook.toggleRecipes.craftable=Доступні для створення
+gui.recipebook.toggleRecipes.smeltable=Доступні для плавлення
+gui.recipebook.toggleRecipes.blastable=Доступні для переплавки
+gui.recipebook.toggleRecipes.smokable=Доступні для закопчення
+
+## Creative
+inventory.binSlot=Знищити предмет
+
+##  Trade v2
+merchant.deprecated=Селяни поновлюють запаси до двох разів на добу.
+
+##  Worlds
+selectWorld.tooltip.beta=Не забудьте створити резервну копію цього світу перш ніж ви завантажите його в цьому снапшоті.
+
+##  Realms
+mco.selectServer.popup=У Realms можна безпечно та просто насолоджуватись онлайн до 10 друзів водночас. Він підтримує чимало мініігор і власних світів! Тільки власник Realm платить.
+
+##  Toggle OFF/ON
+options.off=Вимк.
+options.on=Увімк.
+
+##  Realms
+mco.configure.world.title=Налаштувати Realm:
+mco.configure.world.name.binding=%s
+
+mco.invites.title=Відкладені запрошення
+mco.invites.pending=Нові запрошення!
+mco.invites.nopending=Нема очікуваних запрошень!
+mco.invites.button.accept=Прийняти
+mco.invites.button.reject=Відхилити
+
+## Gamerule
+selectWorld.gameRules=Правила гри
+  
+editGamerule.title=Налаштування ігрових правил
+editGamerule.default=За замовчуванням: 
+
+gamerule.doImmediateRespawn=Відроджуватися миттєво
+gamerule.keepInventory=Залишати інвентар після смерти
+gamerule.mobGriefing=Дозволяти руйнівні дії мобів
+gamerule.naturalRegeneration=Відновлення здоров’я
+gamerule.spawnRadius=Радіус місця відродження
+gamerule.doMobSpawning=Створювати мобів
+gamerule.doMobSpawning.description=Деякі істоти можуть мати окремі правила
+gamerule.doEntityDrops=Випадання речей із сутностей
+gamerule.doEntityDrops.description=Керує випаданням предметів із вагонеток (у тому числі інвентарів), рамок, човнів тощо.
+gamerule.doMobLoot=Випадання здобичі з мобів
+gamerule.doMobLoot.description=Керує випаданням предметів із мобів, у тому числі сфер досвіду
+gamerule.doTileDrops=Випадання блоків
+gamerule.doTileDrops.description=Керує випаданням ресурсів із блоків, у тому числі сфер досвіду
+gamerule.doDaylightCycle=Зміна дня та ночі
+gamerule.doFireTick=Оновлювати вогонь
+gamerule.doWeatherCycle=Оновлювати погоду
+gamerule.randomTickSpeed=Частота випадкових тактів
+
+gamerule.category.player=§lГравець
+gamerule.category.mobs=§lМоби
+gamerule.category.spawning=§lПоява
+gamerule.category.drops=§lВипадання ресурсів
+gamerule.category.updates=§lОновлення світу
+gamerule.category.misc=§lРізне
+
+##  Raid Texts Input
+raid.name=Raid	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
+
+##  Raid Texts Output
+bar.event.raid.name=Рейд	#
+bar.event.raid.remaining.2=Рейд - Залишилося нападників: 2	#
+bar.event.raid.remaining.1=Рейд - Залишилося нападників: 1	#
+bar.event.raid.remaining.0=Рейд - Залишилося нападників: 0	#
+bar.event.raid.victory=Рейд - Перемога	#
+bar.event.raid.defeat=Рейд - Поразка	#
+
+##  Audio Settings
+soundCategory.ambient=Середовище
+soundCategory.block=Блоки
+soundCategory.hostile=Ворожі істоти
+soundCategory.master=Загальна гучність
+soundCategory.music=Музика
+soundCategory.neutral=Дружні істоти
+soundCategory.player=Гравці
+soundCategory.record=Програвач/нотні блоки
+soundCategory.weather=Погода
+
+##  Online Safety
+multiplayerWarning.header=§lПопередження: гра на сторонніх серверах
+multiplayerWarning.message=Увага: Мережева гра, запропонована сторонніми серверами, не належить, не керується та не модерується Mojang Studios чи Microsoft. Під час мережевої гри, ви можете зіткнутися з немодерованими повідомленнями в чаті чи іншими типами користувацького контенту, який може підходити не усім гравцям.
+multiplayerWarning.check=Не показувати це вікно знову
+
+##  Progress
+vdx.loading.percentage=%

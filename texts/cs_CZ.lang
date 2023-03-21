@@ -1,0 +1,13 @@
+﻿##  Raid Texts Input
+raid.name=Raid	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
+
+##  Raid Texts Output
+bar.event.raid.name=Nájezd	#
+bar.event.raid.remaining.2=Nájezd - Zbývá nepřátel: 2	#
+bar.event.raid.remaining.1=Nájezd - Zbývá nepřátel: 1	#
+bar.event.raid.remaining.0=Nájezd - Zbývá nepřátel: 0	#
+bar.event.raid.victory=Nájezd - Vítězství	#
+bar.event.raid.defeat=Nájezd - Porážka	#

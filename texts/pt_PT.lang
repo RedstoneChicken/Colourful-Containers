@@ -1,0 +1,203 @@
+﻿map.position=Block: %s %s %s
+
+##  Start
+menu.play=Jogar	#
+menu.options=Opções...	#
+menu.quit=Sair do jogo	#
+menu.store=Loja Minecraft	#
+
+##  Accessibility Settings
+soundCategory.texttospeech=Voz e fala	#
+options.textBackgroundOpacity=Opacidade do fundo	#
+options.enableChatTextToSpeech=Voz para Chat	#
+options.enableAutoPlatformTextToSpeech=Voz com dispositivo	#
+options.enableUITextToSpeech=Voz para UI	#
+options.enableOpenChatMessage=Ativar Chat	#
+options.darknessEffectModifier=Pulso de escuridão
+options.darknessEffectModifier.message=Controla a intensidade do pulso de escuridão causado por vigilantes ou alarmes de sculk.
+
+##  Controls Settings
+options.mouse_settings=Rato...
+options.mouse_settings.title=Definições do rato
+controls.keybinds=Atalhos...
+controls.keybinds.title=Atalhos
+options.fullKeyboardGameplay=Teclado Completo
+
+options.swapGamepadAB=Alternar botão B/A	#
+options.swapGamepadXY=Alternar botão Y/X	#
+options.gamepadcursorsensitivity=Sensibilidade do Cursor	#
+
+options.joystick_settings=Joystick...
+options.joystick_settings.title=Definições do Joystick
+options.hidegamepadcursor=Ocultar Cursor
+options.hidetooltips=Ocultar Sugestões
+
+##  Video Settings
+options.graphics.fancy.tooltip=Os gráficos elegantes encontram um equilíbrio entre o desempenho e a qualidade para a maioria dos computadores. Os fenómenos atmosféricos, as nuvens e as partículas podem não aparecer atrás de blocos translúcidos e água.
+options.graphics.fast.tooltip=Os gráficos rápidos reduzem a quantidade de chuva e neve visíveis. Os efeitos de transparência são desativados para vários blocos, tais como as folhas das árvores.
+
+options.graphics.fancy=Elegantes
+options.graphics.fast=Rápidos
+
+options.raytracing.renderDistance=Renderizado del trazado de rayos
+
+options.vsync=VSync	#
+options.vsync.off=Não	#
+options.vsync.on=Sim	#
+options.vsync.adaptive=Adaptável	#
+
+options.renderClouds=Nuvens	#
+
+options.maxFramerate=Limite de FPS	#
+
+options.renderDistance=Alcance visual
+options.renderDistanceFormat=%s chunks
+options.renderDistanceRecommendedFormat=%s chunks
+
+options.showautosaveicon=Indicador de gravação
+
+options.fov.toggle=Campo de Visão dinâmico	#
+
+options.thirdperson=Perspetiva	#
+options.thirdperson.firstperson=Primeira	#
+options.thirdperson.thirdpersonback=3º pessoa Costas	#
+options.thirdperson.thirdpersonfront=3º pessoa Frente	#
+
+##  Packs
+pack.available.title=§lDisponíveis	#
+pack.selected.title=§lSelecionados	#
+
+resourcePack.title=Selecionar pacotes de recursos	#
+behaviorPack.title=Selecionar pacotes de Comportamentos	#
+
+selectWorld.resourcePack=Recursos	#
+selectWorld.behaviorPack=Comportamentos	#
+
+pack.resources.dropInfo=Arrasta os pacotes para a pasta "resource_packs" para os adicionares	#
+pack.behavior.dropInfo=Arrasta os pacotes para a pasta "behavior_packs" para os adicionares	#
+
+## Structure Editor
+
+structure_block.position=Posição relativa
+structure_block.size=Tamanho da estrutura
+structure_block.integrity_and_seed=Integridade e seed da estrutura
+structure_block.detect_size=Detetar tamanho e posição:
+
+structure_block.mode_info.save=Modo de guardar - guardar num ficheiro
+structure_block.mode_info.load=Modo de carregar - carregar do ficheiro
+structure_block.mode_info.corner=Modo de canto - marcador de colocação e tamanho
+structure_block.exportTo=Exportar para arquivo:
+
+structure_block.mode.export=Exportar
+
+structure_block.button.detect_size=DETETAR
+structure_block.button.save=GUARDAR
+structure_block.button.load=CARREGAR
+structure_block.button.structureExport=MCS
+structure_block.button.3dExport=3D OBJ
+
+structure_block.redstone_save_mode=Guardar Redstone
+structure_block.save_to_disk=Disco
+structure_block.save_to_memory=Memória
+
+##  Recipe Book
+gui.recipebook.search_hint=§oProcurar...	#
+gui.recipebook.toggleRecipes.all=Todas	#
+gui.recipebook.toggleRecipes.blastable=Possíveis	#
+gui.recipebook.toggleRecipes.craftable=Possíveis	#
+gui.recipebook.toggleRecipes.smeltable=Possíveis	#
+gui.recipebook.toggleRecipes.smokable=Possíveis	#
+
+## Creative
+inventory.binSlot=Destruir	#
+
+##  Trade v2
+merchant.deprecated=Reabastecem-se até duas vezes ao dia.	#
+
+##  Worlds
+selectWorld.tooltip.beta=Não te esqueças de fazer uma cópia deste mundo antes de o abrir nesta snapshot.
+
+##  Realms
+mco.selectServer.popup=O Realms é uma forma simples e segura de jogares Minecraft com até 10 amigos ao mesmo tempo. Permite vários minijogos e mundos personalizados! Só o dono do realm é que tem de pagar.
+
+##  Toggle OFF/ON
+options.off=Não	#
+options.on=Sim	#
+
+##  Realms
+mco.invites.title=Convites pendentes	#
+mco.invites.pending=Novos convites!	#
+mco.invites.nopending=Nenhum convite pendente!	#
+mco.invites.button.accept=Aceitar	#
+mco.invites.button.reject=Recusar	#
+
+## Gamerule
+selectWorld.gameRules=Regras do jogo	#
+  
+editGamerule.title=Editar regras do jogo
+editGamerule.default=Efeito desconhecido: 
+
+gamerule.doImmediateRespawn=Renascer imediatamente
+gamerule.keepInventory=Manter o inventário após a morte
+gamerule.mobGriefing=Ações destrutivas de criaturas
+gamerule.naturalRegeneration=Regenerar vida naturalmente
+gamerule.spawnRadius=Raio do local de renascimento
+gamerule.doMobSpawning=Gerar criaturas
+gamerule.doMobSpawning.description=Algumas entidades podem ter as regras separadas.
+gamerule.doEntityDrops=Largar itens de entidades
+gamerule.doEntityDrops.description=Controla os itens largados por carrinhos (incluindo inventários), molduras, barcos, etc.
+gamerule.doMobLoot=Largar espólios de criaturas
+gamerule.doMobLoot.description=Controla os recursos largados pelas criaturas, incluindo as esferas de experiência.
+gamerule.doTileDrops=Largar blocos
+gamerule.doTileDrops.description=Controla os recursos largados dos blocos, incluindo as esferas de experiência.
+gamerule.doDaylightCycle=Ciclo de dia e noite
+gamerule.doFireTick=Propagação do fogo
+gamerule.doWeatherCycle=Fenómenos atmosféricos
+gamerule.randomTickSpeed=Frequência dos tiques aleatórios
+
+gamerule.category.player=§lJogador
+gamerule.category.mobs=§lCriaturas
+gamerule.category.spawning=§lGeração
+gamerule.category.drops=§lItens
+gamerule.category.updates=§lCiclos do mundo
+gamerule.category.misc=§lDiversos
+
+## Others
+options.resetSettings=Repor	#
+options.guiScale.optionName=Tamanho da interface
+##options.particleRenderDistance=	#
+options.safeZone.title=Mudar Zona Segura do Ecrã	#
+options.ingamePlayerNames=Nomes de Jogador	#
+
+##  Raid Texts Input
+raid.name=Raid	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
+
+##  Raid Texts Output
+bar.event.raid.name=Invasão	#
+bar.event.raid.remaining.2=Invasão - Invasores restantes: 2	#
+bar.event.raid.remaining.1=Invasão - Invasores restantes: 1	#
+bar.event.raid.remaining.0=Invasão - Invasores restantes: 0	#
+bar.event.raid.victory=Invasão - Vitória	#
+bar.event.raid.defeat=Invasão - Derrota	#
+
+##  Audio Settings
+soundCategory.ambient=Ambiente
+soundCategory.block=Blocos
+soundCategory.hostile=Criaturas hostis
+soundCategory.master=Volume geral
+soundCategory.music=Música
+soundCategory.neutral=Criaturas inofensivas
+soundCategory.player=Jogadores
+soundCategory.record=Blocos musicais
+soundCategory.weather=Clima
+
+##  Online Safety
+multiplayerWarning.header=§lAtenção: modo multijogador de terceiros
+multiplayerWarning.message=Atenção: o modo multijogador é oferecido por servidores de terceiros que não pertencem e não são operados ou supervisionados pela Mojang Studios ou pela Microsoft. No modo multijogador poderás encontrar mensagens de chat não moderadas ou outros tipos de conteúdo gerado pelos utilizadores que podem não ser adequados para todos.
+multiplayerWarning.check=Não mostrar este aviso novamente
+
+##  Progress
+vdx.loading.percentage=%

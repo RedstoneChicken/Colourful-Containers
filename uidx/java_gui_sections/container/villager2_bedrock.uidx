@@ -1,0 +1,408 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "villager2_bedrock_dx",
+
+  "villager2_base": {
+    "type": "image",
+    "texture": "assets/uidx/textures/gui/container/villager2",
+    "size": [ "100%", "100%" ],
+    "$villager2_uv|default": [ 0, 0 ],
+    "$villager2_uv_size|default": [ 0, 0 ],
+    "uv": "$villager2_uv",
+    "uv_size": "$villager2_uv_size"
+  },
+
+  "experience_bar_nub@common.empty_panel": { },
+
+  /*////// Base //////*/
+
+  /* Trade 2 screen */
+
+  "left_dialog_bg_trade2@villager2_bedrock_dx.villager2_base": {
+    "size": [ 142, 166 ],
+    "variables": [
+      { "requires": "(($villager2_bedrock_resolution = '256x')", "$villager2_uv_size": [ 142, 166 ] },
+      { "requires": "(($villager2_bedrock_resolution = '512x')", "$villager2_uv_size": [ 284, 332 ] },
+      { "requires": "(($villager2_bedrock_resolution = '1024x')", "$villager2_uv_size": [ 568 , 664 ] },
+      { "requires": "(($villager2_bedrock_resolution = '2048x')", "$villager2_uv_size": [ 1136, 1328 ] },
+      { "requires": "(($villager2_bedrock_resolution = '4096x')", "$villager2_uv_size": [ 2272, 2656 ] },
+      { "requires": "(($villager2_bedrock_resolution = '8192x')", "$villager2_uv_size": [ 4544, 5312 ] }
+    ]
+  },
+
+  "dialog_bg_trade2@villager2_bedrock_dx.villager2_base": {
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($villager2_bedrock_resolution = '256x')",  "$villager2_uv": [ 142, 0 ], "$villager2_uv_size": [ 176, 166 ] },
+      { "requires": "($villager2_bedrock_resolution = '512x')",  "$villager2_uv": [ 284, 0 ], "$villager2_uv_size": [ 352, 332 ] },
+      { "requires": "($villager2_bedrock_resolution = '1024x')", "$villager2_uv": [ 568, 0 ], "$villager2_uv_size": [ 704, 664 ] },
+      { "requires": "($villager2_bedrock_resolution = '2048x')", "$villager2_uv": [ 1136, 0 ], "$villager2_uv_size": [ 1408, 1328 ] },
+      { "requires": "($villager2_bedrock_resolution = '4096x')", "$villager2_uv": [ 2272, 0 ], "$villager2_uv_size": [ 2816, 2656 ] },
+      { "requires": "($villager2_bedrock_resolution = '8192x')", "$villager2_uv": [ 4544, 0 ], "$villager2_uv_size": [ 5632, 5312 ] }
+    ]
+  },
+
+  /*//// Center Fold ////*/
+  
+  "center_fold_texture@villager2_bedrock_dx.villager2_base": {
+    "size": [ 18, 166 ],
+    "variables": [
+      { "requires": "($villager2_bedrock_resolution = '256x')",  "$villager2_uv": [ 494, 15 ], "$villager2_uv_size": [ 18, 166 ] },
+      { "requires": "($villager2_bedrock_resolution = '512x')",  "$villager2_uv": [ 988, 30 ], "$villager2_uv_size": [ 36, 332 ] },
+      { "requires": "($villager2_bedrock_resolution = '1024x')", "$villager2_uv": [ 1976, 60 ], "$villager2_uv_size": [ 72, 664 ] },
+      { "requires": "($villager2_bedrock_resolution = '2048x')", "$villager2_uv": [ 3952, 120 ], "$villager2_uv_size": [ 144, 1328 ] },
+      { "requires": "($villager2_bedrock_resolution = '4096x')", "$villager2_uv": [ 7904, 240 ], "$villager2_uv_size": [ 288, 2656 ] },
+      { "requires": "($villager2_bedrock_resolution = '8192x')", "$villager2_uv": [ 15808, 480 ], "$villager2_uv_size": [ 576, 5312 ] }
+    ]
+  },
+
+  /* Main cross out icon */
+
+  "main_cross_out_icon@villager2_bedrock_dx.villager2_base": {
+    "variables": [
+      { "requires": "($villager2_bedrock_resolution = '256x')", "$villager2_uv": [ 318, 0 ], "$villager2_uv_size": [ 28, 21 ] },
+      { "requires": "($villager2_bedrock_resolution = '512x')", "$villager2_uv": [ 636, 0 ], "$villager2_uv_size": [ 56, 42 ] },
+      { "requires": "($villager2_bedrock_resolution = '1024x')", "$villager2_uv": [ 1272, 0 ], "$villager2_uv_size": [ 112, 84 ] },
+      { "requires": "($villager2_bedrock_resolution = '2048x')", "$villager2_uv": [ 2544, 0 ], "$villager2_uv_size": [ 224, 168 ] },
+      { "requires": "($villager2_bedrock_resolution = '4096x')", "$villager2_uv": [ 5088, 0 ], "$villager2_uv_size": [ 448, 336 ] },
+      { "requires": "($villager2_bedrock_resolution = '8192x')", "$villager2_uv": [ 10176, 0 ], "$villager2_uv_size": [ 896, 672 ] }
+    ]
+  },
+
+  /* Progress bar */
+
+  "experience_bar_green_full@villager2_bedrock_dx.villager2_base": {
+    "variables": [
+      { "requires": "($villager2_bedrock_resolution = '256x')", "$villager2_uv": [ 0, 191 ], "$villager2_uv_size": [ 102, 5 ] },
+      { "requires": "($villager2_bedrock_resolution = '512x')", "$villager2_uv": [ 0, 382 ], "$villager2_uv_size": [ 204, 10 ] },
+      { "requires": "($villager2_bedrock_resolution = '1024x')", "$villager2_uv": [ 0, 764 ], "$villager2_uv_size": [ 408, 20 ] },
+      { "requires": "($villager2_bedrock_resolution = '2048x')", "$villager2_uv": [ 0, 1528 ], "$villager2_uv_size": [ 816, 40 ] },
+      { "requires": "($villager2_bedrock_resolution = '4096x')", "$villager2_uv": [ 0, 3056 ], "$villager2_uv_size": [ 1632, 80 ] },
+      { "requires": "($villager2_bedrock_resolution = '8192x')", "$villager2_uv": [ 0, 6112 ], "$villager2_uv_size": [ 3264, 160 ] }
+    ]
+  },
+
+  "experience_bar_white_full@villager2_bedrock_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_bedrock_resolution = '256x')",
+        "$villager2_uv": [ 0, 181 ],
+        "$villager2_uv_size": [ 102, 5 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '512x')",
+        "$villager2_uv": [ 0, 362 ],
+        "$villager2_uv_size": [ 204, 10 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '1024x')",
+        "$villager2_uv": [ 0, 724 ],
+        "$villager2_uv_size": [ 408, 20 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '2048x')",
+        "$villager2_uv": [ 0, 1448 ],
+        "$villager2_uv_size": [ 816, 40 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '4096x')",
+        "$villager2_uv": [ 0, 2896 ],
+        "$villager2_uv_size": [ 1632, 80 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '8192x')",
+        "$villager2_uv": [ 0, 5792 ],
+        "$villager2_uv_size": [ 3264, 160 ]
+      }
+    ]
+  },
+
+  "experience_bar_empty@villager2_bedrock_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_bedrock_resolution = '256x')",
+        "$villager2_uv": [ 0, 186 ],
+        "$villager2_uv_size": [ 102, 5 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '512x')",
+        "$villager2_uv": [ 0, 372 ],
+        "$villager2_uv_size": [ 204, 10 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '1024x')",
+        "$villager2_uv": [ 0, 744 ],
+        "$villager2_uv_size": [ 408, 20 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '2048x')",
+        "$villager2_uv": [ 0, 1488 ],
+        "$villager2_uv_size": [ 816, 40 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '4096x')",
+        "$villager2_uv": [ 0, 2976 ],
+        "$villager2_uv_size": [ 1632, 80 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '8192x')",
+        "$villager2_uv": [ 0, 5952 ],
+        "$villager2_uv_size": [ 3264, 160 ]
+      }
+    ]
+  },
+
+  /* Toggle content */
+
+  "slash_icon@villager2_bedrock_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_bedrock_resolution = '256x')",
+        "$villager2_uv": [ 0, 171 ],
+        "$villager2_uv_size": [ 10, 10 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '512x')",
+        "$villager2_uv": [ 0, 342 ],
+        "$villager2_uv_size": [ 20, 20 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '1024x')",
+        "$villager2_uv": [ 0, 684 ],
+        "$villager2_uv_size": [ 40, 40 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '2048x')",
+        "$villager2_uv": [ 0, 1368 ],
+        "$villager2_uv_size": [ 80, 80 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '4096x')",
+        "$villager2_uv": [ 0, 2736 ],
+        "$villager2_uv_size": [ 160, 160 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '8192x')",
+        "$villager2_uv": [ 0, 5472 ],
+        "$villager2_uv_size": [ 320, 320 ]
+      }
+    ]
+  },
+
+  "arrow_holder_icon@villager2_bedrock_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_bedrock_resolution = '256x')",
+        "$villager2_uv": [ 15, 171 ],
+        "$villager2_uv_size": [ 10, 10 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '512x')",
+        "$villager2_uv": [ 30, 342 ],
+        "$villager2_uv_size": [ 20, 20 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '1024x')",
+        "$villager2_uv": [ 60, 684 ],
+        "$villager2_uv_size": [ 40, 40 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '2048x')",
+        "$villager2_uv": [ 120, 1368 ],
+        "$villager2_uv_size": [ 80, 80 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '4096x')",
+        "$villager2_uv": [ 240, 2736 ],
+        "$villager2_uv_size": [ 160, 160 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '8192x')",
+        "$villager2_uv": [ 480, 5472 ],
+        "$villager2_uv_size": [ 320, 320 ]
+      }
+    ]
+  },
+
+  "arrow_cross_out_icon@villager2_bedrock_dx.villager2_base": {
+    "variables": [
+      {
+        "requires": "($villager2_bedrock_resolution = '256x')",
+        "$villager2_uv": [ 25, 171 ],
+        "$villager2_uv_size": [ 10, 10 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '512x')",
+        "$villager2_uv": [ 50, 342 ],
+        "$villager2_uv_size": [ 20, 20 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '1024x')",
+        "$villager2_uv": [ 100, 684 ],
+        "$villager2_uv_size": [ 40, 40 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '2048x')",
+        "$villager2_uv": [ 200, 1368 ],
+        "$villager2_uv_size": [ 80, 80 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '4096x')",
+        "$villager2_uv": [ 400, 2736 ],
+        "$villager2_uv_size": [ 160, 160 ]
+      },
+      {
+        "requires": "($villager2_bedrock_resolution = '8192x')",
+        "$villager2_uv": [ 800, 5472 ],
+        "$villager2_uv_size": [ 320, 320 ]
+      }
+    ]
+  },
+  
+  /*//// Scroll Box ////*/
+  
+  "scroll_upper@villager2_bedrock_dx.villager2_base": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 12, 6 ],
+    "variables": [
+      { "requires": "($villager2_bedrock_resolution = '256x')", "$villager2_uv": [ 488, 0 ], "$villager2_uv_size": [ 12, 6 ] },
+      { "requires": "($villager2_bedrock_resolution = '512x')", "$villager2_uv": [ 976, 0 ], "$villager2_uv_size": [ 24, 12 ] },
+      { "requires": "($villager2_bedrock_resolution = '1024x')", "$villager2_uv": [ 1952, 0 ], "$villager2_uv_size": [ 48, 24 ] },
+      { "requires": "($villager2_bedrock_resolution = '2048x')", "$villager2_uv": [ 3904, 0 ], "$villager2_uv_size": [ 96, 48 ] },
+      { "requires": "($villager2_bedrock_resolution = '4096x')", "$villager2_uv": [ 7808, 0 ], "$villager2_uv_size": [ 192, 96 ] },
+      { "requires": "($villager2_bedrock_resolution = '8192x')", "$villager2_uv": [ 15616, 0 ], "$villager2_uv_size": [ 384, 192 ] }
+    ]
+  },
+  
+  "scroll_middle@villager2_bedrock_dx.villager2_base": {
+    "size": [ 12, 2 ],
+    "variables": [
+      { "requires": "($villager2_bedrock_resolution = '256x')", "$villager2_uv": [ 488, 6 ], "$villager2_uv_size": [ 12, 2 ] },
+      { "requires": "($villager2_bedrock_resolution = '512x')", "$villager2_uv": [ 976, 12 ], "$villager2_uv_size": [ 24, 4 ] },
+      { "requires": "($villager2_bedrock_resolution = '1024x')", "$villager2_uv": [ 1952, 24 ], "$villager2_uv_size": [ 48, 8 ] },
+      { "requires": "($villager2_bedrock_resolution = '2048x')", "$villager2_uv": [ 3904, 48 ], "$villager2_uv_size": [ 96, 16 ] },
+      { "requires": "($villager2_bedrock_resolution = '4096x')", "$villager2_uv": [ 7808, 96 ], "$villager2_uv_size": [ 192, 32 ] },
+      { "requires": "($villager2_bedrock_resolution = '8192x')", "$villager2_uv": [ 15616, 192 ], "$villager2_uv_size": [ 384, 64 ] }
+    ]
+  },
+  
+  "scroll_bottom@villager2_bedrock_dx.villager2_base": {
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ 12, 7 ],
+    "variables": [
+      { "requires": "($villager2_bedrock_resolution = '256x')", "$villager2_uv": [ 488, 8 ], "$villager2_uv_size": [ 12, 7 ] },
+      { "requires": "($villager2_bedrock_resolution = '512x')", "$villager2_uv": [ 976, 16 ], "$villager2_uv_size": [ 24, 14 ] },
+      { "requires": "($villager2_bedrock_resolution = '1024x')", "$villager2_uv": [ 1952, 32 ], "$villager2_uv_size": [ 48, 28 ] },
+      { "requires": "($villager2_bedrock_resolution = '2048x')", "$villager2_uv": [ 3904, 64 ], "$villager2_uv_size": [ 96, 56 ] },
+      { "requires": "($villager2_bedrock_resolution = '4096x')", "$villager2_uv": [ 7808, 128 ], "$villager2_uv_size": [ 192, 112 ] },
+      { "requires": "($villager2_bedrock_resolution = '8192x')", "$villager2_uv": [ 15616, 256 ], "$villager2_uv_size": [ 384, 224 ] }
+    ]
+  },
+  
+  "locked_scroll_box@villager2_bedrock_dx.villager2_base": {
+    "size": [ 12, 15 ],
+    "variables": [
+      { "requires": "($villager2_bedrock_resolution = '256x')", "$villager2_uv": [ 500, 0 ], "$villager2_uv_size": [ 12, 15 ] },
+      { "requires": "($villager2_bedrock_resolution = '512x')", "$villager2_uv": [ 1000, 0 ], "$villager2_uv_size": [ 24, 30 ] },
+      { "requires": "($villager2_bedrock_resolution = '1024x')", "$villager2_uv": [ 2000, 0 ], "$villager2_uv_size": [ 48, 60 ] },
+      { "requires": "($villager2_bedrock_resolution = '2048x')", "$villager2_uv": [ 4000, 0 ], "$villager2_uv_size": [ 96, 120 ] },
+      { "requires": "($villager2_bedrock_resolution = '4096x')", "$villager2_uv": [ 8000, 0 ], "$villager2_uv_size": [ 192, 240 ] },
+      { "requires": "($villager2_bedrock_resolution = '8192x')", "$villager2_uv": [ 16000, 0 ], "$villager2_uv_size": [ 384, 480 ] }
+    ]
+  },
+
+  "scroll_middle_stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 6 ],
+    "size": [ 14, "100%-11px" ],
+    "clips_children": true,
+    "controls": [
+      { "00@villager2_bedrock_dx.scroll_middle": { } },
+      { "01@villager2_bedrock_dx.scroll_middle": { } },
+      { "02@villager2_bedrock_dx.scroll_middle": { } },
+      { "03@villager2_bedrock_dx.scroll_middle": { } },
+      { "04@villager2_bedrock_dx.scroll_middle": { } },
+      { "05@villager2_bedrock_dx.scroll_middle": { } },
+      { "06@villager2_bedrock_dx.scroll_middle": { } },
+      { "07@villager2_bedrock_dx.scroll_middle": { } },
+      { "08@villager2_bedrock_dx.scroll_middle": { } },
+      { "09@villager2_bedrock_dx.scroll_middle": { } },
+      { "10@villager2_bedrock_dx.scroll_middle": { } },
+      { "11@villager2_bedrock_dx.scroll_middle": { } },
+      { "12@villager2_bedrock_dx.scroll_middle": { } },
+      { "13@villager2_bedrock_dx.scroll_middle": { } },
+      { "14@villager2_bedrock_dx.scroll_middle": { } },
+      { "15@villager2_bedrock_dx.scroll_middle": { } },
+      { "16@villager2_bedrock_dx.scroll_middle": { } },
+      { "17@villager2_bedrock_dx.scroll_middle": { } },
+      { "18@villager2_bedrock_dx.scroll_middle": { } },
+      { "19@villager2_bedrock_dx.scroll_middle": { } },
+      { "20@villager2_bedrock_dx.scroll_middle": { } },
+      { "21@villager2_bedrock_dx.scroll_middle": { } },
+      { "22@villager2_bedrock_dx.scroll_middle": { } },
+      { "23@villager2_bedrock_dx.scroll_middle": { } },
+      { "24@villager2_bedrock_dx.scroll_middle": { } },
+      { "25@villager2_bedrock_dx.scroll_middle": { } },
+      { "26@villager2_bedrock_dx.scroll_middle": { } },
+      { "27@villager2_bedrock_dx.scroll_middle": { } },
+      { "28@villager2_bedrock_dx.scroll_middle": { } },
+      { "29@villager2_bedrock_dx.scroll_middle": { } },
+      { "30@villager2_bedrock_dx.scroll_middle": { } },
+      { "31@villager2_bedrock_dx.scroll_middle": { } },
+      { "32@villager2_bedrock_dx.scroll_middle": { } },
+      { "33@villager2_bedrock_dx.scroll_middle": { } },
+      { "34@villager2_bedrock_dx.scroll_middle": { } },
+      { "35@villager2_bedrock_dx.scroll_middle": { } },
+      { "36@villager2_bedrock_dx.scroll_middle": { } },
+      { "37@villager2_bedrock_dx.scroll_middle": { } },
+      { "38@villager2_bedrock_dx.scroll_middle": { } },
+      { "39@villager2_bedrock_dx.scroll_middle": { } },
+      { "40@villager2_bedrock_dx.scroll_middle": { } },
+      { "41@villager2_bedrock_dx.scroll_middle": { } },
+      { "42@villager2_bedrock_dx.scroll_middle": { } },
+      { "43@villager2_bedrock_dx.scroll_middle": { } },
+      { "44@villager2_bedrock_dx.scroll_middle": { } },
+      { "45@villager2_bedrock_dx.scroll_middle": { } },
+      { "46@villager2_bedrock_dx.scroll_middle": { } },
+      { "47@villager2_bedrock_dx.scroll_middle": { } },
+      { "48@villager2_bedrock_dx.scroll_middle": { } },
+      { "49@villager2_bedrock_dx.scroll_middle": { } },
+      { "50@villager2_bedrock_dx.scroll_middle": { } },
+      { "51@villager2_bedrock_dx.scroll_middle": { } },
+      { "52@villager2_bedrock_dx.scroll_middle": { } },
+      { "53@villager2_bedrock_dx.scroll_middle": { } },
+      { "54@villager2_bedrock_dx.scroll_middle": { } },
+      { "55@villager2_bedrock_dx.scroll_middle": { } },
+      { "56@villager2_bedrock_dx.scroll_middle": { } },
+      { "57@villager2_bedrock_dx.scroll_middle": { } },
+      { "58@villager2_bedrock_dx.scroll_middle": { } },
+      { "59@villager2_bedrock_dx.scroll_middle": { } },
+      { "60@villager2_bedrock_dx.scroll_middle": { } },
+      { "61@villager2_bedrock_dx.scroll_middle": { } },
+      { "62@villager2_bedrock_dx.scroll_middle": { } },
+      { "63@villager2_bedrock_dx.scroll_middle": { } },
+      { "64@villager2_bedrock_dx.scroll_middle": { } },
+      { "65@villager2_bedrock_dx.scroll_middle": { } },
+      { "66@villager2_bedrock_dx.scroll_middle": { } },
+      { "67@villager2_bedrock_dx.scroll_middle": { } },
+      { "68@villager2_bedrock_dx.scroll_middle": { } },
+      { "69@villager2_bedrock_dx.scroll_middle": { } },
+      { "70@villager2_bedrock_dx.scroll_middle": { } }
+    ]
+  },
+
+  "scroll_box": {
+    "type": "panel",
+    "size": [ 12, "100%" ],
+    "controls": [
+      { "scroll_upper@villager2_bedrock_dx.scroll_upper": { } },
+      { "scroll_middle_stack_panel@villager2_bedrock_dx.scroll_middle_stack_panel": { } },
+      { "scroll_scroll_bottom@villager2_bedrock_dx.scroll_bottom": { } }
+    ]
+  }
+}

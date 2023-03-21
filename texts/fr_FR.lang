@@ -1,0 +1,13 @@
+﻿##  Raid Texts Input
+raid.name=Raid	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
+
+##  Raid Texts Output
+bar.event.raid.name=Invasion	#
+bar.event.raid.remaining.2=Invasion - Envahisseurs restants : 2	#
+bar.event.raid.remaining.1=Invasion - Envahisseurs restants : 1	#
+bar.event.raid.remaining.0=Invasion - Envahisseurs restants : 0	#
+bar.event.raid.victory=Invasion - Victoire	#
+bar.event.raid.defeat=Invasion - Défaite	#

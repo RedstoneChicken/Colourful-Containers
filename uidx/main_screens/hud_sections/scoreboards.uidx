@@ -1,0 +1,152 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "scoreboard_dx",
+
+  "scoreboard_sidebar": {
+    "type": "image",
+    "layer": 100,
+    "texture": "textures/uidx/hud/scoreboard_sidebar",
+    "size": [ "100%cm", "100%c" ],
+    "offset": [ -1, 0 ],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "controls": [
+      {
+        "displayed_objective@common_dx.global_label": {
+          "size": [ "default", 10 ],
+          "text": "#objective_sidebar_name",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text_alignment": "center",
+          "inherit_max_sibling_width": true,
+          "shadow": "$scoreboard_text_shadow",
+          "locked_alpha": 1,
+          "layer": 1,
+          "color": "$objective_title_color",
+          "bindings": [
+            {
+              "binding_name": "#objective_sidebar_name",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "lists": {
+          "type": "panel",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ 0, -1 ],
+          "inherit_max_sibling_width": false,
+          "size": [ "100%c", "100%cm" ],
+          "controls": [
+            {
+              "players": {
+                "type": "stack_panel",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "size": [ "100%cm + 10px", "100%c" ],
+                "orientation": "vertical",
+                "collection_name": "scoreboard_players",
+                "factory": {
+                  "name": "player_list_factory",
+                  "control_name": "scoreboard_dx.sidebar_player_panel"
+                },
+                "bindings": [
+                  {
+                    "binding_name": "#scoreboard_sidebar_size",
+                    "binding_type": "global",
+                    "binding_name_override": "#collection_length"
+                  }
+                ]
+              }
+            },
+            {
+              "scores": {
+                "ignored": "$ignore_scoreboard_scores",
+                "type": "stack_panel",
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "size": [ "100%cm", "100%c" ],
+                "orientation": "vertical",
+                "use_child_anchors":  true,
+                "collection_name": "scoreboard_scores",
+                "factory": {
+                  "name": "player_score_factory",
+                  "control_name": "scoreboard_dx.sidebar_score_panel"
+                },
+                "bindings": [
+                  {
+                    "binding_name": "#scoreboard_sidebar_size",
+                    "binding_type": "global",
+                    "binding_name_override": "#collection_length"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "sidebar_player_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%cm", 9 ],
+    "controls": [
+      {
+        "scoreboard_sidebar_player@common_dx.global_label": {
+          "layer": 2,
+          "size": [ "default", 10 ],
+          "text": "#player_name_sidebar",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text_alignment": "left",
+          "offset": [ 2, 0 ],
+          "locked_alpha": 1.0,
+          "color": "$player_name_color",
+          "shadow": "$scoreboard_text_shadow",
+          "bindings": [
+            {
+              "binding_name": "#player_name_sidebar",
+              "binding_type": "collection",
+              "binding_collection_name": "scoreboard_players"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "sidebar_score_panel": {
+    "type": "panel",
+    "size": [ "100%cm", 9 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "controls": [
+      {
+        "scoreboard_sidebar_score@common_dx.global_label": {
+          "layer": 2,
+          "size": [ "default", 10 ],
+          "text": "#player_score_sidebar",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "text_alignment": "rightt",
+          "locked_alpha": 1.0,
+          "color": "$player_score_color",
+          "shadow": "$scoreboard_text_shadow",
+          "bindings": [
+            {
+              "binding_name": "#player_score_sidebar",
+              "binding_type": "collection",
+              "binding_collection_name": "scoreboard_scores"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

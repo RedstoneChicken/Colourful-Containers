@@ -1,0 +1,96 @@
+{
+  "screen_panel/popup_dialog_factory": {
+    "$is_popup_dialog_in_game|default": true,
+    "control_ids": "$popup_dialog_control_ids",
+    "$popup_dialog_control_ids|default": {
+      "modal_dialog_popup": "@common_dialogs_dx.modal_dialog_popup",
+      "storage_dependency_popup": "@storage_management_popup.storage_dependency_modal",
+      "storage_sharing_popup": "@storage_management_popup.sharing_popup_content"
+    },
+    "variables": [
+      {
+        "requires": "$is_popup_dialog_in_game",
+        "$popup_dialog_control_ids": {
+          "modal_dialog_popup": "@common_dialogs_dx.modal_dialog_popup_in_game",
+          "storage_dependency_popup": "@storage_management_popup.storage_dependency_modal",
+          "storage_sharing_popup": "@storage_management_popup.sharing_popup_content"
+        }
+      }
+    ]
+  },
+
+  "base_screen": {
+    "$screen_center_content|default": "common.empty_panel"
+  },
+
+  "base_screen/variables_button_mappings_and_controls": {
+    "controls": [
+      {
+        "bg_no_safezone_screen_panel@$screen_bg_content": {
+          "anims": "$background_animations",
+          "animation_reset_name": "screen_animation_reset",
+          "propagate_alpha": true,
+          "disable_anim_fast_forward": true,
+          "layer": 2
+        }
+      },
+      {
+        "safezone_screen_matrix@common.safezone_outer_matrix": {
+          "anims": "$screen_animations",
+          "animation_reset_name": "screen_animation_reset",
+          "propagate_alpha": true,
+          "disable_anim_fast_forward": true,
+          "layer": "$safezone_screen_matrix_layer"
+        }
+      },
+      {
+        "screen_background@common_dialogs.full_screen_background": {
+          "anims": "$screen_animations",
+          "animation_reset_name": "screen_animation_reset",
+          "propagate_alpha": true,
+          "disable_anim_fast_forward": true,
+          "layer": -1
+        }
+      },
+      {
+        "no_safezone_screen_content@$screen_center_content": {
+          "anims": "$screen_animations",
+          "animation_reset_name": "screen_animation_reset",
+          "propagate_alpha": true,
+          "disable_anim_fast_forward": true,
+          "layer": 3
+        }
+      },
+      {
+        "popup_dialog_bg": {
+          "type": "panel",
+          "anims": "$background_animations",
+          "animation_reset_name": "screen_animation_reset",
+          "propagate_alpha": true,
+          "disable_anim_fast_forward": true,
+          "layer": 2,
+          "controls": [
+            {
+              "popup_dialog_factory": {
+                "type": "factory",
+                "$is_popup_dialog_in_game|default": true,
+                "control_ids": "$popup_dialog_control_ids",
+                "$popup_dialog_control_ids|default": {
+                  "modal_dialog_popup": "@common_dialogs_dx.modal_dialog_popup_bg"
+                },
+                "variables": [
+                  {
+                    "requires": "$is_popup_dialog_in_game",
+                    "$popup_dialog_control_ids": {
+                      "modal_dialog_popup": "@common_dialogs_dx.modal_dialog_popup_bg_in_game"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+﻿##  Raid Texts Input
+raid.name=Raid	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
+
+##  Raid Texts Output
+bar.event.raid.name=Hyökkäys	#
+bar.event.raid.remaining.2=Hyökkäys - Hyökkääjiä jäljellä: 2	#
+bar.event.raid.remaining.1=Hyökkäys - Hyökkääjiä jäljellä: 1	#
+bar.event.raid.remaining.0=Hyökkäys - Hyökkääjiä jäljellä: 0	#
+bar.event.raid.victory=Hyökkäys - Voitto	#
+bar.event.raid.defeat=Hyökkäys - Häviö	#

@@ -1,0 +1,17 @@
+ {
+  "format_version": 2,
+  "header": {
+    "name": "VDX: Legacy Mixed UI",
+    "description": "By @CrisXolt. v1.2.5 [V1.19.70]\nA porting UI pack project for Bedrock Edition made since Q4 2016.",
+    "uuid": "7e7c39ec-a37e-45c0-b8c6-5e2e971ad7ea",
+    "version": [1, 2, 5],
+    "min_engine_version": [ 1, 19, 70 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "8673cc6e-48dc-47d5-a154-39bf34cc3b77",
+      "version": [1, 2, 5]
+    }
+  ]
+}

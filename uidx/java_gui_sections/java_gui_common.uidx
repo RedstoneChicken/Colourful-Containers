@@ -1,0 +1,626 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "java_gui_common",
+
+  /*//// UV and UV size image panel ////*/
+
+  "crisxolt_image_panel": {
+    "type": "panel",
+    "size": "$uv_size",
+    "$base_anchor": "top_left",
+    "$base_size": [ 256, 256 ],
+    "clips_children": true,
+    "$uv": [ 0, 0 ],
+    "$uv_size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "main_image": {
+          "type": "image",
+          "anchor_from": "$base_anchor",
+          "anchor_to": "$base_anchor",
+          "size": "$base_size",
+          "offset": "$uv",
+          "texture": "$texture"
+        }
+      }
+    ]
+  },
+
+  /*//// Screen BG ////*/
+
+  "screen_background": {
+    "type": "image",
+    "fill": true,
+    "texture": "textures/uidx/screen_background"
+  },
+
+  /*//// Panorama Overlay ////*/
+
+  "panorama_overlay_image": {
+    "type": "image",
+    "fill": true,
+    "texture": "assets/minecraft/textures/gui/title/background/panorama_overlay"
+  },
+
+  /*//// Edition ////*/
+
+  "edition_image": {
+    "type": "image",
+    "size": [ 128, 16 ],
+    "texture": "assets/minecraft/textures/gui/title/edition"
+  },
+
+  /*//// Cell Image and Overlays ////*/
+
+  "cell_image": {
+    "type": "panel",
+    "size": [ "100%", "100%" ]
+  },
+
+  "cell_image_output": {
+    "type": "panel",
+    "size": [ 26, 26 ]
+  },
+
+  /*//// Highlight Slot ////*/
+
+  "highlight_slot": {
+    "type": "image",
+    "texture": "textures/uidx/highlight/highlight_slot",
+    "size": [ 16, 16 ]
+  },
+
+  "highlight_slot_output@java_gui_common.highlight_slot": {
+    "texture": "textures/uidx/highlight/highlight_slot_output",
+    "size": [ 24, 24 ]
+  },
+
+  /*//// Cell Slot Red ////*/
+
+  "cell_red_slot": {
+    "type": "image",
+    "texture": "textures/uidx/highlight/cell_red_slot",
+    "size": [ 16, 16 ]
+  },
+
+  "cell_red_slot_overlay": {
+    "type": "image",
+    "texture": "textures/uidx/highlight/cell_red_slot_overlay",
+    "size": [ 16, 16 ]
+  },
+
+  "cell_red_slot_output@java_gui_common.cell_red_slot": {
+    "texture": "textures/uidx/highlight/cell_red_slot_output",
+    "size": [ 24, 24 ]
+  },
+
+  "cell_red_slot_output_overlay@java_gui_common.cell_red_slot": {
+    "texture": "textures/uidx/highlight/cell_red_slot_output_overlay",
+    "size": [ 24, 24 ]
+  },
+
+  /*//// Highlight Slot Red ////*/
+
+  "highlight_slot_red@java_gui_common.highlight_slot": {
+    "texture": "textures/uidx/highlight/highlight_slot_red"
+  },
+
+  "highlight_slot_output_red@java_gui_common.highlight_slot": {
+    "texture": "textures/uidx/highlight/highlight_slot_output_red",
+    "size": [ 24, 24 ]
+  },
+
+  /*//// Highlight Slot Furnace ////*/
+
+  "cell_furnace_slot": {
+    "type": "image",
+    "texture": "textures/uidx/highlight/cell_furnace_slot",
+    "size": [ 16, 16 ]
+  },
+
+  "cell_furnace_slot_output@java_gui_common.cell_furnace_slot": {
+    "texture": "textures/uidx/highlight/cell_furnace_slot_output",
+    "size": [ 24, 24 ]
+  },
+
+  /*//// Highlight New (For Mixed UI) ////*/
+
+  "highlight_slot_new": {
+    "type": "image",
+    "texture": "textures/uidx/highlight_new/highlight_slot",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "highlight_slot_border": {
+          "type": "image",
+          "layer": 2,
+          "texture": "textures/uidx/highlight_new/highlight_slot_border",
+          "size": [ 18, 18 ]
+        }
+      }
+    ]
+  },
+
+  "highlight_slot_new_output@java_gui_common.highlight_slot": {
+    "texture": "textures/uidx/highlight_new/highlight_slot_output",
+    "size": [ 24, 24 ],
+    "controls": [
+      {
+        "highlight_slot_output_border": {
+          "type": "image",
+          "layer": 2,
+          "texture": "textures/uidx/highlight_new/highlight_slot_output_border",
+          "size": [ 26, 26 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Highlight New (For Mixed UI) ////*/
+
+  "cell_red_slot_new": {
+    "type": "image",
+    "texture": "textures/uidx/highlight_new/cell_red_slot",
+    "size": [ 16, 16 ]
+  },
+
+  "cell_red_slot_new_output@java_gui_common.cell_red_slot": {
+    "texture": "textures/uidx/highlight_new/cell_red_slot_output",
+    "size": [ 24, 24 ]
+  },
+
+  /*//// Warning (For Mixed UI) ////*/
+
+  "warning_icon": {
+    "type": "image",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 1, 1 ],
+    "texture": "textures/uidx/highlight_new/warning_icon",
+    "size": [ 8, 8 ]
+  },
+
+  /*//// Inventory ////*/
+
+  "player_bg": {
+    "type": "panel",
+    "layer": 3,
+    "size": [ "100%-2px", "100%-2px" ]
+  },
+
+  "player_preview_border": {
+    "type": "panel",
+    "layer": 2,
+    "size": [ "100%", "100%" ]
+  },
+
+  /*//// Butons Icons ////*/
+
+  "feedback_icon": {
+    "type": "image",
+    "color": "$text_color",
+    "texture": "textures/uidx/feedback_icon",
+    "size": [ 20, 20 ]
+  },
+  
+  "skin_icon": {
+    "type": "image",
+    "color": "$text_color",
+    "texture": "textures/uidx/skin_icon",
+    "size": [ 20, 20 ]
+  },
+
+  "camera_icon": {
+    "type": "image",
+    "color": "$text_color",
+    "texture": "textures/uidx/camera_icon",
+    "size": [ 20, 20 ]
+  },
+
+  /*//// Options Background ////*/
+  
+  "options_background": {
+    "type": "image",
+    "fill": true,
+    "tiled": true,
+    "texture": "assets/minecraft/textures/gui/options_background",
+    "color": [ 0.25, 0.25, 0.25, 1.0 ],
+    "$bg_tiled_scale|default": [ 0, 0 ],
+    "tiled_scale": "$bg_tiled_scale",
+    "variables": [
+      { "requires": "($options_background_resolution = '16x')", "$bg_tiled_scale": [ 2, 2 ] },
+      { "requires": "($options_background_resolution = '32x')", "$bg_tiled_scale": [ 1, 1 ] },
+      { "requires": "($options_background_resolution = '64x')", "$bg_tiled_scale": [ 0.5, 0.5 ] },
+      { "requires": "($options_background_resolution = '128x')", "$bg_tiled_scale": [ 0.25, 0.25 ] },
+      { "requires": "($options_background_resolution = '256x')", "$bg_tiled_scale": [ 0.125, 0.125 ] },
+      { "requires": "($options_background_resolution = '512x')", "$bg_tiled_scale": [ 0.0625, 0.0625 ] }
+    ]
+  },
+
+  "options_background_middle@java_gui_common.options_background": {
+    "color": [ 0.125, 0.125, 0.125, 1.0 ]
+  },
+
+  "credits_background@java_gui_common.options_background": {
+    "variables": [
+      { "requires": "($credits_background_resolution = '16x')", "$bg_tiled_scale": [ 4, 4 ] },
+      { "requires": "($credits_background_resolution = '32x')", "$bg_tiled_scale": [ 2, 2 ] },
+      { "requires": "($credits_background_resolution = '64x')", "$bg_tiled_scale": [ 1, 1 ] },
+      { "requires": "($credits_background_resolution = '128x')", "$bg_tiled_scale": [ 0.5, 0.5 ] },
+      { "requires": "($credits_background_resolution = '256x')", "$bg_tiled_scale": [ 0.25, 0.25 ] },
+      { "requires": "($credits_background_resolution = '512x')", "$bg_tiled_scale": [ 0.125, 0.125 ] }
+    ]
+  },
+
+  "block_background@java_gui_common.options_background": {
+    "color": [ 1.0, 1.0, 1.0, 1.0 ],
+    "variables": [
+      { "requires": "($block_background_resolution = '16x')", "$bg_tiled_scale": [ 2, 2 ] },
+      { "requires": "($block_background_resolution = '32x')", "$bg_tiled_scale": [ 1, 1 ] },
+      { "requires": "($block_background_resolution = '64x')", "$bg_tiled_scale": [ 0.5, 0.5 ] },
+      { "requires": "($block_background_resolution = '128x')", "$bg_tiled_scale": [ 0.25, 0.25 ] },
+      { "requires": "($block_background_resolution = '256x')", "$bg_tiled_scale": [ 0.125, 0.125 ] },
+      { "requires": "($block_background_resolution = '512x')", "$bg_tiled_scale": [ 0.0625, 0.0625 ] }
+    ]
+  },
+
+  /*//// World Create Screen ////*/
+  
+  "light_dirt_background": {
+    "type": "image",
+    "fill": true,
+    "tiled": true,
+    "texture": "assets/minecraft/textures/gui/light_dirt_background",
+    "$bg_tiled_scale|default": [ 0, 0 ],
+    "tiled_scale": "$bg_tiled_scale",
+    "variables": [
+      { "requires": "($light_dirt_background_resolution = '16x')", "$bg_tiled_scale": [ 2, 2 ] },
+      { "requires": "($light_dirt_background_resolution = '32x')", "$bg_tiled_scale": [ 1, 1 ] },
+      { "requires": "($light_dirt_background_resolution = '64x')", "$bg_tiled_scale": [ 0.5, 0.5 ] },
+      { "requires": "($light_dirt_background_resolution = '128x')", "$bg_tiled_scale": [ 0.25, 0.25 ] },
+      { "requires": "($light_dirt_background_resolution = '256x')", "$bg_tiled_scale": [ 0.125, 0.125 ] },
+      { "requires": "($light_dirt_background_resolution = '512x')", "$bg_tiled_scale": [ 0.0625, 0.0625 ] }
+    ]
+  },
+  
+  "header_separator": {
+    "type": "image",
+    "fill": true,
+    "tiled": true,
+    "texture": "assets/minecraft/textures/gui/header_separator",
+    "$bg_tiled_scale|default": [ 0, 0 ],
+    "tiled_scale": "$bg_tiled_scale",
+    "variables": [
+      { "requires": "($header_separator_resolution = '16x')",  "$bg_tiled_scale": [ 1, 1 ] },
+      { "requires": "($header_separator_resolution = '32x')",  "$bg_tiled_scale": [ 0.5, 0.5 ] },
+      { "requires": "($header_separator_resolution = '64x')",  "$bg_tiled_scale": [ 0.25, 0.25 ] },
+      { "requires": "($header_separator_resolution = '128x')", "$bg_tiled_scale": [ 0.125, 0.125 ] },
+      { "requires": "($header_separator_resolution = '256x')", "$bg_tiled_scale": [ 0.0625, 0.0625 ] },
+      { "requires": "($header_separator_resolution = '512x')", "$bg_tiled_scale": [ 0.03125, 0.03125 ] }
+    ]
+  },
+  
+  "footer_separator": {
+    "type": "image",
+    "fill": true,
+    "tiled": true,
+    "texture": "assets/minecraft/textures/gui/footer_separator",
+    "$bg_tiled_scale|default": [ 0, 0 ],
+    "tiled_scale": "$bg_tiled_scale",
+    "variables": [
+      { "requires": "($footer_separator_resolution = '16x')",  "$bg_tiled_scale": [ 1, 1 ] },
+      { "requires": "($footer_separator_resolution = '32x')",  "$bg_tiled_scale": [ 0.5, 0.5 ] },
+      { "requires": "($footer_separator_resolution = '64x')",  "$bg_tiled_scale": [ 0.25, 0.25 ] },
+      { "requires": "($footer_separator_resolution = '128x')", "$bg_tiled_scale": [ 0.125, 0.125 ] },
+      { "requires": "($footer_separator_resolution = '256x')", "$bg_tiled_scale": [ 0.0625, 0.0625 ] },
+      { "requires": "($footer_separator_resolution = '512x')", "$bg_tiled_scale": [ 0.03125, 0.03125 ] }
+    ]
+  },
+
+  /*//// Text Input ////*/
+  
+  "text_input_java": {
+    "type": "image",
+    "texture": "textures/uidx/menus/text_input_java",
+    "size": [ "100%", "100%" ]
+  },
+
+  "text_input_java_hover": {
+    "type": "image",
+    "texture": "textures/uidx/menus/text_input_java_hover",
+    "size": [ "100%", "100%" ]
+  },
+
+  "text_input_java_locked": {
+    "type": "image",
+    "texture": "textures/uidx/menus/text_input_java_locked",
+    "size": [ "100%", "100%" ]
+  },
+
+  "java_menu_select_grid": {
+    "type": "image",
+    "texture": "textures/uidx/menus/java_menu_select_grid",
+    "size": [ 32, 32 ]
+  },
+
+  /*//// Checkbox ////*/
+
+  "checkbox_unchecked_default": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/checkbox",
+    "size": [ 20, 20 ],
+    "$checkbox_uv|default": [ 0, 0 ],
+    "$checkbox_uv_size|default": [ 0, 0 ],
+    "uv": "$checkbox_uv",
+    "uv_size": "$checkbox_uv_size",
+    "variables": [
+      { "requires": "($checkbox_resolution = '64x')",   "$checkbox_uv_size": [ 20, 20 ] },
+      { "requires": "($checkbox_resolution = '128x')",  "$checkbox_uv_size": [ 40, 40 ] },
+      { "requires": "($checkbox_resolution = '256x')",  "$checkbox_uv_size": [ 80, 80 ] },
+      { "requires": "($checkbox_resolution = '512x')",  "$checkbox_uv_size": [ 160, 160 ] },
+      { "requires": "($checkbox_resolution = '1024x')", "$checkbox_uv_size": [ 320, 320 ] },
+      { "requires": "($checkbox_resolution = '2048x')", "$checkbox_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "checkbox_unchecked_hover@java_gui_common.checkbox_unchecked_default": {
+    "variables": [
+      { "requires": "($checkbox_resolution = '64x')",  "$checkbox_uv": [ 20, 0 ],  "$checkbox_uv_size": [ 20, 20 ] },
+      { "requires": "($checkbox_resolution = '128x')", "$checkbox_uv": [ 40, 0 ],  "$checkbox_uv_size": [ 40, 40 ] },
+      { "requires": "($checkbox_resolution = '256x')", "$checkbox_uv": [ 80, 0 ],  "$checkbox_uv_size": [ 80, 80 ] },
+      { "requires": "($checkbox_resolution = '512x')", "$checkbox_uv": [ 160, 0 ], "$checkbox_uv_size": [ 160, 160 ] },
+      { "requires": "($checkbox_resolution = '1024x')","$checkbox_uv": [ 320, 0 ], "$checkbox_uv_size": [ 320, 320 ] },
+      { "requires": "($checkbox_resolution = '2048x')","$checkbox_uv": [ 640, 0 ], "$checkbox_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "checkbox_checked_default@java_gui_common.checkbox_unchecked_default": {
+    "variables": [
+      { "requires": "($checkbox_resolution = '64x')",  "$checkbox_uv": [ 0, 20 ],  "$checkbox_uv_size": [ 20, 20 ] },
+      { "requires": "($checkbox_resolution = '128x')", "$checkbox_uv": [ 0, 40 ],  "$checkbox_uv_size": [ 40, 40 ] },
+      { "requires": "($checkbox_resolution = '256x')", "$checkbox_uv": [ 0, 80 ],  "$checkbox_uv_size": [ 80, 80 ] },
+      { "requires": "($checkbox_resolution = '512x')", "$checkbox_uv": [ 0, 160 ], "$checkbox_uv_size": [ 160, 160 ] },
+      { "requires": "($checkbox_resolution = '1024x')","$checkbox_uv": [ 0, 320 ], "$checkbox_uv_size": [ 320, 320 ] },
+      { "requires": "($checkbox_resolution = '2048x')","$checkbox_uv": [ 0, 640 ], "$checkbox_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "checkbox_checked_hover@java_gui_common.checkbox_unchecked_default": {
+    "variables": [
+      { "requires": "($checkbox_resolution = '64x')",  "$checkbox_uv": [ 20, 20 ],   "$checkbox_uv_size": [ 20, 20 ] },
+      { "requires": "($checkbox_resolution = '128x')", "$checkbox_uv": [ 40, 40 ],   "$checkbox_uv_size": [ 40, 40 ] },
+      { "requires": "($checkbox_resolution = '256x')", "$checkbox_uv": [ 80, 80 ],   "$checkbox_uv_size": [ 80, 80 ] },
+      { "requires": "($checkbox_resolution = '512x')", "$checkbox_uv": [ 160, 160 ], "$checkbox_uv_size": [ 160, 160 ] },
+      { "requires": "($checkbox_resolution = '1024x')","$checkbox_uv": [ 320, 320 ], "$checkbox_uv_size": [ 320, 320 ] },
+      { "requires": "($checkbox_resolution = '2048x')","$checkbox_uv": [ 640, 640 ], "$checkbox_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  /*//// UIDX Buttons ////*/
+
+  "play_mode": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/play_mode"
+  },
+
+  "edit_mode": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/edit_mode"
+  },
+
+  "realm_take_screenshot": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/realm_take_screenshot"
+  },
+
+  "realm_feed": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/realm_feed"
+  },
+
+  "minecraft_store_icon": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/minecraft_store"
+  },
+
+  "realm_subscriptions": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/realm_subscriptions"
+  },
+
+  "how_to_play": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/how_to_play"
+  },
+
+  "more_options": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/more_options"
+  },
+
+  "first_person": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/first_person"
+  },
+
+  "third_person_back": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/third_person_back"
+  },
+
+  "third_person_front": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/third_person_front"
+  },
+
+  "worlds_icon": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/worlds"
+  },
+
+  "realms_icon": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/realms"
+  },
+
+  "multiplayer_icon": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/multiplayer"
+  },
+
+  "creator_icon": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/creator"
+  },
+
+  /*//// Resource Packs Settings ////*/
+  
+  "pack_info_icon": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      {
+        "normal": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "color": "$text_color",
+          "texture": "textures/uidx/icons/pack_info_normal",
+          "bindings": [
+            {
+              "binding_collection_name": "$pack_items_type",
+              "binding_name": "#error_free",
+              "binding_name_override": "#visible",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      },
+      {
+        "warning": {
+          "type": "image",
+          "layer": 2,
+          "size": [ 16, 16 ],
+          "color": "$text_color",
+          "texture": "textures/uidx/icons/pack_info_warning",
+          "bindings": [
+            {
+              "binding_collection_name": "$pack_items_type",
+              "binding_name": "#has_warnings",
+              "binding_name_override": "#visible",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      },
+      {
+        "error": {
+          "type": "image",
+          "layer": 2,
+          "size": [ 16, 16 ],
+          "color": "$text_color",
+          "texture": "textures/uidx/icons/pack_info_warning",
+          "bindings": [
+            {
+              "binding_collection_name": "$pack_items_type",
+              "binding_name": "#has_errors",
+              "binding_name_override": "#visible",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "pack_settings_icon": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/pack_settings"
+  },
+
+  /*//// Icons ////*/
+  
+  "arrow_down_icon": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 12, 12 ],
+    "offset": [ 0, 1 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/arrow_down"
+  },
+
+  "arrow_left_icon": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 12, 12 ],
+    "offset": [ 0, 0 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/arrow_left"
+  },
+
+  "arrow_right_icon": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 12, 12 ],
+    "offset": [ 0, 0 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/arrow_right"
+  },
+
+  "reset_icon": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 12, 12 ],
+    "offset": [ 0, 0 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/reset"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "file_transmission_screen": {
+    "$is_popup_dialog_in_game": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "$screen_bg_content": "file_upload_dx.file_upload_content_bg",
+    "$screen_content": "file_upload_dx.file_upload_content"
+  }
+}
