@@ -36,7 +36,7 @@
 
 <!-- INFO -->
 ## info
-If you want to read more about this pack please go to the MCPEDL page: <a rel="license" href="https://mcpedl.com/colourful-containers/">CLICK ME!</a>.
+If you want to read more about this pack please go to the MCPEDL page: <a rel="license" href="https://mcpedl.com/colourful-containers-bedrock-pack-1/">CLICK ME!</a>.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
