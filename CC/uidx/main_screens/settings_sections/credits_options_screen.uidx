@@ -1,0 +1,162 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "credits_options_dx",
+
+  "panel_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 210, "100%" ],
+    "controls": [
+      {
+        "title_panel": {
+          "type": "panel",
+          "size": [ "100%", 66 ],
+          "controls": [
+            {
+              "sounds_label@settings_dx.base_label": {
+                "text": "credits_and_attribution.screen.title",
+                "offset": [ 0, 14 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_0": {
+          "type": "panel",
+          "size": [ "100%", 28 ],
+          "controls": [
+            {
+              "credits_button@common_buttons_dx.main_button_210": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "button.credits",
+                "$button_text": "options.credits"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ "100%", 28 ],
+          "ignored": "($is_holographic or $fire_tv or $education_edition_china)",
+          "controls": [
+            {
+              "attribution_link_button@common_buttons_dx.main_button_210": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$button_text": "options.attribution",
+                "$pressed_button_name": "button.menu_open_uri",
+                "variables": [
+                  {
+                    "requires": "(not $nx_os)",
+                    "$attribution_button_url": "https://www.minecraft.net/attribution/?hideChrome"
+                  },
+                  {
+                    "requires": "($nx_os)",
+                    "$attribution_button_url": "https://aka.ms/switchattribution"
+                  }
+                ],
+                "property_bag": {
+                  "#hyperlink": "$attribution_button_url"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ "100%", 28 ],
+          "variables": [
+            {
+              "requires": "(not $nx_os)",
+              "$licensed_content_button_url": "https://www.minecraft.net/licensed-content/?hideChrome"
+            },
+            {
+              "requires": "($nx_os)",
+              "$licensed_content_button_url": "https://aka.ms/switchcontent"
+            }
+          ],
+          "controls": [
+            {
+              "licensed_content_popup_button@common_buttons_dx.main_button_210": {
+                "ignored": "($is_holographic or $fire_tv or $education_edition)",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "button.menu_open_uri",
+                "$button_text": "credits_and_attribution.button.licenses",
+                "property_bag": {
+                  "#hyperlink": "$licensed_content_button_url"
+                }
+              }
+            },
+            {
+              "licensed_content_popup_button@common_buttons_dx.main_button_210": {
+                "ignored": "(not $is_holographic and not $fire_tv)",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "button.licensed_content_popup",
+                "$button_text": "credits_and_attribution.button.licenses"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_3": {
+          "type": "panel",
+          "size": [ "100%", 28 ],
+          "controls": [
+            {
+              "font_license_popup_button@common_buttons_dx.main_button_210": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "button.font_license_popup",
+                "$button_text": "options.font_license"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fill_panel": {
+          "type": "panel",
+          "size": [ "100%", "fill" ]
+        }
+      },
+      {
+        "final_panel": {
+          "type": "panel",
+          "size": [ "100%", 28 ],
+          "controls": [
+            {
+              "null_navigation_tab@settings_dx.null_navigation_tab": {
+                "$unchecked_control": "common_buttons_dx.150_default",
+                "$unchecked_hover_control": "common_buttons_dx.150_hover",
+                "size": [ 150, 20 ],
+
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 4
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+  
+  "credits_options_screen_panel": {
+    "type": "panel",
+    "controls": [
+      { "panel_content@credits_options_dx.panel_content": { } }
+    ]
+  }
+}

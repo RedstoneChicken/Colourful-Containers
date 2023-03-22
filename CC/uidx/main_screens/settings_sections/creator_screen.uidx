@@ -1,0 +1,259 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "creator_dx",
+  
+  "panel_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "top_padding": {
+          "type": "panel",
+          "size": [ 0, 4 ]
+        }
+      },
+      { 
+        "toolbox_categorie_label@controls_dx.categories_text_panel": {
+          "ignored": "$is_toolbox_ignored",
+          "$categorie_text": "menu.toolboxMode",
+          "$categorie_color|default": [ 1.0, 1.0, 0.33 ],
+          "$categorie_text_offset": [ 0, 8 ],
+          "size": [ "100%", 28 ]
+        }
+      },
+      {
+        "panel_toolbox": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "ignored": "$is_toolbox_ignored",
+          "controls": [
+            {
+              "toolbox_mode_toggle@settings_common_dx.option_toggle_alt": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_label": "options.toolboxMode",
+                "$option_binding_name": "#toolbox_mode",
+                "$option_enabled_binding_name": "#toolbox_mode_enabled",
+                "$toggle_name": "toolbox_mode"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_toolbox_desc@start_dx.stacked_row": {
+          "ignored": "$is_toolbox_ignored",
+          "size": [ "100%", "100%c+8px" ],
+          "controls": [
+            {
+              "label@settings_dx.base_label": {
+                "text": "#toolbox_label",
+                "size": [ "100%", "default" ],
+                "text_alignment": "center",
+                "color": [ 1.0, 1.0, 1.0 ],
+                "shadow": false,
+                "offset": [ 0, 5 ],
+                "bindings": [
+                  {
+                    "binding_name": "#toolbox_label"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "chat_categorie_label@controls_dx.categories_text_panel": {
+          "$categorie_text": "chat.title",
+          "$categorie_color|default": [ 1.0, 1.0, 0.33 ],
+          "$categorie_text_offset": [ 0, 8 ],
+          "size": [ "100%", 28 ]
+        }
+      },
+      {
+        "panel_0": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "controls": [
+            {
+              "option_content_file_log@settings_common_dx.option_toggle_alt": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_label": "options.copyCoordinateUI",
+                "$option_binding_name": "#copy_coordinate_ui",
+                "$toggle_name": "copy_coordinate_ui"
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "content_log_categorie_label@controls_dx.categories_text_panel": {
+          "$categorie_text": "contentlog.settingsSectionName",
+          "$categorie_color|default": [ 1.0, 1.0, 0.33 ],
+          "$categorie_text_offset": [ 0, 8 ],
+          "size": [ "100%", 28 ]
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "controls": [
+            {
+              "option_content_file_log@settings_common_dx.option_toggle_alt": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_label": "options.content_log_file",
+                "$option_binding_name": "#content_log_file",
+                "$option_enabled_binding_name": "#content_log_file_enabled",
+                "$toggle_name": "content_log_file"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "controls": [
+            {
+              "option_content_gui_log@settings_common_dx.option_toggle_alt": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_label": "options.content_log_gui",
+                "$option_binding_name": "#content_log_gui",
+                "$option_enabled_binding_name": "#content_log_gui_enabled",
+                "$toggle_name": "content_log_gui"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_3": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "controls": [
+            {
+              "open_content_log_history@common_buttons_dx.main_button_310": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "button.open_content_log_history",
+                "$button_text": "contentlog.history.title",
+                "bindings": [
+                  {
+                    "binding_name": "#content_log_gui_option_enabled",
+                    "binding_name_override": "#enabled"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_4": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "controls": [
+            {
+              "clear_content_log_files@common_buttons_dx.main_button_310": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+      
+                "$pressed_button_name": "button.clear_content_log_files",
+                "$button_text": "contentlog.clear_files",
+                "bindings": [
+                  {
+                    "binding_name": "#allow_content_log_write_to_disk",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_5@start_dx.stacked_row": {
+          "size": [ "100%", "100%c" ],
+          "bindings": [
+            {
+              "binding_name": "#content_log_file_enabled",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "label@settings_dx.base_label": {
+                "text": "#text",
+                "size": [ "100%", "default" ],
+                "color": [ 1.0, 1.0, 1.0 ],
+                "shadow": false,
+                "offset": [ 0, 5 ],
+                "bindings": [
+                  {
+                    "binding_name": "#content_log_location_text",
+                    "binding_name_override": "#text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bottom_padding": {
+          "type": "panel",
+          "size": [ 0, 8 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+  
+  "creator_label@settings_dx.base_label": {
+    "text": "options.creatorTitle",
+    "offset": [ 0, 14 ]
+  },
+
+  "done_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "done_button@settings_dx.null_navigation_tab": {
+          "$unchecked_control": "common_buttons_dx.200_default",
+          "$unchecked_hover_control": "common_buttons_dx.200_hover",
+
+          "size": [ 200, 20 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -9 ]
+        }
+      }
+    ]
+  },
+
+  "creator_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
+    "$is_toolbox_ignored|default": false,
+    "variables": [
+      {
+        "requires": "(not $is_desktop or $is_publish)",
+        "$is_toolbox_ignored": true
+      }
+    ],
+    "$top_content": "creator_dx.creator_label",
+    "$bottom_content": "creator_dx.done_panel",
+  
+    "$scrolling_content": "creator_dx.panel_content",
+    "$scroll_view_port_size": [ 324, "100%" ]
+  }
+}

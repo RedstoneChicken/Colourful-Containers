@@ -1,0 +1,145 @@
+## Start
+menu.play=游戏
+menu.options=选项…
+menu.quit=退出游戏
+menu.store=市场
+
+## Accessibility Settings
+options.enableChatTextToSpeech=为聊天启用文字转换语音
+options.enableAutoPlatformTextToSpeech=使用装置设定启用文字转换语音
+options.enableUITextToSpeech=启用UI屏幕阅读器
+options.enableOpenChatMessage=启用开启聊天视窗信息
+options.darknessEffectModifier=黑暗脉动效果
+options.darknessEffectModifier.message=控制监守者或幽匿尖啸体给予的黑暗脉动效果程度。
+
+## Video Settings
+options.graphics.fancy.tooltip=高品质画质会为大多数设备平衡性能和质量。天气、云和粒子可能不会在半透明方块或水的后面显示。
+options.graphics.fast.tooltip=流畅画质将减少可见的雨雪数量。树叶等方块的透明效果将被禁用。
+
+options.vsync=垂直同步
+options.vsync.off=关
+options.vsync.on=开
+options.vsync.adaptive=自适应  
+
+options.renderClouds=云
+
+options.maxFramerate=最大帧率
+
+options.renderDistance=渲染距离
+options.renderDistanceFormat=%s个区块
+options.renderDistanceRecommendedFormat=%s个区块
+
+options.fov.toggle=视野
+
+options.thirdperson=摄像机视角
+options.thirdperson.firstperson=第一人称
+options.thirdperson.thirdpersonback=第三人称背面
+options.thirdperson.thirdpersonfront=第三人称正面
+
+## Packs
+pack.available.title=§l可用
+pack.selected.title=§l已选
+
+resourcePack.title=选择资源包
+behaviorPack.title=选择行为包
+
+selectWorld.resourcePack=资源包
+selectWorld.behaviorPack=行为包
+
+pack.resources.dropInfo=请将资源包放到"resource_packs"文件夹来添加资源包
+pack.behavior.dropInfo=请将行为包放到"behavior_packs"文件夹来添加行为包
+
+## Recipe Book
+gui.recipebook.search_hint=§o搜索…
+gui.recipebook.toggleRecipes.all=显示全部
+gui.recipebook.toggleRecipes.craftable=仅显示可合成
+gui.recipebook.toggleRecipes.smeltable=仅显示可烧炼
+gui.recipebook.toggleRecipes.blastable=仅显示可冶炼
+gui.recipebook.toggleRecipes.smokable=仅显示可熏制
+
+## Creative
+inventory.binSlot=摧毁物品
+
+## Trade v2
+merchant.deprecated=村民每天最多补货两次。
+
+## Worlds
+selectWorld.tooltip.beta=你在这个快照中加载它之前，不要忘了备份这个世界！
+
+## Realms
+mco.selectServer.popup=Realms是一种安全、简单地享受在线Minecraft世界的方式，可支持多达十位好友同时在线。它也支持多种小游戏与海量自定义世界！只有Realm的所有者需要付款。
+
+## Toggle OFF/ON
+options.off=关
+options.on=开
+
+## Realms
+mco.invites.title=未决邀请
+mco.invites.pending=新的邀请！
+mco.invites.nopending=没有未决邀请！
+mco.invites.button.accept=接受
+mco.invites.button.reject=拒绝
+
+## Profile Screen
+profile.user=使用者
+profile.connected=已连线
+
+## Gamerule
+selectWorld.gameRules=游戏规则
+  
+editGamerule.title=编辑游戏规则
+editGamerule.default=默认:
+
+gamerule.doImmediateRespawn=立即重生
+gamerule.keepInventory=死亡后保留物品栏
+gamerule.naturalRegeneration=生命值自然恢复
+gamerule.spawnRadius=重生点半径
+gamerule.doMobSpawning=生成生物
+gamerule.doMobSpawning.description=一些实体可能有其特定的规则
+gamerule.doEntityDrops=非生物实体掉落
+gamerule.doEntityDrops.description=控制矿车（包括内容物）、物品展示框、船等的物品掉落
+gamerule.doMobLoot=生物战利品掉落
+gamerule.doMobLoot.description=控制生物死亡后是否掉落资源，包括经验球
+gamerule.doTileDrops=方块掉落
+gamerule.doTileDrops.description=控制破坏方块后是否掉落资源，包括经验球
+gamerule.doDaylightCycle=游戏内时间流逝
+gamerule.doFireTick=火焰蔓延
+gamerule.doWeatherCycle=天气更替
+gamerule.randomTickSpeed=随机刻速率
+gamerule.mobGriefing=允许破坏性生物行为
+gamerule.category.player=§l玩家
+gamerule.category.mobs=§l生物
+gamerule.category.spawning=§l生成
+gamerule.category.drops=§l掉落
+gamerule.category.updates=§l世界更新
+gamerule.category.misc=§l杂项
+
+##  Raid Texts Input (Don't change unless you know what you are doing)
+raid.name=Raid	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
+
+## Raid Texts Output
+bar.event.raid.name=袭击	#
+bar.event.raid.remaining.2=袭击 - 剩余2名袭击者	#
+bar.event.raid.remaining.1=袭击 - 剩余1名袭击者	#
+bar.event.raid.remaining.0=袭击 - 剩余0名袭击者	#
+bar.event.raid.victory=袭击 - 胜利	#
+bar.event.raid.defeat=袭击 - 失败	#
+
+## Audio Settings
+
+soundCategory.ambient=环境
+soundCategory.block=方块
+soundCategory.hostile=敌对生物
+soundCategory.master=主音量
+soundCategory.music=音乐
+soundCategory.neutral=友好生物
+soundCategory.player=玩家
+soundCategory.record=唱片机/音符盒
+soundCategory.weather=天气
+
+multiplayerWarning.header=§l警告：在线游戏由第三方提供
+multiplayerWarning.message=警告：在线游戏由非Mojang Studios或Microsoft拥有、运作和监督的第三方服务器提供。 在线游戏的过程中，你可能会收到不受规制的聊天消息或者其他不一定适合所有人的用户生成内容。
+multiplayerWarning.check=不再显示此屏幕

@@ -1,0 +1,369 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "game_world_dx",
+
+  /*//// Dropdown Toggles ////*/
+  
+  "world_gamemode_option": {
+    "type": "panel",
+    "size": [ 200, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_label": "createWorldScreen.gameMode.default",
+    "$option_enabled_binding_name": "#world_game_mode_dropdown_enabled",
+    "controls": [
+      {
+        "world_survival_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#world_game_mode_radio_survival",
+          "$radio_label_text": "createWorldScreen.gameMode.adventure",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#world_game_mode_radio_adventure",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "world_creative_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#world_game_mode_radio_creative",
+          "$radio_label_text": "createWorldScreen.gameMode.survival",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#world_game_mode_radio_survival",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "world_adventure_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#world_game_mode_radio_adventure",
+          "$radio_label_text": "createWorldScreen.gameMode.creative",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#world_game_mode_radio_creative",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "player_gamemode_option": {
+    "type": "panel",
+    "size": [ 200, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_label": "createWorldScreen.gameMode.personal",
+    "$option_enabled_binding_name": "#player_game_mode_dropdown_enabled",
+    "controls": [
+      {
+        "player_default_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_default",
+          "$radio_label_text": "createWorldScreen.gameMode.spectator",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#player_game_mode_radio_spectator",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "player_world_survival_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_survival",
+          "$radio_label_text": "createWorldScreen.gameMode.serverDefault",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#player_game_mode_radio_default",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "player_world_creative_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_creative",
+          "$radio_label_text": "createWorldScreen.gameMode.survival",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#player_game_mode_radio_survival",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "player_world_adventure_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_adventure",
+          "$radio_label_text": "createWorldScreen.gameMode.creative",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#player_game_mode_radio_creative",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "player_spectator_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_spectator",
+          "$radio_label_text": "createWorldScreen.gameMode.adventure",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#player_game_mode_radio_adventure",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "permission_option": {
+    "type": "panel",
+    "size": [ 200, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_label": "permissions.title",
+    "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
+    "controls": [
+      {
+        "visitor@settings_common_dx.dropdown_radio_200": {
+					"$toggle_state_binding_name": "#permission_level_radio_visitor",
+					"$radio_label_text": "permissions.level.operator",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_operator",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "member@settings_common_dx.dropdown_radio_200": {
+					"$toggle_state_binding_name": "#permission_level_radio_member",
+					"$radio_label_text": "permissions.level.visitor",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_visitor",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "operator@settings_common_dx.dropdown_radio_200": {
+					"$toggle_state_binding_name": "#permission_level_radio_operator",
+					"$radio_label_text": "permissions.level.member",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_member",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Panels ////*/
+
+  "title_label@settings_dx.base_label": {
+    "text": "createWorldScreen.game.settings",
+    "offset": [ 0, 14 ]
+  },
+
+  "game_panel_content": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 200, "100%c" ],
+    "controls": [
+      {
+        "header_with_text_edit": {
+          "type": "panel",
+          "size": [ "100%", 41 ],
+          "controls": [
+            {
+              "options_label@game_world_dx.title_label": {
+                "layer": 2,
+                "ignored": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "controls": [
+            { 
+              "world_gamemode_option@game_world_dx.world_gamemode_option": {
+                "size": [ 200, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "personal_gamemode_panel": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "controls": [
+            { 
+              "player_gamemode_option@game_world_dx.player_gamemode_option": {
+                "size": [ 200, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "permission_panel": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "controls": [/* 
+            { 
+              "permission_option@game_world_dx.permission_option": {
+                "size": [ 200, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            } */
+            {
+              "option_dropdown_permissions@settings_common_dx.option_dropdown_200": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$tts_section_header": "createWorldScreen.worldPreferences",
+                "$option_label": "permissions.title",
+                "$dropdown_content": "permissions.permission_level_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "player_permissions_dropdown",
+                "$button_type_panel": "permissions.permission_level_dropdown_state_content",
+                "$options_dropdown_toggle_label_binding": "#player_permissions_dropdown_toggle_label",
+                "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
+                "$is_world_settings": true,
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "variables": [
+                  {
+                    "requires": "$education_edition",
+                    "$option_label": "permissions.title.settings.edu"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_permissions_dropdown",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "controls": [
+            {
+              "allow_cheats_toggle@settings_common_dx.option_toggle_200": {
+                "size": [ 200, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$colon_needed": false,
+                "$option_label": "selectWorld.allowCommands",
+                "$option_binding_name": "#allow_cheats",
+                "$option_enabled_binding_name": "#allow_cheats_enabled",
+                "$toggle_name": "allow_cheats",
+                "$toggle_binding_condition": "always_when_visible"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "gamerule_button_panel": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "controls": [
+            {
+              "gamerules_button@create_world_dx.gamerules_button": {
+                "$unchecked_control": "common_buttons_dx.200_default",
+                "$unchecked_hover_control": "common_buttons_dx.200_hover",
+                "size": [ 200, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "done_panel": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "controls": [
+            {
+              "null_navigation_tab@settings_dx.null_navigation_tab": {
+                "$unchecked_control": "common_buttons_dx.200_default",
+                "$unchecked_hover_control": "common_buttons_dx.200_hover",
+                "size": [ 200, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "game_main_panel": {
+    "type": "panel",
+    "controls": [
+      { "game_panel_content@game_world_dx.game_panel_content": { } },
+      { "text_panel@edit_world_dx.text_panel": { "layer": 2 } }
+    ]
+  },
+
+  /*//// Screen ////*/
+  
+  "game_world_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "game_main_panel@game_world_dx.game_main_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "gamerule_button_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

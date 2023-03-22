@@ -1,0 +1,13 @@
+﻿##  Raid Texts Input
+raid.name=Raid	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
+
+##  Raid Texts Output
+bar.event.raid.name=Roham	#
+bar.event.raid.remaining.2=Roham - Hátralévő támadók: 2	#
+bar.event.raid.remaining.1=Roham - Hátralévő támadók: 1	#
+bar.event.raid.remaining.0=Roham - Hátralévő támadók: 0	#
+bar.event.raid.victory=Roham - Győzelem	#
+bar.event.raid.defeat=Roham - Vereség	#

@@ -1,0 +1,62 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "toasts_java_dx",
+
+  "toasts_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/toasts",
+    "$toasts_uv|default": [ 0, 0 ],
+    "$toasts_uv_size|default": [ 0, 0 ],
+    "uv": "$toasts_uv",
+    "uv_size": "$toasts_uv_size"
+  },
+
+  "advancement_toast@toasts_java_dx.toasts_base": {
+    "size": [ 160, 32 ],
+    "variables": [
+      { "requires": "($toasts_resolution = '256x')",  "$toasts_uv_size": [ 160, 32 ] },
+      { "requires": "($toasts_resolution = '512x')",  "$toasts_uv_size": [ 320, 64 ] },
+      { "requires": "($toasts_resolution = '1024x')", "$toasts_uv_size": [ 640, 128 ] },
+      { "requires": "($toasts_resolution = '2048x')", "$toasts_uv_size": [ 1280,	256 ] },
+      { "requires": "($toasts_resolution = '4096x')", "$toasts_uv_size": [ 2560,	512 ] },
+      { "requires": "($toasts_resolution = '8192x')", "$toasts_uv_size": [ 5120,	1024 ] }
+    ]
+  },
+
+  "recipe_toast@toasts_java_dx.toasts_base": {
+    "size": [ 160, 32 ],
+    "variables": [
+      { "requires": "($toasts_resolution = '256x')",  "$toasts_uv": [ 0, 32 ],   "$toasts_uv_size": [ 160, 32 ] },
+      { "requires": "($toasts_resolution = '512x')",  "$toasts_uv": [ 0, 64 ],   "$toasts_uv_size": [ 320, 64 ] },
+      { "requires": "($toasts_resolution = '1024x')", "$toasts_uv": [ 0, 128 ],  "$toasts_uv_size": [ 640, 128 ] },
+      { "requires": "($toasts_resolution = '2048x')", "$toasts_uv": [ 0, 256 ],  "$toasts_uv_size": [ 1280, 256 ] },
+      { "requires": "($toasts_resolution = '4096x')", "$toasts_uv": [ 0, 512 ],  "$toasts_uv_size": [ 2560, 512 ] },
+      { "requires": "($toasts_resolution = '8192x')", "$toasts_uv": [ 0, 1024 ], "$toasts_uv_size": [ 5120, 1024 ] }
+    ]
+  },
+
+  "notification_toast@toasts_java_dx.toasts_base": {
+    "size": [ 160, 32 ],
+    "variables": [
+      { "requires": "($toasts_resolution = '256x')",  "$toasts_uv": [ 0, 64 ],   "$toasts_uv_size": [ 160, 32 ] },
+      { "requires": "($toasts_resolution = '512x')",  "$toasts_uv": [ 0, 128 ],  "$toasts_uv_size": [ 320, 64 ] },
+      { "requires": "($toasts_resolution = '1024x')", "$toasts_uv": [ 0, 256 ],  "$toasts_uv_size": [ 640, 128 ] },
+      { "requires": "($toasts_resolution = '2048x')", "$toasts_uv": [ 0, 512 ],  "$toasts_uv_size": [ 1280, 256 ] },
+      { "requires": "($toasts_resolution = '4096x')", "$toasts_uv": [ 0, 1024 ], "$toasts_uv_size": [ 2560, 512 ] },
+      { "requires": "($toasts_resolution = '8192x')", "$toasts_uv": [ 0, 2048 ], "$toasts_uv_size": [ 5120, 1024 ] }
+    ]
+  },
+
+  "help_toast@toasts_java_dx.toasts_base": {
+    "size": [ 160, 32 ],
+    "variables": [
+      { "requires": "($toasts_resolution = '256x')",  "$toasts_uv": [ 0, 96 ],   "$toasts_uv_size": [ 160, 32 ] },
+      { "requires": "($toasts_resolution = '512x')",  "$toasts_uv": [ 0, 192 ],  "$toasts_uv_size": [ 320, 64 ] },
+      { "requires": "($toasts_resolution = '1024x')", "$toasts_uv": [ 0, 384 ],  "$toasts_uv_size": [ 640, 128 ] },
+      { "requires": "($toasts_resolution = '2048x')", "$toasts_uv": [ 0, 768 ],  "$toasts_uv_size": [ 1280, 256 ] },
+      { "requires": "($toasts_resolution = '4096x')", "$toasts_uv": [ 0, 1536 ], "$toasts_uv_size": [ 2560, 512 ] },
+      { "requires": "($toasts_resolution = '8192x')", "$toasts_uv": [ 0, 3072 ], "$toasts_uv_size": [ 5120, 1024 ] }
+    ]
+  }
+}

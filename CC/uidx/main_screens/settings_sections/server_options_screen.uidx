@@ -1,0 +1,70 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "server_options_dx",
+
+  /*//// Stack panels ////*/
+  
+  "panel_content": {
+    "type": "stack_panel",
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "top_padding": {
+          "type": "panel",
+          "size": [ 0, 4 ]
+        }
+      },
+      { "generated_form@server_form_dx.generated_contents": {} },
+      {
+        "submit@start_dx.stacked_row": {
+          "controls": [
+            {
+              "action_button@common_buttons_dx.main_button_310": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "button.submit_custom_form",
+                "$button_text": "gui.submit",
+                "bindings": [
+                  {
+                    "binding_name": "#submit_button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+  
+  "server_options_label@settings_dx.base_label": {
+    "text": "options.category.server",
+    "offset": [ 0, 4 ]
+  },
+
+  "server_options_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
+    "$top_content": "server_options_dx.server_options_label",
+    "$scrolling_content": "server_options_dx.panel_content",
+    "$bottom_content": "server_options_dx.done_panel"
+  },
+
+  "done_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "server_options_done_button@settings_dx.null_navigation_tab": {
+          "$unchecked_control": "common_buttons_dx.200_default",
+          "$unchecked_hover_control": "common_buttons_dx.200_hover",
+          "size": [ 200, 20 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -9 ]
+        }
+      }
+    ]
+  }
+}
