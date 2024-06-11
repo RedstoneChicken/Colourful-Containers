@@ -1,0 +1,102 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "hud_bottom_bar_elements_dx",
+
+  "bottom_bar_elements": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -24 ],
+    "controls": [
+      /* Experience */
+      {
+        "xp_bar": {
+          "type": "panel",
+          "size": [ 182, 5 ],
+          "controls": [
+            { "experience_level@hud_bottom_bar_elements_dx.experience_level": { "layer": 8 } },
+            { "experience_bar_background@hud_textures_dx.experience_bar_background": { "layer": 5 } },
+            { "experience_bar_progress@hud_textures_dx.experience_bar_progress": { "layer": 6 } }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_survival_ui",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      /* Horse Jump */
+      {
+        "horse_jump_rend@hud.horse_jump_renderer": {
+          "size": [ 182, 5 ],
+          "layer": 7,
+          "bindings": [
+            {
+              "binding_name": "#is_riding",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      /* Camel Dash */
+      {
+        "camel_dash_rend@hud.dash_renderer": {
+          "size": [ 182, 5 ],
+          "layer": 7,
+          "bindings": [
+            {
+              "binding_name": "#is_riding",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// XP Bar and Level Number. Created By @CrisXolt since fall 2016 ////*/
+
+  "experience_level":{
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 182, 8 ],
+    "offset": "$experience_level_offset",
+    "controls": [
+      { "main@hud_bottom_bar_elements_dx.xp_level_label":{ "offset": [ 0, 0 ] } },
+      /* 4 directions about borders */
+      { "border_0@hud_bottom_bar_elements_dx.border_xp_level_label":{ "offset": [ -1, 0  ] } }, // Left
+      { "border_1@hud_bottom_bar_elements_dx.border_xp_level_label":{ "offset": [  0, -1 ] } }, // Up
+      { "border_2@hud_bottom_bar_elements_dx.border_xp_level_label":{ "offset": [  0,  1 ] } }, // Down
+      { "border_3@hud_bottom_bar_elements_dx.border_xp_level_label":{ "offset": [  1,  0 ] } }  // Right
+    ]
+  },
+
+  "xp_level_label@label_dx.global_label_number": {
+    "shadow": false,
+    "text": "#level_number",
+    "color": "$experience_text_color",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#level_number",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#level_number_visible",
+        "binding_type": "global",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "border_xp_level_label@hud_bottom_bar_elements_dx.xp_level_label": {
+    "layer": 1,
+    "color": "$experience_outline_text_color"
+  }
+}

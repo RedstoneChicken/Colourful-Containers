@@ -1,0 +1,457 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "world_advanced_dx",
+
+  "experimental_panel": {
+    "type": "panel",
+    "size": [ "100%", 24 ],
+    "controls": [
+      { "experimental_toggle@world_advanced_dx.experimental_toggle": { } }
+    ]
+  },
+
+  "experimental_toggle@toggle_dx.option_toggle_list": {
+    "size": [ 310, 24 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$tts_section_header": "createWorldScreen.worldSettings",
+    "$toggle_tts_header_binding_type": "collection",
+    "$toggle_tts_header_binding_collection_name": "experimental_toggles",
+    "ignored": "$education_edition",
+    "$option_label": "#text",
+    "$option_binding_name": "#experimental_toggle_value",
+    "$option_enabled_binding_name": "#experimental_toggle_enabled",
+    "$toggle_name": "experimental_toggle",
+    "$toggle_grid_collection_name": "experimental_toggles",
+    "$toggle_collection_details_type": "collection_details",
+    "$toggle_collection_detail_name": "experimental_toggles",
+    "$toggle_binding_type": "collection",
+    "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+    "bindings": [
+      {
+        "binding_name": "#show_experimental_toggle",
+        "binding_name_override": "#visible"
+      },
+      {
+        "binding_name": "#experimental_toggle_enabled",
+        "binding_type": "collection",
+        "binding_name_override": "#enabled",
+        "binding_collection_name": "experimental_toggles"
+      }
+    ],
+    "$label_bindings": [
+      {
+        "binding_name": "#experimental_toggle_text",
+        "binding_name_override": "#text",
+        "binding_type": "collection",
+        "binding_collection_name": "experimental_toggles"
+      }
+    ]
+  },
+
+  /*//// Dropdown Options ////*/
+
+  "xboxlive_option": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_label": "xblLogin.LoginMessageTitle",
+    "$option_enabled_binding_name": "#xbl_show_broadcast_dropdown",
+    "bindings": [
+      {
+        "binding_name": "#can_be_xbl_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "controls": [
+      {
+        "invite_only_toggle@dropdown_dx.individual_dropdown_radio": {
+          "size": [ 310, 20 ],
+          "$toggle_state_binding_name": "#xbl_broadcast_invite_only",
+          "$radio_label_text": "options.xboxliveBroadcast.friendsOfFriends",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#xbl_broadcast_friends_of_friends",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "friends_only_toggle@dropdown_dx.individual_dropdown_radio": {
+          "size": [ 310, 20 ],
+          "$toggle_state_binding_name": "#xbl_broadcast_friends_only",
+          "$radio_label_text": "options.xboxliveBroadcast.inviteOnly",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#xbl_broadcast_invite_only",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "friends_of_friends_toggle@dropdown_dx.individual_dropdown_radio": {
+          "size": [ 310, 20 ],
+          "$toggle_state_binding_name": "#xbl_broadcast_friends_of_friends",
+          "$radio_label_text": "options.xboxliveBroadcast.friendsOnly",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#xbl_broadcast_friends_only",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Middle ////*/
+
+  "middle_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "top_padding": {
+          "type": "panel",
+          "size": [ 0, 4 ]
+        }
+      },
+      {
+        "convert_to_infinite": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "bindings": [
+            {
+              "binding_name": "#show_convert_to_infinite_button",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "convert_to_infinite_button@button_dx.main_button": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "unlock_templated_world_options",
+                "$button_text": "options.unlockTemplateWorldOptions.initiate"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "unlock_template": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "bindings": [
+            {
+              "binding_name": "#is_world_template_locked",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "unlock_template_options_button@button_dx.main_button": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$button_text": "options.unlockTemplateWorldOptions.initiate",
+                "$pressed_button_name": "unlock_templated_world_options",
+                "bindings": [
+                  {
+                    "binding_name": "#player_has_world_template_option_unlock_permissions",
+                    "binding_name_override": "#enabled"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "multiplayer_categorie_label": {
+          "type": "panel",
+          "size": [ "100%", 28 ],
+          "controls": [
+            {
+              "label@label_dx.global_label": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text": "createWorldScreen.multiplayer.settings",
+                "color": [ 1.0, 1.0, 0.33 ],
+                "offset": [ 0, 8 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_0": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "controls": [
+            {
+              "multiplayer_game_toggle@toggle_dx.option_toggle_list": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_label": "options.multiplayergame",
+                "$option_binding_name": "#multiplayer_game",
+                "$option_enabled_binding_name": "#multiplayer_game_enabled",
+                "$toggle_name": "multiplayer_game"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "controls": [
+            {
+              "server_visible_toggle@toggle_dx.option_toggle_list": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_label": "options.servervisible",
+                "$option_binding_name": "#server_visible",
+                "$option_enabled_binding_name": "#server_visibility_enabled",
+                "$toggle_name": "server_visible"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#can_be_server_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "controls": [
+            {
+              "xboxlive_option@world_advanced_dx.xboxlive_option": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#can_be_server_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "panel_3": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "ignored": "$education_edition",
+          "controls": [
+            {
+              "option_dropdown_permissions@dropdown_dx.option_dropdown": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$tts_section_header": "createWorldScreen.worldPreferences",
+                "$option_label": "permissions.title",
+                "$dropdown_content": "permissions.permission_level_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "player_permissions_dropdown",
+                "$button_type_panel": "permissions.permission_level_dropdown_state_content",
+                "$options_dropdown_toggle_label_binding": "#player_permissions_dropdown_toggle_label",
+                "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
+                "$is_world_settings": true,
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "variables": [
+                  {
+                    "requires": "$education_edition",
+                    "$option_label": "permissions.title.settings.edu"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_permissions_dropdown",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "panel_4": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "controls": [
+            {
+              "server_sim_distance_slider@slider_dx.option_slider": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_label": "#server_sim_distance_slider_label",
+                "$slider_name": "server_sim_distance",
+                "$slider_value_binding_name": "#server_sim_distance",
+                "$option_enabled_binding_name": "#server_sim_distance_enabled",
+                "$slider_steps_binding_name": "#server_sim_distance_steps",
+                "$label_bindings": [ { "binding_name": "#server_sim_distance_slider_label" } ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "education_categorie_label": {
+          "type": "panel",
+          "size": [ "100%", 28 ],
+          "ignored": "$education_edition",
+          "controls": [
+            {
+              "label@label_dx.global_label": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text": "howtoplay.category.education",
+                "color": [ 1.0, 1.0, 0.33 ],
+                "offset": [ 0, 8 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "education_panel": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "ignored": "$education_edition",
+          "controls": [
+            {
+              "education_toggle@toggle_dx.option_toggle_list": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$tts_section_header": "createWorldScreen.cheatSettings",
+                "$option_label": "createWorldScreen.educationtoggle",
+                "$option_binding_name": "#education_toggle",
+                "$option_enabled_binding_name": "#education_toggle_enabled",
+                "$toggle_name": "education_toggle",
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "experimental_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%c" ],
+          "$is_edit_screen|default": false,
+          "ignored": "(not $is_edit_screen)",
+          "controls": [
+            { 
+              "experiment_categorie_label": {
+                "type": "panel",
+                "size": [ "100%", 28 ],
+                "ignored": "$education_edition",
+                "controls": [
+                  {
+                    "label@label_dx.global_label": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "text": "createWorldScreen.experimentalgameplay",
+                      "color": [ 1.0, 1.0, 0.33 ],
+                      "offset": [ 0, 8 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "experimental_toggles": {
+                "ignored": "$education_edition",
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ "100%", "100%c" ],
+                "factory": {
+                  "name": "experimental_toggle_factory",
+                  "control_name": "world_advanced_dx.experimental_panel"
+                },
+      
+                "collection_name": "experimental_toggles",
+                "bindings": [
+                  {
+                    "binding_name": "#experimental_toggle_count",
+                    "binding_name_override": "#collection_length"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Top ////*/
+
+  "top_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "title_label@label_dx.global_label": {
+          "size": [ "default", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 5,
+          "shadow": true,
+          "color": "$main_button_default_color",
+          "text": "createWorldScreen.advanced",
+          "offset": [ 0, 19 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Bottom ////*/
+
+  "bottom_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "done_button@edit_world_dx.done_button": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -8 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+
+  "world_advanced_menu@menu_scroll_panel_template_dx.menu_scroll_panel_template": {
+    "$top_content_size": [ "100%", 43 ],
+    "$top_content": "world_advanced_dx.top_content",
+    "$scrolling_content": "world_advanced_dx.middle_stack_panel",
+    "$bottom_content": "world_advanced_dx.bottom_content",
+    "$scroll_view_port_size": [ 324, "100%" ]
+  }
+}

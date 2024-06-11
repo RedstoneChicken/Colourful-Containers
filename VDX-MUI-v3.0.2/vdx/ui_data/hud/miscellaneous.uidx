@@ -1,0 +1,316 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "hud_miscellaneous_dx",
+  
+  /*//// Left Objects ////*/
+
+  "left_objects": {
+    "type": "stack_panel",
+    "anchor_from": "bottom_left",
+    "anchor_to":  "bottom_left",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "panel": {
+          "type": "panel",
+          "size": [ 0, 0 ],
+          "controls": [
+            { "hud_player_rend_desktop@hud_miscellaneous_dx.hud_player_rend_desktop": { } },
+            { "hud_player_rend_pocket@hud_miscellaneous_dx.hud_player_rend_pocket": { } }
+          ]
+        }
+      },
+      { 
+        "pocket_padding_panel": {
+          "type": "panel",
+          "size": [ "100%", 30 ],
+          "bindings": [
+            {
+              "binding_name": "#hud_visible_not_centered",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      { 
+        "paper_doll_padding": {
+          "type": "panel",
+          "size": [ "100%", 50 ],
+          "bindings": [
+            {
+              "binding_name": "#paper_doll_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "player_position_padding": {
+          "type": "panel",
+          "size": [ "100%", 9 ],
+          "bindings": [
+            {
+              "binding_name": "#player_position_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "always",
+              "binding_type": "global"
+            }
+          ],
+          "controls": [
+            { "player_position_panel@hud_miscellaneous_dx.player_position_panel": { } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "hud_player_rend_desktop": {
+    "type": "panel",
+    "offset": "$vdx_player_rend_desk_offset",
+    "$vdx_player_rend_desk_offset|default": [ 6, 10 ],
+    "size": [ 17, 17 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "variables": [
+      {
+        "requires": "(not $touch)",
+        "$vdx_player_rend_desk_offset": [ 6, 10 ]
+      },
+      {
+        "requires": "($touch)",
+        "$vdx_player_rend_desk_offset": [ 15, 15 ]
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_visible_centered",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ],
+    "controls": [
+      {
+        "hud_player_alt": {
+          "ignored": "($show_hud_while_inventory)",
+          "type": "custom",
+          "renderer": "hud_player_renderer",
+          "layer": 1,
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@common.screen_exit_size_animation_push",
+            "@common.screen_exit_size_animation_pop",
+            "@common.screen_entrance_size_animation_push",
+            "@common.screen_entrance_size_animation_pop"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#paper_doll_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "hud_player": {
+          "ignored": "(not $show_hud_while_inventory)",
+          "type": "custom",
+          "renderer": "hud_player_renderer",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#paper_doll_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "hud_player_rend_pocket@hud_miscellaneous_dx.hud_player_rend_desktop": {
+    "size": [ 17, 17 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "variables": [
+      {
+        "requires": "(not $touch)",
+        "$vdx_player_rend_desk_offset": [ 40, 40 ]
+      },
+      {
+        "requires": "($touch)",
+        "$vdx_player_rend_desk_offset": [ 40, 40 ]
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_visible_not_centered",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+  
+  "player_position_panel": {
+    "type": "panel",
+    "size": [ "100%", 9 ],
+    "controls": [
+      {
+        "player_position": {
+          "type": "image",
+          "size": [ "100%c+1px", 9 ],
+          "texture": "vdx/ui_textures/hud/debug_text_bg",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 1, 0 ],
+          "controls": [
+            {
+              "player_position_text@label_dx.global_label": {
+                "size": [ "default", 10 ],
+                "offset": [ 1, 0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "layer": 1,
+      
+                "enable_profanity_filter": false,
+                "color": "$chat_text_color",
+                "text": "#player_position_text",
+                "shadow": false,
+                
+                "bindings": [
+                  {
+                    "binding_name": "#player_position_text",
+                    "binding_condition": "always_when_visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Right Objects ////*/
+
+  "auto_save_label@label_dx.global_label": {
+    "ignored": "$show_save_indicator_icon",
+    "shadow": true,
+    "text": "progressScreen.saving",
+    "color": [ 1.0, 1.0, 1.0],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "alpha": "@hud_miscellaneous_dx.auto_save_label_animation_1",
+    "offset": [ -10, -6 ],
+    "layer": 160,
+    "bindings": [
+      {
+        "binding_name": "#auto_save_animation_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "auto_save_label_animation_1": {
+    "anim_type": "alpha",
+    "duration": 0.5,
+    "from": 1.0,
+    "to": 0.5,
+    "next": "@hud_miscellaneous_dx.auto_save_label_animation_2"
+  },
+
+  "auto_save_label_animation_2": {
+    "anim_type": "alpha",
+    "easing": "in_expo",
+    "duration": 0.5,
+    "from": 0.5,
+    "to": 1.0,
+    "next": "@hud_miscellaneous_dx.auto_save_label_animation_1"
+  },
+  
+  "gamertag_label_for_splitscreen@label_dx.global_label": {
+    "size": [ "default", "default" ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -4, 4 ],
+    "color": "$hud_gamertag_color",
+    "text_alignment": "right",
+    "text": "#gamertag",
+    "bindings": [
+      {
+        "binding_name": "#gamertag"
+      }
+    ]
+  },
+  
+  "crosshair_renderer": {
+    "type": "custom",
+    "size": [ 16, 16 ],
+    "renderer": "cursor_renderer",
+    "layer": 4,
+    "bindings": [
+      {
+        "binding_name": "(not #on_new_death_screen)",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "auto_save_icon_legacy": {
+    "ignored": "(not $show_save_indicator_icon)",
+    "type": "panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -7.5, 25 ],
+    "size": [ 24, 24 ],
+    "controls": [
+      {
+        "auto_save_arrow": {
+          "type": "image",
+          "texture": "vdx/ui_textures/hud/auto_save_arrow",
+          "disable_anim_fast_forward": true,
+          "layer": 32,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": "@hud_miscellaneous_dx.anim_auto_save_legacy_arrow_move_down"
+        }
+      },
+      {
+        "auto_save_chest": {
+          "type": "image",
+          "texture": "vdx/ui_textures/hud/auto_save_chest",
+          "layer": 31,
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 0, 0 ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#auto_save_animation_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "anim_auto_save_legacy_arrow_move_down": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 0.33,
+    "from": [ 0, -17.5 ],
+    "to": [ 0, -10.5 ],
+    "next": "@hud_miscellaneous_dx.anim_auto_save_legacy_arrow_move_up"
+  },
+
+  "anim_auto_save_legacy_arrow_move_up": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 0.33,
+    "from": [ 0, -10.5 ],
+    "to": [ 0, -17.5 ],
+    "next": "@hud_miscellaneous_dx.anim_auto_save_legacy_arrow_move_down"
+  }
+}

@@ -1,0 +1,75 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "bed_mixed_dx",
+
+  "in_bed_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "wake_up_label_panel@label_dx.global_label": {
+          "size": [ "default", "default" ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -63 ],
+          "text_alignment": "center",
+          "layer": 31,
+          "shadow": true,
+          "text": "#wake_up_label_panel",
+          "color": "$main_header_text_color",
+          "bindings": [
+            {
+              "binding_name": "#wake_up_label_panel"
+            }
+          ],
+          "controls": [
+            { "hud_text_background@hud_item_text_dx.hud_text_background": { } }
+          ]
+        }
+      },
+      {
+        "chat_button@button_dx.main_button": {
+          "size": [ 200, 20 ],
+          "layer": 1,
+          "$button_text": "",
+          "$pressed_button_name": "button.chat",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ -114, -20 ],
+          "controls": [
+            { "default@social_interactions_textures_dx.mute_button": { } },
+            { "hover@social_interactions_textures_dx.mute_button_highlighted": { } },
+            { "pressed@social_interactions_textures_dx.mute_button_highlighted": { } }
+          ]
+        }
+      },
+      {
+        "wake_up_button@button_dx.main_button": {
+          "size": [ 200, 20 ],
+          "layer": 1,
+          "$button_text": "multiplayer.stopSleeping",
+          "$pressed_button_name": "button.wake_up_button",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -20 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "in_bed_screen_content@bed_mixed_dx.in_bed_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

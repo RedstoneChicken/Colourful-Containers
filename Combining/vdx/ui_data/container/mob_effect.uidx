@@ -1,0 +1,445 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "mob_effect_dx",
+
+  "mob_effect_grid_item": {
+    "type": "panel",
+    "size": [ "100%", 32 ],
+    "controls": [
+      {
+        "effect_panel": {
+          "type": "panel",
+          "size": [ 120, 32 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            { "effect_background_large@inventory_textures_dx.effect_background_large": { "layer": 1 } },
+            { 
+              "name@label_dx.global_label": {
+                "offset": [ 28, 5 ],
+                "layer": 3,
+                "color": "$dark_button_default_text_color",
+                "shadow": true,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text_alignment": "left",
+                "text": "#mob_effect_name",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_name": "#mob_effect_name",
+                    "binding_collection_name": "mob_effects_collection",
+                    "binding_condition": "visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "timer@label_dx.global_label": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 28, 15 ],
+                "layer": 3,
+                "text": "#mob_effect_timer",
+                "color": "$dark_button_secondary_default_text_color",
+                "text_alignment": "left",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_name": "#mob_effect_timer",
+                    "binding_collection_name": "mob_effects_collection",
+                    "binding_condition": "always_when_visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "icon_panel": {
+                "type": "panel",
+                "size": [ 18, 18 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 6, 7 ],
+                "layer": 4,
+                "controls": [
+                  {
+                    "absorption_icon@mob_effect_textures_dx.absorption": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/absorption_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "bad_omen_icon@mob_effect_textures_dx.bad_omen": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/bad_omen_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "blindness_icon@mob_effect_textures_dx.blindness": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/blindness_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "conduit_power_icon@mob_effect_textures_dx.conduit_power": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/conduit_power_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "fire_resistance_icon@mob_effect_textures_dx.fire_resistance": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/fire_resistance_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "haste_icon@mob_effect_textures_dx.haste": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/haste_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "health_boost_icon@mob_effect_textures_dx.health_boost": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/health_boost_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "hero_of_the_village_icon@mob_effect_textures_dx.hero_of_the_village": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/village_hero_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "hunger_icon@mob_effect_textures_dx.hunger": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/hunger_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "invisibility_icon@mob_effect_textures_dx.invisibility": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/invisibility_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "jump_boost_icon@mob_effect_textures_dx.jump_boost": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/jump_boost_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "levitation_icon@mob_effect_textures_dx.levitation": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/levitation_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "mining_fatigue_icon@mob_effect_textures_dx.mining_fatigue": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/mining_fatigue_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "nausea_icon@mob_effect_textures_dx.nausea": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/nausea_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "night_vision_icon@mob_effect_textures_dx.night_vision": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/night_vision_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "poison_icon@mob_effect_textures_dx.poison": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/poison_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "regeneration_icon@mob_effect_textures_dx.regeneration": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/regeneration_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "resistance_icon@mob_effect_textures_dx.resistance": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/resistance_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "slow_falling_icon@mob_effect_textures_dx.slow_falling": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/slow_falling_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "slowness_icon@mob_effect_textures_dx.slowness": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/slowness_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "speed_icon@mob_effect_textures_dx.speed": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/speed_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "strength_icon@mob_effect_textures_dx.strength": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/strength_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "water_breathing_icon@mob_effect_textures_dx.water_breathing": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/water_breathing_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "weakness_icon@mob_effect_textures_dx.weakness": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/weakness_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "wither_icon@mob_effect_textures_dx.wither": {
+                      "bindings": [
+                        {
+                          "binding_name": "(#texture = 'textures/ui/wither_effect')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "mob_effects_collection"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "mob_effect_grid_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "mob_effect_grid@mob_effect.mob_effect_grid": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ "100%", "default" ],
+          "offset": [ 0, 0 ],
+          "grid_item_template": "mob_effect_dx.mob_effect_grid_item"
+        }
+      }
+    ]
+  },
+  
+  /*//// Screen ////*/
+  
+  "cross": {
+    "type": "image",
+    "layer": 3,
+    "size": [ 16, 16 ],
+    "texture": "vdx/ui_textures/icon/cross"
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      {
+        "close_button@button_dx.main_black_button": {
+          "ignored": "(not $touch)",
+          "$pressed_button_name": "button.menu_exit",
+          "$button_content": "mob_effect_dx.cross_icon",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -4, 4 ],
+          "size": [ 16, 16 ],
+          "bindings": [
+            {
+              "binding_name": "#close_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "scrolling_panel@scroll_dx.scrolling_panel": {
+          "layer": 10,
+          "size": [ 150, "100%" ],
+          "$scrolling_pane_size": [ "100%", "100%" ],
+          "$scroll_view_port_size": [ "100%", "100%" ],
+          "$scroll_view_port_size_touch": [ "100%", "100%" ],
+          "$scrolling_pane_offset": [ 0, 0 ],
+          "$scroll_track_image_control": "main_textures_dx.scroll_track",
+          "$scroll_box_image_control": "widget_textures_dx.scroller",
+          "$scroll_size": [ 6, "100%" ],
+          "$scrolling_content": "mob_effect_dx.mob_effect_grid_panel",
+          "$jump_to_bottom_on_update": true,
+          "$always_handle_scrolling": true
+        }
+      }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

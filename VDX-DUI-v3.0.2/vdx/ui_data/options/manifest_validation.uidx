@@ -1,0 +1,705 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "manifest_validation_dx",
+
+  "clipboard_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "vdx/ui_textures/icon/clipboard"
+  },
+
+  "reflesh_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "vdx/ui_textures/icon/reset"
+  },
+
+  "delete_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "vdx/ui_textures/icon/pack_delete"
+  },
+
+  "text_label@label_dx.global_label": {
+    "shadow": true,
+    "color": "$main_header_text_color",
+    "size": [ "default", "default" ],
+    "layer": 8,
+    "text": "$text_label",
+    "bindings": [
+      {
+        "binding_name": "$text_label",
+        "binding_condition": "visible"
+      }
+    ]
+  },
+
+  "error_pack_content_layout": {
+    "type": "panel",
+    "layer": 6,
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "hold": {
+          "type": "panel",
+          "size": [ "100%", "100%cm" ],
+          "controls": [
+            { "grid_panel_selected@main_textures_dx.grid_panel_selected": {  "size": [ "100%", "100%sm+4px" ], "layer": 1 } },
+            {
+              "error_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ "100%-4px", "100%c" ],
+                "layer": 2,
+                "controls": [
+                  {
+                    "header_panel": {
+                      "type": "panel",
+                      "size": [ "100%", "100%cm" ],
+                      "controls": [
+                        {
+                          "error_type_panel@label_dx.global_label": {
+                            "shadow": true,
+                            "size": [ "100%-20px", "default" ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "offset": [ 0, 3 ],
+                            "text": "#error_type_label",
+                            "color": "$main_header_text_color",
+                            "bindings": [
+                              {
+                                "binding_collection_name": "pack_errors",
+                                "binding_name": "#error_type_label",
+                                "binding_type": "collection"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "clipboard_button@button_dx.main_black_button": {
+                            "size": [ 16, 16 ],
+                            "$pressed_button_name": "button.copy_to_clipboard",
+                            "$button_content": "manifest_validation_dx.clipboard_icon",
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "offset": [ 0, 0 ],
+                            "bindings": [
+                              {
+                                "binding_name": "#has_errors_or_warnings",
+                                "binding_name_override": "#visible"
+                              },
+                              {
+                                "binding_collection_name": "pack_errors",
+                                "binding_type": "collection_details"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "categorie_panel_1": {
+                      "type": "panel",
+                      "size": [ "100%", 3 ],
+                      "bindings": [
+                        {
+                          "binding_name": "#has_errors_or_warnings",
+                          "binding_name_override": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "object_name": {
+                            "type": "image",
+                            "texture": "vdx/ui_textures/global/color_base",
+                            "size": [ "100%-20px", 1 ],
+                            "offset": [ 0, 1 ],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "text_panel": {
+                      "type": "panel",
+                      "size": [ "100%", "100%c+6px" ],
+                      "controls": [
+                        {
+                          "error_text_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%", "100%cm" ],
+                            "offset": [ 0, 3 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "bindings": [
+                              {
+                                "binding_name": "#has_errors_or_warnings",
+                                "binding_name_override": "#visible"
+                              }
+                            ],
+                            "controls": [
+                              {
+                                "error_text@label_dx.global_label": {
+                                  "shadow": true,
+                                  "size": [ 30, 10 ],
+                                  "text": "manifestvalidation.issue",
+                                  "color": "$main_header_text_color"
+                                }
+                              },
+                              {
+                                "space": {
+                                  "type": "panel",
+                                  "size": [ 4, 10 ]
+                                }
+                              },
+                              {
+                                "offset": {
+                                  "type": "panel",
+                                  "size": [ "fill", "100%c" ],
+                                  "controls": [
+                                    {
+                                      "error_label@label_dx.global_label": {
+                                        "shadow": true,
+                                        "color": "$main_header_text_color",
+                                        "size": [ "100% - 8px", "default" ],
+                                        "offset": [ 0, 0 ],
+                                        "anchor_from": "top_left",
+                                        "anchor_to": "top_left",
+                                        "text": "#error_content_label",
+                                        "bindings": [
+                                          {
+                                            "binding_collection_name": "pack_errors",
+                                            "binding_name": "#error_content_label",
+                                            "binding_type": "collection"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "middle_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "top_panel": {
+          "type": "panel",
+          "size": [ 1, 4 ]
+        }
+      },
+      {
+        "pack_secondary_info": {
+          "type": "panel",
+          "size": [ "100%", "100%cm" ],
+          "controls": [
+            { "grid_panel_selected@main_textures_dx.grid_panel_selected": {  "size": [ "100%", "100%sm+4px" ], "layer": 1 } },
+            {
+              "main_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ "100%-4px", "100%c" ],
+                "layer": 2,
+                "controls": [
+                  {
+                    "header": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", 32 ],
+                      "controls": [
+                        {
+                          "icon": {
+                            "type": "image",
+                            "size": [ 32, 32 ],
+                            "$icon_collection_name": "none",
+                            "bindings": [
+                              {
+                                "binding_name": "#icon_path",
+                                "binding_name_override": "#texture",
+                                "binding_condition": "visible"
+                              },
+                              {
+                                "binding_name": "#icon_zip",
+                                "binding_name_override": "#zip_folder",
+                                "binding_condition": "visible"
+                              },
+                              {
+                                "binding_name": "#icon_file_system",
+                                "binding_name_override": "#texture_file_system",
+                                "binding_condition": "visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "padding_0": {
+                            "type": "panel",
+                            "size": [ 2, 32 ]
+                          }
+                        },
+                        {
+                          "text_panel": {
+                            "type": "panel",
+                            "size": [ "fill", 32 ],
+                            "controls": [
+                              {
+                                "title@manifest_validation_dx.text_label": {
+                                  "size": [ "100%", 10 ],
+                                  "$text_label": "#pack_header_title",
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left"
+                                }
+                              },
+                              {
+                                "description@manifest_validation_dx.text_label": {
+                                  "size": [ "100%", 20 ],
+                                  "$text_label": "#pack_header_description",
+                                  "color": [ 0.5, 0.5, 0.5 ],
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left",
+                                  "offset": [ 0, 11 ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "padding_1": {
+                            "type": "panel",
+                            "size": [ 2, 32 ]
+                          }
+                        },
+                        {
+                          "right_buttons": {
+                            "type": "panel",
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "size": [ 16, 32 ],
+                            "controls": [
+                              {
+                                "refresh_button@button_dx.main_black_button": {
+                                  "size": [ 16, 16 ],
+                                  "$pressed_button_name": "button.refresh_manifest",
+                                  "$button_content": "manifest_validation_dx.reflesh_icon",
+                                  "anchor_from": "top_right",
+                                  "anchor_to": "top_right",
+                                  "offset": [ 0, 0 ],
+                                  "bindings": [
+                                    {
+                                      "binding_name": "(not #is_working)",
+                                      "binding_name_override": "#enabled"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "delete_button@button_dx.main_black_button": {
+                                  "size": [ 16, 16 ],
+                                  "$pressed_button_name": "button.delete_manifest",
+                                  "$button_content": "manifest_validation_dx.delete_icon",
+                                  "anchor_from": "bottom_right",
+                                  "anchor_to": "bottom_right",
+                                  "offset": [ 0, 0 ],
+                                  "bindings": [
+                                    {
+                                      "binding_name": "(not #is_working)",
+                                      "binding_name_override": "#enabled"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "categorie_panel_0": {
+                      "type": "panel",
+                      "size": [ "100%", 3 ],
+                      "controls": [
+                        {
+                          "object_name": {
+                            "type": "image",
+                            "texture": "vdx/ui_textures/global/color_base",
+                            "size": [ "100%-20px", 1 ],
+                            "offset": [ 0, 1 ],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "pack_size_panel": {
+                      "type": "panel",
+                      "size": [ "100%", 16 ],
+                      "controls": [
+                        {
+                          "title_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%", 10 ],
+                            "offset": [ 0, 3 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "controls": [
+                              {
+                                "title_text@label_dx.global_label": {
+                                  "shadow": true,
+                                  "size": [ "default", 10 ],
+                                  "text": "structure_block.size",
+                                  "color": "$main_header_text_color"
+                                }
+                              },
+                              {
+                                "space": {
+                                  "type": "panel",
+                                  "size": [ 4, 10 ]
+                                }
+                              },
+                              {
+                                "offset": {
+                                  "type": "panel",
+                                  "size": [ "fill", 10 ],
+                                  "controls": [
+                                    {
+                                      "title@manifest_validation_dx.text_label": {
+                                        "anchor_from": "top_left",
+                                        "anchor_to": "top_left",
+                                        "size": [ "default", 10 ],
+                                        "$text_label": "#pack_header_size"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "categorie_panel_1": {
+                      "type": "panel",
+                      "size": [ "100%", 3 ],
+                      "controls": [
+                        {
+                          "object_name": {
+                            "type": "image",
+                            "texture": "vdx/ui_textures/global/color_base",
+                            "size": [ "100%-20px", 1 ],
+                            "offset": [ 0, 1 ],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "pack_id_panel": {
+                      "type": "panel",
+                      "size": [ "100%", 16 ],
+                      "controls": [
+                        {
+                          "title_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%", 10 ],
+                            "offset": [ 0, 3 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "controls": [
+                              {
+                                "title_text@label_dx.global_label": {
+                                  "shadow": true,
+                                  "size": [ "default", 10 ],
+                                  "text": "manifestvalidation.packid",
+                                  "color": "$main_header_text_color"
+                                }
+                              },
+                              {
+                                "space": {
+                                  "type": "panel",
+                                  "size": [ 4, 10 ]
+                                }
+                              },
+                              {
+                                "offset": {
+                                  "type": "panel",
+                                  "size": [ "fill", 10 ],
+                                  "controls": [
+                                    {
+                                      "title@manifest_validation_dx.text_label": {
+                                        "anchor_from": "top_left",
+                                        "anchor_to": "top_left",
+                                        "size": [ "default", 10 ],
+                                        "$text_label": "#pack_id"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "categorie_panel_2": {
+                      "type": "panel",
+                      "size": [ "100%", 3 ],
+                      "controls": [
+                        {
+                          "object_name": {
+                            "type": "image",
+                            "texture": "vdx/ui_textures/global/color_base",
+                            "size": [ "100%-20px", 1 ],
+                            "offset": [ 0, 1 ],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "pack_version_panel": {
+                      "type": "panel",
+                      "size": [ "100%", 16 ],
+                      "offset": [ 0, 3 ],
+                      "controls": [
+                        {
+                          "title_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%", 10 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "controls": [
+                              {
+                                "version_text@label_dx.global_label": {
+                                  "shadow": true,
+                                  "size": [ "default", 10 ],
+                                  "text": "manifestvalidation.packversion",
+                                  "color": "$main_header_text_color"
+                                }
+                              },
+                              {
+                                "space": {
+                                  "type": "panel",
+                                  "size": [ 4, 10 ]
+                                }
+                              },
+                              {
+                                "offset": {
+                                  "type": "panel",
+                                  "size": [ "fill", 10 ],
+                                  "controls": [
+                                    {
+                                      "version@manifest_validation_dx.text_label": {
+                                        "anchor_from": "top_left",
+                                        "anchor_to": "top_left",
+                                        "size": [ "default", 10 ],
+                                        "$text_label": "#pack_version"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "categorie_panel_3": {
+                      "type": "panel",
+                      "size": [ "100%", 3 ],
+                      "controls": [
+                        {
+                          "object_name": {
+                            "type": "image",
+                            "texture": "vdx/ui_textures/global/color_base",
+                            "size": [ "100%-20px", 1 ],
+                            "offset": [ 0, 1 ],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path_panel": {
+                      "type": "panel",
+                      "size": [ "100%", "100%c+6px" ],
+                      "controls": [
+                        {
+                          "title_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%", "100%cm" ],
+                            "offset": [ 0, 3 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "controls": [
+                              {
+                                "path_text@label_dx.global_label": {
+                                  "shadow": true,
+                                  "size": [ "default", 10 ],
+                                  "text": "manifestvalidation.filelocation",
+                                  "color": "$main_header_text_color"
+                                }
+                              },
+                              {
+                                "space": {
+                                  "type": "panel",
+                                  "size": [ 4, 10 ]
+                                }
+                              },
+                              {
+                                "offset": {
+                                  "type": "panel",
+                                  "size": [ "fill", "100%c" ],
+                                  "controls": [
+                                    {
+                                      "path@manifest_validation_dx.text_label": {
+                                        "anchor_from": "top_left",
+                                        "anchor_to": "top_left",
+                                        "size": [ "100%-4px", "default" ],
+                                        "$text_label": "#pack_path"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "error_list_categorie_label": {
+          "type": "panel",
+          "size": [ "100%", 28 ],
+          "controls": [
+            {
+              "label@label_dx.global_label": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text": "manifestvalidation.errorlist",
+                "color": [ 1.0, 1.0, 0.33 ],
+                "offset": [ 0, 8 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "error@manifest_validation.error_content_grid": {
+          "factory": {
+            "name": "pack_error_factory",
+            "control_name": "manifest_validation_dx.error_pack_content_layout"
+          }
+        }
+      },
+      {
+        "end_panel": {
+          "type": "panel",
+          "size": [ 1, 4 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Top ////*/
+
+  "top_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "title_label@label_dx.global_label": {
+          "size": [ "default", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 5,
+          "shadow": true,
+          "color": "$main_button_default_color",
+          "text": "manifestvalidation.title",
+          "offset": [ 0, 19 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Bottom ////*/
+
+  "bottom_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "confirm_button@button_dx.main_button": {
+          "$pressed_button_name": "button.menu_exit",
+          "$button_text": "gui.confirm",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -7 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      {
+        "main@menu_scroll_panel_template_dx.menu_scroll_panel_template": {
+          "$top_content": "manifest_validation_dx.top_content",
+          "$scrolling_content": "manifest_validation_dx.middle_stack_panel",
+          "$bottom_content": "manifest_validation_dx.bottom_content",
+          "$scroll_view_port_size": [ 324, "100%" ]
+        }
+      },
+      { "menu_background@menu_background_textures_dx.menu_background": { "layer": -10 } }
+    ]
+  }
+}

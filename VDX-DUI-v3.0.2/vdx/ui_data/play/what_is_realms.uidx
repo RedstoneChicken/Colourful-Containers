@@ -1,0 +1,152 @@
+/*File made by @CrisXolt. 
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "what_is_realms_dx",
+  
+  /*//// Screen ////*/
+
+  "center_screen": {
+    "type": "panel",
+    "size": [ 320, 172 ],
+    "layer": 850,
+    "controls": [
+      {
+        "popup_background@popup_textures_dx.background": {
+          "layer": 1,
+          "size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "close_button@toggle_dx.toggle_panel": {
+          "size": [ 14, 14 ],
+          "$unchecked_control": "widget_textures_dx.cross_button",
+          "$unchecked_hover_control": "widget_textures_dx.cross_button_highlighted",
+          "$checked_control": "widget_textures_dx.cross_button",
+          "$checked_hover_control": "widget_textures_dx.cross_button_highlighted",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 4, 4 ],
+          "layer": 8,
+          "$is_back_button": true,
+          "$toggle_name": "realms_popup_button",
+          "$tab_view_binding_name": "realms_popup_close",
+          "$toggle_default_state": true,
+          "$toggle_group_forced_index": 0,
+          "$toggle_focus_enabled": false
+        }
+      },
+      {
+        "image_panel": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 3,
+          "offset": [ 10, 10 ],
+          "size": [ 195, 152 ],
+          "clips_children": true,
+          "controls": [
+            {
+              "image_description": {
+                "type": "image",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ -183, 0  ],
+                "size": [ 505, 152 ],
+                "texture": "textures/ui/realms_header_art"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "realms_desc_label@label_dx.global_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "font_scale_factor": 1.0,
+          "line_padding": -1.0,
+          "layer": 3,
+          "offset": [ 210, 9.5 ],
+          "size": [ 89, 125 ],
+          "color": [ 1.0, 1.0, 1.0 ],
+          "shadow": true,
+          "text": "mco.selectServer.popup"
+        }
+      },
+      {
+        "button_hold": {
+          "type": "panel",
+          "size": [ 99, 20 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ -10, -10 ],
+          "controls": [
+            {
+              "create_on_realms_button@button_dx.main_button": {
+                "layer": 3,
+                "size": [ 99, 20 ],
+                "$button_text": "mco.selectServer.buy",
+                "$pressed_button_name": "button.create_on_realms_button",
+                "bindings": [
+                  {
+                    "binding_name": "#create_on_realms_button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "trial_available@icon_textures_dx.trial_available": {
+                "layer": 10,
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [ -4, 6 ],
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#realm_trial_button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "create_on_realms_trial_button@button_dx.main_button": {
+                "layer": 3,
+                "size": [ 99, 20 ],
+                "$button_text": "mco.selectServer.trial",
+                "$pressed_button_name": "button.menu_realm_world_trial",
+                "bindings": [
+                  {
+                    "binding_name": "#cross_platform_enabled",
+                    "binding_name_override": "#enabled"
+                  },
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#realm_trial_button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "layer": 850,
+    "controls": [
+      {
+        "bg_button": {
+          "layer": 1,
+          "type": "button",
+          "size": [ "100%", "100%" ]
+        }
+      },
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

@@ -1,0 +1,317 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "progress_upload_dx",
+  
+  /*//// Buttons ////*/
+
+  "lets_go_button@button_dx.main_button": {
+    "size": [ 200, 20 ],
+    "$pressed_button_name": "button.file_upload_play",
+    "$button_text": "progressScreen.message.letsGo"
+  },
+
+  "cancel_button@button_dx.main_button": {
+    "size": [ 200, 20 ],
+    "$pressed_button_name": "button.file_upload_cancel",
+    "$button_text": "gui.cancel"
+  },
+
+  "cancel_button_150@button_dx.main_button": {
+    "size": [ 150, 20 ],
+    "$pressed_button_name": "button.file_upload_cancel",
+    "$button_text": "gui.cancel"
+  },
+
+  "continue_button@button_dx.main_button": {
+    "size": [ 150, 20 ],
+    "$pressed_button_name": "button.file_upload_wifi_warning_continue",
+    "$button_text": "permissions.Continue"
+  },
+
+  "button_panel": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -56 ],
+    "controls": [
+      {
+        "play@progress_upload_dx.lets_go_button": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "bindings": [
+            {
+              "binding_name": "#play_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "cancel@progress_upload_dx.cancel_button": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "bindings": [
+            {
+              "binding_name": "#cancel_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "continue_or_cancel_button": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "#warning_button2_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "continue@progress_upload_dx.continue_button": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "cancel@progress_upload_dx.cancel_button_150": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Label ////*/
+
+  "label_common@label_dx.global_label": {
+    "color": [ 1.0, 1.0, 1.0 ],
+    "size": [ "default", "100%" ],
+    "text": "#label_text",
+    "shadow": true,
+    "bindings": [
+      {
+        "binding_name": "$label_binding_name",
+        "binding_name_override": "#label_text"
+      }
+    ]
+  },
+  
+  /*//// Title ////*/
+  
+  "title_panel": {
+    "type": "panel",
+    "size": [ "100%", "50%-11px" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "single_label": {
+          "type": "panel",
+          "size": [ 300, 10 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "bindings": [
+            {
+              "binding_name": "#single_label_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "center@progress_upload_dx.label_common": {
+                "size": [ "default", 10 ],
+                "$label_binding_name": "#single_title_label"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "dual_label": {
+          "type": "panel",
+          "size": [ 300, 10 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "bindings": [
+            {
+              "binding_name": "#dual_label_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "left@progress_upload_dx.label_common": {
+                "size": [ "default", 10 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$label_binding_name": "#dual_title_left_label"
+              }
+            },
+            {
+              "right@progress_upload_dx.label_common": {
+                "size": [ "default", 10 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$label_binding_name": "#dual_title_right_label"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Subtitle ////*/
+
+  "subtitle_panel": {
+    "type": "panel",
+    "size": [ "100%", "50%-3px" ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "message": {
+          "type": "panel",
+          "visible": "#message_text_visible",
+          "size": [ 200, "100%c" ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "message_text@label_dx.global_label": {
+                "color": [ 1.0, 1.0, 1.0 ],
+                "size": [ "100%", "default" ],
+                "shadow": true,
+                "text": "You are not currently connected to wifi.  Mobile data charges might apply."
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#warning_content_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "progress_text_panel": {
+          "type": "panel",
+          "visible": "#progress_text_visible",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ 100, 10 ],
+          "controls": [
+            {
+              "progress@progress_upload_dx.label_common": {
+                "layer": 1,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 24 ],
+                "$label_binding_name": "#progress_size_label"
+              }
+            },
+            {
+              "total@progress_upload_dx.label_common": {
+                "layer": 1,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$label_binding_name": "#total_size_label"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#progress_text_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "progress_percent_panel": {
+          "type": "panel",
+          "layer": 2,
+          "visible": "#progress_visible",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 13 ],
+          "size": [ 100, 2 ],
+          "controls": [
+            {
+              "empty_progress_bar": {
+                "type": "image",
+                "layer": 1,
+                "size": [ 100, 2 ],
+                "texture": "vdx/ui_textures/progress/classic_bar_background"
+              }
+            },
+            {
+              "full_progress_bar": {
+                "type": "image",
+                "layer": 2,
+                "size": [ 100, 2 ],
+                "texture": "vdx/ui_textures/progress/classic_bar_progress",
+                "clip_direction": "left",
+                "clip_pixelperfect": false,
+                "bindings": [
+                  {
+                    "binding_name": "#progress_percentage",
+                    "binding_name_override": "#clip_ratio",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#progress_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "layer": 5,
+    "controls": [
+      { "title_panel@progress_upload_dx.title_panel": { } },
+      { "subtitle_panel@progress_upload_dx.subtitle_panel": { } },
+      { "button_panel@progress_upload_dx.button_panel": { } }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@progress_upload_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      {
+        "bg": {
+          "type": "panel",
+          "controls": [
+            { "menu_background@menu_background_textures_dx.menu_background": { "layer": -10 } }
+          ]
+        }
+      }
+    ]
+  }
+}

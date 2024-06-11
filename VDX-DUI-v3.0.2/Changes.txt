@@ -1,0 +1,93 @@
+v3.0.2 [21 March 2024]
+
+///// Desktop /////
+
+[Additions]
+[+] Mixed UI will now be implemented as a separate pack.
+
+[Removed]
+[-] Unfortunately, "You died!" screen will automatically be removed permanently because the new Ore UI version will be implemented in BE v1.20.80.
+
+[Changes]
+[*] Play:
+	- Fixed a bug where the panel content offset was incorrect in Minecraft Realms.
+[*] Progress:
+	- Change the size of loading percentage square in order to match the JE v1.20.5 snapshot.
+	- Change the layout of the online warning screen to match the JE v1.20.5 snapshot.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+v3.0.1 [10 March 2024]
+[Changes]
+[*] HUD:
+	- Height limit texts now appear as action bar text instead of chat messages, thanks @agentms_ :D!
+[*] Progress:
+	- Fixed a bug where progress_popup was not appearing as expected when joining a server.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+v3.0.0 [29 February 2024]
+
+Note: Initial changes from previous generation.
+
+However, it is not a big deal, it is just a small improvement than the previous version
+with the new GUI system based on JE 1.20.2.
+
+This is just a new beginning...
+
+[Additions]
+[+] New GUI Texture System from JE 1.20.5 Snapshots, but no every texture can have
+		desired resolution automatically, still, you must review "_global_variables.json"!
+[+] Crafter Redstone Screen (From 1.21 Snapshots).
+[+] Customize Touch Controls (Experimental).
+
+[Temporarily Removed]
+[-] Legacy container screens (Villager v1 and Smithing Table v1)
+[-] Realms Sections
+Note: These screens will be back in the next update, otherwise... Ore UI version is probably implemented... D:
+
+[Changes]
+[*] Global:
+	- To avoid errors when customizing touch controls, "$show_hud_while_inventory" in "_global_variables.json"
+		is now disabled by default. I hope you understand! >_<
+	- GUI Menu background texture is now darkened panel instead dirt block. However, with exception of menu scroll list,
+	  full BG menu it's only limited for pre-game.
+	- And speaking of this, for the moment the options menu design will remain similar to JE v1.20.3 with new integrated textures.
+[*] Files:
+	- The VDX custom UI data and textures are now only located in the "/uidx" folder.
+[*] Progress:
+	- File upload and download screen panels, including modals, are now fully centered.
+[*] HUD:
+	- Bed messages now appear as action bar text instead of chat messages, with the help of @agentms_.
+		In the next version I will bring height limit texts in the action bar! ;D
+[*] Chat:
+	- On the chat screen, main BG are now in each message grid panel instead of the full scroll panel, to match the Java edition.
+[*] Beacon Desktop:
+	- Changed Diamond and Emerald icon offsets to match Java Edition.
+	- The hover text panel for the confirm and cancel buttons has now been removed as it is no longer in Java Edition.
+[*] Inventory with Recipe Book Desktop:
+	- Fixed a bug when selecting a recipe while using controller cursor.
+	- Selected recipe even if there's no ingredients to craft, the texture now is the same as red one.
+	- Creative category text no longer appears in hover text panel.
+[*] Smithing Table:
+	- Input items overlay icons now have the same animations from Java Edition.
+[*] Add External Server:
+	- Text field option size is now between X=200 and Y=20, in order to match Java Edition.
+	- Main Panel now re-modified with support for small phones.
+[*] Command Block:
+	- Text field option size is now between X=276 and Y=20, in order to match Java Edition.
+	- Help texts removed, something new will be added in the future.
+	- Added autocomplete buttons, but only for touch screens.
+[*] Structure Block:
+	- Text field option size is now between X=80 and Y=20, and for structure name, X=300 and Y=20, in order to match Java Edition.
+[*] Death:
+	- Re-named quit button text to "Title Screen", and the confirm popup panel is now different based from Java Edition.
+	- But the main panel can't be hidden while confirm panel is shown... Sorry... :(
+[*] Play:
+	- Grid items are now improved! Making better support for controller.
+[*] Options:
+	- Controls options now have different sections depending which method do you use.
+	- Now, some options like "Subscription", "Server" or other things that were in the top right are now invisible, but still accessible.
+[*] Credits:
+	- It has been updated, now the texts are based on Java Edition (in fact, it also has on Bedrock),
+		but the data is now heavier! (More testing is still needed)

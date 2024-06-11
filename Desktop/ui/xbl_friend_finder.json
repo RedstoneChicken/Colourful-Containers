@@ -1,6 +1,0 @@
-{
-  "xbl_friend_finder": {
-    "$screen_content": "xbl_friend_finder_dx.xbl_friend_finder_screen_content",
-    "$screen_bg_content": "xbl_friend_finder_dx.xbl_friend_finder_screen_bg"
-  }
-}

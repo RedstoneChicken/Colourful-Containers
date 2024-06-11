@@ -1,0 +1,292 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "music_and_sounds_options_dx",
+
+  /*//// Middle ////*/
+
+  "middle_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "top_padding": {
+          "type": "panel",
+          "size": [ "100%", 4 ]
+        }
+      },
+      {
+        "panel_0": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "controls": [
+            {
+              "option_slider_0@slider_dx.option_slider": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#main_volume_slider_label",
+                "$slider_name": "main_volume",
+                "$slider_value_binding_name": "#main_volume",
+                "$option_enabled_binding_name": "#main_volume_enabled",
+                "$label_bindings": [ { "binding_name": "#main_volume_slider_label" } ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "controls": [
+            {
+              "option_slider_1@slider_dx.option_slider": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#music_volume_slider_label",
+                "$slider_name": "music_volume",
+                "$slider_value_binding_name": "#music_volume",
+                "$option_enabled_binding_name": "#music_volume_enabled",
+                "$label_bindings": [ { "binding_name": "#music_volume_slider_label" } ]
+              }
+            },
+            {
+              "option_slider_2@slider_dx.option_slider": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$option_label": "#record_volume_slider_label",
+                "$slider_name": "record_volume",
+                "$slider_value_binding_name": "#record_volume",
+                "$slider_tts_text_value": "#record_volume_text_value",
+                "$option_enabled_binding_name": "#record_volume_enabled",
+                "$label_bindings": [ { "binding_name": "#record_volume_slider_label" } ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "controls": [
+            {
+              "option_slider_9@slider_dx.option_slider": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#weather_volume_slider_label",
+                "$slider_name": "weather_volume",
+                "$slider_value_binding_name": "#weather_volume",
+                "$slider_tts_text_value": "#weather_volume_text_value",
+                "$option_enabled_binding_name": "#weather_volume_enabled",
+                "$label_bindings": [ { "binding_name": "#weather_volume_slider_label" } ]
+              }
+            },
+            {
+              "option_slider_4@slider_dx.option_slider": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$option_label": "#block_volume_slider_label",
+                "$slider_name": "block_volume",
+                "$slider_value_binding_name": "#block_volume",
+                "$slider_tts_text_value": "#block_volume_text_value",
+                "$option_enabled_binding_name": "#block_volume_enabled",
+                "$label_bindings": [ { "binding_name": "#block_volume_slider_label" } ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_3": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "controls": [
+            {
+              "option_slider_5@slider_dx.option_slider": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#hostile_volume_slider_label",
+                "$slider_name": "hostile_volume",
+                "$slider_value_binding_name": "#hostile_volume",
+                "$slider_tts_text_value": "#hostile_volume_text_value",
+                "$option_enabled_binding_name": "#hostile_volume_enabled",
+                "$label_bindings": [ { "binding_name": "#hostile_volume_slider_label" } ]
+              }
+            },
+            {
+              "option_slider_6@slider_dx.option_slider": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$option_label": "#neutral_volume_slider_label",
+                "$slider_name": "neutral_volume",
+                "$slider_value_binding_name": "#neutral_volume",
+                "$slider_tts_text_value": "#neutral_volume_text_value",
+                "$option_enabled_binding_name": "#neutral_volume_enabled",
+                "$label_bindings": [ { "binding_name": "#neutral_volume_slider_label" } ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_4": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "controls": [
+            {
+              "option_slider_7@slider_dx.option_slider": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#player_volume_slider_label",
+                "$slider_name": "player_volume",
+                "$slider_value_binding_name": "#player_volume",
+                "$slider_tts_text_value": "#player_volume_text_value",
+                "$option_enabled_binding_name": "#player_volume_enabled",
+                "$label_bindings": [ { "binding_name": "#player_volume_slider_label" } ]
+              }
+            },
+            {
+              "option_slider_3@slider_dx.option_slider": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$option_label": "#ambient_volume_slider_label",
+                "$slider_name": "ambient_volume",
+                "$slider_value_binding_name": "#ambient_volume",
+                "$slider_tts_text_value": "#ambient_volume_text_value",
+                "$option_enabled_binding_name": "#ambient_volume_enabled",
+                "$label_bindings": [ { "binding_name": "#ambient_volume_slider_label" } ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_5": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "controls": [
+            {
+              "option_slider_1@slider_dx.option_slider": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#texttospeech_volume_slider_label",
+                "$slider_name": "texttospeech_volume",
+                "$slider_value_binding_name": "#texttospeech_volume",
+                "$slider_tts_text_value": "#texttospeech_volume_text_value",
+                "$option_enabled_binding_name": "#texttospeech_volume_enabled",
+                "$label_bindings": [ { "binding_name": "$option_label" } ]
+              }
+            },
+            {
+              "option_slider_2@slider_dx.option_slider": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$option_label": "#sound_volume_slider_label",
+                "$slider_name": "sound_volume",
+                "$slider_value_binding_name": "#sound_volume",
+                "$slider_tts_text_value": "#sound_volume_text_value",
+                "$option_enabled_binding_name": "#sound_volume_enabled",
+                "$label_bindings": [ { "binding_name": "#sound_volume_slider_label" } ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bottom_padding": {
+          "type": "panel",
+          "size": [ "100%", 4 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Top ////*/
+
+  "top_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "title_label@label_dx.global_label": {
+          "size": [ "default", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 5,
+          "shadow": true,
+          "color": "$main_button_default_color",
+          "text": "options.sounds.title",
+          "offset": [ 0, 19 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Bottom ////*/
+
+  "bottom_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "pre_game": {
+          "ignored": "(not $is_pregame)",
+          "type": "panel",
+          "size": [ 310, 20 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -7 ],
+          "controls": [
+            {
+              "reset_button@button_dx.main_button": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$pressed_button_name": "button.reset_settings",
+                "$button_text": "options.resetSettings",
+                "property_bag": {
+                  "reset_group": "audio"
+                }
+              }
+            },
+            {
+              "done_button@options_dx.done_button": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "in_game@options_dx.done_button": {
+          "ignored": "($is_pregame)",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -7 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+
+  "full_screen@menu_scroll_panel_template_dx.menu_scroll_panel_template": {
+    "$top_content": "music_and_sounds_options_dx.top_content",
+    "$scrolling_content": "music_and_sounds_options_dx.middle_stack_panel",
+    "$bottom_content": "music_and_sounds_options_dx.bottom_content",
+    "$scroll_view_port_size": [ 324, "100%" ]
+  }
+}

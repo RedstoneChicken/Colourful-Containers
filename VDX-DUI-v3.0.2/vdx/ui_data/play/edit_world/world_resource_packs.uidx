@@ -1,0 +1,228 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "world_resource_packs_dx",
+
+  /*//// Default Pack Panel ////*/
+
+  "default_pack_panel": {
+    "type": "panel",
+    "size": [ "100%", 36 ],
+    "controls": [
+      {
+        "button@common.button": {
+          "$pressed_button_name": "unset",
+          "size": [ "100%", 36 ],
+          "controls": [
+            {
+              "hover@common.empty_panel": {
+                "controls": [
+                  {
+                    "grid_icon_highlighted@main_textures_dx.grid_icon_highlighted": {
+                      "layer": 4,
+                      "offset": [ 2, 2 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "content": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%-4px", 32 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 2, 2 ],
+          "controls": [
+            {
+              "icon_image@resource_packs.icon_image": {
+                "layer": 3,
+                "size": [ 32, 32 ],
+                "texture": "#default_item_texture_global",
+                "texture_file_system": "#default_item_file_system_global",
+                "zip_folder": "#default_item_zip_global",
+                "bindings": [
+                  {
+                    "binding_name": "#default_item_texture_global",
+                    "binding_name_override": "#texture"
+                  },
+                  {
+                    "binding_name": "#default_item_file_system_global",
+                    "binding_name_override": "#texture_file_system"
+                  },
+                  {
+                    "binding_name": "#default_item_zip_global",
+                    "binding_name_override": "#zip_folder"
+                  }
+                ]
+              }
+            },
+            {
+              "padding": {
+                "type": "panel",
+                "size": [ 2, "100%" ]
+              }
+            },
+            {
+              "text_panel": {
+                "type": "panel",
+                "size": [ "fill", "100%" ],
+                "controls": [
+                  {
+                    "pack_name_label@label_dx.global_label": {
+                      "size": [ "100%", 10 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "shadow": true,
+                      "layer": 5,
+                      "text": "menu.globalpacks"
+                    }
+                  },
+                  {
+                    "pack_description_label@label_dx.global_label": {
+                      "size": [ "100%", 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 0, 11 ],
+                      "shadow": true,
+                      "layer": 5,
+                      "color": [ 0.5, 0.5, 0.5 ],
+                      "text": "resourcePack.description.default.level"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Middle ////*/
+
+  "available_pack_grid@resource_packs_dx.resource_packs_item_grid_base": {
+    "$pack_items_type": "#available_pack_items_level",
+    "$button.deselected_pack": "button.deselected_pack_level",
+    "$pressed_button_name_type": "button.available_pack_level",
+    "$button.move_left": "button.move_left_level",
+    "$button.sort_up": "button.sort_up_level",
+    "$button.sort_down": "button.sort_down_level",
+    "collection_name": "$pack_items_type",
+    "$available_grid_visible_binding_name|default": "",
+    "$available_grid_visible_binding_type|default": "none",
+    "bindings": [
+      {
+        "binding_name": "#available_grid_dimensions_level",
+        "binding_name_override": "#collection_length"
+      },
+      {
+        "binding_name": "$available_grid_visible_binding_name",
+        "binding_name_override": "#visible",
+        "binding_type": "$available_grid_visible_binding_type"
+      }
+    ]
+  },
+
+  "selected_pack_grid@resource_packs_dx.resource_packs_item_grid_base": {
+    "$is_selected": true,
+    "$pack_items_type": "#selected_pack_items_level",
+    "$button.deselected_pack": "button.deselected_pack_level",
+    "$pressed_button_name_type": "button.selected_pack_level",
+    "$button.move_left": "button.move_left_level",
+    "$button.sort_up": "button.sort_up_level",
+    "$button.sort_down": "button.sort_down_level",
+    "$button.pack_settings": "button.pack_settings_level",
+    "$button.report_errors": "button.report_errors_level",
+    "collection_name": "$pack_items_type",
+    "bindings": [
+      {
+        "binding_name": "#selected_grid_dimensions_level",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  /*//// Bottom ////*/
+
+  "bottom_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "buttons": {
+          "type": "panel",
+          "size": [ 308, 20 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -28 ],
+          "controls": [
+            {
+              "force_user_agreement_level_info": {
+                "type": "panel",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ 150, 20 ],
+                "controls": [
+                  {
+                    "title_label@label_dx.global_label": {
+                      "size": [ "default", 10 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "text_alignment": "center",
+                      "layer": 5,
+                      "text": "resourcePack.header.level",
+                      "color": [ 0.6, 0.6, 0.6 ],
+                      "offset": [ 0, 21 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "force_user_agreement_level_toggle@toggle_dx.option_toggle": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "controllerLayoutScreen.save",
+                "$option_binding_name": "",
+                "$option_enabled_binding_name": "#force_user_agreement_level_enabled",
+                "$toggle_name": "force_user_agreement_level"
+              }
+            },
+            {
+              "done_button@edit_world_dx.done_button": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+
+  "full_screen@menu_scroll_panel_template_dx.menu_scroll_panel_template": {
+    "$title_label": "resourcePack.title",
+    "$info_label": "pack.resources.dropInfo",
+    "$available_pack_grid": "world_resource_packs_dx.available_pack_grid",
+    "$available_grid_visible_binding_type": "level",
+    "$selected_pack_grid": "world_resource_packs_dx.selected_pack_grid",
+    "$default_pack_control": "world_resource_packs_dx.default_pack_panel",
+
+    "$scroll_bar_contained": false,
+    "$top_content": "resource_packs_dx.top_content",
+    "$middle_content": "resource_packs_dx.resource_pack_middle_content",
+    "$bottom_content": "world_resource_packs_dx.bottom_content",
+    "$bottom_content_size": [ "100%", 51 ],
+    "$scroll_view_port_size": [ 324, "100%" ]
+  }
+}

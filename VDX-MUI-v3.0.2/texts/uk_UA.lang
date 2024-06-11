@@ -1,0 +1,285 @@
+﻿##################################################
+##  Start
+##################################################
+menu.play=Грати у гру
+menu.options=Параметри…
+menu.quit=Вийти з гри
+menu.store=Minecraft Маркетплейс
+
+##################################################
+##  Options
+##################################################
+##  Main
+options.language=Мова…
+options.sounds=Музика та звуки…
+options.sounds.title=Налаштування музики й звуку
+options.account=Обліковий запис...
+options.general=Загальні...
+options.generalTitle=Загальні параметри
+menu.storageManagement=Сховище...
+options.resetSettings=Скинути
+##  Toggle OFF/ON
+options.off=ВИМК.
+options.on=УВІМК.
+##  Credits and Attribution
+options.credits_and_attribution=Титри й атрибуція…
+credits_and_attribution.screen.title=Титри й атрибуція
+credits_and_attribution.button.licenses=Ліцензії
+##  Accessibility Settings
+options.accessibility=Налаштування доступности…
+options.darknessEffectModifier=Пульсація темряви
+options.darknessEffectModifier.message=Керує тим, наскільки пульсує ефект темряви, коли вам його дає боронитель або скалковий крикун.
+##  Controls Settings
+options.autojump=Автострибок
+options.fullKeyboardGameplay=Повноклавіатурний режим
+options.mouse_settings=Налаштування миші…
+options.mouse_settings.title=Налаштування миші
+controls.keybinds=Призначення клавіш…
+controls.keybinds.title=Призначення клавіш
+options.joystick_settings=Налаштування джойстик…
+options.joystick_settings.title=Налаштування джойстик
+controllerLayoutScreen.resetAllBindings=Скинути клавіші
+##  Video Settings
+options.video=Налаштування відео…
+options.videoTitle=Налаштування відео
+options.graphics.fancy=Красива
+options.graphics.fast=Швидка
+options.graphics.fancy.tooltip=«Красива» графіка збалансовує продуктивність і якість для більшости пристроїв.\nПогода, хмари та частинки можуть не з’являтися за прозорими блоками або водою.
+options.graphics.fast.tooltip=«Швидка» графіка зменшує кількість видимого дощу та снігу.\nЕфекти прозорости вимкнені для різних блоків, наприклад, для листя.
+options.vsync=Use VSync
+options.vsync.off=ВИМК.
+options.vsync.on=УВІМК.
+options.vsync.adaptive=Адаптивна
+options.gui.accessibility.scaling=Новий масштаб інтерфейсу.
+options.renderClouds=Хмари
+options.maxFramerate=Макс. частота кадрів
+options.fov.toggle=Ефекти поля зору
+options.renderDistance=Д. промальовування
+options.rendchat_messages_dxerDistanceFormat=%s чанків
+options.renderDistanceRecommendedFormat=%s чанків
+options.showautosaveicon=Індикатор автозбер-ня
+##  Audio Settings
+soundCategory.main=Загальна гучність
+soundCategory.ambient=Середовище
+soundCategory.block=Блоки
+soundCategory.hostile=Ворожі істоти
+soundCategory.master=Загальна гучність
+soundCategory.music=Музика
+soundCategory.neutral=Дружні істоти
+soundCategory.player=Гравці
+soundCategory.record=Програвач, нотні блоки
+soundCategory.weather=Погода
+soundCategory.texttospeech=Голос, мовлення
+##  UI Settings
+vdx.options.more=Додаткові параметри...
+vdx.options.moreTitle=Додаткові параметри
+##  World
+resourcePack.title=Вибір пакетів ресурсів
+behaviorPack.title=Вибір пакетів поведінки
+selectWorld.resourcePack=Ресурсів
+selectWorld.behaviorPack=Поведінки
+
+
+selectWorld.experiments.info=Експерименти є потенційними новими функціями. Будьте обережні, адже щось може зламатися. Експерименти не можна вимкнути після створення світу.
+
+##################################################
+##  Resource Packs
+##################################################
+pack.available.title=§lДоступні
+pack.selected.title=§lОбрані
+resourcePack.vanilla.name=Усталений
+resourcePack.vanilla.description=Усталені вигляд і відчуття Minecraft (вбудований)
+pack.resources.dropInfo=Перетягніть файли в каталог папки "resource_packs", щоб додати пакети
+
+##################################################
+##  Behavior Packs
+##################################################
+pack.behavior.dropInfo=Перетягніть файли в каталог папки "behavior_packs", щоб додати пакети
+
+##################################################
+##  Death
+##################################################
+deathScreen.message=Ви загинули!
+deathScreen.title=Ви загинули!
+
+##################################################
+##  Play
+##################################################
+##  Main
+options.group.graphics.experimental=§eЕкспериментальний
+selectWorld.tooltip.beta=Не забудьте створити резервну копію цього світу, перш ніж ви завантажите його в цьому снапшоті.
+selectWorld.tooltip.snapshot1=Не забудьте зробити резервну копію цього світу,
+selectWorld.tooltip.snapshot2=перш ніж ви завантажите його в цьому знімку.
+##  Realms
+mco.selectServer.popup=Realms — спосіб безпечно й просто грати в Minecraft онлайн до 10 друзів водночас. Він підтримує чимало мініігор і власних світів! Платить тільки власник Realm.
+mco.selectServer.purchase=Додати Realm
+mco.selectServer.buy=Купити Realm!
+mco.selectServer.trial=Спробувати!
+
+mco.selectServer.closed=Закритий Realm
+mco.selectServer.expired=Прострочений Realm
+
+
+##################################################
+##  Realms Options
+##################################################
+mco.configure.world.title=Налаштувати Realm:
+mco.configure.world.name.binding=%s
+
+mco.invites.title=Очікувані запрошення
+mco.invites.pending=Нові запрошення!
+mco.invites.nopending=Нема очікуваних запрошень!
+mco.invites.button.accept=Прийняти
+mco.invites.button.reject=Відхилити
+
+##################################################
+##  Gamerule
+##################################################
+selectWorld.gameRules=Ігрові правила
+  
+editGamerule.title=Редагувати ігрові правила
+editGamerule.default=Як усталено: 
+
+gamerule.doImmediateRespawn=Відроджуватися миттєво
+gamerule.keepInventory=Зберігати інвентар після смерти
+gamerule.mobGriefing=Дозволяти руйнівні дії мобів
+gamerule.naturalRegeneration=Регенерувати здоров’я
+gamerule.spawnRadius=Радіус місця відродження
+gamerule.doMobSpawning=Створювати мобів
+gamerule.doMobSpawning.description=Деякі сутності можуть мати окремі правила.
+gamerule.doEntityDrops=Випадання речей із сутностей
+gamerule.doEntityDrops.description=Керує випаданням предметів із вагонеток (у тому числі інвентарів), рамок, човнів тощо.
+gamerule.doMobLoot=Випадання здобичі з мобів
+gamerule.doMobLoot.description=Керує випаданням предметів із мобів, у тому числі сфер досвіду.
+gamerule.doTileDrops=Випадання блоків
+gamerule.doTileDrops.description=Керує випаданням ресурсів із блоків, у тому числі сфер досвіду.
+gamerule.doDaylightCycle=Змінювати день і ніч
+gamerule.doFireTick=Оновлювати вогонь
+gamerule.doWeatherCycle=Оновлювати погоду
+gamerule.randomTickSpeed=FЧастота випадкових тактів
+
+gamerule.category.player=§lГравець
+gamerule.category.mobs=§lМоби
+gamerule.category.spawning=§lПоява істот
+gamerule.category.drops=§lВипадання предметів
+gamerule.category.updates=§lОновлення світу
+gamerule.category.misc=§lІнше
+
+##################################################
+##  Progress
+##################################################
+##  Main
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.header=§lУвага: Гра на сторонніх серверах
+multiplayerWarning.message=Увага: Мережева гра здійснюється на сторонніх серверах, які не володіє, керує або модерує Mojang Studios або Microsoft. Під час мережевої гри можна зіткнутися з немодерованими повідомленнями в чаті або іншим вмістом від користувачів, що може підходити не кожному.
+multiplayerWarning.check=Не показувати це вікно знову
+
+onlinePlay.untrustedIp.title=§lНевідомий зовнішній сервер
+onlinePlay.untrustedIp.message=Ви повинні підключатися лише до серверів, яким довіряєте! Ви все ще хочете приєднатися?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Mira tu libro de recetas.
+recipe.toast.title=Відкрито нові рецепти!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Ви можете спати лише вночі або під час грози
+vdx.block.minecraft.bed.not_safe=Ви не можете зараз спати: поблизу є монстри
+vdx.block.minecraft.bed.obstructed=Це ліжко заблоковане
+vdx.block.minecraft.bed.occupied=Це ліжко зайняте
+vdx.block.minecraft.bed.too_far_away=Ви не можете зараз спати: ліжко занадто далеко
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Межа висоти будування становить 319
+build.tooHigh.the_nether.aspects=Межа висоти будування становить 127
+build.tooHigh.the_end.aspects=Межа висоти будування становить 255
+build.tooLow.overworld.aspects=Мінімальна висота будівлі складає -64 блоків
+build.tooLow.the_nether.aspects=Мінімальна висота будівлі складає 0 блоків
+build.tooLow.the_end.aspects=Мінімальна висота будівлі складає 0 блоків
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output (event.minecraft.raid)
+bar.event.raid.name=Набіг
+bar.event.raid.remaining.2=Набіг - Залишилося нападників: 2
+bar.event.raid.remaining.1=Набіг - Залишилося нападників: 1
+bar.event.raid.remaining.0=Набіг - Залишилося нападників: 0
+bar.event.raid.victory=Набіг - Перемога
+bar.event.raid.defeat=Набіг - Поразка
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§oПошук…
+gui.recipebook.toggleRecipes.all=Показати всі
+gui.recipebook.toggleRecipes.blastable=Доступні для переплавки
+gui.recipebook.toggleRecipes.craftable=Доступні для майстрування
+gui.recipebook.toggleRecipes.smeltable=Доступні для виплавки
+gui.recipebook.toggleRecipes.smokable=Доступні для копчення
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Будівництво
+vdx.creative.tab.equipment=Обладнання
+vdx.creative.tab.items=Предмети
+vdx.creative.tab.nature=Природа
+
+inventory.binSlot=Знищити предмет
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Редагування тексту вивіски
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Консольна команда
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Відносне розташування
+structure_block.size=Розмір структури
+structure_block.integrity_and_seed=Цілісність структури й зерно
+structure_block.detect_size=Виявити розмір і положення структури:
+structure_block.mode_info.save=Режим збереження — запис у файл
+structure_block.mode_info.load=Режим завантаження — завантаження з файлу
+structure_block.mode_info.corner=Кутовий режим — маркер розміщення і розміру
+structure_block.exportTo=Експортувати у файл:
+structure_block.mode.export=Експорт
+structure_block.button.detect_size=ВИЯВИТИ
+structure_block.button.save=ЗБЕРЕГТИ
+structure_block.button.load=ЗЧИТАТИ
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Торги
+merchant.deprecated=Селяни поновлюють запаси до двох разів на добу.
