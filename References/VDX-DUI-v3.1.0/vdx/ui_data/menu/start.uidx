@@ -1,0 +1,414 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "start_dx",
+
+  /*//// Gamepad Helpers ////*/
+
+  "gamepad_helpers": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 26 ],
+    "controls": [
+      { "gamepad_helper_a@gamepad_helper_dx.gamepad_helper_a": {} },
+      {
+        "gamepad_helper_b": {
+          "ignored": "(not $can_quit)",
+          "type": "panel",
+          "size": [ "100%c", "100%c" ],
+          "controls": [
+            {
+              "gamepad_helper_b@gamepad_helper_dx.gamepad_helper_b": {
+                "anchor_to": "left_middle",
+                "anchor_from": "left_middle"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "gamepad_helper_y": {
+          "type": "panel",
+          "size": [ "100%c", "100%c" ],
+          "controls": [
+            {
+              "gamepad_helper_y@gamepad_helper_dx.gamepad_helper_y": {
+                "anchor_to": "left_middle",
+                "anchor_from": "left_middle"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#y_helper_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      {
+        "gamepad_helper_x": {
+          "type": "panel",
+          "size": [ "100%c", "100%c" ],
+          "controls": [
+            {
+              "gamepad_helper_x@gamepad_helper_dx.gamepad_helper_x": {
+                "anchor_to": "left_middle",
+                "anchor_from": "left_middle"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#x_helper_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Title Panel (top) ////*/
+
+  "title_panel": { 
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 256, 64 ],
+    "offset": [ 0, 30 ],
+    "controls": [
+      {
+        "main_logo@title_textures_dx.minecraft": {
+          "layer": 2,
+          "size": [ 256, 64 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "edition_logo@title_textures_dx.edition": {
+          "layer": 4,
+          "size": [ "100%", 16 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 37 ]
+        }
+      },
+      { 
+        "splash_text": {
+          "type": "custom",
+          "visible": "$splash_text_visible",
+          "renderer": "splash_text_renderer",
+          "$splash_text_visible|default": true,
+          "size": [ 0.1, 0.1 ],
+          "layer": 10,
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -8, 32 ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Side Buttons Panel (right) ////*/
+
+  "side_buttons": {
+    "type": "stack_panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [ 20, "100%-4px" ],
+    "offset": [ -2, 2 ],
+    "controls": [
+      {
+        "gathering_panel": {
+          "type": "panel",
+          "size": [ 20, 20 ],
+          "bindings": [
+            {
+              "binding_name": "#gathering_enabled",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "gathering_button@button_dx.main_button_20": {
+                "size": [ 20, 20 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$pressed_button_name": "button.gathering",
+                "$button_text": "?",
+                "$focus_override_left": "play_button",
+                "bindings": [
+                  {
+                    "binding_name": "#gathering_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Main Buttons Panel (middle) ////*/
+
+  "stacked_row": {
+    "type": "panel",
+    "size": [ "100%", 24 ]
+  },
+
+  "main_buttons": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 48 ],
+    "size": [ 200, "100%c" ],
+    "controls": [
+      {
+        "button_0@start_dx.stacked_row": {
+          "controls": [
+            { 
+              "play_button@button_dx.main_button_200": {
+                "$pressed_button_name": "button.menu_play",
+                "$button_text": "menu.play",
+                "$focus_id": "play_button",
+                "default_focus_precedence": 0,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$focus_override_right": "profile_button"
+              }
+            }/* 
+            { 
+              "singleplayer_button@button_dx.main_button_200": {
+                "$pressed_button_name": "button.menu_play",
+                "$button_text": "menu.singleplayer",
+                "$focus_id": "play_button",
+                "default_focus_precedence": 0,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$focus_override_right": "profile_button"
+              }
+            } */
+            /* ,
+            { 
+              "notification_icon@start_dx.notification_icon": {
+
+              }
+            } */
+          ]
+        }
+      },
+      { 
+        "button_1@start_dx.stacked_row": {
+          "controls": [
+            {
+              "achievements_button@button_dx.main_button_200": {
+                "$pressed_button_name": "button.menu_achievements",
+                "$button_text": "menu.achievements",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$focus_override_right": "profile_button"
+              }
+            }/* 
+            {
+              "multiplayer_button@button_dx.main_button_200": {
+                "$pressed_button_name": "button.menu_servers",
+                "$button_text": "menu.multiplayer",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$focus_override_right": "profile_button"
+              }
+            } */
+          ]
+        }
+      },
+      { 
+        "button_2@start_dx.stacked_row": {
+          "controls": [
+            { 
+              "store_button@button_dx.main_button_200": {
+                "$pressed_button_name": "button.menu_store",
+                "$button_text": "menu.store",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$focus_override_right": "profile_button"
+              }
+            } /* 
+            {
+              "realms_button@button_dx.main_button_200": {
+                "$pressed_button_name": "button.menu_realms",
+                "$button_text": "menu.online",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$focus_override_right": "profile_button"
+              }
+            } */
+          ]
+        }
+      },
+      { "fill_0@start_dx.stacked_row": { "size": [ "100%", 12 ] } },
+      { 
+        "button_3@start_dx.stacked_row": {
+          "controls": [
+            {
+              "settings_button@button_dx.main_button_98": {
+                "size": [ 98, 20 ],
+                "$pressed_button_name": "button.menu_settings",
+                "$button_text": "menu.options",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "exit_button@button_dx.main_button_98": {
+                "size": [ 98, 20 ],
+                "$pressed_button_name": "button.menu_exit",
+                "$button_text": "menu.quit",
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$focus_override_right": "profile_button"
+              }
+            },
+            {
+              "feedback_button@button_dx.main_button_20": {
+                "$button_content": "icon_textures_dx.language",
+                "size": [ 20, 20 ],
+                "offset": [ -24, 0 ],
+                "$pressed_button_name": "button.menu_open_uri",
+                "property_bag": {
+                  "#hyperlink": "https://aka.ms/minecraftfb"
+                },
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "dressing_room_button@button_dx.main_button_20": {
+                "$button_content": "icon_textures_dx.accessibility",
+                "$pressed_button_name": "button.to_profile_screen",
+                "$focus_id": "profile_button",
+                "size": [ 20, 20 ],
+                "offset": [ 24, 0 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_buttons_stack_panel": {
+    "type": "stack_panel",
+    "size": [ 200, "100%" ],
+    "orientation": "vertical",
+    "controls": [
+      {
+        "title_offset_padding": {
+          "type": "panel",
+          "size": [ "100%", "25%" ]
+        }
+      },
+      {
+        "main_buttons_panel": {
+          "type": "panel",
+          "size": [ "100%", 104 ],
+          "controls": [
+            { "main_buttons@start_dx.main_buttons": { } }
+          ]
+        }
+      },
+      {
+        "gamepad_padding": {
+          "type": "panel",
+          "size": [ "100%", 48 ]
+        }
+      },
+      {
+        "padding_fill": {
+          "type": "panel",
+          "size": [ "100%", "fill" ],
+          "controls": [
+            { "gamepad_helpers@start_dx.gamepad_helpers": { } }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Bottom Text Panel ////*/
+
+  "botttom_text_label@label_dx.global_label": {
+    "color": "$main_header_text_color",
+    "shadow": true
+  },
+  
+  "bottom_text_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -1 ],
+    "size": [ "100%-4px", 10 ],
+    "controls": [
+      {
+        "minecraft_version_text@start_dx.botttom_text_label": {
+          "ignored": "($pre_release)",
+          "color": "$main_header_text_color",
+          "shadow": true,
+          "text": "#text",
+          "bindings": [
+            { "binding_name": "#version" },
+            { "binding_type": "view", "source_property_name": "('Minecraft ' + (#version) - 'v')", "target_property_name": "#text" }
+          ]
+        }
+      },
+      {
+        "minecraft_preview_version_text@start_dx.botttom_text_label": {
+          "ignored": "(not $pre_release)",
+          "color": "$main_header_text_color",
+          "shadow": true,
+          "text": "#text",
+          "bindings": [
+            { "binding_name": "#version" },
+            { "binding_type": "view", "source_property_name": "('Minecraft ' + (#version) - 'v' + '/Beta/Preview')", "target_property_name": "#text" }
+          ]
+        }
+      },
+      { "fill": { "type": "panel", "size": [ "fill", 10 ] } },
+      { "copyright_text@start_dx.botttom_text_label": { "text": "Copyright Mojang AB. Do not distribute!" } }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "title_panel@start_dx.title_panel": { } },
+      { "side_buttons@start_dx.side_buttons": { } },
+      { "main_buttons_stack_panel@start_dx.main_buttons_stack_panel": { } },
+      { "bottom_text_stack_panel@start_dx.bottom_text_stack_panel": { } }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@start_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      //{ "the_end_bg_panel@progress_dimension_dx.the_end_bg_panel": { } }
+      { "panorama_overlay@title_textures_dx.panorama_overlay": { "layer": -10 } }
+    ]
+  }
+}

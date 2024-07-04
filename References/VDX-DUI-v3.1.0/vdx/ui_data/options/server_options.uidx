@@ -1,0 +1,89 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "server_options_dx",
+
+  /*//// Middle ////*/
+
+  "middle_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "top_padding": {
+          "type": "panel",
+          "size": [ 0, 4 ]
+        }
+      },
+      { "generated_form@server_form_dx.generated_contents": {} },
+      {
+        "submit": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "controls": [
+            {
+              "action_button@button_dx.main_button_310": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "button.submit_custom_form",
+                "$button_text": "gui.submit",
+                "bindings": [
+                  {
+                    "binding_name": "#submit_button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Top ////*/
+
+  "top_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "title_label@label_dx.global_label": {
+          "size": [ "default", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 5,
+          "shadow": true,
+          "color": "$main_button_default_color",
+          "text": "options.category.server",
+          "offset": [ 0, 11 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Bottom ////*/
+
+  "bottom_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "done_button@options_dx.done_button": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -6 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+
+  "full_screen@menu_scroll_panel_template_dx.menu_scroll_panel_template": {
+    "$top_content": "server_options_dx.top_content",
+    "$scrolling_content": "server_options_dx.middle_stack_panel",
+    "$bottom_content": "server_options_dx.bottom_content",
+    "$scroll_view_port_size": [ 324, "100%" ]
+  }
+}

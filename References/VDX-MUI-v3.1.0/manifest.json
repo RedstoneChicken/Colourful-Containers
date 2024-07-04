@@ -1,0 +1,33 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "VDX: Mixed UI v3.1.0",
+    "description": "By @CrisXolt. [v1.21.0].\nA porting UI pack project for Bedrock Edition.",
+    "uuid": "28514a29-d2af-4135-9c4f-cec49958d786",
+    "version": [ 3, 1, 0 ],
+    "min_engine_version": [ 1, 21, 0 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "0bcd6806-217f-4632-9f7f-ba5fd8911e65",
+      "version": [ 3, 1, 0 ]
+    }
+  ],
+  "metadata" : {
+    "authors" : [ "CrisXolt" ],
+    "url" : "twitter.com/CrisXolt"
+  }/* ,
+  "subpacks": [
+    {
+      "folder_name": "next_version",
+      "name": "1.21 Fix",
+      "memory_tier": 1
+    },
+    {
+      "folder_name": "current_version",
+      "name": "1.20 Fix",
+      "memory_tier": 1
+    }
+  ] */
+}
