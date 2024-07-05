@@ -10,7 +10,7 @@
       {
         "top": {
           "type": "image",
-          "texture": "assets/minecraft/textures/gui/container/generic_54",
+          "texture": "assets/minecraft/textures/gui/container/barrel",
           "uv": [ 0, 0 ],
           "uv_size": "$generic_54_uv_size",
           "anchor_from": "top_left",
