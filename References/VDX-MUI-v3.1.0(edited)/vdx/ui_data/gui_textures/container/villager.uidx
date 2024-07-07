@@ -1,0 +1,228 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "villager_textures_dx",
+  
+  "villager": {
+    "type": "panel",
+    "size": [ 276, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/minecraft/textures/gui/container/villager",
+          "size": [ 512, 256 ]
+        }
+      }
+    ]
+  },
+  
+  "template_container_bg": {
+    "type": "image",
+    "layer": 1,
+    "size": [ "100%", "100%" ],
+    "texture": "('assets/minecraft/textures/gui/container/villager2/'+$t)",
+    "$pr|default": "",
+    "$t|default": "",
+    "$villager2_uv|default": [ 0, 0 ],
+    "$villager2_uv_size|default": [ 276, 166 ],
+    "uv": "$villager2_uv",
+    "uv_size": "$villager2_uv_size",
+    "bindings": [
+      {
+        "binding_name": "#name_label"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#name_label-$pr)=#name_label))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+ "container_bg_default@template_container_bg": {
+    "$t": "default",
+    "bindings": [
+      {
+        "binding_name": "#name_label"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#name_label-'aq '-'bq '-'cq '-'dq '-'eq '-'fq '-'gq '-'hq '-'iq '- 'jq '-'kq '-'lq '-'mq '-'nq ')=#name_label)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  
+  "experience_bar_background": {
+    "type": "panel",
+    "size": [ 102, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "experience_bar_current": {
+    "type": "panel",
+    "size": [ 102, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_current",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#exp_progress",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "global",
+              "binding_condition": "always_when_visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "experience_bar_result": {
+    "type": "panel",
+    "size": [ 102, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_result",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#exp_possible_progress",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "global",
+              "binding_condition": "always_when_visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "discount_strikethrough": {
+    "type": "panel",
+    "size": [ 9, 2 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/villager/discount_strikethrough",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "trade_arrow": {
+    "type": "panel",
+    "size": [ 10, 9 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/villager/trade_arrow",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "trade_arrow_out_of_stock": {
+    "type": "panel",
+    "size": [ 10, 9 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/villager/trade_arrow_out_of_stock",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+  
+  "trade_lock": {
+    "type": "panel",
+    "size": [ 10, 9 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/villager/trade_lock",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "out_of_stock": {
+    "type": "panel",
+    "size": [ 28, 21 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/villager/out_of_stock",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "scroller": {
+    "type": "panel",
+    "size": [ 6, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/container/villager/scroller",
+          "size": [ 6, "100%" ],
+          "variables": [
+            { "requires": "($villager_scroller_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($villager_scroller_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($villager_scroller_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($villager_scroller_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($villager_scroller_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($villager_scroller_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "scroller_disabled": {
+    "type": "panel",
+    "size": [ 6, 27 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/villager/scroller_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

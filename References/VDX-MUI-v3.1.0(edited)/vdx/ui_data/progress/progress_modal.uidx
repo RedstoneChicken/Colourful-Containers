@@ -1,0 +1,120 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "progress_modal_dx",
+  
+  /*//// Buttons ////*/
+
+  "button_panel": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -56 ],
+    "controls": [
+      { 
+        "cancel_button@button_dx.main_button_200": {
+          "size": [ 200, 20 ],
+          "$pressed_button_name": "button.menu_exit",
+          "$button_text": "gui.cancel",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "bindings": [
+            {
+              "binding_name": "#cancel_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Title ////*/
+  
+  "title_panel": {
+    "type": "panel",
+    "size": [ "100%", "50%-11px" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { 
+        "progress_title_text@label_dx.global_label": {
+          "shadow": true,
+          "size": [ "default", 10 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "text": "#title_text",
+          "bindings": [
+            {
+              "binding_name": "#title_text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Subtitle ////*/
+
+  "subtitle_panel": {
+    "type": "panel",
+    "size": [ "100%", "50%-3px" ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "progress_bar_text@label_dx.global_label": {
+          "shadow": true,
+          "size": [ "default", 20 ],
+          "max_size": [ "100% - 8px", 20 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "color": "$loading_text_color",
+          "text": "#progress_text",
+          "bindings": [
+            {
+              "binding_name": "#progress_text"
+            },
+            {
+              "binding_name": "#loading_bar_visible",
+              "binding_name_override": "#progress_bar_visible"
+            }
+          ]
+        }
+      },
+      { 
+        "server_progress_loading_bars@progress_anim_dx.server_progress_loading_bars": {
+          "offset": [ 0, 24 ] // [ 0, 22 ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "layer": 5,
+    "controls": [
+      { "title_panel@progress_modal_dx.title_panel": { } },
+      { "subtitle_panel@progress_modal_dx.subtitle_panel": { } },
+      { "button_panel@progress_modal_dx.button_panel": { } }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      { "main_screen_content@progress_modal_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "menu_background@menu_background_textures_dx.menu_background": { "layer": -10 } }
+    ]
+  }
+}

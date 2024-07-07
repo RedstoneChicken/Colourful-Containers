@@ -1,0 +1,284 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "container_panel_dx",
+
+  /*//// Main Panel ////*/
+  
+  "container_panel@common.root_panel": {
+    "layer": 1,
+    "size": [ 176, 166 ],
+    "$container_bg": "common.empty_panel",
+    "$container_top_half": "common.empty_panel",
+    "$container_bottom_half": "container_panel_dx.inventory_panel_bottom_half",
+    "$with_inv_buttons": true,
+    "controls": [
+      { "inventory_buttons_panel@touch_buttons_dx.inventory_buttons_panel": { "ignored":"(not $with_inv_buttons)" } },
+      { "background@$container_bg": { "layer": 1 } },
+      { "top_half@$container_top_half": { "layer": 5 } },
+      { "bottom_half@$container_bottom_half": { "layer": 5 } }
+    ]
+  },
+  
+  "villager_panel@common.root_panel": {
+    "layer": 1,
+    "size": [ 176, 166 ],
+    "$container_bg": "common.empty_panel",
+    "$container_top_half": "common.empty_panel",
+    "$container_bottom_half": "container_panel_dx.inventory_panel_bottom_half",
+    "$with_inv_buttons": true,
+    "controls": [
+      { "inventory_buttons_panel@touch_buttons_dx.inventory_buttons_panel": { "ignored":"(not $with_inv_buttons)" } },
+      { "background@$villager_bg": { "layer": 1 } },
+      { "top_half@$container_top_half": { "layer": 5 } },
+      { "bottom_half@$container_bottom_half": { "layer": 5 } }
+    ]
+  },
+  
+  
+  
+  "container_modules": {
+    "type": "panel",
+    "controls": [
+      { "selected_item_details_factory@hover_text_dx.selected_item_details_factory": { "ignored": "(not $use_item_details_in_touch)" } },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 6, "ignored": "$ignore_flying_item" } },
+      { "inventory_selected_icon_button@selected_item_dx.inventory_selected_icon_button": {} },
+      { 
+        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {
+          "controls": [
+            { "default@common.inventory_hold_icon": { "layer": 80 } },
+            { "pressed@common.inventory_hold_icon": { "layer": 80 } },
+            { "hover@common.inventory_hold_icon": { "layer": 80 } }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Inventory Panel Bottom Half ////*/
+
+  "inventory_panel_bottom_half": {
+    "type": "panel",
+    "size": [ 162, 88 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 7, -7 ],
+    "$with_label|default": true,
+    "$inventory_label_content": "common.empty_panel",
+    "layer": 5,
+    "controls": [
+      {
+        "inventory_label@label_dx.global_label": {
+          "color": "$vdx_inventory_title_text_color",
+          "ignored": "(not $with_label)",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 1, 0 ],
+          "text": "container.inventory",
+          "controls": [
+            { "inventory_label_content@$inventory_label_content": { } }
+          ]
+        }
+      },
+      {
+        "inventory_grid": {
+          "type": "grid",
+          "size": [ 162, 54 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 0, -22 ],
+          "grid_dimensions": [ 9, 3 ],
+          "grid_item_template": "container_panel_dx.grid_item_for_inventory",
+          "collection_name": "inventory_items"
+        }
+      },
+      {
+        "hotbar_grid": {
+          "type": "grid",
+          "size": [ 162, 18 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "grid_dimensions": [ 9, 1 ],
+          "grid_item_template": "container_panel_dx.grid_item_for_hotbar",
+          "collection_name": "hotbar_items"
+        }
+      }
+    ]
+  },
+
+  "grid_item_for_inventory@container_item_dx.container_item": {
+    "$item_collection_name": "inventory_items"
+  },
+
+  "grid_item_for_hotbar@container_item_dx.container_item": {
+    "$item_collection_name": "hotbar_items"
+  },
+
+  /*//// Gamepad Helpers ////*/
+
+  /* Horizontal Helpers */
+
+  "container_gamepad_helpers": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ "100%", 16 ],
+    "controls": [
+      {
+        "gamepad_helper_a@gamepad_helper_dx.gamepad_helper_a": {
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "none"
+            }
+          ]
+        }
+      },
+      { 
+        "gamepad_helper_b@gamepad_helper_dx.gamepad_helper_b": {
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "none"
+            }
+          ]
+        }
+      },
+      { 
+        "gamepad_helper_x@gamepad_helper_dx.gamepad_helper_x": {
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "none"
+            }
+          ]
+        }
+      },
+      { 
+        "gamepad_helper_y@gamepad_helper_dx.gamepad_helper_y": {
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "none"
+            }
+          ]
+        }
+      },
+      {
+        "fill_panel": {
+          "type": "panel",
+          "size": [ "fill", 16 ]
+        }
+      }
+    ]
+  },
+
+  /* Vertical Gamepad Helpers */
+
+  "l_container_gamepad_helpers": {
+    "type": "stack_panel",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ "100%", "100%c" ],
+    "max_size": [ "100%", "50%" ],
+    "controls": [
+      {
+        "y_panel": {
+          "type": "panel",
+          "size": [ "100%c", 26 ],
+          "controls": [
+            { 
+              "gamepad_helper_y@gamepad_helper_dx.gamepad_helper_y": {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#gamepad_helper_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "none"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "x_panel": {
+          "type": "panel",
+          "size": [ "100%c", 26 ],
+          "controls": [
+            { 
+              "gamepad_helper_x@gamepad_helper_dx.gamepad_helper_x": {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#gamepad_helper_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "none"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "b_panel": {
+          "type": "panel",
+          "size": [ "100%", 26 ],
+          "controls": [
+            { 
+              "gamepad_helper_b@gamepad_helper_dx.gamepad_helper_b": {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#gamepad_helper_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "none"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "a_panel": {
+          "type": "panel",
+          "size": [ "100%", 26 ],
+          "controls": [
+            {
+              "gamepad_helper_a@gamepad_helper_dx.gamepad_helper_a": {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#gamepad_helper_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "none"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

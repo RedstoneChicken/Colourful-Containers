@@ -1,0 +1,106 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "cartography_table_mixed_textures_dx",
+
+  "cartography_table": {
+    "type": "panel",
+    "size": [ 176, 224 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/vdx/textures/gui/container/cartography_table",
+          "size": [ 256, 256 ]
+        }
+      },
+      { "compass@anm_colorful_gui_common.compass": { } }
+    ]
+  },
+
+  "map": {
+    "type": "panel",
+    "size": [ 66, 66 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/cartography_table/map",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "duplicated_map": {
+    "type": "panel",
+    "size": [ 66, 66 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/cartography_table/duplicated_map",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "scaled_map": {
+    "type": "panel",
+    "size": [ 66, 66 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/cartography_table/scaled_map",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "locked_map": {
+    "type": "panel",
+    "size": [ 66, 66 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/cartography_table/locked_map",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "text_field": {
+    "type": "panel",
+    "size": [ 110, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/cartography_table/text_field",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "text_field_disabled": {
+    "type": "panel",
+    "size": [ 110, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/cartography_table/text_field_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

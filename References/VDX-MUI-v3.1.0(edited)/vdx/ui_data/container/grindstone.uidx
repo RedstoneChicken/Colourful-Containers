@@ -1,0 +1,112 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "grindstone_desktop_dx",
+  
+  /*//// Top Half Panel ////*/
+
+  "top_half_panel": {
+    "type": "panel",
+    "controls": [
+      /* Title */
+      {
+        "title@label_dx.global_label": {
+          "offset": [ 8, 5 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "color": "$vdx_container_title_text_color",
+          "text": "container.repairAndDisenchant"
+        }
+      },
+      /* Input Slots */
+      {
+        "input_item_slot@container_item_dx.container_item": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 48, 18 ],
+          "$item_collection_name": "grindstone_input_items",
+          "$focus_id_binding_type": "none",
+          "$focus_id": "grindstone_input",
+          "$focus_override_down_binding_type": "none",
+          "$focus_override_down": "grindstone_additional",
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "grindstone_result"
+        }
+      },
+      {
+        "additional_item_slot@container_item_dx.container_item": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 48, 39 ],
+          "$item_collection_name": "grindstone_additional_items",
+          "$focus_id_binding_type": "none",
+          "$focus_id": "grindstone_additional",
+          "$focus_override_up_binding_type": "none",
+          "$focus_override_up": "grindstone_input",
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "grindstone_result"
+        }
+      },
+      /* Error */
+      {
+        "error@grindstone_textures_dx.error": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 92, 31 ],
+          "bindings": [
+            {
+              "binding_name": "#cross_out_icon",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      /* Result */
+      {
+        "result_item_slot@container_item_dx.container_item": {
+          "offset": [ -30, 33 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$item_collection_name": "grindstone_result_items",
+          "$button_ref": "grindstone.grindstone_output_slot_button",
+          "$focus_id_binding_type": "none",
+          "$focus_id": "grindstone_result",
+          "$focus_override_left_binding_type": "none",
+          "$focus_override_left": "grindstone_additional"
+        }
+      }
+    ]
+  },
+  
+  /*//// Main Panel ////*/
+
+  "grindstone_panel@container_panel_dx.container_panel": {
+    "$container_bg": "grindstone_textures_dx.grindstone",
+    "$container_top_half": "grindstone_desktop_dx.top_half_panel"
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@container_panel_dx.container_gamepad_helpers": {} },
+      { "container_modules@container_panel_dx.container_modules": {} },
+      { "grindstone_panel@grindstone_desktop_dx.grindstone_panel": { } }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@grindstone_desktop_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

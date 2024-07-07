@@ -1,0 +1,148 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "enchanting_table_textures_dx",
+
+  "enchanting_table": {
+    "type": "panel",
+    "size": [ 176, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/minecraft/textures/gui/container/enchanting_table",
+          "size": [ 256, 256 ]
+        }
+      },
+      { "enchant@anm_colorful_gui_common.enchant": { } }
+    ]
+  },
+
+  "enchantment_slot": {
+    "type": "panel",
+    "size": [ 108, 19 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/enchantment_slot",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "enchantment_slot_disabled": {
+    "type": "panel",
+    "size": [ 108, 19 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/enchantment_slot_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "enchantment_slot_highlighted": {
+    "type": "panel",
+    "size": [ 108, 19 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/enchantment_slot_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "level_1": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/level_1",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "level_1_disabled": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/level_1_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "level_2": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/level_2",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "level_2_disabled": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/level_2_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "level_3": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/level_3",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "level_3_disabled": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/level_3_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+/*File modified by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "scoreboard_sidebar": {
+    "controls": [
+      { "scoreboard_sidebar@hud_scoreboard_dx.scoreboard_sidebar": { } }
+    ]
+  }
+}

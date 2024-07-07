@@ -1,0 +1,118 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "cartography_table_textures_dx",
+
+  "cartography_table": {
+    "type": "panel",
+    "size": [ 176, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/minecraft/textures/gui/container/cartography_table",
+          "size": [ 256, 256 ]
+        }
+      },
+      { "compass@anm_colorful_gui_common.compass": { } }
+    ]
+  },
+
+  "map": {
+    "type": "panel",
+    "size": [ 66, 66 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/map",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "duplicated_map": {
+    "type": "panel",
+    "size": [ 66, 66 ],
+    "controls": [
+      {
+        "texture_0": {
+          "type": "image",
+          "layer": 1,
+          "texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/duplicated_map",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [ 50, 66 ]
+        }
+      },
+      {
+        "texture_1": {
+          "type": "image",
+          "layer": 2,
+          "texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/duplicated_map",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 16 ],
+          "size": [ 50, 66 ]
+        }
+      }
+    ]
+  },
+
+  "scaled_map": {
+    "type": "panel",
+    "size": [ 66, 66 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/scaled_map",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "locked": {
+    "type": "panel",
+    "size": [ 66, 66 ],
+    "controls": [
+      {
+        "texture_0": {
+          "type": "image",
+          "layer": 1,
+          "texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/map",
+          "size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "texture_1": {
+          "type": "image",
+          "layer": 2,
+          "texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/locked",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ -5, -5 ],
+          "size": [ 10, 14 ]
+        }
+      }
+    ]
+  },
+
+  "error": {
+    "type": "panel",
+    "size": [ 28, 21 ],
+    "controls": [
+      {
+        "texture_0": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/error",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,366 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "dialog_dx",
+  
+  /*//// Buttons ////*/
+
+  "three_buttons_panel": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "controls": [
+      {
+        "left@button_dx.main_button_150": {
+          "size": [ 150, 20 ],
+          "$button_content": "dialog_dx.button_label_dialog",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "$pressed_button_name": "$popup_dialog_left_button_name",
+          "$button_text": "#modal_left_button_text"
+        }
+      },
+      {
+        "middle@button_dx.main_button_150": {
+          "size": [ 150, 20 ],
+          "$button_content": "dialog_dx.button_label_dialog",
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "offset": [ 0, 24 ],
+          "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
+          "$button_text": "#modal_rightcancel_button_text"
+        }
+      },
+      {
+        "right@button_dx.main_button_150": {
+          "size": [ 150, 20 ],
+          "$button_content": "dialog_dx.button_label_dialog",
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "$pressed_button_name": "$popup_dialog_middle_button_name",
+          "$button_text": "#modal_middle_button_text"
+        }
+      }
+    ]
+  },
+
+  "destructive_three_buttons_panel": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "controls": [
+      {
+        "left@button_dx.main_button_150": {
+          "size": [ 150, 20 ],
+          "$button_content": "dialog_dx.button_label_dialog",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "$pressed_button_name": "$popup_dialog_left_button_name",
+          "$button_text": "#modal_left_button_text"
+        }
+      },
+      {
+        "middle@button_dx.main_button_150": {
+          "size": [ 150, 20 ],
+          "$button_content": "dialog_dx.button_label_dialog",
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "offset": [ 0, 24 ],
+          "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
+          "$button_text": "#modal_rightcancel_button_text"
+        }
+      },
+      {
+        "right@button_dx.main_button_150": {
+          "size": [ 150, 20 ],
+          "$button_content": "dialog_dx.button_label_dialog",
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "$pressed_button_name": "$popup_dialog_middle_button_name",
+          "$button_text": "#modal_middle_button_text"
+        }
+      }
+    ]
+  },
+
+  "two_buttons_panel": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "controls": [
+      {
+        "left@button_dx.main_button_150": {
+          "size": [ 150, 20 ],
+          "$button_content": "dialog_dx.button_label_dialog",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "$pressed_button_name": "$popup_dialog_left_button_name",
+          "$button_text": "#modal_left_button_text"
+        }
+      },
+      {
+        "right@button_dx.main_button_150": {
+          "size": [ 150, 20 ],
+          "$button_content": "dialog_dx.button_label_dialog",
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
+          "$button_text": "#modal_rightcancel_button_text"
+        }
+      }
+    ]
+  },
+
+  "destructive_two_buttons_panel": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "controls": [
+      {
+        "left@button_dx.main_button_150": {
+          "size": [ 150, 20 ],
+          "$button_content": "dialog_dx.button_label_dialog",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "$pressed_button_name": "$popup_dialog_left_button_name",
+          "$button_text": "#modal_left_button_text"
+        }
+      },
+      {
+        "right@button_dx.main_button_150": {
+          "size": [ 150, 20 ],
+          "$button_content": "dialog_dx.button_label_dialog",
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
+          "$button_text": "#modal_rightcancel_button_text"
+        }
+      }
+    ]
+  },
+
+  "single_button_panel": {
+    "type": "panel",
+    "size": [ 200, 20 ],
+    "controls": [
+      {
+        "middle@button_dx.main_button_200": {
+          "size": [ 200, 20 ],
+          "$button_content": "dialog_dx.button_label_dialog",
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "$pressed_button_name": "$popup_dialog_middle_button_name",
+          "$button_text": "#modal_middle_button_text"
+        }
+      }
+    ]
+  },
+
+  "button_label_dialog@button_dx.button_label": {
+    "text": "$button_text",
+    "bindings": [
+      {
+        "binding_name": "$button_text",
+        "binding_name_override": "$button_text"
+      }
+    ]
+  },
+  
+  /*//// Main Popup ////*/
+
+  "modal_label_text": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "offset": [ 2, 0 ],
+    "controls": [
+      {
+        "text": {
+          "type": "image",
+          "texture": "vdx/ui_textures/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "layer": 2,
+          "size": [ "100%", "100%c" ],
+          "alpha": 0.0,
+          "controls": [
+            {
+              "text@label_dx.global_label": {
+                "size": [ "100%-8px", "default" ],
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "line_padding": 10.0,
+                "layer": 3,
+                "text": "#text",
+                "text_tts": "#tts_text",
+                "color": "$body_text_color",
+                //"text_alignment": "center",
+                "shadow": true,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$visibility_source_control_name",
+                    "source_property_name": "#modal_label_text",
+                    "target_property_name": "#text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$visibility_source_control_name",
+                    "source_property_name": "#modal_label_tts",
+                    "target_property_name": "#tts_text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "modal_dialog_with_buttons": {
+    "type": "stack_panel",
+    "size": [ 310, "100%c" ],
+    "offset": [ 0, 5 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "title_panel": {
+          "type": "panel",
+          "size": [ "100%", 10 ],
+          "controls": [
+            { 
+              "modal_title_text@label_dx.global_label": {
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "text": "#text",
+                "text_tts": "#tts_text",
+                "color": [ 1.0, 1.0, 1.0 ],
+                "size": [ "default", 10 ],
+                "shadow": true,
+                "offset": [ 0, 0 ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$visibility_source_control_name",
+                    "source_property_name": "#modal_title_text",
+                    "target_property_name": "#text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$visibility_source_control_name",
+                    "source_property_name": "#modal_title_tts",
+                    "target_property_name": "#tts_text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_0": {
+          "type": "panel",
+          "size": [ "100%", 8 ]
+        }
+      },
+      {
+        "modal_label_panel@scroll_dx.scrolling_panel": {
+          "size": [ "100%+6px", 80 ],
+          "$scroll_view_port_size": [ "100%-6px", "100%" ],
+          "$scrolling_content": "dialog_dx.modal_label_text",
+          "$show_background": false,
+          "layer": 1,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "$always_handle_scrolling": true,
+
+          "$scroll_track_image_control": "main_textures_dx.scroll_track",
+          "$scroll_box_image_control": "widget_textures_dx.scroller",
+          "$scroll_size": [ 6, "100%" ]
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ "100%", 8 ]
+        }
+      },
+      {
+        "button_panel": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "controls": [
+            { "button_panel@$button_panel": {} }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content@popup_dialog.modal_dialog_popup": {
+    "size": [ "100%", "100%" ],
+    "variables": [
+      {
+        "requires": "$three_buttons_visible",
+        "$button_panel": "dialog_dx.three_buttons_panel"
+      },
+      {
+        "requires": "$destructive_three_buttons_visible",
+        "$button_panel": "dialog_dx.destructive_three_buttons_panel"
+      },
+      {
+        "requires": "$two_buttons_visible",
+        "$button_panel": "dialog_dx.two_buttons_panel"
+      },
+      {
+        "requires": "$destructive_two_buttons_visible",
+        "$button_panel": "dialog_dx.destructive_two_buttons_panel"
+      },
+      {
+        "requires": "$single_button_visible",
+        "$button_panel": "dialog_dx.single_button_panel"
+      },
+      {
+        "requires": "$no_buttons_visible",
+        "$button_panel": "common.empty_panel"
+      }
+    ],
+    "controls": [
+      {
+        "modal_input@popup_dialog.modal_input_panel": {
+          "layer": 710,
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "modal_bg_buttons@dialog_dx.modal_dialog_with_buttons": {
+                "$visibility_source_control_name|default": "modal_bg_buttons",
+                "layer": 2
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@dialog_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "menu_background@menu_background_textures_dx.menu_background": { "layer": 705 } }
+    ]
+  },
+
+  "in_game_full_screen": {
+    "type": "panel",
+    "controls": [
+      { "inworld_menu_background@menu_background_textures_dx.inworld_menu_background": { "layer": 700 } }
+    ]
+  }
+}
