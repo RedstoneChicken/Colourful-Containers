@@ -1,0 +1,124 @@
+﻿##################################################
+##  Options
+##################################################
+##  UI Settings
+vdx.options.more=Meer opties...
+vdx.options.moreTitle=Meer opties
+
+##################################################
+##  Progress
+##################################################
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.check=Dit scherm niet meer tonen
+multiplayerWarning.header=§lLet op: samen spelen bij derden
+multiplayerWarning.message=Waarschuwing: online spelen wordt aangeboden door servers van derden die geen eigendom zijn van, niet worden beheerd door, noch onder toezicht staan van Mojang Studios of Microsoft. Tijdens online spelen word je mogelijk blootgesteld aan niet-gemodereerde chatberichten of andere soorten door gebruikers gegenereerde inhoud die mogelijk niet voor iedereen geschikt is.
+
+onlinePlay.untrustedIp.title=§lOnbekende externe server
+onlinePlay.untrustedIp.message=Maak alleen verbinding met servers die je vertrouwt! Wil je toch deelnemen?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Bekijk je receptenboek
+recipe.toast.title=Nieuwe recepten vrijgespeeld!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Je kunt alleen 's nachts of tijdens onweer slapen
+vdx.block.minecraft.bed.not_safe=Je kunt nu niet slapen; er zijn monsters in de buurt
+vdx.block.minecraft.bed.obstructed=Dit bed wordt geblokkeerd
+vdx.block.minecraft.bed.occupied=Dit bed is bezet
+vdx.block.minecraft.bed.too_far_away=Je kunt nu niet slapen; het bed is te ver weg
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Hoogtelimiet voor bouwen is 319
+build.tooHigh.the_nether.aspects=Hoogtelimiet voor bouwen is 127
+build.tooHigh.the_end.aspects=Hoogtelimiet voor bouwen is 255
+build.tooLow.overworld.aspects=Minimale hoogte voor gebouwen is -64
+build.tooLow.the_nether.aspects=Minimale hoogte voor gebouwen is 0
+build.tooLow.the_end.aspects=Minimale hoogte voor gebouwen is 0
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=Overval
+bar.event.raid.remaining.2=Overval - 2 overvaller(s) over
+bar.event.raid.remaining.1=Overval - 1 overvaller(s) over
+bar.event.raid.remaining.0=Overval - 0 overvaller(s) over
+bar.event.raid.victory=Overval - Overwinning
+bar.event.raid.defeat=Overval - Verloren
+
+##################################################
+##  Recipe Book and Creative
+#############################################
+gui.recipebook.search_hint=§oZoeken...
+gui.recipebook.toggleRecipes.all=Alles tonen
+gui.recipebook.toggleRecipes.blastable=Smeltbaar in hoogoven tonen
+gui.recipebook.toggleRecipes.craftable=Vervaardigbaar tonen
+gui.recipebook.toggleRecipes.smeltable=Smeltbaar tonen
+gui.recipebook.toggleRecipes.smokable=Rookbaar tonen
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Bouwwerk
+vdx.creative.tab.equipment=Uitrusting
+vdx.creative.tab.items=Voorwerpen
+vdx.creative.tab.nature=Natuur
+
+inventory.binSlot=Voorwerp vernietigen
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Bericht op hangbord bewerken
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Consoleopdracht
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Relatieve positie
+structure_block.size=Constructiegrootte
+structure_block.integrity_and_seed=Constructie-integriteit en startwaarde
+structure_block.detect_size=Detecteer grootte en positie van constructie:
+structure_block.mode_info.save=Opslagmodus - naar bestand schrijven
+structure_block.mode_info.load=Laadmodus - uit bestand laden
+structure_block.mode_info.corner=Hoekmodus - plaats- en groottemarkeerder
+structure_block.exportTo=Exporteren:
+structure_block.mode.export=Exporteren
+structure_block.button.detect_size=ZOEKEN
+structure_block.button.save=OPSLAAN
+structure_block.button.load=LADEN
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Ruilopties
+merchant.deprecated=Dorpelingen vullen hun voorraad tot twee keer per dag aan.

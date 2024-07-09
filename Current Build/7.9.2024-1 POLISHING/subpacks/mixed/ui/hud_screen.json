@@ -1,0 +1,114 @@
+/*File modified by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "hud_screen": {
+    "render_only_when_topmost": "(not $show_hud_while_inventory)",
+    "$use_loading_bars": false,
+    "variables": [
+      {
+        "requires": "(not $show_hud_while_inventory)",
+        "$screen_animations": [
+          "@common.screen_exit_animation_push_fade",
+          "@common.screen_exit_animation_pop_fade",
+          "@common.screen_entrance_animation_push_fade",
+          "@common.screen_entrance_animation_pop_fade"
+        ]
+      },
+      {
+        "requires": "($show_hud_while_inventory)",
+        "$screen_animations": [ ],
+        "$background_animations": [ ]
+      }
+    ],
+    "$vdx_custom_bg_control": "hud_layout_customization_dx.layout_customization_bg",
+    "$screen_content": "hud_dx.center_screen",
+    "$screen_bg_content": "hud_dx.full_screen"
+  },
+
+  /* Making Full Hive Server Compatibility (Ignoring some UI elements that are not modified by the server) */
+
+  "root_panel/layout_customization_reset": {
+    "ignored": true
+  },
+  "root_panel/layout_customization_close_without_saving": {
+    "ignored": true
+  },
+  "layout_customization_main_panel": {
+    "ignored": true
+  },
+  "layout_customization_sub_panel": {
+    "ignored": true
+  },
+  "root_panel/layout_customization_hint_drag_frame": {
+    "ignored": true
+  },
+  "root_panel/layout_customization_hint_deselect_frame": {
+    "ignored": true
+  },
+  "root_panel/layout_customization_hint_saved": {
+    "ignored": true
+  },
+
+  "player_position": {
+    "ignored": true
+  },
+
+  "chat_panel": {
+    "ignored": true
+  },
+
+  "left_helpers_edu": {
+    "ignored": true
+  },
+
+  "left_helpers": {
+    "ignored": true
+  },
+
+  "right_helpers": {
+    "ignored": true
+  },
+
+  "emote_helpers": {
+    "ignored": true
+  },
+
+  "centered_gui_elements": {
+    "ignored": true
+  },
+
+  "vignette_renderer": { "ignored": "$ignore_vignette", "layer": -10 },
+
+  "centered_gui_elements_at_bottom_middle": {
+    "ignored": true
+  },
+
+  "not_centered_gui_elements": {
+    "ignored": true
+  },
+
+  "exp_progress_bar_and_hotbar": {
+    "ignored": true
+  },
+
+  "hud_actionbar_text": {
+    "ignored": true
+  },
+
+  "hud_tip_text": {
+    "ignored": true
+  },
+
+  "auto_save": {
+    "ignored": true
+  },
+
+  "hud_content": {
+    "controls": [
+      { "modules_for_the_hive@the_hive_hud_dx.modules_for_the_hive": { } },
+      { "root_panel@hud.root_panel": {} },
+      { "editor_gizmo_renderer@hud.editor_gizmo_renderer": { "ignored": "(not $is_editor_mode_enabled)" } },
+      { "camera_renderer@hud.camera_renderer": {} }
+    ]
+  }
+} 

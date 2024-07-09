@@ -1,0 +1,61 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "title_textures_dx",
+
+  "minecraft": {
+    "type": "panel",
+    "size": [ 256, 64 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/title/minecraft",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "edition": {
+    "type": "panel",
+    "size": [ "100%", 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "bilinear": true,
+          "texture": "assets/minecraft/textures/gui/title/edition",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "panorama_overlay": {
+    "type": "panel",
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/title/background/panorama_overlay",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "realms": {
+    "type": "panel",
+    "size": [ 128, 64 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/title/realms",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

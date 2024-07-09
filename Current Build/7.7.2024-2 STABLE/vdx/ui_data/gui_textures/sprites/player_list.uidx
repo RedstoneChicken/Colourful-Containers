@@ -1,0 +1,89 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "player_list_textures_dx",
+
+  "make_operator": {
+    "type": "panel",
+    "size": [ 8, 7 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/player_list/make_operator",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "make_operator_highlighted": {
+    "type": "panel",
+    "size": [ 8, 7 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/player_list/make_operator_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "remove_operator": {
+    "type": "panel",
+    "size": [ 8, 7 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/player_list/remove_operator",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "remove_operator_highlighted": {
+    "type": "panel",
+    "size": [ 8, 7 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/player_list/remove_operator_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "remove_player": {
+    "type": "panel",
+    "size": [ 8, 7 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/player_list/remove_player",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "remove_player_highlighted": {
+    "type": "panel",
+    "size": [ 8, 7 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/player_list/remove_player_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}
