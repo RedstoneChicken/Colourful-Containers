@@ -1,0 +1,37 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "BTRP-042730",
+		"description": "Bedrock Tweaks §aResource Packs§r\nSelected Packs:\n- GUI:\n - Dark UI\n",
+		"uuid": "a27f7452-df8e-4e6c-b915-5d8329f35dd0",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			21,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "62046be9-b5bc-43ac-a018-3737638febe3",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Bedrock Tweaks",
+			"Bedrock Tweaks Community",
+			"DrAv0011",
+			"Vanilla Tweaks"
+		]
+	}
+}
