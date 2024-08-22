@@ -1,0 +1,286 @@
+﻿##################################################
+##  Start
+##################################################
+menu.play=プレイする
+menu.options=設定…
+menu.quit=終了
+menu.store=Minecraft ストア
+
+##################################################
+##  Options
+##################################################
+##  Main
+options.language=言語設定…
+options.sounds=サウンド設定…
+options.sounds.title=サウンド設定
+options.account=アカウント…
+options.general=一般…
+options.generalTitle=一般設定
+menu.storageManagement=ストレージ…
+options.keyboardAndMouse=キーボード & マウス…
+options.controller=コントローラー…
+options.touch=タッチ…
+##  Toggle OFF/ON
+options.off=オフ
+options.on=オン
+##  Credits and Attribution
+options.credits_and_attribution=クレジットと帰属表示…
+credits_and_attribution.screen.title=クレジットと帰属表示
+credits_and_attribution.button.licenses=ライセンス
+##  Accessibility Settings
+options.accessibility=アクセシビリティ設定…
+options.enableChatTextToSpeech=チャットのテキスト読み上げ
+options.enableAutoPlatformTextToSpeech=機器設定でテキスト読み上げを有効にしてください
+options.enableUITextToSpeech=UI のテキスト読み上げ
+options.enableOpenChatMessage=チャット開くメッセージがオンになります
+options.darknessEffectModifier=暗闇の脈動
+options.darknessEffectModifier.message=ウォーデンまたはスカルクシュリーカーが暗闇の効果を与える時にどの程度脈動するかを設定できます。
+##  Controls Settings
+options.autojump=自動ジャンプ
+options.mouse_settings=マウス設定…
+options.mouse_settings.title=マウス設定
+controls.keybinds=キー割り当て…
+controls.keybinds.title=キー割り当て
+options.joystick_settings=Joystick 設定…
+options.joystick_settings.title=Joystick 設定
+##  Video Settings
+options.video=ビデオ設定…
+options.videoTitle=ビデオ設定
+options.graphics.fancy=描画優先
+options.graphics.fast=処理優先
+options.graphics.fancy.tooltip=描画優先は多くの動作環境においてパフォーマンスと画質を両立させます。\n半透明なブロックや水の背後の天候表現、雲、パーティクルは表示されない場合があります。
+options.graphics.fast.tooltip=処理優先は表示される雨や雪の数を減らします。\n木の葉のような様々なブロックの透過効果は無効になります。
+options.vsync=垂直同期
+options.vsync.off=オフ
+options.vsync.on=オン
+options.vsync.adaptive=状況に応じて
+options.renderClouds=雲の表示
+options.maxFramerate=最大フレームレート
+options.fov.toggle=視野の変化
+options.renderDistance=描画距離
+options.rendchat_messages_dxerDistanceFormat=%sチャンク
+options.renderDistanceRecommendedFormat=%sチャンク
+options.showautosaveicon=オートセーブの表示
+##  Audio Settings
+soundCategory.main=主音量
+soundCategory.ambient=環境音
+soundCategory.block=ブロック
+soundCategory.hostile=敵対的生物
+soundCategory.master=主音量
+soundCategory.music=BGM
+soundCategory.neutral=友好的生物
+soundCategory.player=プレイヤー
+soundCategory.record=ジュークボックス／音符ブロック
+soundCategory.weather=天候
+soundCategory.texttospeech=声／スピーチ
+##  UI Settings
+vdx.options.more=その他の設定…
+vdx.options.moreTitle=その他の設定
+##  World
+resourcePack.title=リソース パックの選択
+behaviorPack.title=ビヘイビア パックの選択
+selectWorld.resourcePack=リソース
+selectWorld.behaviorPack=ビヘイビア
+selectWorld.experiments.info=実験的機能には開発中の新要素が含まれます。破損の可能性を了解の上でご使用ください。実験的機能は、ワールドを作成した後から無効にすることはできません。
+
+##################################################
+##  Resource Packs
+##################################################
+pack.available.title=§l利用可能
+pack.selected.title=§l選択中
+resourcePack.vanilla.name=デフォルト
+resourcePack.vanilla.description=Minecraftのデフォルトの見た目と雰囲気 (ビルトイン)
+pack.resources.dropInfo=ファイルを「resource_packs」フォルダディレクトリにドラッグアンドドロップして、パックを追加します。
+
+##################################################
+##  Behavior Packs
+##################################################
+pack.behavior.dropInfo=ファイルを「behavior_packs」フォルダディレクトリにドラッグアンドドロップして、パックを追加します。
+
+##################################################
+##  Death
+##################################################
+deathScreen.message=死んでしまった！
+deathScreen.title=死んでしまった！
+
+##################################################
+##  Play
+##################################################
+##  Main
+options.group.graphics.experimental=§e実験的
+selectWorld.tooltip.beta=このワールドを読み込む前にバックアップを取ることを推奨します。
+selectWorld.tooltip.snapshot1=このワールドを読み込む前に
+selectWorld.tooltip.snapshot2=バックアップを取ることを推奨します。
+##  Realms
+mco.selectServer.popup=Realmsは、一度に最大10人までのプレイヤーとMinecraftのオンラインを楽しめる、安全で簡単にサーバーを作成できるシステムです。たくさんのカスタムワールドやミニゲームのプレイができます。ただし、Realmのオーナーだけは料金を支払う必要があります。
+mco.selectServer.purchase=Realmを追加
+mco.selectServer.buy=Realmを購入しよう！
+mco.selectServer.trial=試してみる！
+
+mco.selectServer.closed=このRealmは現在開いていません
+mco.selectServer.expired=期限切れのRealm
+
+
+##################################################
+##  Realms Options
+##################################################
+mco.configure.world.title=Realmの設定：
+mco.configure.world.name.binding=%s
+
+mco.invites.title=保留中の招待
+mco.invites.pending=新しい招待があります！
+mco.invites.nopending=保留中の招待がありません！
+mco.invites.button.accept=承認
+mco.invites.button.reject=拒否
+
+##################################################
+##  Gamerule
+##################################################
+selectWorld.gameRules=ゲームルール
+  
+editGamerule.title=ゲームルールを編集
+editGamerule.default=デフォルト値：
+
+gamerule.doImmediateRespawn=即時リスポーン
+gamerule.keepInventory=死亡時のインベントリの保持
+gamerule.mobGriefing=Mobの破壊行動の許可
+gamerule.naturalRegeneration=体力の自動回復
+gamerule.spawnRadius=リスポーン地点の半径
+gamerule.doMobSpawning=Mobのスポーン
+gamerule.doMobSpawning.description=特定のエンティティに関しては、他のゲームルールでそのスポーンの有無が制御されている場合があります。
+gamerule.doEntityDrops=設備エンティティのドロップ
+gamerule.doEntityDrops.description=トロッコや額縁、ボートなどをドロップするかを設定できます
+gamerule.doMobLoot=Mobのアイテムのドロップ
+gamerule.doMobLoot.description=Mobがアイテムや経験値オーブをドロップするかを設定できます。
+gamerule.doTileDrops=ブロックのドロップ
+gamerule.doTileDrops.description=ブロックがアイテムや経験値オーブをドロップするかを設定できます。
+gamerule.doDaylightCycle=ゲーム内時刻の進行
+gamerule.doFireTick=炎の更新
+gamerule.doWeatherCycle=天気の更新
+gamerule.randomTickSpeed=ランダムティックの発生数
+
+gamerule.category.player=§lプレイヤー
+gamerule.category.mobs=§lMob
+gamerule.category.spawning=§lスポーン
+gamerule.category.drops=§lドロップ
+gamerule.category.updates=§lワールドの更新
+gamerule.category.misc=§lその他
+
+##################################################
+##  Progress
+##################################################
+##  Main
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.header=§l警告：サードパーティ製のオンラインサーバー
+multiplayerWarning.message=警告：オンラインでのプレイはサードパーティ製のサーバーによって提供されており、Mojang
+multiplayerWarning.check=この画面を再度表示しない
+
+onlinePlay.untrustedIp.title=§l不明な外部サーバー
+onlinePlay.untrustedIp.message=信頼できるサーバーにのみ接続してください!まだ参加を希望しますか?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=レシピ本を確認しましょう
+recipe.toast.title=新レシピ解禁！
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=夜もしくは雷雨のときのみ寝ることができます
+vdx.block.minecraft.bed.not_safe=モンスターが近くにいるため寝ることができません
+vdx.block.minecraft.bed.obstructed=このベッドは塞がれています
+vdx.block.minecraft.bed.occupied=このベッドは既に使われています
+vdx.block.minecraft.bed.too_far_away=ベッドから離れ過ぎているため寝ることができません
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=限界高度は319です
+build.tooHigh.the_nether.aspects=限界高度は127です
+build.tooHigh.the_end.aspects=限界高度は255です
+build.tooLow.overworld.aspects=建物の最低高度は -64 ブロックです
+build.tooLow.the_nether.aspects=建物の最低高度は 0 ブロックです
+build.tooLow.the_end.aspects=建物の最低高度は 0 ブロックです
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=襲撃
+bar.event.raid.remaining.2=襲撃 - 残り 襲撃者 数: 2
+bar.event.raid.remaining.1=襲撃 - 残り 襲撃者 数: 1
+bar.event.raid.remaining.0=襲撃 - 残り 襲撃者 数: 0
+bar.event.raid.victory=襲撃 - 勝利
+bar.event.raid.defeat=襲撃 - 敗北
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§o検索…
+gui.recipebook.toggleRecipes.all=すべてのアイテムを表示中
+gui.recipebook.toggleRecipes.blastable=溶鉱可能なアイテムを表示中
+gui.recipebook.toggleRecipes.craftable=クラフト可能なアイテムを表示中
+gui.recipebook.toggleRecipes.smeltable=製錬可能なアイテムを表示中
+gui.recipebook.toggleRecipes.smokable=燻製可能なアイテムを表示中
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=構築
+vdx.creative.tab.equipment=所持品
+vdx.creative.tab.items=アイテム
+vdx.creative.tab.nature=性質
+
+inventory.binSlot=アイテムを削除
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=吊り看板の編集
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=コンソールコマンド
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=相対位置
+structure_block.size=ストラクチャーのサイズ
+structure_block.integrity_and_seed=ストラクチャーの完全性とシード値
+structure_block.detect_size=ストラクチャーのサイズと位置を検出する：
+structure_block.mode_info.save=セーブモード - ファイルへの書き込みを行います
+structure_block.mode_info.load=ロードモード - ファイルからの読み込みを行います
+structure_block.mode_info.corner=コーナーモード - 位置とサイズの計算を行います
+structure_block.exportTo=ファイルへのエクスポート：
+structure_block.mode.export=エクスポート
+structure_block.button.detect_size=検出
+structure_block.button.save=保存
+structure_block.button.load=読み込み
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=取引
+merchant.deprecated=村人は1日に2回まで在庫補充をします。

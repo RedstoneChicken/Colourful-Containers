@@ -1,0 +1,345 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "progress_legacy_dx",
+  
+  /*//// Buttons ////*/
+
+  "button_panel": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -56 ],
+    "controls": [
+      { 
+        "cancel_button@button_dx.main_button_200": {
+          "size": [ 200, 20 ],
+          "$pressed_button_name": "button.menu_exit",
+          "$button_text": "gui.cancel",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "bindings": [
+            {
+              "binding_name": "#cancel_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Main Panel ////*/
+
+  "main_panel": {
+    "type": "panel",
+    "bindings": [
+      { "binding_name": "#title_text" },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#title_text - '[') = #title_text)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "main": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "(not #loading_bar_visible)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { "title_panel@progress_legacy_dx.alt_title_panel": { } },
+            { "subtitle_panel@progress_legacy_dx.alt_subtitle_panel": { } }
+          ]
+        }
+      },
+      {
+        "loading_percentage": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "(#loading_bar_visible)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { 
+              "title_panel": {
+                "type": "panel",
+                "size": [ "100%", "50%-11px" ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "controls": [
+                  { 
+                    "progress_title_text@label_dx.global_label": {
+                      "shadow": true,
+                      "size": [ "default", 10 ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "text": "menu.generatingLevel"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "subtitle_panel": {
+                "type": "panel",
+                "size": [ "100%", "50%-3px" ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "controls": [
+                  {
+                    "loading_text@label_dx.global_label": {
+                      "shadow": true,
+                      "size": [ "default", 20 ],
+                      "max_size": [ "100% - 8px", 20 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "color": "$loading_text_color",
+                      "text": "#title_text",
+                      "bindings": [
+                        {
+                          "binding_name": "#title_text"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "progress_percent_panel": {
+                      "type": "panel",
+                      "layer": 2,
+                      "visible": "#progress_visible",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [ 0, 13 ],
+                      "size": [ 100, 2 ],
+                      "controls": [
+                        {
+                          "empty_progress_bar": {
+                            "type": "image",
+                            "layer": 1,
+                            "size": [ 100, 2 ],
+                            "texture": "vdx/ui_textures/progress/classic_bar_background"
+                          }
+                        },
+                        {
+                          "full_progress_bar": {
+                            "type": "image",
+                            "layer": 2,
+                            "size": [ 100, 2 ],
+                            "texture": "vdx/ui_textures/progress/classic_bar_progress",
+                            "clip_direction": "left",
+                            "clip_pixelperfect": false,
+                            "bindings": [
+                              {
+                                "binding_name": "#loading_bar_percentage",
+                                "binding_name_override": "#clip_ratio"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "#progress_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "progress@label_dx.global_label": {
+                      "layer": 1,
+                      "offset": [ 0, 24 ],
+                      "shadow": true,
+                      "size": [ "default", 20 ],
+                      "max_size": [ "100% - 8px", 20 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "color": "$loading_text_color",
+                      "text": "#progress_text",
+                      "bindings": [
+                        {
+                          "binding_name": "#progress_text"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Alternative Panel ////*/
+  
+  "alt_title_panel": {
+    "type": "panel",
+    "size": [ "100%", "50%-11px" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { 
+        "progress_title_text@label_dx.global_label": {
+          "shadow": true,
+          "size": [ "default", 10 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "text": "#title_text",
+          "bindings": [
+            {
+              "binding_name": "#title_text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "alt_subtitle_panel": {
+    "type": "panel",
+    "size": [ "100%", "50%-3px" ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "progress_bar_text@label_dx.global_label": {
+          "shadow": true,
+          "size": [ "default", 20 ],
+          "max_size": [ "100% - 8px", 20 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "color": "$loading_text_color",
+          "text": "#progress_text",
+          "bindings": [
+            {
+              "binding_name": "#progress_text"
+            }
+          ]
+        }
+      },
+      {
+        "progress_percent_panel": {
+          "type": "panel",
+          "layer": 2,
+          "visible": "#progress_visible",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 13 ],
+          "size": [ 100, 2 ],
+          "controls": [
+            {
+              "empty_progress_bar": {
+                "type": "image",
+                "layer": 1,
+                "size": [ 100, 2 ],
+                "texture": "vdx/ui_textures/progress/classic_bar_background"
+              }
+            },
+            {
+              "full_progress_bar": {
+                "type": "image",
+                "layer": 2,
+                "size": [ 100, 2 ],
+                "texture": "vdx/ui_textures/progress/classic_bar_progress",
+                "clip_direction": "left",
+                "clip_pixelperfect": false,
+                "bindings": [
+                  {
+                    "binding_name": "#loading_bar_percentage",
+                    "binding_name_override": "#clip_ratio"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#progress_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "server_progress_loading_bars@progress_anim_dx.server_progress_loading_bars": {
+          "offset": [ 0, 24 ], // [ 0, 22 ]
+          "bindings": [
+            {
+              "binding_name": "#bar_animation_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "alt_panel": {
+    "type": "panel",
+    "bindings": [
+      { "binding_name": "#title_text" },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#title_text - '[') = #title_text))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "title_panel@progress_legacy_dx.alt_title_panel": { } },
+      { "subtitle_panel@progress_legacy_dx.alt_subtitle_panel": { } }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "layer": 5,
+    "controls": [
+      { "main_panel@progress_legacy_dx.main_panel": { } },
+      { "alt_panel@progress_legacy_dx.alt_panel": { } },
+      { "button_panel@progress_legacy_dx.button_panel": { } }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@progress_legacy_dx.main_screen_content": { } },
+      { "popup_dialog_factory@progress_dialog_dx.popup_dialog_factory": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "menu_background@menu_background_textures_dx.menu_background": { "layer": -10 } },
+      { 
+        "popup_dialog_factory": {
+          "type": "factory",
+          "control_ids": {
+            "test": "dialog@progress.popup_dialog_base",
+            "add_on_only": "add_on_only@progress_dialog_dx.add_on_only",
+            "add_on_confirmation": "add_on_only@progress_dialog_dx.popup_dialog_bg_panel",
+            "add_on_with_optional_texture_pack": "add_on_only@progress_dialog_dx.popup_dialog_bg_panel",
+            "add_on_with_texture_pack": "add_on_only@progress_dialog_dx.popup_dialog_bg_panel",
+            "texture_pack_optional": "add_on_only@progress_dialog_dx.popup_dialog_bg_panel",
+            "texture_pack_required": "add_on_only@progress_dialog_dx.popup_dialog_bg_panel",
+            "texture_pack_raytracing_optional": "add_on_only@progress_dialog_dx.popup_dialog_bg_panel",
+            "texture_pack_raytracing_required": "add_on_only@progress_dialog_dx.popup_dialog_bg_panel"
+          }
+        }
+      }
+    ]
+  }
+}
