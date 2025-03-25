@@ -1,0 +1,124 @@
+##################################################
+##  Options
+##################################################
+##  UI Settings
+vdx.options.more=Более...
+vdx.options.moreTitle=Более
+
+##################################################
+##  Progress
+##################################################
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.check=Больше не показывать
+multiplayerWarning.header=§lПредупреждение: игра на сторонних серверах
+multiplayerWarning.message=Предупреждение. Сетевая игра, предложенная сторонними серверами, не является собственностью, не управляется и не модерируется Mojang Studios. Во время сетевой игры, вы можете столкнуться с немодерируемыми сообщениями в чате или иными видами пользовательского контента, который может подходить не всем игрокам.
+
+onlinePlay.untrustedIp.title=§lНеизвестный внешний сервер
+onlinePlay.untrustedIp.message=Подключайтесь только к серверам, которым вы доверяете! Все еще хотите присоединиться?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Загляните в справочник
+recipe.toast.title=Открыты новые рецепты!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Вы можете спать только ночью или во время грозы
+vdx.block.minecraft.bed.not_safe=Вы не можете уснуть, пока рядом есть монстры
+vdx.block.minecraft.bed.obstructed=Эта кровать заблокирована
+vdx.block.minecraft.bed.occupied=Эта кровать занята
+vdx.block.minecraft.bed.too_far_away=Вы не можете уснуть, кровать слишком далеко
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Ограничение строительства по высоте: 319
+build.tooHigh.the_nether.aspects=Ограничение строительства по высоте: 127
+build.tooHigh.the_end.aspects=Ограничение строительства по высоте: 255
+build.tooLow.overworld.aspects=Минимальная высота строения в блоках: -64
+build.tooLow.the_nether.aspects=Минимальная высота строения в блоках: 0
+build.tooLow.the_end.aspects=Минимальная высота строения в блоках: 0
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=Рейд
+bar.event.raid.remaining.2=Рейд — Осталось нападающих: 2
+bar.event.raid.remaining.1=Рейд — Осталось нападающих: 1
+bar.event.raid.remaining.0=Рейд — Осталось нападающих: 0
+bar.event.raid.victory=Рейд — Победа
+bar.event.raid.defeat=Рейд — Поражение
+
+##################################################
+##  Recipe Book and Creative
+#############################################
+gui.recipebook.search_hint=§oПоиск...
+gui.recipebook.toggleRecipes.all=Все рецепты
+gui.recipebook.toggleRecipes.blastable=Рецепты для плавильной печи
+gui.recipebook.toggleRecipes.craftable=Доступно к созданию
+gui.recipebook.toggleRecipes.smeltable=Рецепты для печи
+gui.recipebook.toggleRecipes.smokable=Рецепты для коптильни
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Строительство
+vdx.creative.tab.equipment=Экипировка
+vdx.creative.tab.items=Предметы
+vdx.creative.tab.nature=Природа
+
+inventory.binSlot=Удалить предмет
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Редактирование подвесной таблички
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Консольная команда
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Относительные координаты
+structure_block.size=Размеры конструкции
+structure_block.integrity_and_seed=Целостность конструкции и ключ случайного алгоритма
+structure_block.detect_size=Определить размер и расположение:
+structure_block.mode_info.save=Режим записи — сохранение в файл
+structure_block.mode_info.load=Режим чтения — загрузка из файла
+structure_block.mode_info.corner=Угол — маркер размещения и размеров
+structure_block.exportTo=Экспорт в файл:
+structure_block.mode.export=Экспорт
+structure_block.button.detect_size=РАСЧЁТ
+structure_block.button.save=ЗАПИСЬ
+structure_block.button.load=ЧТЕНИЕ
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Предложения
+merchant.deprecated=Крестьяне пополняют запасы дважды в день.

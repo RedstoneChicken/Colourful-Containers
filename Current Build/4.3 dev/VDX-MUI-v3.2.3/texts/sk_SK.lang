@@ -1,0 +1,124 @@
+﻿##################################################
+##  Options
+##################################################
+##  UI Settings
+vdx.options.more=Ďalšie možnosti...
+vdx.options.moreTitle=Ďalšie možnosti
+
+##################################################
+##  Progress
+##################################################
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.check=Túto správu viac nezobrazovať
+multiplayerWarning.header=§lPozor, online hra tretej strany
+multiplayerWarning.message=Pozor: online hra je poskytovaná servermi tretích strán, ktoré nepatria, nie sú v správe, ani pod dohľadom Mojang Studios, či Microsoftu. Počas online hry môžeš byť vystavený nefiltrovaným správam alebo inému druhu používateľského obsahu, ktorý nemusí byť vhodný pre všetky vekové kategórie.
+
+onlinePlay.untrustedIp.title=§lNeznámy externý server
+onlinePlay.untrustedIp.message=Mali by ste sa pripájať iba k serverom, ktorým dôverujete! Chcete sa aj tak pripojiť?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Загляните в справочник
+recipe.toast.title=Открыты новые рецепты!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Spať môžeš iba v noci alebo počas búrok
+vdx.block.minecraft.bed.not_safe=Teraz nemôžeš odpočívať, v blízkosti sa nachádzajú príšery
+vdx.block.minecraft.bed.obstructed=Táto posteľ je zablokovaná
+vdx.block.minecraft.bed.occupied=Táto posteľ je obsadená
+vdx.block.minecraft.bed.too_far_away=Teraz nemôžeš odpočívať, posteľ je príliš ďaleko
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Výškový limit pre stavanie je 319 kociek
+build.tooHigh.the_nether.aspects=Výškový limit pre stavanie je 127 kociek
+build.tooHigh.the_end.aspects=Výškový limit pre stavanie je 255 kociek
+build.tooLow.overworld.aspects=Minimálna výška budovy je -64 blokov
+build.tooLow.the_nether.aspects=Minimálna výška budovy je 0 blokov
+build.tooLow.the_end.aspects=Minimálna výška budovy je 0 blokov
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=Nájazd
+bar.event.raid.remaining.2=Nájazd - Zostávajúcich nájazdníkov: 2
+bar.event.raid.remaining.1=Nájazd - Zostávajúcich nájazdníkov: 1
+bar.event.raid.remaining.0=Nájazd - Zostávajúcich nájazdníkov: 0
+bar.event.raid.victory=Nájazd - Víťazstvo
+bar.event.raid.defeat=Nájazd - Porážka
+
+##################################################
+##  Recipe Book and Creative
+#############################################
+gui.recipebook.search_hint=§oHľadať...
+gui.recipebook.toggleRecipes.all=Zobrazuje sa všetko
+gui.recipebook.toggleRecipes.blastable=Zobrazujú sa vytaviteľné
+gui.recipebook.toggleRecipes.craftable=Zobrazujú sa vyrobiteľné
+gui.recipebook.toggleRecipes.smeltable=Zobrazujú sa vypáliteľné
+gui.recipebook.toggleRecipes.smokable=Zobrazujú sa vyúditeľné
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Výstavba
+vdx.creative.tab.equipment=Vybavenie
+vdx.creative.tab.items=Predmety
+vdx.creative.tab.nature=Príroda
+
+inventory.binSlot=Zničiť predmet
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Upraviť text na závesnej ceduli
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Konzolový príkaz
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Relatívna poloha
+structure_block.size=Veľkosť štruktúry
+structure_block.integrity_and_seed=Integrita a seed štruktúry
+structure_block.detect_size=Zistiť veľkosť a polohu štruktúry:
+structure_block.mode_info.save=Režim ukladania - zápis do súboru
+structure_block.mode_info.load=Režim načítania – načítanie zo súboru
+structure_block.mode_info.corner=Režim rohov – určovateľ polohy a veľkosti
+structure_block.exportTo=Exportovať:
+structure_block.mode.export=Exportovať
+structure_block.button.detect_size=ROZPOZNAŤ
+structure_block.button.save=ULOŽIŤ
+structure_block.button.load=NAČÍTAŤ
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Obchody
+merchant.deprecated=Osadníci dopĺňajú zásoby najviac dvakrát denne.

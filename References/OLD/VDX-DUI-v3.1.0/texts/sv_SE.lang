@@ -1,0 +1,124 @@
+﻿##################################################
+##  Options
+##################################################
+##  UI Settings
+vdx.options.more=Fler alternativ...
+vdx.options.moreTitle=Fler alternativ
+
+##################################################
+##  Progress
+##################################################
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.check=Visa inte det här meddelandet igen
+multiplayerWarning.header=§lVarning: Tredjepartsspel på internet
+multiplayerWarning.message=Varning: Spel på internet erbjuds av tredjepartsservrar som inte ägs, drivs eller övervakas av Mojang Studios eller Microsoft. När du spelar på internet kan du bli utsatt för omodererade chattmeddelanden eller andra typer av användargenererat innehåll som kanske inte är lämpligt för alla.
+
+onlinePlay.untrustedIp.title=§lOkänd extern server
+onlinePlay.untrustedIp.message=Du bör endast ansluta till servrar du litar på! Vill du fortfarande ansluta?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Kolla din receptbok
+recipe.toast.title=Nya recept låstes upp!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Du kan bara sova på natten och i åskväder
+vdx.block.minecraft.bed.not_safe=Du kan inte sova nu, det finns monster i närheten
+vdx.block.minecraft.bed.obstructed=Den här sängen är blockerad
+vdx.block.minecraft.bed.occupied=Den här sängen är upptagen
+vdx.block.minecraft.bed.too_far_away=Du kan inte sova nu, sängen är för långt bort
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Höjdgränsen för att bygga är 319
+build.tooHigh.the_nether.aspects=Höjdgränsen för att bygga är 127
+build.tooHigh.the_end.aspects=Höjdgränsen för att bygga är 255
+build.tooLow.overworld.aspects=Byggnadens minsta höjd är -64
+build.tooLow.the_nether.aspects=Byggnadens minsta höjd är 0
+build.tooLow.the_end.aspects=Byggnadens minsta höjd är 0
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=Räd
+bar.event.raid.remaining.2=Räd - Återstående anfallare: 2
+bar.event.raid.remaining.1=Räd - Återstående anfallare: 1
+bar.event.raid.remaining.0=Räd - Återstående anfallare: 0
+bar.event.raid.victory=Räd - Seger
+bar.event.raid.defeat=Räd - Förlust
+
+##################################################
+##  Recipe Book and Creative
+#############################################
+gui.recipebook.search_hint=§oSök...
+gui.recipebook.toggleRecipes.all=Visar alla
+gui.recipebook.toggleRecipes.blastable=Visar smältbara
+gui.recipebook.toggleRecipes.craftable=Visar tillverkningsbara
+gui.recipebook.toggleRecipes.smeltable=Visar smältbara
+gui.recipebook.toggleRecipes.smokable=Visar rökbara
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Tillverkning
+vdx.creative.tab.equipment=Utrustning
+vdx.creative.tab.items=Föremål
+vdx.creative.tab.nature=Naturen
+
+inventory.binSlot=Förstör föremål
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Redigera skyltmeddelande
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Konsolkommando
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Relativ position
+structure_block.size=Strukturstorlek
+structure_block.integrity_and_seed=Strukturens integritet och frö
+structure_block.detect_size=Identifiera storlek och position:
+structure_block.mode_info.save=Sparaläge – skriv till fil
+structure_block.mode_info.load=Laddaläge – ladda från fil
+structure_block.mode_info.corner=Hörnläge – markör för placering och storlek
+structure_block.exportTo=Exportera:
+structure_block.mode.export=Exportera
+structure_block.button.detect_size=HITTA
+structure_block.button.save=SPARA
+structure_block.button.load=LADDA
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Byten
+merchant.deprecated=Bybor fyller på upp till två gånger per dag.

@@ -1,0 +1,15 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "credits_text_post_dx",
+  
+  "credits_text_post": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    /*Technically, I use \u0022 instead the ", inside the label "text", because the code is confused sometimes.*/
+    "controls": [
+      { "0001@credits_dx.e_text_panel": { "$e_text": "\n\n\n\n\n§f\u0022Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.\u0022 §7- Unknown" } }
+    ]
+  }
+}
