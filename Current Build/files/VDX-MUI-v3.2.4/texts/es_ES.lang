@@ -1,0 +1,291 @@
+﻿##################################################
+##  Start
+##################################################
+menu.play=Jugar al juego
+menu.options=Opciones...
+menu.quit=Cerrar Minecraft
+menu.store=Tienda de Minecraft
+
+##################################################
+##  Options
+##################################################
+##  Main
+options.language=Idioma...
+options.sounds=Música y sonido...
+options.sounds.title=Opciones de música y sonido
+options.account=Cuenta...
+options.general=General...
+options.generalTitle=Configuración general
+menu.storageManagement=Almacenamiento...
+options.resetSettings=Reiniciar valores
+##  Toggle OFF/ON
+options.off=NO
+options.on=SÍ
+##  Credits and Attribution
+options.credits_and_attribution=Créditos y atribuciones...
+credits_and_attribution.screen.title=Créditos y atribuciones
+credits_and_attribution.button.licenses=Licencias
+##  Accessibility Settings
+options.accessibility=Accesibilidad...
+options.enableChatTextToSpeech=Narrador para el chat
+options.enableAutoPlatformTextToSpeech=Narrador con la config. del disp.
+options.enableUITextToSpeech=Narrador para el IU
+options.enableOpenChatMessage=Apertura de mensaje de chat
+options.darknessEffectModifier=Pulsación de oscuridad
+options.darknessEffectModifier.message=Controla la pulsación del efecto de oscuridad cuando un warden o chillador de sculk te lo provoca.
+##  Controls Settings
+options.autojump=Saltar automáticamente
+options.fullKeyboardGameplay=Solo con teclado
+options.mouse_settings=Opciones del ratón...
+options.mouse_settings.title=Opciones del ratón
+controls.keybinds=Teclas...
+controls.keybinds.title=Teclas
+options.joystick_settings=Opciones del joystick...
+options.joystick_settings.title=Opciones del joystick
+controllerLayoutScreen.resetAllBindings=Reiniciar teclas
+##  Video Settings
+options.video=Gráficos...
+options.videoTitle=Gráficos
+options.graphics.fancy=Detallados
+options.graphics.fast=Rápidos
+options.graphics.fancy.tooltip=Los gráficos detallados equilibran el rendimiento y la calidad para la mayoría de dispositivos.\nEl tiempo atmosférico, las nubes y las partículas pueden no aparecer detrás de bloques translúcidos o agua.
+options.graphics.fast.tooltip=Los gráficos rápidos reducen la cantidad de lluvia y nieve que el jugador puede apreciar.\nLos efectos de transparencia están desactivados para varios bloques, como las hojas de los árboles.
+options.vsync=Use VSync
+options.vsync.off=NO
+options.vsync.on=SÍ
+options.vsync.adaptive=Adaptivo
+options.gui.accessibility.scaling=Nueva IU extragrande
+options.renderClouds=Nubes
+options.maxFramerate=Máximos FPS
+options.fov.toggle=Efectos del FOV
+options.renderDistance=Renderizado
+options.rendchat_messages_dxerDistanceFormat=%s chunks
+options.renderDistanceRecommendedFormat=%s chunks
+options.showautosaveicon=Indicar autoguardado
+##  Audio Settings
+soundCategory.main=Volumen general
+soundCategory.ambient=Ambiente/Entorno
+soundCategory.block=Bloques
+soundCategory.hostile=Criaturas hostiles
+soundCategory.master=Volumen general
+soundCategory.music=Música
+soundCategory.neutral=Criaturas pacíficas
+soundCategory.player=Jugadores
+soundCategory.record=Bloques musicales
+soundCategory.weather=Clima
+soundCategory.texttospeech=Voces y diálogos
+##  UI Settings
+vdx.options.more=Más opciones...
+vdx.options.moreTitle=Más opciones
+##  World
+resourcePack.title=Seleccionar packs de recursos
+behaviorPack.title=Seleccionar packs de comportamientos
+selectWorld.resourcePack=Recursos
+selectWorld.behaviorPack=Comportamientos
+
+
+selectWorld.experiments.info=Los experimentos son posibles características nuevas, pero una vez activados, no hay vuelta atrás. Por lo tanto, ten cuidado al seleccionarlos y activarlos, ya que algunos pueden no funcionar correctamente.
+
+##################################################
+##  Resource Packs
+##################################################
+pack.available.title=§lDisponibles
+pack.selected.title=§lSeleccionados
+resourcePack.vanilla.name=Por defecto
+resourcePack.vanilla.description=La apariencia por defecto de Minecraft (integrado)
+pack.resources.dropInfo=Arrastra archivos en la carpeta "resource_packs" para agregar packs
+
+##################################################
+##  Behavior Packs
+##################################################
+pack.behavior.dropInfo=Arrastra archivos en la carpeta "behavior_packs" para agregar packs
+
+##################################################
+##  Death
+##################################################
+deathScreen.message=¡Has muerto!
+deathScreen.title=¡Has muerto!
+
+##################################################
+##  Play
+##################################################
+##  Main
+options.group.graphics.experimental=§eExperimental
+selectWorld.tooltip.beta=Haz una copia de seguridad del mundo antes de cargarlo en esta versión beta....
+selectWorld.tooltip.snapshot1=Haz una copia de seguridad del mundo
+selectWorld.tooltip.snapshot2=antes de cargarlo en esta versión.
+##  Realms
+mco.selectServer.popup=Realms es una forma segura y simple de disfrutar de un mundo de Minecraft con hasta 10 amigos. ¡Con minijuegos y mundos personalizados! Solo paga el dueño del realm.
+mco.selectServer.purchase=Añadir Realm
+mco.selectServer.buy=¡Compra un realm!
+mco.selectServer.trial=¡Pruébalo!
+
+mco.selectServer.closed=Realm cerrado
+mco.selectServer.expired=Realm caducado
+
+
+##################################################
+##  Realms Options
+##################################################
+mco.configure.world.title=Configurar realm:
+mco.configure.world.name.binding=%s
+
+mco.invites.title=Invitaciones pendientes
+mco.invites.pending=¡Nuevas invitaciones!
+mco.invites.nopending=¡No hay invitaciones pendientes!
+mco.invites.button.accept=Aceptar
+mco.invites.button.reject=Rechazar
+
+##################################################
+##  Gamerule
+##################################################
+selectWorld.gameRules=Reglas del juego
+  
+editGamerule.title=Editar las reglas del juego
+editGamerule.default=Por defecto: 
+
+gamerule.doImmediateRespawn=Reaparición instantánea
+gamerule.keepInventory=Mantener inventario tras morir
+gamerule.mobGriefing=Permitir que las criaturas destruyan
+gamerule.naturalRegeneration=Regenerar salud
+gamerule.spawnRadius=Radio del punto de reaparición
+gamerule.doMobSpawning=Generar criaturas
+gamerule.doMobSpawning.description=Algunas entidades pueden tener sus propias reglas.
+gamerule.doEntityDrops=Soltar objetos al romper entidades
+gamerule.doEntityDrops.description=Permite que se recupere una entidad al romperla. Afecta a vagonetas (incluyendo sus inventarios), marcos, barcas, etc.
+gamerule.doMobLoot=Obtener botín de criaturas
+gamerule.doMobLoot.description=Controla que las criaturas puedan soltar recursos, incluyendo orbes de experiencia.
+gamerule.doTileDrops=Soltar objetos al romper bloques
+gamerule.doTileDrops.description=Controla que los bloques puedan soltar recursos, incluyendo orbes de experiencia.
+gamerule.doDaylightCycle=Avanzar ciclo de día y noche
+gamerule.doFireTick=Propagación del fuego
+gamerule.doWeatherCycle=Ciclo meteorológico
+gamerule.randomTickSpeed=Velocidad de tics al azar
+
+gamerule.category.player=§lJugador
+gamerule.category.mobs=§lCriaturas
+gamerule.category.spawning=§lGeneración de criaturas
+gamerule.category.drops=§lObtención de objetos
+gamerule.category.updates=§lActualizaciones del mundo
+gamerule.category.misc=§lVarios
+
+##################################################
+##  Progress
+##################################################
+##  Main
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.header=§lAtención: Juego en línea de terceros
+multiplayerWarning.message=Atención: El juego en línea está provisto de servidores de terceros los cuales no son propiedad de Mojang Studios ni Microsoft, ni están administrados ni supervisados por ellos. Mientras juegas en línea puedes estar expuesto a mensajes de texto sin moderar u otro tipo de contenido generado por la comunidad que puede no ser apropiado para todos los usuarios.
+multiplayerWarning.check=No mostrar este mensaje de nuevo
+
+onlinePlay.untrustedIp.title=§lServidor externo desconocido
+onlinePlay.untrustedIp.message=¡Conéctate solo a servidores en los que confíes! ¿Seguro que quieres unirte?
+
+##################################################
+##  HUD
+##################################################
+##  Player Position
+map.position=Block: %s %s %s
+##  Toast
+recipe.toast.description=Mira tu libro de recetas.
+recipe.toast.title=¡Nuevas recetas!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Solo puedes dormir por la noche o durante tormentas eléctricas
+vdx.block.minecraft.bed.not_safe=No puedes dormir ahora: hay monstruos cerca
+vdx.block.minecraft.bed.obstructed=Esta cama está obstruida
+vdx.block.minecraft.bed.occupied=Esta cama está ocupada
+vdx.block.minecraft.bed.too_far_away=No puedes dormir ahora: la cama está muy lejos
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=El límite de altura para la construcción es de 319 bloques
+build.tooHigh.the_nether.aspects=El límite de altura para la construcción es de 127 bloques
+build.tooHigh.the_end.aspects=El límite de altura para la construcción es de 255 bloques
+build.tooLow.overworld.aspects=La altura mínima para construir es de -64 bloques
+build.tooLow.the_nether.aspects=La altura mínima para construir es de 0 bloques
+build.tooLow.the_end.aspects=La altura mínima para construir es de 0 bloques
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
+##  Output
+bar.event.raid.name=Invasión	#
+bar.event.raid.remaining.2=Invasión - Asaltantes restantes: 2	#
+bar.event.raid.remaining.1=Invasión - Asaltantes restantes: 1	#
+bar.event.raid.remaining.0=Invasión - Asaltantes restantes: 0	#
+bar.event.raid.victory=Invasión - Victoria	#
+bar.event.raid.defeat=Invasión - Derrota	#
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§oBuscar...
+gui.recipebook.toggleRecipes.all=Mostrando todas
+gui.recipebook.toggleRecipes.craftable=Mostrando fabricables
+gui.recipebook.toggleRecipes.smeltable=Mostrando fundibles
+gui.recipebook.toggleRecipes.blastable=Mostrando fundibles en alto horno
+gui.recipebook.toggleRecipes.smokable=Mostrando ahumables
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output
+vdx.creative.tab.construction=Construcción
+vdx.creative.tab.equipment=Equipo
+vdx.creative.tab.items=Objetos
+vdx.creative.tab.nature=Naturaleza
+
+inventory.binSlot=Tirar objeto
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Editar mensaje del cartel colgante
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Comando de consola
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Ubicación relativa
+structure_block.size=Tamaño de la estructura
+structure_block.integrity_and_seed=Integridad y semilla de la estructura
+structure_block.detect_size=Detectar tamaño y posición de la estructura:
+structure_block.mode_info.save=Modo guardar: guarda en un archivo
+structure_block.mode_info.load=Modo cargar: carga de un archivo
+structure_block.mode_info.corner=Modo esquina: indica posición límite y medida
+structure_block.exportTo=Exporta en un archivo:
+structure_block.mode.export=Exportar
+structure_block.button.detect_size=DETECTAR
+structure_block.button.save=GUARDAR
+structure_block.button.load=CARGAR
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Comercios
+merchant.deprecated=Los aldeanos se reaprovisionan dos veces al día.

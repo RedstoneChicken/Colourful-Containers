@@ -1,0 +1,158 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "tooltip_dx",
+
+  /*//// Label ////*/
+
+  "tooltip_label@label_dx.global_label": {
+    "offset": [ 4, 3 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 10,
+    "color": "$hover_panel_text_color",
+    "$hover_panel_text_color|default": [ 1.0, 1.0, 1.0 ],
+    "text": "$hover_panel_text",
+    "shadow": "$tooltip_text_shadow",
+    "follows_cursor": true,
+    "size": "$hover_text_size",
+    "$hover_text_size|default": [ "default", "default" ],
+    "$hover_panel_text|default": ""
+  },
+
+  /*//// Image Panel ////*/
+
+  "main_tooltip_panel": {
+    "type": "panel",
+    "size": [ "100%cm", "100%cm" ],
+    "layer": 50,
+    // Anchor
+    "anchor_from": "$hover_anchor_from",
+    "anchor_to": "$hover_anchor_to",
+    "$hover_anchor_from|default": "top_left",
+    "$hover_anchor_to|default": "top_left",
+    // Offset
+    "offset": "$hover_text_offset",
+    "$hover_text_offset|default": [ 12, 12 ],
+    // Bindings
+    "$hover_text_texture_bindings|default": [],
+    "bindings": "$hover_text_texture_bindings",
+    // Controls
+    "$tooltip_label_control|default": "tooltip_dx.tooltip_label",
+    "controls": [
+      {
+        "background": {
+          "type": "panel",
+          "size": [ "100%sm + 8px", "100%sm + 6px" ],
+          "layer": 1,
+          "controls": [
+            { "tooltip@tooltip_textures_dx.tooltip": { } }
+          ]
+        }
+      },
+      { "text@$tooltip_label_control": { } }
+    ]
+  },
+
+  /*//// Main Panel ////*/
+
+  "hover_text_button": {
+    "type": "button",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "locked_control": "",
+    "layer": -10,
+    "size": [ 2, 2 ],
+    "offset": [ 10000, 10000 ],
+    "follows_cursor": true,
+    "consume_hover_events": false,
+    "always_handle_pointer": true,
+    "focus_enabled": false,
+    "focus_magnet_enabled": false,
+    "controls": [
+      { "hover@tooltip_dx.main_tooltip_panel": {} }
+    ]
+  },
+
+  "tooltip_panel": {
+    "type": "panel",
+    "allow_clipping": false,
+    "controls": [
+      { 
+        "hover_text_button@tooltip_dx.hover_text_button": {
+          "ignored": "($touch)"
+        }
+      },
+      { 
+        "hover_text_image@tooltip_dx.main_tooltip_panel": {
+          "ignored": "(not $touch)"
+        }
+      }
+    ]
+  },
+
+  /*//// Hover Text as Selected Item Details ////*/
+
+  "anim_item_details_alpha": {
+    "anim_type": "alpha",
+    "easing": "in_quint",
+    "destroy_at_end": "selected_item_details",
+    "duration": 2,
+    "from": 1.0,
+    "to": 0
+  },
+
+  "selected_item_details_factory": {
+    "type": "factory",
+    "control_name": "@tooltip_dx.selected_item_details"
+  },
+
+  "selected_item_details": {
+    "type": "panel",
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "size": [ "100%cm", "100%cm" ],
+    "offset": "$offset",
+    "layer": 30,
+
+    "$offset|default": [ 0, -16 ],
+    "$alpha_anim|default": "@tooltip_dx.anim_item_details_alpha",
+
+    "controls": [
+      {
+        "background": {
+          "type": "panel",
+          "visible": "#visible",
+          "alpha": "$alpha_anim",
+          "propagate_alpha": true,
+          "size": [ "100%sm + 8px", "100%sm + 6px" ],
+          "layer": 1,
+          "controls": [
+            { "tooltip@tooltip_textures_dx.tooltip": { } }
+          ]
+        }
+      },
+      {
+        "item_text_label": {
+          "type": "label",
+          "layer": 4,
+          "alpha": "$alpha_anim",
+          "offset": [ 4, 3 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text": "#selected_hover_text",
+          "size": "$hover_text_size",
+          "$hover_text_size|default": [ "default", "default" ],
+          "shadow": "$tooltip_text_shadow",
+          "color": "$item_hover_text_color"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#recipe_details_label",
+        "binding_name_override": "#visible"
+      }
+    ]
+  }
+}

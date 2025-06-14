@@ -1,0 +1,21 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "VDX: Desktop UI v3.2.4",
+    "description": "By @CrisXolt. [v1.21.70].\nA porting UI pack project for Bedrock Edition.",
+    "uuid": "3619c6ef-3452-40cc-9ce1-ebf979e7d0c4",
+    "version": [ 3, 2, 4 ],
+    "min_engine_version": [ 1, 21, 70 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "5bcc9026-6a39-4a88-a666-a7d9beb74aa6",
+      "version": [ 3, 2, 4 ]
+    }
+  ],
+  "metadata" : {
+    "authors" : [ "CrisXolt" ],
+    "url" : "x.com/CrisXolt"
+  }
+}

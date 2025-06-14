@@ -1,0 +1,124 @@
+﻿##################################################
+##  Options
+##################################################
+##  UI Settings
+vdx.options.more=Περισσότερες επιλογές...
+vdx.options.moreTitle=Περισσότερες επιλογές
+
+##################################################
+##  Progress
+##################################################
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.check=Να μην εμφανιστεί αυτή η οθόνη ξανά
+multiplayerWarning.header=§lΠροσοχή: Διαδικτυακό Παιχνίδι Τρίτων
+multiplayerWarning.message=Προσοχή: Το διαδικτυακό παιχνίδι παρέχεται από διακομιστές τρίτων οι οποίοι δεν κατέχονται, διαχειρίζονται, ή επιβλέπονται από τη Mojang Studios ή τη Microsoft. Κατά τη διάρκεια του διαδικτυακού παιχνιδιού, μπορεί να εκτεθείτε σε μη ελεγχόμενα μηνύματα συνομιλίας ή άλλα είδη περιεχομένου δημιουργημένο από χρήστες που μπορεί να μην είναι κατάλληλο για όλους.
+
+onlinePlay.untrustedIp.title=§lΆγνωστος εξωτερικός διακομιστής
+onlinePlay.untrustedIp.message=Θα πρέπει να συνδέεσαι μόνο σε διακομιστές που εμπιστεύεσαι! Εξακολουθείς να επιθυμείς να συμμετάσχεις;
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Δείτε τις συνταγές
+recipe.toast.title=Νέες Συνταγές!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Μπορείτε να κοιμηθείτε μόνο τη νύχτα ή κατά τη διάρκεια καταιγίδων
+vdx.block.minecraft.bed.not_safe=Δεν μπορείτε να κοιμηθείτε τώρα· υπάρχουν τέρατα κοντά
+vdx.block.minecraft.bed.obstructed=Αυτό το κρεβάτι είναι παρεμποδισμένο
+vdx.block.minecraft.bed.occupied=Αυτό το κρεβάτι είναι κατειλημμένο
+vdx.block.minecraft.bed.too_far_away=Δεν μπορείτε να κοιμηθείτε τώρα· το κρεβάτι βρίσκεται πολύ μακριά
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Το όριο ύψους για χτίσιμο είναι 319
+build.tooHigh.the_nether.aspects=Το όριο ύψους για χτίσιμο είναι 127
+build.tooHigh.the_end.aspects=Το όριο ύψους για χτίσιμο είναι 255
+build.tooLow.overworld.aspects=Το ελάχιστο ύψος για χτίσιμο είναι -64
+build.tooLow.the_nether.aspects=Το ελάχιστο ύψος για χτίσιμο είναι 0
+build.tooLow.the_end.aspects=Το ελάχιστο ύψος για χτίσιμο είναι 0
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=Επιδρομή
+bar.event.raid.remaining.2=Επιδρομή - Υπολειπόμενοι Επιδρομείς: 2
+bar.event.raid.remaining.1=Επιδρομή - Υπολειπόμενοι Επιδρομείς: 1
+bar.event.raid.remaining.0=Επιδρομή - Υπολειπόμενοι Επιδρομείς: 0
+bar.event.raid.victory=Επιδρομή - Νίκη
+bar.event.raid.defeat=Επιδρομή - Ήττα
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§oΑναζήτηση...
+gui.recipebook.toggleRecipes.all=Εμφάνιση Όλων
+gui.recipebook.toggleRecipes.blastable=Εμφάνιση Αντικειμένων Υψικαμίνου
+gui.recipebook.toggleRecipes.craftable=Εμφάνιση Αντικειμένων Τραπεζιού Κατασκευής
+gui.recipebook.toggleRecipes.smeltable=Εμφάνιση Αντικειμένων Φούρνου
+gui.recipebook.toggleRecipes.smokable=Εμφάνιση Αντικειμένων Καπνιστηριού
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Κατασκευή
+vdx.creative.tab.equipment=Εξοπλισμός
+vdx.creative.tab.items=Αντικείμενα
+vdx.creative.tab.nature=Φύση
+
+inventory.binSlot=Καταστροφή Αντικειμένου
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Επεξεργασία Μηνύματος Κρεμαστής Πινακίδας
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Εντολή Τερματικού
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Σχετική Θέση
+structure_block.size=Μέγεθος Δομής
+structure_block.integrity_and_seed=Ακεραιότητα Δομής και Seed
+structure_block.detect_size=Ανίχνευση Μεγέθους και Θέσης Δομής:
+structure_block.mode_info.save=Λειτουργία Αποθήκευσης - Εγγραφή σε Αρχείο
+structure_block.mode_info.load=Λειτουργία Φόρτωσης - Φόρτωση από Αρχείο
+structure_block.mode_info.corner=Λειτουργία Γωνίας - Δείκτης Τοποθέτησης και Μεγέθους
+structure_block.exportTo=Εξαγωγή:
+structure_block.mode.export=Εξαγωγή
+structure_block.button.detect_size=ΑΝΙΧΝΕΥΣΗ
+structure_block.button.save=ΑΠΟΘΗΚΕΥΣΗ
+structure_block.button.load=ΦΟΡΤΩΣΗ
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Ανταλλαγές
+merchant.deprecated=Οι Χωρικοί ανεφοδιάζονται έως και δύο φορές την ημέρα.

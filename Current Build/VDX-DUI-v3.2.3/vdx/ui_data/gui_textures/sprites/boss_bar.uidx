@@ -1,0 +1,469 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "boss_bar_textures_dx",
+
+  /* Pink (For ender Dragon) */
+
+  "pink_background": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/pink_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "pink_progress": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/pink_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Blue */
+
+  "blue_background": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/blue_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "blue_progress": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/blue_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Red (For Raid) */
+
+  "red_background": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/red_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "red_progress": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/red_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Green */
+
+  "green_background": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/green_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "green_progress": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/green_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Yellow */
+
+  "yellow_background": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/yellow_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "yellow_progress": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/yellow_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /* Purple (For Wither) */
+
+  "purple_background": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/purple_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "purple_progress": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/purple_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* White */
+
+  "white_background": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/white_background",
+          "size": [ "100%", "100%" ],
+          "color": "#color",
+          "bindings": [
+            {
+              "ignored": "(not $has_default_event_bar_empty_custom_color)",
+              "binding_name": "#bar_color",
+              "binding_name_override": "#color",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "white_progress": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/white_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "color": "#color",
+          "bindings": [
+            {
+              "ignored": "(not $has_default_event_bar_full_custom_color)",
+              "binding_name": "#bar_color",
+              "binding_name_override": "#color",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            },
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            },
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /* Notched (Nub) 6 */
+
+  "notched_6_background": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/notched_6_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "notched_6_progress": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/notched_6_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /* Notched (Nub) 10 (For Raid) */
+
+  "notched_10_background": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/notched_10_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "notched_10_progress": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/notched_10_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /* Notched (Nub) 12 */
+
+  "notched_12_background": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/notched_12_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "notched_12_progress": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/notched_12_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /* Notched (Nub) 20 */
+
+  "notched_20_background": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/notched_20_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "notched_20_progress": {
+    "type": "panel",
+    "size": [ 182, 5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/boss_bar/notched_20_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,639 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "host_options_dx",
+
+  /*//// Base Button ////*/
+
+  "button_content": {
+    "type": "panel",
+    "$button_glyph_visible|default": true,
+    "$button_glyph_texture|default": "vdx/ui_textures/icon/arrow_right",
+    "controls": [
+      {
+        "button_label@button_dx.button_label": {
+          "$button_label_anchor|default": "top_left",
+          "$button_label_offset|default": [ 6, 5 ],
+          "anchor_from": "$button_label_anchor",
+          "anchor_to": "$button_label_anchor",
+          "offset": "$button_label_offset",
+
+          // For text bindings
+          "$button_text_binding_type|default": "none",
+          "$button_binding_condition|default": "none",
+          "$button_text_grid_collection_name|default": "",
+          "bindings": [
+            {
+              "binding_type": "$button_text_binding_type",
+              "binding_condition": "$button_binding_condition",
+              "binding_collection_name": "$button_text_grid_collection_name",
+              "binding_name": "$button_text",
+              "binding_name_override": "$button_text"
+            }
+          ]
+        }
+      },
+      {
+        "host_glyph_panel": {
+          "$button_glyph_anchor|default": "top_right",
+          "$offset_glyph|default": [ -2, 2 ],
+          "visible": "$button_glyph_visible",
+          "type": "image",
+          "texture": "$button_glyph_texture",
+          "size": [ 16, 16 ],
+          "anchor_from": "$button_glyph_anchor",
+          "anchor_to": "$button_glyph_anchor",
+          "offset": "$offset_glyph",
+
+          // For texture bindings
+          "$button_glyph_binding_type|default": "none",
+          "$button_glyph_binding_condition|default": "none",
+          "$button_glyph_grid_collection_name|default": "",
+
+          "$button_glyph_visible_binding_type|default": "none",
+          "$button_glyph_visible_binding_condition|default": "none",
+          "$button_glyph_visible_collection_name|default": "",
+
+          "bindings": [
+            {
+              "binding_type": "$button_glyph_binding_type",
+              "binding_condition": "$button_glyph_binding_condition",
+              "binding_collection_name": "$button_glyph_grid_collection_name",
+              "binding_name": "$button_glyph_texture",
+              "binding_name_override": "$button_glyph_texture"
+            },
+            {
+              "binding_type": "$button_glyph_visible_binding_type",
+              "binding_condition": "$button_glyph_visible_binding_condition",
+              "binding_collection_name": "$button_glyph_visible_collection_name",
+              "binding_name": "#button_glyph_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_button@button_dx.main_black_button": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", 20 ],
+    "$button_content": "host_options_dx.button_content"
+  },
+
+  /*//// Dropdown Button ////*/
+
+  "host_sub_command_grid_item": {
+    "type": "panel",
+    "size": [ "100%", 20 ],
+    "controls": [
+      {
+        "button@button_dx.main_black_button": {
+          "size": [ "100%", 20 ],
+          "$button_label_offset": [ 20, 5 ],
+          "$button_glyph_anchor": "top_left",
+          "$offset_glyph": [ 2, 2 ],
+          "$button_content": "host_options_dx.button_content",
+          "$button_text": "#button_text",
+          "$button_text_binding_type": "collection",
+          "$button_text_grid_collection_name": "$grid_collection_name",
+          "$pressed_button_name": "button.sub_command",
+
+          "$button_glyph_texture": "#texture",
+          "$button_glyph_binding_type": "collection",
+          "$button_glyph_grid_collection_name": "$grid_collection_name",
+
+          "property_bag": {
+            "#sub_command": ""
+          },
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "$grid_collection_name",
+              "binding_name": "#sub_command"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Weather ////*/
+
+  "host_time_buttons": {
+    "type": "panel",
+    "size": [ "100%", 140 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "bindings": [
+      {
+        "binding_name": "#host_time_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "return@host_options_dx.main_button": {
+          "layer": 2,
+          "$button_glyph_texture": "vdx/ui_textures/icon/arrow_left",
+          "$button_label_offset": [ 20, 5 ],
+          "$button_glyph_anchor": "top_left",
+          "$offset_glyph": [ 2, 2 ],
+          "$pressed_button_name": "button.host_main",
+          "$button_text": "hostOption.time"
+        }
+      },
+      {
+        "return_bg": {
+          "layer": 1,
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%", 20 ],
+          "texture": "vdx/ui_textures/chat/autocomplete_bg"
+        }
+      },
+      {
+        "scroll": {
+          "type": "panel",
+          "size": [ "100%", "100%-20px" ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 20, 0 ],
+          "controls": [
+            {
+              "grid@host_options.host_grid": {
+                "layer": 2,
+                "size": [ "100%", "100%c" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$grid_dimension_binding": "#host_time_grid_dimension",
+                "$grid_collection_name": "host_time_collection",
+                "$grid_item_template": "host_options_dx.host_sub_command_grid_item"
+              }
+            },
+            {
+              "bg": {
+                "layer": 1,
+                "type": "image",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 0, 0 ],
+                "fill": true,
+                "texture": "vdx/ui_textures/global/color_base",
+                "color": [ 0.0, 0.0, 0.0 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Time ////*/
+
+  "host_weather_buttons": {
+    "type": "panel",
+    "size": [ "100%", 140 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "bindings": [
+      {
+        "binding_name": "#host_weather_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "return@host_options_dx.main_button": {
+          "layer": 2,
+          "$button_glyph_texture": "vdx/ui_textures/icon/arrow_left",
+          "$button_label_offset": [ 20, 5 ],
+          "$button_glyph_anchor": "top_left",
+          "$offset_glyph": [ 2, 2 ],
+          "$pressed_button_name": "button.host_main",
+          "$button_text": "hostOption.weather"
+        }
+      },
+      {
+        "return_bg": {
+          "layer": 1,
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%", 20 ],
+          "texture": "vdx/ui_textures/chat/autocomplete_bg"
+        }
+      },
+      {
+        "scroll": {
+          "type": "panel",
+          "size": [ "100%", "100%-20px" ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 20, 0 ],
+          "controls": [
+            {
+              "grid@host_options.host_grid": {
+                "layer": 2,
+                "size": [ "100%", "100%c" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$grid_dimension_binding": "#host_weather_grid_dimension",
+                "$grid_collection_name": "host_weather_collection",
+                "$grid_item_template": "host_options_dx.host_sub_command_grid_item"
+              }
+            },
+            {
+              "bg": {
+                "layer": 1,
+                "type": "image",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 0, 0 ],
+                "fill": true,
+                "texture": "vdx/ui_textures/global/color_base",
+                "color": [ 0.0, 0.0, 0.0 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Teleport ////*/
+
+  "host_teleport_grid_item": {
+    "type": "panel",
+    "size": [ "100%", 20 ],
+    "controls": [
+      {
+        "host_option_toggle@common_toggles.light_text_toggle_collection": {
+          "size": [ "100%", 20 ],
+          "$unchecked_control": "button_dx.black_button_default",
+          "$checked_control": "button_dx.black_button_checked_top_default",
+          "$unchecked_hover_control": "button_dx.black_button_hover",
+          "$checked_hover_control": "button_dx.black_button_checked_top_hover",
+          "$button_content": "host_options_dx.button_content",
+
+          "$toggle_group_default_selected": 0,
+          "$radio_toggle_group": true,
+          "$toggle_name": "navigation_tab",
+
+          "$button_text": "#button_text",
+          "$button_text_binding_type": "collection",
+          "$button_text_grid_collection_name": "$grid_collection_name",
+
+          "$toggle_grid_collection_name": "$grid_collection_name",
+
+          "$toggle_state_binding_name": "#toggle_selected",
+          "$toggle_binding_type": "collection",
+
+          "bindings": [
+            {
+              "binding_name": "#host_teleport_visible",
+              "binding_name_override": "#visible",
+              "binding_collection_name": "$grid_collection_name",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      },
+      {
+        // The inverse button for undoing tele comand, shadow tele
+        "host_option_button@button_dx.main_black_button": {
+          "size": [ "100%", 20 ],
+          "$button_text": "#tele_name",
+          "$button_text_binding_type": "collection",
+          "$button_text_grid_collection_name": "$grid_collection_name",
+          "$pressed_button_name": "button.teleport_clear",
+          "$button_content": "host_options_dx.button_content",
+
+          "property_bag": {
+            "#button_navigation": 0 // For knowing what button is pressed
+          },
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "$grid_collection_name",
+              "binding_name": "#button_navigation",
+              "binding_name_override": "#button_navigation"
+            },
+            {
+              "binding_name": "(not #host_teleport_visible)",
+              "binding_name_override": "#visible",
+              "binding_collection_name": "$grid_collection_name",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "host_teleport_buttons": {
+    "type": "panel",
+    "size": [ "100%", 60 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "bindings": [
+      {
+        "binding_name": "#host_teleport_main_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "return@host_options_dx.main_button": {
+          "layer": 2,
+          "$button_glyph_texture": "vdx/ui_textures/icon/arrow_left",
+          "$button_label_offset": [ 20, 5 ],
+          "$button_glyph_anchor": "top_left",
+          "$offset_glyph": [ 2, 2 ],
+          "$pressed_button_name": "button.host_main",
+          "$button_text": "hostOption.teleport"
+        }
+      },
+      {
+        "return_bg": {
+          "layer": 1,
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%", 20 ],
+          "texture": "vdx/ui_textures/chat/autocomplete_bg"
+        }
+      },
+      {
+        "return_bg": {
+          "layer": 1,
+          "type": "image",
+          "size": [ "100%", 40 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 20, 0 ],
+          "texture": "vdx/ui_textures/chat/autocomplete_bg"
+        }
+      },
+      {
+        "grid@host_options.host_grid": {
+          "layer": 2,
+          "size": [ "100%", 40 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 20, 0 ],
+          "$grid_dimension_binding": "#host_teleport_grid_dimension",
+          "$grid_collection_name": "host_teleport_collection",
+          "$grid_item_template": "host_options_dx.host_teleport_grid_item" 
+        }
+      }
+    ]
+  },
+
+  "player_button_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%-4px", 16 ],
+    "controls": [
+      { 
+        "player_pic_panel": {
+          "type": "panel",
+          "size": [ 16, 16 ],
+          "controls": [
+            { "player_gamer_pic@pause.player_gamer_pic": { "size": [ 16, 16 ], "controls": [ { "empty@common.empty_panel": { } } ] } },
+            { "player_local_icon@pause.player_local_icon": { "size": [ 16, 16 ] } }
+          ]
+        }
+      },
+      {
+        "gamertag_panel": {
+          "type": "panel",
+          "size": [ "fill", "100%" ],
+          "controls": [
+            {
+              "button_label@button_dx.button_label": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 2, 3 ],
+                "text": "#gamertag",
+
+                "bindings": [
+                  {
+                    "binding_name": "#gamertag",
+                    "binding_type": "collection",
+                    "binding_collection_name": "players_collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "platform_icon@pause.platform_icon": {
+          "size": [ 16, 16 ]
+        }
+      }
+    ]
+  },
+
+  "player_grid_item": {
+    "type": "panel",
+    "size": [ "100%", 20 ],
+    "controls": [
+      {
+        "player_banner@button_dx.main_black_button": {
+          "size": [ "100%", 20 ],
+
+          "$button_text": "#gamertag",
+          "$pressed_button_name": "button.sub_command",
+          "$button_content": "host_options_dx.player_button_content",
+
+          "bindings": [
+            {
+              "binding_name": "#gamertag",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection",
+              "binding_name_override": "#sub_command"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "host_friends_tab@host_options.host_grid": {
+    "size": [ "100%", "100%c" ],
+    "$grid_dimension_binding": "#players_grid_dimension",
+    "$grid_collection_name": "players_collection",
+    "$grid_item_template": "host_options_dx.player_grid_item"
+  },
+
+  "host_teleport_player_buttons": {
+    "type": "panel",
+    "size": [ "100%", 105 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ "100%+20px", 0 ],
+    "bindings": [
+      {
+        "binding_name": "#host_teleport_players_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "scroll": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "controls": [
+            {
+              "scroll@scroll_dx.scrolling_panel": {
+                "layer": 2,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%+6px", "100%" ],
+                "$scroll_view_port_size": [ "100%-6px", "100%" ],
+                "$scroll_track_image_control": "main_textures_dx.scroll_track",
+                "$scroll_box_image_control": "widget_textures_dx.scroller",
+                "$scroll_size": [ 6, "100%" ],
+                "$scrolling_content": "host_options_dx.host_friends_tab"
+              }
+            },
+            {
+              "bg": {
+                "layer": 1,
+                "type": "image",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 0, 0 ],
+                "fill": true,
+                "texture": "vdx/ui_textures/global/color_base",
+                "color": [ 0.0, 0.0, 0.0 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Main Buttons ////*/
+
+  "host_menu_grid_item": {
+    "type": "panel",
+    "size": [ "100%", 20 ],
+    "controls": [
+      {
+        "host_option_banner@host_options_dx.main_button": {
+          "$button_text": "#button_text",
+          "$button_text_binding_type": "collection",
+          "$button_text_grid_collection_name": "$grid_collection_name",
+          "$pressed_button_name": "button.menu_navigation",
+          "$button_glyph_visible_binding_type": "collection",
+          "$button_glyph_visible_collection_name": "$grid_collection_name",
+          "property_bag": {
+            "#button_navigation": 0
+          },
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "$grid_collection_name",
+              "binding_name": "#button_navigation",
+              "binding_name_override": "#button_navigation"
+            },
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "$grid_collection_name",
+              "binding_name": "#host_option_focus_id",
+              "binding_name_override": "#focus_identifier"
+            },
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "$grid_collection_name",
+              "binding_name": "#host_option_focus_override_left",
+              "binding_name_override": "#focus_change_left"
+            },
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "$grid_collection_name",
+              "binding_name": "#host_option_focus_override_right",
+              "binding_name_override": "#focus_change_right"
+            },
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "$grid_collection_name",
+              "binding_name": "#host_option_focus_override_up",
+              "binding_name_override": "#focus_change_up"
+            },
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "$grid_collection_name",
+              "binding_name": "#host_option_focus_override_down",
+              "binding_name_override": "#focus_change_down"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "host_main_buttons": {
+    "type": "panel",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ "100%", 80 ],
+    "bindings": [
+      {
+        "binding_name": "#host_main_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "host_main_grid@host_options.host_grid": {
+          "layer": 2,
+          "$grid_dimension_binding": "#host_main_grid_dimension",
+          "$grid_collection_name": "host_main_collection",
+          "$grid_item_template": "host_options_dx.host_menu_grid_item"
+        }
+      },
+      {
+        "bg": {
+          "layer": 1,
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "fill": true,
+          "texture": "vdx/ui_textures/chat/autocomplete_bg"
+        }
+      }
+    ]
+  },
+
+  /*//// Main Host Panel ////*/
+
+  "host_panel": {
+    "type": "panel",
+    "offset": [ 2, -16 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ 160, 80 ],
+    "controls": [
+      /* Main 4 buttons */
+      { "host_main_panel@host_options_dx.host_main_buttons": {} },
+      /* Options */
+      { "host_teleport_panel@host_options_dx.host_teleport_buttons": {} },
+      { "host_teleport_player_panel@host_options_dx.host_teleport_player_buttons": {} },
+      /* Time */
+      { "host_time_panel@host_options_dx.host_time_buttons": {} },
+      /* Weather */
+      { "host_weather_panel@host_options_dx.host_weather_buttons": {} }
+    ]
+  }
+}

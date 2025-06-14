@@ -1,0 +1,21 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "chest_large_textures_dx",
+
+  "chest_large": {
+    "type": "panel",
+    "size": [ 176, 222 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/minecraft/textures/gui/container/generic_54",
+          "size": [ 256, 256 ]
+        }
+      }
+    ]
+  }
+}

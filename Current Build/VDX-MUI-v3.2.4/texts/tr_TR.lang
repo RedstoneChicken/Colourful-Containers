@@ -1,0 +1,124 @@
+﻿##################################################
+##  Options
+##################################################
+##  UI Settings
+vdx.options.more=Fler alternativ...
+vdx.options.moreTitle=Fler alternativ
+
+##################################################
+##  Progress
+##################################################
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.check=Bu ekranı bir daha gösterme
+multiplayerWarning.header=§lDikkat: Üçüncü Parti Çevrim içi Oyun
+multiplayerWarning.message=Dikkat: Çevrim içi oyunlar hiçbir şekilde Mojang Studios veya Microsoft tarafından denetlenmemektedir. Çevrim içi oyun sırasında farklı oyuncular tarafından oluşturulmuş herkes için uygun olmayan içerik ve iletilerle karşılaşabilirsiniz.
+
+onlinePlay.untrustedIp.title=§lBilinmeyen Harici Sunucu
+onlinePlay.untrustedIp.message=Yalnızca güvendiğiniz sunuculara bağlanmalısınız! Yine de katılmak istiyor musunuz?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Tarif kitabınızı kontrol edin
+recipe.toast.title=Yeni Tarifler Açıldı!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Sadece geceleri veya fırtınalı havalarda uyuyabilirsin
+vdx.block.minecraft.bed.not_safe=Şu an yatamazsınız, yakınınızda canavarlar var
+vdx.block.minecraft.bed.obstructed=Bu yatak sıkışmış
+vdx.block.minecraft.bed.occupied=Bu yatak dolu
+vdx.block.minecraft.bed.too_far_away=Şu an yatamazsınız, yatak çok uzakta
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=İnşa için yükseklik sınırı 319 bloktur
+build.tooHigh.the_nether.aspects=İnşa için yükseklik sınırı 127 bloktur
+build.tooHigh.the_end.aspects=İnşa için yükseklik sınırı 255 bloktur
+build.tooLow.overworld.aspects=Bina için minimum yükseklik -64 bloktur
+build.tooLow.the_nether.aspects=Bina için minimum yükseklik 0 bloktur
+build.tooLow.the_end.aspects=Bina için minimum yükseklik 0 bloktur
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=Baskın
+bar.event.raid.remaining.2=Baskın - Kalan Yağmacılar: 2
+bar.event.raid.remaining.1=Baskın - Kalan Yağmacılar: 1
+bar.event.raid.remaining.0=Baskın - Kalan Yağmacılar: 0
+bar.event.raid.victory=Baskın - Zafer
+bar.event.raid.defeat=Baskın - Yenilgi
+
+##################################################
+##  Recipe Book and Creative
+#############################################
+gui.recipebook.search_hint=§oAra...
+gui.recipebook.toggleRecipes.all=Tamamı Gösteriliyor
+gui.recipebook.toggleRecipes.blastable=Eritilebilen Madenler Gösteriliyor
+gui.recipebook.toggleRecipes.craftable=Üretilebilenler Gösteriliyor
+gui.recipebook.toggleRecipes.smeltable=Eritilebilenler Gösteriliyor
+gui.recipebook.toggleRecipes.smokable=Pişirilebilen Etler Gösteriliyor
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=İnşaat
+vdx.creative.tab.equipment=Ekipman
+vdx.creative.tab.items=Eşyalar
+vdx.creative.tab.nature=Doğa
+
+inventory.binSlot=Eşyayı Sil
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Asılı Tabela İletisini Düzenle
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Konsol Komutu
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Göreceli Konum
+structure_block.size=Yapı Boyutu
+structure_block.integrity_and_seed=Yapı Bütünlüğü ve Dünya Oluşturucusu Kodu
+structure_block.detect_size=Yapı boyutunu ve konumunu algıla:
+structure_block.mode_info.save=Kayıt Yöntemi - Dosyaya Yaz
+structure_block.mode_info.load=Yükleme Yöntemi - Dosyadan Yükle
+structure_block.mode_info.corner=Köşe Modu - Konum ve Boyut İşaretleyici
+structure_block.exportTo=Dışarı Aktar:
+structure_block.mode.export=Dışarı Aktar
+structure_block.button.detect_size=TESPİT ET
+structure_block.button.save=KAYDET
+structure_block.button.load=YÜKLE
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Teklifler
+merchant.deprecated=Köylüler günde en fazla 2 kere stoklarını yeniler.
