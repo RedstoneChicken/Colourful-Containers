@@ -1,0 +1,104 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "cartography_table_java_dx",
+
+  "cartography_base": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/container/cartography_table",
+    "$cartography_table_uv|default": [ 0, 0 ],
+    "$cartography_table_uv_size|default": [ 0, 0 ],
+    "uv": "$cartography_table_uv",
+    "uv_size": "$cartography_table_uv_size"
+  },
+
+  /*////// Base //////*/
+
+  /* Cartography Screen */
+
+  "dialog_bg_cartography@cartography_table_java_dx.cartography_base": {
+    "size": [ 176, 166 ],
+    "variables": [
+      { "requires": "($cartography_table_resolution = '256x')",  "$cartography_table_uv_size": [ 176, 166 ] },
+      { "requires": "($cartography_table_resolution = '512x')",  "$cartography_table_uv_size": [ 352, 332 ] },
+      { "requires": "($cartography_table_resolution = '1024x')", "$cartography_table_uv_size": [ 704, 664 ] },
+      { "requires": "($cartography_table_resolution = '2048x')", "$cartography_table_uv_size": [ 1408, 1328 ] },
+      { "requires": "($cartography_table_resolution = '4096x')", "$cartography_table_uv_size": [ 2816, 2656 ] },
+      { "requires": "($cartography_table_resolution = '8192x')", "$cartography_table_uv_size": [ 5632, 5312 ] }
+    ],
+        "controls": [
+      { "compass@anm_colorful_gui_common.compass": { } }
+    ]
+  },
+
+  /* Map */
+
+  "normal_map@cartography_table_java_dx.cartography_base": {
+    "size": [ 66, 66 ],
+    "variables": [
+      { "requires": "($cartography_table_resolution = '256x')",  "$cartography_table_uv": [ 176, 0 ],  "$cartography_table_uv_size": [ 66, 66 ] },
+      { "requires": "($cartography_table_resolution = '512x')",  "$cartography_table_uv": [ 352, 0 ],  "$cartography_table_uv_size": [ 132, 132 ] },
+      { "requires": "($cartography_table_resolution = '1024x')", "$cartography_table_uv": [ 704, 0 ],  "$cartography_table_uv_size": [ 264, 264 ] },
+      { "requires": "($cartography_table_resolution = '2048x')", "$cartography_table_uv": [ 1408, 0 ], "$cartography_table_uv_size": [ 528, 528 ] },
+      { "requires": "($cartography_table_resolution = '4096x')", "$cartography_table_uv": [ 2816, 0 ], "$cartography_table_uv_size": [ 1056, 1056 ] },
+      { "requires": "($cartography_table_resolution = '8192x')", "$cartography_table_uv": [ 5632, 0 ], "$cartography_table_uv_size": [ 2112, 2112 ] }
+    ]
+  },
+
+  "empty_map@cartography_table_java_dx.normal_map": { },
+
+  "lock_map@cartography_table_java_dx.normal_map": { },
+
+  "zoom_map@cartography_table_java_dx.normal_map": {
+    "variables": [
+      { "requires": "($cartography_table_resolution = '256x')",  "$cartography_table_uv": [ 176, 66 ],    "$cartography_table_uv_size": [ 66, 66 ] },
+      { "requires": "($cartography_table_resolution = '512x')",  "$cartography_table_uv": [ 352, 132 ],   "$cartography_table_uv_size": [ 132, 132 ] },
+      { "requires": "($cartography_table_resolution = '1024x')", "$cartography_table_uv": [ 704, 264 ],   "$cartography_table_uv_size": [ 264, 264 ] },
+      { "requires": "($cartography_table_resolution = '2048x')", "$cartography_table_uv": [ 1408, 528 ],  "$cartography_table_uv_size": [ 528, 528 ] },
+      { "requires": "($cartography_table_resolution = '4096x')", "$cartography_table_uv": [ 2816, 1056 ], "$cartography_table_uv_size": [ 1056, 1056 ] },
+      { "requires": "($cartography_table_resolution = '8192x')", "$cartography_table_uv": [ 5632, 2112 ], "$cartography_table_uv_size": [ 2112, 2112 ] }
+    ]
+  },
+
+  "copy_map_1@cartography_table_java_dx.cartography_base": {
+    "size": [ 50, 50 ],
+    "variables": [ 
+      { "requires": "($cartography_table_resolution = '256x')",  "$cartography_table_uv": [ 176, 132 ],   "$cartography_table_uv_size": [ 50, 50 ] },
+      { "requires": "($cartography_table_resolution = '512x')",  "$cartography_table_uv": [ 352, 264 ],   "$cartography_table_uv_size": [ 100, 100 ] },
+      { "requires": "($cartography_table_resolution = '1024x')", "$cartography_table_uv": [ 704, 528 ],   "$cartography_table_uv_size": [ 200, 200 ] },
+      { "requires": "($cartography_table_resolution = '2048x')", "$cartography_table_uv": [ 1408, 1056 ], "$cartography_table_uv_size": [ 400, 400 ] },
+      { "requires": "($cartography_table_resolution = '4096x')", "$cartography_table_uv": [ 2816, 2112 ], "$cartography_table_uv_size": [ 800, 800 ] },
+      { "requires": "($cartography_table_resolution = '8192x')", "$cartography_table_uv": [ 5632, 4224 ], "$cartography_table_uv_size": [ 1600, 1600 ] }
+    ]
+  },
+
+  "copy_map_2@cartography_table_java_dx.copy_map_1": { },
+
+  /* Lock */
+
+  "lock_icon@cartography_table_java_dx.cartography_base": {
+    "size": [ 66, 66 ],
+    "variables": [
+      { "requires": "($cartography_table_resolution = '256x')",  "$cartography_table_uv": [ 0, 166 ],  "$cartography_table_uv_size": [ 66, 66 ] },
+      { "requires": "($cartography_table_resolution = '512x')",  "$cartography_table_uv": [ 0, 332 ],  "$cartography_table_uv_size": [ 132, 132 ] },
+      { "requires": "($cartography_table_resolution = '1024x')", "$cartography_table_uv": [ 0, 664 ],  "$cartography_table_uv_size": [ 264, 264 ] },
+      { "requires": "($cartography_table_resolution = '2048x')", "$cartography_table_uv": [ 0, 1328 ], "$cartography_table_uv_size": [ 528, 528 ] },
+      { "requires": "($cartography_table_resolution = '4096x')", "$cartography_table_uv": [ 0, 2656 ], "$cartography_table_uv_size": [ 1056, 1056 ] },
+      { "requires": "($cartography_table_resolution = '8192x')", "$cartography_table_uv": [ 0, 5312 ], "$cartography_table_uv_size": [ 2112, 2112 ] }
+    ]
+  },
+
+  /* Cross Out */
+
+  "cross_out_icon@cartography_table_java_dx.cartography_base": {
+    "size": [ 28, 21 ],
+    "variables": [
+      { "requires": "($cartography_table_resolution = '256x')",  "$cartography_table_uv": [ 226, 132 ],   "$cartography_table_uv_size": [ 28, 21 ] },
+      { "requires": "($cartography_table_resolution = '512x')",  "$cartography_table_uv": [ 452, 264 ],   "$cartography_table_uv_size": [ 56, 42 ] },
+      { "requires": "($cartography_table_resolution = '1024x')", "$cartography_table_uv": [ 904, 528 ],   "$cartography_table_uv_size": [ 112, 84 ] },
+      { "requires": "($cartography_table_resolution = '2048x')", "$cartography_table_uv": [ 1808, 1056 ], "$cartography_table_uv_size": [ 224, 168 ] },
+      { "requires": "($cartography_table_resolution = '4096x')", "$cartography_table_uv": [ 3616, 2112 ], "$cartography_table_uv_size": [ 448, 336 ] },
+      { "requires": "($cartography_table_resolution = '8192x')", "$cartography_table_uv": [ 7232, 4224 ], "$cartography_table_uv_size": [ 896, 672 ] }
+    ]
+  }
+}

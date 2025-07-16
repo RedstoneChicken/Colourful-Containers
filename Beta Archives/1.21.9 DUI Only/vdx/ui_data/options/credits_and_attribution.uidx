@@ -1,0 +1,159 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "credits_and_attribution_options_dx",
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      /* Title */
+      {
+        "title_label@label_dx.global_label": {
+          "size": [ "default", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 5,
+          "shadow": true,
+          "color": "$main_button_default_color",
+          "text": "credits_and_attribution.screen.title",
+          "offset": [ 0, 13 ]
+        }
+      },
+      {
+        "buttons_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ 210, "100%" ],
+          "max_size": [ 210, 206 ],
+          "controls": [
+            /* Credits Button */
+            {
+              "fill_panel": {
+                "type": "panel",
+                "size": [ "100%", "fill" ]
+              }
+            },
+            {
+              "panel_0": {
+                "type": "panel",
+                "size": [ "100%", 28 ],
+                "controls": [
+                  {
+                    "credits_button@button_dx.main_button_210": {
+                      "size": [ 210, 20 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$pressed_button_name": "button.credits",
+                      "$button_text": "options.credits"
+                    }
+                  }
+                ]
+              }
+            },
+            /* Attribution Button */
+            {
+              "panel_1": {
+                "type": "panel",
+                "size": [ "100%", 28 ],
+                "ignored": "($is_holographic or $fire_tv)",
+                "controls": [
+                  {
+                    "attribution_link_button@button_dx.main_button_210": {
+                      "size": [ 210, 20 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$button_text": "options.attribution",
+                      "$pressed_button_name": "button.menu_open_uri",
+                      "variables": [
+                        {
+                          "requires": "(not $nx_os)",
+                          "$attribution_button_url": "https://www.minecraft.net/attribution/?hideChrome"
+                        },
+                        {
+                          "requires": "($nx_os)",
+                          "$attribution_button_url": "https://aka.ms/switchattribution"
+                        }
+                      ],
+                      "property_bag": {
+                        "#hyperlink": "$attribution_button_url"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            /* Licenses Button */
+            {
+              "panel_2": {
+                "type": "panel",
+                "size": [ "100%", 28 ],
+                "variables": [
+                  {
+                    "requires": "(not $nx_os)",
+                    "$licensed_content_button_url": "https://www.minecraft.net/licensed-content/?hideChrome"
+                  },
+                  {
+                    "requires": "($nx_os)",
+                    "$licensed_content_button_url": "https://aka.ms/switchcontent"
+                  }
+                ],
+                "controls": [
+                  {
+                    "licensed_content_popup_button@button_dx.main_button_210": {
+                      "size": [ 210, 20 ],
+                      "ignored": "($is_holographic or $fire_tv or $education_edition)",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$pressed_button_name": "button.menu_open_uri",
+                      "$button_text": "credits_and_attribution.button.licenses",
+                      "property_bag": {
+                        "#hyperlink": "$licensed_content_button_url"
+                      }
+                    }
+                  },
+                  {
+                    "licensed_content_popup_button@button_dx.main_button_210": {
+                      "size": [ 210, 20 ],
+                      "ignored": "(not $is_holographic and not $fire_tv)",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$pressed_button_name": "button.licensed_content_popup",
+                      "$button_text": "credits_and_attribution.button.licenses"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_3": {
+                "type": "panel",
+                "size": [ "100%", 56 ]
+              }
+            }
+          ]
+        }
+      },
+      /* Done Button */
+      {
+        "done_button@options_dx.done_button": {
+          "size": [ 150, 20 ],
+          "$unchecked_control": "button_dx.main_button_default_150",
+          "$unchecked_hover_control": "button_dx.main_button_hover_150",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -8 ]
+        }
+      }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "menu_background@menu_background_textures_dx.menu_background": { "ignored": "(not $is_pregame)", "layer": -10 } },
+      { "inworld_menu_background@menu_background_textures_dx.inworld_menu_background": { "ignored": "($is_pregame)", "layer": -10 } }
+    ]
+  }
+}

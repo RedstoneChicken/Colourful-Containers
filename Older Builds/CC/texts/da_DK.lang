@@ -1,0 +1,13 @@
+﻿##  Raid Texts Input
+raid.name=Raid	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
+
+##  Raid Texts Output
+bar.event.raid.name=Plyndring	#
+bar.event.raid.remaining.2=Plyndring - Plyndrere tilbage: 2	#
+bar.event.raid.remaining.1=Plyndring - Plyndrere tilbage: 1	#
+bar.event.raid.remaining.0=Plyndring - Plyndrere tilbage: 0	#
+bar.event.raid.victory=Plyndring - Sejr	#
+bar.event.raid.defeat=Plyndring - Nederlag	#

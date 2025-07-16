@@ -1,0 +1,224 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "common_slider_dx",
+
+  /*//// Modified Slider option!! ////*/
+  
+  "slider@common.slider": {
+    "$slider_bg_default|default": "",
+    "$slider_content|default": "common_slider_dx.slider_content",
+    "controls": [
+      { "slider_box@common_slider_dx.slider_box": { } },
+      { "slider_content@$slider_content": { } },
+      {
+        "locked_panel": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "(not $option_enabled_binding_name)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "option_label_locked@common_slider_dx.button_label_for_slider": {
+                "layer": 4,
+                "text": "$option_label",
+                "color": "$main_menu_button_locked_color",
+                "bindings": "$label_bindings"
+              }
+            },
+            { 
+              "slider_bg_default@$slider_bg_default": {
+                "$button_content": "common.empty_panel",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ -4, 0 ],
+                "layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_label_for_slider@common_dx.global_label": {
+    "shadow": true,
+    "size": [ "default", 10 ],
+    "color": "$text_color",
+    "text": "$button_text"
+  },
+
+  "slider_content": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_name": "($option_enabled_binding_name)",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      { "slider_bar_default@common_slider_dx.slider_bar_default": {} },
+      { "slider_bar_hover@common_slider_dx.slider_bar_hover": {} }
+    ]
+  },
+
+  "slider_box@common.slider_box": {
+    "size": [ 8, 20 ],
+    "layer": 2,
+    "$hover_content": "common.empty_panel",
+    "controls": [
+      { "default@common_slider_dx.slider_box_default": { "size": [ 8, 20 ] } },
+      { "hover@common_slider_dx.slider_box_hover": { "size": [ 8, 20 ] } },
+      { "indent@common_slider_dx.slider_box_pressed": { "size": [ 8, 20 ] } },
+      { "locked@common_slider_dx.slider_box_locked": { "size": [ 8, 20 ] } }
+    ]
+  },
+
+  /* Slider */
+
+  "slider_bar_default": {
+    "type": "panel",
+    "size": [ "100%+8px", 20 ],
+    "$button_content": "",
+    "$text_color": "$main_menu_button_default_color",
+    "$hover_content|default": "common.empty_panel",
+    "$is_hover": false,
+    "controls": [
+      {
+        "default_panel": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "$option_enabled_binding_name",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "option_label_default@common_slider_dx.button_label_for_slider": {
+                "layer": 5,
+                "text": "$option_label",
+                "bindings": "$label_bindings"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "hover_content@$hover_content": {
+          "ignored": "(not $is_hover)"
+        }
+      },
+      { 
+        "slider_bg_default@$slider_bg_default": {
+          "ignored": "($is_hover)",
+          "$button_content": "common.empty_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "layer": 1
+        }
+      },
+      { 
+        "slider_bg_hover@$slider_bg_hover": {
+          "ignored": "(not $is_hover)",
+          "$button_content": "common.empty_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "slider_bar_hover@common_slider_dx.slider_bar_default": { "$text_color": "$main_menu_button_hover_color", "$is_hover": true  },
+
+  /*//// Main Slider Box ////*/
+
+  "slider_box_default@common_buttons_dx.default_base": {
+    "$button_content": "common.empty_panel",
+    "$left_button_texture": "slider_java_dx.slider_box_left_default",
+    "$right_button_texture": "slider_java_dx.slider_box_right_default"
+  },
+
+  "slider_box_hover@common_buttons_dx.hover_base": {
+    "$button_content": "common.empty_panel",
+    "$left_button_texture": "slider_java_dx.slider_box_left_hover",
+    "$right_button_texture": "slider_java_dx.slider_box_right_hover"
+  },
+
+  "slider_box_pressed@common_buttons_dx.pressed_base": {
+    "$button_content": "common.empty_panel",
+    "$left_button_texture": "slider_java_dx.slider_box_left_hover",
+    "$right_button_texture": "slider_java_dx.slider_box_right_hover"
+  },
+
+  "slider_box_locked@common_buttons_dx.locked_base": {
+    "$button_content": "common.empty_panel",
+    "$left_button_texture": "slider_java_dx.slider_box_left_locked",
+    "$right_button_texture": "slider_java_dx.slider_box_right_locked"
+  },
+
+  /*//// Main Slider 120 ////*/
+
+  "120_default@common_buttons_dx.default_base": {
+    "$left_button_texture": "main_slider_120_java_dx.main_slider_left_default",
+    "$right_button_texture": "main_slider_120_java_dx.main_slider_right_default"
+  },
+
+  "120_hover@common_buttons_dx.hover_base": {
+    "$left_button_texture": "main_slider_120_java_dx.main_slider_left_hover",
+    "$right_button_texture": "main_slider_120_java_dx.main_slider_right_hover"
+  },
+
+  /*//// Main Slider 150 ////*/
+
+  "150_default@common_buttons_dx.default_base": {
+    "$left_button_texture": "main_slider_150_java_dx.main_slider_left_default",
+    "$right_button_texture": "main_slider_150_java_dx.main_slider_right_default"
+  },
+
+  "150_hover@common_buttons_dx.hover_base": {
+    "$left_button_texture": "main_slider_150_java_dx.main_slider_left_hover",
+    "$right_button_texture": "main_slider_150_java_dx.main_slider_right_hover"
+  },
+
+  /*//// Main Slider 200 ////*/
+
+  "200_default@common_buttons_dx.default_base": {
+    "$ignore_right_texture": true,
+    "$left_button_texture": "main_slider_200_java_dx.main_slider_default"
+  },
+
+  "200_hover@common_buttons_dx.hover_base": {
+    "$left_button_texture": "main_slider_200_java_dx.main_slider_hover"
+  },
+
+  /*//// Main Slider 220 ////*/
+
+  "220_default@common_buttons_dx.default_base": {
+    "$left_button_texture": "main_slider_220_java_dx.main_slider_left_default",
+    "$right_button_texture": "main_slider_220_java_dx.main_slider_right_default"
+  },
+
+  "220_hover@common_buttons_dx.hover_base": {
+    "$left_button_texture": "main_slider_220_java_dx.main_slider_left_hover",
+    "$right_button_texture": "main_slider_220_java_dx.main_slider_right_hover"
+  },
+
+  /*//// Main Slider 310 ////*/
+
+  "310_default@common_buttons_dx.default_base": {
+    "$left_button_texture": "main_slider_310_java_dx.main_slider_left_default",
+    "$right_button_texture": "main_slider_310_java_dx.main_slider_right_default"
+  },
+
+  "310_hover@common_buttons_dx.hover_base": {
+    "$left_button_texture": "main_slider_310_java_dx.main_slider_left_hover",
+    "$right_button_texture": "main_slider_310_java_dx.main_slider_right_hover"
+  }
+}
