@@ -1,0 +1,237 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "creative_inventory_grid_items_dx",
+
+  "creative_container_cell_images": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "hold": {
+          "type": "panel",
+          "size": [ 18, 18 ],
+          "controls": [
+            {
+              "item_overlay_expand@crafting.item_overlay_expand": {
+                "layer": 9,
+                "bindings": [
+                  {
+                    "binding_name": "(#container_item_modifier = 2)",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
+            },
+            {
+              "item_overlay_contract@crafting.item_overlay_contract": {
+                "layer": 9,
+                "bindings": [
+                  {
+                    "binding_name": "(#container_item_modifier = 1)",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "grid_item_for_creative@container_item_dx.container_item": {
+    "$stack_count_required": false,
+    "$durability_bar_required": false,
+    "$storage_bar_required": false,
+    "$item_renderer_binding_condition": "visible",
+    "$background_images": "creative_inventory_grid_items_dx.creative_container_cell_images",
+    "$slot_selected_binding_name": "#is_creative_selected_slot"
+  },
+
+  "tab_grid_panel_10": {
+    "type": "panel",
+    "size": [ 162, 90 ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "size": [ 162, 90 ],
+          "grid_dimensions": [ 9, 5 ],
+          "grid_item_template": "creative_inventory_grid_items_dx.grid_item_for_creative",
+          "collection_name": "creative_items",
+          "layer": 4,
+          "$button_ref": "crafting.creative_container_slot_button"
+        }
+      }
+    ]
+  },
+
+  "tab_grid_panel_20": {
+    "type": "panel",
+    "size": [ 162, 90 ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "size": [ 162, 90 ],
+          "grid_dimensions": [ 9, 5 ],
+          "grid_item_template": "creative_inventory_grid_items_dx.grid_item_for_creative",
+          "collection_name": "creative_items",
+          "layer": 4,
+          "$button_ref": "crafting.creative_container_slot_button"
+        }
+      }
+    ]
+  },
+
+  "tab_grid_panel_30": {
+    "type": "panel",
+    "size": [ 162, 90 ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "size": [ 162, 90 ],
+          "grid_dimensions": [ 9, 5 ],
+          "grid_item_template": "creative_inventory_grid_items_dx.grid_item_for_creative",
+          "collection_name": "creative_items",
+          "layer": 4,
+          "$button_ref": "crafting.creative_container_slot_button"
+        }
+      }
+    ]
+  },
+
+  "tab_grid_panel_40": {
+    "type": "panel",
+    "size": [ 162, 90 ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "size": [ 162, 90 ],
+          "grid_dimensions": [ 9, 5 ],
+          "grid_item_template": "creative_inventory_grid_items_dx.grid_item_for_creative",
+          "collection_name": "creative_items",
+          "layer": 4,
+          "$button_ref": "crafting.creative_container_slot_button"
+        }
+      }
+    ]
+  },
+
+  "tab_grid_panel_50": {
+    "type": "panel",
+    "size": [ 162, 90 ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "size": [ 162, 90 ],
+          "grid_dimensions": [ 9, 5 ],
+          "grid_item_template": "creative_inventory_grid_items_dx.grid_item_for_creative",
+          "collection_name": "creative_items",
+          "layer": 4,
+          "$button_ref": "crafting.creative_container_slot_button"
+        }
+      }
+    ]
+  },
+
+  "tab_grid_panel_60": {
+    "type": "panel",
+    "size": [ 162, 90 ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "size": [ 162, 90 ],
+          "grid_dimensions": [ 9, 5 ],
+          "grid_item_template": "creative_inventory_grid_items_dx.grid_item_for_creative",
+          "collection_name": "creative_items",
+          "layer": 4,
+          "$button_ref": "crafting.creative_container_slot_button"
+        }
+      }
+    ]
+  },
+
+  "tab_grid_panel_70": {
+    "type": "panel",
+    "size": [ 162, 90 ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "size": [ 162, 90 ],
+          "grid_dimensions": [ 9, 5 ],
+          "grid_item_template": "creative_inventory_grid_items_dx.grid_item_for_creative",
+          "collection_name": "creative_items",
+          "layer": 4,
+          "$button_ref": "crafting.creative_container_slot_button"
+        }
+      }
+    ]
+  },
+
+  "tab_grid_panel_80": {
+    "type": "panel",
+    "size": [ 162, 90 ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "size": [ 162, 90 ],
+          "grid_dimensions": [ 9, 5 ],
+          "grid_item_template": "creative_inventory_grid_items_dx.grid_item_for_creative",
+          "collection_name": "creative_items",
+          "layer": 4,
+          "$button_ref": "crafting.creative_container_slot_button"
+        }
+      }
+    ]
+  },
+
+  "tab_grid_panel_90": {
+    "type": "panel",
+    "size": [ 162, 90 ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "size": [ 162, 90 ],
+          "grid_dimensions": [ 9, 5 ],
+          "grid_item_template": "creative_inventory_grid_items_dx.grid_item_for_creative",
+          "collection_name": "creative_items",
+          "layer": 4,
+          "$button_ref": "crafting.creative_container_slot_button"
+        }
+      }
+    ]
+  },
+
+  "tab_grid_panel_100": {
+    "type": "panel",
+    "size": [ 162, 90 ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "size": [ 162, 90 ],
+          "grid_dimensions": [ 9, 5 ],
+          "grid_item_template": "creative_inventory_grid_items_dx.grid_item_for_creative",
+          "collection_name": "creative_items",
+          "layer": 4,
+          "$button_ref": "crafting.creative_container_slot_button"
+        }
+      }
+    ]
+  }
+} 
