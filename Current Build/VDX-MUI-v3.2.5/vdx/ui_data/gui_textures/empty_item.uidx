@@ -1,0 +1,432 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "empty_item_textures_dx",
+  
+  /*//// Inventory ////*/
+
+  /* Armor, also used in Slot 2 in Smithing */
+
+  "helmet": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/helmet"
+        }
+      }
+    ]
+  },
+
+  "chestplate": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/chestplate"
+        }
+      }
+    ]
+  },
+
+  "leggings": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/leggings"
+        }
+      }
+    ]
+  },
+
+  "boots": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/boots"
+        }
+      }
+    ]
+  },
+
+  /* Offhand */
+
+  "shield": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/shield"
+        }
+      }
+    ]
+  },
+  
+  /*//// Smithing ////*/
+
+  /* Slot 1 */
+
+  "smithing_template_netherite_upgrade": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/smithing_template_netherite_upgrade"
+        }
+      }
+    ]
+  },
+
+  "smithing_template_armor_trim": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/smithing_template_armor_trim"
+        }
+      }
+    ]
+  },
+
+  /* Slot 2 */
+
+  // After empty_armor_slot_helmet
+  "sword": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/sword"
+        }
+      }
+    ]
+  },
+
+  // After empty_armor_slot_chestplate
+  "pickaxe": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/pickaxe"
+        }
+      }
+    ]
+  },
+
+  // After empty_armor_slot_leggings
+  "axe": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/axe"
+        }
+      }
+    ]
+  },
+
+  // After empty_armor_slot_boots
+  "hoe": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/hoe"
+        }
+      }
+    ]
+  },
+
+  "shovel": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/shovel"
+        }
+      }
+    ]
+  },
+
+  /* Slot 3 */
+
+  "ingot": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/ingot"
+        }
+      }
+    ]
+  },
+
+  "redstone_dust": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/redstone_dust"
+        }
+      }
+    ]
+  },
+
+  /* Also used in Enchanting Table */
+  "lapis_lazuli": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/lapis_lazuli"
+        }
+      }
+    ]
+  },
+
+  "quartz": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/quartz"
+        }
+      }
+    ]
+  },
+
+  "diamond": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/diamond"
+        }
+      }
+    ]
+  },
+
+  "emerald": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/emerald"
+        }
+      }
+    ]
+  },
+
+  "amethyst_shard": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/amethyst_shard"
+        }
+      }
+    ]
+  },
+  
+  /*//// Brewing Stand ////*/
+
+  "brewing_fuel": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/brewing_fuel"
+        }
+      }
+    ]
+  },
+
+  "potion": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/potion"
+        }
+      }
+    ]
+  },
+  
+  /*//// Horse ////*/
+
+  "horse_armor": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/horse_armor"
+        }
+      }
+    ]
+  },
+
+  "llama_armor": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/llama_armor"
+        }
+      }
+    ]
+  },
+
+  "saddle": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/saddle"
+        }
+      }
+    ]
+  },
+  
+  /*//// Loom ////*/
+
+  "banner": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/banner",
+          "size": [ "100%", "100%" ],
+          "bindings": [
+            {
+              "binding_name": "#empty_image_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "banner_pattern": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/banner_pattern",
+          "size": [ "100%", "100%" ],
+          "bindings": [
+            {
+              "binding_name": "#empty_image_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "dye": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot/dye",
+          "size": [ "100%", "100%" ],
+          "bindings": [
+            {
+              "binding_name": "#empty_image_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

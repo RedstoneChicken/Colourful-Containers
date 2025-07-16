@@ -1,0 +1,301 @@
+/*File made by @CrisXolt. Original UI design by JellySquid.
+//(c) Don't use any JSON UI data design without permission!*/
+{
+  "namespace": "sodium_panel_dx",
+
+  /*//// Widgets ////*/
+
+  "sodium_button_panel_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "sodium_button_label@button_dx.button_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 6, 4 ]
+        }
+      }
+    ]
+  },
+
+  "tooltip_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "main_panel": {
+          "type": "image",
+          "size": [ 200, "100%cm+8px" ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_left",
+          "offset": [ 3, 0 ],
+          "texture": "vdx/ui_textures/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "alpha": 0.8705882352941176,
+          "layer": 1,
+          "$ignore_performance_impact_label|default": false,
+          "controls": [
+            {
+              "stack_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ "100%-6px", "100%c-5px" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 3, 2 ],
+                "controls": [
+                  {
+                    "main_description_panel": {
+                      "type": "panel",
+                      "size": [ "100%", "100%cm" ],
+                      "controls": [
+                        {
+                          "option_label@label_dx.global_label": {
+                            "shadow": true,
+                            "size": [ "100%", "default" ],
+                            "line_padding": 2.0,
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "offset": [ 0, -1 ],
+                            "color": [ 1.0, 1.0, 1.0 ],
+                            "text": "$tooltip_description_label" ,
+                            "$tooltip_description_label|default": "???"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "main_description_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", 10 ],
+                      "ignored": "$ignore_performance_impact_label",
+                      "controls": [
+                        {
+                          "performance_impact_label@label_dx.global_label": {
+                            "shadow": true,
+                            "size": [ "default", 10 ],
+                            "color": [ 0.65, 0.65, 0.65 ],
+                            "text": "sodium.options.performance_impact_string" 
+                          }
+                        },
+                        {
+                          "performance_impact_value_label@label_dx.global_label": {
+                            "shadow": true,
+                            "size": [ "default", 10 ],
+                            "color": "$performance_impact_value_color",
+                            "text": "$performance_impact_value_label" ,
+                            "$performance_impact_value_color|default": [ 1.0, 1.0, 1.0 ],
+                            "$performance_impact_value_label|default": "???"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  { "padding_0": { "type": "panel", "size": [ 0, 2 ], "ignored": "$ignore_performance_impact_label" } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Button Tabs ////*/
+
+  "button_tab@toggle_dx.toggle_panel": {
+    "size": [ "100%cm", "100%" ],
+    "$tab_size": [ "100%cm", "100%" ],
+    "$black_button_size": [ "100%cm+12px", "100%" ],
+    "$unchecked_control": "button_dx.black_button_default",
+    "$unchecked_hover_control": "button_dx.black_button_hover",
+    "$checked_control": "button_dx.black_button_checked_top_default",
+    "$checked_hover_control": "button_dx.black_button_checked_top_hover",
+    "$toggle_name": "sodium_video_tab"
+  },
+
+  "main_tabs": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 18 ],
+    "offset": [ 6, 6 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "general_navigation_tab@sodium_panel_dx.button_tab": {
+          "$button_text": "sodium.options.pages.general",
+          "$tab_view_binding_name": "sodium_general_button_toggle",
+          "$toggle_default_state": true,
+          "$toggle_group_forced_index": 0
+        }
+      },
+      { "padding_0": { "type": "panel", "size": [ 6, 0 ] } },
+      {
+        "quality_navigation_tab@sodium_panel_dx.button_tab": {
+          "$button_text": "sodium.options.pages.quality",
+          "$tab_view_binding_name": "sodium_quality_button_toggle",
+          "$toggle_group_forced_index": 1
+        }
+      },
+      { "padding_1": { "type": "panel", "size": [ 6, 0 ] } },
+      {
+        "performance_navigation_tab@sodium_panel_dx.button_tab": {
+          "$button_text": "sodium.options.pages.performance",
+          "$tab_view_binding_name": "sodium_performance_button_toggle",
+          "$toggle_group_forced_index": 2
+        }
+      },
+      { "padding_2": { "type": "panel", "size": [ 6, 0 ] } },
+      {
+        "advanced_navigation_tab@sodium_panel_dx.button_tab": {
+          "$button_text": "sodium.options.pages.advanced",
+          "$tab_view_binding_name": "sodium_advanced_button_toggle",
+          "$toggle_group_forced_index": 3
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+
+  "options_panel_content": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%-12px", "100%c" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 6, 0 ],
+          "controls": [
+            {
+              "tab_general_panel@sodium_tab_general_dx.tab_general_panel": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "sodium_general_button_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "tab_quality_panel@sodium_tab_quality_dx.tab_quality_panel": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "sodium_quality_button_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "tab_performance_panel@sodium_tab_performance_dx.tab_performance_panel": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "sodium_performance_button_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "tab_advanced_panel@sodium_tab_advanced_dx.tab_advanced_panel": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "sodium_advanced_button_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "scroll_box": {
+    "layer": 6,
+    "type": "image",
+    "texture": "vdx/ui_textures/widget/scroll_box",
+    "size": [ 6, "100%" ]
+  },
+
+  "scroll_track": {
+    "layer": 6,
+    "type": "image",
+    "texture": "vdx/ui_textures/widget/scroll_track",
+    "size": [ 6, "100%" ]
+  },
+  
+  "main_screen": {
+    "type": "panel",
+    "$texture_button_color_checked": [ 0.88, 0.57, 0.57 ],
+    "controls": [
+      { "main_tabs@sodium_panel_dx.main_tabs": { } },
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            { "tab_padding": { "type": "panel", "size": [ 0, 28 ] } },
+            {
+              "scrolling_panel@scroll_dx.scrolling_panel": {
+                "layer": 10,
+                "size": [ "100%", "fill" ],
+                "offset": [ 0, 0 ],
+                "$scroll_size": [ 6, "100%" ],
+                "$scrolling_pane_size": [ "100%", "100%" ],
+                "$scrolling_pane_offset": [ 0, 0 ],
+                "$bar_side": "scroll_left",
+                "$scroll_box_image_control": "sodium_panel_dx.scroll_box",
+                "$scroll_track_image_control": "sodium_panel_dx.scroll_track",
+                "$scrolling_content": "sodium_panel_dx.options_panel_content"
+              }
+            }
+          ]
+        }
+      },/* 
+      {
+        "done_button@options_dx.done_button": {
+          "size": [ 20, 20 ],
+          "$unchecked_control": "button_dx.black_button_default",
+          "$unchecked_hover_control": "button_dx.black_button_hover",
+          "$checked_control": "button_dx.black_button_default",
+          "$checked_hover_control": "button_dx.black_button_hover",
+          "$button_text": "x",
+          "offset": [ -6, 6 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+        }
+      }, */
+      {
+        "done_button_bottom@options_dx.done_button": {
+          "layer": 30,
+          "size": [ 65, 20 ],
+          "$unchecked_control": "button_dx.black_button_default",
+          "$unchecked_hover_control": "button_dx.black_button_hover",
+          "$checked_control": "button_dx.black_button_default",
+          "$checked_hover_control": "button_dx.black_button_hover",
+          "offset": [ -8, -9.5 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right"
+        }
+      }
+    ]
+  }
+}

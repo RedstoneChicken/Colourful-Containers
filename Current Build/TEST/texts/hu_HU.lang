@@ -1,0 +1,124 @@
+﻿##################################################
+##  Options
+##################################################
+##  UI Settings
+vdx.options.more=További beállítások...
+vdx.options.moreTitle=További beállítások
+
+##################################################
+##  Progress
+##################################################
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.check=Ne mutassa újra ezt az üzenetet
+multiplayerWarning.header=§lFigyelem: Online játék harmadik fél szerverén
+multiplayerWarning.message=Figyelem: Az online játék harmadik fél által biztosított szervereken zajlik, amelyeket a Mojang Studios és a Microsoft nem birtokol, üzemeltet vagy felügyel. Online játék közben olyan nem moderált üzeneteknek vagy más felhasználói tartalmaknak lehetsz kitéve, amelyek nem biztos, hogy mindenki számára megfelelőek.
+
+onlinePlay.untrustedIp.title=§lIsmeretlen külső kiszolgáló
+onlinePlay.untrustedIp.message=Csak olyan kiszolgálókhoz csatlakozz, amelyekben megbízol! Még mindig szeretnél csatlakozni?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Nézd meg a receptkönyved
+recipe.toast.title=Új receptek érhetők el!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Csak éjjel vagy viharos időben aludhatsz
+vdx.block.minecraft.bed.not_safe=Most nem pihenhetsz, mert szörnyek vannak a közeledben
+vdx.block.minecraft.bed.obstructed=Ez az ágy nem hozzáférhető
+vdx.block.minecraft.bed.occupied=Ez az ágy foglalt
+vdx.block.minecraft.bed.too_far_away=Most nem pihenhetsz, túl messze van az ágyad
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Az építés felső határa 319 blokk
+build.tooHigh.the_nether.aspects=Az építés felső határa 127 blokk
+build.tooHigh.the_end.aspects=Az építés felső határa 255 blokk
+build.tooLow.overworld.aspects=A minimális építési magasság -64 blokk
+build.tooLow.the_nether.aspects=A minimális építési magasság 0 blokk
+build.tooLow.the_end.aspects=A minimális építési magasság 0 blokk
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=Roham
+bar.event.raid.remaining.2=Roham - Hátralévő támadók: 2
+bar.event.raid.remaining.1=Roham - Hátralévő támadók: 1
+bar.event.raid.remaining.0=Roham - Hátralévő támadók: 0
+bar.event.raid.victory=Roham - Győzelem
+bar.event.raid.defeat=Roham - Vereség
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§oKeresés...
+gui.recipebook.toggleRecipes.all=Összes megjelenítve
+gui.recipebook.toggleRecipes.blastable=Olvaszthatóak megjelenítve
+gui.recipebook.toggleRecipes.craftable=Barkácsolhatóak megjelenítve
+gui.recipebook.toggleRecipes.smeltable=Süthetőek megjelenítve
+gui.recipebook.toggleRecipes.smokable=Füstölhetőek megjelenítve
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Építkezés
+vdx.creative.tab.equipment=Felszerelés
+vdx.creative.tab.items=Tárgyak
+vdx.creative.tab.nature=Természet
+
+inventory.binSlot=Tárgyak megsemmisítése
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Függőtábla üzenetének módosítása
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Konzol-parancs
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Relatív helyzet
+structure_block.size=Struktúra mérete
+structure_block.integrity_and_seed=Struktúra teljessége és kezdőérték
+structure_block.detect_size=Hely és méret meghatározása:
+structure_block.mode_info.save=Mentés mód - fájlba írás
+structure_block.mode_info.load=Betöltés mód - fájlból olvasás
+structure_block.mode_info.corner=Sarok mód - méret és helyzet megjelölése
+structure_block.exportTo=Exportálás:
+structure_block.mode.export=Exportálás
+structure_block.button.detect_size=INDÍTÁS
+structure_block.button.save=MENTÉS
+structure_block.button.load=BETÖLTÉS
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Ajánlatok
+merchant.deprecated=A falusiak naponta legfeljebb kétszer jutnak új áruhoz.

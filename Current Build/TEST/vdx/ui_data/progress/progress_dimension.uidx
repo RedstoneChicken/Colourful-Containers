@@ -1,0 +1,182 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "progress_dimension_dx",
+  
+  /*//// Main Panel ////*/
+
+  "main_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { 
+        "title_text@label_dx.global_label": {
+          "shadow": true,
+          "size": [ "default", 20 ],
+          "max_size": [ "100% - 8px", 20 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 69 ],
+          "text": "#title_text",
+          "bindings": [
+            {
+              "binding_name": "#title_text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Nether Background Panel ////*/
+
+  "nether_bg_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "portal_bg": {
+          "type": "panel",
+          "size": [ "100%y", "100%" ],
+          "layer": -10,
+          "controls": [
+            {
+              "left@progress_anim_dx.nether_background_portal_panel": {
+                "offset": [ "-100%", 0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "middle@progress_anim_dx.nether_background_portal_panel": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "right@progress_anim_dx.nether_background_portal_panel": {
+                "offset": [ "100%", 0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "main_background_panel": {
+          "type": "image",
+          "layer": -14,
+          "texture": "vdx/ui_textures/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      }
+    ]
+  },
+  
+  /*//// The End Background Panel ////*/
+
+  "the_end_bg_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "portal_bg": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "layer": -10,
+          "controls": [
+            {
+              "middle@progress_anim_dx.the_end_background_portal_panel": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "main_background_panel": {
+          "type": "image",
+          "layer": -14,
+          "texture": "vdx/ui_textures/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      }/* 
+      {
+        "end_background_image": {
+          "type": "image",
+          "texture": "vdx/ui_textures/credits/end_background",
+          "fill": true,
+          "layer": -5,
+          "size": [ "100%", "100%" ]
+        }
+      } */
+    ]
+  },
+  
+  /*//// Background Panel ////*/
+
+  "bg_panel": {
+    "type": "panel",
+    "controls": [
+      { 
+        "main_background@menu_background_textures_dx.menu_background": {
+          "alpha": "@progress_dimension_dx.main_bg_animation_in",
+          "layer": -10
+        }
+      },
+      { "pre_background@main_textures_dx.screen_background": { "layer": -12 } },
+      {
+        "main_background_panel": {
+          "type": "image",
+          "layer": -14,
+          "texture": "vdx/ui_textures/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true,
+          "alpha": "@progress_dimension_dx.main_bg_animation_in"
+        }
+      }
+    ]
+  },
+
+  "main_bg_animation_in": {
+    "anim_type": "alpha",
+    "duration": 0,
+    "from": 0.0,
+    "to": 0.0,
+    "next": "@progress_dx.main_bg_animation_wait"
+  },
+  
+  "main_bg_animation_wait": {
+    "anim_type": "wait",
+    "duration": 1.75,
+    "next": "@progress_dx.main_bg_animation_out"
+  },
+
+  "main_bg_animation_out": {
+    "anim_type": "alpha",
+    "duration": 1,
+    "from": 1.0,
+    "to": 1.0
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "layer": 5,
+    "controls": [
+      { "main_panel@progress_dimension_dx.main_panel": { } }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@progress_dimension_dx.main_screen_content": { } }
+    ]
+  }
+}
