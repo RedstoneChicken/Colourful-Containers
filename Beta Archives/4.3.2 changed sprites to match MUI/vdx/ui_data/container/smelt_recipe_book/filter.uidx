@@ -1,0 +1,19 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "smelt_recipe_book_filter_dx",
+
+  "filter_panel": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      { 
+        "item_0@cris_smelt_recipes_toggle_items.item_0": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -11, 12 ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,180 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "add_external_server_dx",
+
+  /*//// Panel ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "layer": 5,
+    "controls": [
+      {
+        "top": {
+          "type": "stack_panel",
+          "size": [ 200, "100%" ],
+          "max_size": [ 200, 230 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "header": {
+                "type": "panel",
+                "size": [ "100%", "fill" ],
+                "controls": [
+                  {
+                    "title_label@label_dx.global_label": {
+                      "size": [ "default", 10 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "layer": 5,
+                      "shadow": true,
+                      "color": "$main_button_default_color",
+                      "text": "addServer.title",
+                      "offset": [ 0, 16 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "options": {
+                "type": "panel",
+                "size": [ "100%", 178 ],
+                "controls": [
+                  {
+                    "option_text_field_0@text_field_dx.option_text_field": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$option_label": "addExternalServerScreen.nameTextBoxLabel",
+                      "$option_place_holder_text": "",
+                      "$option_binding_name": "#name_text_box_content",
+                      "$text_box_name": "#name_text_box"
+                    }
+                  },
+                  {
+                    "option_text_field_1@text_field_dx.option_text_field": {
+                      "size" : [ "100%-54px", 33 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 0, 41 ],
+                      "$option_label": "addExternalServerScreen.ipTextBoxLabel",
+                      "$option_place_holder_text": "",
+                      "$option_binding_name": "#ip_text_box_content",
+                      "$text_box_name": "#ip_text_box"
+                    }
+                  },
+                  {
+                    "option_text_field_2@text_field_dx.option_text_field": {
+                      "size" : [ 50, 33 ],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [ 0, 41 ],
+                      "$option_label": "addExternalServerScreen.portTextBoxLabel",
+                      "$option_binding_name": "#port_text_box_content",
+                      "$text_box_name": "#port_text_box"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "buttons": {
+          "type": "panel",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ 200, "75%" ],
+          "controls": [
+            {
+              "sizing": {
+                "type": "panel",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "max_size": [ "100%", 170 ],
+                "controls": [
+                  /* Button 0 */
+                  {
+                    "play_button@button_dx.main_button_200": {
+                      "size": [ 200, 20 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [ 0, 72 ],
+                      "$pressed_button_name": "button.play_button",
+                      "$button_text": "addExternalServerScreen.playButtonLabel",
+                      "ignored": "$edit_mode",
+                      "bindings": [
+                        {
+                          "binding_name": "#play_button_enabled",
+                          "binding_name_override": "#enabled"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "remove_button@button_dx.main_button_200": {
+                      "size": [ 200, 20 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [ 0, 72 ],
+                      "$pressed_button_name": "button.remove_button",
+                      "$button_text": "addExternalServerScreen.removeButtonLabel",
+                      "visible": "($edit_mode)"
+                    }
+                  },
+                  /* Button 1 */
+                  {
+                    "save_button@button_dx.main_button_200": {
+                      "size": [ 200, 20 ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "offset": [ 0, -36 ],
+                      "layer": 2,
+                      "$pressed_button_name": "button.save_button",
+                      "$button_text": "gui.done",
+                      "bindings": [
+                        {
+                          "binding_name": "#save_button_enabled",
+                          "binding_name_override": "#enabled"
+                        }
+                      ]
+                    }
+                  },
+                  /* Button 2 */
+                  {
+                    "cancel_button@button_dx.main_button_200": {
+                      "size": [ 200, 20 ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "offset": [ 0, -12 ],
+                      "$pressed_button_name": "button.menu_exit",
+                      "$button_text": "gui.cancel"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "center_screen": {
+    "type": "panel", 
+    "controls": [
+      { "main_screen_content@add_external_server_dx.main_screen_content": { "layer": 2 } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "menu_background@menu_background_textures_dx.menu_background": { "layer": -10 } }
+    ]
+  }
+}
