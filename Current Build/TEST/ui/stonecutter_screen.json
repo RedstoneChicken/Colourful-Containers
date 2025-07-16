@@ -5,8 +5,8 @@
     "variables": [
       {
         "requires": "$desktop_screen",
-        "$screen_content": "stonecutter_desktop_dx.center_screen",
-        "$screen_bg_content": "stonecutter_desktop_dx.full_screen"
+        "$screen_content": "stonecutter_mixed_dx.center_screen",
+        "$screen_bg_content": "stonecutter_mixed_dx.full_screen"
       },
       {
         "requires": "$pocket_screen",

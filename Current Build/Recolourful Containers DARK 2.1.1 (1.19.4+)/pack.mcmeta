@@ -1,0 +1,15 @@
+{
+    "pack": {
+        "pack_format": 34,
+        "supported_formats": {"min_inclusive": 34, "max_inclusive": 99},
+        "description": "§7Requiers OptiFine/OptiGUI!\n§3By Vi_Tul"
+    },
+    "overlays": {
+        "entries": [
+            {
+                "directory": "1-21-6_shader_fix",
+                "formats": [60,99]
+            }
+        ]
+    }
+}

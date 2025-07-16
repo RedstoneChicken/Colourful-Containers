@@ -6,8 +6,8 @@
       {
         "requires": "$desktop_screen",
         "$is_smoker": true,
-        "$screen_content": "smoker_desktop_dx.center_screen",
-        "$screen_bg_content": "smoker_desktop_dx.full_screen",
+        "$screen_content": "smoker_mixed_dx.center_screen",
+        "$screen_bg_content": "smoker_mixed_dx.full_screen",
         "$gamepad_cursor": true
       },
       {

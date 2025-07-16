@@ -25,7 +25,7 @@
     ]
   },
 
-  "crafter_tooltip_label@tooltip_dx.tooltip_label": {
+  "crafter_hover_text_label@tooltip_dx.tooltip_label": {
     "text": "#crafting_preview_info",
     "bindings": [ { "binding_name": "#crafting_preview_info" } ]
   },
@@ -205,7 +205,7 @@
                         {
                           "hover_text_panel@tooltip_dx.tooltip_panel": {
                             "ignored": "(not $custom_tooltip)",
-                            "$tooltip_label_control": "crafter_desktop_dx.crafter_tooltip_label",
+                            "$tooltip_label_control": "crafter_desktop_dx.crafter_hover_text_label",
                             "layer": 29,
                             "$hover_text_texture_bindings": [
                               {

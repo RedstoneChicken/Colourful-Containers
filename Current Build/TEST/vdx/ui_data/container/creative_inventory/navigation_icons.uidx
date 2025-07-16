@@ -28,13 +28,13 @@
       {
         "released_search_icon@creative_inventory_icons_dx.item_renderer": {
           "ignored": "($pre_release)",
-          "$object_item_id": "$release_creative_search_tab_icon_id"
+          "$object_item_id": 400  //  Compass - ID: 400
         }
       },
       {
         "pre_released_search_icon@creative_inventory_icons_dx.item_renderer": {
           "ignored": "(not $pre_release)",
-          "$object_item_id": "$preview_creative_search_tab_icon_id"
+          "$object_item_id": 400  //  Compass - ID: 400
         }
       }
     ]
@@ -69,7 +69,7 @@
       /*  Added compatibility for AgentMindStorm's Java Aspects  */
       {
         "overlay": {
-          "ignored": "(not $is_java_aspects)",
+          "ignored": "(not $is_java_aspects_fidelity)",
           "type": "image",
           "size": [ 16, 16 ],
           "layer": 3,
@@ -78,7 +78,7 @@
       },
       {
         "overlay_console": {
-          "ignored": "(not $is_console_aspects)",
+          "ignored": "(not $is_console_aspects_fidelity)",
           "type": "image",
           "size": [ 16, 16 ],
           "layer": 3,

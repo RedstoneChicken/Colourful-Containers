@@ -12,8 +12,8 @@
   
   "world_loading_progress_screen": {
     "variables": [],
-    "$screen_content": "progress_world_dx.center_screen",
-    "$screen_bg_content": "progress_world_dx.full_screen"
+    "$screen_content": "progress_legacy_dx.center_screen",
+    "$screen_bg_content": "progress_legacy_dx.full_screen"
   },
 
   /* Dimension Loading Screens */

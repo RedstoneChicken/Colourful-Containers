@@ -49,7 +49,7 @@
           "type": "image",
           "layer": 0,
           "texture": "assets/minecraft/textures/gui/sprites/container/slot_highlight_back",
-          "size": [ "100%", "100%" ] // Modifed for Mixed UI. Original value: [ "100%", "100%" ]
+          "size": [ "100%+8px", "100%+8px" ] // Modifed for Mixed UI. Original value: [ "100%", "100%" ]
         }
       },
       {
@@ -57,7 +57,7 @@
           "type": "image",
           "layer": 12,
           "texture": "assets/minecraft/textures/gui/sprites/container/slot_highlight_front",
-          "size": [ "100%", "100%" ] // Modifed for Mixed UI. Original value: [ "100%", "100%" ]
+          "size": [ "100%+8px", "100%+8px" ] // Modifed for Mixed UI. Original value: [ "100%", "100%" ]
         }
       }
     ]

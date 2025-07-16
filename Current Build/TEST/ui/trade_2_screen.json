@@ -5,8 +5,8 @@
     "variables": [
       {
         "requires": "$desktop_screen",
-        "$screen_content": "villager_desktop_dx.center_screen",
-        "$screen_bg_content": "villager_desktop_dx.full_screen",
+        "$screen_content": "villager_mixed_dx.center_screen",
+        "$screen_bg_content": "villager_mixed_dx.full_screen",
         "$gamepad_cursor": true
       },
       {

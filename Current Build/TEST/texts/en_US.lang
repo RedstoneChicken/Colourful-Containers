@@ -58,7 +58,6 @@ options.renderDistance=Render distance
 options.rendchat_messages_dxerDistanceFormat=%s chunks
 options.renderDistanceRecommendedFormat=%s chunks
 options.showautosaveicon=Autosave Indicator
-options.graphicsMode.deferred=Vibrant Visuals
 ##  Audio Settings
 soundCategory.main=Master Volume
 soundCategory.ambient=Ambient/Environment
@@ -285,71 +284,3 @@ structure_block.button.load=LOAD
 ##################################################
 merchant.trades=Trades
 merchant.deprecated=Villagers restock up to two times per day.
-
-##################################################
-##  Sodium (Not mine...)
-##################################################
-sodium.options.performance_impact_string=Performance Impact: 
-sodium.option_impact.low=Low
-sodium.option_impact.medium=Medium
-sodium.option_impact.high=High
-sodium.option_impact.extreme=Extreme
-sodium.option_impact.varies=Varies
-
-##  General
-sodium.options.pages.general=General
-
-sodium.options.view_distance.tooltip=The render distance controls how far away terrain will be rendered. Shorter distances mean that less terrain will be rendered, improving frame rates.
-sodium.options.brightness.tooltip=Controls the minimum brightness in the world. When increased, darker areas of the world will appear brighter. This does not affect the brightness of already well-lit areas.
-
-sodium.options.gui_scale.tooltip=Sets the maximum scale factor to be used for the user interface. If "Extra Large New UI" is used, then the largest scale factor will always be used.
-sodium.options.fullscreen.tooltip=If enabled, the game will display in full-screen (if supported).
-sodium.options.v_sync.tooltip=If enabled, the game's frame rate will be synchronized to the monitor's refresh rate, making for a generally smoother experience at the expense of overall input latency. This setting might reduce performance if your system is too slow.
-sodium.options.fps_limit.tooltip=Limits the maximum number of frames per second. This can help reduce battery usage and system load when multi-tasking. If VSync is enabled, this option will be ignored unless it is lower than your display's refresh rate.
-
-sodium.options.view_bobbing.tooltip=If enabled, the player's view will sway and bob when moving around. Players who experience motion sickness while playing may benefit from disabling this.
-sodium.options.autosave_indicator.tooltip=If enabled, an indicator will be shown when the game is saving the world to disk.
-
-sodium.options.fov.toggle.tooltip=If enabled, the field of view can be altered when running, and having some effects.
-
-##  Quality
-sodium.options.pages.quality=Quality
-
-sodium.options.graphics_quality.tooltip=The default graphics quality controls some legacy options and is necessary for add-on compatibility. If the options below are left to "Default", they will use this setting.
-sodium.options.graphics_quality_preset_mode.name=Graphics Quality Preset Mode
-sodium.options.graphics_quality_preset_mode.tooltip=Choose which mode you use for the best experience.
-sodium.options.clouds_quality.tooltip=If enabled, clouds is visible in the sky. Even if the toggle are "Disabled" and "Enabled", the effect on performance is negligible.
-
-sodium.options.fancyskies.tooltip=If enabled, every details of the sky as gradient color, clouds, sun, moon, stars, and cubemap (if available), will be visible.
-sodium.options.leaves_quality.tooltip=Controls whether leaves will be rendered as transparent (enabled) or opaque (disabled).
-sodium.options.bubbleparticles.tooltip=Controls whether underwater bubbles will be rendered as particles (enabled) or blocky (disabled).
-sodium.options.smooth_lighting.tooltip=Enables the smooth lighting and shading of blocks in the world. This can very slightly increase the amount of time it takes to load or update a chunk, but it doesn't affect frame rates.
-
-sodium.options.msaa.tooltip=Controls the smoothness of the image. A lower value means that the image will look normal with jagged edges, improving frame rates.
-
-##  Performance
-sodium.options.pages.performance=Performance
-
-sodium.options.upscalingMode.tooltip=Controls how upscaling screen will look in order to improve frames rates.
-sodium.options.upscalingPercentage.tooltip=The percentage of screen resolution to be used to upscale the image, lower resolution will improve fame rates.
-sodium.options.upscaling.tooltip=If enabled, it will improve frame rates reducing resolution but upscaling the image with AI algorithm. GeForce RTX GPU is required to use, only available with DLSS 2.0.
-
-sodium.options.screenAnimations.tooltip=If enabled, animation will be used when switching ui or menus, even with the main panorama.
-
-##  Advanced
-sodium.options.pages.advanced=Advanced
-
-sodium.options.graphicsModeSwitch.tooltip=If enabled, allows changing graphics mode from "Vibrant Visuals" to "Simple/Fancy" while playing in a world, but not revert it (maybe).
-
-##  Vibrant Visuals
-sodium.options.shadowQuality.tooltip=Controls the quality of shadows pixels from environment.
-sodium.options.pointLightShadowQuality.tooltip=Controls the quality of shadows pixels from point lights.
-sodium.options.pointLightLODingQuality.tooltip=Controls the quality of point light.
-sodium.options.cloudQuality.tooltip=Controls how far away the clouds will be rendered.
-sodium.options.volumetricFogQuality.tooltip=Controls the intensity of fog.
-sodium.options.reflectionsQuality.tooltip=Controls the quality of reflections on blocks and water.
-sodium.options.bloomStrengthSlider.tooltip=Controls the intensity of bloom.
-
-sodium.options.graphicsQualityPresetMode.performance=Performance
-sodium.options.graphicsQualityPresetMode.quality=Fidelity
-sodium.options.graphicsQualityPresetMode.custom=Custom

@@ -101,10 +101,19 @@
     "size": [ 16, 16 ],
     "controls": [
       {
-        "texture": {
-          "layer": 5,
+        "warning": {
           "type": "image",
-          "texture": "vdx/ui_textures/container/red_cell_slot",
+          "layer": 7,
+          "texture": "vdx/ui_textures/container_mixed/warning_icon",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 8, 8 ]
+        }
+      },
+      {
+        "texture": {
+          "type": "image",
+          "texture": "vdx/ui_textures/container_mixed/red_cell_slot",
           "size": [ "100%", "100%" ]
         }
       }
@@ -116,10 +125,19 @@
     "size": [ 24, 24 ],
     "controls": [
       {
-        "texture": {
-          "layer": 5,
+        "warning": {
           "type": "image",
-          "texture": "vdx/ui_textures/container/red_cell_slot_output",
+          "layer": 7,
+          "texture": "vdx/ui_textures/container_mixed/warning_icon",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 8, 8 ]
+        }
+      },
+      {
+        "texture": {
+          "type": "image",
+          "texture": "vdx/ui_textures/container_mixed/red_cell_slot_output",
           "size": [ "100%", "100%" ]
         }
       }
@@ -134,7 +152,7 @@
         "texture": {
           "layer": 5,
           "type": "image",
-          "texture": "vdx/ui_textures/container/smelt_cell_slot",
+          "texture": "vdx/ui_textures/container_mixed/smelt_cell_slot",
           "size": [ "100%", "100%" ]
         }
       }
@@ -149,7 +167,7 @@
         "texture": {
           "layer": 5,
           "type": "image",
-          "texture": "vdx/ui_textures/container/smelt_cell_slot_output",
+          "texture": "vdx/ui_textures/container_mixed/smelt_cell_slot_output",
           "size": [ "100%", "100%" ]
         }
       }

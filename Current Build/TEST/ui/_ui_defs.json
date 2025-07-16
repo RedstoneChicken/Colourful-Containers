@@ -96,17 +96,28 @@
     "vdx/ui_data/container/_modules/selected_item.uidx",
     "vdx/ui_data/container/_modules/slot_highlight.uidx",
     ////////*/ Container Mixed /*////////
+    "vdx/ui_data/container_mixed/blast_furnace.uidx",
     "vdx/ui_data/container_mixed/cartography_table.uidx",
     "vdx/ui_data/container_mixed/crafting_table.uidx",
+    "vdx/ui_data/container_mixed/furnace.uidx",
     "vdx/ui_data/container_mixed/inventory.uidx",
     "vdx/ui_data/container_mixed/loom.uidx",
+    "vdx/ui_data/container_mixed/smoker.uidx",
     "vdx/ui_data/container_mixed/stonecutter.uidx",
     "vdx/ui_data/container_mixed/villager.uidx",
-    /* Recipe Book */
-    "vdx/ui_data/container_mixed/recipe_book/filter.uidx",
-    "vdx/ui_data/container_mixed/recipe_book/grid_items.uidx",
-    "vdx/ui_data/container_mixed/recipe_book/navigation_tabs.uidx",
-    "vdx/ui_data/container_mixed/recipe_book/recipe_book.uidx",
+    /* Craft Recipe Book */
+    "vdx/ui_data/container_mixed/craft_recipe_book/filter.uidx",
+    "vdx/ui_data/container_mixed/craft_recipe_book/grid_items.uidx",
+    "vdx/ui_data/container_mixed/craft_recipe_book/navigation_tabs.uidx",
+    "vdx/ui_data/container_mixed/craft_recipe_book/recipe_book.uidx",
+    /* Smelt Recipe Book */
+    "vdx/ui_data/container_mixed/smelt_recipe_book/content_pages_blast_furnace.uidx",
+    "vdx/ui_data/container_mixed/smelt_recipe_book/content_pages_furnace.uidx",
+    "vdx/ui_data/container_mixed/smelt_recipe_book/content_pages_smoker.uidx",
+    "vdx/ui_data/container_mixed/smelt_recipe_book/filter.uidx",
+    "vdx/ui_data/container_mixed/smelt_recipe_book/navigation_tabs.uidx",
+    "vdx/ui_data/container_mixed/smelt_recipe_book/smelt_recipe_book.uidx",
+    "vdx/ui_data/container_mixed/smelt_recipe_book/smelt_toggle_items.uidx",
     /* Modules */
     "vdx/ui_data/container_mixed/_modules/bundle.uidx",
     "vdx/ui_data/container_mixed/_modules/selected_item.uidx",
@@ -126,10 +137,10 @@
     "vdx/ui_data/container_pvp/creative_inventory/navigation_icons.uidx",
     "vdx/ui_data/container_pvp/creative_inventory/navigation_tabs.uidx",
     /* Recipe Book */
-    "vdx/ui_data/container_pvp/recipe_book/filter.uidx",
-    "vdx/ui_data/container_pvp/recipe_book/grid_items.uidx",
-    "vdx/ui_data/container_pvp/recipe_book/navigation_tabs.uidx",
-    "vdx/ui_data/container_pvp/recipe_book/recipe_book.uidx",
+    "vdx/ui_data/container_pvp/craft_recipe_book/filter.uidx",
+    "vdx/ui_data/container_pvp/craft_recipe_book/grid_items.uidx",
+    "vdx/ui_data/container_pvp/craft_recipe_book/navigation_tabs.uidx",
+    "vdx/ui_data/container_pvp/craft_recipe_book/recipe_book.uidx",
     ////////*/ HUD /*////////
     "vdx/ui_data/hud/bottom_bar_elements.uidx",
     "vdx/ui_data/hud/chat.uidx",
@@ -280,14 +291,6 @@
     /* Game */
     "vdx/ui_data/options/game/game.uidx",
     "vdx/ui_data/options/game/gamerule.uidx",
-    /* CSB */
-    "vdx/ui_data/options/csb/csb_subscription_panel.uidx",
-    /* Sodium */
-    "vdx/ui_data/options/sodium/main_screen.uidx",
-    "vdx/ui_data/options/sodium/tab_advanced.uidx",
-    "vdx/ui_data/options/sodium/tab_general.uidx",
-    "vdx/ui_data/options/sodium/tab_performance.uidx",
-    "vdx/ui_data/options/sodium/tab_quality.uidx",
     ////////*/ Play /*////////
     "vdx/ui_data/play/add_external_server.uidx",
     "vdx/ui_data/play/friend_finder.uidx",

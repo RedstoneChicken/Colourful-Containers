@@ -5,8 +5,8 @@
     "variables": [
       {
         "requires": "$ignore_edu_pause",
-        "$screen_content": "pause_dx.center_screen",
-        "$screen_bg_content": "pause_dx.full_screen"
+        "$screen_content": "pause_mixed_dx.center_screen",
+        "$screen_bg_content": "pause_mixed_dx.full_screen"
       },
       {
         "requires": "(not $ignore_edu_pause)",

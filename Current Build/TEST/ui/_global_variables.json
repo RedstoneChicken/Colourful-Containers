@@ -1,5 +1,5 @@
 {
-  /* Vanilla DX 3rd Gen UI Tweaks, v3.2.1 */
+  /* Vanilla DX 3rd Gen UI Tweaks, v3.2.0 */
 
   /* (c) CrisXolt. Don't use any UI data without authorization! */
 
@@ -41,35 +41,34 @@
 
   /* Options */
   "$show_hud_while_inventory": false,
-  "$show_save_indicator_icon": false,
+  "$show_save_indicator_icon": true,
   "$scoreboard_text_shadow": false,
   "$ignore_scoreboard_scores": false,
   "$ignore_bar_hud_padding": false,
-  "$show_enchantments_in_item_text": false,
+  "$show_enchantments_in_item_text": true,
 
-  "$hud_text_background_alpha": 0.0,
-  "$vdx_hud_text_background": "vdx/ui_textures/hud/hud_standard_text_background", // "vdx/ui_textures/hud/hud_tip_text_background"
+  "$hud_text_background_alpha": 0.5,
+  "$vdx_hud_text_background": "vdx/ui_textures/hud/hud_tip_text_background", // "vdx/ui_textures/hud/hud_tip_text_background"
+  "$hud_text_background_size": [ "100% + 12px", "100% + 5px" ], // [ "100% + 12px", "100% + 5px" ]
+  "$hud_alt_text_background_size": [ "100% + 12px", 15 ], // [ "100% + 12px", 15 ]
+  "$hud_text_background_offset": [ 0, -3 ], // [ 0, -3 ]
 
-  "$hud_text_background_size": [ "100% + 4px", "100% + 3px" ], // [ "100% + 12px", "100% + 5px" ]
-  "$hud_alt_text_background_size": [ "100% + 4px", 13 ], // [ "100% + 12px", 15 ]
-  "$hud_text_background_offset": [ 0, -1 ], // [ 0, -3 ]
+  "$hud_title_text_offset": [ -1, -6 ],
+  "$hud_title_text_background_size": [ "100%sm + 30px", "100%sm + 6px" ],
+  "$hud_title_text_background_offset": [ -1, -11 ],
 
-  "$hud_title_text_offset": [ -1, -2 ],
-  "$hud_title_text_background_size": [ "100%sm + 16px", "100%sm + 12px" ], // [ "100% + 16px", "100% + 12px" ]
-  "$hud_title_text_background_offset": [ -1, -9 ], // [ 0, -4 ]
+  "$hud_subtitle_text_offset": [ -1, -2 ],
+  "$hud_subtitle_text_background_size": [ "100%sm + 20px", "100%sm + 5px" ],
+  "$hud_subtitle_text_background_offset": [ -1, -5 ],
 
-  "$hud_subtitle_text_offset": [ -1, -4 ],
-  "$hud_subtitle_text_background_size": [ "100%sm + 8px", "100%sm + 6px" ],
-  "$hud_subtitle_text_background_offset": [ -1, -7 ],
+  "$bottom_objects_offset": [ 0, -1 ],
 
-  "$bottom_objects_offset": [ 0, 0 ],
+  "$main_item_text_offset": [ 0, -38 ],
 
-  "$main_item_text_offset": [ 0, -36 ],
-
-  "$jukebox_text_offset": [ 0, -63 ],
-  "$hud_block_messages_offset": [ 0, -63 ],
-  "$hud_tip_text_offset": [ 0, -63 ],
-  "$hud_action_bar_offset": [ 0, -63 ],
+  "$jukebox_text_offset": [ 0, -68 ],
+  "$hud_block_messages_offset": [ 0, -68 ],
+  "$hud_tip_text_offset": [ 0, -68 ],
+  "$hud_action_bar_offset": [ 0, -68 ],
 
   /* Boss/Event Bars */
   // Ender Dragon
@@ -94,13 +93,13 @@
   "$default_event_nub_bar_full_texture": "common.empty_panel",
   "$has_default_event_bar_empty_custom_color": true, //Only possible if the bar is white.
   "$has_default_event_bar_full_custom_color": true, //Only possible if the bar is white.
-
+  
   /* Hotbar */
   "$hotbar_texture": "hud_textures_dx.hotbar",
   "$hotbar_selection_texture": "hud_textures_dx.hotbar_selection",
 
   /* Experience Bar */
-  "$experience_level_offset": [ 0, -7 ],
+  "$experience_level_offset": [ 0, -10 ],
   "$experience_text_color": [ 0.5, 1.0, 0.0 ],
   "$experience_outline_text_color": [ 0.0, 0.0, 0.0 ],
   "$experience_bar_background_texture": "hud_textures_dx.experience_bar_background",
@@ -113,7 +112,7 @@
   "$experience_bar_touch_progress_texture": "hud_textures_dx.experience_bar_progress",
   "$experience_bar_touch_size": [ 182, 5 ],
   "$jump_bar_touch_size": [ 182, 5 ],
-  
+
   /* Chat */
   "$chat_size": [ "40%", 180 ],
   "$max_chat_messages_in_hud": 20,
@@ -129,7 +128,7 @@
   /* Options */
   "$custom_durability_bar": false,
   "$custom_storage_bar": false,
-  "$ignore_flying_item": true,
+  "$ignore_flying_item": false,
   "$beacon_gamepad_heleprs_side": false,
   "$large_chest_gamepad_heleprs_side": false,
   
@@ -149,7 +148,7 @@
   "$vdx_enchanting_cost_disabled_control": "enchanting_table_desktop_dx.enchant_cost_disabled",
   "$vdx_enchanting_cost_color": [ 0.5, 1, 0.125 ],
   "$vdx_enchanting_cost_disabled_color": [ 0.25, 0.5, 0.06 ],
-
+  
   /* Recipe Book Mixed*/
   "$vdx_top_type_toggles_control": "inventory_mixed_dx.top_type_toggles_default", // Alternative: "inventory_mixed_dx.top_type_toggles"
 
@@ -158,18 +157,18 @@
   "$vdx_trade_tier_name_locked_color": [ 0.16, 0.14, 0.10 ],
   
   /* Tooltip */
-  "$custom_tooltip": true, // Replaces the tooltip renderer (from container_item) to custom panel.
-  "$tooltip_text_shadow": true, // Only works if the first option is enabled.
-  "$use_item_details_in_touch": false,
+  "$custom_tooltip": false, // Replaces the tooltip renderer (from container_item) to custom panel.
+  "$tooltip_text_shadow": false, // Only works if the first option is enabled.
+  "$use_item_details_in_touch": true,
 
   /* Bundle */
-  "$vdx_global_bundle_panel_control": "bundle_dx.bundle_cursor_tooltip",
+  "$vdx_global_bundle_panel_control": "bundle_mixed_dx.bundle_cursor_tooltip",
   "$vdx_global_bundle_panel_size": [ "100%cm+2px", "100%cm+2px" ],
   "$vdx_global_bundle_panel_offset": [ 0, 0 ],
-  "$vdx_bundle_panel_control": "bundle_dx.bundle_modules",
+  "$vdx_bundle_panel_control": "bundle_mixed_dx.bundle_modules",
   
   /* Selected Item */
-  "$vdx_inventory_selected_icon_control": "selected_item_dx.inventory_selected_icon_button",
+  "$vdx_inventory_selected_icon_control": "selected_item_mixed_dx.inventory_selected_icon_button",
 
   //////// Textures ////////
 

@@ -5,7 +5,7 @@
   
   /*//// Toggle ////*/
 
-  "effect_tooltip_label@tooltip_dx.tooltip_label": {
+  "effect_hover_text_label@tooltip_dx.tooltip_label": {
     "text": "#button_hover",
     "bindings": [
       {
@@ -29,7 +29,7 @@
             {
               "effect_hover_text@tooltip_dx.tooltip_panel": {
                 "ignored": "(not $custom_tooltip)",
-                "$tooltip_label_control": "beacon_desktop_dx.effect_tooltip_label",
+                "$tooltip_label_control": "beacon_desktop_dx.effect_hover_text_label",
                 "bindings": [
                   {
                     "binding_name": "(not (#button_hover = ''))",

@@ -84,7 +84,7 @@
         "from_button_id": "button.menu_tab_right",
         "to_button_id": "button.left_panel_tab_increment",
         "mapping_type": "global"
-      },/* 
+      },
       {
         "from_button_id": "button.menu_alternate_tab_left",
         "to_button_id": "button.layout_increment",
@@ -94,7 +94,7 @@
         "from_button_id": "button.menu_alternate_tab_right",
         "to_button_id": "button.layout_decrement",
         "mapping_type": "global"
-      }, */
+      },
       {
         "from_button_id": "button.controller_secondary_select_left",
         "to_button_id": "button.shift_pane_focus",
@@ -109,12 +109,12 @@
   },
 
   "crafting_screen": {
-    "$screen_content": "crafting_table_desktop_dx.center_screen",
-    "$screen_bg_content": "crafting_table_desktop_dx.full_screen"
+    "$screen_content": "crafting_table_mixed_dx.center_screen",
+    "$screen_bg_content": "crafting_table_mixed_dx.full_screen"
   },
 
   "inventory_screen": {
-    "$screen_content": "inventory_desktop_dx.center_screen",
-    "$screen_bg_content": "inventory_desktop_dx.full_screen"
+    "$screen_content": "inventory_mixed_dx.center_screen",
+    "$screen_bg_content": "inventory_mixed_dx.full_screen"
   }
 }

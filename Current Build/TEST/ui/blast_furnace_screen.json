@@ -6,8 +6,8 @@
       {
         "requires": "$desktop_screen",
         "$is_blast_furnace": true,
-        "$screen_content": "blast_furnace_desktop_dx.center_screen",
-        "$screen_bg_content": "blast_furnace_desktop_dx.full_screen",
+        "$screen_content": "blast_furnace_mixed_dx.center_screen",
+        "$screen_bg_content": "blast_furnace_mixed_dx.full_screen",
         "$gamepad_cursor": true
       },
       {

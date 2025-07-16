@@ -434,7 +434,7 @@
             { 
               "top": {
                 "type": "panel",
-                "size": [ "100%", 33 ],
+                "size": [ "100%", 32 ],
                 "controls": [
                   {
                     "title_label@label_dx.global_label": {
@@ -445,7 +445,7 @@
                       "shadow": true,
                       "color": "$main_button_default_color",
                       "text": "permissions.title",
-                      "offset": [ 0, 11 ]
+                      "offset": [ 0, 7 ]
                     }
                   }
                 ]
@@ -517,7 +517,7 @@
             {
               "bottom": {
                 "type": "panel",
-                "size": [ "100%", 33 ],
+                "size": [ "100%", 32 ],
                 "controls": [
                   {
                     "done_button@button_dx.main_button_200": {

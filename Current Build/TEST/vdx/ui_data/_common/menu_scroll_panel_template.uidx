@@ -468,8 +468,8 @@
     "$middle_content|default": "menu_scroll_panel_template_dx.middle_panel",
     "$bottom_content|default": "common.empty_panel",
     /* Panels sizes */
-    "$top_content_size|default": [ "100%", 33 ],
-    "$bottom_content_size|default": [ "100%", 33 ],
+    "$top_content_size|default": [ "100%", 32 ],
+    "$bottom_content_size|default": [ "100%", 32 ],
     /* Background */
     "$is_in_world|default": false,
     /* Misc */
