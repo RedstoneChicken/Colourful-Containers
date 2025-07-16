@@ -1,0 +1,61 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "recipe_book_filter_dx",
+  
+  /*//// Main Panel ////*/
+
+  "filter_hover_text_label@hover_text_dx.hover_text_label": {
+    "text": "$hover_filter_text",
+    "size": [ "default", 10 ],
+    "bindings": [ ]
+  },
+
+  "filter_disabled_highlighted": {
+    "type": "panel",
+    "size": [ 27, 16 ],
+    "$hover_text_label_control": "recipe_book_filter_dx.filter_hover_text_label",
+    "$hover_filter_text": "gui.recipebook.toggleRecipes.all",
+    "controls": [
+      { "hover_text_panel@hover_text_dx.hover_text_panel": {} },
+      { "texture@recipe_book_textures_dx.filter_disabled_highlighted": { } }
+    ]
+  },
+
+  "filter_enabled_highlighted": {
+    "type": "panel",
+    "size": [ 27, 16 ],
+    "$hover_text_label_control": "recipe_book_filter_dx.filter_hover_text_label",
+    "$hover_filter_text": "gui.recipebook.toggleRecipes.craftable",
+    "controls": [
+      { "hover_text_panel@hover_text_dx.hover_text_panel": {} },
+      { "texture@recipe_book_textures_dx.filter_enabled_highlighted": { } }
+    ]
+  },
+
+  "filter_panel": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      {
+        "filter_toggle@crafting.filter_toggle": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [ 26, 16 ],
+          "offset": [ -11, 12 ],
+          "layer": 4,
+          "$unchecked_control": "recipe_book_textures_dx.filter_disabled",
+          "$unchecked_hover_control": "recipe_book_filter_dx.filter_disabled_highlighted",
+          "$checked_control": "recipe_book_textures_dx.filter_enabled",
+          "$checked_hover_control": "recipe_book_filter_dx.filter_enabled_highlighted"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "(not #is_creative_mode)",
+        "binding_name_override": "#visible"
+      }
+    ]
+  }
+}

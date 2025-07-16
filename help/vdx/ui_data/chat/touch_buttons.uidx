@@ -1,0 +1,179 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "chat_touch_buttons_dx",
+  
+  "chat_autocomplete_up_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "vdx/ui_textures/icon/autocomplete_up"
+  },
+
+  "chat_autocomplete_down_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "vdx/ui_textures/icon/autocomplete_down"
+  },
+  
+  "chat_previous_message_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "vdx/ui_textures/icon/chat_previous_message"
+  },
+  
+  "chat_next_message_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "vdx/ui_textures/icon/chat_next_message"
+  },
+
+  "send_image": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "vdx/ui_textures/icon/send"
+  },
+
+  "keyboard_image_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "keyboard_image": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "vdx/ui_textures/icon/keyboard",
+          "bindings": [
+            {
+              "binding_name": "(not #keyboard_being_used)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "arrow_down_icon": {
+          "type": "image",
+          "layer": 2,
+          "size": [ 16, 16 ],
+          "offset": [ 0, 1 ],
+          "color": "$text_color",
+          "texture": "vdx/ui_textures/icon/arrow_down",
+          "bindings": [
+            {
+              "binding_name": "#keyboard_being_used",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "chat_bottom_separator": {
+    "type": "panel",
+    "size": [ 2, 2 ]
+  },
+
+  "chat_touch_buttons": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 20 ],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": [ -2, -16 ],
+    "ignored": "(not $touch)",
+    "controls": [
+      { 
+        "keyboard_button@button_dx.main_black_button": {
+          "size": [ 20, "100%" ],
+          "$button_content": "chat_touch_buttons_dx.keyboard_image_panel",
+          "$pressed_button_name": "button.keyboard_toggle"
+        }
+      },
+      { "separator_keyboard@chat_touch_buttons_dx.chat_bottom_separator": { } },
+      {
+        "autocomplete": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%" ],
+          "controls": [
+            {
+              "chat_autocomplete_up_button@button_dx.main_black_button": {
+                "size": [ 20, "100%" ],
+                "$pressed_button_name": "button.chat_autocomplete_back",
+                "$button_content": "chat_touch_buttons_dx.chat_autocomplete_up_icon",
+                "bindings": [
+                  {
+                    "binding_name": "(not #chat_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "separator_2@chat_touch_buttons_dx.chat_bottom_separator": {
+                "bindings": [
+                  {
+                    "binding_name": "(not #chat_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "chat_autocomplete_down_button@button_dx.main_black_button": {
+                "size": [ 20, "100%" ],
+                "$pressed_button_name": "button.chat_autocomplete",
+                "$button_content": "chat_touch_buttons_dx.chat_autocomplete_down_icon",
+                "bindings": [
+                  {
+                    "binding_name": "(not #chat_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "separator_3@chat_touch_buttons_dx.chat_bottom_separator": {
+                "bindings": [
+                  {
+                    "binding_name": "(not #chat_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chat_previous_message_button@button_dx.main_black_button": {
+          "size": [ 20, "100%" ],
+          "$pressed_button_name": "button.chat_previous_message",
+          "$button_content": "chat_touch_buttons_dx.chat_previous_message_icon"
+        }
+      },
+      { "separator_0@chat_touch_buttons_dx.chat_bottom_separator": { } },
+      {
+        "chat_next_message_button@button_dx.main_black_button": {
+          "size": [ 20, "100%" ],
+          "$pressed_button_name": "button.chat_next_message",
+          "$button_content": "chat_touch_buttons_dx.chat_next_message_icon"
+        }
+      },
+      { "separator_1@chat_touch_buttons_dx.chat_bottom_separator": { } },
+      { 
+        "send_button@button_dx.main_black_button": {
+          "size": [ 36, "100%" ],
+          "$pressed_button_name": "button.send",
+          "$button_content": "chat_touch_buttons_dx.send_image",
+          "bindings": [
+            {
+              "binding_name": "#send_button_visible",
+              "binding_name_override": "#enabled"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

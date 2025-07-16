@@ -1,0 +1,289 @@
+﻿##################################################
+##  Start
+##################################################
+menu.play=게임 플레이
+menu.options=설정...
+menu.quit=게임 종료
+menu.store=Minecraft 상점
+
+##################################################
+##  Options
+##################################################
+##  Main
+options.language=언어...
+options.sounds=음악 및 소리...
+options.sounds.title=음악 및 소리 설정
+options.account=계정...
+options.general=일반...
+options.generalTitle=일반 설정
+menu.storageManagement=저장 공간...
+options.resetSettings=초기화
+##  Toggle OFF/ON
+options.off=꺼짐
+options.on=켜짐
+##  Credits and Attribution
+options.credits_and_attribution=제작진 및 이용 저작물...
+credits_and_attribution.screen.title=제작진 및 이용 저작물
+credits_and_attribution.button.licenses=허가서 목록
+##  Accessibility Settings
+options.accessibility=접근성 설정...
+options.enableChatTextToSpeech=채팅용 텍스트 읽기
+options.enableAutoPlatformTextToSpeech=장치 설정으로 텍스트 읽기
+options.enableUITextToSpeech=UI용 텍스트 읽기
+options.enableOpenChatMessage=채팅 메시지 열기 활성화
+options.darknessEffectModifier=어둠 고동 세기
+options.darknessEffectModifier.message=워든이나 스컬크 비명체가 거는 어둠 효과가 얼마나 고동치는지 조절합니다.
+##  Controls Settings
+options.autojump=자동 점프
+options.fullKeyboardGameplay=전체 키보드 게임 플레이
+options.mouse_settings=마우스 설정...
+options.mouse_settings.title=마우스 설정
+controls.keybinds=키 지정...
+controls.keybinds.title=키 지정
+options.joystick_settings=Joystick 설정...
+options.joystick_settings.title=Joystick 설정
+controllerLayoutScreen.resetAllBindings=키 설정 초기화
+##  Video Settings
+options.video=비디오 설정...
+options.videoTitle=비디오 설정
+options.graphics.fancy=화려하게
+options.graphics.fast=빠르게
+options.graphics.fancy.tooltip=화려하게 그래픽은 대부분의 컴퓨터에 맞도록 성능과 품질의 균형을 유지합니다.\n날씨와 구름, 입자가 반투명한 블록이나 물 뒤에 나타나지 않을 수 있습니다.
+options.graphics.fast.tooltip=빠르게 그래픽은 화면에 보이는 비와 눈의 양을 줄입니다.\n나뭇잎 등 각종 블록의 투명 효과 또한 꺼집니다.
+options.vsync=수직 동기화
+options.vsync.off=꺼짐
+options.vsync.on=켜짐
+options.vsync.adaptive=조정
+options.gui.accessibility.scaling=새로운 초대형 UI
+options.renderClouds=구름
+options.maxFramerate=최대 프레임률
+options.fov.toggle=시야 효과
+options.renderDistance=렌더 거리
+options.rendchat_messages_dxerDistanceFormat=청크 %s개
+options.renderDistanceRecommendedFormat=청크 %s개
+options.showautosaveicon=자동 저장 표시
+##  Audio Settings
+soundCategory.main=전체 음량
+soundCategory.ambient=분위기음/환경
+soundCategory.block=블록
+soundCategory.hostile=적대적 생명체
+soundCategory.master=전체 음량
+soundCategory.music=음악
+soundCategory.neutral=친화적 생명체
+soundCategory.player=플레이어
+soundCategory.record=주크박스/소리 블록
+soundCategory.weather=날씨
+soundCategory.texttospeech=음성
+##  UI Settings (joincode.ip_entry.button_tts)
+vdx.options.more=추가 옵션...
+vdx.options.moreTitle=추가 옵션
+##  World
+resourcePack.title=리소스 팩 선택
+behaviorPack.title=행동 팩 선택
+selectWorld.resourcePack=리소스
+selectWorld.behaviorPack=행동
+
+
+selectWorld.experiments.info=실험은 추가될 가능성이 있는 새 기능입니다. 고장이 있을 수 있으니 조심하세요. 세계를 만든 뒤에는 실험을 끌 수 없습니다.
+
+##################################################
+##  Resource Packs
+##################################################
+pack.available.title=§l사용 가능
+pack.selected.title=§l선택됨
+resourcePack.vanilla.name=기본
+resourcePack.vanilla.description=Minecraft의 기본적 모습 및 분위기 (내장)
+pack.resources.dropInfo=파일을 "resource_packs" 폴더 디렉토리로 끌어다 놓아 팩을 추가합니다.
+
+##################################################
+##  Behavior Packs
+##################################################
+pack.behavior.dropInfo=파일을 "behavior_packs" 폴더 디렉토리로 끌어다 놓아 팩을 추가합니다.
+
+##################################################
+##  Death
+##################################################
+deathScreen.message=죽었습니다!
+deathScreen.title=죽었습니다!
+
+##################################################
+##  Play
+##################################################
+##  Main
+options.group.graphics.experimental=§e실험
+selectWorld.tooltip.beta=이 스냅숏에서 세계를 불러오기 전에 먼저 백업하는 것을 잊지 마세요.
+selectWorld.tooltip.snapshot1=이 스냅숏에서 세계를 불러오기 전에
+selectWorld.tooltip.snapshot2=먼저 백업하는 것을 잊지 마세요.
+##  Realms
+mco.selectServer.popup=Realms는 최대 10명의 친구들과 함께 온라인 Minecraft 세계를 즐길 수 있는 안전하고 간편한 방법입니다. 수많은 미니게임과 여러 사용자 지정 세계를 지원합니다! 비용은 realm의 소유자만 지불하면 됩니다.
+mco.selectServer.purchase=Realm 추가
+mco.selectServer.buy=Realm 구매하기!
+mco.selectServer.trial=체험해 보기!
+
+mco.selectServer.closed=닫힌 realm
+mco.selectServer.expired=만료된 realm
+
+
+##################################################
+##  Realms Options
+##################################################
+mco.configure.world.title=Realm 설정:
+mco.configure.world.name.binding=%s
+
+mco.invites.title=보류 중인 초대
+mco.invites.pending=새로운 초대가 있습니다!
+mco.invites.nopending=보류 중인 초대가 없습니다!
+mco.invites.button.accept=수락
+mco.invites.button.reject=거절
+
+##################################################
+##  Gamerule
+##################################################
+selectWorld.gameRules=게임 규칙
+  
+editGamerule.title=게임 규칙 수정
+editGamerule.default=기본값:
+
+gamerule.doImmediateRespawn=즉시 리스폰
+gamerule.keepInventory=죽음 후 보관함 보존
+gamerule.mobGriefing=파괴적 몹 행위 허용
+gamerule.naturalRegeneration=생명력 재생
+gamerule.spawnRadius=리스폰 위치 반지름
+gamerule.doMobSpawning=몹 생성
+gamerule.doMobSpawning.description=일부 개체는 별도의 규칙이 있을 수 있습니다.
+gamerule.doEntityDrops=개체 장비 떨굼
+gamerule.doEntityDrops.description=광산 수레 (보관함 포함), 아이템 액자, 보트 등에서의 떨굼을 제어합니다.
+gamerule.doMobLoot=몹 노획물 떨굼
+gamerule.doMobLoot.description=경험 구슬을 포함하여 몹으로부터의 자원 떨굼을 제어합니다.
+gamerule.doTileDrops=블록 떨굼
+gamerule.doTileDrops.description=경험 구슬을 포함하여 블록으로부터의 자원 떨굼을 제어합니다.
+gamerule.doDaylightCycle=시간 흐름
+gamerule.doFireTick=불 갱신
+gamerule.doWeatherCycle=날씨 갱신
+gamerule.randomTickSpeed=랜덤 틱 속도 비율
+
+gamerule.category.player=§l플레이어
+gamerule.category.mobs=§l몹
+gamerule.category.spawning=§l생성
+gamerule.category.drops=§l떨굼 설정
+gamerule.category.updates=§l세계 갱신
+gamerule.category.misc=§l기타
+
+##################################################
+##  Progress
+##################################################
+##  Main
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.header=§l주의: 제삼자 온라인 플레이
+multiplayerWarning.message=주의: 온라인 플레이는 Mojang Studios 및 Microsoft가 소유, 운영 또는 감독하지 않는 제삼자 서버를 통해 제공됩니다. 온라인 플레이 중에 모두에게 적합하지 않은, 관리되지 않는 대화 메시지나 다른 종류의 사용자 생성 콘텐츠에 노출될 수 있습니다.
+multiplayerWarning.check=이 화면을 다시 보지 않기
+
+onlinePlay.untrustedIp.title=§l알 수 없는 외부 서버
+onlinePlay.untrustedIp.message=신뢰할 수 있는 서버에만 연결해야 합니다! 그래도 연결하고 싶으신가요?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=제작법 책을 확인해 보세요
+recipe.toast.title=새로운 제작법 잠금 해제!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=밤이나 뇌우 중에만 잘 수 있습니다
+vdx.block.minecraft.bed.not_safe=근처에 몬스터가 있어 쉴 수 없습니다
+vdx.block.minecraft.bed.obstructed=침대가 막혀 있습니다
+vdx.block.minecraft.bed.occupied=다른 사람이 이미 침대에 누워 있습니다
+vdx.block.minecraft.bed.too_far_away=침대가 너무 멀리 있어 쉴 수 없습니다
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=건축 높이 제한은 319입니다
+build.tooHigh.the_nether.aspects=건축 높이 제한은 127입니다
+build.tooHigh.the_end.aspects=건축 높이 제한은 255입니다
+build.tooLow.overworld.aspects=건물의 최소 높이는 -64 블록입니다
+build.tooLow.the_nether.aspects=건물의 최소 높이는 0 블록입니다
+build.tooLow.the_end.aspects=건물의 최소 높이는 0 블록입니다
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=습격
+bar.event.raid.remaining.2=습격 - 남은 습격자 수: 2
+bar.event.raid.remaining.1=습격 - 남은 습격자 수: 1
+bar.event.raid.remaining.0=습격 - 남은 습격자 수: 0
+bar.event.raid.victory=습격 - 승리
+bar.event.raid.defeat=습격 - 패배
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§o검색...
+gui.recipebook.toggleRecipes.all=모두 표시 중
+gui.recipebook.toggleRecipes.blastable=용광 가능한 아이템 표시 중
+gui.recipebook.toggleRecipes.craftable=제작 가능한 아이템 표시 중
+gui.recipebook.toggleRecipes.smeltable=제련 가능한 아이템 표시 중
+gui.recipebook.toggleRecipes.smokable=훈연 가능한 아이템 표시 중
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=건축
+vdx.creative.tab.equipment=장비
+vdx.creative.tab.items=아이템
+vdx.creative.tab.nature=자연
+
+inventory.binSlot=아이템 파괴
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=매다는 표지판 문구 편집
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=콘솔 명령어
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=상대적 위치
+structure_block.size=구조물 크기
+structure_block.integrity_and_seed=구조물 온전도 및 시드
+structure_block.detect_size=구조물 크기 및 위치 감지:
+structure_block.mode_info.save=저장 모드 - 파일에 쓰기
+structure_block.mode_info.load=불러오기 모드 - 파일에서 불러오기
+structure_block.mode_info.corner=모서리 모드 - 배치 및 크기 표지
+structure_block.exportTo=내보내기:
+structure_block.mode.export=내보내기
+structure_block.button.detect_size=감지
+structure_block.button.save=저장
+structure_block.button.load=불러오기
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=거래
+merchant.deprecated=주민은 재고를 하루에 최대 2번까지 보충합니다.
