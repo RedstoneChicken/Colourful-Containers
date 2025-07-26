@@ -1,0 +1,310 @@
+/*File made by @CrisXolt. 
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "play_animations_dx",
+
+  "realm_status_panel": {
+    "type": "panel",
+    "size": [ 10, 28 ],
+    "controls": [
+      { 
+        "open@realm_status_textures_dx.open": {
+          "bindings": [ 
+            {
+              "binding_name": "#realms_game_online",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$realms_worlds_collection_name"
+            }
+          ]
+        }
+      },
+      { 
+        "closed@realm_status_textures_dx.closed": {
+          "bindings": [
+            {
+              "binding_name": "#realms_game_offline",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$realms_worlds_collection_name"
+            }
+          ]
+        }
+      },
+      { 
+        "expired@realm_status_textures_dx.expired": {
+          "bindings": [
+            {
+              "binding_name": "#realms_game_unavailable",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$realms_worlds_collection_name"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "ping_rate_panel": {
+    "type": "panel",
+    "size": [ 12, 10 ],
+    "$collection_name|default": "",
+    "controls": [
+      { 
+        "ping_green_dark@server_list_textures_dx.ping_5": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "(#texture_name = 'textures/ui/Ping_Green_Dark')",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      { 
+        "ping_green@server_list_textures_dx.ping_5": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "(#texture_name = 'textures/ui/Ping_Green')",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      { 
+        "ping_yellow_dark@server_list_textures_dx.ping_3": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "(#texture_name = 'textures/ui/Ping_Yellow_Dark')",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      { 
+        "ping_yellow@server_list_textures_dx.ping_3": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "(#texture_name = 'textures/ui/Ping_Yellow')",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      { 
+        "ping_red_dark@server_list_textures_dx.ping_1": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "(#texture_name = 'textures/ui/Ping_Red_Dark')",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      { 
+        "ping_red@server_list_textures_dx.ping_1": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "(#texture_name = 'textures/ui/Ping_Red')",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      { 
+        "ping_offline_dark@server_list_textures_dx.unreachable": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "(#texture_name = 'textures/ui/Ping_Offline_Red_Dark')",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      { 
+        "ping_offline@server_list_textures_dx.unreachable": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "(#texture_name = 'textures/ui/Ping_Offline_Red')",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "world_ping_rate_panel": {
+    "type": "panel",
+    "size": [ 12, 10 ],
+    "$collection_name|default": "",
+    "controls": [
+      { 
+        "ping_5@server_list_textures_dx.ping_5": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "#game_online",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      { 
+        "ping_1@server_list_textures_dx.unreachable": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "#game_unavailable",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      { 
+        "unreachable@server_list_textures_dx.unreachable": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "#game_offline",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "pinging_panel": {
+    "type": "panel",
+    "size": [ 12, 10 ],
+    "controls": [
+      {
+        "frame_0@server_list_textures_dx.pinging_1": {
+          "alpha": "@play_animations_dx.pinging_frame_0_wait",
+          "propagate_alpha": true
+        }
+      },
+      {
+        "frame_1@server_list_textures_dx.pinging_2": {
+          "alpha": "@play_animations_dx.pinging_frame_7_wait",
+          "propagate_alpha": true
+        }
+      },
+      {
+        "frame_2@server_list_textures_dx.pinging_3": {
+          "alpha": "@play_animations_dx.pinging_frame_6_wait",
+          "propagate_alpha": true
+        }
+      },
+      {
+        "frame_3@server_list_textures_dx.pinging_4": {
+          "alpha": "@play_animations_dx.pinging_frame_5_wait",
+          "propagate_alpha": true
+        }
+      },
+      {
+        "frame_4@server_list_textures_dx.pinging_5": {
+          "alpha": "@play_animations_dx.pinging_frame_4_wait",
+          "propagate_alpha": true
+        }
+      },
+      {
+        "frame_5@server_list_textures_dx.pinging_4": {
+          "alpha": "@play_animations_dx.pinging_frame_3_wait",
+          "propagate_alpha": true
+        }
+      },
+      {
+        "frame_6@server_list_textures_dx.pinging_3": {
+          "alpha": "@play_animations_dx.pinging_frame_2_wait",
+          "propagate_alpha": true
+        }
+      },
+      {
+        "frame_7@server_list_textures_dx.pinging_2": {
+          "alpha": "@play_animations_dx.pinging_frame_1_wait",
+          "propagate_alpha": true
+        }
+      }
+    ]
+  },
+
+  "alpha_template": { "anim_type": "alpha", "easing": "linear", "duration": 0.375 },
+
+  "pinging_frame_0_wait@play_animations_dx.alpha_template": { "from": 1, "to": 1, "next": "@play_animations_dx.pinging_frame_1_wait" },
+  "pinging_frame_1_wait@play_animations_dx.alpha_template": { "from": 0, "to": 0, "next": "@play_animations_dx.pinging_frame_2_wait" },
+  "pinging_frame_2_wait@play_animations_dx.alpha_template": { "from": 0, "to": 0, "next": "@play_animations_dx.pinging_frame_3_wait" },
+  "pinging_frame_3_wait@play_animations_dx.alpha_template": { "from": 0, "to": 0, "next": "@play_animations_dx.pinging_frame_4_wait" },
+  "pinging_frame_4_wait@play_animations_dx.alpha_template": { "from": 0, "to": 0, "next": "@play_animations_dx.pinging_frame_5_wait" },
+  "pinging_frame_5_wait@play_animations_dx.alpha_template": { "from": 0, "to": 0, "next": "@play_animations_dx.pinging_frame_6_wait" },
+  "pinging_frame_6_wait@play_animations_dx.alpha_template": { "from": 0, "to": 0, "next": "@play_animations_dx.pinging_frame_7_wait" },
+  "pinging_frame_7_wait@play_animations_dx.alpha_template": { "from": 0, "to": 0, "next": "@play_animations_dx.pinging_frame_0_wait" },
+
+  "scanning_panel": {
+    "type": "panel",
+    "size": [ 100, 10 ],
+    "controls": [
+      { "frame_0@play_animations_dx.scanning_label": { "text": "o \u004f o", "alpha": "@play_animations_dx.scanning_frame_0_wait" } },
+      { "frame_1@play_animations_dx.scanning_label": { "text": "o o \u004f", "alpha": "@play_animations_dx.scanning_frame_3_wait" } },
+      { "frame_2@play_animations_dx.scanning_label": { "text": "o \u004f o", "alpha": "@play_animations_dx.scanning_frame_2_wait" } },
+      { "frame_3@play_animations_dx.scanning_label": { "text": "\u004f o o", "alpha": "@play_animations_dx.scanning_frame_1_wait" } }
+    ]
+  },
+
+  "scanning_label@label_dx.global_label": {
+    "layer": 5,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ "default", 10 ],
+    "color": [ 0.5, 0.5, 0.5 ]
+  },
+
+  "scanning_alpha_template": { "anim_type": "alpha", "easing": "linear", "duration": 0.25 },
+
+  "scanning_frame_0_wait@play_animations_dx.scanning_alpha_template": { "from": 1, "to": 1, "next": "@play_animations_dx.scanning_frame_1_wait" },
+  "scanning_frame_1_wait@play_animations_dx.scanning_alpha_template": { "from": 0, "to": 0, "next": "@play_animations_dx.scanning_frame_2_wait" },
+  "scanning_frame_2_wait@play_animations_dx.scanning_alpha_template": { "from": 0, "to": 0, "next": "@play_animations_dx.scanning_frame_3_wait" },
+  "scanning_frame_3_wait@play_animations_dx.scanning_alpha_template": { "from": 0, "to": 0, "next": "@play_animations_dx.scanning_frame_0_wait" }
+}
