@@ -11,7 +11,7 @@
     "anchor_to": "top_left",
     "text_alignment": "left",
     "offset": [ 8, 5 ],
-    "color": "$vdx_container_title_text_color",
+    "color": "$cc_default_container_text_color",
     "layer": 3
   },
 
