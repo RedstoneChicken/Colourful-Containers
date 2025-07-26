@@ -1,16 +1,16 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Colourful Containers BE - Beta v4.3.5 mixed",
+    "name": "Colourful Containers BE - Beta v4.3.6 mixed",
     "description": "By Redstone Chicken, credits to CrisXolt. [1.21.9]\n//\nOverhauls Minecraft's UI into something beautiful!",
-    "uuid": "8cd58474-e474-4569-838e-2cecbc68dbfb",
+    "uuid": "f9249145-958e-4395-bd78-7fdad51ac443",
     "version": [4, 3, 0],
     "min_engine_version": [ 1, 21, 9 ]
   },
   "modules": [
     {
       "type": "resources",
-      "uuid": "3ec8bf31-769b-44b1-8a1b-33a4ae6b2648",
+      "uuid": "a16f26ec-7c63-4277-8cc1-e98e6ca64cdd",
       "version": [4, 3, 0]
     }
   ],
