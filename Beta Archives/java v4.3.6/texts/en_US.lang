@@ -1,0 +1,355 @@
+##################################################
+##  Start
+##################################################
+menu.play=Play Game
+menu.options=Options...
+menu.quit=Quit Game
+menu.store=Minecraft Marketplace
+
+##################################################
+##  Options
+##################################################
+##  Main
+options.language=Language...
+options.sounds=Music & Sounds...
+options.sounds.title=Music & Sound Options
+options.account=Account...
+options.general=General...
+options.generalTitle=General Settings
+menu.storageManagement=Storage...
+options.keyboardAndMouse=Keyboard & Mouse...
+options.controller=Controller...
+options.touch=Touch...
+##  Toggle OFF/ON
+options.off=OFF
+options.on=ON
+##  Credits and Attribution
+options.credits_and_attribution=Credits & Attribution...
+credits_and_attribution.screen.title=Credits and Attribution
+credits_and_attribution.button.licenses=Licenses
+##  Accessibility Settings
+options.accessibility=Accessibility Settings...
+options.enableChatTextToSpeech=TTS For Chat
+options.enableAutoPlatformTextToSpeech=TTS with Device
+options.enableUITextToSpeech=UI Screen Reader
+options.enableOpenChatMessage=Open Chat Message
+options.darknessEffectModifier=Darkness Pulsing
+options.darknessEffectModifier.message=Controls how much the Darkness effect pulses when a Warden or Sculk Shrieker gives it to you.
+##  Controls Settings
+options.mouse_settings=Mouse Settings...
+options.mouse_settings.title=Mouse Settings
+controls.keybinds=Key Binds...
+controls.keybinds.title=Key Binds
+options.joystick_settings=Joystick Settings...
+options.joystick_settings.title=Joystick Settings
+##  Video Settings
+options.video=Video Settings...
+options.videoTitle=Video Settings
+options.graphics.fancy.tooltip=Fancy graphics balances performance and quality for the majority of machines. Weather, clouds and particles may not appear behind translucent blocks or water.
+options.graphics.fast.tooltip=Fast graphics reduces the amount of visible rain and snow. Transparency effects are disabled for various blocks such as tree-leaves.
+options.vsync=Use VSync
+options.vsync.off=OFF
+options.vsync.on=ON
+options.vsync.adaptive=Adaptive
+options.renderClouds=Clouds
+options.maxFramerate=Max Framerate
+options.fov.toggle=FOV Effects
+options.renderDistance=Render distance
+options.rendchat_messages_dxerDistanceFormat=%s chunks
+options.renderDistanceRecommendedFormat=%s chunks
+options.showautosaveicon=Autosave Indicator
+options.graphicsMode.deferred=Vibrant Visuals
+##  Audio Settings
+soundCategory.main=Master Volume
+soundCategory.ambient=Ambient/Environment
+soundCategory.block=Blocks
+soundCategory.hostile=Hostile Creatures
+soundCategory.master=Master Volume
+soundCategory.music=Music
+soundCategory.neutral=Friendly Creatures
+soundCategory.player=Players
+soundCategory.record=Jukebox/Note Blocks
+soundCategory.weather=Weather
+##  UI Settings
+vdx.options.more=More Settings...
+vdx.options.moreTitle=More Settings
+##  World
+resourcePack.title=Select Resource Packs
+behaviorPack.title=Select Behavior Packs
+selectWorld.resourcePack=Resource
+selectWorld.behaviorPack=Behavior
+selectWorld.experiments.info=Experiments are potential new features. Be careful as things might break. Experiments can't be turned off after world creation.
+
+##################################################
+##  Resource Packs
+##################################################
+pack.available.title=§lAvailable
+pack.selected.title=§lSelected
+resourcePack.vanilla.name=Default
+resourcePack.vanilla.description=The default look and feel of Minecraft (built-in)
+pack.resources.dropInfo=Drag and drop files into "resource_packs" folder directory to add Packs
+
+##################################################
+##  Behavior Packs
+##################################################
+pack.behavior.dropInfo=Drag and drop files into "behavior_packs" folder directory to add Packs
+
+##################################################
+##  Death
+##################################################
+deathScreen.message=You Died!
+deathScreen.title=You Died!
+
+##################################################
+##  Play
+##################################################
+##  Main
+options.group.graphics.experimental=§eExperimental
+selectWorld.tooltip.beta=Don't forget to backup this world before you load it in this beta.
+selectWorld.tooltip.snapshot1=Don't forget to back up this world
+selectWorld.tooltip.snapshot2=before you load it in this snapshot.
+##  Realms
+mco.selectServer.popup=Realms is a safe, simple way to enjoy an online Minecraft world with up to ten friends at a time. It supports loads of minigames and plenty of custom worlds! Only the owner of the realm needs to pay.
+mco.selectServer.purchase=Add Realm
+mco.selectServer.buy=Buy a Realm!
+mco.selectServer.trial=Get a Trial!
+
+mco.selectServer.closed=Closed realm
+mco.selectServer.expired=Expired realm
+
+
+##################################################
+##  Realms Options
+##################################################
+mco.configure.world.title=Configure realm:
+mco.configure.world.name.binding=%s
+
+mco.invites.title=Pending Invites
+mco.invites.pending=New invites!
+mco.invites.nopending=No pending invites!
+mco.invites.button.accept=Accept
+mco.invites.button.reject=Reject
+
+##################################################
+##  Gamerule
+##################################################
+selectWorld.gameRules=Game Rules
+  
+editGamerule.title=Edit game rules
+editGamerule.default=Default: 
+
+gamerule.doImmediateRespawn=Respawn immediately
+gamerule.keepInventory=Keep inventory after death
+gamerule.mobGriefing=Allow destructive mob actions
+gamerule.naturalRegeneration=Regenerate health
+gamerule.spawnRadius=Respawn location radius
+gamerule.doMobSpawning=Spawn mobs
+gamerule.doMobSpawning.description=Some entities might have separate rules
+gamerule.doEntityDrops=Drop entity equipment
+gamerule.doEntityDrops.description=Controls drops from minecarts (including inventories), item frames, boats, etc.
+gamerule.doMobLoot=Drop mob loot
+gamerule.doMobLoot.description=Controls resource drops, including experience orbs
+gamerule.doTileDrops=Drop blocks
+gamerule.doTileDrops.description=Controls resource drops, including experience orbs
+gamerule.doDaylightCycle=Advance in-game time
+gamerule.doFireTick=Update fire
+gamerule.doWeatherCycle=Update weather
+gamerule.randomTickSpeed=Random tick speed rate
+
+gamerule.category.player=§lPlayer
+gamerule.category.mobs=§lMobs
+gamerule.category.spawning=§lSpawning
+gamerule.category.drops=§lDrops
+gamerule.category.updates=§lWorld updates
+gamerule.category.misc=§lMiscellaneous
+
+##################################################
+##  Progress
+##################################################
+##  Main
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.header=§lCaution: Third-Party Online Play
+multiplayerWarning.message=Caution: Online play is offered by third-party servers that are not owned, operated, or supervised by Mojang Studios or Microsoft. During online play, you may be exposed to unmoderated chat messages or other types of user-generated content that may not be suitable for everyone.
+multiplayerWarning.check=Do not show this screen again
+
+onlinePlay.untrustedIp.title=§lUnknown External Server
+onlinePlay.untrustedIp.message=You should only connect to servers you trust! Do you still wish to join?
+
+##################################################
+##  HUD
+##################################################
+##  Player Position
+map.position=Block: %s %s %s
+##  Toast
+recipe.toast.description=Check your recipe book
+recipe.toast.title=New Recipes Unlocked!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=You can sleep only at night or during thunderstorms
+vdx.block.minecraft.bed.not_safe=You may not rest now; there are monsters nearby
+vdx.block.minecraft.bed.obstructed=This bed is obstructed
+vdx.block.minecraft.bed.occupied=This bed is occupied
+vdx.block.minecraft.bed.too_far_away=You may not rest now; the bed is too far away
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Height limit for building is 319
+build.tooHigh.the_nether.aspects=Height limit for building is 127
+build.tooHigh.the_end.aspects=Height limit for building is 255
+build.tooLow.overworld.aspects=Minimum height for building is -64
+build.tooLow.the_nether.aspects=Minimum height for building is 0
+build.tooLow.the_end.aspects=Minimum height for building is 0
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=Raid
+bar.event.raid.remaining.2=Raid - Raiders Remaining: 2
+bar.event.raid.remaining.1=Raid - Raiders Remaining: 1
+bar.event.raid.remaining.0=Raid - Raiders Remaining: 0
+bar.event.raid.victory=Raid - Victory
+bar.event.raid.defeat=Raid - Defeat
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§oSearch...
+gui.recipebook.toggleRecipes.all=Showing all
+gui.recipebook.toggleRecipes.craftable=Showing craftable
+gui.recipebook.toggleRecipes.smeltable=Showing smeltable
+gui.recipebook.toggleRecipes.blastable=Showing blastable
+gui.recipebook.toggleRecipes.smokable=Showing smokable
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Construction
+vdx.creative.tab.equipment=Equipment
+vdx.creative.tab.items=Items
+vdx.creative.tab.nature=Nature
+
+inventory.binSlot=Destroy Item
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Edit Hanging Sign Message
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Console Command
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Relative Position
+structure_block.size=Structure Size
+structure_block.integrity_and_seed=Structure Integrity and Seed
+structure_block.detect_size=Detect Structure Size and Position:
+structure_block.mode_info.save=Save Mode - Write to File
+structure_block.mode_info.load=Load mode - Load from File
+structure_block.mode_info.corner=Corner Mode - Placement and Size Marker
+structure_block.exportTo=Export to File:
+structure_block.mode.export=Export
+structure_block.button.detect_size=DETECT
+structure_block.button.save=SAVE
+structure_block.button.load=LOAD
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Trades
+merchant.deprecated=Villagers restock up to two times per day.
+
+##################################################
+##  Sodium (Not mine...)
+##################################################
+sodium.options.performance_impact_string=Performance Impact: 
+sodium.option_impact.low=Low
+sodium.option_impact.medium=Medium
+sodium.option_impact.high=High
+sodium.option_impact.extreme=Extreme
+sodium.option_impact.varies=Varies
+
+##  General
+sodium.options.pages.general=General
+
+sodium.options.view_distance.tooltip=The render distance controls how far away terrain will be rendered. Shorter distances mean that less terrain will be rendered, improving frame rates.
+sodium.options.brightness.tooltip=Controls the minimum brightness in the world. When increased, darker areas of the world will appear brighter. This does not affect the brightness of already well-lit areas.
+
+sodium.options.gui_scale.tooltip=Sets the maximum scale factor to be used for the user interface. If "Extra Large New UI" is used, then the largest scale factor will always be used.
+sodium.options.fullscreen.tooltip=If enabled, the game will display in full-screen (if supported).
+sodium.options.v_sync.tooltip=If enabled, the game's frame rate will be synchronized to the monitor's refresh rate, making for a generally smoother experience at the expense of overall input latency. This setting might reduce performance if your system is too slow.
+sodium.options.fps_limit.tooltip=Limits the maximum number of frames per second. This can help reduce battery usage and system load when multi-tasking. If VSync is enabled, this option will be ignored unless it is lower than your display's refresh rate.
+
+sodium.options.view_bobbing.tooltip=If enabled, the player's view will sway and bob when moving around. Players who experience motion sickness while playing may benefit from disabling this.
+sodium.options.autosave_indicator.tooltip=If enabled, an indicator will be shown when the game is saving the world to disk.
+
+sodium.options.fov.toggle.tooltip=If enabled, the field of view can be altered when running, and having some effects.
+
+##  Quality
+sodium.options.pages.quality=Quality
+
+sodium.options.graphics_quality.tooltip=The default graphics quality controls some legacy options and is necessary for add-on compatibility. If the options below are left to "Default", they will use this setting.
+sodium.options.graphics_quality_preset_mode.name=Graphics Quality Preset Mode
+sodium.options.graphics_quality_preset_mode.tooltip=Choose which mode you use for the best experience.
+sodium.options.clouds_quality.tooltip=If enabled, clouds is visible in the sky. Even if the toggle are "Disabled" and "Enabled", the effect on performance is negligible.
+
+sodium.options.fancyskies.tooltip=If enabled, every details of the sky as gradient color, clouds, sun, moon, stars, and cubemap (if available), will be visible.
+sodium.options.leaves_quality.tooltip=Controls whether leaves will be rendered as transparent (enabled) or opaque (disabled).
+sodium.options.bubbleparticles.tooltip=Controls whether underwater bubbles will be rendered as particles (enabled) or blocky (disabled).
+sodium.options.smooth_lighting.tooltip=Enables the smooth lighting and shading of blocks in the world. This can very slightly increase the amount of time it takes to load or update a chunk, but it doesn't affect frame rates.
+
+sodium.options.msaa.tooltip=Controls the smoothness of the image. A lower value means that the image will look normal with jagged edges, improving frame rates.
+
+##  Performance
+sodium.options.pages.performance=Performance
+
+sodium.options.upscalingMode.tooltip=Controls how upscaling screen will look in order to improve frames rates.
+sodium.options.upscalingPercentage.tooltip=The percentage of screen resolution to be used to upscale the image, lower resolution will improve fame rates.
+sodium.options.upscaling.tooltip=If enabled, it will improve frame rates reducing resolution but upscaling the image with AI algorithm. GeForce RTX GPU is required to use, only available with DLSS 2.0.
+
+sodium.options.screenAnimations.tooltip=If enabled, animation will be used when switching ui or menus, even with the main panorama.
+
+##  Advanced
+sodium.options.pages.advanced=Advanced
+
+sodium.options.graphicsModeSwitch.tooltip=If enabled, allows changing graphics mode from "Vibrant Visuals" to "Simple/Fancy" while playing in a world, but not revert it (maybe).
+
+##  Vibrant Visuals
+sodium.options.shadowQuality.tooltip=Controls the quality of shadows pixels from environment.
+sodium.options.pointLightShadowQuality.tooltip=Controls the quality of shadows pixels from point lights.
+sodium.options.pointLightLODingQuality.tooltip=Controls the quality of point light.
+sodium.options.cloudQuality.tooltip=Controls how far away the clouds will be rendered.
+sodium.options.volumetricFogQuality.tooltip=Controls the intensity of fog.
+sodium.options.reflectionsQuality.tooltip=Controls the quality of reflections on blocks and water.
+sodium.options.bloomStrengthSlider.tooltip=Controls the intensity of bloom.
+
+sodium.options.graphicsQualityPresetMode.performance=Performance
+sodium.options.graphicsQualityPresetMode.quality=Fidelity
+sodium.options.graphicsQualityPresetMode.custom=Custom

@@ -2,7 +2,7 @@
   "format_version": 2,
   "header": {
     "name": "Colourful Containers BE - Beta v4.3.5 java",
-    "description": "By Redstone Chicken, credits to CrisXolt. [1.21.9]\n//\nOverhauls Minecraft's UI into something beautiful!",
+    "description": "By Redstone Chicken, credits to CrisXolt. [1.21.9]\n// Overhauls Minecraft's UI into something beautiful!",
     "uuid": "a8a44e58-3459-47e6-b8ae-e2d43b4b5eb8",
     "version": [4, 3, 0],
     "min_engine_version": [ 1, 21, 9 ]

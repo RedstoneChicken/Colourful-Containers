@@ -1,0 +1,39 @@
+ {
+  "format_version": 2,
+  "header": {
+    "name": "§4C§co§6l§eo§au§br§9f§du§5l §iContainers §gBE§r: Cat-Villagers [Addon]",
+    "description": "By Redstone Chicken§r, Textures by KhalMika - v1.1\n\nA addon for Colourful Containers BE, which replaces the villager ui texture with cat-villagers!\n\n§7Need Help? - Join my discord server!\ndsc.gg/rscbuilds",
+    "uuid": "057a4196-2891-4fee-a29f-19f5e65809cf",
+    "version": [1, 1, 0],
+    "min_engine_version": [ 1, 21, 0 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "ca006615-cb11-40a0-aaeb-b289764bedd8",
+      "version": [1, 1, 0]
+    }
+  ],
+  "subpacks" :[
+    {
+      "folder_name":"dark",
+      "name":"§8Dark mode",
+      "memory_tier":1
+    },
+    {
+      "folder_name":"light",
+      "name":"§gLight mode",
+      "memory_tier":2
+    }
+  ],
+  "settings": [
+		{
+			"type": "label",
+			"text": "§6Light mode§r: Uses the default vanilla '§glight§r' coloured theme."
+		},
+		{
+			"type": "label",
+			"text": "§6Dark mode§r: Uses a '§8dark§r' coloured theme."
+		}
+	]
+}
