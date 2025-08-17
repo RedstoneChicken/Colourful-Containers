@@ -1,0 +1,288 @@
+##################################################
+##  Start
+##################################################
+menu.play=游戏
+menu.options=选项…
+menu.quit=退出游戏
+menu.store=市场
+
+##################################################
+##  Options
+##################################################
+##  Main
+options.language=语言…
+options.sounds=音乐和声音…
+options.sounds.title=音乐和声音选项
+options.account=帐户…
+options.general=通用…
+options.generalTitle=常规设置
+menu.storageManagement=存储…
+options.resetSettings=重置
+##  Toggle OFF/ON
+options.off=关
+options.on=开
+##  Credits and Attribution
+options.credits_and_attribution=鸣谢与著作权说明…
+credits_and_attribution.screen.title=鸣谢与著作权说明
+credits_and_attribution.button.licenses=许可协议
+##  Accessibility Settings
+options.accessibility=辅助功能设置…
+options.enableChatTextToSpeech=为聊天启用文字转换语音
+options.enableAutoPlatformTextToSpeech=使用装置设定启用文字转换语音
+options.enableUITextToSpeech=启用UI屏幕阅读器
+options.enableOpenChatMessage=启用开启聊天视窗信息
+options.darknessEffectModifier=黑暗脉动效果
+options.darknessEffectModifier.message=控制监守者或幽匿尖啸体给予的黑暗脉动效果程度。
+##  Controls Settings
+options.autojump=自动跳跃
+options.fullKeyboardGameplay=全键盘玩法
+options.mouse_settings=鼠标设置…
+options.mouse_settings.title=鼠标设置
+controls.keybinds=按键绑定…
+controls.keybinds.title=按键绑定
+options.joystick_settings=操纵杆设置…
+options.joystick_settings.title=操纵杆设置
+controllerLayoutScreen.resetAllBindings=重置按键
+##  Video Settings
+options.video=视频设置…
+options.videoTitle=视频设置
+options.graphics.fancy=高品质
+options.graphics.fast=流畅
+options.graphics.fancy.tooltip=高品质画质会为大多数设备平衡性能和质量。\n天气、云和粒子可能不会在半透明方块或水的后面显示。
+options.graphics.fast.tooltip=流畅画质将减少雨雪的可见数量。\n树叶等方块的透明效果将被禁用。
+options.vsync=垂直同步
+options.vsync.off=关
+options.vsync.on=开
+options.vsync.adaptive=适应性
+options.gui.accessibility.scaling=超大的新 UI
+options.renderClouds=云
+options.maxFramerate=最大帧率
+options.fov.toggle=视场角效果
+options.renderDistance=渲染距离
+options.rendchat_messages_dxerDistanceFormat=%s个区块
+options.renderDistanceRecommendedFormat=%s个区块
+options.showautosaveicon=自动保存指示器
+##  Audio Settings
+soundCategory.main=主音量
+soundCategory.ambient=环境
+soundCategory.block=方块
+soundCategory.hostile=敌对生物
+soundCategory.master=主音量
+soundCategory.music=音乐
+soundCategory.neutral=友好生物
+soundCategory.player=玩家
+soundCategory.record=唱片机/音符盒
+soundCategory.weather=天气
+soundCategory.texttospeech=声音/语音
+##  UI Settings
+vdx.options.more=更多选项…
+vdx.options.moreTitle=更多选项
+##  World
+resourcePack.title=选择资源包
+behaviorPack.title=选择行为包
+selectWorld.resourcePack=资源包
+selectWorld.behaviorPack=行为包
+
+selectWorld.experiments.info=实验性内容，即仍在开发的新功能。启用时请小心，因为这些内容可能不稳定或会导致损坏。已开启的实验性内容在创建世界后将无法再关闭。
+
+##################################################
+##  Resource Packs
+##################################################
+pack.available.title=§l可用
+pack.selected.title=§l已选
+resourcePack.vanilla.name=默认
+resourcePack.vanilla.description=Minecraft的默认观感 (内置)
+pack.resources.dropInfo=请将资源包放到"resource_packs"文件夹来添加资源包
+
+##################################################
+##  Behavior Packs
+##################################################
+pack.behavior.dropInfo=请将行为包放到"behavior_packs"文件夹来添加行为包
+
+##################################################
+##  Death
+##################################################
+deathScreen.message=你死了！
+deathScreen.title=你死了！
+
+##################################################
+##  Play
+##################################################
+##  Main
+options.group.graphics.experimental=§e实验性
+selectWorld.tooltip.beta=你在这个快照中加载它之前，不要忘了备份这个世界！
+selectWorld.tooltip.snapshot1=在这个快照中加载它之前，
+selectWorld.tooltip.snapshot2=不要忘了备份这个世界！
+##  Realms
+mco.selectServer.popup=Realms最多可以同时支持十位好友安全且简单地在线享受Minecraft世界。它也支持多种小游戏与海量自定义世界！只有Realm的所有者需要付款。
+mco.selectServer.purchase=添加Realm
+mco.selectServer.buy=购买Realm服务器！
+mco.selectServer.trial=开始试用！
+
+mco.selectServer.closed=已关闭的Realm
+mco.selectServer.expired=已过期的Realm
+
+
+##################################################
+##  Realms Options
+##################################################
+mco.configure.world.title=配置Realm：
+mco.configure.world.name.binding=%s
+
+mco.invites.title=未决邀请
+mco.invites.pending=新邀请！
+mco.invites.nopending=没有未决邀请！
+mco.invites.button.accept=接受
+mco.invites.button.reject=拒绝
+
+##################################################
+##  Gamerule
+##################################################
+selectWorld.gameRules=游戏规则
+  
+editGamerule.title=编辑游戏规则
+editGamerule.default=默认：
+
+gamerule.doImmediateRespawn=立即重生
+gamerule.keepInventory=死亡后保留物品栏
+gamerule.mobGriefing=允许破坏性生物行为
+gamerule.naturalRegeneration=生命值自然恢复
+gamerule.spawnRadius=重生点半径
+gamerule.doMobSpawning=生成生物
+gamerule.doMobSpawning.description=一些实体可能有其特定的规则。
+gamerule.doEntityDrops=非生物实体掉落
+gamerule.doEntityDrops.description=控制矿车（包括内容物）、物品展示框、船等的物品掉落
+gamerule.doMobLoot=生物战利品掉落
+gamerule.doMobLoot.description=控制生物死亡后是否掉落资源，包括经验球。
+gamerule.doTileDrops=方块掉落
+gamerule.doTileDrops.description=控制破坏方块后是否掉落资源，包括经验球。
+gamerule.doDaylightCycle=游戏内时间流逝
+gamerule.doFireTick=火焰蔓延
+gamerule.doWeatherCycle=天气更替
+gamerule.randomTickSpeed=随机刻速率
+
+gamerule.category.player=§l玩家
+gamerule.category.mobs=§l生物
+gamerule.category.spawning=§l生成
+gamerule.category.drops=§l掉落
+gamerule.category.updates=§l世界更新
+gamerule.category.misc=§l杂项
+
+##################################################
+##  Progress
+##################################################
+##  Main
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.header=§l警告：在线游戏由第三方提供
+multiplayerWarning.message=警告：在线游戏由非Mojang Studios或Microsoft拥有、运作和监督的第三方服务器提供。 在线游戏的过程中，你可能会收到不受规制的聊天消息或者其他不一定适合所有人的用户生成内容。
+multiplayerWarning.check=不再显示此屏幕
+
+onlinePlay.untrustedIp.title=§l未知的外部服务器
+onlinePlay.untrustedIp.message=您应该只连接到信任的服务器！仍想加入吗？
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=请检查你的配方书
+recipe.toast.title=新配方已解锁！
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=你只能在夜间或雷暴中入眠
+vdx.block.minecraft.bed.not_safe=你现在不能休息，周围有怪物在游荡
+vdx.block.minecraft.bed.obstructed=这张床已被阻挡
+vdx.block.minecraft.bed.occupied=这张床已被占用
+vdx.block.minecraft.bed.too_far_away=你现在不能休息，床太远了
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=建筑高度限制是319
+build.tooHigh.the_nether.aspects=建筑高度限制是127
+build.tooHigh.the_end.aspects=建筑高度限制是255
+build.tooLow.overworld.aspects=建筑最低高度是-64
+build.tooLow.the_nether.aspects=建筑最低高度是0
+build.tooLow.the_end.aspects=建筑最低高度是0
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input (Don't change unless you know what you are doing)
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output (event.minecraft.raid)
+bar.event.raid.name=袭击
+bar.event.raid.remaining.2=袭击 - 剩余2名袭击者
+bar.event.raid.remaining.1=袭击 - 剩余1名袭击者
+bar.event.raid.remaining.0=袭击 - 剩余0名袭击者
+bar.event.raid.victory=袭击 - 胜利
+bar.event.raid.defeat=袭击 - 失败
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§o搜索…
+gui.recipebook.toggleRecipes.all=显示全部
+gui.recipebook.toggleRecipes.blastable=仅显示可冶炼
+gui.recipebook.toggleRecipes.craftable=仅显示可合成
+gui.recipebook.toggleRecipes.smeltable=仅显示可烧炼
+gui.recipebook.toggleRecipes.smokable=仅显示可熏制
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=建筑
+vdx.creative.tab.equipment=装备
+vdx.creative.tab.items=物品
+vdx.creative.tab.nature=自然
+
+inventory.binSlot=摧毁物品
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=编辑悬挂式告示牌消息
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=控制台命令
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=相对位置
+structure_block.size=结构大小
+structure_block.integrity_and_seed=结构完整性及种子
+structure_block.detect_size=探测结构大小和位置：
+structure_block.mode_info.save=保存模式 — 写入文件
+structure_block.mode_info.load=加载模式 — 从文件中加载
+structure_block.mode_info.corner=角落模式 — 位置和大小标记
+structure_block.exportTo=导出:
+structure_block.mode.export=导出
+structure_block.button.detect_size=探测
+structure_block.button.save=保存
+structure_block.button.load=加载
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=交易
+merchant.deprecated=村民每天最多补货两次。

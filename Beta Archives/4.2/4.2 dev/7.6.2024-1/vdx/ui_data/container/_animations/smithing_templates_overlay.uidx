@@ -1,0 +1,59 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "smithing_templates_overlay_anim_dx",
+  
+  /*//// Main Panel ////*/
+  
+  "smithing_input_image_templates": {
+    "type": "panel",
+    "controls": [
+      {
+        "texture_0@empty_item_textures_dx.empty_slot_smithing_template_netherite_upgrade": {
+          "alpha": "@smithing_templates_overlay_anim_dx.frame_0_wait",
+          "propagate_alpha": true
+        }
+      },
+      {
+        "texture_1@empty_item_textures_dx.empty_slot_smithing_template_armor_trim": {
+          "alpha": "@smithing_templates_overlay_anim_dx.frame_1_wait",
+          "propagate_alpha": true
+        }
+      }
+    ]
+  },
+  
+  /* Frame Template */
+
+  "alpha_template": { "anim_type": "alpha", "easing": "linear", "duration": 0.2 },
+
+  "wait_template@smithing_templates_overlay_anim_dx.alpha_template": { "duration": 1.4 },
+
+  "frame_middle_wait@smithing_templates_overlay_anim_dx.wait_template": { "from": 0, "to": 0 },
+
+  "frame_middle_alpha@smithing_templates_overlay_anim_dx.alpha_template": { "from": 0, "to": 0 },
+  
+  /* Frame 0 */
+
+  "frame_0_wait@smithing_templates_overlay_anim_dx.wait_template": {
+    "from": 1, "to": 1,
+    "next": "@smithing_templates_overlay_anim_dx.frame_0_alpha"
+  },
+
+  "frame_0_alpha@smithing_templates_overlay_anim_dx.alpha_template": {
+    "from": 1, "to": 0,
+    "next": "@smithing_templates_overlay_anim_dx.frame_1_wait"
+  },
+  
+  /* Frame 1 */
+
+  "frame_1_wait@smithing_templates_overlay_anim_dx.wait_template": {
+    "from": 0, "to": 0,
+    "next": "@smithing_templates_overlay_anim_dx.frame_1_alpha"
+  },
+
+  "frame_1_alpha@smithing_templates_overlay_anim_dx.alpha_template": {
+    "from": 0, "to": 1,
+    "next": "@smithing_templates_overlay_anim_dx.frame_0_wait"
+  }
+}

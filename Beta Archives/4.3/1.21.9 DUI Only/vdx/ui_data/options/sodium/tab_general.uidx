@@ -1,0 +1,243 @@
+/*File made by @CrisXolt. Original UI design by JellySquid.
+//(c) Don't use any JSON UI data design without permission!*/
+{
+  "namespace": "sodium_tab_general_dx",
+
+  "vysnc_dropdown_content@settings_common.option_radio_dropdown_group": {
+    "size": [ "100%", "100%c" ],
+    "offset": [ 0, 0 ],
+    "$radio_buttons": [
+      {
+        "@dropdown_dx.dropdown_radio_with_label": {
+          "$toggle_state_binding_name": "#vsync_off",
+          "$radio_label_text": "options.vsync.off"
+        }
+      },
+      {
+        "@dropdown_dx.dropdown_radio_with_label": {
+          "$toggle_state_binding_name": "#vsync_on",
+          "$radio_label_text": "options.vsync.on"
+        }
+      },
+      {
+        "@dropdown_dx.dropdown_radio_with_label": {
+          "$toggle_state_binding_name": "#vsync_adaptive",
+          "$radio_label_text": "options.vsync.adaptive"
+        }
+      }
+    ]
+  },
+
+  "tab_general_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 240, "100%c" ],
+    "controls": [
+      {
+        "render_distance_slider@slider_dx.option_slider_sodium": {
+          "$tooltip_description_label": "sodium.options.view_distance.tooltip",
+          "$performance_impact_value_label": "sodium.option_impact.high",
+          "$performance_impact_value_color": "$6_color_format",
+          "$option_label": "#render_distance_slider_label",
+          "$option_header_label": "options.renderDistance",
+          "$slider_name": "render_distance",
+          "$slider_value_binding_name": "#render_distance",
+          "$slider_tts_text_value": "#render_distance_text_value",
+          "$option_enabled_binding_name": "#render_distance_enabled",
+          "$slider_steps_binding_name": "#render_distance_steps",
+          "$label_bindings": [ { "binding_name": "$slider_tts_text_value" } ],
+          "bindings": [
+            {
+              "binding_name": "#graphics_mode_is_simple_or_fancy",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "deferred_render_distance_slider@slider_dx.option_slider_sodium": {
+          "$tooltip_description_label": "sodium.options.view_distance.tooltip",
+          "$performance_impact_value_label": "sodium.option_impact.high",
+          "$performance_impact_value_color": "$6_color_format",
+          "$option_label": "#deferred_render_distance_slider_label",
+          "$option_header_label": "options.renderDistance",
+          "$slider_name": "deferred_render_distance",
+          "$slider_value_binding_name": "#deferred_render_distance",
+          "$slider_tts_text_value": "#deferred_render_distance_text_value",
+          "$option_enabled_binding_name": "#deferred_render_distance_enabled",
+          "$slider_steps_binding_name": "#deferred_render_distance_steps",
+          "$label_bindings": [ { "binding_name": "$slider_tts_text_value" } ],
+          "bindings": [
+            {
+              "binding_name": "#graphics_mode_is_deferred",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "raytracing_render_distance_slider@slider_dx.option_slider_sodium": {
+          "$tooltip_description_label": "sodium.options.view_distance.tooltip",
+          "$performance_impact_value_label": "sodium.option_impact.extreme",
+          "$performance_impact_value_color": "$c_color_format",
+          "$option_label": "#raytracing_render_distance_slider_label",
+          "$option_header_label": "options.renderDistance",
+          "$slider_name": "raytracing_render_distance",
+          "$slider_value_binding_name": "#raytracing_render_distance",
+          "$slider_tts_text_value": "#raytracing_render_distance_text_value",
+          "$option_enabled_binding_name": "#raytracing_render_distance_enabled",
+          "$slider_steps_binding_name": "#raytracing_render_distance_steps",
+          "$label_bindings": [ { "binding_name": "$slider_tts_text_value" } ],
+          "bindings": [
+            {
+              "binding_name": "#graphics_mode_is_ray_traced",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "brightness_slider@slider_dx.option_slider_sodium": {
+          "$tooltip_description_label": "sodium.options.brightness.tooltip",
+          "$ignore_performance_impact_label": true,
+          "$option_label": "#gamma_slider_label",
+          "$option_header_label": "options.gamma",
+          "$slider_name": "gamma",
+          "$slider_value_binding_name": "#gamma",
+          "$slider_tts_text_value": "#gamma_text_value",
+          "$option_enabled_binding_name": "#gamma_enabled",
+          "$label_bindings": [ { "binding_name": "$slider_tts_text_value" } ],
+          "bindings": [
+            {
+              "binding_name": "(not #graphics_mode_is_deferred)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "gamma_calibration@button_dx.main_black_button": {
+          "size": [ "100%", 18 ],
+          "$pressed_button_name": "button.gamma_calibration",
+          "$button_text": "options.gammaIntensity",
+          "$button_content": "sodium_panel_dx.sodium_button_panel_content",
+          "bindings": [
+            {
+              "binding_name": "#graphics_mode_is_deferred",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { "padding_0": { "type": "panel", "size": [ 0, 4 ] } },
+      {
+        "gui_scale_slider@slider_dx.option_slider_sodium": {
+          "$tooltip_description_label": "sodium.options.gui_scale.tooltip",
+          "$ignore_performance_impact_label": true,
+          "$option_label": "#gui_scale_slider_label",
+          "$option_header_label": "options.guiScale.optionName",
+          "$slider_name": "gui_scale",
+          "$slider_value_binding_name": "#gui_scale",
+          "$slider_tts_text_value": "#gui_scale_text_value",
+          "$option_enabled_binding_name": "#gui_scale_enabled",
+          "$slider_steps_binding_name": "#gui_scale_steps",
+          "$label_bindings": [ { "binding_name": "$slider_tts_text_value" } ]
+        }
+      },
+      {
+        "gui_accessibility_scaling_toggle@toggle_dx.option_toggle_sodium": {
+          "$tooltip_description_label": "options.gui.accessibility.scaling.tooltip",
+          "$ignore_performance_impact_label": true,
+          "$option_label": "options.gui.accessibility.scaling",
+          "$option_binding_name": "#gui_accessibility_scaling",
+          "$option_enabled_binding_name": "#gui_accessibility_scaling_enabled",
+          "$toggle_name": "gui_accessibility_scaling",
+          "layer": 1
+        }
+      },
+      {
+        "fullscreen_toggle@toggle_dx.option_toggle_sodium": {
+          "$show_fullscreen_toggle|default": true,
+          "visible": "($show_fullscreen_toggle and not $is_holographic)",
+          "$tooltip_description_label": "sodium.options.fullscreen.tooltip",
+          "$ignore_performance_impact_label": true,
+          "$option_label": "options.fullscreen",
+          "$option_binding_name": "#full_screen",
+          "$option_enabled_binding_name": "#full_screen_enabled",
+          "$toggle_name": "full_screen"
+        }
+      },
+      {
+        "vsync_dropdown@dropdown_dx.option_dropdown_sodium": {
+          "$tooltip_description_label": "sodium.options.v_sync.tooltip",
+          "$performance_impact_value_label": "sodium.option_impact.varies",
+          "$performance_impact_value_color": "$f_color_format",
+          "$option_dropdown_type": "dropdown_dx.dropdown_no_scrollpanel",
+          "$option_label": "options.vsync",
+          "$dropdown_content": "sodium_tab_general_dx.vysnc_dropdown_content",
+          "$dropdown_area": "content_area",
+          "$dropdown_name": "vsync_dropdown",
+          "$options_dropdown_toggle_label_binding": "#vsync_dropdown_toggle_label",
+          "$option_enabled_binding_name": "#vsync_dropdown_enabled",
+          "$focus_override_down": "sodium_max_framerate_slider"
+        }
+      },/* 
+      {
+        "vsync_toggle@toggle_dx.option_toggle_sodium": {
+          "$option_label": "options.vsync",
+          "$option_binding_name": "#vsync",
+          "$option_enabled_binding_name": "#vsync_enabled",
+          "$toggle_name": "vsync"
+        }
+      }, */
+      {
+        "max_framerate_slider@slider_dx.option_slider_sodium": {
+          "$tooltip_description_label": "sodium.options.fps_limit.tooltip",
+          "$ignore_performance_impact_label": true,
+          "$option_label": "#max_framerate_slider_label",
+          "$option_header_label": "options.framerateLimit",
+          "$slider_name": "max_framerate",
+          "$slider_tts_text_value": "#max_framerate_text_value",
+          "$slider_value_binding_name": "#max_framerate",
+          "$option_enabled_binding_name": "#max_framerate_enabled",
+          "$slider_steps_binding_name": "#max_framerate_steps",
+          "$focus_id": "sodium_max_framerate_slider",
+          "$label_bindings": [ { "binding_name": "$slider_tts_text_value" } ]
+        }
+      },
+      { "padding_1": { "type": "panel", "size": [ 0, 4 ] } },
+      {
+        "view_bobbing_toggle@toggle_dx.option_toggle_sodium": {
+          "$tooltip_description_label": "sodium.options.view_bobbing.tooltip",
+          "$ignore_performance_impact_label": true,
+          "ignored": "($is_holographic and $is_reality_mode and not $is_pregame)",
+          "$option_label": "options.viewBobbing",
+          "$option_binding_name": "#view_bobbing",
+          "$option_enabled_binding_name": "#view_bobbing_enabled",
+          "$toggle_name": "view_bobbing",
+          "$focus_override_up": "sodium_max_framerate_slider"
+        }
+      },
+      {
+        "field_of_view_toggle@toggle_dx.option_toggle_sodium": {
+          "$tooltip_description_label": "sodium.options.fov.toggle.tooltip",
+          "$ignore_performance_impact_label": true,
+          "$option_label": "options.fov.toggle",
+          "$option_binding_name": "#field_of_view_toggle",
+          "$option_enabled_binding_name": "#field_of_view_toggle_enabled",
+          "$toggle_name": "field_of_view_toggle"
+        }
+      },
+      {
+        "auto_save_icon_toggle@toggle_dx.option_toggle_sodium": {
+          "$tooltip_description_label": "sodium.options.autosave_indicator.tooltip",
+          "$ignore_performance_impact_label": true,
+          "$option_label": "options.showautosaveicon",
+          "$option_binding_name": "#show_auto_save_icon",
+          "$option_enabled_binding_name": "#show_auto_save_icon_enabled",
+          "$toggle_name": "show_auto_save_icon"
+        }
+      }
+    ]
+  }
+}

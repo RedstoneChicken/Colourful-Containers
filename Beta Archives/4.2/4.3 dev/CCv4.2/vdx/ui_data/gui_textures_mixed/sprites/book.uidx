@@ -1,0 +1,91 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "book_mixed_textures_dx",
+
+  "book": {
+    "type": "panel",
+    "size": [ 292, 180 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/book/book",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "signing_book": {
+    "type": "panel",
+    "size": [ 146, 180 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/book/signing_book",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Pages */
+
+  "page_backward": {
+    "type": "panel",
+    "size": [ 23, 13 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/book/page_backward",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "page_backward_highlighted": {
+    "type": "panel",
+    "size": [ 23, 13 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/book/page_backward_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "page_forward": {
+    "type": "panel",
+    "size": [ 23, 13 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/book/page_forward",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "page_forward_highlighted": {
+    "type": "panel",
+    "size": [ 23, 13 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/book/page_forward_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

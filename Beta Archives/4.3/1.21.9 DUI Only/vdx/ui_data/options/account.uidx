@@ -1,0 +1,365 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "account_options_dx",
+
+  /*//// Stack panels ////*/
+
+  "middle_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "top_padding": {
+          "type": "panel",
+          "size": [ 0, 4 ]
+        }
+      },
+      {
+        "switch_accounts": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "ignored": "$ignore_profile_switch_account_button",
+          "controls": [
+            {
+              "switch_accounts@button_dx.main_button_310": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "enabled": "$is_pregame",
+                "$button_size_override": [ "100%", "100% - 4px" ],
+                "$button_content": "general_section.switch_accounts_button_content",
+                "$pressed_button_name": "button.switch_accounts"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_0": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "bindings": [
+            {
+              "binding_name": "#can_change_name",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "option_text_edit_control@text_field_dx.option_text_field_list": {
+                "$option_text_edit_control_size": [ "50%", 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_place_holder_text": "options.defaultName",
+                "$max_text_edit_length": 16,
+                "$option_binding_name": "#player_name",
+                "$text_box_name": "player_name_text_box",
+                "$option_enabled_binding_name": "#player_name_enabled",
+                "$option_label": "options.name"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "bindings": [
+            {
+              "binding_name": "#not_logged_in",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "action_button@button_dx.main_button_310": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "sign_in_button",
+                "$button_text": "xbox.signInLong"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "bindings": [
+            {
+              "binding_name": "#logged_in",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "label@label_dx.global_label": {
+                "shadow": false,
+                "color": [ 1.0, 1.0, 1.0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 3, 4 ],
+                "size": [ "default", "default" ],
+                "text": "options.gamertag"
+              }
+            },
+            {
+              "gamerpic": {
+                "type": "custom",
+                "renderer": "profile_image_renderer",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 55, 0 ],
+                "size": [ 20, 20 ],
+                "layer": 5,
+                "bindings": [
+                  {
+                    "binding_name": "#profile_image_options"
+                  }
+                ]
+              }
+            },
+            {
+              "gamertag_label@label_dx.global_label": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 80, 4 ],
+                "layer": 5,
+                "size": [ "default", "default" ],
+                "color": "$main_header_text_color",
+                "shadow": false,
+                "text": "#gamertag_label",
+                "locked_alpha": 0.5,
+                "bindings": [
+                  {
+                    "binding_name": "#gamertag_label"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_3": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls)",
+          "bindings": [
+            {
+              "binding_name": "#logged_in",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "action_button_0@button_dx.main_button_150": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$pressed_button_name": "change_gamertag_button",
+                "$button_text": "options.changeGamertag"
+              }
+            },
+            {
+              "action_button_1@button_dx.main_button_150": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$pressed_button_name": "manage_account_button",
+                "$button_text": "options.manageAccount"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_4": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "ignored": "($is_holographic or $fire_tv or $education_edition or $thirdpartyconsole)",
+          "bindings": [
+            {
+              "binding_name": "#logged_in",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "privacy_button@button_dx.main_button_310": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$button_text": "options.xboxLive.privacyControl",
+                "$pressed_button_name": "button.menu_open_uri",
+                "$focus_id": "manage_invites",
+                "$focus_override_right": "manage_invites",
+                "$hyperlink": "https://account.xbox.com/Settings",
+                "property_bag": {
+                  "#hyperlink": "$hyperlink"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_5": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "ignored": "($build_platform_UWP or not $is_pregame or $requires_xbl_signin_to_play)",
+          "bindings": [
+            {
+              "binding_name": "#logged_in",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "sign_out@button_dx.main_button_310": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "sign_out_button",
+                "$button_text": "xbox.signOutLong"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "remote_connect_panel": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "ignored": "((not $google_os) and (not $is_ios))",
+          "bindings": [
+            {
+              "binding_name": "#logged_in",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "remote_connect_toggle@toggle_dx.option_toggle_list": {
+                "size": [ 310, 24 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_label": "options.useRemoteConnect",
+                "$option_binding_name": "#use_remote_connect",
+                "$option_enabled_binding_name": "#use_remote_connect_enabled",
+                "$toggle_name": "use_remote_connect"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "categorie_panel_0": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "controls": [
+            {
+              "object_name": {
+                "type": "image",
+                "texture": "vdx/ui_textures/global/color_base",
+                "layer": 5,
+                "size": [ "100%-20px", 1 ],
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "build_info_label_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "layer": 5,
+          "controls": [
+            {
+              "device_id_label@label_dx.global_label": {
+                "color": "$body_text_color",
+                "offset": [ 2, 0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "#device_id",
+                "bindings": [
+                  {
+                    "binding_name": "#device_id"
+                  }
+                ]
+              }
+            },
+            {
+              "MinecraftAccount_id_label@label_dx.global_label": {
+                "color": "$body_text_color",
+                "offset": [ 2, 0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "#MinecraftAccount_id",
+                "bindings": [
+                  {
+                    "binding_name": "#MinecraftAccount_id"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Top ////*/
+
+  "top_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "title_label@label_dx.global_label": {
+          "size": [ "default", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 5,
+          "shadow": true,
+          "color": "$main_button_default_color",
+          "text": "options.account",
+          "offset": [ 0, 11 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Bottom ////*/
+
+  "bottom_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "done_button@options_dx.done_button": {
+          "layer": 5,
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -6 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+
+  "full_screen@menu_scroll_panel_template_dx.menu_scroll_panel_template": {
+    "$top_content": "account_options_dx.top_content",
+    "$scrolling_content": "account_options_dx.middle_stack_panel",
+    "$bottom_content": "account_options_dx.bottom_content",
+    "$scroll_view_port_size": [ 324, "100%" ]
+  }
+}

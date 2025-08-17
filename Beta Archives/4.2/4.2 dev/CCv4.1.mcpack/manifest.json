@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "§4C§co§6l§eo§2u§nr§bf§3u§1l§9 Containers §dB§5E WOW§r",
+    "description": "By Redstone Chicken, Credits to CrisXolt - v4.2 [1.21.1]\n\nA texture pack that replaces Minecraft container GUI and makes them §lBeautiful!§r\n\n§7Need Help? - Join my discord server!\ndsc.gg/rscbuilds",
+    "uuid": "b40c98ac-9d23-4dd6-81f3-3081c53bc7ef",
+    "version": [4, 2, 0],
+    "min_engine_version": [ 1, 21, 0 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "22559513-49cd-4bd1-b99e-b7a318c85ff6",
+      "version": [4, 2, 0]
+    }
+  ],
+  "subpacks" :[
+    {
+      "folder_name":"dark",
+      "name":"§9Dark §rMode",
+      "memory_tier":1
+    },
+    {
+      "folder_name":"light",
+      "name":"§eLight §rMode",
+      "memory_tier":1
+    }
+  ]
+}

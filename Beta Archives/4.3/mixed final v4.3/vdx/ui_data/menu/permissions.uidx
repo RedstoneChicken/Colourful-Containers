@@ -1,0 +1,569 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "permissions_dx",
+
+  /*//// Player List Stack Panel ////*/
+
+  "player_list_panel": {
+		"type": "stack_panel",
+		"size": [ "100%", "100%c" ],
+		"controls": [
+      {
+        "top_padding": {
+          "type": "panel",
+          "size": [ "100%", 4 ]
+        }
+      },
+			{ 
+        "players_grid@permissions.players_grid": {
+          "grid_item_template": "permissions_dx.player_grid_item"
+        }
+      },
+      {
+        "bottom_padding": {
+          "type": "panel",
+          "size": [ "100%", 4 ]
+        }
+      }
+		]
+  },
+
+  "player_grid_item": {
+		"type": "panel",
+    "size": [ "100%", 14 ],
+		"controls": [
+			{
+				"inactive_modal_pane_fade@common.inactive_modal_pane_fade": {
+          "layer": 10,
+					"texture": "textures/ui/permissions_player_fade_overlay",
+					"bindings": [
+						{
+							"binding_name": "#content_area_focused",
+							"binding_name_override": "#visible"
+						}
+					]
+				}
+			},
+      {
+        "player_gamer_pic": {
+          "type": "image",
+          "texture": "#texture",
+          "texture_file_system": "#texture_source",
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 3, 3 ],
+          "size": [ 8, 8 ],
+          "bindings": [
+            {
+              "binding_name": "#texture",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_name": "#texture_source",
+              "binding_name_override": "#texture_file_system",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_name": "#gamerpic_visible",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+			{ 
+        "player_local_icon": {
+          "type": "image",
+          "texture": "textures/ui/lan_icon",
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 3, 3 ],
+          "size": [ 8, 8 ],
+          "bindings": [
+            {
+              "binding_name": "#local_icon_visible",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "gamertag_label@label_dx.global_label": {
+          "type": "label",
+          "color": "$main_header_text_color",
+          "text": "#gamertag",
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 14, 2 ],
+          "bindings": [
+            {
+              "binding_name": "#gamertag",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
+            }
+          ]
+        }
+      },
+      {
+        "permission_level_panel": {
+          "type": "panel",
+          "size": [ 8, 8 ],
+          "layer": 4,
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -3, 3 ],
+          "controls": [
+            {
+              "operator_icon@player_list_textures_dx.remove_operator": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_op_crown')",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "players_collection"
+                  }
+                ]
+              }
+            },
+            {
+              "user_icon@player_list_textures_dx.make_operator": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_member_star')",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "players_collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "player_toggle@toggle_dx.toggle_panel": {
+          "layer": 2,
+          "$toggle_name": "player_toggle",
+          "$toggle_binding_type": "collection",
+          "$toggle_grid_collection_name": "players_collection",
+          "$toggle_state_binding_name": "#player_toggle_state",
+          "$radio_toggle_group": true,
+
+          "$unchecked_control": "common.empty_panel",
+          "$checked_control": "permissions_dx.hover_toggle_image",
+          "$unchecked_hover_control": "permissions_dx.hover_toggle_image",
+          "$checked_hover_control": "permissions_dx.hover_toggle_image",
+    
+          "$unchecked_locked_control": "common.empty_panel",
+          "$checked_locked_control": "common.empty_panel",
+          "$unchecked_locked_hover_control": "common.empty_panel",
+          "$checked_locked_hover_control": "common.empty_panel"
+        }
+      }
+		]
+  },
+  
+  "hover_toggle_image": {
+    "type": "image",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ "100%", "100%" ],
+    "alpha": 0.25,
+    "texture": "vdx/ui_textures/global/color_base"
+  },
+
+  /*////// Content List Stack Panel  //////*/
+
+  "right_content_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      { "main_stack_panel@permissions_dx.main_stack_panel": { } }
+    ]
+  },
+
+  "main_stack_panel": {
+    "type": "stack_panel",
+    "size": [ 200, "100%c" ],
+    "controls": [
+      {
+        "top_padding": {
+          "type": "panel",
+          "size": [ "100%", 4 ]
+        }
+      },
+      {
+        "panel_0": {
+          "type": "panel",
+          "size": [ "100%", 32 ],
+          "controls": [
+            {
+              "locked_warning_label@label_dx.global_label": {
+                "size": [ "100%", "default" ],
+                "layer": 5,
+                "shadow": false,
+                "color": "$main_button_default_color",
+                "text": "#text",
+                "offset": [ 0, 5 ],
+                "bindings": [
+                  {
+                    "binding_name": "#world_template_permissions_locked_warning_text",
+                    "binding_name_override": "#text"
+                  }
+                ]
+              }
+            }
+          ],
+					"bindings": [
+						{
+							"binding_name": "#is_world_template_locked",
+							"binding_name_override": "#visible"
+						}
+					]
+        }
+      },
+      {
+        "dropdown_panel": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "controls": [
+            {
+              "permission_level_dropdown@dropdown_dx.option_dropdown_200": {
+                "size": [ 200, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_dropdown_type": "dropdown_dx.dropdown_no_scrollpanel",
+                "$option_label": "permissions.level",
+                "$dropdown_content": "permissions.permission_level_dropdown_content",
+                "$dropdown_area": "permissions_options_scrolling_panel",
+                "$dropdown_name": "permission_level_dropdown",
+                "$button_type_panel": "permissions.permission_level_dropdown_state_content",
+                "$option_enabled_binding_name": "#can_edit_permissions",
+                "$options_dropdown_toggle_label_binding": "#permission_level_dropdown_label",
+                "$default_focus_precedence": 2,
+                "$focus_override_up": "back_button"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bottom_padding": {
+          "type": "panel",
+          "size": [ "100%", 2 ]
+        }
+      },
+			{ 
+        "permissions_options_grid@permissions.permissions_options_grid": {
+          "$option_binding_name": "unset",
+          "grid_item_template": "permissions_dx.permissions_options_grid_item"
+        }
+      },
+      {
+        "kick_button_panel": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "bindings": [
+            {
+              "binding_name": "#kick_button_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ],
+          "controls": [
+            {
+              "kick_button@button_dx.main_button_200": {
+                "size": [ 200, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+
+                "$pressed_button_name": "button.kick",
+                "$button_text": "permissionsScreen.kick",
+                "focus_change_down": "button.ban",
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "layer": 4,
+                "bindings": [
+                  {
+                    "binding_name": "#kick_button_enabled",
+                    "binding_name_override": "#enabled"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ban_button_panel": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "bindings": [
+            {
+              "binding_name": "#ban_button_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ],
+          "controls": [
+            {
+              "ban_button@button_dx.main_button_220": {
+                "size": [ 220, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+
+                "$pressed_button_name": "button.ban",
+                "$button_text": "permissionsScreen.ban",
+                "focus_change_down": "FOCUS_OVERRIDE_STOP",
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "layer": 4,
+                "bindings": [
+                  {
+                    "binding_name": "#ban_button_enabled",
+                    "binding_name_override": "#enabled"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "permissions_options_grid_item": {
+		"type": "panel",
+		"size": [ "100%", 24 ],
+    "$label_color": [ 1.0, 1.0, 1.0 ],
+    "$label_anchor": "left_middle",
+    "$label_offset": [ 3, -3 ],
+    "$label_size": [ "100%", "default" ],
+    "$only_value": true,
+		"controls": [
+      {
+        "label_panel_hold": {
+          "type": "panel",
+          "size": [ "100%", 24 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "button_label@button_dx.button_label": {
+                "shadow": false,
+                "font_scale_factor": 1.0,
+                "$chat_fixed_line_padding": 2.0,
+                "size": "$label_size",
+                "offset": "$label_offset",
+                "color": "$label_color",
+                "layer": 5,
+                "anchor_from": "$label_anchor",
+                "anchor_to": "$label_anchor",
+                "text_alignment": "left",
+                "text": "#option_name",
+                "bindings": [
+                  {
+                    "binding_name": "#option_name",
+                    "binding_type": "collection",
+                    "binding_collection_name": "permissions_collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_toggle_control@permissions.option_toggle": {
+          "size": [ 44, 20 ],
+          "$toggle_texture_default": "button_dx.main_button_default_44",
+          "$toggle_texture_hover": "button_dx.main_button_hover_44",
+          "$toggle_texture_locked": "button_dx.main_button_locked_44",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$toggle_off_text": "options.off",
+          "$toggle_on_text": "options.on",
+
+          "$unchecked_control": "toggle_dx.toggle_unchecked",
+          "$checked_control": "toggle_dx.toggle_checked",
+          "$unchecked_hover_control": "toggle_dx.toggle_unchecked_hover",
+          "$checked_hover_control": "toggle_dx.toggle_checked_hover",
+          
+          "$unchecked_locked_control": "toggle_dx.toggle_unchecked_locked",
+          "$unchecked_locked_hover_control": "toggle_dx.toggle_unchecked_locked",
+          "$checked_locked_control": "toggle_dx.toggle_checked_locked",
+          "$checked_locked_hover_control": "toggle_dx.toggle_checked_locked",
+
+          "$button_content": "toggle_dx.button_label_with_value"
+        }
+      }
+		]
+	},
+  
+  /*//// Screen ////*/
+
+  "full_screen": {
+    "type": "panel",
+    "$is_in_world": true,
+    "controls": [
+      { 
+        "main_control": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "top_safezone_vertical_buffer": {
+                "ignored": "(not $is_affected_by_safezone)",
+                "type": "panel",
+                "size": "$top_vertical_safezone_size"
+              }
+            },
+            { 
+              "top": {
+                "type": "panel",
+                "size": [ "100%", 33 ],
+                "controls": [
+                  {
+                    "title_label@label_dx.global_label": {
+                      "size": [ "default", 10 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "layer": 5,
+                      "shadow": true,
+                      "color": "$main_button_default_color",
+                      "text": "permissions.title",
+                      "offset": [ 0, 11 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "middle_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%", "fill" ],
+                "$scroll_bar_contained": false,
+                "controls": [
+                  {
+                    "left": {
+                      "ignored": "(not $is_affected_by_safezone)",
+                      "type": "panel",
+                      "size": "$left_horizontal_safezone_size"
+                    }
+                  },
+                  {
+                    "left_separator": {
+                      "type": "panel",
+                      "size": [ 10, "100%" ]
+                    }
+                  },
+                  { "middle_panel_left@menu_scroll_panel_template_dx.middle_panel": { "size": [ 158, "100%" ], "$scrolling_content": "permissions_dx.player_list_panel" } },
+                  {
+                    "middle_separator": {
+                      "type": "panel",
+                      "size": [ 10, "100%" ]
+                    }
+                  },
+                  {
+                    "object_name@common.modal_area_panel_base": {
+                      "size": [ "fill", "100%" ],
+                      "$menu_cancel_button_id": "button.back_to_selector_area",
+                      "$modal_binding_name": "#content_area_focused",
+                      "controls": [
+                        {
+                          "inactive_modal_pane_fade@common.inactive_modal_pane_fade": {
+                            "bindings": [
+                              {
+                                "binding_name": "#selector_area_focused",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        { "middle_panel_right@menu_scroll_panel_template_dx.middle_panel": { "size": [ "100%", "100%" ], "$scrolling_content": "permissions_dx.right_content_panel" } }
+                      ]
+                    }
+                  },
+                  {
+                    "right_separator": {
+                      "type": "panel",
+                      "size": [ 10, "100%" ]
+                    }
+                  },
+                  {
+                    "right": {
+                      "ignored": "(not $is_affected_by_safezone)",
+                      "type": "panel",
+                      "size": "$right_horizontal_safezone_size"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "bottom": {
+                "type": "panel",
+                "size": [ "100%", 33 ],
+                "controls": [
+                  {
+                    "done_button@button_dx.main_button_200": {
+                      "button_mappings": [
+                        {
+                          "from_button_id": "button.menu_cancel",
+                          "to_button_id": "button.menu_exit",
+                          "mapping_type": "global"
+                        },
+                        {
+                          "from_button_id": "button.menu_exit",
+                          "to_button_id": "button.menu_exit",
+                          "mapping_type": "global"
+                        },
+                        {
+                          "from_button_id": "button.menu_select",
+                          "to_button_id": "button.menu_exit",
+                          "mapping_type": "pressed"
+                        },
+                        {
+                          "from_button_id": "button.menu_ok",
+                          "to_button_id": "button.menu_exit",
+                          "mapping_type": "focused"
+                        }
+                      ],
+                      "$button_text": "gui.done",
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "offset": [ 0, -7 ],
+                      "layer": 10
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "bottom_safezone_vertical_buffer": {
+                "ignored": "(not $is_affected_by_safezone)",
+                "type": "panel",
+                "size": "$bottom_vertical_safezone_size"
+              }
+            }
+          ]
+        }
+      },
+      { "menu_background@menu_background_textures_dx.inworld_menu_header_background": { "layer": -10 } }
+    ]
+  }
+}

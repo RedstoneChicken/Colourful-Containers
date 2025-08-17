@@ -1,0 +1,136 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "hud_mob_effect_dx",
+
+  "mob_effect_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "survival_mode": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "#show_survival_ui",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { 
+              "mob_effects_renderer_pocket": {
+                "type": "custom",
+                "renderer": "mob_effects_renderer",
+                "layer": 1,
+                "size": [ "100%", "75%" ],
+                "offset": [ 6, "-20%+40px" ], //  [ -15, -110 ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "bindings": [
+                  {
+                    "binding_name": "#hud_visible_not_centered",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            { 
+              "mob_effects_renderer_classic": {
+                "ignored": "$pocket_edition",
+                "type": "custom",
+                "renderer": "mob_effects_renderer",
+                "layer": 1,
+                "size": [ "100%", "100%" ],
+                "offset": [ 6, -32 ], //  [ -15, -110 ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "bindings": [
+                  {
+                    "binding_name": "(not #hud_visible_not_centered)",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            { 
+              "pe_mob_effects_renderer_pocket": {
+                "ignored": "(not $pocket_edition)",
+                "type": "custom",
+                "renderer": "mob_effects_renderer",
+                "layer": 1,
+                "size": [ "100%", "75%" ],
+                "offset": [ 6, "-30%+40px" ], //  [ -15, -110 ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "bindings": [
+                  {
+                    "binding_name": "#hud_visible_not_centered",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            { 
+              "pe_mob_effects_renderer_classic": {
+                "ignored": "(not $pocket_edition)",
+                "type": "custom",
+                "renderer": "mob_effects_renderer",
+                "layer": 1,
+                "size": [ "100%", "75%" ],
+                "offset": [ 6, "-40%+24px" ], //  [ -15, -110 ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "bindings": [
+                  {
+                    "binding_name": "(not #hud_visible_not_centered)",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "creative_mode": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "#is_creative_mode",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { 
+              "mob_effects_renderer": {
+                "ignored": "$pocket_edition",
+                "type": "custom",
+                "renderer": "mob_effects_renderer",
+                "layer": 1,
+                "size": [ "100%", "100%" ],
+                "offset": [ 6, -32 ], //  [ -15, -110 ],
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            },
+            { 
+              "pe_mob_effects_renderer": {
+                "ignored": "(not $pocket_edition)",
+                "type": "custom",
+                "renderer": "mob_effects_renderer",
+                "layer": 1,
+                "size": [ "100%", "75%" ],
+                "offset": [ 6, "-40%+24px" ], //  [ -15, -110 ],
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

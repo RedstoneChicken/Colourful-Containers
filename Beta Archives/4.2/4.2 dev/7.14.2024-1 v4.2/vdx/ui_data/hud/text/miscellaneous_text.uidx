@@ -1,0 +1,64 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "hud_miscellaneous_text_dx",
+
+  /* Hud Tip Text */
+
+  "hud_tip_text_factory": {
+    "type": "factory",
+    "control_name": "@hud_miscellaneous_text_dx.hud_tip_text"
+  },
+
+  "hud_tip_text@label_dx.global_label": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": "$hud_tip_text_offset",
+    "text_alignment": "center",
+    "layer": 31,
+    "color": "$tool_tip_text",
+    "text": "#text",
+    "shadow": true,
+    "alpha": "@hud_item_text_dx.anim_item_name_text_alpha_out",
+    "$wait_duration": 1,
+    "$destroy_id": "popup_tip_text",
+    "bindings": [
+      {
+        "binding_name": "#tip_text",
+        "binding_name_override": "#text"
+      }
+    ],
+    "controls": [
+      { "hud_text_background@hud_item_text_dx.hud_text_background": { "alpha": "@hud_item_text_dx.anim_item_name_text_alpha_out" } }
+    ]
+  },
+
+  /* Hud Actionbar Text */
+
+  "hud_actionbar_text_area": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_actionbar_text_factory",
+      "control_ids": {
+        "hud_actionbar_text": "hud_actionbar_text@hud_miscellaneous_text_dx.hud_actionbar_text"
+      }
+    }
+  },
+
+  "hud_actionbar_text@label_dx.global_label": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": "$hud_action_bar_offset",
+    "text_alignment": "center",
+    "layer": 31,
+    "color": "$tool_tip_text",
+    "text": "$actionbar_text",
+    "shadow": true,
+    "alpha": "@hud_item_text_dx.anim_item_name_text_alpha_in",
+    "$wait_duration": 1,
+    "$destroy_id": "hud_actionbar_text",
+    "controls": [
+      { "hud_text_background@hud_item_text_dx.hud_text_background": { "alpha": "@hud_item_text_dx.anim_item_name_text_alpha_in" } }
+    ]
+  }
+}

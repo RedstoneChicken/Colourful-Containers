@@ -1,0 +1,353 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "main_textures_dx",
+
+  /*////// Base //////*/
+
+	"aseprite_uv_animation": {
+		"anim_type": "aseprite_flip_book",
+		"initial_uv": [ 0, 0 ]
+	},
+
+  /*////// Chat //////*/
+  
+  "chat_text_field_bg": {
+    "type": "image",
+    "texture": "vdx/ui_textures/chat/text_field_bg"
+  },
+  
+  "chat_screen_messages_background": {
+    "type": "image",
+    "texture": "vdx/ui_textures/chat/main_chat_bg"
+  },
+  
+  "chat_screen_messages_background_opaque": {
+    "type": "image",
+    "texture": "vdx/ui_textures/chat/main_chat_bg_opaque"
+  },
+  
+  "chat_scroller": {
+    "type": "image",
+    "texture": "vdx/ui_textures/chat/chat_scroller"
+  },
+
+  /*////// HUD //////*/
+  
+  "hud_chat_messages_background": {
+    "type": "image",
+    "texture": "vdx/ui_textures/chat/hud_chat_bg"
+  },
+  
+  "scoreboard_sidebar": {
+    "type": "image",
+    "texture": "vdx/ui_textures/hud/scoreboard_sidebar"
+  },
+
+  "inventory_button": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "layer": 32,
+          "alpha": 0.5,
+          "texture": "vdx/ui_textures/hud/inventory_button"
+        }
+      }
+    ]
+  },
+
+  "inventory_button_pressed": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "layer": 32,
+          "alpha": 0.375,
+          "texture": "vdx/ui_textures/hud/inventory_button"
+        }
+      }
+    ]
+  },
+
+  /*////// Container //////*/
+
+  "main_cell_image": {
+    "type": "panel"
+  },
+
+  "highlight_slot": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "layer": -6,
+          "texture": "vdx/ui_textures/container_mixed/highlight_slot",
+          "size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "border": {
+          "type": "image",
+          "layer": -6,
+          "texture": "vdx/ui_textures/container_mixed/highlight_slot_border",
+          "size": [ 18, 18 ]
+        }
+      }
+    ]
+  },
+
+  "highlight_slot_output": {
+    "type": "panel",
+    "size": [ 24, 24 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "layer": -6,
+          "texture": "vdx/ui_textures/container_mixed/highlight_slot_output",
+          "size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "border": {
+          "type": "image",
+          "layer": -6,
+          "texture": "vdx/ui_textures/container_mixed/highlight_slot_output_border",
+          "size": [ 26, 26 ]
+        }
+      }
+    ]
+  },
+
+  "lock_cell_slot": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "vdx/ui_textures/container/lock_cell_slot",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "red_cell_slot": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "warning": {
+          "type": "image",
+          "layer": 6,
+          "texture": "vdx/ui_textures/container_mixed/warning_icon",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 8, 8 ]
+        }
+      },
+      {
+        "texture": {
+          "type": "image",
+          "texture": "vdx/ui_textures/container_mixed/red_cell_slot",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "red_cell_slot_output": {
+    "type": "panel",
+    "size": [ 24, 24 ],
+    "controls": [
+      {
+        "warning": {
+          "type": "image",
+          "layer": 6,
+          "texture": "vdx/ui_textures/container_mixed/warning_icon",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 8, 8 ]
+        }
+      },
+      {
+        "texture": {
+          "type": "image",
+          "texture": "vdx/ui_textures/container_mixed/red_cell_slot_output",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "red_cell_slot_overlay": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [/* 
+      {
+        "texture": {
+          "type": "image",
+          "texture": "vdx/ui_textures/container/red_cell_slot_overlay",
+          "size": [ "100%", "100%" ]
+        }
+      } */
+    ]
+  },
+
+  "red_cell_slot_overlay_output": {
+    "type": "panel",
+    "size": [ 24, 24 ],
+    "controls": [/* 
+      {
+        "texture": {
+          "type": "image",
+          "texture": "vdx/ui_textures/container/red_cell_slot_overlay_output",
+          "size": [ "100%", "100%" ]
+        }
+      } */
+    ]
+  },
+
+  "red_highlight_slot": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "layer": -1,
+          "texture": "vdx/ui_textures/container_mixed/highlight_slot",
+          "size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "border": {
+          "type": "image",
+          "layer": -1,
+          "texture": "vdx/ui_textures/container_mixed/highlight_slot_border",
+          "size": [ 18, 18 ]
+        }
+      }
+    ]
+  },
+
+  "red_highlight_slot_output": {
+    "type": "panel",
+    "size": [ 24, 24 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "layer": -1,
+          "texture": "vdx/ui_textures/container_mixed/highlight_slot_output",
+          "size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "border": {
+          "type": "image",
+          "layer": -1,
+          "texture": "vdx/ui_textures/container_mixed/highlight_slot_output_border",
+          "size": [ 26, 26 ]
+        }
+      }
+    ]
+  },
+
+  /*////// GUI Menus //////*/
+
+  "scroll_track": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "color": [ 0.0, 0.0, 0.0 ],
+          "texture": "vdx/ui_textures/global/color_base"
+        }
+      }
+    ]
+  },
+
+  "grid_icon_frame": {
+    "type": "panel",
+    "size": [ 34, 34 ],
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "vdx/ui_textures/gui_menu/grid_icon_frame"
+        }
+      }
+    ]
+  },
+
+  "grid_icon_highlighted": {
+    "type": "panel",
+    "size": [ 32, 32 ],
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "vdx/ui_textures/gui_menu/grid_icon_highlighted"
+        }
+      }
+    ]
+  },
+
+  "grid_panel_selected": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "vdx/ui_textures/gui_menu/grid_panel_selected"
+        }
+      }
+    ]
+  },
+
+  /*////// GUI Backgrounds //////*/
+
+  "screen_background": {
+    "type": "panel",
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "vdx/ui_textures/gui_menu/screen_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "death_screen_background": {
+    "type": "panel",
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "vdx/ui_textures/gui_menu/death_screen_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

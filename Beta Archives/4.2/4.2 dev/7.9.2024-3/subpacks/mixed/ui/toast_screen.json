@@ -1,0 +1,7 @@
+/*File modified by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "toast_screen": {
+    "$screen_content": "toast_desktop_dx.main_screen_content"
+  }
+}

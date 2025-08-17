@@ -1,0 +1,642 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "slider_dx",
+
+  /*//// Option Slider ////*/
+
+  "option_slider_120@slider_dx.option_slider_base": {
+    "size": [ 120, 20 ],
+    "$slider_bg_default": "widget_slider_textures_dx.slider_120",
+    "$slider_bg_hover": "widget_slider_textures_dx.slider_120_highlighted"
+  },
+
+  "option_slider_150@slider_dx.option_slider_base": {
+    "size": [ 150, 20 ],
+    "$slider_bg_default": "widget_slider_textures_dx.slider_150",
+    "$slider_bg_hover": "widget_slider_textures_dx.slider_150_highlighted"
+  },
+
+  "option_slider_200@slider_dx.option_slider_base": {
+    "size": [ 200, 20 ],
+    "$slider_bg_default": "widget_slider_textures_dx.slider_200",
+    "$slider_bg_hover": "widget_slider_textures_dx.slider_200_highlighted"
+  },
+
+  "option_slider_220@slider_dx.option_slider_base": {
+    "size": [ 220, 20 ],
+    "$slider_bg_default": "widget_slider_textures_dx.slider_220",
+    "$slider_bg_hover": "widget_slider_textures_dx.slider_220_highlighted"
+  },
+
+  "option_slider_310@slider_dx.option_slider_base": {
+    "size": [ 310, 20 ],
+    "$slider_bg_default": "widget_slider_textures_dx.slider_310",
+    "$slider_bg_hover": "widget_slider_textures_dx.slider_310_highlighted"
+  },
+
+  "option_slider_base@settings_common.option_generic_core": {
+    "type": "panel",
+    "size": [ 200, 20 ],
+    "$enabled|default": true,
+    "$option_enabled_binding_name|default": "",
+    "$slider_label_control": "slider_dx.slider_label",
+    "$label_bindings|default": [],
+    "controls": [
+      {
+        "slider@common.slider": {
+          "size": [ "100% -8px", "100%" ],
+
+          "$slider_step_factory_control_ids": {
+            "slider_step": "@common.empty_panel",
+            "slider_step_hover": "@common.empty_panel",
+            "slider_step_progress": "@common.empty_panel",
+            "slider_step_progress_hover": "@common.empty_panel"
+          },
+
+          "$option_label|default": "",
+
+          "$slider_tts_header": "$option_label",
+          "$slider_tts_header_binding_type": "global",
+
+          "enabled": "$enabled",
+          "$slider_enabled_binding_name": "$option_enabled_binding_name",
+          "$slider_enabled_binding_type": "global",
+          "variables": [
+            {
+              "requires": "(not $option_enabled_binding_name or not $enabled)",
+              "$slider_enabled_binding_name": "#not_data_bound",
+              "$slider_enabled_binding_type": "none"
+            }
+          ],
+          "controls": [
+            { 
+              "slider_box@common.slider_box": {
+                "size": [ 8, 20 ],
+                "layer": 3,
+                "$hover_content": "common.empty_panel",
+                "controls": [
+                  { "default@widget_slider_textures_dx.slider_handle": { "layer": 2 } },
+                  { "hover@widget_slider_textures_dx.slider_handle_highlighted": { "layer": 3 } },
+                  { "indent@widget_slider_textures_dx.slider_handle_highlighted": { "layer": 4 } },
+                  { "locked@common.empty_panel": { } }
+                ]
+              }
+            },
+            { "slider_bar_default@slider_dx.slider_bar_default": { "layer": 2 } },
+            { "slider_bar_hover@slider_dx.slider_bar_hover": { "layer": 2, "visible": false } },
+            {
+              "locked_panel": {
+                "type": "panel",
+                "$text_color": "$main_button_locked_color",
+                "layer": 1,
+                "bindings": [
+                  {
+                    "binding_name": "(not $option_enabled_binding_name)",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "option_label@$slider_label_control": { "layer": 2 } },
+                  { 
+                    "slider_bg_default@$slider_bg_default": {
+                      "size": [ "100%+8px", 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ -4, 0 ],
+                      "layer": 1
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "slider_label@label_dx.global_label": {
+    "shadow": true,
+    "size": [ "default", 10 ],
+    "color": "$text_color",
+    "layer": 8,
+    "text": "$option_label",
+    "bindings": "$label_bindings"
+  },
+
+  "slider_bar_default": {
+    "type": "panel",
+    "size": [ "100%+8px", 20 ],
+    "$text_color": "$main_button_default_color",
+    "$hover_content|default": "common.empty_panel",
+    "$slider_texture": "$slider_bg_default",
+    "$is_hover": false,
+    "controls": [
+      {
+        "default_panel": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "($option_enabled_binding_name)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { "option_label@$slider_label_control": { } }
+          ]
+        }
+      },
+      {
+        "hover_content@$hover_content": {
+          "ignored": "(not $is_hover)"
+        }
+      },
+      { 
+        "slider_bg@$slider_texture": {
+          "bindings": [
+            {
+              "binding_name": "($option_enabled_binding_name)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "size": [ "100%", 20 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "slider_bar_hover@slider_dx.slider_bar_default": { "$slider_texture": "$slider_bg_hover", "$text_color": "$main_button_hover_color", "$is_hover": true  },
+
+  /*//// Option Slider Sodium ////*/
+
+  "option_slider_sodium@settings_common.option_generic_core": {
+    "type": "panel",
+    "size": [ "100%", 18 ],
+    "$enabled|default": true,
+    "$option_enabled_binding_name|default": "",
+    "$slider_label_control": "slider_dx.slider_label",
+    "$label_bindings|default": [],
+    "controls": [
+      {
+        "mouse_support": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "(#close_button_visible)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "slider@common.slider": {
+                "layer": 1,
+                "size": [ 90, 10 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [ -6, 4 ],
+
+                "$slider_step_factory_control_ids": {
+                  "slider_step": "@common.empty_panel",
+                  "slider_step_hover": "@common.empty_panel",
+                  "slider_step_progress": "@common.empty_panel",
+                  "slider_step_progress_hover": "@common.empty_panel"
+                },
+
+                "$option_label|default": "",
+
+                "$slider_tts_header": "$option_label",
+                "$slider_tts_header_binding_type": "global",
+
+                "enabled": "$enabled",
+                "$slider_enabled_binding_name": "$option_enabled_binding_name",
+                "$slider_enabled_binding_type": "global",
+                "variables": [
+                  {
+                    "requires": "(not $option_enabled_binding_name or not $enabled)",
+                    "$slider_enabled_binding_name": "#not_data_bound",
+                    "$slider_enabled_binding_type": "none"
+                  }
+                ],
+                "controls": [
+                  {
+                    "slider_box@common.slider_box": {
+                      "layer": 1,
+                      "size": [ 4, 10 ],
+                      "controls": [
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "button@common.button": {
+                "layer": 2,
+                "size": [ "100%", 18 ],
+                "pressed_control": "hover",
+                "locked_control": "locked",
+                "consume_hover_events": false,
+                "consume_event": false,
+                "button_mappings": [
+                  {
+                    "to_button_id": "unset",
+                    "mapping_type": "pressed",
+                    "consume_event": false
+                  }
+                ],
+                "controls": [
+                  { "default@slider_dx.slider_panel_sodium_default": { } },
+                  { "hover@slider_dx.slider_panel_sodium_highlighted": { } },
+                  { "locked@slider_dx.slider_panel_sodium_disabled": { } }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "controller_support": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "(not #close_button_visible)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "slider@common.slider": {
+                "layer": 1,
+                "size": [ 90, 10 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [ -6, 4 ],
+
+                "$slider_step_factory_control_ids": {
+                  "slider_step": "@common.empty_panel",
+                  "slider_step_hover": "@common.empty_panel",
+                  "slider_step_progress": "@common.empty_panel",
+                  "slider_step_progress_hover": "@common.empty_panel"
+                },
+
+                "$option_label|default": "",
+
+                "$slider_tts_header": "$option_label",
+                "$slider_tts_header_binding_type": "global",
+
+                "enabled": "$enabled",
+                "$slider_enabled_binding_name": "$option_enabled_binding_name",
+                "$slider_enabled_binding_type": "global",
+                "variables": [
+                  {
+                    "requires": "(not $option_enabled_binding_name or not $enabled)",
+                    "$slider_enabled_binding_name": "#not_data_bound",
+                    "$slider_enabled_binding_type": "none"
+                  }
+                ],
+                "controls": [
+                  {
+                    "slider_bar_default": {
+                      "type": "panel",
+                      "controls": [
+                        { 
+                          "enabled@slider_dx.slider_panel_sodium_default": {
+                            "size": [ 240, 18 ],
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "offset": [ 6, -4 ],
+                            "layer": 2,
+                            "bindings": [
+                              {
+                                "binding_name": "($slider_enabled_binding_name)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "disabled@slider_dx.slider_panel_sodium_disabled": {
+                            "size": [ 240, 18 ],
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "offset": [ 6, -4 ],
+                            "layer": 1,
+                            "bindings": [
+                              {
+                                "binding_type": "$slider_enabled_binding_type",
+                                "binding_condition": "$slider_enabled_binding_condition",
+                                "binding_collection_name": "$slider_collection_name",
+                                "binding_name": "(not $slider_enabled_binding_name)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  { 
+                    "slider_bar_hover@slider_dx.slider_panel_sodium_highlighted_controller": { 
+                      "size": [ 240, 18 ],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [ 6, -4 ],
+                      "layer": 2,
+                      "visible": false
+                    }
+                  },
+                  {
+                    "slider_box@common.slider_box": {
+                      "layer": 1,
+                      "size": [ 4, 10 ],
+                      "controls": [
+                        {
+                          "hover": {
+                            "layer": 16,
+                            "type": "image",
+                            "texture": "vdx/ui_textures/widget/slider_box",
+                            "size": [ 12, 18 ]
+                          }
+                        },
+                        {
+                          "indent": {
+                            "layer": 16,
+                            "type": "image",
+                            "texture": "vdx/ui_textures/widget/slider_box",
+                            "size": [ 12, 18 ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "slider_panel_sodium_default": {
+    "type": "panel",
+    "controls": [
+      { "bg@button_dx.black_button_default": { "layer": 1, "size": [ "100%", "100%" ], "$button_content": "common.empty_panel" } },
+      {
+        "option_label@label_dx.global_label": {
+          "shadow": true,
+          "layer": 8,
+          "size": [ "100%-36px", 10 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 6, 4 ],
+          "color": "$main_button_default_color",
+          "text": "$option_header_label" 
+        }
+      },
+      {
+        "value_label@label_dx.global_label": {
+          "shadow": true,
+          "layer": 8,
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -6, 4 ],
+          "color": "$main_button_default_color",
+          "text": "$slider_tts_text_value",
+          "bindings": [
+            {
+              "binding_name": "$slider_tts_text_value"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "slider_panel_sodium_highlighted": {
+    "type": "panel",
+    "controls": [
+      { "bg@button_dx.black_button_hover": { "layer": 1, "size": [ "100%", "100%" ], "$button_content": "common.empty_panel" } },
+      { "tooltip_panel@sodium_panel_dx.tooltip_panel": { } },
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal", 
+          "size": [ "100%", "100%" ],
+          "layer": 8,
+          "controls": [
+            {
+              "panel": {
+                "type": "panel",
+                "size": [ "fill", "100%" ],
+                "controls": [
+                  {
+                    "option_label@label_dx.global_label": {
+                      "shadow": true,
+                      "size": [ "100%-22px", 10 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 6, 4 ],
+                      "color": "$main_button_hover_color",
+                      "text": "$option_header_label" 
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "value_panel": {
+                "type": "panel",
+                "size": [ "100%cm", "100%" ],
+                "controls": [
+                  {
+                    "option_label@label_dx.global_label": {
+                      "shadow": true,
+                      "size": [ "default", 10 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 0, 4 ],
+                      "color": "$main_button_hover_color",
+                      "text": "$slider_tts_text_value",
+                      "bindings": [
+                        {
+                          "binding_name": "$slider_tts_text_value"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            { 
+              "bar_texture": {
+                "layer": 6,
+                "type": "image",
+                "texture": "vdx/ui_textures/widget/slider_bar",
+                "size": [ 102, 18 ],
+                "controls": [
+                  {
+                    "slider@common.slider": {
+                      "layer": 1,
+                      "size": [ 90, 0 ],
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "offset": [ -6, 0 ],
+
+                      "$slider_step_factory_control_ids": {
+                        "slider_step": "@common.empty_panel",
+                        "slider_step_hover": "@common.empty_panel",
+                        "slider_step_progress": "@common.empty_panel",
+                        "slider_step_progress_hover": "@common.empty_panel"
+                      },
+
+                      "$option_label|default": "",
+
+                      "$slider_tts_header": "$option_label",
+                      "$slider_tts_header_binding_type": "global",
+
+                      "focus_enabled": false,
+                      "enabled": false,
+                      "$slider_enabled_binding_name": "$option_enabled_binding_name",
+                      "$slider_enabled_binding_type": "global",
+                      "variables": [
+                      ],
+                      "controls": [
+                        {
+                          "slider_box@common.slider_box": {
+                            "layer": 1,
+                            "size": [ 4, 0 ],
+                            "controls": [
+                              {
+                                "panel": {
+                                  "layer": 16,
+                                  "type": "image",
+                                  "texture": "vdx/ui_textures/widget/slider_box",
+                                  "offset": [ 0, -9 ],
+                                  "size": [ 12, 18 ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "slider_panel_sodium_disabled": {
+    "type": "panel",
+    "controls": [
+      { "bg@button_dx.black_button_locked": { "layer": 1, "size": [ "100%", "100%" ], "$button_content": "common.empty_panel" } },
+      {
+        "option_label@label_dx.global_label": {
+          "shadow": true,
+          "layer": 8,
+          "size": [ "100%-36px", 10 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 6, 4 ],
+          "color": "$main_button_locked_color",
+          "text": "$option_header_label" 
+        }
+      },
+      {
+        "value_label@label_dx.global_label": {
+          "shadow": true,
+          "layer": 8,
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -6, 4 ],
+          "color": "$main_button_locked_color",
+          "text": "$slider_tts_text_value",
+          "bindings": [
+            {
+              "binding_name": "$slider_tts_text_value"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "slider_panel_sodium_highlighted_controller": {
+    "type": "panel",
+    "controls": [
+      { "bg@button_dx.black_button_hover": { "layer": 1, "size": [ "100%", "100%" ], "$button_content": "common.empty_panel" } },
+      { "tooltip_panel@sodium_panel_dx.tooltip_panel": { } },
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal", 
+          "size": [ "100%", "100%" ],
+          "layer": 8,
+          "controls": [
+            {
+              "panel": {
+                "type": "panel",
+                "size": [ "fill", "100%" ],
+                "controls": [
+                  {
+                    "option_label@label_dx.global_label": {
+                      "shadow": true,
+                      "size": [ "100%-22px", 10 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 6, 4 ],
+                      "color": "$main_button_hover_color",
+                      "text": "$option_header_label" 
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "value_panel": {
+                "type": "panel",
+                "size": [ "100%cm", "100%" ],
+                "controls": [
+                  {
+                    "option_label@label_dx.global_label": {
+                      "shadow": true,
+                      "size": [ "default", 10 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 0, 4 ],
+                      "color": "$main_button_hover_color",
+                      "text": "$slider_tts_text_value",
+                      "bindings": [
+                        {
+                          "binding_name": "$slider_tts_text_value"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            { 
+              "bar_texture": {
+                "layer": 6,
+                "type": "image",
+                "texture": "vdx/ui_textures/widget/slider_bar",
+                "size": [ 102, 18 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

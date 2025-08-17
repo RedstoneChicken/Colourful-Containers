@@ -1,0 +1,68 @@
+{
+  "frames": [
+    {
+      "filename": "trial_available_index_0.gif",
+      "frame": { "x": 0, "y": 0, "w": 8, "h": 8 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
+      "sourceSize": { "w": 8, "h": 8 },
+      "duration": 500
+    },
+    {
+      "filename": "trial_available_index_1.gif",
+      "frame": { "x": 0, "y": 8, "w": 8, "h": 8 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
+      "sourceSize": { "w": 8, "h": 8 },
+      "duration": 100
+    },
+    {
+      "filename": "trial_available_index_2.gif",
+      "frame": { "x": 0, "y": 16, "w": 8, "h": 8 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
+      "sourceSize": { "w": 8, "h": 8 },
+      "duration": 100
+    },
+    {
+      "filename": "trial_available_index_3.gif",
+      "frame": { "x": 0, "y": 24, "w": 8, "h": 8 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
+      "sourceSize": { "w": 8, "h": 8 },
+      "duration": 100
+    },
+    {
+      "filename": "trial_available_index_4.gif",
+      "frame": { "x": 0, "y": 32, "w": 8, "h": 8 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
+      "sourceSize": { "w": 8, "h": 8 },
+      "duration": 100
+    },
+    {
+      "filename": "trial_available_index_5.gif",
+      "frame": { "x": 0, "y": 40, "w": 8, "h": 8 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 8 },
+      "sourceSize": { "w": 8, "h": 8 },
+      "duration": 100
+    }
+  ],
+  "meta": {
+    "app": "https://www.aseprite.org/",
+    "version": "1.2.40-x64",
+    "image": "trial_available.png",
+    "format": "I8",
+    "size": { "w": 8, "h": 48 },
+    "scale": "1",
+    "layers": [ { "name": "Layer", "opacity": 255, "blendMode": "normal" } ],
+    "slices": [ ]
+  }
+}

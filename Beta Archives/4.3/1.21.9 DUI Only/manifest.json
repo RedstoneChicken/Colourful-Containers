@@ -1,0 +1,21 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Colourful Containers BE - v4.3",
+    "description": "By @RedstoneChickenMC. [v1.21.90].\nA porting UI pack project for Bedrock Edition.",
+    "uuid": "d7087bc9-447c-487f-9d6c-c6fb81e3e67e",
+    "version": [ 4, 3, 0 ],
+    "min_engine_version": [ 1, 21, 90 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "1f45f9af-0d95-4220-962e-5f6fe7220886",
+      "version": [ 4, 3, 0 ]
+    }
+  ],
+  "metadata" : {
+    "authors" : [ "CrisXolt" ],
+    "url" : "x.com/CrisXolt"
+  }
+}

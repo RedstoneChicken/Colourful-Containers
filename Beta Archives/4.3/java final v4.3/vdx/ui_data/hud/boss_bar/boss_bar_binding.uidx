@@ -1,0 +1,117 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "CrisXolt_bar_binding_dx",
+
+  /*//// Ender Dragon ////*/
+
+  "ender_dragon_bindings": {
+    "type": "panel",
+    "visible": false,
+    "$ender_dragon_name_fr_FR": "Dragon de l'Ender",
+    "$ender_dragon_name_da_DK": "Ender-drage",
+    "bindings": [
+      { "binding_name": "#bossName", "binding_type": "collection", "binding_collection_name": "boss_bars" },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#bossName = 'Ender Dragon') or (#bossName = 'Enderdrache') or (#bossName = 'Dragón de Ender') or (#bossName = $ender_dragon_name_fr_FR) or (#bossName = 'Dragon Ender') or (#bossName = Enderdrago) or (#bossName = 'エンダー ドラゴン') or (#bossName = '엔더 드래곤') or (#bossName = 'Dragão Ender') or (#bossName = 'Dragão de Ender') or (#bossName = 'Дракон Края') or (#bossName = 末影龙) or (#bossName = 終界龍) or (#bossName = Enderdraak) or (#bossName = 'Пагубен дракон') or (#bossName = 'Drak z enderu') or (#bossName = $ender_dragon_name_da_DK) or (#bossName = 'Δράκος Τελειωτής') or (#bossName = 'Äärilisko') or (#bossName = 'Végzetsárkány') or (#bossName = 'Naga Ender') or (#bossName = 'Enderdrage') or (#bossName = 'Smok Kresu') or (#bossName = 'Drak z konca sveta') or (#bossName = 'Enderdrake') or (#bossName = 'Ender Ejderhası') or (#bossName = 'Дракон Ендеру') )",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  /*//// Wither ////*/
+
+  "wither_bindings": {
+    "type": "panel",
+    "visible": false,
+    "bindings": [
+      { "binding_name": "#bossName", "binding_type": "collection", "binding_collection_name": "boss_bars" },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#bossName = 'Wither') or (#bossName = 'ウィザー') or (#bossName = '위더') or (#bossName = 'Иссушитель') or (#bossName = '凋灵') or (#bossName = '凋靈怪') or (#bossName = 'Чезнещия') or (#bossName = 'Pakostnice') or (#bossName = 'Μαρασμός') or (#bossName = 'Näivettäjä') or (#bossName = 'Sorvasztó') or (#bossName = 'Візер') )",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  /*//// Raid ////*/
+
+  "raid_bindings": {
+    "type": "panel",
+    "visible": false,
+    "bindings": [
+      { "binding_name": "#bossName", "binding_type": "collection", "binding_collection_name": "boss_bars" },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#bossName = 'Raid')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "raid_progress_2_bindings": {
+    "type": "panel",
+    "visible": false,
+    "bindings": [
+      { "binding_name": "#bossName", "binding_type": "collection", "binding_collection_name": "boss_bars" },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#bossName = 'Raid - Raiders remaining: 2')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "raid_progress_1_bindings": {
+    "type": "panel",
+    "visible": false,
+    "bindings": [
+      { "binding_name": "#bossName", "binding_type": "collection", "binding_collection_name": "boss_bars" },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#bossName = 'Raid - Raiders remaining: 1')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "raid_progress_0_bindings": {
+    "type": "panel",
+    "visible": false,
+    "bindings": [
+      { "binding_name": "#bossName", "binding_type": "collection", "binding_collection_name": "boss_bars" },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#bossName = 'Raid - Raiders remaining: 0')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "raid_victory_bindings": {
+    "type": "panel",
+    "visible": false,
+    "bindings": [
+      { "binding_name": "#bossName", "binding_type": "collection", "binding_collection_name": "boss_bars" },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#bossName = 'Raid - Victory')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "raid_defeat_bindings": {
+    "type": "panel",
+    "visible": false,
+    "bindings": [
+      { "binding_name": "#bossName", "binding_type": "collection", "binding_collection_name": "boss_bars" },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#bossName = 'Raid - Defeat')",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

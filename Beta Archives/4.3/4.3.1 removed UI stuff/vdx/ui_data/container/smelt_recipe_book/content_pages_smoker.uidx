@@ -1,0 +1,69 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "cris_smoker_rb_conent_pages",
+
+  "stacked_row": {
+    "type": "stack_panel",
+    "size": [ 125, 25 ],
+    "orientation": "horizontal"
+  },
+
+  /*//// All Pages ////*/
+
+  "all_page_1": {
+    "type": "stack_panel",
+    "size": [ 125, 100 ],
+    "controls": [
+      {
+        "row_1@cris_smoker_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_37@cris_smelt_recipes_toggle_items.item_37": {} },
+            { "item_38@cris_smelt_recipes_toggle_items.item_38": {} },
+            { "item_39@cris_smelt_recipes_toggle_items.item_39": {} },
+            { "item_40@cris_smelt_recipes_toggle_items.item_40": {} },
+            { "item_41@cris_smelt_recipes_toggle_items.item_41": {} }
+          ]
+        }
+      },
+      {
+        "row_2@cris_smoker_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_42@cris_smelt_recipes_toggle_items.item_42": {} },
+            { "item_43@cris_smelt_recipes_toggle_items.item_43": {} },
+            { "item_44@cris_smelt_recipes_toggle_items.item_44": {} },
+            { "item_45@cris_smelt_recipes_toggle_items.item_45": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Food Pages ////*/
+  
+  "food_page_1@cris_smoker_rb_conent_pages.all_page_1": {
+    "controls": [
+      {
+        "row_1@cris_smoker_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_37@cris_smelt_recipes_toggle_items.item_37": { "$toggle_group_forced_index": 61 } },
+            { "item_38@cris_smelt_recipes_toggle_items.item_38": { "$toggle_group_forced_index": 62 } },
+            { "item_39@cris_smelt_recipes_toggle_items.item_39": { "$toggle_group_forced_index": 63 } },
+            { "item_40@cris_smelt_recipes_toggle_items.item_40": { "$toggle_group_forced_index": 64 } },
+            { "item_41@cris_smelt_recipes_toggle_items.item_41": { "$toggle_group_forced_index": 65 } }
+          ]
+        }
+      },
+      {
+        "row_2@cris_smoker_rb_conent_pages.stacked_row": {
+          "controls": [
+            { "item_42@cris_smelt_recipes_toggle_items.item_42": { "$toggle_group_forced_index": 66 } },
+            { "item_43@cris_smelt_recipes_toggle_items.item_43": { "$toggle_group_forced_index": 67 } },
+            { "item_44@cris_smelt_recipes_toggle_items.item_44": { "$toggle_group_forced_index": 68 } },
+            { "item_45@cris_smelt_recipes_toggle_items.item_45": { "$toggle_group_forced_index": 69 } }
+          ]
+        }
+      }
+    ]
+  }
+}

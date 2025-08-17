@@ -1,0 +1,282 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "smithing_table_desktop_dx",
+  
+  /*//// Item Slot Overlay Panels ////*/
+
+  "template_overlay_panel": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "templates@smithing_templates_overlay_anim_dx.smithing_input_image_templates": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "#show_input_overlay_templates",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "input_overlay_panel": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "armors_and_tools@smithing_armors_and_tools_overlay_anim_dx.smithing_input_image_armors_and_tools": {
+          "bindings": [
+            {
+              "binding_name": "#show_input_overlay_armors_and_tools",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "armors@smithing_armors_overlay_anim_dx.smithing_input_image_armors": {
+          "bindings": [
+            {
+              "binding_name": "#show_input_overlay_armors",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "material_overlay_panel": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "materials@smithing_materials_overlay_anim_dx.smithing_input_image_material": {
+          "bindings": [
+            {
+              "binding_name": "#show_material_overlay_all",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ingot@empty_item_textures_dx.ingot": {
+          "bindings": [
+            {
+              "binding_name": "#show_material_overlay_ingot",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Top Half Panel ////*/
+
+  "hover_text_error_label@tooltip_dx.tooltip_label": {
+    "max_size": [ 500, "default" ],
+    "text": "#hover_text",
+    "bindings": [
+      {
+        "binding_name": "#no_result_arrow_tooltip",
+        "binding_name_override": "#hover_text"
+      }
+    ]
+  },
+
+  "recipe_grid": {
+    "type": "grid",
+    "size": [ 18, 18 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 1, 1 ]
+  },
+
+  "top_half_panel": {
+    "type": "panel",
+    "controls": [
+      /* Title */
+      {
+        "title@label_dx.global_label": {
+          "offset": [ 44, 14 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "color": "$vdx_container_title_text_color",
+          "text": "container.smithing_table.upgrade"
+        }
+      },
+      /* Renderer */
+      {
+        "armor_stand_renderer@smithing_table_2.result_item_preview_inner": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [ 25.5, 25.5 ],
+          "offset": [ -22, 42 ]
+        }
+      },
+      /* Item Slots */
+      {
+        "input_stack_panel": {
+          "type": "grid",
+          "grid_dimensions": [ 3, 1 ],
+          "size": [ 54, 18 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 7, 47 ],
+          "controls": [
+            {
+              "template@container_item_dx.container_item": {
+                "grid_position": [ 0, 0 ],
+                "$item_collection_name": "smithing_table_template_items",
+                "$cell_overlay_ref": "smithing_table_desktop_dx.template_overlay_panel",
+                "$focus_id_binding_type": "none",
+                "$focus_id": "smithing_table_template",
+                "$focus_override_right_binding_type": "none",
+                "$focus_override_right": "smithing_table_input"
+              }
+            },
+            {
+              "item@container_item_dx.container_item": {
+                "grid_position": [ 1, 0 ],
+                "$item_collection_name": "smithing_table_input_items",
+                "$cell_overlay_ref": "smithing_table_desktop_dx.input_overlay_panel",
+                "$focus_id_binding_type": "none",
+                "$focus_id": "smithing_table_input",
+                "$focus_override_right_binding_type": "none",
+                "$focus_override_right": "smithing_table_material",
+                "$focus_override_left_binding_type": "none",
+                "$focus_override_left": "smithing_table_template"
+              }
+            },
+            {
+              "material@container_item_dx.container_item": {
+                "grid_position": [ 2, 0 ],
+                "$item_collection_name": "smithing_table_material_items",
+                "$cell_overlay_ref": "smithing_table_desktop_dx.material_overlay_panel",
+                "$focus_id_binding_type": "none",
+                "$focus_id": "smithing_table_material",
+                "$focus_override_left_binding_type": "none",
+                "$focus_override_left": "smithing_table_input",
+                "$focus_override_right_binding_type": "none",
+                "$focus_override_right": "smithing_table_result"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "result_item_slot@smithing_table_desktop_dx.recipe_grid": {
+          "offset": [ 97, 47 ],
+          "controls": [
+            {
+              "item@container_item_dx.container_item": {
+                "anchor_to": "center",
+                "anchor_from": "center",
+                "grid_position": [ 0, 0 ],
+                "$item_collection_name": "smithing_table_result_items",
+                "$button_ref": "smithing_table_2.smithing_table_output_slot_button",
+                "$focus_id_binding_type": "none",
+                "$focus_id": "smithing_table_result",
+                "$focus_override_left_binding_type": "none",
+                "$focus_override_left": "smithing_table_material"
+              }
+            }
+          ]
+        }
+      },
+      /* Error */
+      {
+        "error_panel": {
+          "type": "panel",
+          "size": [ 28, 21 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 65, 46 ],
+          "bindings": [
+            {
+              "binding_name": "#cross_out_icon",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { "error@smithing_textures_dx.error": { } },
+            {
+              "button": {
+                "type": "button",
+                "hover_control": "hover",
+                "size": [ 28, 21 ],
+                "controls": [
+                  {
+                    "hover": {
+                      "type": "panel",
+                      "size": [ 28, 21 ],
+                      "controls": [
+                        {
+                          "hover_text@common.hover_text": {
+                            "ignored": "($custom_tooltip or (not $touch))",
+                            "layer": 29,
+                            "$hover_text_max_width": 500,
+                            "bindings": [
+                              {
+                                "binding_name": "#no_result_arrow_tooltip",
+                                "binding_name_override": "#hover_text"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "custom_hover_text@tooltip_dx.tooltip_panel": {
+                            "ignored": "(not $custom_tooltip)",
+                            "$tooltip_label_control": "smithing_table_desktop_dx.hover_text_error_label"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Main Panel ////*/
+
+  "smithing_table_panel@container_panel_dx.container_panel": {
+    "$container_bg": "smithing_textures_dx.smithing",
+    "$container_top_half": "smithing_table_desktop_dx.top_half_panel"
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@container_panel_dx.container_gamepad_helpers": {} },
+      { "container_modules@container_panel_dx.container_modules": {} },
+      { "smithing_table_panel@smithing_table_desktop_dx.smithing_table_panel": { } }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@smithing_table_desktop_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+/*File modified by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "smoker_screen": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$is_smoker": true,
+        "$screen_content": "smoker_mixed_dx.center_screen",
+        "$screen_bg_content": "smoker_mixed_dx.full_screen",
+        "$gamepad_cursor": true
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "furnace_pocket.furnace_panel",
+        "$gamepad_cursor": false
+      }
+    ]
+  }
+}

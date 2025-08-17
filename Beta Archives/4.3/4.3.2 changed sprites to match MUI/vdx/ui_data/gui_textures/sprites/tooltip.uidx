@@ -1,0 +1,28 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "tooltip_textures_dx",
+
+  "tooltip": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "layer": 1,
+          "texture": "assets/minecraft/textures/gui/sprites/tooltip/background",
+          "size": [ "100%+16px", "100%+16px" ]
+        }
+      },
+      {
+        "frame": {
+          "type": "image",
+          "layer": 2,
+          "texture": "assets/minecraft/textures/gui/sprites/tooltip/frame",
+          "size": [ "100%+16px", "100%+16px" ]
+        }
+      }
+    ]
+  }
+}

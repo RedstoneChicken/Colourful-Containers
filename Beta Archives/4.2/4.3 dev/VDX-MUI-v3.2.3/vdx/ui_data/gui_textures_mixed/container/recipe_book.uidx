@@ -1,0 +1,611 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "recipe_book_mixed_textures_dx",
+
+  /* Dialog Backgrounds */
+
+  "recipe_items": {
+    "type": "panel",
+    "size": [ 142, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/vdx/textures/gui/container/recipe_book/recipe_items",
+          "size": [ 256, 256 ]
+        }
+      }
+    ]
+  },
+
+  "recipe_item_search": {
+    "type": "panel",
+    "size": [ 142, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/vdx/textures/gui/container/recipe_book/recipe_item_search",
+          "size": [ 256, 256 ]
+        }
+      }
+    ]
+  },
+
+  "creative_items": {
+    "type": "panel",
+    "size": [ 142, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/vdx/textures/gui/container/recipe_book/creative_items",
+          "size": [ 256, 256 ]
+        }
+      }
+    ]
+  },
+
+  "creative_item_search": {
+    "type": "panel",
+    "size": [ 142, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/vdx/textures/gui/container/recipe_book/creative_item_search",
+          "size": [ 256, 256 ]
+        }
+      }
+    ]
+  },
+
+  "full_creative_items": {
+    "type": "panel",
+    "size": [ 322, 188 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/vdx/textures/gui/container/recipe_book/full_creative_items",
+          "size": [ 512, 256 ]
+        }
+      }
+    ]
+  },
+
+  "full_creative_item_search": {
+    "type": "panel",
+    "size": [ 322, 188 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/vdx/textures/gui/container/recipe_book/full_creative_item_search",
+          "size": [ 512, 256 ]
+        }
+      }
+    ]
+  },
+
+  /* Center Fold */
+
+  "center_fold": {
+    "type": "panel",
+    "size": [ 18, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/center_fold",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Filter */
+
+  "filter_disabled": {
+    "type": "panel",
+    "size": [ 26, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/filter_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "filter_disabled_highlighted": {
+    "type": "panel",
+    "size": [ 26, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/filter_disabled_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "filter_enabled": {
+    "type": "panel",
+    "size": [ 26, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/filter_enabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "filter_enabled_highlighted": {
+    "type": "panel",
+    "size": [ 26, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/filter_enabled_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Grid Items */
+
+  "recipe_grid_default": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/recipe_grid_default",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "recipe_grid_highlighted": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/recipe_grid_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "recipe_grid_red": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/recipe_grid_red",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "recipe_grid_red_selected": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/recipe_grid_red_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "recipe_grid_selected": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/recipe_grid_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "creative_grid_default": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/creative_grid_default",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "creative_grid_group_collapsed": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/creative_grid_group_collapsed",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "creative_grid_group_expanded": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/creative_grid_group_expanded",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "creative_grid_selected": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/creative_grid_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Scroller */
+
+  "scroller": {
+    "type": "panel",
+    "size": [ 12, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/scroller",
+          "size": [ 12, "100%" ],
+          "variables": [
+            { "requires": "($recipe_book_mixed_scroller_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($recipe_book_mixed_scroller_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($recipe_book_mixed_scroller_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($recipe_book_mixed_scroller_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($recipe_book_mixed_scroller_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($recipe_book_mixed_scroller_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "scroller_disabled": {
+    "type": "panel",
+    "size": [ 12, 15 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/scroller_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Construction Tab */
+
+  "tab_top_selected_1": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/tab_top_selected_1",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "tab_top_unselected_1": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/tab_top_unselected_1",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Equipment Tab */
+
+  "tab_top_selected_2": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/tab_top_selected_2",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "tab_top_unselected_2": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/tab_top_unselected_2",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Items Tab */
+
+  "tab_top_selected_3": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/tab_top_selected_3",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "tab_top_unselected_3": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/tab_top_unselected_3",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Nature Tab */
+
+  "tab_top_selected_4": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/tab_top_selected_4",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "tab_top_unselected_4": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/tab_top_unselected_4",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Search Tab */
+
+  "tab_top_selected_5": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/tab_top_selected_5",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "tab_top_unselected_5": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/tab_top_unselected_5",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Search Tab Alt */
+
+  "tab_top_selected_5_alt": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/tab_top_selected_5_alt",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "tab_top_unselected_5_alt": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/tab_top_unselected_5_alt",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Mode Toggles */
+
+  "mode_panel_survival": {
+    "type": "panel",
+    "size": [ 62, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/mode_panel_survival",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "mode_panel_creative": {
+    "type": "panel",
+    "size": [ 89, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/mode_panel_creative",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "mode_button": {
+    "type": "panel",
+    "size": [ 25, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/mode_button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "mode_button_highlighted": {
+    "type": "panel",
+    "size": [ 25, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/mode_button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "mode_button_pressed": {
+    "type": "panel",
+    "size": [ 25, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/mode_button_pressed",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "mode_button_pressed_highlighted": {
+    "type": "panel",
+    "size": [ 25, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container/recipe_book/mode_button_pressed_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}
