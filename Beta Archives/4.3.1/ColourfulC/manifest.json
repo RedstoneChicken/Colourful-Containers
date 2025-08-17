@@ -1,0 +1,58 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Colourful Containers BE - v4.3.1 [MIXED]",
+    "description": "By Redstone Chicken, credits to CrisXolt. [1.21.9]\n// Overhauls Minecraft's UI into something beautiful!",
+    "uuid": "8cd58474-e474-4569-838e-2cecbc68dbfb",
+    "version": [4, 3, 1],
+    "min_engine_version": [ 1, 21, 9 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "3ec8bf31-769b-44b1-8a1b-33a4ae6b2648",
+      "version": [4, 3, 1]
+    }
+  ],
+  "metadata" : {
+    "authors" : [ "Redstone Chicken" ]
+  },
+  "subpacks" :[
+    {
+      "folder_name":"dark-mixed",
+      "name":"Alternate Theme §u(Dark)§r",
+      "memory_tier":1
+    },
+    {
+      "folder_name":"light-mixed",
+      "name":"Default Theme §p(Light)§r",
+      "memory_tier":2
+    }
+  ],
+  "settings": [
+    {
+      "type": "label",
+      "text": "Installed Pack Version:§r\n  [x] §5Mixed UI§r §7(A more bedrock vanilla-like ui experience.)§r\n  [ ] §o§dJava UI§r§o (A more accurate port of the Java pack.)§r"
+    },
+    {
+      "type": "label",
+      "text": "§o§dJava-like UI§r§o is avaliable as a separate pack on the §lproject page!"
+    },
+    {
+      "type": "label",
+      "text": "§8---"
+    },
+    {
+      "type": "label",
+      "text": "§l§cImportant Note!§r§r\nThis pack must be used with the §l'classic'§r GUI setting on your Minecraft instance."
+    },
+    {
+      "type": "label",
+      "text": "§8---"
+    },
+    {
+      "type": "label",
+      "text": "§oNeed help? Have suggestions? Found a bug?\n\n§rJoin my §uDiscord§r server:\n  §7§ohttps://discord.gg/SrTd3DZKuh"
+    }
+	]
+}

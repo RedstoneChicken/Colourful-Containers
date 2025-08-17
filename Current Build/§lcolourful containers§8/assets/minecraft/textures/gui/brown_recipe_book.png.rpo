@@ -1,4 +1,0 @@
-{
-    condition: "otherguicategory.recipebooktype.brown",
-    fallback: "assets/minecraft/textures/gui/recipe_book.png"
-}

@@ -1,8 +1,0 @@
-/*File modified by @CrisXolt.
-//(c) Don't use any UI data design without permission!*/
-{
-  "jigsaw_editor_screen": {
-    "$screen_content": "jigsaw_dx.center_screen",
-    "$screen_bg_content": "jigsaw_dx.full_screen"
-  }
-}

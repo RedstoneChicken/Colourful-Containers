@@ -1,9 +1,0 @@
-﻿/*File modified by @CrisXolt.
-//(c) Don't use any UI data design without permission!*/
-{
-  "start_screen": {
-    "$is_popup_dialog_in_game": false,
-    "$screen_content": "start_dx.center_screen",
-    "$screen_bg_content": "start_dx.full_screen"
-  }
-}
