@@ -1,0 +1,124 @@
+﻿##################################################
+##  Options
+##################################################
+##  UI Settings
+vdx.options.more=Още опции...
+vdx.options.moreTitle=Още опции
+
+##################################################
+##  Progress
+##################################################
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.header=§lВнимание: Онлайн игра от трети източник
+multiplayerWarning.message=Внимание: Онлайн играенето се предлага от сървъри притежавани от трети лица, които не са собственост и не се контролират от Mojang Studios или от Microsoft. По време на онлайн играта може да бъдете изложени на немодерирани чат-съобщения или други видове генерирано от потребители съдържание, което може да не е подходящо за всеки.
+multiplayerWarning.check=Да не се показва този екран отново
+
+onlinePlay.untrustedIp.title=§lНеизвестен външен сървър
+onlinePlay.untrustedIp.message=Трябва да се свързвате само със сървъри, за които знаете, че са сигурни! Все още ли искате да се присъедините?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Проверете си книгата
+recipe.toast.title=Нови рецепти!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Може да спите само през нощта или по време на бури
+vdx.block.minecraft.bed.not_safe=Не можете да спите сега; има чудовища наоколо
+vdx.block.minecraft.bed.obstructed=Леглото е заето
+vdx.block.minecraft.bed.occupied=Леглото е заето
+vdx.block.minecraft.bed.too_far_away=Не можете да спите сега; леглото е твърде далеч
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Максималната височина за строене е 319
+build.tooHigh.the_nether.aspects=Максималната височина за строене е 127
+build.tooHigh.the_end.aspects=Максималната височина за строене е 255
+build.tooLow.overworld.aspects=Минималната височина за строителство е -64	
+build.tooLow.the_nether.aspects=Минималната височина за строителство е 0
+build.tooLow.the_end.aspects=Минималната височина за строителство е 0
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=Нападение
+bar.event.raid.remaining.2=Нападение - Оставащи нападатели: 2
+bar.event.raid.remaining.1=Нападение - Оставащи нападатели: 1
+bar.event.raid.remaining.0=Нападение - Оставащи нападатели: 0
+bar.event.raid.victory=Нападение - Победа
+bar.event.raid.defeat=Нападение - Загуба
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§oТърсене...
+gui.recipebook.toggleRecipes.all=Показване на всички
+gui.recipebook.toggleRecipes.craftable=Показват се изработваемите предмети
+gui.recipebook.toggleRecipes.smeltable=Показват се претопяемите предмети
+gui.recipebook.toggleRecipes.blastable=Показват се претопяемите предмети
+gui.recipebook.toggleRecipes.smokable=Показване на възможни за изпушване
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Строителство
+vdx.creative.tab.equipment=Оборудване
+vdx.creative.tab.items=Предмети
+vdx.creative.tab.nature=Природа
+
+inventory.binSlot=Унищожаване на предмет
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Обработи Съобщение на Висяща Табела
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Командна
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Относителна позиция
+structure_block.size=Размер на конструкцията
+structure_block.integrity_and_seed=Цялост на конструкцията и семе
+structure_block.detect_size=Откриване размера и позицията на конструкцията:
+structure_block.mode_info.save=Режим на запазване - запиши от Файла
+structure_block.mode_info.load=Режим на зареждане - зареди от Файла
+structure_block.mode_info.corner=Corner Mode - местоположение и размер на Маркера
+structure_block.exportTo=Експортиране:
+structure_block.mode.export=Експортиране
+structure_block.button.detect_size=Откриване
+structure_block.button.save=Записване
+structure_block.button.load=Зареждане
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Сделки
+merchant.deprecated=Селяните възстановяват ресурсите до два пъти дневно.

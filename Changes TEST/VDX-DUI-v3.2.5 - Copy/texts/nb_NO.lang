@@ -1,0 +1,124 @@
+﻿##################################################
+##  Options
+##################################################
+##  UI Settings
+vdx.options.more=Flere alternativer...
+vdx.options.moreTitle=Flere alternativer
+
+##################################################
+##  Progress
+##################################################
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.check=Ikke vis denne skjermen igjen
+multiplayerWarning.header=§lAdvarsel: Nettspill fra tredjeparter
+multiplayerWarning.message=Advarsel: Nettspill tilbydes av tredjepartsservere som hverken eies, styres eller overvåkes av Mojang Studios eller Microsoft. Når du spiller på nett kan du utsettes for umodererte nettpratsmeldinger eller andre typer brukerlagd innhold som ikke passer for alle.
+
+onlinePlay.untrustedIp.title=§lUkjent ekstern server
+onlinePlay.untrustedIp.message=Du bør bare koble til servere du stoler på! Ønsker du fortsatt å bli med?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Sjekk oppskriftsboken din
+recipe.toast.title=Nye oppskrifter låst opp!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Du kan bare sove om natten eller under tordenvær
+vdx.block.minecraft.bed.not_safe=Du kan ikke sove nå; det er monstre i nærheten
+vdx.block.minecraft.bed.obstructed=Denne sengen er blokkert
+vdx.block.minecraft.bed.occupied=Denne sengen er opptatt
+vdx.block.minecraft.bed.too_far_away=Du kan ikke sove nå; sengen er for langt unna
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Høyden til den øvre byggegrensen er 319
+build.tooHigh.the_nether.aspects=Høyden til den øvre byggegrensen er 127
+build.tooHigh.the_end.aspects=Høyden til den øvre byggegrensen er 255
+build.tooLow.overworld.aspects=Minimum høyde for bygging er -64
+build.tooLow.the_nether.aspects=Minimum høyde for bygging er 0
+build.tooLow.the_end.aspects=Minimum høyde for bygging er 0
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=Herjing
+bar.event.raid.remaining.2=Herjing - Plyndrere igjen: 2
+bar.event.raid.remaining.1=Herjing - Plyndrere igjen: 1
+bar.event.raid.remaining.0=Herjing - Plyndrere igjen: 0
+bar.event.raid.victory=Herjing - Seier
+bar.event.raid.defeat=Herjing - Nederlag
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§oSøk...
+gui.recipebook.toggleRecipes.all=Viser alle
+gui.recipebook.toggleRecipes.blastable=Viser smeltbare
+gui.recipebook.toggleRecipes.craftable=Viser lagbare
+gui.recipebook.toggleRecipes.smeltable=Viser smeltbare
+gui.recipebook.toggleRecipes.smokable=Viser røykbare
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Konstruksjon
+vdx.creative.tab.equipment=Utstyr
+vdx.creative.tab.items=Gjenstander
+vdx.creative.tab.nature=Natur
+
+inventory.binSlot=Ødelegg gjenstand
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Rediger melding på hengende skilt
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Konsollkommando
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Relativ posisjon
+structure_block.size=Strukturstørrelse
+structure_block.integrity_and_seed=Strukturintegritet og frøtall
+structure_block.detect_size=Gjenkjenn strukturstørrelse og posisjon:
+structure_block.mode_info.save=Lagremåte - Skriv til fil
+structure_block.mode_info.load=Lastemåte - Last fra fil
+structure_block.mode_info.corner=Hjørnemodus - plassering- og størrelsesmarkør
+structure_block.exportTo=Eksporter:
+structure_block.mode.export=Eksporter
+structure_block.button.detect_size=OPPDAG
+structure_block.button.save=LAGRE
+structure_block.button.load=LAST
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Handler
+merchant.deprecated=Bygdinger fyller opp forrådet sitt opp til to ganger om dagen.

@@ -1,0 +1,246 @@
+{
+  "namespace": "csb_subscription_panel_dx",
+
+  "csb_container": {
+    "type": "panel",
+    "layer": 6,
+    "size": [ "100%", 100 ],
+    "$is_main|default": true,
+    "$left_button_ignored|default": false,
+    "$csb_panel_bindings|default": [
+      {
+        "binding_name": "#csb_buy_panel_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "bindings": "$csb_panel_bindings",
+    "controls": [
+      { "grid_panel_selected@main_textures_dx.grid_panel_selected": {  "size": [ "100%", "100%" ], "layer": 1 } },
+      {
+        "$left_button": {
+          "ignored": "$left_button_ignored",
+          "size": [ 150, 20 ]
+        }
+      },
+      {
+        "right_button@button_dx.main_button_150": {
+          "ignored": "$left_button_ignored",
+          "size": [ 150, 20 ],
+          "layer": 7,
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ -2, -2 ],
+          "$button_text": "options.viewSubscriptions.button.addMarketplacePass",
+          "$pressed_button_name": "button.csb_info",
+          "$button_content": "csb_buy.button_text"
+        }
+      },
+      {
+        "main_button@button_dx.main_button_306": {
+          "ignored": "(not $left_button_ignored)",
+          "size": [ 306, 20 ],
+          "layer": 7,
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 2, -2 ],
+          "$button_text": "options.viewSubscriptions.button.addMarketplacePass",
+          "$pressed_button_name": "button.csb_info"
+        }
+      },
+      {
+        "content_stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%-4px", 75 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 2, 2 ],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "image_panel": {
+                "layer": 8,
+                "type": "panel",
+                "size": "$image_size",
+                "$image_size|default": [ "177.8%y", 75 ],
+                "controls": [
+                  {
+                    "csb_image": {
+                      "type": "image",
+                      "size": [ "177.8%y", "100%" ],
+                      "keep_ratio": true,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 3,
+                      "texture": "textures/ui/subscription_MarketplacePass"
+                    }
+                  }
+                ]
+              } 
+            },
+            {
+              "panel": {
+                "type": "panel",
+                "size": [ 2, 75 ]
+              }
+            },
+            {
+              "text_panel": {
+                "type": "panel",
+                "size": [ "fill", 75 ],
+                "layer": 3,
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "vertical",
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "controls": [
+                        {
+                          "panel_label@label_dx.global_label": {
+                            "offset": [ 0, -1 ],
+                            "text": "options.csbHeading",
+                            "color": "$store_white_text_color",
+                            "size": [ "100%", "default" ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "layer": 2
+                          }
+                        },
+                        {
+                          "interior_top_padding_01": {
+                            "type": "panel",
+                            "size": [ "100%", 4 ]
+                          }
+                        },
+                        {
+                          "ln_01_container": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%", "100%c+2px" ],
+                            "controls": [
+                              {
+                                "bullet_holder_01": {
+                                  "type": "stack_panel",
+                                  "orientation": "vertical",
+                                  "size": [ "100%c", 10 ],
+                                  "controls": [
+                                    {
+                                      "bullet_01@label_dx.global_label": {
+                                        "text": "● ",
+                                        "color": [ 0.75, 0.75, 0.75 ],
+                                        "text_alignment": "center",
+                                        "size": [ "default", 10 ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "panel": {
+                                  "type": "stack_panel",
+                                  "orientation": "vertical",
+                                  "size": [ "fill", "100%c" ],
+                                  "controls": [
+                                    {
+                                      "panel_details_ln1@label_dx.global_label": {
+                                        "anchor_from": "top_right",
+                                        "anchor_to": "top_right",
+                                        "text": "options.csbInfoLine01",
+                                        "color": [ 0.75, 0.75, 0.75 ],
+                                        "text_alignment": "left",
+                                        "size": [ "90%", "default" ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "ln_02_container": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%", "100%c+2px" ],
+                            "controls": [
+                              {
+                                "bullet_holder_02": {
+                                  "type": "stack_panel",
+                                  "orientation": "vertical",
+                                  "size": [ "100%c", 10 ],
+                                  "controls": [
+                                    {
+                                      "bullet_02@label_dx.global_label": {
+                                        "text": "● ",
+                                        "color": [ 0.75, 0.75, 0.75 ],
+                                        "text_alignment": "center",
+                                        "size": [ "default", 10 ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "panel": {
+                                  "type": "stack_panel",
+                                  "orientation": "vertical",
+                                  "size": [ "fill", "100%c" ],
+                                  "controls": [
+                                    {
+                                      "panel_details_ln3@label_dx.global_label": {
+                                        "anchor_from": "top_right",
+                                        "anchor_to": "top_right",
+                                        "text": "options.csbInfoLine02",
+                                        "color": [ 0.75, 0.75, 0.75 ],
+                                        "text_alignment": "left",
+                                        "size": [ "90%", "default" ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "csb_buy_button_text@button_dx.button_label": {
+    "text": "#csb_price_text",
+    "bindings": [
+      {
+        "binding_name": "#csb_price_text",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "csb_cancel_button@button_dx.main_button_150": {
+    "ignored": "$left_button_ignored",
+    "size": [ 150, 20 ],
+    "$pressed_button_name": "button.csb_cancel",
+    "bindings": [
+      {
+        "binding_name": "(not #csb_platform_mismatch)",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "csb_buy_container@button_dx.main_button_150": {
+    "ignored": "$left_button_ignored",
+    "size": [ 150, 20 ],
+    "$pressed_button_name": "button.csb_buy",
+    "$button_content": "csb_subscription_panel_dx.csb_buy_button_text"
+  }
+}

@@ -1,0 +1,501 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "rendering_options_dx",
+
+  "graphics_mode_dropdown_content@settings_common.option_radio_dropdown_group": {
+    "$texture_button_color_checked": [ 1.0, 1.0, 1.0 ],
+    "size": [ "100%", "100%c" ],
+    "offset": [ 0, 0 ],
+    "$radio_buttons": [
+      {
+        "@dropdown_dx.dropdown_radio_with_label": {
+          "$toggle_state_binding_name": "#graphics_mode_radio_simple",
+          "$radio_label_text": "options.graphicsMode.simple"
+        }
+      },
+      {
+        "@dropdown_dx.dropdown_radio_with_label": {
+          "$toggle_state_binding_name": "#graphics_mode_radio_fancy",
+          "$radio_label_text": "options.graphicsMode.fancy"
+        }
+      },
+      {
+        "@dropdown_dx.dropdown_radio_with_label": {
+          "ignored": "(not $new_video_settings)",
+          "$toggle_state_binding_name": "#graphics_mode_radio_deferred",
+          "$option_enabled_binding_name": "#graphics_mode_radio_deferred_enabled",
+          "$radio_label_text": "options.graphicsMode.deferred"
+        }
+      },
+      {
+        "@dropdown_dx.dropdown_radio_with_label": {
+          "$toggle_state_binding_name": "#graphics_mode_radio_ray_traced",
+          "$option_enabled_binding_name": "#graphics_mode_radio_ray_traced_enabled",
+          "$radio_label_text": "options.graphicsMode.rayTraced"
+        }
+      }
+    ]
+  },
+
+  "upscaling_mode_dropdown_content@settings_common.option_radio_dropdown_group": {
+    "$texture_button_color_checked": [ 1.0, 1.0, 1.0 ],
+    "size": [ "100%", "100%c" ],
+    "offset": [ 0, 0 ],
+    "$radio_buttons": [
+      {
+        "@dropdown_dx.dropdown_radio_with_label": {
+          "$toggle_state_binding_name": "#upscaling_mode_radio_taau",
+          "$radio_label_text": "options.upscalingModeOptions.taau"
+        }
+      },
+      {
+        "@dropdown_dx.dropdown_radio_with_label": {
+          "$toggle_state_binding_name": "#upscaling_mode_radio_bilinear",
+          "$radio_label_text": "options.upscalingModeOptions.bilinear"
+        }
+      }
+    ]
+  },
+
+  "middle_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "top_panel": {
+          "type": "panel",
+          "size": [ 1, 4 ]
+        }
+      },
+      {
+        "panel_header": {
+          "type": "panel",
+          "size": [ 310, 25 ],
+          "controls": [
+            {
+              "graphics_mode@dropdown_dx.option_dropdown_310": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "options.renderingProfile",
+                "$dropdown_content": "rendering_options_dx.graphics_mode_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "graphics_mode_dropdown",
+                "$option_enabled_binding_name": "#graphics_mode_dropdown_enabled",
+                "$options_dropdown_toggle_label_binding": "#graphics_mode_dropdown_toggle_label",
+                "$dropdown_scroll_content_size": [ "100%", 54 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "simple_and_fancy_sections": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ 310, "100%c" ],
+          "bindings": [
+            {
+              "binding_name": "#graphics_mode_is_simple_or_fancy",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "render_distance_slider@slider_dx.option_slider_310": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#render_distance_slider_label",
+                "$slider_name": "render_distance",
+                "$slider_value_binding_name": "#render_distance",
+                "$slider_tts_text_value": "#render_distance_text_value",
+                "$option_enabled_binding_name": "#render_distance_enabled",
+                "$slider_steps_binding_name": "#render_distance_steps",
+                "$label_bindings": [
+                  {
+                    "binding_name": "#render_distance_slider_label"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "deffered_sections": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ 310, "100%c" ],
+          "bindings": [
+            {
+              "binding_name": "#graphics_mode_is_deferred",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "render_distance": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "controls": [
+                  {
+                    "deferred_render_distance_slider@slider_dx.option_slider_310": {
+                      "size": [ 310, 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$option_label": "#deferred_render_distance_slider_label",
+                      "$slider_name": "deferred_render_distance",
+                      "$slider_value_binding_name": "#deferred_render_distance",
+                      "$slider_tts_text_value": "#deferred_render_distance_text_value",
+                      "$option_enabled_binding_name": "#deferred_render_distance_enabled",
+                      "$slider_steps_binding_name": "#deferred_render_distance_steps",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_gamma_calibration": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "controls": [
+                  {
+                    "gamma_calibration@button_dx.main_button_310": {
+                      "size": [ 310, 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$pressed_button_name": "button.gamma_calibration",
+                      "$button_text": "options.gammaIntensity"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_shadow_quality": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "controls": [
+                  {
+                    "shadow_quality_slider@slider_dx.option_slider_310": {
+                      "size": [ 310, 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$option_label": "#shadow_quality_slider_label",
+                      "$slider_name": "shadow_quality",
+                      "$slider_value_binding_name": "#shadow_quality",
+                      "$slider_tts_text_value": "#shadow_quality_text_value",
+                      "$slider_steps_binding_name": "#shadow_quality_steps",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_point_light_shadow_quality": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "bindings": [
+                  {
+                    "binding_name": "#deferred_point_light_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "point_light_shadow_quality_slider@slider_dx.option_slider_310": {
+                      "size": [ 310, 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$option_label": "#point_light_shadow_quality_slider_label",
+                      "$slider_name": "point_light_shadow_quality",
+                      "$slider_value_binding_name": "#point_light_shadow_quality",
+                      "$slider_tts_text_value": "#point_light_shadow_quality_text_value",
+                      "$slider_steps_binding_name": "#point_light_shadow_quality_steps",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_point_light_loding_quality": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "bindings": [
+                  {
+                    "binding_name": "#deferred_point_light_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "point_light_loding_quality_slider@slider_dx.option_slider_310": {
+                      "size": [ 310, 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$option_label": "#point_light_loding_quality_slider_label",
+                      "$slider_name": "point_light_loding_quality",
+                      "$slider_value_binding_name": "#point_light_loding_quality",
+                      "$slider_tts_text_value": "#point_light_loding_quality_text_value",
+                      "$slider_steps_binding_name": "#point_light_loding_quality_steps",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_volumetric_fog_quality": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "controls": [
+                  {
+                    "volumetric_fog_quality_slider@slider_dx.option_slider_310": {
+                      "size": [ 310, 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$option_label": "#volumetric_fog_quality_slider_label",
+                      "$slider_name": "volumetric_fog_quality",
+                      "$slider_value_binding_name": "#volumetric_fog_quality",
+                      "$slider_tts_text_value": "#volumetric_fog_quality_text_value",
+                      "$slider_steps_binding_name": "#volumetric_fog_quality_steps",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_reflections_quality": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "controls": [
+                  {
+                    "reflections_quality_slider@slider_dx.option_slider_310": {
+                      "size": [ 310, 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$option_label": "#reflections_quality_slider_label",
+                      "$slider_name": "reflections_quality",
+                      "$slider_value_binding_name": "#reflections_quality",
+                      "$slider_tts_text_value": "#reflections_quality_text_value",
+                      "$slider_steps_binding_name": "#reflections_quality_steps",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_bloom_strength": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "controls": [
+                  {
+                    "bloom_strength@slider_dx.option_slider_310": {
+                      "size": [ 310, 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$option_label": "#bloom_strength_slider_label",
+                      "$slider_name": "bloom_strength",
+                      "$slider_value_binding_name": "#bloom_strength",
+                      "$slider_tts_text_value": "#bloom_strength_text_value",
+                      "$option_enabled_binding_name": "#bloom_strength_enabled",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_upscaling_mode": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "controls": [
+                  {
+                    "upscaling_mode@dropdown_dx.option_dropdown_310": {
+                      "size": [ 310, 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$option_label": "options.upscalingMode",
+                      "$option_dropdown_type": "dropdown_dx.dropdown_no_scrollpanel",
+                      "$dropdown_content": "rendering_options_dx.upscaling_mode_dropdown_content",
+                      "$dropdown_area": "content_area",
+                      "$dropdown_name": "upscaling_mode_dropdown",
+                      "$options_dropdown_toggle_label_binding": "#upscaling_mode_toggle_label",
+                      "$option_enabled_binding_name": "#upscaling_mode_dropdown_enabled"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_upscaling_percentage": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "controls": [
+                  {
+                    "upscaling_percentage@slider_dx.option_slider_310": {
+                      "size": [ 310, 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$option_label": "#upscaling_percentage_slider_label",
+                      "$slider_name": "upscaling_percentage",
+                      "$slider_value_binding_name": "#upscaling_percentage",
+                      "$slider_tts_text_value": "#upscaling_percentage_text_value",
+                      "$slider_steps_binding_name": "#upscaling_percentage_steps",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RTX_sections": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ 310, "100%c" ],
+          "bindings": [
+            {
+              "binding_name": "#graphics_mode_is_ray_traced",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "render_distance": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "controls": [
+                  {
+                    "raytracing_render_distance_slider@slider_dx.option_slider_310": {
+                      "size": [ 310, 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$option_label": "#raytracing_render_distance_slider_label",
+                      "$slider_name": "raytracing_render_distance",
+                      "$slider_value_binding_name": "#raytracing_render_distance",
+                      "$slider_tts_text_value": "#raytracing_render_distance_text_value",
+                      "$option_enabled_binding_name": "#raytracing_render_distance_enabled",
+                      "$slider_steps_binding_name": "#raytracing_render_distance_steps",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_2": {
+                "type": "panel",
+                "size": [ 310, 25 ],
+                "controls": [
+                  {
+                    "upscaling_toggle@toggle_dx.option_toggle_310": {
+                      "size": [ 310, 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$option_label": "options.upscaling",
+                      "$option_binding_name": "#graphics_upscaling",
+                      "$option_enabled_binding_name": "#graphics_upscaling_enabled",
+                      "$toggle_name": "graphics_upscaling"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Top ////*/
+
+  "top_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "title_label@label_dx.global_label": {
+          "size": [ "default", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 5,
+          "shadow": true,
+          "color": "$main_button_default_color",
+          "text": "options.advancedButton",
+          "offset": [ 0, 11 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Bottom ////*/
+
+  "bottom_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "in_game@options_dx.done_button": {
+          "$toggle_name": "video_options",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -6 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+
+  "rendering_settings_screen@menu_scroll_panel_template_dx.menu_scroll_panel_template": {
+    "$top_content": "rendering_options_dx.top_content",
+    "$scrolling_content": "rendering_options_dx.middle_stack_panel",
+    "$bottom_content": "rendering_options_dx.bottom_content",
+    "$scroll_view_port_size": [ 324, "100%" ]
+  }
+}

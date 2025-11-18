@@ -1,0 +1,124 @@
+﻿##################################################
+##  Options
+##################################################
+##  UI Settings
+vdx.options.more=Weitere Optionen...
+vdx.options.moreTitle=Weitere Optionen
+
+##################################################
+##  Progress
+##################################################
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.check=Diesen Hinweis nicht mehr anzeigen
+multiplayerWarning.header=§lVorsicht: Mehrspielermodus von Drittanbietern
+multiplayerWarning.message=Vorsicht: Der Mehrspielermodus wird über Drittanbieter‐Server angeboten, die Mojang Studios oder Microsoft weder gehören, noch von diesen betrieben oder überwacht werden. Bei der Verwendung des Mehrspielermodus könntest du unmoderierten Chatnachrichten oder sonstigen nutzergenerierten Inhalten ausgesetzt sein, die womöglich nicht für jeden angemessen sind.
+
+onlinePlay.untrustedIp.title=§lUnbekannter externer Server
+onlinePlay.untrustedIp.message=Du solltest dich nur mit Servern verbinden, denen du vertraust! Möchtest du trotzdem beitreten?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Schau in dein Rezeptbuch
+recipe.toast.title=Neue Rezepte verfügbar!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Du kannst nur nachts oder während eines Gewitters schlafen
+vdx.block.minecraft.bed.not_safe=Du kannst jetzt nicht schlafen, es sind Monster in der Nähe
+vdx.block.minecraft.bed.obstructed=Dieses Bett ist blockiert
+vdx.block.minecraft.bed.occupied=Dieses Bett ist belegt
+vdx.block.minecraft.bed.too_far_away=Du kannst jetzt nicht schlafen, das Bett ist zu weit entfernt
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Die maximale Bauhöhe beträgt 319
+build.tooHigh.the_nether.aspects=Die maximale Bauhöhe beträgt 127
+build.tooHigh.the_end.aspects=Die maximale Bauhöhe beträgt 255
+build.tooLow.overworld.aspects=Die Mindesthöhe zum Bauen beträgt -64
+build.tooLow.the_nether.aspects=Die Mindesthöhe zum Bauen beträgt 0
+build.tooLow.the_end.aspects=Die Mindesthöhe zum Bauen beträgt 0
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
+##  Output
+bar.event.raid.name=Überfall	#
+bar.event.raid.remaining.2=Überfall - Verbleibende Räuber: 2	#
+bar.event.raid.remaining.1=Überfall - Verbleibende Räuber: 1	#
+bar.event.raid.remaining.0=Überfall - Verbleibende Räuber: 0	#
+bar.event.raid.victory=Überfall - Sieg	#
+bar.event.raid.defeat=Überfall - Niederlage	#
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§oSuche …
+gui.recipebook.toggleRecipes.all=Alles wird angezeigt
+gui.recipebook.toggleRecipes.blastable=Schmelzbares wird angezeigt
+gui.recipebook.toggleRecipes.craftable=Herstellbares wird angezeigt
+gui.recipebook.toggleRecipes.smeltable=Erhitzbares wird angezeigt
+gui.recipebook.toggleRecipes.smokable=Räucherbares wird angezeigt
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Bau
+vdx.creative.tab.equipment=Ausrüstung
+vdx.creative.tab.items=Gegenstände
+vdx.creative.tab.nature=Natur
+
+inventory.binSlot=Gegenstand zerstören
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Hängeschildbeschriftung bearbeiten
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Befehl
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Relative Position
+structure_block.size=Konstruktionsgröße
+structure_block.integrity_and_seed=Vollständigkeit und Startwert der Konstruktion
+structure_block.detect_size=Strukturgröße und ‐position erkennen:
+structure_block.mode_info.save=Speicher‐Modus – In Datei speichern
+structure_block.mode_info.load=Lade‐Modus – Aus Datei laden
+structure_block.mode_info.corner=Eck‐Modus – Markierung von Position und Größe
+structure_block.exportTo=Export:
+structure_block.mode.export=Export
+structure_block.button.detect_size=Erkennen
+structure_block.button.save=Speichern
+structure_block.button.load=Laden
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Angebote
+merchant.deprecated=Dorfbewohner füllen ihren Warenbestand bis zu zweimal am Tag auf.
