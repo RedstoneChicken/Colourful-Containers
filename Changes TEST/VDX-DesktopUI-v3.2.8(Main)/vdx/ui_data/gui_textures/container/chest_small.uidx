@@ -1,0 +1,50 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "chest_small_textures_dx",
+
+  "chest_small": {
+    "type": "panel",
+    "size": [ 176, 167 ],
+    "controls": [
+      {
+        "top": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/container/generic_54",
+          "uv": [ 0, 0 ],
+          "uv_size": "$generic_54_uv_size",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 176, 71 ],
+          "variables": [
+            { "requires": "($chest_small_resolution = '256x')",  "$generic_54_uv_size": [ 176, 71 ] },
+            { "requires": "($chest_small_resolution = '512x')",  "$generic_54_uv_size": [ 352, 142 ] },
+            { "requires": "($chest_small_resolution = '1024x')", "$generic_54_uv_size": [ 704, 284 ] },
+            { "requires": "($chest_small_resolution = '2048x')", "$generic_54_uv_size": [ 1408, 568 ] },
+            { "requires": "($chest_small_resolution = '4096x')", "$generic_54_uv_size": [ 2816, 1136 ] },
+            { "requires": "($chest_small_resolution = '8192x')", "$generic_54_uv_size": [ 5632, 2272 ] }
+          ]
+        }
+      },
+      { 
+        "bottom": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/container/generic_54",
+          "uv": "$generic_54_uv",
+          "uv_size": "$generic_54_uv_size",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [ 176, 96 ],
+          "variables": [
+            { "requires": "($chest_small_resolution = '256x')",  "$generic_54_uv": [ 0, 126 ],  "$generic_54_uv_size": [ 176, 96 ] },
+            { "requires": "($chest_small_resolution = '512x')",  "$generic_54_uv": [ 0, 252 ],  "$generic_54_uv_size": [ 352, 192 ] },
+            { "requires": "($chest_small_resolution = '1024x')", "$generic_54_uv": [ 0, 504 ],  "$generic_54_uv_size": [ 704, 384 ] },
+            { "requires": "($chest_small_resolution = '2048x')", "$generic_54_uv": [ 0, 1008 ], "$generic_54_uv_size": [ 1408, 768 ] },
+            { "requires": "($chest_small_resolution = '4096x')", "$generic_54_uv": [ 0, 2016 ], "$generic_54_uv_size": [ 2816, 1536 ] },
+            { "requires": "($chest_small_resolution = '8192x')", "$generic_54_uv": [ 0, 4032 ], "$generic_54_uv_size": [ 5632, 3072 ] }
+          ]
+        }
+      }
+    ]
+  }
+}

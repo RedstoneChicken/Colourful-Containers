@@ -1,0 +1,9 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "CrisXolt_vdx_config",
+
+  "main_panel_config": {
+    "$use_sodium_panel": true
+  }
+}

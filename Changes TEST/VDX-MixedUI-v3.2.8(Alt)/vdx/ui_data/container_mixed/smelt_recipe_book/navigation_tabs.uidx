@@ -1,0 +1,415 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "smelt_recipe_book_mixed_navigation_tabs_dx",
+  
+  /*//// Icons ////*/
+
+  "stone_icon": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      { "0@cris_smelt_rendered_items.item_03_input_icon_00": { "ignored": "($is_blast_furnace)", "layer": 1 } },
+      { "1@cris_smelt_rendered_items.item_60_input_icon_00": { "ignored": "(not $is_blast_furnace)", "layer": 3 } }
+    ]
+  },
+
+  "items_icon": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      { "0@cris_smelt_rendered_items.lava_bucket_icon": { "ignored": "($is_blast_furnace)", "layer": 1 } },
+      { "2@cris_smelt_rendered_items.iron_shovel_icon": { "ignored": "(not $is_blast_furnace)", "layer": 1 } }
+    ]
+  },
+  
+  /*//// Tabs ////*/
+
+  "tab_panel_template": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 26, 25 ],
+    "$anims|default": [],
+    "anims": "$anims",
+    //"$offset|default": [ 0, 0 ],
+    "$offset": [ 0, 0 ],
+    "offset": "$offset",
+    "controls": [
+      { 
+        "tab_selected@toggle_dx.toggle_panel": {
+          "layer": 1,
+          "size": [ 35, 27 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$unchecked_control": "miscellaneous_dx.empty_panel",
+          "$unchecked_hover_control": "miscellaneous_dx.empty_panel",
+          "$checked_control": "miscellaneous_dx.empty_panel",
+          "$checked_hover_control": "miscellaneous_dx.empty_panel",
+          "$toggle_name": "navigation_tab",
+          "$toggle_group_default_selected": 0,
+          "$toggle_binding_type": "global"
+        }
+      },
+      {
+        "tab_textures": {
+          "type": "panel",
+          "controls": [
+            { 
+              "tab_selected@$tab_selected_texture": {
+                "layer": 1,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$tab_view_binding_name",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "tab_unselected@$tab_unselected_texture": {
+                "layer": -13,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$tab_view_binding_name",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "icon_selected@$tab_icon": {
+          "layer": 5,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 5, 7 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$tab_view_binding_name",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "icon@$tab_icon": {
+          "layer": 5,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 5, 8 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$tab_view_binding_name",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "food_tab@smelt_recipe_book_mixed_navigation_tabs_dx.tab_panel_template": {
+    "$tab_icon": "cris_smelt_rendered_items.item_38_input_icon_00",
+    "$tab_view_binding_name": "food_tab_toggle",
+    "$toggle_group_forced_index": 1
+  },
+  
+  "stone_tab@smelt_recipe_book_mixed_navigation_tabs_dx.tab_panel_template": {
+    "$tab_icon": "smelt_recipe_book_mixed_navigation_tabs_dx.stone_icon",
+    "$tab_view_binding_name": "stone_tab_toggle",
+    "$toggle_group_forced_index": 2
+  },
+
+  "items_tab@smelt_recipe_book_mixed_navigation_tabs_dx.tab_panel_template": {
+    "$tab_icon": "smelt_recipe_book_mixed_navigation_tabs_dx.items_icon",
+    "$tab_view_binding_name": "items_tab_toggle",
+    "$toggle_group_forced_index": 3
+  },
+
+  "all_tab@smelt_recipe_book_mixed_navigation_tabs_dx.tab_panel_template": {
+    "$tab_selected_texture": "recipe_book_mixed_textures_dx.tab_top_selected_5",
+    "$tab_unselected_texture": "recipe_book_mixed_textures_dx.tab_top_unselected_5",
+    "$tab_icon": "recipe_book_mixed_navigation_tabs_dx.search_icon",
+    "$tab_view_binding_name": "all_tab_toggle",
+    "$toggle_default_state": true,
+    "$toggle_group_forced_index": 0
+  },
+  
+  /*//// Main Panel ////*/
+
+  "smoker_navigation_tabs": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ 142, 25 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, -25 ],
+    "$is_blast_furnace|default": false,
+    "$is_smoker|default": false,
+    "controls": [
+      { 
+        "left_panel": {
+          "type": "panel",
+          "size": [ 0, "100%" ],
+          "controls": [
+            {
+              "gamepad_helper_left_bumper@gamepad_helper_dx.gamepad_helper_left_bumper": {
+                "offset": [ -22, 7 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$hide_separator": true,
+                "$hide_description": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "food_tab_panel": {
+          "ignored": "$is_blast_furnace",
+          "type": "panel",
+          "size": [ 26, 25 ],
+          "controls": [
+            { 
+              "food_tab@smelt_recipe_book_mixed_navigation_tabs_dx.food_tab": {
+                "$tab_selected_texture": "recipe_book_mixed_textures_dx.tab_top_selected_1",
+                "$tab_unselected_texture": "recipe_book_mixed_textures_dx.tab_top_unselected_1"
+              }
+            }
+          ]
+        }
+      },
+      { "fill_panel": { "type": "panel", "size": [ "fill", 1 ] } },
+      {
+        "all_tab_panel": {
+          "type": "panel",
+          "size": [ 26, 25 ],
+          "controls": [
+            { "all_tab@smelt_recipe_book_mixed_navigation_tabs_dx.all_tab": { } }
+          ]
+        }
+      },
+      { 
+        "right_panel": {
+          "type": "panel",
+          "size": [ 0, "100%" ],
+          "controls": [
+            {
+              "gamepad_helper_right_bumper@gamepad_helper_dx.gamepad_helper_right_bumper": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [ 22, 7 ],
+                "$hide_separator": true,
+                "$hide_description": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "blast_furnace_navigation_tabs": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ 142, 25 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, -25 ],
+    "$is_blast_furnace|default": false,
+    "$is_smoker|default": false,
+    "controls": [
+      { 
+        "left_panel": {
+          "type": "panel",
+          "size": [ 0, "100%" ],
+          "controls": [
+            {
+              "gamepad_helper_left_bumper@gamepad_helper_dx.gamepad_helper_left_bumper": {
+                "offset": [ -22, 7 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$hide_separator": true,
+                "$hide_description": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stone_tab_panel": {
+          "ignored": "$is_smoker",
+          "type": "panel",
+          "size": [ 26, 25 ],
+          "controls": [
+            { 
+              "stone_tab@smelt_recipe_book_mixed_navigation_tabs_dx.stone_tab": {
+                "$tab_selected_texture": "recipe_book_mixed_textures_dx.tab_top_selected_1",
+                "$tab_unselected_texture": "recipe_book_mixed_textures_dx.tab_top_unselected_1"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "items_tab_panel": {
+          "ignored": "$is_smoker",
+          "type": "panel",
+          "size": [ 26, 25 ],
+          "controls": [
+            { 
+              "items_tab@smelt_recipe_book_mixed_navigation_tabs_dx.items_tab": {
+                "$tab_selected_texture": "recipe_book_mixed_textures_dx.tab_top_selected_2",
+                "$tab_unselected_texture": "recipe_book_mixed_textures_dx.tab_top_unselected_2"
+              }
+            }
+          ]
+        }
+      },
+      { "fill_panel": { "type": "panel", "size": [ "fill", 1 ] } },
+      {
+        "all_tab_panel": {
+          "type": "panel",
+          "size": [ 26, 25 ],
+          "controls": [
+            { "all_tab@smelt_recipe_book_mixed_navigation_tabs_dx.all_tab": { } }
+          ]
+        }
+      },
+      { 
+        "right_panel": {
+          "type": "panel",
+          "size": [ 0, "100%" ],
+          "controls": [
+            {
+              "gamepad_helper_right_bumper@gamepad_helper_dx.gamepad_helper_right_bumper": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [ 22, 7 ],
+                "$hide_separator": true,
+                "$hide_description": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "furnace_navigation_tabs": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ 142, 25 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, -25 ],
+    "$is_blast_furnace|default": false,
+    "$is_smoker|default": false,
+    "controls": [
+      { 
+        "left_panel": {
+          "type": "panel",
+          "size": [ 0, "100%" ],
+          "controls": [
+            {
+              "gamepad_helper_left_bumper@gamepad_helper_dx.gamepad_helper_left_bumper": {
+                "offset": [ -22, 7 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$hide_separator": true,
+                "$hide_description": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "food_tab_panel": {
+          "ignored": "$is_blast_furnace",
+          "type": "panel",
+          "size": [ 26, 25 ],
+          "controls": [
+            { 
+              "food_tab@smelt_recipe_book_mixed_navigation_tabs_dx.food_tab": {
+                "$tab_selected_texture": "recipe_book_mixed_textures_dx.tab_top_selected_1",
+                "$tab_unselected_texture": "recipe_book_mixed_textures_dx.tab_top_unselected_1"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stone_tab_panel": {
+          "ignored": "$is_smoker",
+          "type": "panel",
+          "size": [ 26, 25 ],
+          "controls": [
+            { 
+              "stone_tab@smelt_recipe_book_mixed_navigation_tabs_dx.stone_tab": {
+                "$tab_selected_texture": "recipe_book_mixed_textures_dx.tab_top_selected_2",
+                "$tab_unselected_texture": "recipe_book_mixed_textures_dx.tab_top_unselected_2"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "items_tab_panel": {
+          "ignored": "$is_smoker",
+          "type": "panel",
+          "size": [ 26, 25 ],
+          "controls": [
+            { 
+              "items_tab@smelt_recipe_book_mixed_navigation_tabs_dx.items_tab": {
+                "$tab_selected_texture": "recipe_book_mixed_textures_dx.tab_top_selected_3",
+                "$tab_unselected_texture": "recipe_book_mixed_textures_dx.tab_top_unselected_3"
+              }
+            }
+          ]
+        }
+      },
+      { "fill_panel": { "type": "panel", "size": [ "fill", 1 ] } },
+      {
+        "all_tab_panel": {
+          "type": "panel",
+          "size": [ 26, 25 ],
+          "controls": [
+            { "all_tab@smelt_recipe_book_mixed_navigation_tabs_dx.all_tab": { } }
+          ]
+        }
+      },
+      { 
+        "right_panel": {
+          "type": "panel",
+          "size": [ 0, "100%" ],
+          "controls": [
+            {
+              "gamepad_helper_right_bumper@gamepad_helper_dx.gamepad_helper_right_bumper": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [ 22, 7 ],
+                "$hide_separator": true,
+                "$hide_description": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

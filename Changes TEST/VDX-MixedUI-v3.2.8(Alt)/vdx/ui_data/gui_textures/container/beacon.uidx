@@ -1,0 +1,713 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "beacon_textures_dx",
+
+  "beacon": {
+    "type": "panel",
+    "size": [ 230, 219 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/minecraft/textures/gui/container/beacon",
+          "size": [ 256, 256 ]
+        }
+      }
+    ]
+  },
+
+  /* Speed Effect Buttons */
+
+  "beacon_speed_effect": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/speed"
+        }
+      }
+    ]
+  },
+
+  "speed_button": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "speed_button_disabled": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "speed_button_highlighted": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "speed_button_selected": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Haste Effect Buttons */
+
+  "beacon_haste_effect": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/haste"
+        }
+      }
+    ]
+  },
+
+  "haste_button": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "haste_button_disabled": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "haste_button_highlighted": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "haste_button_selected": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Resistance Effect Buttons */
+
+  "beacon_resistance_effect": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/resistance"
+        }
+      }
+    ]
+  },
+
+  "resistance_button": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "resistance_button_disabled": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "resistance_button_highlighted": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "resistance_button_selected": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Jump Boost Effect Buttons */
+
+  "beacon_jump_boost_effect": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/jump_boost"
+        }
+      }
+    ]
+  },
+
+  "jump_boost_button": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "jump_boost_button_disabled": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "jump_boost_button_highlighted": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "jump_boost_button_selected": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Strength Effect Buttons */
+
+  "beacon_strength_effect": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/strength"
+        }
+      }
+    ]
+  },
+
+  "strength_button": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "strength_button_disabled": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "strength_button_highlighted": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "strength_button_selected": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Regeneration Effect Buttons */
+
+  "beacon_regeneration_effect": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/regeneration"
+        }
+      }
+    ]
+  },
+
+  "regeneration_button": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "regeneration_button_disabled": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "regeneration_button_highlighted": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "regeneration_button_selected": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Extra Effect Buttons */
+  
+  "extra_effect_base": {
+    "bindings": [
+      {
+        "binding_name": "#extra_image_selection",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "$effect_name",
+        "binding_type": "collection"
+      }
+    ]
+  },
+
+  "beacon_extra_effect": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "speed@beacon_textures_dx.extra_effect_base": {
+          "$effect_name": "speed",
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/speed"
+        }
+      },
+      {
+        "haste@beacon_textures_dx.extra_effect_base": {
+          "$effect_name": "haste",
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/haste"
+        }
+      },
+      {
+        "resistance@beacon_textures_dx.extra_effect_base": {
+          "$effect_name": "resist",
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/resistance"
+        }
+      },
+      {
+        "jump_boost@beacon_textures_dx.extra_effect_base": {
+          "$effect_name": "jump",
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/jump_boost"
+        }
+      },
+      {
+        "strength@beacon_textures_dx.extra_effect_base": {
+          "$effect_name": "strength",
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/strength"
+        }
+      }
+    ]
+  },
+
+  "extra_button": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "extra_button_disabled": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "extra_button_highlighted": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "extra_button_selected": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Confirm Buttons */
+
+  "confirm": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/confirm",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "confirm_button": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "confirm_button_disabled": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "confirm_button_highlighted": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "confirm_button_selected": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Cancel Buttons */
+
+  "cancel": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/cancel",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "cancel_button": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "cancel_button_disabled": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "cancel_button_highlighted": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "cancel_button_selected": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

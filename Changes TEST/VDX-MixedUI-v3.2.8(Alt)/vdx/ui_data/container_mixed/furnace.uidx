@@ -1,0 +1,196 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "furnace_mixed_dx",
+
+  "top_half_panel": {
+    "type": "panel",
+    "controls": [
+      /* Title */
+      {
+        "title@label_dx.global_label": {
+          "offset": [ 0, 5 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "color": "$vdx_furnace_title_text_color",
+          "text": "$container_title",
+          "shadow": "$vdx_container_text_shadow",
+          "controls": [
+            { "text_control@$vdx_furnace_title_text_control": { } }
+          ]
+        }
+      },
+      /* Ingredient and Fuel */
+      { 
+        "furnace_ingredient_item@container_item_dx.container_item": {
+          "size": [ 18, 18 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 55, 16 ],
+          "$item_collection_name": "furnace_ingredient_items",
+          "$focus_id": "furnace_ingredient_item",
+          "$focus_override_left": "FOCUS_OVERRIDE_STOP",
+          "$focus_override_left_binding_type": "none",
+          "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+          "$focus_override_up_binding_type": "none"
+        }
+      },
+      { 
+        "lit_progress@furnace_textures_dx.lit_progress": {
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "offset": [ 56, 36 ]
+        }
+      },
+      { 
+        "furnace_fuel_item@container_item_dx.container_item": {
+          "size": [ 18, 18 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 55, 52 ],
+          "$item_collection_name": "furnace_fuel_items",
+          "$focus_id": "furnace_fuel_item",
+          "$focus_override_right": "furnace_output_item",
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_left": "FOCUS_OVERRIDE_STOP",
+          "$focus_override_left_binding_type": "none"
+        }
+      },
+      /* Output */
+      { 
+        "burn_progress@furnace_textures_dx.burn_progress": {
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "offset": [ 79, 34 ]
+        }
+      },
+      { 
+        "furnace_output_item@container_item_dx.container_item": {
+          "$highlight_control": "slot_highlight_dx.slot_highlight_output_panel",
+          "$slot_selected_control": "slot_highlight_dx.slot_selected_output_panel",
+          "size": [ 26, 26 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -39, 30 ],
+          "$item_collection_name": "furnace_output_items",
+          "$focus_id": "furnace_output_item",
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$focus_override_left_binding_type": "none",
+          "$focus_override_left": "furnace_fuel_item"
+        }
+      },
+      /* Recipe Book Addition */
+      { "recipe_button_panel@$vdx_smelt_top_type_toggles_control": { } },
+      {
+        "input_overlay_panel@smelt_slot_input_dx.input_overlay_panel": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 55, 16 ]
+        }
+      },
+      {
+        "cell_image_fuel_overlay@smelt_slot_fuel_dx.cell_image_fuel_overlay": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 55, 52 ]
+        }
+      },
+      {
+        "output_overlay_panel@smelt_slot_output_dx.output_overlay_panel": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -39, 30 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Main ////*/
+
+  "furnace_panel@container_panel_dx.container_panel": {
+    "$container_bg": "furnace_textures_dx.furnace",
+    "$container_top_half": "furnace_mixed_dx.top_half_panel"
+  },
+
+  "furnace_with_recipe_book_panel":{
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 166 ],
+    "controls": [
+      {
+        "smelt_recipe_book_sections": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", 166 ],
+          "controls": [
+            { 
+              "smelt_recipe_book_panel@smelt_recipe_book_mixed_dx.smelt_recipe_book_panel": {
+                "$recipe_book_scroll_type": "smelt_recipe_book_mixed_dx.furnace_recipe_item_scroll_panel",
+                "$recipe_panel_content_type": "smelt_recipe_book_mixed_dx.furnace_panel_content",
+                "bindings": [
+                  { 
+                    "binding_type": "view",
+                    "source_control_name": "show_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "center_fold": {
+                "type": "panel",
+                "size": [ 4, 166 ],
+                "bindings": [
+                  { 
+                    "binding_type": "view",
+                    "source_control_name": "show_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { 
+                    "center_fold@recipe_book_mixed_textures_dx.center_fold": {
+                      "layer": -2,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ -7, 0 ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "furnace_panel@furnace_mixed_dx.furnace_panel": { } }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@container_panel_dx.container_gamepad_helpers": {} },
+      { "container_modules@container_panel_dx.container_modules": {} },
+      { "furnace_panel@furnace_mixed_dx.furnace_with_recipe_book_panel": { } }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@furnace_mixed_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "social_interactions_textures_dx",
+
+  "background": {
+    "type": "panel",
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only iF the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/social_interactions/background",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($social_interactions_background_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($social_interactions_background_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($social_interactions_background_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($social_interactions_background_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($social_interactions_background_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($social_interactions_background_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "mute_button": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/social_interactions/mute_button",
+          "size": [ 20, 20 ]
+        }
+      }
+    ]
+  },
+
+  "mute_button_highlighted": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/social_interactions/mute_button_highlighted",
+          "size": [ 20, 20 ]
+        }
+      }
+    ]
+  },
+
+  "report_button": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/social_interactions/report_button",
+          "size": [ 20, 20 ]
+        }
+      }
+    ]
+  },
+
+  "report_button_disabled": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/social_interactions/report_button_disabled",
+          "size": [ 20, 20 ]
+        }
+      }
+    ]
+  },
+
+  "report_button_highlighted": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/social_interactions/report_button_highlighted",
+          "size": [ 20, 20 ]
+        }
+      }
+    ]
+  }
+}

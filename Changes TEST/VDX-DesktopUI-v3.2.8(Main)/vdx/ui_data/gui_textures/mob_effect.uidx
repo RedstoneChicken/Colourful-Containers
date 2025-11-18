@@ -1,0 +1,453 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "mob_effect_textures_dx",
+
+  "absorption": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/absorption"
+        }
+      }
+    ]
+  },
+
+  "bad_omen": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/bad_omen"
+        }
+      }
+    ]
+  },
+
+  "blindness": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/blindness"
+        }
+      }
+    ]
+  },
+
+  "conduit_power": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/conduit_power"
+        }
+      }
+    ]
+  },
+
+  "darkness": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/darkness"
+        }
+      }
+    ]
+  },
+
+  "fire_resistance": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/fire_resistance"
+        }
+      }
+    ]
+  },
+
+  "haste": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/haste"
+        }
+      }
+    ]
+  },
+
+  "health_boost": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/health_boost"
+        }
+      }
+    ]
+  },
+
+  "hero_of_the_village": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/hero_of_the_village"
+        }
+      }
+    ]
+  },
+
+  "hunger": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/hunger"
+        }
+      }
+    ]
+  },
+
+  "infested": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/infested"
+        }
+      }
+    ]
+  },
+
+  "invisibility": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/invisibility"
+        }
+      }
+    ]
+  },
+  
+  "jump_boost": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/jump_boost"
+        }
+      }
+    ]
+  },
+  
+  "levitation": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/levitation"
+        }
+      }
+    ]
+  },
+  
+  "mining_fatigue": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/mining_fatigue"
+        }
+      }
+    ]
+  },
+  
+  "nausea": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/nausea"
+        }
+      }
+    ]
+  },
+  
+  "night_vision": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/night_vision"
+        }
+      }
+    ]
+  },
+  
+  "oozing": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/oozing"
+        }
+      }
+    ]
+  },
+  
+  "poison": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/poison"
+        }
+      }
+    ]
+  },
+
+  "raid_omen": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/raid_omen"
+        }
+      }
+    ]
+  },
+  
+  "regeneration": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/regeneration"
+        }
+      }
+    ]
+  },
+  
+  "resistance": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/resistance"
+        }
+      }
+    ]
+  },
+  
+  "slow_falling": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/slow_falling"
+        }
+      }
+    ]
+  },
+  
+  "slowness": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/slowness"
+        }
+      }
+    ]
+  },
+
+  "speed": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/speed"
+        }
+      }
+    ]
+  },
+  
+  "strength": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/strength"
+        }
+      }
+    ]
+  },
+  
+  "trial_omen": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/trial_omen"
+        }
+      }
+    ]
+  },
+  
+  "water_breathing": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/water_breathing"
+        }
+      }
+    ]
+  },
+  
+  "weakness": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/weakness"
+        }
+      }
+    ]
+  },
+  
+  "weaving": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/weaving"
+        }
+      }
+    ]
+  },
+  
+  "wind_charged": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/wind_charged"
+        }
+      }
+    ]
+  },
+  
+  "wither": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "texture": "assets/minecraft/textures/mob_effect/wither"
+        }
+      }
+    ]
+  }
+}

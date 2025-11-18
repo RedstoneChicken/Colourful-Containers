@@ -1,0 +1,417 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "recipe_book_textures_dx",
+
+  "recipe_book": {
+    "type": "panel",
+    "size": [ 147, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ -1, -1 ],
+          "texture": "assets/minecraft/textures/gui/recipe_book",
+          "size": [ 256, 256 ]
+        }
+      }
+    ]
+  },
+
+  "inventory_button": {
+    "type": "panel",
+    "size": [ 20, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "inventory_button_highlighted": {
+    "type": "panel",
+    "size": [ 20, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "crafting_table_button": {
+    "type": "panel",
+    "size": [ 20, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "crafting_table_button_highlighted": {
+    "type": "panel",
+    "size": [ 20, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "furnace_button": {
+    "type": "panel",
+    "size": [ 20, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "furnace_button_highlighted": {
+    "type": "panel",
+    "size": [ 20, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "blast_furnace_button": {
+    "type": "panel",
+    "size": [ 20, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "blast_furnace_button_highlighted": {
+    "type": "panel",
+    "size": [ 20, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "smoker_button": {
+    "type": "panel",
+    "size": [ 20, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "smoker_button_highlighted": {
+    "type": "panel",
+    "size": [ 20, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "filter_disabled": {
+    "type": "panel",
+    "size": [ 26, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "filter_disabled_highlighted": {
+    "type": "panel",
+    "size": [ 26, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "filter_enabled": {
+    "type": "panel",
+    "size": [ 26, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "filter_enabled_highlighted": {
+    "type": "panel",
+    "size": [ 26, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "furnace_filter_disabled": {
+    "type": "panel",
+    "size": [ 26, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "furnace_filter_disabled_highlighted": {
+    "type": "panel",
+    "size": [ 26, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_disabled_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "furnace_filter_enabled": {
+    "type": "panel",
+    "size": [ 26, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_enabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "furnace_filter_enabled_highlighted": {
+    "type": "panel",
+    "size": [ 26, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_enabled_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "page_backward": {
+    "type": "panel",
+    "size": [ 12, 17 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "page_backward_highlighted": {
+    "type": "panel",
+    "size": [ 12, 17 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "page_forward": {
+    "type": "panel",
+    "size": [ 12, 17 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "page_forward_highlighted": {
+    "type": "panel",
+    "size": [ 12, 17 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "slot_craftable": {
+    "type": "panel",
+    "size": [ 25, 25 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "slot_many_craftable": {
+    "type": "panel",
+    "size": [ 25, 25 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_many_craftable",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "slot_uncraftable": {
+    "type": "panel",
+    "size": [ 25, 25 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_uncraftable",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "slot_many_uncraftable": {
+    "type": "panel",
+    "size": [ 25, 25 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_many_uncraftable",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "tab": {
+    "type": "panel",
+    "size": [ 35, 27 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "tab_selected": {
+    "type": "panel",
+    "size": [ 35, 27 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ -2, 0 ],
+          "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

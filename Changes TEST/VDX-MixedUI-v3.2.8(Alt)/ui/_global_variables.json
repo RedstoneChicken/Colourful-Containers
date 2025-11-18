@@ -1,0 +1,545 @@
+{
+  /* Vanilla DX 3rd Gen UI Tweaks, v3.2.0 */
+
+  /* (c) CrisXolt. Don't use any UI data without authorization! */
+
+  //////// Other Resource Packs Compatibility ////////
+  //////// Note: Don't modify these values unlees you know what are you doing...
+  
+  /* By @agentms_*/
+  "$is_java_aspects": false,
+  "$is_console_aspects": false,
+  "$item_icons_enabled": false,
+  "$hide_item_renderer": false,
+  
+  /* By @ZouChenyunfei*/
+  "$is_multipixel": false,
+  "$is_multipixel_java": false,
+  "$is_multipixel_bedrock": false,
+  "$is_multipixel_mixed": false,
+
+  /* By @CrisXolt (Me)*/
+  "$is_brewing_guide_ui": false,  /* New */
+
+  //////// Main Global ////////
+
+  /* Options */
+  // Note: This is for those who want to play with lowest scale possible in 1080p resolution, without safezone being affected, of course.
+  "$is_affected_by_safezone": true,
+  /* For HUD Screen */
+  "$ignore_vignette": false,
+  /* For Creative Screen */
+  "$release_creative_search_tab_icon_id": 416,
+  "$preview_creative_search_tab_icon_id": 423,
+
+  //////// Buttons ////////
+
+  /* Colors */
+  "$main_button_default_color": [ 1.0, 1.0, 1.0 ],
+  "$main_button_hover_color": [ 1.0, 1.0, 1.0 ], /* Before [ 1.0, 1.0, 0.62 ] */
+  "$main_button_preesed_color": [ 1.0, 1.0, 1.0 ], /* Before [ 1.0, 1.0, 0.62 ] */
+  "$main_button_locked_color": [ 0.62, 0.62, 0.62 ],
+
+  //////// HUD ////////
+
+  /* Options */
+  "$show_hud_while_inventory": false,
+  "$show_save_indicator_icon": true,
+  "$scoreboard_text_shadow": false,
+  "$ignore_scoreboard_scores": false,
+  "$ignore_bar_hud_padding": false,
+  "$show_enchantments_in_item_text": true,
+
+  "$hud_text_background_alpha": 0.5,
+  "$vdx_hud_text_background": "vdx/ui_textures/hud/hud_tip_text_background", // "vdx/ui_textures/hud/hud_tip_text_background"
+  
+  "$hud_text_background_size": [ "100% + 12px", "100% + 5px" ], // [ "100% + 12px", "100% + 5px" ]
+  "$hud_alt_text_background_size": [ "100% + 12px", 15 ], // [ "100% + 12px", 15 ]
+  "$hud_text_background_offset": [ 0, -3 ], // [ 0, -3 ]
+
+  "$hud_title_text_offset": [ -1, -6 ],
+  "$hud_title_text_background_size": [ "100%sm + 30px", "100%sm + 6px" ],
+  "$hud_title_text_background_offset": [ -1, -11 ],
+
+  "$hud_subtitle_text_offset": [ -1, -2 ],
+  "$hud_subtitle_text_background_size": [ "100%sm + 20px", "100%sm + 5px" ],
+  "$hud_subtitle_text_background_offset": [ -1, -5 ],
+
+  "$bottom_objects_offset": [ 0, -1 ],
+
+  "$main_item_text_offset": [ 0, -38 ],
+
+  "$jukebox_text_offset": [ 0, -68 ],
+  "$hud_block_messages_offset": [ 0, -68 ],
+  "$hud_tip_text_offset": [ 0, -68 ],
+  "$hud_action_bar_offset": [ 0, -68 ],
+
+  /* Boss/Event Bars */
+  // Ender Dragon
+  "$ender_dragon_bar_empty_texture": "boss_bar_textures_dx.pink_background",
+  "$ender_dragon_bar_full_texture": "boss_bar_textures_dx.pink_progress",
+  "$ender_dragon_nub_bar_empty_texture": "miscellaneous_dx.empty_panel",
+  "$ender_dragon_nub_bar_full_texture": "miscellaneous_dx.empty_panel",
+  // Wither
+  "$wither_bar_empty_texture": "boss_bar_textures_dx.purple_background",
+  "$wither_bar_full_texture": "boss_bar_textures_dx.purple_progress",
+  "$wither_nub_bar_empty_texture": "miscellaneous_dx.empty_panel",
+  "$wither_nub_bar_full_texture": "miscellaneous_dx.empty_panel",
+  // Raid
+  "$raid_bar_empty_texture": "boss_bar_textures_dx.red_background",
+  "$raid_bar_full_texture": "boss_bar_textures_dx.red_progress",
+  "$raid_nub_bar_empty_texture": "boss_bar_textures_dx.notched_10_background",
+  "$raid_nub_bar_full_texture": "boss_bar_textures_dx.notched_10_progress",
+  // Defaut
+  "$default_event_bar_empty_texture": "boss_bar_textures_dx.white_background",
+  "$default_event_bar_full_texture": "boss_bar_textures_dx.white_progress",
+  "$default_event_nub_bar_empty_texture": "miscellaneous_dx.empty_panel",
+  "$default_event_nub_bar_full_texture": "miscellaneous_dx.empty_panel",
+  "$has_default_event_bar_empty_custom_color": true, //Only possible if the bar is white.
+  "$has_default_event_bar_full_custom_color": true, //Only possible if the bar is white.
+  
+  /* Hotbar */
+  "$hotbar_texture": "hud_textures_dx.hotbar",
+  "$hotbar_selection_texture": "hud_textures_dx.hotbar_selection",
+
+  /* Experience Bar */
+  "$experience_level_offset": [ 0, -10 ],
+  "$experience_level_control": "hud_bottom_bar_elements_dx.experience_level", /* New */
+  "$experience_text_color": [ 0.5, 1.0, 0.0 ],
+  "$experience_outline_text_color": [ 0.0, 0.0, 0.0 ],
+  "$experience_bar_background_texture": "hud_textures_dx.experience_bar_background",
+  "$experience_bar_progress_texture": "hud_textures_dx.experience_bar_progress",
+
+  "$hotbar_elipses_left_texture": "hud_textures_dx.hotbar_pocket_elipses_left",
+  "$hotbar_elipses_right_texture": "hud_textures_dx.hotbar_pocket_elipses_right",
+
+  "$experience_bar_touch_background_texture": "hud_textures_dx.experience_bar_touch_background",
+  "$experience_bar_touch_progress_texture": "hud_textures_dx.experience_bar_touch_progress",
+  "$experience_bar_touch_size": [ 202, 5 ],
+  "$jump_bar_touch_size": [ 202, 5 ],
+  "$locator_bar_touch_size": [ 202, 5 ],
+
+  /* Chat */
+  "$chat_size": [ "40%", 180 ],
+  "$max_chat_messages_in_hud": 20,
+
+  /* Scoreboards */
+  "$player_score_color": [ 1.0, 0.333, 0.333, 1.0 ],
+
+  /* Sign */
+  "$sign_edit_text_color": [ 1, 1, 1 ],
+
+  //////// Container ////////
+  
+  /* Options */
+  "$custom_durability_bar": false,
+  "$custom_storage_bar": false,
+  "$ignore_flying_item": false,
+  "$beacon_gamepad_heleprs_side": false,
+  "$large_chest_gamepad_heleprs_side": false,
+
+  "$vdx_container_text_shadow": false,  /* New */
+  "$vdx_beacon_text_shadow": true,  /* New */
+  
+  /* Title Text Colors */   /* New */
+  "$vdx_inventory_title_text_color": [ 0.3, 0.3, 0.3 ],
+
+  "$vdx_anvil_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_barrel_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_beacon_primary_title_text_color": [ 1.0, 1.0, 1.0 ],
+  "$vdx_beacon_secondary_title_text_color": [ 1.0, 1.0, 1.0 ],
+  "$vdx_blast_furnace_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_brewing_stand_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_chest_small_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_chest_large_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_chest_ender_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_cartography_table_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_crafter_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_crafting_table_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_creative_items_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_creative_item_search_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_dispenser_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_dropper_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_enchanting_table_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_furnace_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_grindstone_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_hopper_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_horse_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_inventory_crafting_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_loom_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_shulker_box_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_smithing_table_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_smoker_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_stonecutter_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_villager_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_villager_trade_text_color": [ 0.3, 0.3, 0.3 ],
+
+  "$vdx_cartography_table_mixed_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_cartography_table_mixed_name_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_cartography_table_mixed_details_text_color": [ 0.3, 0.3, 0.3 ],
+
+  "$vdx_recipe_book_items_mixed_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_creative_items_mixed_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_full_creative_items_mixed_title_text_color": [ 0.3, 0.3, 0.3 ],
+
+  "$vdx_loom_mixed_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_stonecutter_mixed_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_villager_mixed_title_text_color": [ 0.3, 0.3, 0.3 ],
+
+  "$vdx_anvil_pvp_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_beacon_primary_pvp_title_text_color": [ 1.0, 1.0, 1.0 ],
+  "$vdx_beacon_secondary_pvp_title_text_color": [ 1.0, 1.0, 1.0 ],
+  "$vdx_brewing_stand_pvp_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_crafting_table_pvp_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_creative_items_pvp_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_creative_item_search_pvp_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_enchanting_table_pvp_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_furnace_pvp_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_horse_pvp_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_inventory_crafting_pvp_title_text_color": [ 0.3, 0.3, 0.3 ],
+
+  /* Title Text Controls */  /* New */
+  "$vdx_inventory_title_text_control": "miscellaneous_dx.empty_panel",
+
+  "$vdx_anvil_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_barrel_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_beacon_primary_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_beacon_secondary_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_blast_furnace_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_brewing_stand_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_chest_small_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_chest_large_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_chest_ender_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_cartography_table_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_crafter_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_crafting_table_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_creative_items_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_creative_item_search_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_dispenser_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_dropper_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_enchanting_table_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_furnace_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_grindstone_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_hopper_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_horse_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_inventory_crafting_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_loom_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_shulker_box_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_smithing_table_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_smoker_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_stonecutter_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_villager_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_villager_trade_text_control": "miscellaneous_dx.empty_panel",
+
+  "$vdx_cartography_table_mixed_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_cartography_table_mixed_name_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_cartography_table_mixed_details_text_control": "miscellaneous_dx.empty_panel",
+
+  "$vdx_recipe_book_items_mixed_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_creative_items_mixed_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_full_creative_items_mixed_title_text_control": "miscellaneous_dx.empty_panel",
+
+  "$vdx_loom_mixed_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_stonecutter_mixed_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_villager_mixed_title_text_control": "miscellaneous_dx.empty_panel",
+
+  "$vdx_anvil_pvp_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_beacon_primary_pvp_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_beacon_secondary_pvp_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_brewing_stand_pvp_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_crafting_table_pvp_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_creative_items_pvp_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_creative_item_search_pvp_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_enchanting_table_pvp_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_furnace_pvp_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_horse_pvp_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_inventory_crafting_pvp_title_text_control": "miscellaneous_dx.empty_panel",
+
+  /* Enchanting */
+  "$vdx_enchanting_runes_color": [ 0.4, 0.36, 0.3 ],
+  "$vdx_enchanting_runes_highlighted_color": [ 1.0, 1.0, 0.5 ],
+  "$vdx_enchanting_runes_disabled_color": [ 0.2, 0.18, 0.14 ],
+
+  "$vdx_enchanting_cost_control": "enchanting_table_desktop_dx.enchant_cost",
+  "$vdx_enchanting_cost_disabled_control": "enchanting_table_desktop_dx.enchant_cost_disabled",
+  "$vdx_enchanting_cost_color": [ 0.5, 1, 0.125 ],
+  "$vdx_enchanting_cost_disabled_color": [ 0.25, 0.5, 0.06 ],
+  
+  /* Recipe Book Mixed*/
+  "$vdx_recipe_top_type_toggles_control": "recipe_book_mixed_dx.top_type_toggles_default", // Alternative: "recipe_book_mixed_dx.top_type_toggles"
+  "$vdx_smelt_top_type_toggles_control": "smelt_recipe_book_mixed_dx.top_type_toggles_default", // Alternative: "smelt_recipe_book_mixed_dx.top_type_toggles"
+
+  /* Villager Mixed */
+  "$vdx_trade_tier_name_color": [ 1.0, 1.0, 1.0 ],
+  "$vdx_trade_tier_name_locked_color": [ 0.16, 0.14, 0.10 ],
+  
+  /* Tooltip */
+  "$custom_tooltip": false, // Replaces the tooltip renderer (from container_item) to custom panel.
+  "$tooltip_text_shadow": false, // Only works if the first option is enabled.
+  "$use_item_details_in_touch": true,
+
+  /* Bundle */
+  "$vdx_global_bundle_panel_control": "bundle_mixed_dx.bundle_cursor_tooltip",
+  "$vdx_global_bundle_panel_size": [ "100%cm+2px", "100%cm+2px" ],
+  "$vdx_global_bundle_panel_offset": [ 0, 0 ],
+  "$vdx_bundle_panel_control": "bundle_mixed_dx.bundle_modules",
+  
+  /* Selected Item */
+  "$vdx_inventory_selected_icon_control": "selected_item_mixed_dx.inventory_selected_icon_button",
+
+  //////// Textures ////////
+
+  //Modify Ported Java Edition GUI Resolutions for your texture/project!
+
+  //For menu BG.
+  //Valid values is: 16x, 32x, 64x, 128x, 256x and 512x.
+
+  /* menu_background */
+  "$menu_background_resolution": "16x",
+  /* menu_list_background */
+  "$menu_list_background_resolution": "16x",
+  /* header_separator */
+  "$header_separator_resolution": "16x",
+  /* footer_separator */
+  "$footer_separator_resolution": "16x",
+
+  /* inworld_menu_background */
+  "$inworld_menu_background_resolution": "16x",
+  /* inworld_menu_list_background */
+  "$inworld_menu_list_background_resolution": "16x",
+  /* inworld_header_separator */
+  "$inworld_header_separator_resolution": "16x",
+  /* inworld_footer_separator */
+  "$inworld_footer_separator_resolution": "16x",
+
+  /* credits_background */
+  "$credits_background_resolution": "16x",
+  /* dirt_block_background */
+  "$overworld_background_resolution": "16x",
+  /* netherrack_block_background */
+  "$nether_background_resolution": "16x",
+  /* end_stone_block_background */
+  "$the_end_background_resolution": "16x",
+
+  //For GUI Sprites (which has "tiled": true due nineslice method").
+  //Valid values is: 1x, 2x, 4x, 8x, 16x and 32x.
+
+  "$creative_inventory_scroller_resolution": "1x",
+
+  "$loom_scroller_resolution": "1x",
+  "$loom_mixed_scroller_resolution": "1x",
+
+  "$recipe_book_mixed_scroller_resolution": "1x",
+
+  "$stonecutter_scroller_resolution": "1x",
+  "$stonecutter_mixed_scroller_resolution": "1x",
+
+  "$villager_scroller_resolution": "1x",
+  "$villager_mixed_scroller_resolution": "1x",
+  
+  "$popup_background_resolution": "1x",
+
+  "$social_interactions_background_resolution": "1x",
+
+  "$toast_advancement_resolution": "1x",
+  "$toast_recipe_resolution": "1x",
+  "$toast_system_resolution": "1x",
+
+  "$widget_button_resolution": "1x",
+  "$widget_button_disabled_resolution": "1x",
+  "$widget_button_highlighted_resolution": "1x",
+
+  "$widget_scroller_resolution": "1x",
+
+  "$widget_slider_resolution": "1x",
+  "$widget_slider_highlighted_resolution": "1x",
+  "$widget_slider_handle_resolution": "1x",
+  "$widget_slider_handle_highlighted_resolution": "1x",
+
+  "$widget_text_field_resolution": "1x",
+  "$widget_text_field_highlighted_resolution": "1x",
+
+  //For inventory containers.
+  //Valid values is: 256x, 512x, 1024x, 2048x, 4096x and 8192x.
+
+  //Small_chest */
+  "$barrel_resolution": "256x",
+  "$chest_small_resolution": "256x",
+  "$chest_ender_resolution": "256x",
+
+  //Creative_inventory */
+  /* tab_items */
+  "$creative_inventory_tab_items_resolution": "256x",
+  /* tab_item_search */
+  "$creative_inventory_tab_item_search_resolution": "256x",
+
+  ////*/ PvP UI Assets /*////
+
+  /* options_background */
+  "$options_background_resolution": "16x",
+  
+  /* anvil */
+  "$anvil_pvp_resolution": "256x",
+  /* beacon */
+  "$beacon_pvp_resolution": "256x",
+  /* book */
+  "$book_pvp_resolution": "256x",
+  /* brewing_stand */
+  "$brewing_stand_pvp_resolution": "256x",
+  /* crafting_table */
+  "$crafting_table_pvp_resolution": "256x",
+  /* creative_inventory */
+  "$creative_inventory_tab_items_pvp_resolution": "256x",
+  "$creative_inventory_tab_item_search_pvp_resolution": "256x",
+  "$creative_inventory_tab_main_pvp_resolution": "256x",
+  "$creative_inventory_tabs_pvp_resolution": "256x",
+  /* enchanting_table */
+  "$enchanting_table_pvp_resolution": "256x",
+  /* furnace */
+  "$furnace_pvp_resolution": "256x",
+  /* inventory */
+  "$inventory_pvp_resolution": "256x",
+  /* horse */
+  "$horse_pvp_resolution": "256x",
+  /* icons */
+  "$icons_pvp_resolution": "256x",
+  /* resource_packs */
+  "$resource_packs_pvp_resolution": "256x",
+  /* $server_selection */
+  "$server_selection_pvp_resolution": "256x",
+  /* title_minecraft */
+  "$title_minecraft_pvp_resolution": "256x",
+  /* widgets */
+  "$widgets_pvp_resolution": "256x",
+
+  "$brewing_stand_pvp_fuel_bar_color": [ 1.0, 1.0, 0.125 ],
+
+  ////*/ Pocket UI Assets /*////
+
+  /* Title Text Colors */   /* New */
+  "$vdx_inventory_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+
+  "$vdx_anvil_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_anvil_pocket_repair_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_barrel_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_beacon_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_beacon_primary_pocket_title_text_color": [ 1.0, 1.0, 1.0 ],
+  "$vdx_beacon_secondary_pocket_title_text_color": [ 1.0, 1.0, 1.0 ],
+  "$vdx_blast_furnace_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_blast_furnace_pocket_input_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_blast_furnace_pocket_fuel_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_blast_furnace_pocket_result_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_blast_furnace_pocket_item_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_brewing_stand_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_chest_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_chest_ender_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_cartography_table_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_cartography_table_pocket_name_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_cartography_table_pocket_details_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_crafter_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_crafting_table_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_dispenser_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_dropper_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_enchanting_table_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_enchanting_table_pocket_enchant_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_furnace_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_furnace_pocket_input_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_furnace_pocket_fuel_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_furnace_pocket_result_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_furnace_pocket_item_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_grindstone_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_grindstone_pocket_repair_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_hopper_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_horse_pocket_equip_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_horse_pocket_chest_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_inventory_crafting_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_inventory_armor_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_loom_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_loom_pocket_pattern_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_shulker_box_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_smithing_table_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_smithing_table_pocket_upgrade_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_smoker_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_smoker_pocket_input_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_smoker_pocket_fuel_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_smoker_pocket_result_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_smoker_pocket_item_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_stonecutter_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_stonecutter_pocket_stone_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_villager_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_villager_pocket_trade_text_color": [ 0.3, 0.3, 0.3 ],
+
+  "$vdx_recipe_book_items_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_creative_items_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_full_creative_items_pocket_title_text_color": [ 0.3, 0.3, 0.3 ],
+
+  /* Title Text Controls */  /* New */
+  "$vdx_inventory_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+
+  "$vdx_anvil_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_anvil_pocket_repair_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_barrel_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_beacon_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_beacon_primary_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_beacon_secondary_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_blast_furnace_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_blast_furnace_pocket_input_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_blast_furnace_pocket_fuel_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_blast_furnace_pocket_result_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_blast_furnace_pocket_item_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_brewing_stand_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_chest_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_chest_ender_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_cartography_table_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_cartography_table_pocket_name_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_cartography_table_pocket_details_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_crafter_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_crafting_table_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_dispenser_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_dropper_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_enchanting_table_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_enchanting_table_pocket_enchant_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_furnace_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_furnace_pocket_input_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_furnace_pocket_fuel_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_furnace_pocket_result_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_furnace_pocket_item_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_grindstone_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_grindstone_pocket_repair_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_hopper_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_horse_pocket_equip_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_horse_pocket_chest_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_inventory_crafting_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_inventory_armor_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_loom_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_loom_pocket_pattern_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_shulker_box_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_smithing_table_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_smithing_table_pocket_upgrade_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_smoker_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_smoker_pocket_input_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_smoker_pocket_fuel_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_smoker_pocket_result_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_smoker_pocket_item_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_stonecutter_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_stonecutter_pocket_stone_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_villager_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_villager_pocket_trade_text_control": "miscellaneous_dx.empty_panel",
+
+  "$vdx_recipe_book_items_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_creative_items_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+  "$vdx_full_creative_items_pocket_title_text_control": "miscellaneous_dx.empty_panel",
+
+  "$barrel_pocket_scroller_resolution": "1x",
+  "$chest_ender_pocket_scroller_resolution": "1x",
+  "$chest_pocket_scroller_resolution": "1x",
+  "$shulker_box_pocket_scroller_resolution": "1x",
+
+  "$inventory_pocket_scroller_resolution": "1x",
+  "$horse_pocket_scroller_resolution": "1x",
+  "$recipe_book_pocket_scroller_resolution": "1x",
+
+  "$loom_pocket_scroller_resolution": "1x",
+  "$stonecutter_pocket_scroller_resolution": "1x",
+  "$villager_pocket_scroller_resolution": "1x"
+}

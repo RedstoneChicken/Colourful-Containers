@@ -1,0 +1,111 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "furnace_pocket_textures_dx",
+
+  "furnace_bg": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/furnace/furnace_bg",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "furnace_panel": {
+    "type": "panel",
+    "size": [ 114, 94 ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/furnace/furnace_panel",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "burn_progress": {
+    "type": "panel",
+    "size": [ 24, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/furnace/burn_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "bindings": [
+            {
+              "binding_name": "#furnace_arrow_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "lit_progress": {
+    "type": "panel",
+    "size": [ 14, 14 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/furnace/lit_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "down",
+          "bindings": [
+            {
+              "binding_name": "#furnace_flame_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Center Fold */
+
+  "center_fold": {
+    "type": "panel",
+    "size": [ 18, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/furnace/center_fold",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Furnace Tab */
+
+  "tab_right_selected_1": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/furnace/tab_right_selected_1",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

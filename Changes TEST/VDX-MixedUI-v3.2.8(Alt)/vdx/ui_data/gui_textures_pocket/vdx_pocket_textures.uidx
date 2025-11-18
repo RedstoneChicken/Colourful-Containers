@@ -1,0 +1,82 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "pocket_textures_dx",
+
+  /*////// Container //////*/
+
+  "cell_image": {
+    "type": "panel",
+    "size": [ 28, 28 ],
+    "controls": [/* 
+      {
+        "texture": {
+          "type": "image",
+          "texture": "vdx/ui_textures/container_pocket/cell_image",
+          "size": [ "100%", "100%" ]
+        }
+      } */
+    ]
+  },
+
+  "slot_highlight": {
+    "type": "panel",
+    "size": [ 26, 26 ],
+    "controls": [
+      {
+        "back": {
+          "type": "image",
+          "layer": 0,
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot_highlight_back",
+          "size": [ "100%+8px", "100%+8px" ]
+        }
+      },
+      {
+        "front": {
+          "type": "image",
+          "layer": 12,
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot_highlight_front",
+          "size": [ "100%+8px", "100%+8px" ]
+        }
+      }
+    ]
+  },
+
+  "lock_cell_slot": {
+    "type": "panel",
+    "size": [ 26, 26 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "vdx/ui_textures/container_pocket/lock_cell_slot",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "red_cell_slot": {
+    "type": "panel",
+    "size": [ 26, 26 ],
+    "controls": [
+      {
+        "warning": {
+          "type": "image",
+          "layer": 7,
+          "texture": "vdx/ui_textures/container_mixed/warning_icon",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 8, 8 ]
+        }
+      },
+      {
+        "texture": {
+          "type": "image",
+          "texture": "vdx/ui_textures/container_pocket/red_cell_slot",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,404 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "crafter_pocket_dx",
+  
+  /*//// Tabs ////*/
+
+  "crafter_icon@container_panel_pocket_dx.item_renderer": {
+    "$object_item_id": -313 //  Crafter - ID: -313
+  },
+
+  "left_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "inventory_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { 
+              "inventory_tab@container_panel_pocket_dx.decorated_tab_panel_template": {
+                "$tab_selected_texture": "inventory_pocket_textures_dx.tab_left_selected_1",
+                "$tab_icon": "recipe_book_pocket_navigation_tabs_dx.survival_inventory_icon"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "right_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "crafter_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { 
+              "search_tab@container_panel_pocket_dx.decorated_tab_panel_template": {
+                "$tab_anchor_side": "top_right",
+                "$tab_selected_texture": "crafter_pocket_textures_dx.tab_right_selected_1",
+                "$tab_icon": "crafter_pocket_dx.crafter_icon"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Inventory Panel ////*/
+
+  "invnetory_left_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "background@inventory_pocket_textures_dx.inventory_bg_half": { "layer": 1 } },
+      { "content@container_panel_pocket_dx.pocket_container_panel_template": { "layer": 11 } }
+    ]
+  },
+  
+  /*//// Crafter Panel ////*/
+
+  "crafter_enabled_slot_template@container_item_dx.container_item": {
+    "$cell_image_size": [ 28, 28 ],
+    "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+    "$slot_highlight_image": "pocket_textures_dx.slot_highlight",
+    "$background_images": "miscellaneous_dx.empty_panel",
+    "size": [ 28, 28 ]
+  },
+
+  "crafter_disabled_slot@common.button": {
+    "type": "button",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "hover_control": "highlighted",
+    "size": [ 28, 28 ],
+    "controls": [
+      { 
+        "highlighted": {
+          "type": "panel",
+          "size": [ 28, 28 ],
+          "controls": [
+            { "slot_highlight@pocket_textures_dx.slot_highlight": { "layer": -21 } }
+          ]
+        }
+      },
+      { "disabled_slot@crafter_pocket_textures_dx.disabled_slot": { "layer": -20 } }
+    ]
+  },
+
+  "crafter_hover_text_label@tooltip_dx.tooltip_label": {
+    "text": "#crafting_preview_info",
+    "bindings": [ { "binding_name": "#crafting_preview_info" } ]
+  },
+
+  "crafter_right_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "background@crafter_pocket_textures_dx.crafter_bg": { "layer": 1 } },
+      {
+        "title_label@label_dx.global_label": {
+          "size": [ "default", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text_alignment": "center",
+          "offset": [ 0, 10 ],
+          "color": "$vdx_crafter_pocket_title_text_color",
+          "text": "$container_title",
+          "layer": 11,
+          "shadow": "$vdx_container_text_shadow",
+          "controls": [
+            { "text_control@$vdx_crafter_pocket_title_text_control": { } }
+          ]
+        }
+      },
+      {
+        "center_hold": {
+          "type": "panel",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "offset": [ 7, 27 ],
+          "size": [ "100%-14px", "100%-34px" ],
+          "controls": [
+            {
+              "3x3_crafting_panel": {
+                "type": "panel",
+                "size": [ 98, 154 ],
+                "controls": [
+                  { "bg@crafter_pocket_textures_dx.crafter_panel": { "layer": 1 } },
+                  {
+                    "main_grid": {
+                      "type": "grid",
+                      "layer": 11,
+                      "size": [ 84, 84 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 7, 7 ],
+                      "grid_dimensions": [ 3, 3 ],
+                      "collection_name": "container_items",
+                      "grid_item_template": "crafter_pocket_dx.crafter_enabled_slot_template",
+                      "$item_collection_name": "container_items"
+                    }
+                  },
+                  {
+                    "disable_buttons": {
+                      "type": "panel",
+                      "layer": 31,
+                      "size": [ 84, 84 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 7, 7 ],
+                      "controls": [
+                        {
+                          "0@crafter_pocket_dx.crafter_disabled_slot": {
+                            "anchor_to": "top_left",
+                            "anchor_from": "top_left",
+                            "$pressed_button_name": "disabled_button0",
+                            "bindings": [ { "binding_name": "#button_visible0", "binding_name_override": "#visible" } ]
+                          }
+                        },
+                        {
+                          "1@crafter_pocket_dx.crafter_disabled_slot": {
+                            "anchor_to": "top_left",
+                            "anchor_from": "top_left",
+                            "offset": [ 28, 0 ],
+                            "$pressed_button_name": "disabled_button1",
+                            "bindings": [ { "binding_name": "#button_visible1", "binding_name_override": "#visible" } ]
+                          }
+                        },
+                        {
+                          "2@crafter_pocket_dx.crafter_disabled_slot": {
+                            "anchor_to": "top_right",
+                            "anchor_from": "top_right",
+                            "$pressed_button_name": "disabled_button2",
+                            "bindings": [ { "binding_name": "#button_visible2", "binding_name_override": "#visible" } ]
+                          }
+                        },
+                        {
+                          "3@crafter_pocket_dx.crafter_disabled_slot": {
+                            "anchor_to": "top_left",
+                            "anchor_from": "top_left",
+                            "offset": [ 0, 28 ],
+                            "$pressed_button_name": "disabled_button3",
+                            "bindings": [ { "binding_name": "#button_visible3", "binding_name_override": "#visible" } ]
+                          }
+                        },
+                        {
+                          "4@crafter_pocket_dx.crafter_disabled_slot": {
+                            "anchor_to": "top_left",
+                            "anchor_from": "top_left",
+                            "offset": [ 28, 28 ],
+                            "$pressed_button_name": "disabled_button4",
+                            "bindings": [ { "binding_name": "#button_visible4", "binding_name_override": "#visible" } ]
+                          }
+                        },
+                        {
+                          "5@crafter_pocket_dx.crafter_disabled_slot": {
+                            "anchor_to": "top_right",
+                            "anchor_from": "top_right",
+                            "offset": [ 0, 28 ],
+                            "$pressed_button_name": "disabled_button5",
+                            "bindings": [ { "binding_name": "#button_visible5", "binding_name_override": "#visible" } ]
+                          }
+                        },
+                        {
+                          "6@crafter_pocket_dx.crafter_disabled_slot": {
+                            "anchor_to": "bottom_left",
+                            "anchor_from": "bottom_left",
+                            "$pressed_button_name": "disabled_button6",
+                            "bindings": [ { "binding_name": "#button_visible6", "binding_name_override": "#visible" } ]
+                          }
+                        },
+                        {
+                          "7@crafter_pocket_dx.crafter_disabled_slot": {
+                            "anchor_to": "bottom_left",
+                            "anchor_from": "bottom_left",
+                            "offset": [ 28, 0 ],
+                            "$pressed_button_name": "disabled_button7",
+                            "bindings": [ { "binding_name": "#button_visible7", "binding_name_override": "#visible" } ]
+                          }
+                        },
+                        {
+                          "8@crafter_pocket_dx.crafter_disabled_slot": {
+                            "anchor_to": "bottom_right",
+                            "anchor_from": "bottom_right",
+                            "$pressed_button_name": "disabled_button8",
+                            "bindings": [ { "binding_name": "#button_visible8", "binding_name_override": "#visible" } ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "arrow": {
+                      "type": "panel",
+                      "layer": 11,
+                      "size": [ 16, 16 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 41, 97 ],
+                      "controls": [
+                        {
+                          "powered_redstone@crafter_pocket_textures_dx.powered_redstone": {
+                            "bindings": [
+                              {
+                                "binding_name": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_vertical_powered')",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "unpowered_redstone@crafter_pocket_textures_dx.unpowered_redstone": {
+                            "bindings": [
+                              {
+                                "binding_name": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_vertical_unpowered')",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "output_preview": {
+                      "type": "panel",
+                      "layer": 11,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 35, 119 ],
+                      "size": [ 28, 28 ],
+                      "controls": [
+                        {
+                          "panel": {
+                            "type": "button",
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "hover_control": "hover",
+                            "size": [ 28, 28 ],
+                            "controls": [
+                              { 
+                                "hover": {
+                                  "type": "panel",
+                                  "controls": [
+                                    {
+                                      "hover_text_panel@tooltip_dx.tooltip_panel": {
+                                        "ignored": "(not $custom_hover_text)",
+                                        "$tooltip_label_control": "crafter_pocket_dx.crafter_hover_text_label",
+                                        "layer": 29,
+                                        "$hover_text_texture_bindings": [
+                                          {
+                                            "binding_name": "(not (#crafting_preview_info = ''))",
+                                            "binding_name_override": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "hover@common.hover_text": {
+                                        "ignored": "($custom_hover_text)",
+                                        "layer": 29,
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#crafting_preview_info",
+                                            "binding_name_override": "#hover_text"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "item_panel": {
+                                  "type": "panel",
+                                  "size": [ 16, 16 ],
+                                  "controls": [
+                                    {
+                                      "output_slot@item_renderer_dx.item_renderer_for_crafter": {
+                                        "size": [ 16, 16 ]
+                                      }
+                                    },
+                                    {
+                                      "output_count@container_item_dx.stack_count_label": {
+                                        "offset": [ 1, 2 ],
+                                        "anchor_to": "bottom_right",
+                                        "anchor_from": "bottom_right",
+                                        "layer": 9,
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#output_stack_count",
+                                            "binding_name_override": "#inventory_stack_count"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Main Panel ////*/
+
+  "crafter_panel@container_panel_pocket_dx.double_container_panel": {
+    "size": [ "100%", "100%-4px" ],
+    "$left_tab_control": "crafter_pocket_dx.left_navigation_tabs",
+    "$left_panel_control": "crafter_pocket_dx.invnetory_left_panel",
+    "$center_panel_control": "crafter_pocket_textures_dx.center_fold",
+    "$right_panel_control": "crafter_pocket_dx.crafter_right_panel",
+    "$right_tab_control": "crafter_pocket_dx.right_navigation_tabs"
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_modules@container_panel_pocket_dx.container_modules": {} },
+      { "crafter_panel@crafter_pocket_dx.crafter_panel": {} }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@crafter_pocket_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

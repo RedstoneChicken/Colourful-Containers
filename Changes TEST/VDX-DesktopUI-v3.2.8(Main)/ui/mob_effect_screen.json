@@ -1,0 +1,8 @@
+/*File modified by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "mob_effect_screen": {
+    "$screen_content": "mob_effect_dx.center_screen",
+    "$screen_bg_content": "mob_effect_dx.full_screen"
+  }
+}

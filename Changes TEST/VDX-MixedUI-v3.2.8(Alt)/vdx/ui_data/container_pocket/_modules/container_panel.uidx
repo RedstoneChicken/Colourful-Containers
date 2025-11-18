@@ -1,0 +1,367 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "container_panel_pocket_dx",
+  
+  "container_modules": {
+    "type": "panel",
+    "controls": [
+      { "bundle_modules@$vdx_bundle_panel_control": { } },
+      { "selected_item_details_factory@tooltip_dx.selected_item_details_factory": { "ignored": "(not $use_item_details_in_touch)" } },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15, "ignored": "$ignore_flying_item" } },
+      { "inventory_selected_icon_button@$vdx_inventory_selected_icon_control": {} },
+      {
+        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {
+          "controls": [
+            { "default@common.inventory_hold_icon": { "layer": 80 } },
+            { "pressed@common.inventory_hold_icon": { "layer": 80 } },
+            { "hover@common.inventory_hold_icon": { "layer": 80 } }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Tabs ////*/
+
+  "item_image": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "offset": [ 0, 0 ]
+  },
+
+  "item_renderer": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [ 16, 16 ],
+    "offset": [ 0, 0 ],
+    "$number_aux_index": 65536,
+    "property_bag": {
+      "#item_id_aux": "($object_item_id * $number_aux_index)"
+    }
+  },
+
+  "decorated_tab_panel_template": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 32, 28 ],
+    "$anims|default": [],
+    "anims": "$anims",
+    "$offset": [ 0, 0 ],
+    "offset": "$offset",
+    "$tab_anchor_side": "top_left",
+    "controls": [
+      {
+        "tab_textures": {
+          "type": "panel",
+          "controls": [
+            { 
+              "tab_selected@$tab_selected_texture": {
+                "layer": 1,
+                "anchor_from": "$tab_anchor_side",
+                "anchor_to": "$tab_anchor_side"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "icon@$tab_icon": {
+          "layer": 5,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, 0 ]
+        }
+      }
+    ]
+  },
+
+  /* Pocket Containers */
+
+  "pocket_container_panel_template": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$scroll_box_image_control": "recipe_book_pocket_textures_dx.scroller_half",
+    "$scroll_track_image_control": "inventory_pocket_textures_dx.scroll_track_half",
+    "$scroll_background_image_control": "inventory_pocket_textures_dx.inventory_content_bg_half",
+    "$scrolling_content": "container_panel_pocket_dx.container_inventory_grid",
+    "$container_size": 36,
+    "$pane_collection": "combined_hotbar_and_inventory_items",
+    "$container_panel_title_text": "container.inventory",
+    "controls": [
+      {
+        "title_label@label_dx.global_label": {
+          "size": [ "default", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text_alignment": "center",
+          "offset": [ 0, 10 ],
+          "color": "$vdx_inventory_pocket_title_text_color",
+          "text": "$container_panel_title_text",
+          "layer": 3,
+          "shadow": "$vdx_container_text_shadow",
+          "controls": [
+            { "text_control@$vdx_inventory_pocket_title_text_control": { } }
+          ]
+        }
+      },
+      {
+        "main@scroll_dx.contained_scrolling_panel": {
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "offset": [ 7, 27 ],
+          "size": [ "100%-14px", "100%-34px" ],
+          "$scroll_size": [ 14, "100%" ],
+          "$scroll_view_port_size": [ "100%-2px", "100%-2px" ],
+          "$scroll_view_port_offset": [ 1, 1 ],
+          "$scrolling_pane_size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "container_inventory_grid": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "grid_rescaling_type": "horizontal",
+          "size": [ "100%", "default" ],
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "maximum_grid_items": "$container_size",
+          "collection_name": "$pane_collection",
+          "grid_item_template": "container_panel_pocket_dx.pocket_ui_container_item",
+          "$item_collection_name": "$pane_collection"
+        }
+      }
+    ]
+  },
+
+  "pocket_ui_container_item@container_item_dx.container_item": {
+    "$cell_image_size": [ 28, 28 ],
+    "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+    "$slot_highlight_image": "pocket_textures_dx.slot_highlight",
+    "$background_images": "inventory_pocket_textures_dx.main_grid",
+    "size": [ 28, 28 ]
+  },
+
+  /* Inventory */
+
+  "inventory_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$scroll_background_image_control": "inventory_pocket_textures_dx.inventory_content_bg_half",
+    "$scroll_box_image_control": "inventory_pocket_textures_dx.scroller_half",
+    "$scroll_track_image_control": "inventory_pocket_textures_dx.scroll_track_half",
+    "$scrolling_content": "container_panel_pocket_dx.survival_inventory_grid",
+    "controls": [
+      {
+        "title_label@label_dx.global_label": {
+          "size": [ "default", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text_alignment": "center",
+          "offset": [ 0, 10 ],
+          "color": "$vdx_inventory_pocket_title_text_color",
+          "text": "container.inventory",
+          "layer": 3,
+          "shadow": "$vdx_container_text_shadow",
+          "controls": [
+            { "text_control@$vdx_inventory_pocket_title_text_control": { } }
+          ]
+        }
+      },
+      {
+        "main@scroll_dx.contained_scrolling_panel": {
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "offset": [ 7, 27 ],
+          "size": [ "100%-14px", "100%-34px" ],
+          "$scroll_size": [ 14, "100%" ],
+          "$scroll_view_port_size": [ "100%-2px", "100%-2px" ],
+          "$scroll_view_port_offset": [ 1, 1 ],
+          "$scrolling_pane_size": [ "100%", "100%" ],
+          "$collection_name": "inventory_items"
+        }
+      }
+    ]
+  },
+
+  "survival_inventory_grid": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "grid@crafting.scroll_grid": {
+          "$grid_item_template": "container_panel_pocket_dx.grid_item_for_inventory"
+        }
+      }
+    ]
+  },
+
+  "grid_item_for_inventory@container_item_dx.container_item": {
+    "$cell_image_size": [ 28, 28 ],
+    "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+    "$slot_highlight_image": "pocket_textures_dx.slot_highlight",
+    "$background_images": "inventory_pocket_textures_dx.main_grid",
+    "$item_collection_name": "inventory_items",
+    "size": [ 28, 28 ]
+  },
+
+  /* Hotbar */
+
+  "hotbar_panel": {
+    "type": "panel",
+    "size": [ 266, 38 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "bg@inventory_pocket_textures_dx.hotbar_panel": {
+          "layer": 1,
+          "offset": [ 0, 4 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+        }
+      },
+      {
+        "hotbar_grid": {
+          "layer": 10,
+          "type": "grid",
+          "size": [ 252, 28 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -3 ],
+          "grid_dimensions": [ 9, 1 ],
+          "grid_item_template": "container_panel_pocket_dx.grid_item_for_hotbar",
+          "collection_name": "hotbar_items"
+        }
+      }
+    ]
+  },
+
+  "grid_item_for_hotbar@container_item_dx.container_item": {
+    "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+    "$slot_highlight_image": "pocket_textures_dx.slot_highlight",
+    "$item_collection_name": "hotbar_items",
+    "size": [ 28, 28 ],
+    "$cell_image_size": [ 28, 28 ],
+    "$background_images": "miscellaneous_dx.empty_panel"
+  },
+
+  /* Container */
+
+  "single_container_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 2 ],
+    "size": [ "100%", "100%" ], // If uses bottom hotbar slots, the size is: [ "100%", "100%-40px" ]
+    "$left_tab_control": "miscellaneous_dx.empty_panel",
+    "$single_panel_control": "miscellaneous_dx.empty_panel",
+    "$right_tab_control": "miscellaneous_dx.empty_panel",
+    "controls": [
+      {
+        "left_tabs": {
+          "type": "panel",
+          "size": [ 34, "100%" ],
+          "controls": [
+            { "left_tab_control@$left_tab_control": { "layer": 10 } }
+          ]
+        }
+      },
+      {
+        "single_panel": {
+          "type": "panel",
+          "size": [ "fill", "100%" ],
+          "controls": [
+            { "single_panel_control@$single_panel_control": { } }
+          ]
+        }
+      },
+      {
+        "right_tabs": {
+          "type": "panel",
+          "size": [ 34, "100%" ],
+          "controls": [
+            { "inventory_buttons_panel@touch_buttons_pocket_dx.inventory_buttons_panel": { } },
+            { "right_tab_control@$right_tab_control": { "layer": 10 } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "double_container_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 2 ],
+    "size": [ "100%", "100%-4px" ], // If uses bottom hotbar slots, the size is: [ "100%", "100%-40px" ]
+    "$left_tab_control": "miscellaneous_dx.empty_panel",
+    "$left_panel_control": "miscellaneous_dx.empty_panel",
+    "$center_panel_control": "miscellaneous_dx.empty_panel",
+    "$right_panel_control": "miscellaneous_dx.empty_panel",
+    "$right_tab_control": "miscellaneous_dx.empty_panel",
+    "$right_panel_size": [ "50% - 36px", "100%" ],
+    "controls": [
+      {
+        "left_tabs": {
+          "type": "panel",
+          "size": [ 34, "100%" ],
+          "controls": [
+            { "left_tab_control@$left_tab_control": { "layer": 10 } }
+          ]
+        }
+      },
+      {
+        "left_panel@common.root_panel": {
+          "size": [ "fill", "100%" ],
+          "controls": [
+            { "left_panel_control@$left_panel_control": { } }
+          ]
+        }
+      },
+      {
+        "center_panel": {
+          "type": "panel",
+          "size": [ 4, "100%" ],
+          "controls": [
+            { 
+              "center_fold@$center_panel_control": {
+                "layer": -2,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ -7, 0 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "right_panel@common.root_panel": {
+          "size": "$right_panel_size",
+          "controls": [
+            { "right_panel_control@$right_panel_control": { } }
+          ]
+        }
+      },
+      {
+        "right_tabs": {
+          "type": "panel",
+          "size": [ 34, "100%" ],
+          "controls": [
+            { "inventory_buttons_panel@touch_buttons_pocket_dx.inventory_buttons_panel": { "layer": 10 } },
+            { "right_tab_control@$right_tab_control": { "layer": 10 } }
+          ]
+        }
+      }
+    ]
+  }
+}

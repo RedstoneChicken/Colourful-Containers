@@ -1,0 +1,12 @@
+/*File modified by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "file_transmission_screen": {
+    "$is_popup_dialog_in_game": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "$screen_content": "progress_upload_dx.center_screen",
+    "$screen_bg_content": "progress_upload_dx.full_screen"
+  }
+}

@@ -1,0 +1,63 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "anvil_textures_dx",
+
+  "anvil": {
+    "type": "panel",
+    "size": [ 176, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/minecraft/textures/gui/container/anvil",
+          "size": [ 256, 256 ]
+        }
+      }
+    ]
+  },
+
+  "error": {
+    "type": "panel",
+    "size": [ 28, 21 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/anvil/error",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "text_field": {
+    "type": "panel",
+    "size": [ 110, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/anvil/text_field",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "text_field_disabled": {
+    "type": "panel",
+    "size": [ 110, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/anvil/text_field_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

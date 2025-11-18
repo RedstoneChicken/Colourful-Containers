@@ -1,0 +1,215 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "creative_inventory_grid_items_dx",
+
+  "creative_container_cell_images": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "hold": {
+          "type": "panel",
+          "size": [ 18, 18 ],
+          "controls": [
+            {
+              "item_overlay_expand@crafting.item_overlay_expand": {
+                "layer": 9,
+                "bindings": [
+                  {
+                    "binding_name": "(#container_item_modifier = 2)",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
+            },
+            {
+              "item_overlay_contract@crafting.item_overlay_contract": {
+                "layer": 9,
+                "bindings": [
+                  {
+                    "binding_name": "(#container_item_modifier = 1)",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "grid_item_for_creative@container_item_dx.container_item": {
+    //"$tooltip_label_control": "recipe_book_page_items_dx.advanced_item_hover_text_panel",
+    "$stack_count_required": false,
+    "$durability_bar_required": false,
+    "$storage_bar_required": false,
+    "$item_renderer_binding_condition": "visible",
+    "$background_images": "creative_inventory_grid_items_dx.creative_container_cell_images",
+
+    "$slot_selected_binding_name": "#is_creative_selected_slot",
+
+    "$stack_count_binding_name": "#recipe_craftable_count",
+    "$item_collection_name": "recipe_book",
+    "$hover_text_binding_name": "#recipe_hover_text"
+  },
+
+  "tab_grid_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 162, "100%c" ],
+    "controls": [
+      { "tab_items@creative_inventory_textures_dx.tab_items_content": { "bindings": [ { "binding_name": "(not #is_left_tab_search)", "binding_name_override": "#visible" } ] } },
+      { "tab_items_search@creative_inventory_textures_dx.tab_item_search_content": { "bindings": [ { "binding_name": "(#is_left_tab_search)", "binding_name_override": "#visible" } ] } }
+    ]
+  },
+
+  "tab_grid_panel_10": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 162, "100%c" ],
+    "controls": [
+      { "01@creative_inventory_grid_items_dx.tab_grid_panel": { } },
+      { "02@creative_inventory_grid_items_dx.tab_grid_panel": { } },
+      { "03@creative_inventory_grid_items_dx.tab_grid_panel": { } },
+      { "04@creative_inventory_grid_items_dx.tab_grid_panel": { } },
+      { "05@creative_inventory_grid_items_dx.tab_grid_panel": { } },
+      { "06@creative_inventory_grid_items_dx.tab_grid_panel": { } },
+      { "07@creative_inventory_grid_items_dx.tab_grid_panel": { } },
+      { "08@creative_inventory_grid_items_dx.tab_grid_panel": { } },
+      { "09@creative_inventory_grid_items_dx.tab_grid_panel": { } },
+      { "10@creative_inventory_grid_items_dx.tab_grid_panel": { } }
+    ]
+  },
+  
+  "scroll_grid_panel": {
+    "type": "panel",
+    "size": "$scroll_grid_size",
+    "offset": "$scroll_grid_offset",
+    "$scroll_grid_size|default": [ 162, "100%c" ],
+    "$scroll_grid_offset|default": [ 0, 0 ],
+    "controls": [
+      {
+        "grid_panel": {
+          "type": "panel",
+          "size": [ 0, 0 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "construct_grid_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ 162, "100%c" ],
+                "bindings": [
+                  {
+                    "binding_name": "#is_left_tab_construct",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "10@creative_inventory_grid_items_dx.tab_grid_panel_10": { } },
+                  { "20@creative_inventory_grid_items_dx.tab_grid_panel_10": { } }
+                ]
+              }
+            },
+            {
+              "equipment_grid_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ 162, "100%c" ],
+                "bindings": [
+                  {
+                    "binding_name": "#is_left_tab_equipment",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "10@creative_inventory_grid_items_dx.tab_grid_panel_10": { } }
+                ]
+              }
+            },
+            {
+              "items_tab_grid_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ 162, "100%c" ],
+                "bindings": [
+                  {
+                    "binding_name": "#is_left_tab_items",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "10@creative_inventory_grid_items_dx.tab_grid_panel_10": { } },
+                  { "20@creative_inventory_grid_items_dx.tab_grid_panel_10": { } }
+                ]
+              }
+            },
+            {
+              "nature_tab_grid_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ 162, "100%c" ],
+                "bindings": [
+                  {
+                    "binding_name": "#is_left_tab_nature",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "10@creative_inventory_grid_items_dx.tab_grid_panel_10": { } }
+                ]
+              }
+            },
+            { 
+              "search_grid_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ 162, "100%c" ],
+                "bindings": [
+                  {
+                    "binding_name": "#is_left_tab_search",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "10@creative_inventory_grid_items_dx.tab_grid_panel_10": { } },
+                  { "20@creative_inventory_grid_items_dx.tab_grid_panel_10": { } },
+                  { "30@creative_inventory_grid_items_dx.tab_grid_panel_10": { } },
+                  { "40@creative_inventory_grid_items_dx.tab_grid_panel_10": { } },
+                  { "50@creative_inventory_grid_items_dx.tab_grid_panel_10": { } },
+                  { "60@creative_inventory_grid_items_dx.tab_grid_panel_10": { } },
+                  { "70@creative_inventory_grid_items_dx.tab_grid_panel_10": { } }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "grid@crafting.scroll_grid": {
+          "$button_ref": "crafting.creative_no_coalesce_container_slot_button",
+          "$grid_item_template": "creative_inventory_grid_items_dx.grid_item_for_creative"
+        }
+      }
+    ]
+  }
+}

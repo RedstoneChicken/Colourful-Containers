@@ -1,0 +1,65 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "dispenser_pocket_textures_dx",
+
+  "dispenser_bg": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/dispenser/dispenser_bg",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "dispenser_panel": {
+    "type": "panel",
+    "size": [ 98, 98 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/dispenser/dispenser_panel",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Center Fold */
+
+  "center_fold": {
+    "type": "panel",
+    "size": [ 18, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/dispenser/center_fold",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Dispenser Tab */
+
+  "tab_right_selected_1": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/dispenser/tab_right_selected_1",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

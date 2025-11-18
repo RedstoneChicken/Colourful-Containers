@@ -1,0 +1,151 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "cartography_table_pocket_textures_dx",
+
+  "cartography_table_bg": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/cartography_table/cartography_table_bg",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "cartography_table_panel": {
+    "type": "panel",
+    "size": [ 157, 157 ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/cartography_table/cartography_table_panel",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "map": {
+    "type": "panel",
+    "size": [ 66, 66 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/cartography_table/map",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "duplicated_map": {
+    "type": "panel",
+    "size": [ 66, 66 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/cartography_table/duplicated_map",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "scaled_map": {
+    "type": "panel",
+    "size": [ 66, 66 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/cartography_table/scaled_map",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "locked_map": {
+    "type": "panel",
+    "size": [ 66, 66 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/cartography_table/locked_map",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "text_field": {
+    "type": "panel",
+    "size": [ 110, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/cartography_table/text_field",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "text_field_disabled": {
+    "type": "panel",
+    "size": [ 110, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/cartography_table/text_field_disabled",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Center Fold */
+
+  "center_fold": {
+    "type": "panel",
+    "size": [ 18, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/cartography_table/center_fold",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Cartography Table Tab */
+
+  "tab_right_selected_1": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/cartography_table/tab_right_selected_1",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

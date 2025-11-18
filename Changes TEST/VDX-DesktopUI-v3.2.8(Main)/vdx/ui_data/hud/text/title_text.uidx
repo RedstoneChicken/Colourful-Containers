@@ -1,0 +1,109 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "hud_title_text_dx",
+  
+  "hud_title_text_area": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "hud_title_text@hud.hud_title_text"
+      }
+    }
+  },
+
+  /* Hud Title Text (Unused at the moment, due to compatibility with 3rd party servers) */
+
+  "hud_title_text": {
+    "type": "panel",
+    "size": [ "100%", 2 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "alpha": "@hud.anim_title_text_alpha_in",
+    "propagate_alpha": true,
+    "controls": [
+      {
+        "title@label_dx.global_label": {
+          "color": "$title_command_text_color",
+          "text": "#text",
+          "layer": 31,
+          "localize": false,
+          "font_size": "extra_large",
+          "shadow": true,
+          "text_alignment": "center",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -2 ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#text",
+              "binding_type": "global"
+            }
+          ],
+          "controls": [
+            { 
+              "hud_text_background@hud_item_text_dx.hud_text_background": {
+                "size": "$hud_title_text_background_size",
+                "offset": "$hud_title_text_background_offset",
+                "alpha": "@hud.anim_title_background_alpha_in"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "subtitle@label_dx.global_label": {
+          "color": "$title_command_text_color",
+          "text": "#text",
+          "layer": 31,
+          "localize": false,
+          "font_size": "large",
+          "variables": [
+            {
+              "requires": "$subtitle_initially_visible",
+              "$anim_type": 1.0
+            },
+            {
+              "requires": "(not $subtitle_initially_visible)",
+              "$anim_type": "@hud.anim_subtitle_text_alpha_in"
+            }
+          ],
+          "shadow": true,
+          "alpha": "$anim_type",
+          "text_alignment": "center",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ -1, 10 ],
+          "bindings": [
+            {
+              "binding_name": "#hud_subtitle_text_string",
+              "binding_name_override": "#text",
+              "binding_type": "global"
+            }
+          ],
+          "controls": [
+            { 
+              "hud_text_background@hud_item_text_dx.hud_text_background": { 
+                "size": "$hud_subtitle_text_background_size",
+                "offset": "$hud_subtitle_text_background_offset",
+                "variables": [
+                  {
+                    "requires": "$subtitle_initially_visible",
+                    "$subtitle_bg": "@hud.anim_title_background_alpha_in"
+                  },
+                  {
+                    "requires": "(not $subtitle_initially_visible)",
+                    "$subtitle_bg": "@hud.anim_subtitle_background_alpha_in"
+                  }
+                ],
+                "alpha": "$subtitle_bg"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

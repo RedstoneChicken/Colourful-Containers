@@ -1,0 +1,392 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "gamepad_helper_dx",
+  
+  /*//// Main ////*/
+
+  "gamepad_helper": {
+    "type": "stack_panel",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "orientation": "horizontal",
+    "size": [ "100%c", 16 ],
+    "layer": "$gamepad_helper_layer",
+    "$gamepad_helper_layer|default": 100,
+    "$icon_texture": "",
+    "$desc_panel_content|default": "miscellaneous_dx.empty_panel",
+    "$hide_description|default": false,
+    "$gamepad_helper_visible_binding_name|default": "#gamepad_helper_visible",
+    "$gamepad_helper_visible_binding_type|default": "global",
+    "$gamepad_helper_binding_condition|default": "none",
+    "$hide_separator|default": false,
+    "bindings": [
+      {
+        "binding_type": "$gamepad_helper_visible_binding_type",
+        "binding_name": "$gamepad_helper_visible_binding_name",
+        "binding_name_override": "#visible",
+        "binding_condition": "$gamepad_helper_binding_condition"
+      }
+    ],
+    "controls": [
+      {
+        "icon": {
+          "type": "panel",
+          "size": [ 16, 16 ],
+          "controls": [
+            { 
+              "$icon_image_ref": {
+                "size": [ 26, 26 ],
+                "offset": [ 0, 0 ],
+                "$gamepad_icon_visible_binding_name": "$gamepad_helper_visible_binding_name",
+                "$gamepad_icon_visible_binding_type": "$gamepad_helper_visible_binding_type"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "separator_0": {
+          "type": "panel",
+          "ignored": "($hide_description)",
+          "size": [ 2, 16 ]
+        }
+      },
+      {
+        "description_panel": {
+          "type": "panel",
+          "ignored": "($hide_description)",
+          "size": [ "100%cm", 16 ],
+          "controls": [
+            {
+              "tooltip_label@label_dx.global_label": {
+                "color": "$gamepad_helper_icon_description_text_color",
+                "size": [ "default", 10 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [ 0, -3 ],
+                "shadow": true,
+                "text": "$icon_description_bind",
+                "$icon_description_bind|default": "#gamepad_helper_icon_description",
+                "$icon_description_bind_type|default": "global",
+                "$icon_description_bind_condition|default": "always_when_visible",
+                "$gamepad_helper_icon_description_text_color|default": "$gamepad_description_text_color",
+                "$gamepad_helper_icon_description_shadow|default": true,
+                "$has_description_binding|default": true,
+                "bindings": [
+                  {
+                    "ignored": "(not $has_description_binding)",
+                    "binding_name": "$icon_description_bind",
+                    "binding_type": "$icon_description_bind_type",
+                    "binding_condition": "$icon_description_bind_condition"
+                  }
+                ],
+                "controls": [
+                  { "content@$desc_panel_content": { } }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "separator": {
+          "type": "panel",
+          "ignored": "($hide_separator)",
+          "size": [ 11, 16 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Main Buttons ////*/
+
+  "gamepad_helper_a@gamepad_helper_dx.gamepad_helper": {
+    "$icon_texture": "#controller_face_down_icon",
+    "$icon_description_bind": "#button_a_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_b@gamepad_helper_dx.gamepad_helper": {
+    "$icon_texture": "#controller_face_right_icon",
+    "$icon_description_bind": "#button_b_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_x@gamepad_helper_dx.gamepad_helper": {
+    "$icon_texture": "#controller_face_left_icon",
+    "$icon_description_bind": "#button_x_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_y@gamepad_helper_dx.gamepad_helper": {
+    "$icon_texture": "#controller_face_up_icon",
+    "$icon_description_bind": "#button_y_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  /*//// Sticks ////*/
+
+  "gamepad_helper_thumbstick_right@gamepad_helper_dx.gamepad_helper": {
+    "$icon_texture": "#controller_right_stick_icon",
+    "$icon_description_bind": "#button_thumbstick_right_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_thumbstick_left@gamepad_helper_dx.gamepad_helper": {
+    "$icon_texture": "#controller_left_stick_icon",
+    "$icon_description_bind": "#button_thumbstick_left_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  /*//// Bumpers ////*/
+
+  "gamepad_helper_left_bumper@gamepad_helper_dx.gamepad_helper": {
+    "$icon_texture": "#controller_left_bumper_icon",
+    "$icon_description_bind": "#controller_left_bumper_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_right_bumper@gamepad_helper_dx.gamepad_helper": {
+    "$icon_texture": "#controller_right_bumper_icon",
+    "$icon_description_bind": "#controller_right_bumper_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  /*//// Triggers ////*/
+
+  "gamepad_helper_left_trigger@gamepad_helper_dx.gamepad_helper": {
+    "$icon_texture": "#controller_left_trigger",
+    "$icon_description_bind": "#controller_left_trigger_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_right_trigger@gamepad_helper_dx.gamepad_helper": {
+    "$icon_texture": "#controller_right_trigger",
+    "$icon_description_bind": "#controller_right_trigger_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  /*//// Alternative Sticks ////*/
+
+  "gamepad_helper_thumbstick_right_alt@gamepad_helper_dx.gamepad_helper_thumbstick_right": {
+    "$icon_image_ref": "icon@gamepad_helper_dx.thumbstick_right_alt_panel"
+  },
+
+  "thumbstick_right_alt_panel": {
+    "type": "panel",
+    "size": [ 26, 26 ],
+    "bindings": [
+      {
+        "binding_type": "$gamepad_icon_visible_binding_type",
+        "binding_name": "$gamepad_icon_visible_binding_name",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "pocket_thumbstick_right_alt@common.gamepad_icon_button": {
+          "texture": "vdx/ui_textures/gamepad_helper/generic_stick_right_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_right_stick_icon = 'textures/ui/generic_stick_right')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "xbox_thumbstick_right_alt@common.gamepad_icon_button": {
+          "texture": "vdx/ui_textures/gamepad_helper/xbox_stick_right_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_right_stick_icon = 'textures/ui/xbox_stick_right')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ps4_thumbstick_right_alt@common.gamepad_icon_button": {
+          "texture": "vdx/ui_textures/gamepad_helper/ps4_stick_right_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_right_stick_icon = 'textures/ui/ps4_stick_right')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ps5_thumbstick_right_alt@common.gamepad_icon_button": {
+          "texture": "vdx/ui_textures/gamepad_helper/ps5_stick_right_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_right_stick_icon = 'textures/ui/ps5_stick_right')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "nintendo_switch_thumbstick_right_alt@common.gamepad_icon_button": {
+          "texture": "vdx/ui_textures/gamepad_helper/switch_stick_right_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_right_stick_icon = 'textures/ui/switch_stick_right')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "gamepad_helper_thumbstick_left_alt@gamepad_helper_dx.gamepad_helper_thumbstick_left": {
+    "$icon_image_ref": "icon@gamepad_helper_dx.thumbstick_left_alt_panel"
+  },
+
+  "thumbstick_left_alt_panel": {
+    "type": "panel",
+    "size": [ 26, 26 ],
+    "bindings": [
+      {
+        "binding_type": "$gamepad_icon_visible_binding_type",
+        "binding_name": "$gamepad_icon_visible_binding_name",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "pocket_thumbstick_left_alt@common.gamepad_icon_button": {
+          "texture": "vdx/ui_textures/gamepad_helper/generic_stick_left_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_left_stick_icon = 'textures/ui/generic_stick_left')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "xbox_thumbstick_left_alt@common.gamepad_icon_button": {
+          "texture": "vdx/ui_textures/gamepad_helper/xbox_stick_left_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_left_stick_icon = 'textures/ui/xbox_stick_left')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ps4_thumbstick_left_alt@common.gamepad_icon_button": {
+          "texture": "vdx/ui_textures/gamepad_helper/ps4_stick_left_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_left_stick_icon = 'textures/ui/ps4_stick_left')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ps5_thumbstick_left_alt@common.gamepad_icon_button": {
+          "texture": "vdx/ui_textures/gamepad_helper/ps5_stick_left_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_left_stick_icon = 'textures/ui/ps5_stick_left')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "nintendo_switch_thumbstick_left_alt@common.gamepad_icon_button": {
+          "texture": "vdx/ui_textures/gamepad_helper/switch_stick_left_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_left_stick_icon = 'textures/ui/switch_stick_left')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Select Button (Left) ////*/
+
+  "gamepad_helper_select@gamepad_helper_dx.gamepad_helper": {
+    "$icon_image_ref": "icon@gamepad_helper_dx.select_button_panel"
+  },
+
+  "select_button_panel": {
+    "type": "panel",
+    "size": [ 26, 26 ],
+    "bindings": [
+      {
+        "binding_type": "$gamepad_icon_visible_binding_type",
+        "binding_name": "$gamepad_icon_visible_binding_name",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "pocket_select@common.gamepad_icon_button": {
+          "texture": "textures/ui/generic_select_button",
+          "bindings": [
+            {
+              "binding_name": "(#controller_dpad_up_icon = 'textures/ui/generic_dpad_up')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "xbox_select@common.gamepad_icon_button": {
+          "texture": "textures/ui/xbox_select_button",
+          "bindings": [
+            {
+              "binding_name": "(#controller_dpad_up_icon = 'textures/ui/xbox_dpad_up')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ps4_touchpad@common.gamepad_icon_button": {
+          "texture": "textures/ui/ps4_touchpad",
+          "bindings": [
+            {
+              "binding_name": "(#controller_dpad_up_icon = 'textures/ui/ps4_dpad_up')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ps5_select@common.gamepad_icon_button": {
+          "texture": "textures/ui/ps5_select_button",
+          "bindings": [
+            {
+              "binding_name": "(#controller_dpad_up_icon = 'textures/ui/ps5_dpad_up')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "nintendo_switch_select@common.gamepad_icon_button": {
+          "texture": "textures/ui/switch_select_button",
+          "bindings": [
+            {
+              "binding_name": "(#controller_dpad_up_icon = 'textures/ui/switch_dpad_up')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

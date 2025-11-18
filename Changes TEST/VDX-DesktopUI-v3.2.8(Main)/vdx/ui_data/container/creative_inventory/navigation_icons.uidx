@@ -1,0 +1,91 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "creative_inventory_icons_dx",
+  
+  /*//// Icons ////*/
+
+  "item_image": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "offset": [ 9, 5 ]
+  },
+
+  "item_renderer": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [ 16, 16 ],
+    "$number_aux_index": 65536,
+    "property_bag": {
+      "#item_id_aux": "($object_item_id * $number_aux_index)"
+    }
+  },
+
+  "search_icon": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "released_search_icon@creative_inventory_icons_dx.item_renderer": {
+          "ignored": "($pre_release)",
+          "$object_item_id": "$release_creative_search_tab_icon_id"
+        }
+      },
+      {
+        "pre_released_search_icon@creative_inventory_icons_dx.item_renderer": {
+          "ignored": "(not $pre_release)",
+          "$object_item_id": "$preview_creative_search_tab_icon_id"
+        }
+      }
+    ]
+  },
+
+  "construction_icon@creative_inventory_icons_dx.item_renderer": {
+    "$object_item_id": 45 //  Block of Brick - ID: 45
+  },
+  
+  "equipment_icon@creative_inventory_icons_dx.item_image": {
+    "texture": "textures/items/netherite_sword"
+  },
+
+  "miscellaneous_icon@creative_inventory_icons_dx.item_image": {
+    "texture": "textures/items/sign"
+  },
+
+  "nature_icon@creative_inventory_icons_dx.item_renderer": {
+    "$object_item_id": 2 //  Grass - ID: 2
+  },
+
+  "survival_inventory_icon": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "0@creative_inventory_icons_dx.item_renderer": {
+          "$object_item_id": 54, //  Chest - ID: 54
+          "layer": 1
+        }
+      },
+      /*  Added compatibility for AgentMindStorm's Java Aspects  */
+      {
+        "overlay": {
+          "ignored": "(not $is_java_aspects)",
+          "type": "image",
+          "size": [ 16, 16 ],
+          "layer": 3,
+          "texture": "textures/icon/chest"
+        }
+      },
+      {
+        "overlay_console": {
+          "ignored": "(not $is_console_aspects)",
+          "type": "image",
+          "size": [ 16, 16 ],
+          "layer": 3,
+          "texture": "textures/icon/chest"
+        }
+      }
+    ]
+  }
+}
+  

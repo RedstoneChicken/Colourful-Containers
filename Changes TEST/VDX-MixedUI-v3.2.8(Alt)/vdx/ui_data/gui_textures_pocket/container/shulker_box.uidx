@@ -1,0 +1,122 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "shulker_box_pocket_textures_dx",
+
+  "shulker_box_bg": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/shulker_box/shulker_box_bg",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "shulker_box_grid": {
+    "type": "panel",
+    "size": [ 28, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/shulker_box/shulker_box_grid",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Scroller */
+
+  "scroller": {
+    "type": "panel",
+    "size": [ 12, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/shulker_box/scroller",
+          "size": [ 12, "100%-2px" ],
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "variables": [
+            { "requires": "($shulker_box_pocket_scroller_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($shulker_box_pocket_scroller_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($shulker_box_pocket_scroller_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($shulker_box_pocket_scroller_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($shulker_box_pocket_scroller_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($shulker_box_pocket_scroller_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "scroll_track": {
+    "type": "panel",
+    "size": [ 14, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 14, "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/shulker_box/scroll_track"
+        }
+      }
+    ]
+  },
+
+  "shulker_box_content_bg": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/shulker_box/shulker_box_content_bg"
+        }
+      }
+    ]
+  },
+
+  /* Center Fold */
+
+  "center_fold": {
+    "type": "panel",
+    "size": [ 18, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/shulker_box/center_fold",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Shulker Box Tab */
+
+  "tab_right_selected_1": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/shulker_box/tab_right_selected_1",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

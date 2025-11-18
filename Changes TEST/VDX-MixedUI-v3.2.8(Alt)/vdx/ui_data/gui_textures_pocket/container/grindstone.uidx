@@ -1,0 +1,79 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "grindstone_pocket_textures_dx",
+
+  "grindstone_bg": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/grindstone/grindstone_bg",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "grindstone_panel": {
+    "type": "panel",
+    "size": [ 150, 118 ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/grindstone/grindstone_panel",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "error": {
+    "type": "panel",
+    "size": [ 28, 21 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/grindstone/error",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Center Fold */
+
+  "center_fold": {
+    "type": "panel",
+    "size": [ 18, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/grindstone/center_fold",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Grindstone Tab */
+
+  "tab_right_selected_1": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/grindstone/tab_right_selected_1",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

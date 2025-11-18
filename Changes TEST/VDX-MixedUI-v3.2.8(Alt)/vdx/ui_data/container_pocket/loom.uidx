@@ -1,0 +1,562 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "loom_pocket_dx",
+  
+  /*//// Tabs ////*/
+
+  "pattern_icon": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "layer": 16,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 16, 16 ],
+    "offset": [ 8, 8 ],
+    "property_bag": {
+      "#item_id_aux": 29229057,
+      "#collection_name": "patterns_tab",
+      "#collection_index": 0
+    }
+  },
+
+  "loom_icon@container_panel_pocket_dx.item_renderer": {
+    "$object_item_id": -204 //  Loom - ID: -204
+  },
+
+  "loom_tab_panel_template": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 32, 28 ],
+    "$offset": [ 0, 0 ],
+    "offset": "$offset",
+    "controls": [
+      { 
+        "tab_selected@toggle_dx.toggle_panel": {
+          "layer": 1,
+          "size": [ 32, 28 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$unchecked_control": "miscellaneous_dx.empty_panel",
+          "$unchecked_hover_control": "miscellaneous_dx.empty_panel",
+          "$checked_control": "miscellaneous_dx.empty_panel",
+          "$checked_hover_control": "miscellaneous_dx.empty_panel",
+          "$toggle_name": "left_navigation_tab",
+          "$toggle_binding_type": "global",
+          "$toggle_focus_enabled": false
+        }
+      },
+      {
+        "tab_textures": {
+          "type": "panel",
+          "controls": [
+            { 
+              "tab_selected@$tab_selected_texture": {
+                "layer": 1,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_name": "($toggle_state_binding_name)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "tab_unselected@$tab_unselected_texture": {
+                "layer": -13,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_name": "(not $toggle_state_binding_name)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "icon_selected@$tab_icon": {
+          "layer": 5,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, 0 ],
+          "bindings": [
+            {
+              "binding_name": "$toggle_state_binding_name",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "icon@$tab_icon": {
+          "layer": 5,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, 0 ],
+          "bindings": [
+            {
+              "binding_name": "(not $toggle_state_binding_name)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "patterns_tab@loom_pocket_dx.loom_tab_panel_template": {
+    "$tab_selected_texture": "loom_pocket_textures_dx.tab_left_selected_1",
+    "$tab_unselected_texture": "loom_pocket_textures_dx.tab_left_unselected_1",
+    "$tab_icon": "loom_pocket_dx.pattern_icon",
+    "$tab_view_binding_name": "patterns_tab_toggle",
+    "$toggle_group_forced_index": "$left_tab_index_patterns",
+    "$toggle_state_binding_name": "#is_left_tab_patterns"
+  },
+
+  "inventory_tab@loom_pocket_dx.loom_tab_panel_template": {
+    "$tab_selected_texture": "inventory_pocket_textures_dx.tab_left_selected_1",
+    "$tab_unselected_texture": "inventory_pocket_textures_dx.tab_left_unselected_1",
+    "$tab_icon": "recipe_book_pocket_navigation_tabs_dx.survival_inventory_icon",
+    "$tab_view_binding_name": "inventory_tab_toggle",
+    "$toggle_group_forced_index": "$left_tab_index_inventory",
+    "$toggle_state_binding_name": "#is_left_tab_inventory"
+  },
+
+  "left_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ 0, 0 ],
+    "controls": [
+      {
+        "pattern_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { "patterns_tab@loom_pocket_dx.patterns_tab": { } }
+          ]
+        }
+      },
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "inventory_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { "inventory_tab@loom_pocket_dx.inventory_tab": { } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "right_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "loom_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { 
+              "search_tab@container_panel_pocket_dx.decorated_tab_panel_template": {
+                "$tab_anchor_side": "top_right",
+                "$tab_selected_texture": "loom_pocket_textures_dx.tab_right_selected_1",
+                "$tab_icon": "loom_pocket_dx.loom_icon"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Inventory Panel ////*/
+
+  "pattern_slot_panel": {
+    "type": "panel",
+    "size": [ 28, 28 ],
+    "$cell_image_normal_texture|default": "",
+    "controls": [
+      { 
+        "active_pattern@$cell_image_normal_texture": {
+          "size": [ 28, 28 ],
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "(#pattern_cell_background_texture = 'textures/ui/cell_image_normal')",
+              "binding_collection_name": "$collection_name",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "pattern_selected@loom_pocket_textures_dx.pattern_selected": {
+          "size": [ 28, 28 ],
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "(#pattern_cell_background_texture = 'textures/ui/cell_image_invert')",
+              "binding_collection_name": "$collection_name",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "pattern@loom_pocket_dx.pattern_slot_panel": {
+    "$cell_image_normal_texture": "loom_pocket_textures_dx.pattern"
+  },
+
+  "pattern_highlighted@loom_pocket_dx.pattern_slot_panel": {
+    "$cell_image_normal_texture": "loom_pocket_textures_dx.pattern_highlighted"
+  },
+
+  "pattern_panel": {
+    "type": "input_panel",
+    "size": [ 28, 28 ],
+    "layer": 2,
+    "$item_collection_name": "$collection_name",
+    "controls": [
+      {
+        "banner_pattern": {
+          "type": "custom",
+          "renderer": "banner_pattern_renderer",
+          "size": [ 7, 14 ],
+          "layer": 6,
+          "bindings": [
+            {
+              "binding_name": "#banner_patterns",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            },
+            {
+              "binding_name": "#banner_colors",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "slot_button@loom.pattern_slot_button": {
+          "size": [ 28, 28 ],
+          "default_control": "default",
+          "hover_control": "hover",
+          "pressed_control": "pressed",
+          "controls": [
+            { "default@loom_pocket_dx.pattern": {} },
+            { "hover@loom_pocket_dx.pattern_highlighted": {} },
+            { "pressed@loom_pocket_textures_dx.pattern_selected": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "scroll_grid_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "bindings": [
+      {
+        "binding_name": "(not #empty_image_visible)",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "loom_dye_items"
+      }
+    ],
+    "controls": [
+      { "grid@loom.scroll_grid": { "$grid_item_template": "loom_pocket_dx.pattern_panel" } }
+    ]
+  },
+
+  "invnetory_left_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "inventory_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "(#is_left_tab_inventory)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { "inventory_bg_half@inventory_pocket_textures_dx.inventory_bg_half": { "layer": 1 } },
+            {
+              "content@container_panel_pocket_dx.pocket_container_panel_template": {
+                "$container_size": 27,
+                "$pane_collection": "inventory_items",
+                "layer": 10
+              }
+            }
+          ]
+        }
+      },
+      {
+        "pattern_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "(not #is_left_tab_inventory)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { "loom_bg@loom_pocket_textures_dx.loom_bg": { "layer": 1 } },
+            {
+              "title_label@label_dx.global_label": {
+                "size": [ "default", 10 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text_alignment": "center",
+                "offset": [ 0, 10 ],
+                "color": "$vdx_loom_pocket_pattern_text_color",
+                "text": "itemGroup.name.banner_pattern",
+                "layer": 10,
+                "shadow": "$vdx_container_text_shadow",
+                "controls": [
+                  { "text_control@$vdx_loom_pocket_pattern_text_control": { } }
+                ]
+              }
+            },
+            {
+              "scroll@scroll_dx.contained_scrolling_panel": {
+                "layer": 10,
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "offset": [ 7, 27 ],
+                "size": [ "100%-14px", "100%-34px" ],
+                "$scroll_size": [ 14, "100%" ],
+                "$scroll_view_port_size": [ "100%-2px", "100%-2px" ],
+                "$scroll_view_port_offset": [ 1, 1 ],
+                "$scrolling_pane_size": [ "100%", "100%" ],
+                "$scroll_background_image_control": "loom_pocket_textures_dx.patterns_content_bg",
+                "$scroll_track_image_control": "loom_pocket_textures_dx.scroll_track",
+                "$scroll_box_image_control": "loom_pocket_textures_dx.scroller",
+                "$scrolling_content": "loom_pocket_dx.scroll_grid_panel",
+                "$collection_name": "patterns"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Loom Panel ////*/
+
+  "container_cell_image": {
+    "type": "panel",
+    "size": [ 28, 28 ],
+    "controls": [
+      { 
+        "red_cell_slot@pocket_textures_dx.red_cell_slot": {
+          "size": [ 26, 26 ],
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "(#container_cell_background_texture = 'textures/ui/cell_image_red')",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "slot_highlight_image": {
+    "type": "panel",
+    "controls": [
+      { "slot_highlight@pocket_textures_dx.slot_highlight": { } }
+    ]
+  },
+
+  "loom_right_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "loom_bg@loom_pocket_textures_dx.loom_bg": { "layer": 1 } },
+      /* Title */
+      {
+        "title@label_dx.global_label": {
+          "layer": 10,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text_alignment": "center",
+          "offset": [ 0, 10 ],
+          "color": "$vdx_loom_pocket_title_text_color",
+          "text": "container.loom",
+          "shadow": "$vdx_container_text_shadow",
+          "controls": [
+            { "text_control@$vdx_loom_pocket_title_text_control": { } }
+          ]
+        }
+      },
+      {
+        "center_hold": {
+          "type": "panel",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "offset": [ 7, 27 ],
+          "size": [ "100%-14px", "100%-34px" ],
+          "controls": [
+            {
+              "main_loom_panel": {
+                "type": "panel",
+                "size": [ 164, 106 ],
+                "controls": [
+                  { "bg@loom_pocket_textures_dx.loom_panel": { "layer": 1 } },
+                  /* Slots */
+                  { 
+                    "banner_item_slot@container_item_dx.container_item": {
+                      "layer": 10,
+                      "size": [ 28, 28 ],
+                      "$cell_image_size": [ 28, 28 ],
+                      "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+                      "$slot_highlight_image": "pocket_textures_dx.slot_highlight",
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "offset": [ 7, 7 ],
+                      "$item_collection_name": "loom_input_items",
+                      "$cell_overlay_ref": "empty_item_textures_dx.banner"
+                    }
+                  },
+                  { 
+                    "dye_item_slot@container_item_dx.container_item": {
+                      "layer": 10,
+                      "size": [ 28, 28 ],
+                      "$cell_image_size": [ 28, 28 ],
+                      "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+                      "$slot_highlight_image": "pocket_textures_dx.slot_highlight",
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "offset": [ 7, 39 ],
+                      "$item_collection_name": "loom_dye_items",
+                      "$cell_overlay_ref": "empty_item_textures_dx.dye"
+                    }
+                  },
+                  { 
+                    "pattern_item_slot@container_item_dx.container_item": {
+                      "layer": 10,
+                      "size": [ 28, 28 ],
+                      "$cell_image_size": [ 28, 28 ],
+                      "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+                      "$slot_highlight_image": "loom_pocket_dx.slot_highlight_image",
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "offset": [ 7, 71 ],
+                      "$background_images": "loom_pocket_dx.container_cell_image",
+                      "$item_collection_name": "loom_material_items",
+                      "$cell_overlay_ref": "empty_item_textures_dx.banner_pattern",
+                      "$item_renderer_binding_condition": "always_when_visible",
+                      "$cell_images_binding_condition": "always_when_visible"
+                    }
+                  },
+                  { 
+                    "result_item_slot@container_item_dx.container_item": {
+                      "layer": 10,
+                      "size": [ 28, 28 ],
+                      "$cell_image_size": [ 28, 28 ],
+                      "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+                      "$slot_highlight_image": "pocket_textures_dx.slot_highlight",
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "offset": [ 73, 39 ],
+                      "$item_collection_name": "loom_result_items",
+                      "$button_ref": "loom.result_slot_button"
+                    }
+                  },
+                  /* Renderer */
+                  {
+                    "result_banner_renderer": {
+                      "type": "custom",
+                      "renderer": "banner_pattern_renderer",
+                      "anchor_to": "top_right",
+                      "anchor_from": "top_right",
+                      "layer": 40,
+                      "size": [ 46, 92 ],
+                      "offset": [ -7, 7 ],
+                      "bindings": [
+                        {
+                          "binding_name": "#result_patterns",
+                          "binding_name_override": "#banner_patterns",
+                          "binding_condition": "always_when_visible"
+                        },
+                        {
+                          "binding_name": "#result_colors",
+                          "binding_name_override": "#banner_colors",
+                          "binding_condition": "always_when_visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Main Panel ////*/
+
+  "loom_panel@container_panel_pocket_dx.double_container_panel": {
+    "size": [ "100%", "100%-40px" ],
+    "$left_tab_control": "loom_pocket_dx.left_navigation_tabs",
+    "$left_panel_control": "loom_pocket_dx.invnetory_left_panel",
+    "$center_panel_control": "loom_pocket_textures_dx.center_fold",
+    "$right_panel_control": "loom_pocket_dx.loom_right_panel",
+    "$right_tab_control": "loom_pocket_dx.right_navigation_tabs"
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_modules@container_panel_pocket_dx.container_modules": {} },
+      { "loom_panel@loom_pocket_dx.loom_panel": {} },
+      { "hotbar_panel@container_panel_pocket_dx.hotbar_panel": {} }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@loom_pocket_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

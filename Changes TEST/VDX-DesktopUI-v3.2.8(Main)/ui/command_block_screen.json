@@ -1,0 +1,8 @@
+/*File modified by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "command_block_screen": {
+    "$screen_content": "command_block_dx.center_screen",
+    "$screen_bg_content": "command_block_dx.full_screen"
+  }
+}

@@ -1,0 +1,267 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "cartography_table_mixed_dx",
+
+  "map_image_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 66, 66 ],
+    "offset": [ 51, 51 ],
+    "controls": [
+      { 
+        "output_description_label@label_dx.global_label": {
+          "color": "$vdx_cartography_table_mixed_details_text_color",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ 176, 10 ],
+          "offset": [ 0, 11 ],
+          "text": "#text",
+          "text_alignment": "center",
+          "bindings": [
+            {
+              "binding_name": "#output_description",
+              "binding_name_override": "#text"
+            }
+          ],
+          "shadow": "$vdx_container_text_shadow",
+          "controls": [
+            { "text_control@$vdx_cartography_table_mixed_details_text_control": { } }
+          ]
+        }
+      },/* 
+      {
+        "map_0@cartography_table_mixed_textures_dx.map": {
+          "bindings": [
+            {
+              "binding_name": "#is_none_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }, */
+      {
+        "map_1@cartography_table_mixed_textures_dx.map": {
+          "bindings": [
+            {
+              "binding_name": "#is_basic_map_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "map_2@cartography_table_mixed_textures_dx.map": {
+          "bindings": [
+            {
+              "binding_name": "#is_locator_map_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "map_3@cartography_table_mixed_textures_dx.map": {
+          "bindings": [
+            {
+              "binding_name": "#is_rename_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "duplicated_map@cartography_table_mixed_textures_dx.duplicated_map": {
+          "bindings": [
+            {
+              "binding_name": "#is_clone_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "scaled_map@cartography_table_mixed_textures_dx.scaled_map": {
+          "bindings": [
+            {
+              "binding_name": "#is_extend_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "locked_map@cartography_table_mixed_textures_dx.locked_map": {
+          "bindings": [
+            {
+              "binding_name": "#is_locked_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "top_half_panel": {
+    "type": "panel",
+    "controls": [
+      /* Title */
+      {
+        "title_label@label_dx.global_label": {
+          "text": "tile.cartography_table.name",
+          "color": "$vdx_cartography_table_mixed_title_text_color",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 5 ],
+          "shadow": "$vdx_container_text_shadow",
+          "controls": [
+            { "text_control@$vdx_cartography_table_mixed_title_text_control": { } }
+          ]
+        }
+      },
+      /* Text Field */
+      {
+        "text_field_panel": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 7, 17 ],
+          "size": [ 110, 26 ],
+          "controls": [
+            {
+              "map_name_label@label_dx.global_label": {
+                "color": "$vdx_cartography_table_mixed_name_text_color",
+                "text": "map.name",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 1, 0 ],
+                "layer": 6,
+                "shadow": "$vdx_container_text_shadow",
+                "controls": [
+                  { "text_control@$vdx_cartography_table_mixed_name_text_control": { } }
+                ]
+              }
+            },
+            {
+              "text_field_control@text_field_dx.text_field": {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "size": [ 110, 16 ],
+                "$text_background_default": "cartography_table_mixed_textures_dx.text_field",
+                "$text_background_hover": "cartography_table_mixed_textures_dx.text_field",
+                "$text_background_pressed": "cartography_table_mixed_textures_dx.text_field",
+                "$text_background_locked": "cartography_table_mixed_textures_dx.text_field_disabled",
+                "$text_edit_box_label_offset": [ 3, 3.5 ],
+      
+                "max_length": 30,
+                "$place_holder_text": "#text_box_placeholder_name",
+                "$text_edit_box_placeholder_content_binding_name": "#text_box_placeholder_name",
+            
+                "$text_edit_box_label_size": [ "default", 10 ],
+                "bindings": [
+                  {
+                    "binding_name": "(not #is_none_mode)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "text_field_disabled@cartography_table_mixed_textures_dx.text_field_disabled": {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "bindings": [
+                  {
+                    "binding_name": "(#is_none_mode)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      /* Main Slots */
+      {
+        "input_item_slot@container_item_dx.container_item": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 7, 51 ],
+          "$item_collection_name": "cartography_input_items",
+          "$focus_id_binding_type": "none",
+          "$focus_id": "cartography_input",
+          "$focus_override_down_binding_type": "none",
+          "$focus_override_down": "cartography_additional",
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "cartography_result"
+        }
+      },
+      {
+        "additional_item_slot@container_item_dx.container_item": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 7, 99 ],
+          "$item_collection_name": "cartography_additional_items",
+          "$focus_id_binding_type": "none",
+          "$focus_id": "cartography_additional",
+          "$focus_override_up_binding_type": "none",
+          "$focus_override_up": "cartography_input",
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "cartography_result"
+        }
+      },
+      { "map_image_panel@cartography_table_mixed_dx.map_image_panel": {} },
+      {
+        "result_item_slot@container_item_dx.container_item": {
+          "$highlight_control": "slot_highlight_dx.slot_highlight_output_panel",
+          "$slot_selected_control": "slot_highlight_dx.slot_selected_output_panel",
+          "size": [ 26, 26 ],
+          "offset": [ -7, 72 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$item_collection_name": "cartography_result_items",
+          "$button_ref": "cartography.cartography_output_slot_button",
+          "$focus_id_binding_type": "none",
+          "$focus_id": "cartography_result",
+          "$focus_override_left_binding_type": "none",
+          "$focus_override_left": "cartography_additional"
+        }
+      }
+    ]
+  },
+  
+  /*//// Main Panel ////*/
+
+  "cartography_table_panel@container_panel_dx.container_panel": {
+    "size": [ 176, 224 ],
+    "$container_bg": "cartography_table_mixed_textures_dx.cartography_table",
+    "$container_top_half": "cartography_table_mixed_dx.top_half_panel"
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@container_panel_dx.container_gamepad_helpers": {} },
+      { "container_modules@container_panel_dx.container_modules": {} },
+      { "cartography_table_panel@cartography_table_mixed_dx.cartography_table_panel": { } }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@cartography_table_mixed_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

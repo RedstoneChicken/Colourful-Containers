@@ -1,0 +1,22 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "VDX: Mixed + Pocket UI v3.2.8",
+    "description": "By @CrisXolt. [v1.21.120].\nA porting UI pack project for Bedrock Edition.",
+    "uuid": "747abd50-74e2-42b7-9268-24bdbfcf16bc",
+    "version": [ 3, 2, 8 ],
+    "min_engine_version": [ 1, 21, 120 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "3502c40b-98c8-46c0-ac5e-9fac01496ad7",
+      "version": [ 3, 2, 8 ]
+    }
+  ],
+  "capabilities": ["pbr"],
+  "metadata" : {
+    "authors" : [ "CrisXolt" ],
+    "url" : "x.com/CrisXolt"
+  }
+}

@@ -1,0 +1,101 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "rendering_options_dx",
+
+  "middle_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "top_panel": {
+          "type": "panel",
+          "size": [ 1, 4 ]
+        }
+      },
+      {
+        "panel_header": {
+          "type": "panel",
+          "size": [ 310, 25 ],
+          "controls": [
+            {
+              "graphics_mode@dropdown_dx.option_dropdown_310": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "options.renderingProfile",
+                "$dropdown_content": "rendering_options_dx.graphics_mode_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "graphics_mode_dropdown",
+                "$option_enabled_binding_name": "#graphics_mode_dropdown_enabled",
+                "$options_dropdown_toggle_label_binding": "#graphics_mode_dropdown_toggle_label",
+                "$dropdown_scroll_content_size": [ "100%", 54 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "deffered_sections": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ 310, "100%c" ],
+          "bindings": [
+            {
+              "binding_name": "#graphics_mode_is_deferred",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Top ////*/
+
+  "top_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "title_label@label_dx.global_label": {
+          "size": [ "default", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 5,
+          "shadow": true,
+          "color": "$main_button_default_color",
+          "text": "options.advancedButton",
+          "offset": [ 0, 11 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Bottom ////*/
+
+  "bottom_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "in_game@options_dx.done_button": {
+          "$toggle_name": "video_options",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -6 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+
+  "rendering_settings_screen@menu_scroll_panel_template_dx.menu_scroll_panel_template": {
+    "$top_content": "rendering_options_dx.top_content",
+    "$scrolling_content": "rendering_options_dx.middle_stack_panel",
+    "$bottom_content": "rendering_options_dx.bottom_content",
+    "$scroll_view_port_size": [ 324, "100%" ]
+  }
+}

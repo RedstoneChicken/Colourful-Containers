@@ -1,0 +1,80 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "chest_large_desktop_dx",
+
+  "chest_grid_item@container_item_dx.container_item": {
+    "$item_collection_name": "container_items"
+  },
+
+  "top_half_panel": {
+    "type": "panel",
+    "controls": [
+      /* Title */
+      {
+        "title@label_dx.global_label": {
+          "offset": [ 8, 5 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "color": "$vdx_chest_large_title_text_color",
+          "text": "$container_title",
+          "shadow": "$vdx_container_text_shadow",
+          "controls": [
+            { "text_control@$vdx_chest_large_title_text_control": { } }
+          ]
+        }
+      },
+      {
+        "large_chest_grid": {
+          "type": "grid",
+          "size": [ 162, 108 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "grid_dimensions": [ 9, 6 ],
+          "grid_item_template": "chest_large_desktop_dx.chest_grid_item",
+          "collection_name": "container_items",
+          "offset": [ 7, 17 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Main ////*/
+
+  "chest_large_panel@container_panel_dx.container_panel": {
+    "size": [ 176, 222 ],
+    "$container_bg": "chest_large_textures_dx.chest_large",
+    "$container_top_half": "chest_large_desktop_dx.top_half_panel",
+    "$container_bottom_half": "chest_large_desktop_dx.chest_panel_bottom_half"
+  },
+
+  "chest_panel_bottom_half@container_panel_dx.inventory_panel_bottom_half": {
+    "size": [ 162, 87 ]
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@container_panel_dx.container_gamepad_helpers": { "ignored": "($large_chest_gamepad_heleprs_side)" } },
+      { "l_container_gamepad_helpers@container_panel_dx.l_container_gamepad_helpers": { "ignored": "(not $large_chest_gamepad_heleprs_side)" } },
+      { "container_modules@container_panel_dx.container_modules": {} },
+      { "chest_large_panel@chest_large_desktop_dx.chest_large_panel": { } }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@chest_large_desktop_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

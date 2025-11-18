@@ -1,0 +1,18 @@
+/*File modified by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "cartography_screen": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "cartography_table_mixed_dx.center_screen",
+        "$screen_bg_content": "cartography_table_mixed_dx.full_screen"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "cartography_table_pocket_dx.center_screen",
+        "$screen_bg_content": "cartography_table_pocket_dx.full_screen"
+      }
+    ]
+  }
+}

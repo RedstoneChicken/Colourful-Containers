@@ -1,0 +1,65 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "icon_textures_dx",
+
+  "accessibility": {
+    "type": "panel",
+    "size": [ 15, 15 ],
+    "offset": [ 0.5, 0.5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/icon/accessibility",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "invite": {
+    "type": "panel",
+    "size": [ 14, 14 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/icon/invite",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "language": {
+    "type": "panel",
+    "size": [ 15, 15 ],
+    "offset": [ 0.5, 0.5 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/icon/language",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "trial_available": {
+    "type": "panel",
+    "size": [ 8, 8 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/icon/trial_available",
+          "uv_size": [ 8, 8 ],
+          "uv": "@main_textures_dx.aseprite_uv_animation",
+          "size": [ 8, 8 ]
+        }
+      }
+    ]
+  }
+}

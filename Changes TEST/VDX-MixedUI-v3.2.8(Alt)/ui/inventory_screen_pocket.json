@@ -1,0 +1,19 @@
+{
+  "crafting_arrow_down": {
+    "controls": [
+      { "crafting_arrow_button@inventory_dx.crafting_arrow_button": {} }
+    ]
+  },
+  
+  "crafting_screen_pocket": {
+    "$screen_content": "crafting_table_pocket_dx.center_screen",
+    "$screen_center_content": "miscellaneous_dx.empty_panel",
+    "$screen_bg_content": "crafting_table_pocket_dx.full_screen"
+  },
+
+  "inventory_screen_pocket": {
+    "$screen_content": "inventory_pocket_dx.center_screen",
+    "$screen_center_content": "miscellaneous_dx.empty_panel",
+    "$screen_bg_content": "inventory_pocket_dx.full_screen"
+  }
+}

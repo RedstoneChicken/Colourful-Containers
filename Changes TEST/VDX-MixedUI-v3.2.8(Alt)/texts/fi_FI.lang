@@ -1,0 +1,124 @@
+﻿##################################################
+##  Options
+##################################################
+##  UI Settings
+vdx.options.more=Lisäasetukset...
+vdx.options.moreTitle=Lisäasetukset
+
+##################################################
+##  Progress
+##################################################
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.check=Älä näytä tätä uudelleen
+multiplayerWarning.header=§lHuomio: Kolmannen osapuolen moninpeli
+multiplayerWarning.message=Huomio: Moninpeli on kolmansien osapuolten palvelimien tarjoamia, jotka eivät ole Mojang Studiosin tai Microsoftin omistamia, operoimia tai valvomia. Moninpelin aikana saatat altistua valvomattomille keskusteluviesteille tai muulle muiden käyttäjien tekemälle sisällölle, joka ei välttämättä sovi kaikenikäisille.
+
+onlinePlay.untrustedIp.title=§lTuntematon ulkoinen palvelin
+onlinePlay.untrustedIp.message=Sinun tulisi muodostaa yhteys vain sellaisiin palvelimiin, joihin luotat! Haluatko vielä liittyä?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Tarkista reseptikirjasi
+recipe.toast.title=Uusia reseptejä avattu!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Voit nukkua vain öisin ja ukkosmyrskyjen aikana
+vdx.block.minecraft.bed.not_safe=Et voi levätä nyt; lähistöllä on hirviöitä
+vdx.block.minecraft.bed.obstructed=Tämä sänky on estetty
+vdx.block.minecraft.bed.occupied=Tämä sänky on varattu
+vdx.block.minecraft.bed.too_far_away=Et voi levätä nyt; sänky on liian kaukana
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Rakentamisen korkeusrajoitus on 319 kuutiota
+build.tooHigh.the_nether.aspects=Rakentamisen korkeusrajoitus on 127 kuutiota
+build.tooHigh.the_end.aspects=Rakentamisen korkeusrajoitus on 255 kuutiota
+build.tooLow.overworld.aspects=Rakennuksen vähimmäiskorkeus on -64 kuutiota
+build.tooLow.the_nether.aspects=Rakennuksen vähimmäiskorkeus on 0 kuutiota
+build.tooLow.the_end.aspects=Rakennuksen vähimmäiskorkeus on 0 kuutiota
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=Hyökkäys
+bar.event.raid.remaining.2=Hyökkäys - Hyökkääjiä jäljellä: 2
+bar.event.raid.remaining.1=Hyökkäys - Hyökkääjiä jäljellä: 1
+bar.event.raid.remaining.0=Hyökkäys - Hyökkääjiä jäljellä: 0
+bar.event.raid.victory=Hyökkäys - Voitto
+bar.event.raid.defeat=Hyökkäys - Häviö
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§oHae...",
+gui.recipebook.toggleRecipes.all=Näytetään kaikki",
+gui.recipebook.toggleRecipes.blastable=Näytetään masuunissa sulatettavat",
+gui.recipebook.toggleRecipes.craftable=Näytetään työstettävät",
+gui.recipebook.toggleRecipes.smeltable=Näytetään sulatettavat",
+gui.recipebook.toggleRecipes.smokable=Näytetään savustettavat",
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Rakentaminen
+vdx.creative.tab.equipment=Varusteet
+vdx.creative.tab.items=Esineet
+vdx.creative.tab.nature=Luonto
+
+inventory.binSlot=Tuhoa esine
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Muokkaa roikkuvan kyltin tekstiä
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Konsolikomento
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Suhteellinen sijainti
+structure_block.size=Rakennelman koko
+structure_block.integrity_and_seed=Rakennelman eheys ja siemenluku
+structure_block.detect_size=Tunnista rakennelman koko ja sijainti:
+structure_block.mode_info.save=Tallennustila – kirjoita tiedostoon
+structure_block.mode_info.load=Lataustila – lataa tiedostosta
+structure_block.mode_info.corner=Kulmatila – asettelu- ja kokomerkitsin
+structure_block.exportTo=Vienti:
+structure_block.mode.export=Vienti
+structure_block.button.detect_size=TUNNISTA
+structure_block.button.save=TALLENNA
+structure_block.button.load=LATAA
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Vaihtokaupat
+merchant.deprecated=Kyläläiset täydentävät varastonsa jopa 2x päivässä.

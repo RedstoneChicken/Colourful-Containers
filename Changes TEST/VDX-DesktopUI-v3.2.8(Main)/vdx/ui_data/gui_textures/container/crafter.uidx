@@ -1,0 +1,63 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "crafter_textures_dx",
+
+  "crafter": {
+    "type": "panel",
+    "size": [ 176, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/minecraft/textures/gui/container/crafter",
+          "size": [ 256, 256 ]
+        }
+      }
+    ]
+  },
+
+  "disabled_slot": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/crafter/disabled_slot",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "powered_redstone": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/crafter/powered_redstone",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "unpowered_redstone": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/crafter/unpowered_redstone",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

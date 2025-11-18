@@ -1,0 +1,162 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "smelt_recipe_book_page_panel_content_dx",
+  
+  /*//// Panels base ////*/
+
+  "smelt_recipe_book_page_panel_content": {
+    "type": "panel",
+    "$number_left|default": "-",
+    "$ignore_backward_button|default": false,
+    "$ignore_forward_button|default": false,
+    "$panel_content_offset|default": [ 0, 0 ],
+    "controls": [
+      {
+        "content": {
+          "type": "panel",
+          "size": [ 125, 100 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 11, 31 ],
+          "controls": [
+            { "scrolling_content@$panel_content": { } }
+          ]
+        }
+      },
+      {
+        "number_left@label_dx.global_label": {
+          "layer": 4,
+          "color": [ 1.0, 1.0, 1.0 ],
+          "size": [ "default", 10 ],
+          "ignored": "$ignore_number_label",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "text": "$number_left",
+          "text_alignment": "right",
+          "offset": [ -77, -16 ]
+        }
+      },
+      {
+        "page_backward@recipe_book_page_panel_content_dx.page_backward": {
+          "ignored": "$ignore_backward_button",
+          "offset": [ 38, -12 ],
+          "$toggle_name": "$backward_toggle_name",
+          "$tab_view_binding_name": "$backward_button_view_binding_name",
+          "$toggle_group_forced_index": 0
+        }
+      },
+      {
+        "page_forward@recipe_book_page_panel_content_dx.page_forward": {
+          "ignored": "$ignore_forward_button",
+          "offset": [ 93, -12 ],
+          "$toggle_name": "$forward_toggle_name",
+          "$tab_view_binding_name": "$forward_button_view_binding_name",
+          "$toggle_group_forced_index": 1
+        }
+      },
+      {
+        "gamepad_helpers_triggers": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "gamepad_helper_left_trigger@gamepad_helper_dx.gamepad_helper_left_trigger": {
+                "ignored": "$ignore_backward_button",
+                "offset": [ 18, -13 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "$hide_separator": true,
+                "$hide_description": true
+              }
+            },
+            {
+              "gamepad_helper_right_trigger@gamepad_helper_dx.gamepad_helper_right_trigger": {
+                "ignored": "$ignore_forward_button",
+                "offset": [ -22, -13 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "$hide_separator": true,
+                "$hide_description": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "smelt_recipe_book_panel_pages": {
+    "type": "panel",
+    "$number_right|default": "-",
+    "$ignore_number_label|default": false,
+    "$has_only_1_page|default": false,
+    "controls": [
+      {
+        "number_separator@label_dx.global_label": {
+          "layer": 4,
+          "color": [ 1.0, 1.0, 1.0 ],
+          "size": [ "default", 10 ],
+          "ignored": "$ignore_number_label",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "text": "/",
+          "offset": [ -0.5, -16 ]
+        }
+      },
+      {
+        "number_right@label_dx.global_label": {
+          "layer": 4,
+          "color": [ 1.0, 1.0, 1.0 ],
+          "size": [ "default", 10 ],
+          "ignored": "$ignore_number_label",
+          "text": "$number_right",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "text_alignment": "left",
+          "offset": [ 76, -16 ]
+        }
+      },
+      { "page_1@smelt_recipe_book_page_bindings_dx.page_1": { "$ignore_forward_button": "$has_only_1_page" } },
+      { "page_2@smelt_recipe_book_page_panel_content_dx.page_2": { "ignored": "$has_only_1_page" } }
+    ]
+  },
+
+  "page_2": {
+    "type": "panel",
+    "$has_only_2_pages|default": false,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_2_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_2@smelt_recipe_book_page_bindings_dx.page_2": { "$ignore_forward_button": "$has_only_2_pages" } },
+      { "page_3@smelt_recipe_book_page_panel_content_dx.page_3": { "ignored": "$has_only_2_pages" } }
+    ]
+  },
+
+  "page_3": {
+    "type": "panel",
+    "$has_only_3_pages|default": false,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_3_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_3@smelt_recipe_book_page_bindings_dx.page_3": { "$ignore_forward_button": true } }
+    ]
+  }
+}

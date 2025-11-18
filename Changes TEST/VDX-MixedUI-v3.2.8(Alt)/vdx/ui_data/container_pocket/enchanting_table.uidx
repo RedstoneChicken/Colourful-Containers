@@ -1,0 +1,454 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "enchanting_table_pocket_dx",
+  
+  /*//// Tabs ////*/
+
+  "enchanting_table_icon@container_panel_pocket_dx.item_renderer": {
+    "$object_item_id": 116 //  Enchanting Table - ID: 116
+  },
+
+  "left_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "inventory_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { 
+              "inventory_tab@container_panel_pocket_dx.decorated_tab_panel_template": {
+                "$tab_selected_texture": "inventory_pocket_textures_dx.tab_left_selected_1",
+                "$tab_icon": "recipe_book_pocket_navigation_tabs_dx.survival_inventory_icon"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "right_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "enchanting_table_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { 
+              "search_tab@container_panel_pocket_dx.decorated_tab_panel_template": {
+                "$tab_anchor_side": "top_right",
+                "$tab_selected_texture": "enchanting_table_pocket_textures_dx.tab_right_selected_1",
+                "$tab_icon": "enchanting_table_pocket_dx.enchanting_table_icon"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Inventory Panel ////*/
+
+  "invnetory_left_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "background@inventory_pocket_textures_dx.inventory_bg_half": { "layer": 1 } },
+      { "content@container_panel_pocket_dx.pocket_container_panel_template": { "layer": 10 } }
+    ]
+  },
+  
+  /*//// Enchanting Table Panel ////*/
+
+  "button_template": {
+    "type": "panel",
+    "controls": [
+      { "background@enchanting_table_pocket_textures_dx.enchantment_slot_disabled": { "layer": 1 } },
+      { 
+        "unselectable_button@enchanting.unselectable_button": {
+          "size": [ 108, 19 ],
+          "layer": 2,
+          "controls": [
+            { "cost@$vdx_enchanting_cost_disabled_control": { } },
+            { "default@enchanting_table_pocket_dx.dark_background": {} },
+            { "hover@enchanting_table_pocket_dx.dark_background": { "$is_hover": true } },
+            { "pressed@enchanting_table_pocket_dx.dark_background": {} }
+          ]
+        }
+      },
+      { 
+        "selectable_button@enchanting.selectable_button": {
+          "size": [ 108, 19 ],
+          "layer": 3,
+          "sound_name": "random.enchant",
+          "controls": [
+            { "cost@$vdx_enchanting_cost_control": { } },
+            { "default@enchanting_table_pocket_dx.active_background": { } },
+            { "hover@enchanting_table_pocket_dx.active_background_hover": { } },
+            { "pressed@enchanting_table_pocket_dx.active_background": { } }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            },
+            {
+              "to_button_id": "button.button_hovered",
+              "mapping_type": "pressed"
+            }
+          ]
+        }
+      },
+      { 
+        "selected_highlighted@enchanting_table_pocket_textures_dx.enchantment_slot_selected": {
+          "layer": 4,
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_name": "#show_selected_button_highlight",
+              "binding_name_override": "#visible",
+              "binding_collection_name": "#enchant_buttons"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "dark_background@enchanting_table_desktop_dx.button_content": {
+    "$button_texture": "enchanting_table_pocket_textures_dx.enchantment_slot_disabled",
+    "$runes_text_color": "$vdx_enchanting_runes_disabled_color"
+  },
+
+  "active_background@enchanting_table_desktop_dx.button_content": {
+    "$button_texture": "enchanting_table_pocket_textures_dx.enchantment_slot",
+    "$runes_text_color": "$vdx_enchanting_runes_color"
+  },
+
+  "active_background_hover@enchanting_table_desktop_dx.button_content": {
+    "$button_texture": "enchanting_table_pocket_textures_dx.enchantment_slot_highlighted",
+    "$runes_text_color": "$vdx_enchanting_runes_highlighted_color",
+    "$is_hover": true
+  },
+
+  "confirm_button_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "arrow": {
+          "type": "panel",
+          "size": [ 24, 16 ],
+          "layer": 0,
+          "controls": [
+            { "arrow@enchanting_table_pocket_textures_dx.arrow": { "layer": 1 } },
+            {
+              "arrow_active@enchanting_table_pocket_textures_dx.arrow_active": {
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_name": "#active_enchant",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "input_item_renderer@enchanting_pocket.item_renderer": {
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 1,
+          "offset": [ 5, 0 ],
+          "property_bag": {
+            "#filtered_light_multiplier": 0.5
+          },
+          "bindings": [
+            {
+              "binding_name": "#input_item_id",
+              "binding_name_override": "#item_id_aux"
+            },
+            {
+              "binding_name": "#inactive_enchant",
+              "binding_name_override": "#disabled_filter_visible"
+            }
+          ]
+        }
+      },
+      {
+        "output_item_renderer@enchanting_pocket.item_renderer": {
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -5, 0 ],
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#output_item_id",
+              "binding_name_override": "#item_id_aux"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "item_grid": {
+    "type": "grid",
+    "layer": 10,
+    "grid_dimensions": [ 1, 1 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 28, 28 ],
+    "$cell_image_size": [ 28, 28 ],
+    "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+    "$slot_highlight_image": "pocket_textures_dx.slot_highlight"
+  },
+
+  "enchanting_table_right_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "enchanting_table_bg@enchanting_table_pocket_textures_dx.enchanting_table_bg": { "layer": 1 } },
+      /* Title */
+      {
+        "title@label_dx.global_label": {
+          "layer": 10,
+          "offset": [ 0, 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text_alignment": "center",
+          "color": "$vdx_enchanting_table_pocket_title_text_color",
+          "text": "$container_title",
+          "localize": "$localize_title",
+          "shadow": "$vdx_container_text_shadow",
+          "controls": [
+            { "text_control@$vdx_enchanting_table_pocket_title_text_control": { } }
+          ]
+        }
+      },
+      {
+        "center_hold": {
+          "type": "panel",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "offset": [ 7, 27 ],
+          "size": [ "100%-14px", "100%-34px" ],
+          "controls": [
+            {
+              "main_enchanting_table_panel": {
+                "type": "panel",
+                "size": [ 182, 114 ],
+                "controls": [
+                  { "bg@enchanting_table_pocket_textures_dx.enchanting_table_panel": { "layer": 1 } },
+                  /* Enchant */
+                  {
+                    "tenchant@label_dx.global_label": {
+                      "layer": 10,
+                      "offset": [ 0, 5 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "text_alignment": "center",
+                      "color": "$vdx_enchanting_table_pocket_enchant_text_color",
+                      "text": "container.enchant",
+                      "shadow": "$vdx_container_text_shadow",
+                      "controls": [
+                        { "text_control@$vdx_enchanting_table_pocket_enchant_text_control": { } }
+                      ]
+                    }
+                  },
+                  /* Book */
+                  {
+                    "enchanting_book_panel": {
+                      "type": "panel",
+                      "layer": 10,
+                      "size": [ 57, 57 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 7, 21 ],
+                      "controls": [
+                        { "enchanting_slots_panel@enchanting_pocket.enchanting_book_contents_panel": {} }
+                      ]
+                    }
+                  },
+                  /* Item Slots */
+                  { 
+                    "item_grid@enchanting_table_pocket_dx.item_grid": {
+                      "offset": [ 7, 79 ],
+                      "collection_name": "enchanting_input_items",
+                      "controls": [
+                        {
+                          "item_slot@container_item_dx.container_item": {
+                            "size": [ 28, 28 ],
+                            "grid_position": [ 0, 0 ],
+                            "$item_collection_name": "enchanting_input_items"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  { 
+                    "lapis_grid@enchanting_table_pocket_dx.item_grid": {
+                      "offset": [ 36, 79 ],
+                      "collection_name": "enchanting_lapis_items",
+                      "controls": [
+                        {
+                          "lapis@container_item_dx.container_item": {
+                            "size": [ 28, 28 ],
+                            "grid_position": [ 0, 0 ],
+                            "$cell_overlay_ref": "empty_item_textures_dx.lapis_lazuli",
+                            "$item_collection_name": "enchanting_lapis_items",
+
+                            "$focus_id_binding_type": "none",
+                            "$focus_id": "enchanting_lapis"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  /* Enchantment list selector */
+                  {
+                    "list_panel": {
+                      "type": "grid",
+                      "layer": 10,
+                      "grid_dimensions": [ 1, 3 ],
+                      "collection_name": "#enchant_buttons",
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [ -7, 21 ],
+                      "size": [ 108, 57 ],
+                      "controls": [
+                        {
+                          "level_1": {
+                            "type": "panel",
+                            "size": [ 108, 19 ],
+                            "grid_position": [ 0, 0 ],
+                            "controls": [
+                              {
+                                "dust@enchanting_table_desktop_dx.dust_template": {
+                                  "$image_selectable": "enchanting_table_pocket_textures_dx.level_1",
+                                  "$image_unselectable": "enchanting_table_pocket_textures_dx.level_1_disabled"
+                                }
+                              },
+                              { "button@enchanting_table_pocket_dx.button_template": { } }
+                            ]
+                          }
+                        },
+                        {
+                          "level_2": {
+                            "type": "panel",
+                            "size": [ 108, 19 ],
+                            "grid_position": [ 0, 1 ],
+                            "controls": [
+                              {
+                                "dust@enchanting_table_desktop_dx.dust_template": {
+                                  "$image_selectable": "enchanting_table_pocket_textures_dx.level_2",
+                                  "$image_unselectable": "enchanting_table_pocket_textures_dx.level_2_disabled"
+                                }
+                              },
+                              { "button@enchanting_table_pocket_dx.button_template": { } }
+                            ]
+                          }
+                        },
+                        {
+                          "level_3": {
+                            "type": "panel",
+                            "size": [ 108, 19 ],
+                            "grid_position": [ 0, 2 ],
+                            "controls": [
+                              {
+                                "dust@enchanting_table_desktop_dx.dust_template": {
+                                  "$image_selectable": "enchanting_table_pocket_textures_dx.level_3",
+                                  "$image_unselectable": "enchanting_table_pocket_textures_dx.level_3_disabled"
+                                }
+                              },
+                              { "button@enchanting_table_pocket_dx.button_template": { } }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  /* Confirm Button */
+                  {
+                    "enchanting_confirm_button@common.button": {
+                      "layer": 10,
+                      "$pressed_button_name": "button.enchant",
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [ -7, 82 ],
+                      "size": [ 108, 22 ],
+                      "locked_control": "locked",
+                      "controls": [
+                        { "content@enchanting_table_pocket_dx.confirm_button_content": { "layer": 4 } },
+                        { "default@enchanting_table_pocket_textures_dx.confirm_button": { "layer": 1 } },
+                        { "hover@enchanting_table_pocket_textures_dx.confirm_button_highlighted": { "layer": 1 } },
+                        { "pressed@enchanting_table_pocket_textures_dx.confirm_button_selected": { "layer": 1 } },
+                        { "locked@enchanting_table_pocket_textures_dx.confirm_button_disabled": { "layer": 1 } }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Main Panel ////*/
+
+  "enchanting_table_panel@container_panel_pocket_dx.double_container_panel": {
+    "size": [ "100%", "100%-4px" ],
+    "$left_tab_control": "enchanting_table_pocket_dx.left_navigation_tabs",
+    "$left_panel_control": "enchanting_table_pocket_dx.invnetory_left_panel",
+    "$center_panel_control": "enchanting_table_pocket_textures_dx.center_fold",
+    "$right_panel_control": "enchanting_table_pocket_dx.enchanting_table_right_panel",
+    "$right_tab_control": "enchanting_table_pocket_dx.right_navigation_tabs"
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_modules@container_panel_pocket_dx.container_modules": {} },
+      { "enchanting_table_panel@enchanting_table_pocket_dx.enchanting_table_panel": {} }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@enchanting_table_pocket_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

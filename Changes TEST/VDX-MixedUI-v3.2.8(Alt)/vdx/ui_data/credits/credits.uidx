@@ -1,0 +1,459 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "credits_dx",
+
+  /*//// Text assets ////*/
+
+  "separator_text": {
+    "type": "panel",
+    "size": [ "100%", 12 ]
+  },
+
+  "base_label@label_dx.global_label": {
+    "size": [ "100%", "default" ],
+    "shadow": true,
+    "enable_profanity_filter": false
+    /*I disable this filter because no one has a profanity words
+    and still will be censored in some names in credits, i think.*/
+  },
+
+  /* Section Text */
+  "s_text_panel": {
+    "type": "panel",
+    "size": [ "100%", 60 ],
+    "controls": [
+      {
+         "top@credits_dx.base_label": {
+          "size": [ "default", 10 ],
+          "color": "$f_color_format",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -24 ],
+          "text_alignment": "center",
+          "text": "============"
+        }
+      },
+      {
+         "main@credits_dx.base_label": {
+          "size": [ "default", 10 ],
+          "color": "$e_color_format",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -12 ],
+          "text_alignment": "center",
+          "text": "$s_text"
+        }
+      },
+      {
+         "bottom@credits_dx.base_label": {
+          "size": [ "default", 10 ],
+          "color": "$f_color_format",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "text_alignment": "center",
+          "text": "============"
+        }
+      }
+    ]
+  },
+
+  /* Discipline Text */
+  "d_text_panel": {
+    "type": "panel",
+    "size": [ "100%", 36 ],
+    "controls": [
+      {
+         "base_label@credits_dx.base_label": {
+          "size": [ "default", 10 ],
+          "color": "$e_color_format",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "text_alignment": "center",
+          "text": "$d_text"
+        }
+      }
+    ]
+  },
+
+  /* Title Text */
+  "t_text_panel": {
+    "type": "panel",
+    "size": [ "100%", 36 ],
+    "controls": [
+      {
+         "base_label@credits_dx.base_label": {
+          "size": [ "default", 10 ],
+          "color": "$7_color_format",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "text_alignment": "left",
+          "text": "$t_text"
+        }
+      }
+    ]
+  },
+
+  /* Name Text */
+  "n_text_panel": {
+    "type": "panel",
+    "size": [ "100%", 12 ],
+    "controls": [
+      {
+         "base_label@credits_dx.base_label": {
+          "size": [ "default", 10 ],
+          "color": "$f_color_format",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 44, 0 ],
+          "text_alignment": "left",
+          "text": "$n_text"
+        }
+      }
+    ]
+  },
+
+  /* End Text */
+  "e_text_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%cm+24px" ],
+    "controls": [
+      {
+         "base_label@credits_dx.base_label": {
+          "size": [ "100%", "default" ],
+          "color": "$f_color_format",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 0, 1 ],
+          "font_scale_factor": 1.0,
+          "line_padding": 2.0,
+          "text_alignment": "left",
+          "text": "$e_text"
+        }
+      }
+    ]
+  },
+
+  /* Player Text */
+  "p_text_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%cm+24px" ],
+    "controls": [
+      {
+        "base_label@credits_dx.base_label": {
+          "size": [ "100%", "default" ],
+          "color": "$f_color_format",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 0, 1 ],
+          "font_scale_factor": 1.0,
+          "line_padding": 2.0,
+          "text_alignment": "left",
+          "text": "#text",
+          "bindings": [
+            { "binding_name": "#player_name" },
+            { "binding_type": "view", "source_property_name": "$p_text", "target_property_name": "#text" }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Credits text ////*/
+
+  "test_scroll_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      { "credits_text_panel@credits_dx.credits_text_panel": { "offset": [ 0, 0 ] } }
+    ]
+  },
+
+  "credits_text_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 256, "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "top": { "type": "panel", "size": [ "100%", 46 ] } },
+      {
+        "title": {
+          "type": "panel", 
+          "size": [ "100%", 73 ],
+          "controls": [
+            {
+              "main_logo@title_textures_dx.minecraft": {
+                "layer": 2,
+                "size": [ 256, 64 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            },
+            {
+              "edition_logo@title_textures_dx.edition": {
+                "layer": 4,
+                "size": [ "100%", 16 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 37 ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "credits_text_end@credits_text_end_dx.credits_text_end": {
+          "bindings": [
+            {
+              "binding_name": "#show_end_poem",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "separator": {
+          "type": "panel",
+          "size": [ "100%", 84 ],
+          "bindings": [
+            {
+              "binding_name": "#show_end_poem",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { "credits_text_main_part_1@credits_text_main_dx.credits_text_main_part_1": { } },
+      { "credits_text_main_part_2@credits_text_main_dx.credits_text_main_part_2": { } },
+      { "credits_text_main_part_3@credits_text_main_dx.credits_text_main_part_3": { } },
+      { "credits_text_main_part_4@credits_text_main_dx.credits_text_main_part_4": { } },
+      { "credits_text_main_part_5@credits_text_main_dx.credits_text_main_part_5": { } },
+      { 
+        "credits_text_post@credits_text_post_dx.credits_text_post": {
+          "bindings": [
+            {
+              "binding_name": "#show_end_poem",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Panels ////*/
+
+  "skip_panel": {
+    "type": "panel",
+    "layer": 120,
+    "controls": [
+      {
+        "skip_button@button_dx.main_button_74": {
+          "$pressed_button_name": "button.menu_exit",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "size": [ 74, 20 ],
+          "$button_text": "credits.skip",
+          "offset": [ -8, -8 ],
+          "bindings": [
+            {
+              "binding_name": "#skip_button_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ],
+          "anims": [ "@credits.anim_button_wait" ]
+        }
+      },
+      {
+        "exit_credits_input_panel": {
+          "type": "input_panel",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.menu_exit",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "anim_text_panel_scroll": {
+    "anim_type": "offset",
+    "from": [ 0, 0 ],
+    "to": [ 0, -81000 ],
+    "duration": 5400 //5400
+  },
+
+  "anim_background_scroll": {
+    "anim_type": "offset",
+    "from": [ 0, 0 ],
+    "to": [ 0, -40500 ],
+    "duration": 5400 //5400
+  },
+
+  /*//// Screen ////*/
+
+  "credits_screen_content": {
+    "type": "panel",
+    "layer": 12,
+    "controls": [
+      {
+        "test_panel@common.scrolling_panel": {
+          "ignored": true,
+          "size": [ "100%", "100%" ],
+          "$scrolling_pane_size": [ "100%", "100%" ],
+          "$scrolling_pane_offset": [ 0, 0 ],
+          "$scrolling_content": "credits_dx.test_scroll_panel",
+          "$show_background": false,
+          "layer": 1,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$always_handle_scrolling": true,
+
+          "$scroll_track_image_control": "main_textures_dx.scroll_track",
+          "$scroll_box_image_control": "widget_textures_dx.scroller",
+          "$scroll_size": [ 6, "100%" ]
+        }
+      },  
+      { 
+        "main_credits_panel": {
+          "type": "panel",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "bottom_panel": {
+                "type": "panel",
+                "size": [ "100%", 1 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "controls": [
+                  { "credits_text_panel@credits_dx.credits_text_panel": { "anims": [ "@credits_dx.anim_text_panel_scroll" ] } }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "credits_factory": {
+          "type": "factory",
+          "control_ids": {
+            "fade_out_image": "miscellaneous_dx.empty_panel",
+            "skip_button": "skip_button@credits_dx.skip_panel"
+          }
+        }
+      },
+      {
+        "whole_screen_input_panel": {
+          "type": "input_panel",
+          "layer": 1,
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.show_skip",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.show_skip",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.show_skip",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "credits_screen_content@credits_dx.credits_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      {
+        "vignette_renderer": {
+          "ignored": "$ignore_vignette",
+          "type": "custom",
+          "renderer": "vignette_renderer",
+          "layer": 100,
+          "property_bag": {
+            "opacity_override": 0.0
+          }
+        }
+      },
+      { 
+        "credits_factory": {
+          "type": "factory",
+          "control_ids": {
+            "fade_out_image": "fade_out_image@credits.fade_out_image",
+            "skip_button": "miscellaneous_dx.empty_panel"
+          }
+        }
+      },
+      { "fade_in_image@credits.fade_in_image": { "layer": 1 } },
+      { 
+        "background": {
+          "type": "panel",
+          "clips_children": true,
+          "size": [ "100%", "100%" ],
+          "controls": [ 
+            {
+              "menu_background_image@menu_background_textures_dx.credits_background": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "layer": -10,
+                "size": [ "100%", 40700 ],
+                "anims": [ "@credits_dx.anim_background_scroll" ],
+                "bindings": [
+                  {
+                    "binding_name": "(not #show_end_poem)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "the_end_bg_panel@progress_dimension_dx.the_end_bg_panel": {
+                "bindings": [
+                  {
+                    "binding_name": "(#show_end_poem)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }/* 
+            {
+              "end_background_image": {
+                "type": "image",
+                "texture": "vdx/ui_textures/credits/end_background",
+                "fill": true,
+                "layer": -5,
+                "size": [ "100%", "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "(#show_end_poem)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            } */
+          ]
+        }
+      }
+    ]
+  }
+}

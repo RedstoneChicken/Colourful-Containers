@@ -1,0 +1,20 @@
+/*File modified by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "enchanting_screen": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "enchanting_table_desktop_dx.center_screen",
+        "$screen_bg_content": "enchanting_table_desktop_dx.full_screen",
+        "$gamepad_cursor": true
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "enchanting_table_pocket_dx.center_screen",
+        "$screen_bg_content": "enchanting_table_pocket_dx.full_screen",
+        "$gamepad_cursor": false
+      }
+    ]
+  }
+}

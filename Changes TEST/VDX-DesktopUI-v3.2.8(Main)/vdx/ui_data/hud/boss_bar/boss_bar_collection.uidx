@@ -1,0 +1,216 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "CrisXolt_boss_bar_dx",
+
+  /*//// Main Panel ////*/
+
+  "boss_bar_panel":{
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "boss_bar_padding": {
+          "ignored": "$ignore_bar_hud_padding",
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "visible": "#boss_hud_padding", //Make this visible to move the boss hud panel down
+          "bindings": [
+            {
+              "binding_name": "#boss_hud_padding",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "boss_bar_panel": {
+          "type": "panel",
+          "controls": [
+            {
+              "boss_health_grid@hud.boss_health_grid": {
+                "size": [ 182, "100%" ],
+                "grid_item_template": "CrisXolt_boss_bar_dx.bar_panel",
+                "offset": [ 0, 0 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Collection ////*/
+
+  "bar_name@label_dx.global_label": {
+    "color": "$boss_name_text_color",
+    "text": "#bossName",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 2 ],
+    "shadow": true,
+    "bindings": [
+      {
+        "binding_name": "#bossName",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars"
+      }
+    ]
+  },
+
+  "bar_panel": {
+    "type": "panel",
+    "size": [ 182, 18 ],
+    "$collection_name": "boss_bars",
+    "$progress_bar_collection": "boss_bars",
+    "$raid_bar_panel_control": "CrisXolt_boss_bar_dx.raid_bar_panel",
+    "$default_bar_panel_control": "CrisXolt_boss_bar_dx.default_bar_panel",
+    "controls": [
+      // Ender Dragon
+      {
+        "ender_dragon_bar@CrisXolt_bar_binding_dx.ender_dragon_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_boss_bar_dx.bar_name": { } },
+            { "ender_dragon_bar_panel@CrisXolt_boss_bar_dx.ender_dragon_bar_panel": { } }
+          ]
+        }
+      },
+      // Wither
+      {
+        "wither_bar@CrisXolt_bar_binding_dx.wither_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_boss_bar_dx.bar_name": { } },
+            { "wither_bar_panel@CrisXolt_boss_bar_dx.wither_bar_panel": { } }
+          ]
+        }
+      },
+      // Raid
+      {
+        "raid_bar@CrisXolt_bar_binding_dx.raid_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_boss_bar_dx.bar_name": { "text": "bar.event.raid.name" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
+      // Raid - Raiders remaining: 2
+      { 
+        "raid_remaining_2_bar@CrisXolt_bar_binding_dx.raid_progress_2_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_boss_bar_dx.bar_name": { "text": "bar.event.raid.remaining.2" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
+      // Raid - Raiders remaining: 1
+      { 
+        "raid_remaining_1_bar@CrisXolt_bar_binding_dx.raid_progress_1_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_boss_bar_dx.bar_name": { "text": "bar.event.raid.remaining.1" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
+      // Raid - Raiders remaining: 0
+      { 
+        "raid_remaining_0_bar@CrisXolt_bar_binding_dx.raid_progress_0_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_boss_bar_dx.bar_name": { "text": "bar.event.raid.remaining.0" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
+      // Raid - Victory
+      { 
+        "raid_victory_bar@CrisXolt_bar_binding_dx.raid_victory_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_boss_bar_dx.bar_name": { "text": "bar.event.raid.victory" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
+      // Raid - Defeat
+      { 
+        "raid_defeat_bar@CrisXolt_bar_binding_dx.raid_defeat_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_boss_bar_dx.bar_name": { "text": "bar.event.raid.defeat" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
+      // Default
+      { "default_bar_control@CrisXolt_default_bar_dx.001": { } }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#bar_visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  /*//// Ender Dragon ////*/
+
+  "ender_dragon_bar_panel@common.progress_bar_for_collections": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 12 ],
+    "size": [ 182, 5 ],
+    "controls": [
+      { "bar_empty@$ender_dragon_bar_empty_texture": { "layer": 1, "size": [ 182, 5 ] } },
+      { "nub_bar_empty@$ender_dragon_nub_bar_empty_texture": { "layer": 2, "size": [ 182, 5 ] } },
+      { "bar_full@$ender_dragon_bar_full_texture": { "layer": 3, "size": [ 182, 5 ] } },
+      { "nub_bar_full@$ender_dragon_nub_bar_full_texture": { "layer": 4, "size": [ 182, 5 ] } }
+    ]
+  },
+
+  /*//// Wither ////*/
+
+  "wither_bar_panel@common.progress_bar_for_collections": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 12 ],
+    "size": [ 182, 5 ],
+    "controls": [
+      { "bar_empty@$wither_bar_empty_texture": { "layer": 1, "size": [ 182, 5 ] } },
+      { "nub_bar_empty@$wither_nub_bar_empty_texture": { "layer": 2, "size": [ 182, 5 ] } },
+      { "bar_full@$wither_bar_full_texture": { "layer": 3, "size": [ 182, 5 ] } },
+      { "nub_bar_full@$wither_nub_bar_full_texture": { "layer": 4, "size": [ 182, 5 ] } }
+    ]
+  },
+
+  /*//// Raid ////*/
+
+  "raid_bar_panel@common.progress_bar_for_collections": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 12 ],
+    "size": [ 182, 5 ],
+    "layer": 10,
+    "controls": [
+      { "bar_empty@$raid_bar_empty_texture": { "layer": 1, "size": [ 182, 5 ] } },
+      { "nub_bar_empty@$raid_nub_bar_empty_texture": { "layer": 2, "size": [ 182, 5 ] } },
+      { "bar_full@$raid_bar_full_texture": { "layer": 3, "size": [ 182, 5 ] } },
+      { "nub_bar_full@$raid_nub_bar_full_texture": { "layer": 4, "size": [ 182, 5 ] } }
+    ]
+  },
+
+  /*//// Default ////*/
+
+  "default_bar_panel@common.progress_bar_for_collections": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 12 ],
+    "size": [ 182, 5 ],
+    "layer": 10,
+    "controls": [
+      { "bar_empty@$default_event_bar_empty_texture": { "layer": 1, "size": [ 182, 5 ] } },
+      { "nub_bar_empty@$default_event_nub_bar_empty_texture": { "layer": 2, "size": [ 182, 5 ] } },
+      { "bar_full@$default_event_bar_full_texture": { "layer": 3, "size": [ 182, 5 ] } },
+      { "nub_bar_full@$default_event_nub_bar_full_texture": { "layer": 4, "size": [ 182, 5 ] } }
+    ]
+  }
+}

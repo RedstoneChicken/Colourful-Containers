@@ -1,0 +1,172 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "slot_highlight_dx",
+
+  /*//// Hover Text Label ////*/
+
+  "item_tooltip_label@tooltip_dx.tooltip_label": {
+    //"line_padding": 2.0,
+    "$hover_text_binding_name|default": "#hover_text",
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "$hover_text_binding_name",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "($hover_text_binding_name - '\n§9§9craftingScreen.tab.equipment§r' - '\n§9§9craftingScreen.tab.construction§r' - '\n§9§9craftingScreen.tab.nature§r' - '\n§9§9craftingScreen.tab.items§r' - '\n§9§9craftingScreen.tab.commandsl§r')",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+
+  /*//// Highlight Control ////*/
+
+  "slot_highlight_panel": {
+    "type": "panel",
+    "offset": "$item_renderer_offset",
+    "$slot_highlight_image|default": "container_textures_dx.slot_highlight",
+    "$highlight_image_control_name": "slot_highlight_image",
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "no_touch_panels": {
+          "type": "panel",
+          "ignored": "($touch)",
+          "controls": [
+            { "$highlight_image_control_name@$slot_highlight_image": { } },
+            {
+              "custom_tooltip@tooltip_dx.tooltip_panel": {
+                "ignored": "(not $custom_tooltip)",
+                "bindings": [
+                  {
+                    "binding_name": "(not (#hover_text = ''))",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  }
+                ]
+              }
+            },
+            {
+              "original_tooltip_renderer@common.hover_text": {
+                "ignored": "($custom_tooltip)",
+                "layer": 200,
+                "$hover_text_binding_name|default": "#hover_text",
+                "bindings": [
+                  {
+                    "binding_name": "$hover_text_binding_name",
+                    "binding_name_override": "#text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#text - '\n§9§9craftingScreen.tab.equipment§r' - '\n§9§9craftingScreen.tab.construction§r' - '\n§9§9craftingScreen.tab.nature§r' - '\n§9§9craftingScreen.tab.items§r' - '\n§9§9craftingScreen.tab.commands§r')",
+                    "target_property_name": "#hover_text"
+                  }
+                ]
+              }
+            }/* ,
+            {
+              "bundle_tooltip@common.bundle_tooltip": {
+                "ignored": "($custom_tooltip)",
+                "layer": 200,
+                "$hover_text_binding_name|default": "#hover_text",
+                "bindings": [
+                  {
+                    "binding_name": "$hover_text_binding_name",
+                    "binding_name_override": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  },
+                  {
+                    "binding_name": "#hover_items_id",
+                    "binding_name_override": "#hover_items_id",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  }
+                ]
+              }
+            } */
+          ]
+        }
+      },
+      {
+        "touch_panels": {
+          "type": "panel",
+          "ignored": "(not $touch)",
+          "controls": [
+            { "slot_highlight_image@$slot_highlight_image": { "ignored": "($use_item_details_in_touch)" } },
+            {
+              "hover_text_panels": {
+                "type": "panel",
+                "ignored": "($use_item_details_in_touch)",
+                "controls": [
+                  {
+                    "custom_hover_text@tooltip_dx.tooltip_panel": {
+                      "ignored": "(not $custom_tooltip)",
+                      "bindings": [
+                        {
+                          "binding_name": "(not (#hover_text = ''))",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "hover_text@common.hover_text": {
+                      "ignored": "($custom_tooltip)",
+                      "layer": 200,
+                      "$hover_text_binding_name|default": "#hover_text",
+                      "bindings": [
+                        {
+                          "binding_name": "$hover_text_binding_name",
+                          "binding_name_override": "#text",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#text - '\n§9§9craftingScreen.tab.equipment§r' - '\n§9§9craftingScreen.tab.construction§r' - '\n§9§9craftingScreen.tab.nature§r' - '\n§9§9craftingScreen.tab.items§r' - '\n§9§9craftingScreen.tab.commands§r')",
+                          "target_property_name": "#hover_text"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "slot_highlight_output_panel@slot_highlight_dx.slot_highlight_panel": {
+    "$slot_highlight_image|default": "container_textures_dx.slot_highlight_output",
+    "size": [ 26, 26 ]
+  },
+
+  /*//// Slot Selected Control (Touch) ////*/
+
+  "slot_selected_panel": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "$slot_highlight_image|default": "container_textures_dx.slot_highlight",
+    "ignored": "(not $touch)",
+    "controls": [
+      { "slot_highlight_image@$slot_highlight_image": { "ignored": "(not $use_item_details_in_touch)" } }
+    ]
+  },
+
+  "slot_selected_output_panel@slot_highlight_dx.slot_selected_panel": {
+    "$slot_highlight_image|default": "container_textures_dx.slot_highlight_output",
+    "size": [ 26, 26 ]
+  }
+}

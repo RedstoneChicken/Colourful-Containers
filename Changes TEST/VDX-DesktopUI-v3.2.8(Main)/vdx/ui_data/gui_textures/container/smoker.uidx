@@ -1,0 +1,65 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "smoker_textures_dx",
+
+  "smoker": {
+    "type": "panel",
+    "size": [ 176, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/minecraft/textures/gui/container/smoker",
+          "size": [ 256, 256 ]
+        }
+      }
+    ]
+  },
+
+  "burn_progress": {
+    "type": "panel",
+    "size": [ 24, 16 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/smoker/burn_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "left",
+          "bindings": [
+            {
+              "binding_name": "#furnace_arrow_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "lit_progress": {
+    "type": "panel",
+    "size": [ 14, 14 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/smoker/lit_progress",
+          "size": [ "100%", "100%" ],
+          "clip_direction": "down",
+          "bindings": [
+            {
+              "binding_name": "#furnace_flame_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

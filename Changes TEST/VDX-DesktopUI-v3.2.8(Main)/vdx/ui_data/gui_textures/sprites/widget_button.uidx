@@ -1,0 +1,1929 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "widget_button_textures_dx",
+
+  /* Base (Sizing) */
+
+  "button_base": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_base_disabled": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_base_highlighted": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 310 */
+
+  "button_310": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_310_disabled": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_310_highlighted": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 306 */
+
+  "button_306": {
+    "type": "panel",
+    "size": [ 306, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_306_disabled": {
+    "type": "panel",
+    "size": [ 306, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_306_highlighted": {
+    "type": "panel",
+    "size": [ 306, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 240 */
+
+  "button_240": {
+    "type": "panel",
+    "size": [ 240, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_240_disabled": {
+    "type": "panel",
+    "size": [ 240, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_240_highlighted": {
+    "type": "panel",
+    "size": [ 240, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 220 */
+
+  "button_220": {
+    "type": "panel",
+    "size": [ 220, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_220_disabled": {
+    "type": "panel",
+    "size": [ 220, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_220_highlighted": {
+    "type": "panel",
+    "size": [ 220, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 210 */
+
+  "button_210": {
+    "type": "panel",
+    "size": [ 210, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_210_disabled": {
+    "type": "panel",
+    "size": [ 210, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_210_highlighted": {
+    "type": "panel",
+    "size": [ 210, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 204 */
+
+  "button_204": {
+    "type": "panel",
+    "size": [ 204, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_204_disabled": {
+    "type": "panel",
+    "size": [ 204, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_204_highlighted": {
+    "type": "panel",
+    "size": [ 204, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 200 (Original size) */
+
+  "button_200": {
+    "type": "panel",
+    "size": [ 200, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_200_disabled": {
+    "type": "panel",
+    "size": [ 200, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_200_highlighted": {
+    "type": "panel",
+    "size": [ 200, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 158 */
+
+  "button_158": {
+    "type": "panel",
+    "size": [ 158, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_158_disabled": {
+    "type": "panel",
+    "size": [ 158, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_158_highlighted": {
+    "type": "panel",
+    "size": [ 158, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 150 */
+
+  "button_150": {
+    "type": "panel",
+    "size": [ 150, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_150_disabled": {
+    "type": "panel",
+    "size": [ 150, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_150_highlighted": {
+    "type": "panel",
+    "size": [ 150, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 130 */
+
+  "button_130": {
+    "type": "panel",
+    "size": [ 130, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_130_disabled": {
+    "type": "panel",
+    "size": [ 130, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_130_highlighted": {
+    "type": "panel",
+    "size": [ 130, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 120 */
+
+  "button_120": {
+    "type": "panel",
+    "size": [ 120, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_120_disabled": {
+    "type": "panel",
+    "size": [ 120, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_120_highlighted": {
+    "type": "panel",
+    "size": [ 120, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 108 */
+
+  "button_108": {
+    "type": "panel",
+    "size": [ 108, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_108_disabled": {
+    "type": "panel",
+    "size": [ 108, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_108_highlighted": {
+    "type": "panel",
+    "size": [ 108, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 100 */
+
+  "button_100": {
+    "type": "panel",
+    "size": [ 100, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_100_disabled": {
+    "type": "panel",
+    "size": [ 100, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_100_highlighted": {
+    "type": "panel",
+    "size": [ 100, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 98 */
+
+  "button_98": {
+    "type": "panel",
+    "size": [ 98, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_98_disabled": {
+    "type": "panel",
+    "size": [ 98, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_98_highlighted": {
+    "type": "panel",
+    "size": [ 98, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 90 */
+
+  "button_90": {
+    "type": "panel",
+    "size": [ 90, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_90_disabled": {
+    "type": "panel",
+    "size": [ 90, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_90_highlighted": {
+    "type": "panel",
+    "size": [ 90, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 88 */
+
+  "button_88": {
+    "type": "panel",
+    "size": [ 88, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_88_disabled": {
+    "type": "panel",
+    "size": [ 88, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_88_highlighted": {
+    "type": "panel",
+    "size": [ 88, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 80 */
+
+  "button_80": {
+    "type": "panel",
+    "size": [ 80, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_80_disabled": {
+    "type": "panel",
+    "size": [ 80, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_80_highlighted": {
+    "type": "panel",
+    "size": [ 80, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 75 */
+
+  "button_75": {
+    "type": "panel",
+    "size": [ 75, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_75_disabled": {
+    "type": "panel",
+    "size": [ 75, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_75_highlighted": {
+    "type": "panel",
+    "size": [ 75, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 74 */
+
+  "button_74": {
+    "type": "panel",
+    "size": [ 74, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_74_disabled": {
+    "type": "panel",
+    "size": [ 74, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_74_highlighted": {
+    "type": "panel",
+    "size": [ 74, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 72 */
+
+  "button_72": {
+    "type": "panel",
+    "size": [ 72, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_72_disabled": {
+    "type": "panel",
+    "size": [ 72, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_72_highlighted": {
+    "type": "panel",
+    "size": [ 72, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 70 */
+
+  "button_70": {
+    "type": "panel",
+    "size": [ 70, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_70_disabled": {
+    "type": "panel",
+    "size": [ 70, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_70_highlighted": {
+    "type": "panel",
+    "size": [ 70, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 50 */
+
+  "button_50": {
+    "type": "panel",
+    "size": [ 50, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_50_disabled": {
+    "type": "panel",
+    "size": [ 50, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_50_highlighted": {
+    "type": "panel",
+    "size": [ 50, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 44 */
+
+  "button_44": {
+    "type": "panel",
+    "size": [ 44, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_44_disabled": {
+    "type": "panel",
+    "size": [ 44, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_44_highlighted": {
+    "type": "panel",
+    "size": [ 44, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 40 */
+
+  "button_40": {
+    "type": "panel",
+    "size": [ 40, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_40_disabled": {
+    "type": "panel",
+    "size": [ 40, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_40_highlighted": {
+    "type": "panel",
+    "size": [ 40, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Button 20 */
+
+  "button_20": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_20_disabled": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_disabled_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_disabled_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_disabled_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_disabled_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_disabled_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_disabled_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_20_highlighted": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "size": [ "100%", "100%" ],
+          "variables": [
+            { "requires": "($widget_button_highlighted_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($widget_button_highlighted_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($widget_button_highlighted_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($widget_button_highlighted_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($widget_button_highlighted_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($widget_button_highlighted_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  }
+}

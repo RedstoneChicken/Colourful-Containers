@@ -1,0 +1,211 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "anvil_desktop_dx",
+  
+  /*//// Top Half Panel ////*/
+
+  "recipe_grid": {
+    "type": "grid",
+    "size": [ 18, 18 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 1, 1 ]
+  },
+
+  "cost_label@label_dx.global_label": {
+    "shadow": true,
+    "offset": [ -10, 68 ],
+    "layer": 3,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "text": "#text",
+    "controls": [
+      {
+        "text_bg": {
+          "type": "image",
+          "size": [ "100% + 4px", 12 ],
+          "offset": [ 0, 0 ],
+          "texture": "vdx/ui_textures/global/color_base",
+          "layer": -1,
+          "color": [ 0, 0, 0 ],
+          "alpha": 0.31
+        }
+      }
+    ]
+  },
+
+  "top_half_panel": {
+    "type": "panel",
+    "controls": [
+      /* Title */
+      {
+        "title@label_dx.global_label": {
+          "offset": [ 60, 5 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "color": "$vdx_anvil_title_text_color",
+          "text": "container.repair",
+          "shadow": "$vdx_container_text_shadow",
+          "controls": [
+            { "text_control@$vdx_anvil_title_text_control": { } }
+          ]
+        }
+      },
+      /* Text Input */
+      {
+        "text_edit_control@anvil.text_edit_control": {
+          "offset": [ 59, 20 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 110, 16 ],
+          "$text_edit_box_label_offset": [ 3, 0.5 ],
+          "$text_background_default": "anvil_textures_dx.text_field",
+          "$text_background_hover": "anvil_textures_dx.text_field",
+          "$text_background_locked": "anvil_textures_dx.text_field_disabled",
+          "controls": [
+            { "custom_panel@text_field_dx.custom_text_field_panel": { } }
+          ]
+        }
+      },
+      /* Main Slots */
+      {
+        "recipe_grid_input@anvil_desktop_dx.recipe_grid": {
+          "offset": [ 26, 46 ],
+          "controls": [
+            {
+              "input_item_slot@container_item_dx.container_item": {
+                "anchor_to": "center",
+                "anchor_from": "center",
+                "grid_position": [ 0, 0 ],
+                "$item_collection_name": "anvil_input_items",
+                "$focus_id_binding_type": "none",
+                "$focus_id": "anvil_input",
+                "$focus_override_right_binding_type": "none",
+                "$focus_override_right": "anvil_material"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "recipe_grid_material@anvil_desktop_dx.recipe_grid": {
+          "offset": [ 75, 46 ],
+          "controls": [
+            {
+              "material_item_slot@container_item_dx.container_item": {
+                "anchor_to": "center",
+                "anchor_from": "center",
+                "grid_position": [ 0, 0 ],
+                "$item_collection_name": "anvil_material_items",
+                "$focus_id_binding_type": "none",
+                "$focus_id": "anvil_material",
+                "$focus_override_left_binding_type": "none",
+                "$focus_override_left": "anvil_input",
+                "$focus_override_right_binding_type": "none",
+                "$focus_override_right": "anvil_result"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "recipe_grid_result@anvil_desktop_dx.recipe_grid": {
+          "offset": [ 133, 46 ],
+          "controls": [
+            {
+              "result_item_slot@container_item_dx.container_item": {
+                "anchor_to": "center",
+                "anchor_from": "center",
+                "grid_position": [ 0, 0 ],
+                "$item_collection_name": "anvil_result_items",
+                "$button_ref": "anvil.anvil_output_slot_button",
+                "$focus_id_binding_type": "none",
+                "$focus_id": "anvil_result",
+                "$focus_override_left_binding_type": "none",
+                "$focus_override_left": "anvil_material"
+              }
+            }
+          ]
+        }
+      },
+      /* Error */
+      {
+        "error@anvil_textures_dx.error": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 99, 45 ],
+          "bindings": [
+            {
+              "binding_name": "#cross_out_icon",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      /* Cost Text */
+      {
+        "cost_label_0@anvil_desktop_dx.cost_label": {
+          "color": "$anvil_cost_fail_text_color",
+          "bindings": [
+            {
+              "binding_name": "#cost_text",
+              "binding_name_override": "#text"
+            },
+            {
+              "binding_name": "#cost_text_red",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "cost_label_1@anvil_desktop_dx.cost_label": {
+          "color": "$anvil_cost_success_text_color",
+          "bindings": [
+            {
+              "binding_name": "#cost_text",
+              "binding_name_override": "#text"
+            },
+            {
+              "binding_name": "#cost_text_green",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Main Panel ////*/
+
+  "anvil_panel@container_panel_dx.container_panel": {
+    "$container_bg": "anvil_textures_dx.anvil",
+    "$container_top_half": "anvil_desktop_dx.top_half_panel"
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@container_panel_dx.container_gamepad_helpers": {} },
+      { "container_modules@container_panel_dx.container_modules": {} },
+      { "anvil_panel@anvil_desktop_dx.anvil_panel": { } }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@anvil_desktop_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

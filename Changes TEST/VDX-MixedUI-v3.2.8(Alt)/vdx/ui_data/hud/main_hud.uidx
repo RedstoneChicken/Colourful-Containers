@@ -1,0 +1,160 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "hud_dx",
+  
+  /*//// Bottom Objects ////*/
+  
+  "bottom_objects": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      /* Bottom Chat */
+      { "chat_stack_panel@hud_chat_dx.chat_stack_panel": { } },
+      /* Desktop Renderer Elements */
+      { "desktop_renderer_elements@hud_renderer_elements_dx.desktop_renderer_elements": { } },
+      /* Bars */
+      { 
+        "bottom_bar_elements@hud_bottom_bar_elements_dx.bottom_bar_elements": {
+          "bindings": [
+            {
+              "binding_name": "(not #hud_visible_not_centered)",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      { 
+        "pocket_bottom_bar_elements@hud_bottom_bar_elements_dx.pocket_bottom_bar_elements": {
+          "bindings": [
+            {
+              "binding_name": "#hud_visible_not_centered",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      /* Hotbar*/
+      { 
+        "hud_hotbar_dx@hud_hotbar_dx.hotbar_panel": {
+          "bindings": [
+            {
+              "binding_name": "(not #hud_visible_not_centered)",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      { 
+        "hud_pocket_hotbar_dx@hud_hotbar_dx.pocket_hotbar_panel": {
+          "bindings": [
+            {
+              "binding_name": "#hud_visible_not_centered",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      /* Texts */
+      {
+        "text_panel": {
+          "type": "panel",
+          "controls": [
+            /* Item Name and Jukebox Text */
+            {
+              "item_text_factory": {
+                "type": "factory",
+                "control_ids": {
+                  "item_text": "@hud_item_text_dx.item_name_text_panel",
+                  "jukebox_text": "@CrisXolt_jukebox_text_dx.jukebox_text_panel"
+                }
+              }
+            },
+            /* HUD Tip Text */
+            { "hud_tip_text_factory@hud_miscellaneous_text_dx.hud_tip_text_factory": { } },
+            /* HUD Actionbar Text */
+            { "hud_actionbar_text_area@hud_miscellaneous_text_dx.hud_actionbar_text_area": { } },
+            /* Block Message Text */
+            { "block_message_text_factory@hud_block_message_text_dx.block_message_text_factory": { } }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Main Modules ////*/
+
+  "modules": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "bindings": [
+      {
+        "binding_name": "#hud_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#hud_alpha",
+        "binding_name_override": "#alpha",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#hud_propagate_alpha",
+        "binding_name_override": "#propagateAlpha",
+        "binding_type": "global"
+      }
+    ],
+    "controls": [
+      /* Gamepad Helper */
+      { "left_helpers@hud_gamepad_helper_dx.left_helpers": {} },
+      { "left_emote_helpers@hud_gamepad_helper_dx.left_emote_helpers": {} },
+      { "right_helpers@hud_gamepad_helper_dx.right_helpers": {} },
+      /* Center */
+      { "player_list_button@hud_player_list_dx.player_list_button": { } },
+      { "player_list_panel@hud_player_list_dx.player_list_panel": { } },
+      { "crosshair_renderer@hud_miscellaneous_dx.crosshair_renderer": { } },
+      { "hud_title_text_area@hud_title_text_dx.hud_title_text_area": { } },
+      { "vignette_rend@hud.vignette_renderer": { "ignored": "$ignore_vignette", "layer": -10 } },
+      { "progress_rend@hud_miscellaneous_dx.progress_indicator_renderer": { "offset": [ "50%", "50%" ] } },
+      /* Top Objects */
+      { "pocket_renderer_elements@hud_renderer_elements_dx.pocket_renderer_elements": { } },
+      { "boss_bar_panel@CrisXolt_boss_bar_dx.boss_bar_panel": { } },
+      /* Bottom Objects */
+      { "bottom_objects@hud_dx.bottom_objects": { "offset": "$bottom_objects_offset" } },
+      /* Left Objects */
+      { "left_objects@hud_miscellaneous_dx.left_objects": { } },
+      /* Right Objects */
+      { "sidebar@scoreboard.scoreboard_sidebar": { "bindings": [ { "binding_name": "#scoreboard_sidebar_visible", "binding_name_override": "#visible" } ] } },
+      { "mob_effect_panel@hud_mob_effect_dx.mob_effect_panel": {} },
+      { "auto_save@hud_miscellaneous_dx.auto_save_label": {} },
+      { "auto_save_icon_legacy@hud_miscellaneous_dx.auto_save_icon_legacy": {} },
+      { "gamertag_label_for_splitscreen@hud_miscellaneous_dx.gamertag_label_for_splitscreen": {} },
+      /* Layout Customization */
+      { "layout_customization_modules@hud_layout_customization_dx.layout_customization_modules": { } }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "modules@hud_dx.modules": { } },
+      { "editor_gizmo_renderer@hud.editor_gizmo_renderer": { "ignored": "(not $is_editor_mode_enabled)" } },
+      { "camera_renderer@hud.camera_renderer": {} }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social. Original UI design by JellySquid.
+//(c) Don't use any JSON UI data design without permission!*/
+{
+  "namespace": "sodium_tab_advanced_dx",
+
+  "tab_advanced_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 240, "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 6, 28 ],
+    "controls": [
+      {
+        "graphics_mode_switch_toggle@toggle_dx.option_toggle_sodium": {
+          "$tooltip_description_label": "sodium.options.graphicsModeSwitch.tooltip",
+          "$ignore_performance_impact_label": true,
+          "$option_label": "options.graphicsModeSwitch",
+          "$option_binding_name": "#graphics_mode_switch",
+          "$option_enabled_binding_name": "#graphics_mode_switch_enabled",
+          "$toggle_name": "graphics_mode_switch"
+        }
+      },
+      { "padding_0": { "type": "panel", "size": [ 0, 4 ] } },
+      {
+        "option_toggle_improved_input_response@toggle_dx.option_toggle_sodium": {
+          "$tooltip_description_label": "options.improvedInputResponsePlaceholder.tooltip",
+          "$ignore_performance_impact_label": true,
+          "ignored": "(not $is_improve_input_response_platform_supported)",
+          "$option_label": "options.improvedInputResponsePlaceholder",
+          "$option_binding_name": "#improved_input_response_options",
+          "$option_enabled_binding_name": "#improved_input_response_options_enabled",
+          "$toggle_name": "improved_input_response_options",
+          "layer": 1
+        }
+      },/* 
+      {
+        "dynamic_textures_toggle@toggle_dx.option_toggle_sodium": {
+          "$tooltip_description_label": "options.dynamicTexturesToggle.tooltip",
+          "$ignore_performance_impact_label": true,
+          "ignored": "(not $is_dynamic_textures_platform_supported)",
+          "$option_label": "options.dynamicTexturesToggle",
+          "$option_binding_name": "#dynamic_textures",
+          "$option_enabled_binding_name": "#dynamic_textures_enabled",
+          "$toggle_name": "dynamic_textures",
+          "layer": 1
+        }
+      }, */
+      {
+        "frame_pacing_toggle@toggle_dx.option_toggle_sodium": {
+          "$tooltip_description_label": "options.framePacing.tooltip",
+          "$ignore_performance_impact_label": true,
+          "$option_label": "options.framePacing",
+          "$option_binding_name": "#frame_pacing",
+          "$option_enabled_binding_name": "#frame_pacing_enabled",
+          "$toggle_name": "frame_pacing",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#frame_pacing_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

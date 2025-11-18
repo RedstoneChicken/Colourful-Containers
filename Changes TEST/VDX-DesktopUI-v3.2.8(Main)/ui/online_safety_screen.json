@@ -1,0 +1,23 @@
+/*File modified by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "online_safety_screen": {
+    "$is_popup_dialog_in_game": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "$screen_content": "online_safety_dx.center_screen",
+    "$screen_bg_content": "online_safety_dx.full_screen"
+  },
+
+  "ip_safety_screen": {
+    "$is_popup_dialog_in_game": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "$safety_title_text": "onlinePlay.untrustedIp.title",
+    "$safety_message_text": "onlinePlay.untrustedIp.message",
+    "$screen_content": "online_safety_dx.center_screen",
+    "$screen_bg_content": "online_safety_dx.full_screen"
+  }
+}

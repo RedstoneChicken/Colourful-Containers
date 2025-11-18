@@ -1,0 +1,51 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "progress_save_dx",
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "layer": 5,
+    "controls": [
+      {
+        "title_text@label_dx.global_label": {
+          "shadow": true,
+          "size": [ "default", "default" ],
+          "max_size": [ "100% - 16px", 20 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, 0 ],
+          "text": "progressScreen.saving",
+          "layer": 2,
+          "controls": [
+            {
+              "border@main_textures_dx.grid_panel_selected": {
+                "layer": -1,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [ 0, 0.5 ],
+                "size": [ "100%+24px", "100%+23px" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@progress_save_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "menu_background@menu_background_textures_dx.menu_background": { "layer": -10 } }
+    ]
+  }
+}

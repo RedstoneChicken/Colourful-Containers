@@ -1,0 +1,97 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "bundle_textures_dx",
+
+  "bundle_progressbar_border": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/bundle/bundle_progressbar_border",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "bundle_progressbar_fill": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "clip_direction": "left",
+          "clip_pixelperfect": false,
+          "texture": "assets/minecraft/textures/gui/sprites/container/bundle/bundle_progressbar_fill",
+          "size": [ "100%", "100%" ],
+          "bindings": [
+            {
+              "binding_name": "#bundle_weight_bar_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always_when_visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "bundle_progressbar_full": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/bundle/bundle_progressbar_full",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "slot_background": {
+    "type": "panel",
+    "size": [ 24, 24 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/bundle/slot_background",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "slot_highlight": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "back": {
+          "type": "image",
+          "layer": 0,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/minecraft/textures/gui/sprites/container/bundle/slot_highlight_back",
+          "size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "front": {
+          "type": "image",
+          "layer": 10,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/minecraft/textures/gui/sprites/container/bundle/slot_highlight_front",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

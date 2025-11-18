@@ -1,0 +1,20 @@
+/*File modified by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "blast_furnace_screen": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$is_blast_furnace": true,
+        "$screen_content": "blast_furnace_desktop_dx.center_screen",
+        "$screen_bg_content": "blast_furnace_desktop_dx.full_screen",
+        "$gamepad_cursor": true
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "furnace_pocket.furnace_panel",
+        "$gamepad_cursor": false
+      }
+    ]
+  }
+}

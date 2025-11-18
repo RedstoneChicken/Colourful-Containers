@@ -1,0 +1,132 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social and @agentms_.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "hud_block_message_text_dx",
+
+  /* Hud Bed Text */
+  
+  "block_message_text_factory": {
+    "type": "panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "100%", "100%c" ],
+    "offset": "$hud_block_messages_offset",
+    "propagate_alpha": true,
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "factory": {
+            "name": "chat_item_factory",
+            "max_children_size": 1,
+            "control_ids": {
+              "chat_item": "chat_item@hud_block_message_text_dx.block_message_grid_item"
+            }
+          }
+        }
+      }
+    ]
+  },
+
+  "block_messages_base@label_dx.global_label": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "default", "default" ],
+    "text_alignment": "center",
+    "color": "$tool_tip_text",
+    "text": "vdx.block.minecraft.bed.no_sleep",
+    "$desired_binding_text": "",
+    "shadow": true,
+    "$item_text_background_alpha": "$hud_text_background_alpha",
+    "bindings": [
+      { "binding_name": "#text", "binding_type": "collection", "binding_collection_name": "chat_text_grid" },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text = $desired_binding_text)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "hud_text_background@hud_item_text_dx.hud_text_background": { "alpha": "@hud_item_text_dx.anim_item_name_text_background_alpha_in" } }
+    ]
+  },
+
+  "block_message_grid_item": {
+    "type": "panel",
+    "size": [ "100%", 0.0000001 ],
+    "alpha": "@hud_item_text_dx.anim_item_name_text_alpha_in",
+    "$wait_duration": 1,
+    "$destroy_id": "hud_actionbar_text",
+    "propagate_alpha": true,
+    "layer": 31,
+    "controls": [
+      {
+        "no_sleep@hud_block_message_text_dx.block_messages_base": {
+          "text": "vdx.block.minecraft.bed.no_sleep",
+          "$desired_binding_text": "§7You can sleep only at night or during thunderstorms"
+        }
+      },
+      {
+        "not_safe@hud_block_message_text_dx.block_messages_base": {
+          "text": "vdx.block.minecraft.bed.not_safe",
+          "$desired_binding_text": "§7You may not rest now; there are monsters nearby"
+        }
+      },
+      {
+        "obstructed@hud_block_message_text_dx.block_messages_base": {
+          "text": "vdx.block.minecraft.bed.obstructed",
+          "$desired_binding_text": "§7This bed is obstructed"
+        }
+      },
+      {
+        "occupied@hud_block_message_text_dx.block_messages_base": {
+          "text": "vdx.block.minecraft.bed.occupied",
+          "$desired_binding_text": "§7This bed is occupied"
+        }
+      },
+      {
+        "too_far_away@hud_block_message_text_dx.block_messages_base": {
+          "text": "vdx.block.minecraft.bed.too_far_away",
+          "$desired_binding_text": "§7You may not rest now; the bed is too far away"
+        }
+      },
+      /* By @agentms_ */
+      {
+        "too_high_overworld@hud_block_message_text_dx.block_messages_base": {
+          "color": "$c_color_format",
+          "text": "build.tooHigh.overworld.aspects",
+          "$desired_binding_text": "Height limit for building is 320"
+        }
+      },
+      {
+        "too_high_the_nether@hud_block_message_text_dx.block_messages_base": {
+          "color": "$c_color_format",
+          "text": "build.tooHigh.the_nether.aspects",
+          "$desired_binding_text": "Height limit for building is 128"
+        }
+      },
+      {
+        "too_high_the_end@hud_block_message_text_dx.block_messages_base": {
+          "color": "$c_color_format",
+          "text": "build.tooHigh.the_end.aspects",
+          "$desired_binding_text": "Height limit for building is 256"
+        }
+      },
+      {
+        "too_low_overworld@hud_block_message_text_dx.block_messages_base": {
+          "color": "$c_color_format",
+          "text": "build.tooLow.overworld.aspects",
+          "$desired_binding_text": "Minimum height for building is -64"
+        }
+      },
+      {
+        "too_low_the_end@hud_block_message_text_dx.block_messages_base": {
+          "color": "$c_color_format",
+          "text": "build.tooLow.the_end.aspects",
+          "$desired_binding_text": "Minimum height for building is 0"
+        }
+      }
+    ]
+  }
+}

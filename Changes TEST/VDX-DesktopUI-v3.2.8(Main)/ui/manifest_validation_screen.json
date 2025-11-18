@@ -1,0 +1,13 @@
+/*File modified by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "manifest_validation_screen": {
+    "$is_popup_dialog_in_game": false,
+    "force_render_below": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "$screen_content": "miscellaneous_dx.empty_panel",
+    "$screen_bg_content": "manifest_validation_dx.full_screen"
+  }
+}

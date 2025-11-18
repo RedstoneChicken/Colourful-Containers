@@ -1,0 +1,390 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "beacon_pocket_dx",
+  
+  /*//// Tabs ////*/
+
+  "beacon_icon@container_panel_pocket_dx.item_renderer": {
+    "$object_item_id": 138 //  Beacon - ID: 138
+  },
+
+  "left_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "inventory_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { 
+              "inventory_tab@container_panel_pocket_dx.decorated_tab_panel_template": {
+                "$tab_selected_texture": "inventory_pocket_textures_dx.tab_left_selected_1",
+                "$tab_icon": "recipe_book_pocket_navigation_tabs_dx.survival_inventory_icon"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "right_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "beacon_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { 
+              "search_tab@container_panel_pocket_dx.decorated_tab_panel_template": {
+                "$tab_anchor_side": "top_right",
+                "$tab_selected_texture": "beacon_pocket_textures_dx.tab_right_selected_1",
+                "$tab_icon": "beacon_pocket_dx.beacon_icon"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Inventory Panel ////*/
+
+  "invnetory_left_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "background@beacon_pocket_textures_dx.inventory_bg": { "layer": 1 } },
+      { 
+        "content@container_panel_pocket_dx.pocket_container_panel_template": {
+          "$scroll_box_image_control": "beacon_pocket_textures_dx.inventory_scroller",
+          "$scroll_track_image_control": "beacon_pocket_textures_dx.inventory_scroll_track",
+          "layer": 10
+        }
+      }
+    ]
+  },
+  
+  /*//// Beacon Panel ////*/
+
+  "usable_items_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 16 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -107, 113 ],
+    "controls": [
+      {
+        "netherite@beacon_desktop_dx.item_renderer": {
+          "property_bag": { "#item_id_aux": 48627712 }
+        }
+      },
+      {
+        "separator_0": {
+          "type": "panel",
+          "size": [ 5, "100%" ]
+        }
+      },
+      {
+        "emerald@beacon_desktop_dx.item_renderer": {
+          "property_bag": { "#item_id_aux": 25427968 }
+        }
+      },
+      {
+        "separator_1": {
+          "type": "panel",
+          "size": [ 6, "100%" ]
+        }
+      },
+      {
+        "diamond@beacon_desktop_dx.item_renderer": {
+          "property_bag": { "#item_id_aux": 17301504 }
+        }
+      },
+      {
+        "separator_2": {
+          "type": "panel",
+          "size": [ 7, "100%" ]
+        }
+      },
+      {
+        "gold@beacon_desktop_dx.item_renderer": {
+          "property_bag": { "#item_id_aux": 17432576 }
+        }
+      },
+      {
+        "separator_3": {
+          "type": "panel",
+          "size": [ 6, "100%" ]
+        }
+      },
+      {
+        "iron@beacon_desktop_dx.item_renderer": {
+          "property_bag": { "#item_id_aux": 17367040 }
+        }
+      }
+    ]
+  },
+
+  "beacon_right_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "background@beacon_pocket_textures_dx.beacon_bg": { "layer": 1 } },
+      /* Title */
+      {
+        "title@label_dx.global_label": {
+          "layer": 10,
+          "offset": [ 0, 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text_alignment": "center",
+          "color": "$vdx_beacon_pocket_title_text_color",
+          "text": "container.beacon",
+          "shadow": "$vdx_container_text_shadow",
+          "controls": [
+            { "text_control@$vdx_beacon_pocket_title_text_control": { } }
+          ]
+        }
+      },
+      {
+        "center_hold": {
+          "type": "panel",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "offset": [ 7, 27 ],
+          "size": [ "100%-14px", "100%-34px" ],
+          "controls": [
+            {
+              "main_beacon_panel": {
+                "type": "panel",
+                "size": [ 232, 144 ],
+                "controls": [
+                  { "bg@beacon_pocket_textures_dx.beacon_panel": { "layer": 1 } },
+                  /* Effect Selector */
+                  {
+                    "effect_selector_panel": {
+                      "layer": 10,
+                      "type": "panel",
+                      "size": [ 216, 97 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 8, 8 ],
+                      "controls": [
+                        /* Labels */
+                        {
+                          "primary_power_label@label_dx.global_label": {
+                            "color": "$vdx_beacon_primary_pocket_title_text_color",
+                            "shadow": "$vdx_beacon_text_shadow",
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "offset": [ -53, 5 ],
+                            "text": "tile.beacon.primary",
+                            "controls": [
+                              { "text_control@$vdx_beacon_primary_pocket_title_text_control": { } }
+                            ]
+                          }
+                        },
+                        {
+                          "secondary_power_label@label_dx.global_label": {
+                            "color": "$vdx_beacon_secondary_pocket_title_text_color",
+                            "shadow": "$vdx_beacon_text_shadow",
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "offset": [ 54, 5 ],
+                            "text": "tile.beacon.secondary",
+                            "controls": [
+                              { "text_control@$vdx_beacon_secondary_pocket_title_text_control": { } }
+                            ]
+                          }
+                        },
+                        /* Effects */
+                        {
+                          "speed_panel@beacon_desktop_dx.button_panel": {
+                            "offset": [ 46, 18 ],
+                            "$button_name": "speed",
+                            "$beacon_toggle_button_texture": "beacon_pocket_textures_dx.speed_button",
+                            "$beacon_toggle_button_highlighted_texture": "beacon_pocket_textures_dx.speed_button_highlighted",
+                            "$beacon_toggle_button_selected_texture": "beacon_pocket_textures_dx.speed_button_selected",
+                            "$beacon_toggle_button_disabled_texture": "beacon_pocket_textures_dx.speed_button_disabled",
+                            "$image_control": "beacon_pocket_textures_dx.beacon_speed_effect"
+                          }
+                        },
+                        {
+                          "haste_panel@beacon_desktop_dx.button_panel": {
+                            "offset": [ 70, 18 ],
+                            "$button_name": "haste",
+                            "$beacon_toggle_button_texture": "beacon_pocket_textures_dx.haste_button",
+                            "$beacon_toggle_button_highlighted_texture": "beacon_pocket_textures_dx.haste_button_highlighted",
+                            "$beacon_toggle_button_selected_texture": "beacon_pocket_textures_dx.haste_button_selected",
+                            "$beacon_toggle_button_disabled_texture": "beacon_pocket_textures_dx.haste_button_disabled",
+                            "$image_control": "beacon_pocket_textures_dx.beacon_haste_effect"
+                          }
+                        },
+                        {
+                          "resist_panel@beacon_desktop_dx.button_panel": {
+                            "offset": [ 46, 43 ],
+                            "$button_name": "resist",
+                            "$beacon_toggle_button_texture": "beacon_pocket_textures_dx.resistance_button",
+                            "$beacon_toggle_button_highlighted_texture": "beacon_pocket_textures_dx.resistance_button_highlighted",
+                            "$beacon_toggle_button_selected_texture": "beacon_pocket_textures_dx.resistance_button_selected",
+                            "$beacon_toggle_button_disabled_texture": "beacon_pocket_textures_dx.resistance_button_disabled",
+                            "$image_control": "beacon_pocket_textures_dx.beacon_resistance_effect"
+                          }
+                        },
+                        {
+                          "jump_panel@beacon_desktop_dx.button_panel": {
+                            "offset": [ 70, 43 ],
+                            "$button_name": "jump",
+                            "$beacon_toggle_button_texture": "beacon_pocket_textures_dx.jump_boost_button",
+                            "$beacon_toggle_button_highlighted_texture": "beacon_pocket_textures_dx.jump_boost_button_highlighted",
+                            "$beacon_toggle_button_selected_texture": "beacon_pocket_textures_dx.jump_boost_button_selected",
+                            "$beacon_toggle_button_disabled_texture": "beacon_pocket_textures_dx.jump_boost_button_disabled",
+                            "$image_control": "beacon_pocket_textures_dx.beacon_jump_boost_effect"
+                          }
+                        },
+                        {
+                          "strength_panel@beacon_desktop_dx.button_panel": {
+                            "offset": [ 58, 68 ],
+                            "$button_name": "strength",
+                            "$beacon_toggle_button_texture": "beacon_pocket_textures_dx.strength_button",
+                            "$beacon_toggle_button_highlighted_texture": "beacon_pocket_textures_dx.strength_button_highlighted",
+                            "$beacon_toggle_button_selected_texture": "beacon_pocket_textures_dx.strength_button_selected",
+                            "$beacon_toggle_button_disabled_texture": "beacon_pocket_textures_dx.strength_button_disabled",
+                            "$image_control": "beacon_pocket_textures_dx.beacon_strength_effect"
+                          }
+                        },
+                        {
+                          "regen_panel@beacon_desktop_dx.button_panel": {
+                            "offset": [ -57, 43 ],
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "$button_name": "regen",
+                            "$beacon_toggle_button_texture": "beacon_pocket_textures_dx.regeneration_button",
+                            "$beacon_toggle_button_highlighted_texture": "beacon_pocket_textures_dx.regeneration_button_highlighted",
+                            "$beacon_toggle_button_selected_texture": "beacon_pocket_textures_dx.regeneration_button_selected",
+                            "$beacon_toggle_button_disabled_texture": "beacon_pocket_textures_dx.regeneration_button_disabled",
+                            "$image_control": "beacon_pocket_textures_dx.beacon_regeneration_effect"
+                          }
+                        },
+                        {
+                          "extra_panel@beacon_desktop_dx.button_panel": {
+                            "offset": [ -33, 43 ],
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "$button_name": "extra",
+                            "$beacon_toggle_button_texture": "beacon_pocket_textures_dx.extra_button",
+                            "$beacon_toggle_button_highlighted_texture": "beacon_pocket_textures_dx.extra_button_highlighted",
+                            "$beacon_toggle_button_selected_texture": "beacon_pocket_textures_dx.extra_button_selected",
+                            "$beacon_toggle_button_disabled_texture": "beacon_pocket_textures_dx.extra_button_disabled",
+                            "$image_control": "beacon_pocket_textures_dx.beacon_extra_effect"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  /* Payment Items */
+                  {
+                    "confirm_panel@beacon_desktop_dx.button_panel": {
+                      "layer": 10,
+                      "$is_effect_buttons": false,
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [ -45, 111 ],
+                      "$button_name": "confirm",
+                      "$beacon_toggle_button_texture": "beacon_pocket_textures_dx.confirm_button",
+                      "$beacon_toggle_button_highlighted_texture": "beacon_pocket_textures_dx.confirm_button_highlighted",
+                      "$beacon_toggle_button_selected_texture": "beacon_pocket_textures_dx.confirm_button_selected",
+                      "$beacon_toggle_button_disabled_texture": "beacon_pocket_textures_dx.confirm_button_disabled",
+                      "$hover_panel_text": "controller.buttonTip.confirmSearch",
+                      "$image_control": "beacon_pocket_textures_dx.confirm"
+                    }
+                  },
+                  {
+                    "cancel_panel@beacon_desktop_dx.button_panel": {
+                      "layer": 10,
+                      "$is_effect_buttons": false,
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [ -19, 111 ],
+                      "$button_name": "cancel",
+                      "$hover_panel_text": "controllerLayoutScreen.cancel",
+                      "$beacon_toggle_button_texture": "beacon_pocket_textures_dx.cancel_button",
+                      "$beacon_toggle_button_highlighted_texture": "beacon_pocket_textures_dx.cancel_button_highlighted",
+                      "$beacon_toggle_button_selected_texture": "beacon_pocket_textures_dx.cancel_button_selected",
+                      "$beacon_toggle_button_disabled_texture": "beacon_pocket_textures_dx.cancel_button_disabled",
+                      "$image_control": "beacon_pocket_textures_dx.cancel"
+                    }
+                  },
+                  {
+                    "ingredient_item@container_item_dx.container_item": {
+                      "size": [ 28, 28 ],
+                      "$cell_image_size": [ 28, 28 ],
+                      "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+                      "$slot_highlight_image": "pocket_textures_dx.slot_highlight",
+                      "layer": 10,
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [ -73, 108 ],
+                      "$item_collection_name": "beacon_payment_items"
+                    }
+                  },
+                  { "usable_items_panel@beacon_pocket_dx.usable_items_panel": { "layer": 10 } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Main Panel ////*/
+
+  "beacon_panel@container_panel_pocket_dx.double_container_panel": {
+    "size": [ "100%", "100%-4px" ],
+    "$left_tab_control": "beacon_pocket_dx.left_navigation_tabs",
+    "$left_panel_control": "beacon_pocket_dx.invnetory_left_panel",
+    "$center_panel_control": "beacon_pocket_textures_dx.center_fold",
+    "$right_panel_control": "beacon_pocket_dx.beacon_right_panel",
+    "$right_tab_control": "beacon_pocket_dx.right_navigation_tabs",
+    "$right_panel_size": [ "60% - 36px", "100%" ]
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_modules@container_panel_pocket_dx.container_modules": {} },
+      { "beacon_panel@beacon_pocket_dx.beacon_panel": {} }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@beacon_pocket_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

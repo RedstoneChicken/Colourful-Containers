@@ -1,0 +1,33 @@
+/*File modified by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "disconnect_screen": {
+    "$is_popup_dialog_in_game": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "$button_layout": "disconnect_dx.ok_button",
+    "$screen_content": "disconnect_dx.center_screen",
+    "$screen_bg_content": "disconnect_dx.full_screen"
+  },
+
+  "realms_disconnect_screen": {
+    "$is_popup_dialog_in_game": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "$button_layout": "disconnect_dx.realms_disconnect_button_panel",
+    "$screen_content": "disconnect_dx.center_screen",
+    "$screen_bg_content": "disconnect_dx.full_screen"
+  },
+
+  "realms_warning_screen": {
+    "$is_popup_dialog_in_game": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
+    "$button_layout": "disconnect_dx.realms_warning_button_panel",
+    "$screen_content": "disconnect_dx.center_screen",
+    "$screen_bg_content": "disconnect_dx.full_screen"
+  }
+}

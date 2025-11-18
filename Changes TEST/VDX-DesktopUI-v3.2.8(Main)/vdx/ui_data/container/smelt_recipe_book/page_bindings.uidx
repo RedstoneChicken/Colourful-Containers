@@ -1,0 +1,57 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "smelt_recipe_book_page_bindings_dx",
+
+  /*//// Pages ////*/
+
+  "page_1@smelt_recipe_book_page_panel_content_dx.smelt_recipe_book_page_panel_content": {
+    "$ignore_backward_button": true,
+    "$number_left": "1",
+    "$panel_content": "$panel_content_1",
+    "$forward_button_view_binding_name": "($tab_page + '_page_2_button_toggle')",
+    "$forward_toggle_name": "($tab_page + '_page_1_2_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_2_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_2@smelt_recipe_book_page_panel_content_dx.smelt_recipe_book_page_panel_content": {
+    "$number_left": "2",
+    "$panel_content": "$panel_content_2",
+    "$backward_button_view_binding_name": "($tab_page + '_page_1_button_toggle')",
+    "$forward_button_view_binding_name": "($tab_page + '_page_3_button_toggle')",
+    "$backward_toggle_name": "($tab_page + '_page_1_2_tabs')",
+    "$forward_toggle_name": "($tab_page + '_page_2_3_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_3_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_3@smelt_recipe_book_page_panel_content_dx.smelt_recipe_book_page_panel_content": {
+    "$number_left": "3",
+    "$panel_content": "$panel_content_3",
+    "$backward_button_view_binding_name": "($tab_page + '_page_2_button_toggle')",
+    "$forward_button_view_binding_name": "($tab_page + '_page_4_button_toggle')",
+    "$backward_toggle_name": "($tab_page + '_page_2_3_tabs')",
+    "$forward_toggle_name": "($tab_page + '_page_3_4_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($tab_page + '_page_4_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

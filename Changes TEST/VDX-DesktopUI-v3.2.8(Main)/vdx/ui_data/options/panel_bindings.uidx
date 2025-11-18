@@ -1,0 +1,378 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "options_bindings_dx",
+
+  "main_panel_bindings": {
+    "bindings": [
+      /*//// Top Right ////*/
+      { 
+        "binding_type": "view",
+        "source_control_name": "storage_management_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "game_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "realms_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "server_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      /*//// Bottom Left ////*/
+      {
+        "binding_type": "view",
+        "source_control_name": "general_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "video_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "language_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "resource_packs_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "account_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      /*//// Bottom Right ////*/
+      {
+        "binding_type": "view",
+        "source_control_name": "music_and_sounds_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "controls_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "more_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "accessibility_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "credits_and_attribution_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      /*//// Extras ////*/
+      {
+        "binding_type": "view",
+        "source_control_name": "subscriptions_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "sub_center_screens": {
+    "type": "panel",
+    "controls": [
+      /*//// Top Right ////*/
+      {
+        "game@in_game_world_dx.center_screen": {
+          "ignored": "(($is_pregame) or (not $include_world_section))",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "game_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      /*//// Bottom Left ////*/
+      {
+        "video@video_options_dx.center_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "video_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      /*//// Bottom Right ////*/
+      {
+        "controls@controls_dx.center_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "controls_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "credits_and_attribution@credits_and_attribution_options_dx.center_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "credits_and_attribution_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+      /*//// Extras ////*/
+    ]
+  },
+
+  "sub_full_screens": {
+    "type": "panel",
+    "controls": [
+      /*//// Top Right ////*/
+      {
+        "storage@storage_options_dx.full_screen": {
+          "ignored": "(not $is_pregame)",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "storage_management_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "game_panel": {
+          "type": "panel",
+          "ignored": "$is_pregame",
+          "controls": [
+            {
+              "game@in_game_world_dx.full_screen": {
+                "ignored": "(not $include_world_section)",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "game_button_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      /*//// Bottom Left ////*/
+      {
+        "general@general_options_dx.full_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "general_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "video@video_options_dx.full_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "video_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "language@language_options_dx.full_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "language_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "resource_packs@resource_packs_dx.full_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "resource_packs_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "account@account_options_dx.full_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "account_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      /*//// Bottom Right ////*/
+      {
+        "music_and_sounds@music_and_sounds_options_dx.full_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "music_and_sounds_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "controls@controls_dx.full_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "controls_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "more@more_options_dx.full_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "more_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "accessibility@accessibility_options_dx.full_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "accessibility_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "credits_and_attribution@credits_and_attribution_options_dx.full_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "credits_and_attribution_button_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      /*//// Extras ////*/
+      {
+        "server_hold": {
+          "type": "panel",
+          "ignored": "($is_pregame)",
+          "bindings": [
+            {
+              "binding_name": "#server_settings_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "server@server_options_dx.full_screen": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "server_button_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "subscriptions_hold": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "#should_show_subscription_tab",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "subscriptions@subscriptions_dx.full_screen": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "subscriptions_button_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

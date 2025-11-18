@@ -1,0 +1,337 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "smithing_table_pocket_dx",
+  
+  /*//// Tabs ////*/
+
+  "smithing_table_icon@container_panel_pocket_dx.item_renderer": {
+    "$object_item_id": -202 //  Smithing Table - ID: -202
+  },
+
+  "left_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "inventory_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { 
+              "inventory_tab@container_panel_pocket_dx.decorated_tab_panel_template": {
+                "$tab_selected_texture": "inventory_pocket_textures_dx.tab_left_selected_1",
+                "$tab_icon": "recipe_book_pocket_navigation_tabs_dx.survival_inventory_icon"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "right_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "smithing_table_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { 
+              "search_tab@container_panel_pocket_dx.decorated_tab_panel_template": {
+                "$tab_anchor_side": "top_right",
+                "$tab_selected_texture": "smithing_pocket_textures_dx.tab_right_selected_1",
+                "$tab_icon": "smithing_table_pocket_dx.smithing_table_icon"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Inventory Panel ////*/
+
+  "invnetory_left_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "background@inventory_pocket_textures_dx.inventory_bg_half": { "layer": 1 } },
+      {
+        "content@container_panel_pocket_dx.pocket_container_panel_template": {
+          "$container_size": 27,
+          "$pane_collection": "inventory_items",
+          "layer": 10
+        }
+      }
+    ]
+  },
+  
+  /*//// Smithing Table Panel ////*/
+
+  "recipe_grid": {
+    "type": "grid",
+    "layer": 10,
+    "size": [ 28, 28 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 1, 1 ],
+    "$cell_image_size": [ 28, 28 ],
+    "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+    "$slot_highlight_image": "pocket_textures_dx.slot_highlight"
+  },
+
+  "smithing_table_right_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "smithing_bg@smithing_pocket_textures_dx.smithing_bg": { "layer": 1 } },
+      /* Title */
+      {
+        "title@label_dx.global_label": {
+          "layer": 10,
+          "offset": [ 0, 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text_alignment": "center",
+          "color": "$vdx_smithing_table_pocket_title_text_color",
+          "text": "tile.smithing_table.name",
+          "shadow": "$vdx_container_text_shadow",
+          "controls": [
+            { "text_control@$vdx_smithing_table_pocket_title_text_control": { } }
+          ]
+        }
+      },
+      {
+        "center_hold": {
+          "type": "panel",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "offset": [ 7, 27 ],
+          "size": [ "100%-14px", "100%-34px" ],
+          "controls": [
+            {
+              "main_smithing_table_panel": {
+                "type": "panel",
+                "size": [ 174, 148 ],
+                "controls": [
+                  { "bg@smithing_pocket_textures_dx.smithing_panel": { "layer": 1 } },
+                  /* Upgrade */
+                  {
+                    "upgrade@label_dx.global_label": {
+                      "layer": 10,
+                      "offset": [ 0, 21 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "color": "$vdx_smithing_table_pocket_upgrade_text_color",
+                      "text": "container.smithing_table.upgrade",
+                      "shadow": "$vdx_container_text_shadow",
+                      "controls": [
+                        { "text_control@$vdx_smithing_table_pocket_upgrade_text_control": { } }
+                      ]
+                    }
+                  },
+                  /* Renderer */
+                  {
+                    "armor_stand_renderer@smithing_table_2.result_item_preview_inner": {
+                      "layer": 10,
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "size": [ 56, 92 ],
+                      "offset": [ -7, -7 ]
+                    }
+                  },
+                  /* Item Slots */
+                  {
+                    "recipe_grid_template@smithing_table_pocket_dx.recipe_grid": {
+                      "offset": [ 7, 49 ],
+                      "controls": [
+                        {
+                          "template@container_item_dx.container_item": {
+                            "size": [ 28, 28 ],
+                            "grid_position": [ 0, 0 ],
+                            "$item_collection_name": "smithing_table_template_items",
+                            "$cell_overlay_ref": "smithing_table_desktop_dx.template_overlay_panel",
+                            "$focus_id_binding_type": "none",
+                            "$focus_id": "smithing_table_template",
+                            "$focus_override_right_binding_type": "none",
+                            "$focus_override_right": "smithing_table_input"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "recipe_grid_item@smithing_table_pocket_dx.recipe_grid": {
+                      "offset": [ 7, 81 ],
+                      "controls": [
+                        {
+                          "item@container_item_dx.container_item": {
+                            "size": [ 28, 28 ],
+                            "grid_position": [ 0, 0 ],
+                            "$item_collection_name": "smithing_table_input_items",
+                            "$cell_overlay_ref": "smithing_table_desktop_dx.input_overlay_panel",
+                            "$focus_id_binding_type": "none",
+                            "$focus_id": "smithing_table_input",
+                            "$focus_override_right_binding_type": "none",
+                            "$focus_override_right": "smithing_table_material",
+                            "$focus_override_left_binding_type": "none",
+                            "$focus_override_left": "smithing_table_template"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "recipe_grid_material@smithing_table_pocket_dx.recipe_grid": {
+                      "offset": [ 7, 113 ],
+                      "controls": [
+                        {
+                          "material@container_item_dx.container_item": {
+                            "size": [ 28, 28 ],
+                            "grid_position": [ 0, 0 ],
+                            "$item_collection_name": "smithing_table_material_items",
+                            "$cell_overlay_ref": "smithing_table_desktop_dx.material_overlay_panel",
+                            "$focus_id_binding_type": "none",
+                            "$focus_id": "smithing_table_material",
+                            "$focus_override_left_binding_type": "none",
+                            "$focus_override_left": "smithing_table_input",
+                            "$focus_override_right_binding_type": "none",
+                            "$focus_override_right": "smithing_table_result"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "result_item_slot@smithing_table_pocket_dx.recipe_grid": {
+                      "offset": [ 73, 81 ],
+                      "controls": [
+                        {
+                          "item@container_item_dx.container_item": {
+                            "size": [ 28, 28 ],
+                            "anchor_to": "center",
+                            "anchor_from": "center",
+                            "grid_position": [ 0, 0 ],
+                            "$item_collection_name": "smithing_table_result_items",
+                            "$button_ref": "smithing_table_2.smithing_table_output_slot_button",
+                            "$focus_id_binding_type": "none",
+                            "$focus_id": "smithing_table_result",
+                            "$focus_override_left_binding_type": "none",
+                            "$focus_override_left": "smithing_table_material"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  /* Error */
+                  {
+                    "error_panel": {
+                      "type": "panel",
+                      "layer": 10,
+                      "size": [ 28, 21 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 41, 84 ],
+                      "bindings": [
+                        {
+                          "binding_name": "#cross_out_icon",
+                          "binding_name_override": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        { "error@smithing_pocket_textures_dx.error": { } },
+                        {
+                          "button": {
+                            "type": "button",
+                            "hover_control": "hover",
+                            "size": [ 28, 21 ],
+                            "controls": [
+                              {
+                                "hover": {
+                                  "type": "panel",
+                                  "size": [ 28, 21 ],
+                                  "controls": [
+                                    {
+                                      "hover_text@common.hover_text": {
+                                        "ignored": "($custom_hover_text or ($touch))",
+                                        "layer": 29,
+                                        "$hover_text_max_width": 500,
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#no_result_arrow_tooltip",
+                                            "binding_name_override": "#hover_text"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "custom_hover_text@tooltip_dx.tooltip_panel": {
+                                        "ignored": "(not $custom_hover_text)",
+                                        "$tooltip_label_control": "smithing_table_desktop_dx.hover_text_error_label"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Main Panel ////*/
+
+  "smithing_table_panel@container_panel_pocket_dx.double_container_panel": {
+    "size": [ "100%", "100%-40px" ],
+    "$left_tab_control": "smithing_table_pocket_dx.left_navigation_tabs",
+    "$left_panel_control": "smithing_table_pocket_dx.invnetory_left_panel",
+    "$center_panel_control": "smithing_pocket_textures_dx.center_fold",
+    "$right_panel_control": "smithing_table_pocket_dx.smithing_table_right_panel",
+    "$right_tab_control": "smithing_table_pocket_dx.right_navigation_tabs"
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_modules@container_panel_pocket_dx.container_modules": {} },
+      { "smithing_table_panel@smithing_table_pocket_dx.smithing_table_panel": {} },
+      { "hotbar_panel@container_panel_pocket_dx.hotbar_panel": {} }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@smithing_table_pocket_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

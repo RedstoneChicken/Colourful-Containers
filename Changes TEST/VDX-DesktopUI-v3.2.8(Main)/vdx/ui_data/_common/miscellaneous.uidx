@@ -1,0 +1,9 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "miscellaneous_dx",
+
+  "empty_panel": {
+    "type": "panel"
+  }
+}

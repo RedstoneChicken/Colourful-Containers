@@ -1,0 +1,621 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "horse_pocket_dx",
+  
+  /*//// Tabs ////*/
+
+  "horse_icon_panel": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "saddle_slot": {
+          "type": "panel",
+          "size": [ 16, 16 ],
+          "bindings": [
+            {
+              "binding_name": "#has_saddle_slot",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { "horse_icon@container_panel_pocket_dx.item_image": { "texture": "textures/items/saddle" } }
+          ]
+        }
+      },
+      {
+        "llama_armor_slot": {
+          "type": "panel",
+          "size": [ 16, 16 ],
+          "bindings": [
+            {
+              "binding_name": "#has_only_carpet_slot",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "red_carpet_icon@container_panel_pocket_dx.item_renderer": {
+                "$object_item_id": -610 //  Red Carpet - ID: -610
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "horse_tab_panel_template": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 32, 28 ],
+    "$offset": [ 0, 0 ],
+    "offset": "$offset",
+    "controls": [
+      { 
+        "tab_selected@toggle_dx.toggle_panel": {
+          "layer": 1,
+          "size": [ 32, 28 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$unchecked_control": "miscellaneous_dx.empty_panel",
+          "$unchecked_hover_control": "miscellaneous_dx.empty_panel",
+          "$checked_control": "miscellaneous_dx.empty_panel",
+          "$checked_hover_control": "miscellaneous_dx.empty_panel",
+          "$toggle_name": "horse_interactive_tabs",
+          "$toggle_group_default_selected": 1,
+          "$radio_toggle_group": true,
+          "$toggle_focus_enabled": false
+        }
+      },
+      {
+        "tab_textures": {
+          "type": "panel",
+          "controls": [
+            { 
+              "tab_selected@$tab_selected_texture": {
+                "layer": 1,
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "bindings": [
+                  {
+                    "binding_name": "($toggle_state_binding_name)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            { 
+              "tab_unselected@$tab_unselected_texture": {
+                "layer": -13,
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "bindings": [
+                  {
+                    "binding_name": "(not $toggle_state_binding_name)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "icon_selected@$tab_icon": {
+          "layer": 5,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, 0 ],
+          "bindings": [
+            {
+              "binding_name": "$toggle_state_binding_name",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "icon@$tab_icon": {
+          "layer": 5,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ -1, 0 ],
+          "bindings": [
+            {
+              "binding_name": "(not $toggle_state_binding_name)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "chest_tab@horse_pocket_dx.horse_tab_panel_template": {
+    "$tab_selected_texture": "horse_pocket_textures_dx.tab_left_selected_2",
+    "$tab_unselected_texture": "horse_pocket_textures_dx.tab_left_unselected_2",
+    "$tab_icon": "recipe_book_pocket_navigation_tabs_dx.survival_inventory_icon",
+    "$toggle_state_binding_name": "#chest_tab_toggle",
+    "$toggle_group_forced_index": 2
+  },
+
+  "equip_tab@horse_pocket_dx.horse_tab_panel_template": {
+    "$tab_selected_texture": "horse_pocket_textures_dx.tab_right_selected_1",
+    "$tab_unselected_texture": "horse_pocket_textures_dx.tab_left_unselected_1",
+    "$tab_icon": "horse_pocket_dx.horse_icon_panel",
+    "$toggle_state_binding_name": "#renderer_tab_toggle",
+    "$toggle_group_forced_index": 1
+  },
+
+  "left_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "inventory_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { 
+              "inventory_tab@container_panel_pocket_dx.decorated_tab_panel_template": {
+                "$tab_selected_texture": "inventory_pocket_textures_dx.tab_left_selected_1",
+                "$tab_icon": "recipe_book_pocket_navigation_tabs_dx.survival_inventory_icon"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "right_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "chest_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { "chest_tab@horse_pocket_dx.chest_tab": { "bindings": [ { "binding_name": "#is_chested", "binding_name_override": "#visible" } ] } }
+          ]
+        }
+      },
+      {
+        "equip_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 28 ],
+          "controls": [
+            { "equip_tab@horse_pocket_dx.equip_tab": { } }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Inventory Panel ////*/
+
+  "invnetory_left_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "background@inventory_pocket_textures_dx.inventory_bg_half": { "layer": 1 } },
+      { "content@container_panel_pocket_dx.pocket_container_panel_template": { "layer": 10 } }
+    ]
+  },
+  
+  /*//// horse Panel ////*/
+
+  "equip_grid@container_item_dx.container_item": {
+    "size": [ 28, 28 ],
+    "$cell_image_size": [ 28, 28 ],
+    "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+    "$slot_highlight_image": "pocket_textures_dx.slot_highlight"
+  },
+
+  "horse_right_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { 
+        "equip_bg@horse_pocket_textures_dx.equip_bg": {
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#renderer_tab_toggle",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "chest_bg@horse_pocket_textures_dx.chest_bg": {
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#chest_tab_toggle",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "equip_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "bindings": [
+            {
+              "binding_name": "#renderer_tab_toggle",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { "bg@horse_pocket_textures_dx.equip_panel": { "layer": 1 } },
+            {
+              "title_label@label_dx.global_label": {
+                "size": [ "default", 10 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text_alignment": "center",
+                "offset": [ 0, 10 ],
+                "color": "$vdx_horse_pocket_equip_text_color",
+                "text": "$container_title",
+                "layer": 10,
+                "shadow": "$vdx_container_text_shadow",
+                "controls": [
+                  { "text_control@$vdx_horse_pocket_equip_text_control": { } }
+                ]
+              }
+            },
+            /* Equip Slots */
+            {
+              "equip_panel": {
+                "type": "panel",
+                "layer": 10,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 7, 27 ],
+                "size": [ 28, "100%-34px" ],
+                "controls": [
+                  { 
+                    "equip_grid@horse.equip_grid": {
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "offset": [ 0, 0 ],
+                      "grid_item_template": "@horse_pocket_dx.equip_grid",
+                      "layer": 4
+                    }
+                  },
+                  {
+                    "saddle_slot": {
+                      "type": "panel",
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ 28, 28 ],
+                      "offset": [ 0, 0 ],
+                      "layer": 4,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_saddle_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "slot@horse_pocket_textures_dx.equip_slot": {
+                            "layer": 1,
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "size": [ 28, 28 ]
+                          }
+                        },
+                        {
+                          "saddle_slot@empty_item_textures_dx.saddle": {
+                            "layer": 5,
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "size": [ 18, 18 ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "armor_slot": {
+                      "type": "panel",
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ 28, 28 ],
+                      "offset": [ 0, 28 ],
+                      "layer": 4,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_armor_and_saddle_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "slot@horse_pocket_textures_dx.equip_slot": {
+                            "layer": 1,
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "size": [ 28, 28 ]
+                          }
+                        },
+                        {
+                          "horse_armor_slot@empty_item_textures_dx.horse_armor": {
+                            "layer": 5,
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "size": [ 18, 18 ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "llama_armor_slot": {
+                      "type": "panel",
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ 28, 28 ],
+                      "offset": [ 0, 0 ],
+                      "layer": 4,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_only_carpet_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "slot@horse_pocket_textures_dx.equip_slot": {
+                            "layer": 1,
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "size": [ 28, 28 ]
+                          }
+                        },
+                        {
+                          "llama_armor_slot@empty_item_textures_dx.llama_armor": {
+                            "layer": 5,
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "size": [ 18, 18 ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            /* Mob Renderer */
+            {  
+              "horse_renderer": {
+                "type": "panel",
+                "layer": 10,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 35, 27 ],
+                "size": [ "100%-42px", "100%-34px" ],
+                "controls": [
+                  {
+                    "horse_custom_panel": {
+                      "type": "panel",
+                      "size": [ "40%", "40%" ],
+                      "offset": [ "5%", "30%" ],
+                      "controls": [
+                        {
+                          "horse_custom": {
+                            "type": "custom",
+                            "renderer": "live_horse_renderer",
+                            "layer": 20,
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "animation_reset_name": "screen_animation_reset",
+                            "anims": [
+                              "@common.screen_exit_size_animation_push",
+                              "@common.screen_exit_size_animation_pop",
+                              "@common.screen_entrance_size_animation_push",
+                              "@common.screen_entrance_size_animation_pop"
+                            ],
+                            "bindings": [
+                              {
+                                "binding_name": "#entity_id"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chest_hold": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "bindings": [ { "binding_name": "#is_chested", "binding_name_override": "#visible" } ],
+          "controls": [
+            {
+              "chest_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#chest_tab_toggle",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  { 
+                    "content@container_panel_pocket_dx.pocket_container_panel_template": {
+                      "$scroll_box_image_control": "horse_pocket_textures_dx.scroller",
+                      "$scroll_track_image_control": "inventory_pocket_textures_dx.scroll_track_half",
+                      "$scroll_background_image_control": "horse_pocket_textures_dx.chest_content_bg",
+                      "$scrolling_content": "horse_pocket_dx.chest_grid",
+                      "$pane_collection": "container_items",
+                      "$container_size": "$chest_size",
+                      "layer": 10,
+                      "controls": [
+                        {
+                          "title_label@label_dx.global_label": {
+                            "size": [ "default", 10 ],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "text_alignment": "center",
+                            "offset": [ 0, 10 ],
+                            "color": "$vdx_horse_pocket_chest_text_color",
+                            "text": "$container_title",
+                            "layer": 3,
+                            "shadow": "$vdx_container_text_shadow",
+                            "controls": [
+                              { "text_control@$vdx_horse_pocket_chest_text_control": { } }
+                            ]
+                          }
+                        },
+                        {
+                          "main@scroll_dx.contained_scrolling_panel": {
+                            "anchor_to": "top_left",
+                            "anchor_from": "top_left",
+                            "offset": [ 7, 27 ],
+                            "size": [ "100%-14px", "100%-34px" ],
+                            "$scroll_size": [ 14, "100%" ],
+                            "$scroll_view_port_size": [ "100%-2px", "100%-2px" ],
+                            "$scroll_view_port_offset": [ 1, 1 ],
+                            "$scrolling_pane_size": [ "100%", "100%" ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "chest_grid": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "grid_rescaling_type": "horizontal",
+          "size": [ "100%", "default" ],
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "maximum_grid_items": "$container_size",
+          "collection_name": "$pane_collection",
+          "grid_item_template": "horse_pocket_dx.chest_container_item",
+          "$item_collection_name": "$pane_collection"
+        }
+      }
+    ]
+  },
+
+  "chest_container_item@container_item_dx.container_item": {
+    "$cell_image_size": [ 28, 28 ],
+    "$lock_cell_slot_control": "pocket_textures_dx.lock_cell_slot",
+    "$slot_highlight_image": "pocket_textures_dx.slot_highlight",
+    "$background_images": "horse_pocket_textures_dx.chest_grid",
+    "size": [ 28, 28 ]
+  },
+  
+  /*//// Main Panel ////*/
+  
+  "center_panel": {
+    "type": "panel",
+    "size": [ 4, "100%" ],
+    "bindings": [
+      {
+        "binding_name": "#pocket_right_pane_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "equip_center_fold@horse_pocket_textures_dx.equip_center_fold": {
+          "layer": -2,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ -7, 0 ],
+          "bindings": [
+            {
+              "binding_name": "#renderer_tab_toggle",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "chest_center_fold@horse_pocket_textures_dx.chest_center_fold": {
+          "layer": -2,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ -7, 0 ],
+          "bindings": [
+            {
+              "binding_name": "#chest_tab_toggle",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "horse_panel@container_panel_pocket_dx.double_container_panel": {
+    "size": [ "100%", "100%-4px" ],
+    "$left_tab_control": "horse_pocket_dx.left_navigation_tabs",
+    "$left_panel_control": "horse_pocket_dx.invnetory_left_panel",
+    "$center_panel_control": "horse_pocket_dx.center_panel",
+    "$right_panel_control": "horse_pocket_dx.horse_right_panel",
+    "$right_tab_control": "horse_pocket_dx.right_navigation_tabs"
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_modules@container_panel_pocket_dx.container_modules": {} },
+      { "horse_panel@horse_pocket_dx.horse_panel": {} }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@horse_pocket_dx.main_screen_content": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "screen_background@main_textures_dx.screen_background": { "layer": -10 } }
+    ]
+  }
+}

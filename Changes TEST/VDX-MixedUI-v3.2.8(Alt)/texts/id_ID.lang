@@ -1,0 +1,124 @@
+﻿##################################################
+##  Options
+##################################################
+##  UI Settings
+vdx.options.more=Opsi Lainnya...
+vdx.options.moreTitle=Opsi Lainnya
+
+##################################################
+##  Progress
+##################################################
+vdx.progress.percentage=%
+##  Online Safety
+multiplayerWarning.check=Jangan tampilkan layar ini lagi
+multiplayerWarning.header=§lPerhatian: Permainan Daring Pihak Ketiga
+multiplayerWarning.message=Perhatian: Permainan daring ditawarkan oleh peladen pihak ketiga yang tidak dimiliki, dioperasikan, atau diawasi oleh Mojang Studios atau Microsoft. Selama permainan daring, Anda mungkin terpapar pesan obrolan yang tidak termoderasi atau jenis konten buatan pengguna yang mungkin tidak cocok untuk semua orang.
+
+onlinePlay.untrustedIp.title=§lServer Eksternal Tidak Diketahui
+onlinePlay.untrustedIp.message=Kamu sebaiknya hanya terhubung ke server yang kamu percayai! Masih ingin bergabung?
+
+##################################################
+##  HUD
+##################################################
+##  Toast
+recipe.toast.description=Periksa buku resep Anda
+recipe.toast.title=Resep Baru Terbuka!
+
+##################################################
+##  Block Messages
+##################################################
+##  Input (block.minecraft.bed.)
+tile.bed.noSleep=You can sleep only at night or during thunderstorms
+tile.bed.notSafe=You may not rest now; there are monsters nearby
+tile.bed.obstructed=This bed is obstructed
+tile.bed.occupied=This bed is occupied
+tile.bed.tooFar=You may not rest now; the bed is too far away
+##  Output (Based on "Aspects" by AgentMindStorm)
+vdx.block.minecraft.bed.no_sleep=Anda hanya dapat tidur saat malam atau selama badai petir
+vdx.block.minecraft.bed.not_safe=Anda tak dapat tidur sekarang, banyak monster dekat sini
+vdx.block.minecraft.bed.obstructed=Tempat Tidur ini terhalangi
+vdx.block.minecraft.bed.occupied=Tempat Tidur Ini sudah ditempati
+vdx.block.minecraft.bed.too_far_away=Anda tidak dapat beristirahat sekarang, tempat tidur terlalu jauh
+
+##  Too High Input (by AgentMindStorm)
+build.tooHigh=Height limit for building is %s
+build.tooLow=Minimum height for building is %s
+##  Output
+build.tooHigh.overworld.aspects=Batas tinggi bangunan adalah 319 blok
+build.tooHigh.the_nether.aspects=Batas tinggi bangunan adalah 127 blok
+build.tooHigh.the_end.aspects=Batas tinggi bangunan adalah 255 blok
+build.tooLow.overworld.aspects=Tinggi minimum untuk bangunan adalah -64 blok
+build.tooLow.the_nether.aspects=Tinggi minimum untuk bangunan adalah 0 blok
+build.tooLow.the_end.aspects=Tinggi minimum untuk bangunan adalah 0 blok
+
+##################################################
+##  Raid Texts
+##################################################
+##  Input
+raid.name=Raid
+raid.progress=Raiders remaining:
+raid.victory=Victory
+raid.defeat=Defeat
+##  Output
+bar.event.raid.name=Serbuan
+bar.event.raid.remaining.2=Serbuan - Penjarah Tersisa: 2
+bar.event.raid.remaining.1=Serbuan - Penjarah Tersisa: 1
+bar.event.raid.remaining.0=Serbuan - Penjarah Tersisa: 0
+bar.event.raid.victory=Serbuan - Menang
+bar.event.raid.defeat=Serbuan - Kalah
+
+##################################################
+##  Recipe Book and Creative
+##################################################
+gui.recipebook.search_hint=§oCari...
+gui.recipebook.toggleRecipes.all=Tampilkan Semua
+gui.recipebook.toggleRecipes.blastable=Tampilkan Benda Dapat Diledakkan
+gui.recipebook.toggleRecipes.craftable=Tampilkan benda dapat dibuat
+gui.recipebook.toggleRecipes.smeltable=Tampilkan Benda Dapat Dilebur
+gui.recipebook.toggleRecipes.smokable=Tampilkan Benda Dapat Diasap
+
+##  Tab Category Input
+craftingScreen.tab.construction=craftingScreen.tab.construction
+craftingScreen.tab.nature=craftingScreen.tab.nature
+craftingScreen.tab.equipment=craftingScreen.tab.equipment
+craftingScreen.tab.items=craftingScreen.tab.items
+
+##  Tab Category Output (Based on "Aspects" by AgentMindStorm)
+vdx.creative.tab.construction=Konstruksi
+vdx.creative.tab.equipment=Peralatan
+vdx.creative.tab.items=Item
+vdx.creative.tab.nature=Alam
+
+inventory.binSlot=Hancurkan Benda
+
+##################################################
+##  Sign
+##################################################
+hanging_sign.edit=Edit Pesan Tanda Gantung
+
+##################################################
+##  Command Block
+##################################################
+advMode.command=Perintah Konsol
+
+##################################################
+##  Structure Block
+##################################################
+structure_block.position=Posisi Relatif
+structure_block.size=Ukuran Struktur
+structure_block.integrity_and_seed=Benih dan Keutuhan Struktur
+structure_block.detect_size=Periksa Ukuran dan Posisi Struktur:
+structure_block.mode_info.save=Mode Simpan - Tulis ke Berkas
+structure_block.mode_info.load=Mode Muat - Memuat dari Berkas
+structure_block.mode_info.corner=Mode Sudut - Penanda Letak dan Ukuran
+structure_block.exportTo=Ekspor:
+structure_block.mode.export=Ekspor
+structure_block.button.detect_size=PERIKSA
+structure_block.button.save=SIMPAN
+structure_block.button.load=MUAT
+
+##################################################
+##  Villager
+##################################################
+merchant.trades=Dagang
+merchant.deprecated=Penduduk isi kembali persediaan hingga dua kali sehari.

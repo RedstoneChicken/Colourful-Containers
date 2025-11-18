@@ -1,0 +1,407 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "inventory_pocket_textures_dx",
+
+  "armor_bg": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/armor_bg",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "armor_panel": {
+    "type": "panel",
+    "size": [ "100%", 154 ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/armor_panel",
+          "size": [ "100%", 154 ]
+        }
+      }
+    ]
+  },
+
+  "inventory_bg_full": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/inventory_bg",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "inventory_bg_half": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/inventory_bg",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "crafting_bg": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/crafting_bg",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "crafting_panel_2x2": {
+    "type": "panel",
+    "size": [ 70, 126 ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/crafting_panel_2x2",
+          "size": [ 70, 126 ]
+        }
+      }
+    ]
+  },
+
+  "crafting_panel_3x3": {
+    "type": "panel",
+    "size": [ 98, 154 ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/crafting_panel_3x3",
+          "size": [ 98, 154 ]
+        }
+      }
+    ]
+  },
+
+  "hotbar_panel": {
+    "type": "panel",
+    "size": [ 266, 42 ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/hotbar_panel",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Center Fold */
+
+  "armor_center_fold": {
+    "type": "panel",
+    "size": [ 18, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/armor_center_fold",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "crafting_center_fold": {
+    "type": "panel",
+    "size": [ 18, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/crafting_center_fold",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "full_screen_tab_icon": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "texture@recipe_book_pocket_navigation_tabs_dx.item_image": {
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/full_screen_tab_icon"
+        }
+      }
+    ]
+  },
+
+  /* Grid */
+
+  "main_grid": {
+    "type": "panel",
+    "size": [ 28, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/main_grid",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Scroller */
+
+  "scroller_half": {
+    "type": "panel",
+    "size": [ 12, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/scroller",
+          "size": [ 12, "100%-2px" ],
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "variables": [
+            { "requires": "($inventory_pocket_scroller_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($inventory_pocket_scroller_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($inventory_pocket_scroller_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($inventory_pocket_scroller_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($inventory_pocket_scroller_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($inventory_pocket_scroller_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "scroller_full": {
+    "type": "panel",
+    "size": [ 12, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/scroller",
+          "size": [ 12, "100%-2px" ],
+          "tiled": true, // Only if the texture is nineslice type.
+          "tiled_scale": "$sprite_tiled_scale",
+          "variables": [
+            { "requires": "($inventory_pocket_scroller_resolution = '1x')",  "$sprite_tiled_scale": [ 1, 1 ] },
+            { "requires": "($inventory_pocket_scroller_resolution = '2x')",  "$sprite_tiled_scale": [ 0.5, 0.5 ] },
+            { "requires": "($inventory_pocket_scroller_resolution = '4x')",  "$sprite_tiled_scale": [ 0.25, 0.25 ] },
+            { "requires": "($inventory_pocket_scroller_resolution = '8x')",  "$sprite_tiled_scale": [ 0.125, 0.125 ] },
+            { "requires": "($inventory_pocket_scroller_resolution = '16x')", "$sprite_tiled_scale": [ 0.0625, 0.0625 ] },
+            { "requires": "($inventory_pocket_scroller_resolution = '32x')", "$sprite_tiled_scale": [ 0.03125, 0.03125 ] }
+          ]
+        }
+      }
+    ]
+  },
+
+  "scroll_track_half": {
+    "type": "panel",
+    "size": [ 14, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 14, "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/scroll_track"
+        }
+      }
+    ]
+  },
+
+  "scroll_track_full": {
+    "type": "panel",
+    "size": [ 14, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ 14, "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/scroll_track"
+        }
+      }
+    ]
+  },
+
+  "inventory_content_bg_half": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/inventory_content_bg"
+        }
+      }
+    ]
+  },
+
+  "inventory_content_bg_full": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/inventory_content_bg"
+        }
+      }
+    ]
+  },
+
+  /* Main Inventory Tab */
+
+  "tab_left_selected_1": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/tab_left_selected_1",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "tab_left_unselected_1": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/tab_left_unselected_1",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Armor Tab */
+
+  "tab_right_selected_1": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/tab_right_selected_1",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "tab_right_unselected_1": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/tab_right_unselected_1",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Crafting Tab */
+
+  "tab_right_selected_2": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/tab_right_selected_2",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "tab_right_unselected_2": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/tab_right_unselected_2",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  /* Full Tab */
+
+  "tab_right_selected_3": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/tab_right_selected_3",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "tab_right_unselected_3": {
+    "type": "panel",
+    "size": [ 40, 28 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/vdx/textures/gui/sprites/container_pocket/inventory/tab_right_unselected_3",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

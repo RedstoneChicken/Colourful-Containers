@@ -1,0 +1,35 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "inventory_textures_dx",
+
+  "inventory": {
+    "type": "panel",
+    "size": [ 176, 166 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "assets/minecraft/textures/gui/container/inventory",
+          "size": [ 256, 256 ]
+        }
+      }
+    ]
+  },
+
+  "effect_background_large": {
+    "type": "panel",
+    "size": [ 120, 32 ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/inventory/effect_background_large",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  }
+}

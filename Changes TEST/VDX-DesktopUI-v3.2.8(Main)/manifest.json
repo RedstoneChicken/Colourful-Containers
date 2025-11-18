@@ -1,0 +1,40 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "VDX: Desktop UI v3.2.8",
+    "description": "By @CrisXolt. [v1.21.120].\nA porting UI pack project for Bedrock Edition.",
+    "uuid": "ebac9d11-1c75-41b4-a9a5-b4177decb015",
+    "version": [ 3, 2, 8 ],
+    "min_engine_version": [ 1, 21, 120 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "ae91b931-0994-426a-a36c-4d1b6bab6a69",
+      "version": [ 3, 2, 8 ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "label",
+      "text": "Make sure to restart Minecraft when you change the UI config."
+    }
+  ],
+  "capabilities": ["pbr"],
+  "metadata" : {
+    "authors" : [ "CrisXolt" ],
+    "url" : "x.com/CrisXolt"
+  },
+  "subpacks": [
+    {
+      "folder_name": "sodium",
+      "name": "With Sodium UI Video Settings",
+      "memory_tier": 1
+    },
+    {
+      "folder_name": "normal",
+      "name": "With Normal UI Video Settings",
+      "memory_tier": 1
+    }
+  ]
+}

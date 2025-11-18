@@ -1,0 +1,186 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "play_grid_buttons_dx",
+
+  /*////// Local World PLAY ITEM TOGGLE //////*/
+
+  "local_world_unchecked_hover": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$is_checked": false,
+    "controls": [
+      { "grid_panel_selected@main_textures_dx.grid_panel_selected": {  "size": [ "100%", "100%" ], "layer": 1, "ignored": "(not $is_checked)" } },
+      {
+        "release": {
+          "type": "panel",
+          "size": [ 32, 32 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 2, 2 ],
+          "ignored": "($pre_release)",
+          "controls": [
+            { "texture@world_list_textures_dx.join": { "size": [ 32, 32 ], "layer": 8 } }
+          ]
+        }
+      },
+      {
+        "pre_release": {
+          "type": "panel",
+          "size": [ 32, 32 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 2, 2 ],
+          "ignored": "(not $pre_release)",
+          "controls": [
+            { "texture_marked@world_list_textures_dx.marked_join": { "size": [ 32, 32 ], "layer": 8 } },
+            { "texture_warning@world_list_textures_dx.warning": { "size": [ 32, 32 ], "layer": 8 } }
+          ]
+        }
+      },
+      { 
+        "grid_icon_highlighted@main_textures_dx.grid_icon_highlighted": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 2, 2 ],
+          "layer": 7
+        }
+      }
+    ]
+  },
+
+  "local_world_checked_hover@play_grid_buttons_dx.local_world_unchecked_hover": { "$is_checked": true },
+
+  /*////// MAIN PLAY ITEM TOGGLE //////*/
+
+  "play_item_buttons_panel@grid_dx.grid_panel": {
+    "type": "panel",
+    "size": [ "100%", 36 ],
+    "$grid_item_template|default": "play_grid_buttons_dx.play_main_buttons",
+    "$item_mode|default": "default"
+  },
+
+  "unchecked_hover": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$is_checked": false,
+    "controls": [
+      { "grid_panel_selected@main_textures_dx.grid_panel_selected": {  "size": [ "100%", "100%" ], "layer": 1, "ignored": "(not $is_checked)" } },
+      { 
+        "texture@server_list_textures_dx.join": {
+          "size": [ 32, 32 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 2, 2 ],
+          "layer": 8
+        }
+      },
+      { 
+        "grid_icon_highlighted@main_textures_dx.grid_icon_highlighted": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 2, 2 ],
+          "layer": 7
+        }
+      }
+    ]
+  },
+
+  "checked_hover@play_grid_buttons_dx.unchecked_hover": { "$is_checked": true },
+
+  "text_test@label_dx.global_label": {
+    "size": [ 0, 0 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -2, 2 ],
+    "color": [ 0.5, 0.5, 0.5 ],
+    "layer": 5,
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "$grid_binding_name",
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_name"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('§r' + ($grid_binding_name) + 'Null')",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+
+  "play_main_buttons": {
+    "type": "panel",
+    "$play_unchecked_hover_control": "play_grid_buttons_dx.unchecked_hover",
+    "$play_checked_hover_control": "play_grid_buttons_dx.checked_hover",
+    "controls": [
+      { "text_test@play_grid_buttons_dx.text_test": { } },
+      {
+        "toggle@toggle_dx.toggle_panel": {
+          "size": "$button_size",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+
+          "$unchecked_control": "miscellaneous_dx.empty_panel",
+          "$checked_control": "main_textures_dx.grid_panel_selected",
+          
+          "$unchecked_hover_control": "$play_unchecked_hover_control",
+          "$checked_hover_control": "$play_checked_hover_control",
+      
+          //"$toggle_focus_enabled": false,
+          "$tab_view_binding_name": "($item_mode + '_' + $item_number + '_toggle')",
+          "$toggle_group_forced_index": "$item_index",
+      
+          "$is_custom_button": true,
+          "$custom_from_button_id": "button.menu_select",
+          "$custom_mapping_type": "double_pressed",
+
+          "$is_custom_controller_button": true,
+          "$custom_controller_from_button_id": "button.menu_ok",
+          "$custom_controller_to_button_id": "$custom_to_button_id",
+          "$custom_controller_mapping_type": "double_pressed",
+      
+          "$toggle_collection_details_type": "collection_details",
+          "$toggle_collection_detail_name": "$collection_name",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "text_test",
+              "source_property_name": "(not (#text = '§rNull'))",
+              "target_property_name": "#visible",
+              "resolve_sibling_scope": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "local_world_play_main_buttons@play_grid_buttons_dx.play_main_buttons": {
+    "$play_unchecked_hover_control": "play_grid_buttons_dx.local_world_unchecked_hover",
+    "$play_checked_hover_control": "play_grid_buttons_dx.local_world_checked_hover"
+  },
+
+  "alt_play_main_buttons@play_grid_buttons_dx.play_main_buttons": {
+    "$play_unchecked_hover_control": "miscellaneous_dx.empty_panel",
+    "$play_checked_hover_control": "main_textures_dx.grid_panel_selected"
+  },
+
+  /*////// BOTTOM BUTTONS GRID //////*/
+
+  "play_item_grid_panel@grid_dx.grid_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$grid_item_template": "$bottom_grid_item_template",
+    "$item_mode|default": "default",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($item_mode + '_' + $item_number + '_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

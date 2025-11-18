@@ -1,0 +1,54 @@
+/*File made by X@CrisXolt | @CrisXolt.bsky.social.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "grid_dx",
+
+  "grid_panel": {
+    "type": "panel",
+    "$grid_template_size|default": [ "100%", 0 ],
+    "$grid_item_template|default": "",
+    "$grid_position|default": [ 0, 0 ],
+    "$grid_dimensions|default": [ 1, 1 ],
+    "$grid_dimension_binding|default": "",
+    "$collection_name|default": "",
+    "$not_dimension_binding|default": true,
+    "$grid_bindings|default": [
+      {
+        "ignored": "$not_dimension_binding",
+        "binding_name": "$grid_dimension_binding"
+      }
+    ],
+    "controls": [
+      {
+        "grid": {
+          "type": "grid",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": "$grid_template_size",
+          "grid_dimensions": "$grid_dimensions",
+          "collection_name": "$collection_name",
+          "grid_dimension_binding": "$grid_dimension_binding",
+          "controls": [
+            {
+              "top_left_offset": {
+                "type": "panel",
+                "grid_position": "$grid_position",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  {
+                    "grid_item@$grid_item_template": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": "$grid_bindings"
+        }
+      }
+    ]
+  }
+}
